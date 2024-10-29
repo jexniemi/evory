@@ -15,7 +15,7 @@ export default function AppCard({ application, isAppSuggestionsBar }: Props) {
         isAppSuggestionsBar ? "pt-8" : ""
       }`}
     >
-      <Link href={`/sovellus/${application.route}`}>
+      <Link href={`/app/${application.route}`}>
         <div>
           <figure>
             <Image
