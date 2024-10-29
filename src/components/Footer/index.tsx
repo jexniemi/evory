@@ -25,9 +25,9 @@ export default function Footer() {
         </div>
         <div className="flex items-center mt-10">
           <Image src={"/logo192.png"} width={28} height={28} alt="logo" />
-          <p className="inline-block font-semibold ml-1 text-main">appit.fi</p>
+          <p className="inline-block font-semibold ml-1 text-main">Evory.com</p>
         </div>
-        <p className="mt-5 w-72 italic">{texts.description} © 2024 Appit.fi</p>
+        <p className="mt-5 w-72 italic">{texts.description} © 2024 Evory.com</p>
       </div>
     </MiddleColumn>
   );

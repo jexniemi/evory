@@ -13,21 +13,21 @@ export default function Header() {
     <header>
       <div className="flex w-full flex-col">
         <MiddleColumn>
-          <div className="z-50 flex flex-row items-center py-3">
+          <div className="z-50 flex flex-row items-center py-5">
             <Link href="/">
               <Image
                 src="/logowhite.png"
                 alt="logo"
-                width={150}
-                height={150}
+                width={120}
+                height={120}
                 className="hidden dark:block"
               />
               <Image
                 className="block dark:hidden"
                 src="/logo.png"
                 alt="light-mode-image"
-                width={150}
-                height={150}
+                width={120}
+                height={120}
               />
               {/* <div className="text-gray-500 text-xs">
                 Laskurit ja selainsovellukset
@@ -40,7 +40,7 @@ export default function Header() {
         </div>
         <MiddleColumn overflow backgroundColor="bg-background">
           <nav className="flex flex-row py-4">
-            <HeaderItem path="/" name="Etusivu" selected={path === "/"} />
+            <HeaderItem path="/" name="Home" selected={path === "/"} />
             {Object.entries(apps).map(([name, category], idx) => (
               <React.Fragment key={idx}>
                 <HeaderItem

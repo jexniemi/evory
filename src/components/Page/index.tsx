@@ -56,8 +56,8 @@ export default function Page({
     description,
     author: {
       "@type": "Organization",
-      name: "appit.fi",
-      url: "https://appit.fi",
+      name: "evory.com",
+      url: "https://evory.com",
     },
     datePublished: "2023-12-10",
     dateModified: "2023-12-28"

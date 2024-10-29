@@ -3,14 +3,14 @@ import SimpleCalculator from "@/components/SimpleCalculator/SimpleCalculator";
 
 export default function YearlyPayCalculator() {
   const inputsHourly = [
-    { label: "Tuntipalkka (€)", initialValue: 12 },
+    { label: "Tuntipalkka ($)", initialValue: 12 },
     { label: "Työtunteja kuukaudessa", initialValue: 166 },
     { label: "Saatko lomarahaa?", values: [1, 0], labels: ["Kyllä", "Ei"] },
   ];
 
   const inputsMonthly = [
-    { label: "Kuukausipalkka (€)", initialValue: 2800 },
-    { label: "Vuosittaiset bonukset (€)", initialValue: 0 },
+    { label: "Kuukausipalkka ($)", initialValue: 2800 },
+    { label: "Vuosittaiset bonukset ($)", initialValue: 0 },
     { label: "Saatko lomarahaa?", values: [1, 0], labels: ["Kyllä", "Ei"] },
   ];
 

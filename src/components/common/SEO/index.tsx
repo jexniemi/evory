@@ -8,7 +8,7 @@ interface Props {
 export default function SEO({ title, description }: Props) {
   return (
     <Head>
-      <title>{title + " "}| Appit.fi</title>
+      <title>{title + " "}| Evory.com</title>
       <meta name="description" content={description} />
     </Head>
   );

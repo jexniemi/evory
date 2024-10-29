@@ -3,8 +3,9 @@ import { apps } from "../../applications";
 import AppCards from "@/components/AppCards/AppCards";
 
 export const metadata: Metadata = {
-  title: "Appit.fi - Ilmaiset selainsovellukset.",
-  description: "Appit.fi:stä löydät ilmaisia selainsovelluksia.",
+  title: "Evory.com - Free calculator and web apps.",
+  description:
+    "Evory.com offers free calculators and online applications for everyone..",
 };
 
 export default function Page({ params }: { params: { slug: string } }) {
