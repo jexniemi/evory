@@ -1,5 +1,5 @@
 import Page from "@/components/Page";
-import MonthlyPayCalculator from "./monthlyPayCalculator";
+import MonthlyPayCalculator from "./monthlySalaryCalculator";
 import { Metadata } from "next";
 import Info from "./info.mdx";
 
