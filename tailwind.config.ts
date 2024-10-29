@@ -7,13 +7,23 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    listStyleType: {
+      disc: "disc",
+      decimal: "decimal",
+    },
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        main: "rgb(251 148 0)",
+        background: "rgba(249,249,249,1)",
+        "banner-red": "#DF5457",
+        "banner-orange": "#FA864E",
+        "banner-yellow": "#EEBD64",
+        pastelorange: "rgb(245, 211, 147)",
+        pastelgreen: "rgb(194, 242, 213)",
+        pastelblue: "rgb(164, 238, 252)",
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
 export default config;

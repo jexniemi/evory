@@ -1,0 +1,26 @@
+#!/usr/local/bin/bash
+
+arr=(./*)
+
+echo ${arr}
+
+rm ./index.js
+touch index.js
+
+for f in "${arr[@]}"; do
+  prefix='\.\/'
+  suffix='.png' 
+  const=`echo "$f" | sed -e "s/^$prefix//" -e "s/$suffix$//"`
+  echo "import $const from '$f';" >> index.js
+  echo "$const"
+done
+
+echo -e "\nexport default {" >> index.js
+for f in "${arr[@]}"; do
+  prefix='\.\/'
+  suffix='.png'
+  
+  const=`echo "$f" | sed -e "s/^$prefix//" -e "s/$suffix$//"`
+  echo "  ${const}," >> index.js
+done
+echo "}" >> index.js

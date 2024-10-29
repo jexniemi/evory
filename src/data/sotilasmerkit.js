@@ -1,0 +1,25 @@
+const armyRanks = [
+  { name: "ylivääpeli" },
+  { name: "upseerioppilas" },
+  { name: "upseerikokelas" },
+  { name: "kapteeni" },
+  { name: "ylikersantti" },
+  { name: "vänrikki" },
+  { name: "sotamies" },
+  { name: "vääpeli" },
+  { name: "yliluutnantti" },
+  { name: "aliupseerioppilas" },
+  { name: "kenraaliluutnantti" },
+  { name: "luutnantti" },
+  { name: "eversti" },
+  { name: "majuri" },
+  { name: "sotilasmestari" },
+  { name: "kenraalimajuri" },
+  { name: "alikersantti" },
+  { name: "everstiluutnantti" },
+  { name: "kenraali" },
+  { name: "korpraali" },
+  { name: "kersantti" },
+];
+
+export default armyRanks;

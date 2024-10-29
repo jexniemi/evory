@@ -1,0 +1,160 @@
+{
+  "Talous": {
+    "backgroundColor": "",
+    "color": "",
+    "path": "/talous",
+    "apps": [
+      {
+        "route": "kuukausipalkkalaskuri",
+        "displayName": "Kuukausipalkkalaskuri",
+        "shortDescription": "Laske kuukausipalkka tuntipalkan perusteella."
+      },
+      {
+        "route": "tuntipalkkalaskuri",
+        "displayName": "Tuntipalkkalaskuri",
+        "shortDescription": "Laske tuntipalkka kuukausipalkan perusteella."
+      },
+      {
+        "route": "vuosipalkkalaskuri",
+        "displayName": "Vuosipalkkalaskuri",
+        "shortDescription": "Laske vuosipalkka tunti- tai kuukausipalkan perusteella."
+      },
+      {
+        "route": "opintolainahyvityslaskuri",
+        "displayName": "Opintolainahyvityslaskuri",
+        "shortDescription": "Laske helposti kuinka suuren opintolainahyvityksen voit saada."
+      },
+      {
+        "route": "korkoa-korolle-laskuri",
+        "displayName": "Korkoa korolle -laskuri",
+        "shortDescription": "Laske miten korkoa korolle -ilmiö vaikuttaa sijoituksiisi."
+      },
+      {
+        "route": "sahkoauton-matkakululaskuri",
+        "displayName": "Sähköauton matkakululaskuri",
+        "shortDescription": "Laske sähköautolla ajetun ajomatkasi kustannukset."
+      },
+      {
+        "route": "bensakululaskuri",
+        "displayName": "Bensakululaskuri",
+        "shortDescription": "Laske ajomatkasi polttoainekustannukset."
+      },
+      {
+        "route": "alennuslaskuri",
+        "displayName": "Alennuslaskuri",
+        "shortDescription": "Laske helposti tuotteen tai palvelun alennettu hinta."
+      },
+      {
+        "route": "osamaksulaskuri",
+        "displayName": "Osamaksulaskuri",
+        "shortDescription": "Laske osamaksun kuukausierä ja kokonaiskustannukset."
+      },
+      {
+        "route": "tippilaskuri",
+        "displayName": "Tippilaskuri",
+        "shortDescription": "Selvitä paljonko sinun pitäisi maksaa juomarahaa."
+      }
+    ]
+  },
+  "Terveys": {
+    "backgroundColor": "",
+    "color": "",
+    "path": "/terveys",
+    "apps": [
+      {
+        "route": "perusaineenvaihduntalaskuri",
+        "displayName": "Perusaineenvaihduntalaskuri",
+        "shortDescription": "Laske paljon kaloreita kulutat päivässä levossa."
+      },
+      {
+        "route": "kalorintarvelaskuri",
+        "displayName": "Kalorintarvelaskuri",
+        "shortDescription": "Laske päivittäinen kalorintarpeesi."
+      },
+      {
+        "route": "lentojen-hiilijalanjalkilaskuri",
+        "displayName": "Lentojen hiilijalanjälkilaskuri",
+        "shortDescription": "Laske lentosi ilmastopäästöt."
+      },
+      {
+        "route": "juoksuvauhtilaskuri",
+        "displayName": "Juoksuvauhtilaskuri",
+        "shortDescription": "Laske juoksuvauhtisi juostun matkan ja ajan perusteella."
+      }
+    ]
+  },
+  "Hyöty": {
+    "backgroundColor": "",
+    "color": "",
+    "path": "/hyoty",
+    "apps": [
+      {
+        "route": "opintojen-keskiarvolaskuri",
+        "displayName": "Opintojen Keskiarvolaskuri",
+        "shortDescription": "Laske opintojesi keskiarvo helposti."
+      },
+      {
+        "route": "lentojen-hiilijalanjalkilaskuri",
+        "displayName": "Lentojen hiilijalanjälkilaskuri",
+        "shortDescription": "Laske lentosi ilmastopäästöt."
+      },
+      {
+        "route": "qr-generaattori",
+        "displayName": "QR Generaattori",
+        "shortDescription": "Generoi QR-koodi tekstin tai linkin perusteella."
+      },
+      {
+        "route": "nimipaivahakukone",
+        "displayName": "Nimipäivähakukone",
+        "shortDescription": "Hae nimipäivää joko nimen tai päivän perusteella."
+      },
+      {
+        "route": "sanalaskuri",
+        "displayName": "Sanalaskuri",
+        "shortDescription": "Laske sanojen määrä lauseessa helposti."
+      }
+    ]
+  },
+  "Viihde": {
+    "backgroundColor": "",
+    "color": "",
+    "path": "/viihde",
+    "apps": [
+      {
+        "route": "nimikone/koirat",
+        "displayName": "Koirien nimikone",
+        "shortDescription": "Nimikoneen avulla keksit nopeasti koirallesi nimen."
+      },
+      {
+        "route": "nimikone/kissat",
+        "displayName": "Kissojen nimikone",
+        "shortDescription": "Nimikone auttaa sinua keksimään kissalle nimen."
+      },
+      {
+        "route": "kesalomalaskuri",
+        "displayName": "Kesälomalaskuri",
+        "shortDescription": "Kesälomalaskuri laskee montako päivää on jäljellä kesälomaan."
+      },
+      {
+        "route": "joululaskuri",
+        "displayName": "Joululaskuri",
+        "shortDescription": "Montako päivää on jäljellä jouluun?"
+      },
+      {
+        "route": "kuukausikone",
+        "displayName": "Kuukausikone",
+        "shortDescription": "Miten monta päivää on kussakin kuukaudessa? Kuukausikoneen avulla selvität tämän helposti!"
+      },
+      {
+        "route": "lippupeli",
+        "displayName": "Lippupeli",
+        "shortDescription": "Lippupelissä arvaat maiden nimiä lippujen avulla. Testaa tietosi!"
+      },
+      {
+        "route": "sotilasmerkit",
+        "displayName": "Maavoimien arvomerkit",
+        "shortDescription": "Tunnetko maavoimien sotilasmerkit? Näytä osaamisesi tässä pelissä."
+      }
+    ]
+  }
+}
