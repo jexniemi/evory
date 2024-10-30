@@ -56,8 +56,8 @@ export default function Page({
     description,
     author: {
       "@type": "Organization",
-      name: "evory.com",
-      url: "https://evory.com",
+      name: "ewory.com",
+      url: "https://ewory.com",
     },
     datePublished: "2023-12-10",
     dateModified: "2023-12-28"
