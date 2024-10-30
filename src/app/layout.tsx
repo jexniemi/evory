@@ -9,7 +9,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 
 /* import { motion } from "framer-motion"; */
 
-const gaTrackingId = "G-ZHP8R21E7S";
+const gaTrackingId = "G-9PPYT95BLE";
 
 export default function RootLayout({
   children,
