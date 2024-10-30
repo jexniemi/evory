@@ -6,8 +6,15 @@ import Head from "next/head";
 import MiddleColumn from "@/components/common/MiddleColumn";
 import AppSuggestionBar from "@/components/AppSuggestionsBar";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { League_Spartan } from "next/font/google";
 
 /* import { motion } from "framer-motion"; */
+const league_spartan = League_Spartan({
+  weight: ["400", "500", "600", "700"],
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 const gaTrackingId = "G-9PPYT95BLE";
 
@@ -26,7 +33,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         ></script>
       </Head>
-      <body>
+      <body className={league_spartan.className}>
         <Header />
         <MiddleColumn location="front">{children}</MiddleColumn>
         <AppSuggestionBar />
