@@ -62,8 +62,8 @@
         "shortDescription": "Calculate how many calories you burn at rest daily."
       },
       {
-        "route": "caloric-needs-calculator",
-        "displayName": "Caloric Needs Calculator",
+        "route": "daily-caloric-needs-calculator",
+        "displayName": "Daily Caloric Needs Calculator",
         "shortDescription": "Calculate your daily caloric needs."
       },
       {
@@ -84,11 +84,6 @@
     "path": "/utility",
     "apps": [
       {
-        "route": "grade-average-calculator",
-        "displayName": "Grade Average Calculator",
-        "shortDescription": "Easily calculate your academic average."
-      },
-      {
         "route": "flight-carbon-footprint-calculator",
         "displayName": "Flight Carbon Footprint Calculator",
         "shortDescription": "Calculate the carbon emissions of your flight."
@@ -97,11 +92,6 @@
         "route": "qr-generator",
         "displayName": "QR Generator",
         "shortDescription": "Generate a QR code based on text or link."
-      },
-      {
-        "route": "name-day-search",
-        "displayName": "Name Day Search",
-        "shortDescription": "Search for name days by name or date."
       },
       {
         "route": "word-counter",
