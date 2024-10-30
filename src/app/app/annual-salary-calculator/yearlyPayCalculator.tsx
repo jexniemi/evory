@@ -40,6 +40,7 @@ export default function YearlyPayCalculator() {
         result,
         label: "Calculated Annual Salary from Hourly Wage:",
         decimals: 0,
+        prefix: "$",
       },
     ];
   };

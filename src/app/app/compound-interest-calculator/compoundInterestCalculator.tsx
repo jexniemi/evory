@@ -30,5 +30,5 @@ export default function CompoundInterestCalculator() {
     ];
   };
 
-  return <SimpleCalculator inputs={inputs} calculate={calculate} suffix="$" />;
+  return <SimpleCalculator inputs={inputs} calculate={calculate} prefix="$" />;
 }

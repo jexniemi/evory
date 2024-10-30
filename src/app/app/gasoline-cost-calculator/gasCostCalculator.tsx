@@ -18,5 +18,5 @@ export default function GasCostCalculator() {
     return [{ result, label: "Fuel Cost for the Trip:" }];
   };
 
-  return <SimpleCalculator inputs={inputs} calculate={calculate} suffix="$" />;
+  return <SimpleCalculator inputs={inputs} calculate={calculate} prefix="$" />;
 }

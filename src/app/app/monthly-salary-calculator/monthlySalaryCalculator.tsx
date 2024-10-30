@@ -14,7 +14,7 @@ export default function MonthlyWageCalculator() {
     } catch (error) {
       console.error(error);
     }
-    return [{ result, label: "Calculated Monthly Salary:" }];
+    return [{ result, label: "Calculated Monthly Salary:", prefix: "$" }];
   };
 
   return <SimpleCalculator inputs={inputs} calculate={calculate} />;

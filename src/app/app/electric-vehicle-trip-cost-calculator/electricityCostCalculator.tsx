@@ -29,7 +29,7 @@ export default function ElectricityCostCalculator() {
     <SimpleCalculator
       inputs={inputs}
       calculate={calculate}
-      suffix="$"
+      prefix="$"
       resultButtonStyle="bg-pastelblue"
     />
   );

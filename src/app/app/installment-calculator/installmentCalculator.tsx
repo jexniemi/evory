@@ -13,9 +13,9 @@ export default function InstallmentCalculator() {
     const totalInterest = totalCost - principal; // Total interest paid
 
     return [
-      { result: monthlyPayment || 0, label: "Monthly Payment:", suffix: "$" },
-      { result: totalCost || 0, label: "Total Cost:", suffix: "$" },
-      { result: totalInterest || 0, label: "Total Interest:", suffix: "$" },
+      { result: monthlyPayment || 0, label: "Monthly Payment:", prefix: "$" },
+      { result: totalCost || 0, label: "Total Cost:", prefix: "$" },
+      { result: totalInterest || 0, label: "Total Interest:", prefix: "$" },
     ];
   };
 

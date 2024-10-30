@@ -14,7 +14,7 @@ export default function HourlyWageCalculator() {
     } catch (error) {
       console.error(error);
     }
-    return [{ result, label: "Calculated Hourly Wage:" }];
+    return [{ result, label: "Calculated Hourly Wage:", prefix: "$" }];
   };
 
   return <SimpleCalculator inputs={inputs} calculate={calculate} />;

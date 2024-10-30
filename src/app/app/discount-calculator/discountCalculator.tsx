@@ -17,10 +17,10 @@ export default function DiscountCalculator() {
       console.error(error);
     }
     return [
-      { result: salePrice || 0, label: "Discounted price:", suffix: "$" },
-      { result: savedMoney || 0, label: "Money saved:", suffix: "$" },
+      { result: salePrice || 0, label: "Discounted price:" },
+      { result: savedMoney || 0, label: "Money saved:" },
     ];
   };
 
-  return <SimpleCalculator inputs={inputs} calculate={calculate} />;
+  return <SimpleCalculator inputs={inputs} calculate={calculate} prefix="$" />;
 }

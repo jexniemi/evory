@@ -2,9 +2,9 @@
 import SimpleCalculator from "@/components/SimpleCalculator/SimpleCalculator";
 
 const inputs = [
-  { label: "Laskun summa ($)", initialValue: 100 },
-  { label: "Tippi prosentti (%)", initialValue: 15 },
-  { label: "Henkilöitä jakamassa", initialValue: 1 },
+  { label: "Bill Amount ($)", initialValue: 100 },
+  { label: "Tip Percentage (%)", initialValue: 15 },
+  { label: "Number of People Sharing", initialValue: 1 },
 ];
 
 export default function TipCalculator() {
@@ -24,19 +24,17 @@ export default function TipCalculator() {
       console.error(error);
     }
     return [
-      { result: totalTip || 0, label: "Maksettava tipin määrä:", suffix: "$" },
+      { result: totalTip || 0, label: "Total Tip Amount:" },
       {
         result: totalBill || 0,
-        label: "Laskun summa (tippi mukana):",
-        suffix: "$",
+        label: "Total Bill (with Tip):",
       },
       {
         result: perPerson || 0,
-        label: "Jokaisen osuus laskusta:",
-        suffix: "$",
+        label: "Each Person's Share:",
       },
     ];
   };
 
-  return <SimpleCalculator inputs={inputs} calculate={calculate} />;
+  return <SimpleCalculator inputs={inputs} calculate={calculate} prefix="$" />;
 }
