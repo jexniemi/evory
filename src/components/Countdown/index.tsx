@@ -33,26 +33,26 @@ const Countdown: React.FC<CountdownProps> = ({
     <div>
       <div>
         <h2 className="text-xl">
-          {targetDateName}, eli{" "}
-          {target.toLocaleDateString().replace("/", ".").replace("/", ".")}, on
-          aikaa:
+          {targetDateName}{" "}
+          {target.toLocaleDateString().replace("/", ".").replace("/", ".")}{" "}
+          countdown:
         </h2>
         <div className="text-xl flex flex-row flex-wrap">
           <div className="flex flex-col items-center mr-2 bg-blue-100 p-4 my-5">
             <div>{days}</div>
-            <div className="text-xs">Päivää</div>
+            <div className="text-xs">Days</div>
           </div>
           <div className="flex flex-col items-center mr-2 bg-blue-100 p-4 my-5">
             {hours}
-            <div className="text-xs">Tuntia</div>
+            <div className="text-xs">Hours</div>
           </div>
           <div className="flex flex-col items-center mr-2 bg-blue-100 p-4 my-5">
             {minutes}
-            <div className="text-xs">Minuuttia</div>
+            <div className="text-xs">Minutes</div>
           </div>
           <div className="flex flex-col items-center mr-2 bg-blue-100 p-4 my-5">
             {seconds}
-            <div className="text-xs">Sekuntia</div>
+            <div className="text-xs">Seconds</div>
           </div>
         </div>
       </div>
