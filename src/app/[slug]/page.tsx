@@ -3,7 +3,7 @@ import { apps } from "../../applications";
 import AppCards from "@/components/AppCards/AppCards";
 
 export const metadata: Metadata = {
-  title: "Evory.com - Free calculator and web apps.",
+  title: "Evory.com - Free calculators and web apps.",
   description:
     "Evory.com offers free calculators and online applications for everyone..",
 };
