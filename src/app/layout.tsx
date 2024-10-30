@@ -6,10 +6,10 @@ import Head from "next/head";
 import MiddleColumn from "@/components/common/MiddleColumn";
 import AppSuggestionBar from "@/components/AppSuggestionsBar";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { League_Spartan } from "next/font/google";
+import { Anek_Devanagari } from "next/font/google";
 
 /* import { motion } from "framer-motion"; */
-const league_spartan = League_Spartan({
+const font = Anek_Devanagari({
   weight: ["400", "500", "600", "700"],
   style: ["normal"],
   subsets: ["latin"],
@@ -33,7 +33,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         ></script>
       </Head>
-      <body className={league_spartan.className}>
+      <body className={font.className}>
         <Header />
         <MiddleColumn location="front">{children}</MiddleColumn>
         <AppSuggestionBar />
