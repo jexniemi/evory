@@ -36,7 +36,7 @@ export default function AppSuggestionBar() {
   return (
     <MiddleColumn location="appsuggestionbar">
       <div className="py-12 bg-gray-100 dark:bg-transparent">
-        <h5 className="text-lg font-bold">Katso myös nämä sovellukset</h5>
+        <h5 className="text-lg font-bold">See also:</h5>
         <div className="flex flex-row flex-wrap w-full justify-evenly">
           {renderCards(appSuggestions)}
         </div>
