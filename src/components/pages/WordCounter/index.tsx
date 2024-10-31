@@ -18,7 +18,7 @@ export default function WordCounter() {
         className="textarea textarea-bordered"
         value={text}
         onChange={(e) => setText(e.target.value)}
-        placeholder="Syötä tekstisi tähän..."
+        placeholder="Enter text here..."
       />
     </div>
   );
