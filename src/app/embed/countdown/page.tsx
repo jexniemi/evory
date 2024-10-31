@@ -1,7 +1,6 @@
 "use client";
 import Countdown from "@/components/Countdown";
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
 
 export default function CountdownEmbedPage() {
   const searchParams = useSearchParams();
@@ -13,12 +12,10 @@ export default function CountdownEmbedPage() {
   }
 
   return (
-    <Suspense>
-      <Countdown
-        hideEmbedLink
-        targetDate={new Date(targetDate)}
-        targetDateName={name}
-      />
-    </Suspense>
+    <Countdown
+      hideEmbedLink
+      targetDate={new Date(targetDate)}
+      targetDateName={name}
+    />
   );
 }
