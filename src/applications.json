@@ -1,112 +1,116 @@
 {
   "Finance": {
+    "name": "Finance",
     "backgroundColor": "",
     "color": "",
     "path": "/finance",
     "apps": [
       {
-        "route": "monthly-salary-calculator",
+        "route": "/app/monthly-salary-calculator",
         "displayName": "Monthly Salary Calculator",
         "shortDescription": "Calculate monthly salary based on hourly wage."
       },
       {
-        "route": "hourly-wage-calculator",
+        "route": "/app/hourly-wage-calculator",
         "displayName": "Hourly Wage Calculator",
         "shortDescription": "Calculate hourly wage based on monthly salary."
       },
       {
-        "route": "annual-salary-calculator",
+        "route": "/app/annual-salary-calculator",
         "displayName": "Annual Salary Calculator",
         "shortDescription": "Calculate annual salary based on hourly or monthly wage."
       },
       {
-        "route": "compound-interest-calculator",
+        "route": "/app/compound-interest-calculator",
         "displayName": "Compound Interest Calculator",
         "shortDescription": "Calculate how compound interest impacts your investments."
       },
       {
-        "route": "electric-vehicle-trip-cost-calculator",
+        "route": "/app/electric-vehicle-trip-cost-calculator",
         "displayName": "Electric Vehicle Trip Cost Calculator",
         "shortDescription": "Calculate the costs of your electric vehicle trips."
       },
       {
-        "route": "gasoline-cost-calculator",
+        "route": "/app/gasoline-cost-calculator",
         "displayName": "Gasoline Cost Calculator",
         "shortDescription": "Calculate the fuel cost for your trip."
       },
       {
-        "route": "discount-calculator",
+        "route": "/app/discount-calculator",
         "displayName": "Discount Calculator",
         "shortDescription": "Easily calculate the discounted price of a product or service."
       },
       {
-        "route": "installment-calculator",
+        "route": "/app/installment-calculator",
         "displayName": "Installment Calculator",
         "shortDescription": "Calculate monthly installment payments and total costs."
       },
       {
-        "route": "tip-calculator",
+        "route": "/app/tip-calculator",
         "displayName": "Tip Calculator",
         "shortDescription": "Find out how much you should tip."
       }
     ]
   },
   "Health": {
+    "name": "Health",
     "backgroundColor": "",
     "color": "",
     "path": "/health",
     "apps": [
       {
-        "route": "basal-metabolic-rate-calculator",
+        "route": "/app/basal-metabolic-rate-calculator",
         "displayName": "Basal Metabolic Rate Calculator",
         "shortDescription": "Calculate how many calories you burn at rest daily."
       },
       {
-        "route": "daily-caloric-needs-calculator",
+        "route": "/app/daily-caloric-needs-calculator",
         "displayName": "Daily Caloric Needs Calculator",
         "shortDescription": "Calculate your daily caloric needs."
       },
       {
-        "route": "flight-carbon-footprint-calculator",
+        "route": "/app/flight-carbon-footprint-calculator",
         "displayName": "Flight Carbon Footprint Calculator",
         "shortDescription": "Calculate the carbon emissions of your flight."
       },
       {
-        "route": "running-pace-calculator",
+        "route": "/app/running-pace-calculator",
         "displayName": "Running Pace Calculator",
         "shortDescription": "Calculate your running pace based on distance and time."
       }
     ]
   },
   "Utility": {
+    "name": "Utility",
     "backgroundColor": "",
     "color": "",
     "path": "/utility",
     "apps": [
       {
-        "route": "flight-carbon-footprint-calculator",
+        "route": "/app/flight-carbon-footprint-calculator",
         "displayName": "Flight Carbon Footprint Calculator",
         "shortDescription": "Calculate the carbon emissions of your flight."
       },
       {
-        "route": "qr-generator",
+        "route": "/app/qr-generator",
         "displayName": "QR Generator",
         "shortDescription": "Generate a QR code based on text or link."
       },
       {
-        "route": "word-counter",
+        "route": "/app/word-counter",
         "displayName": "Word Counter",
         "shortDescription": "Easily count the number of words in a sentence."
       }
     ]
   },
-  "Entertainment": {
+  "Countdowns": {
+    "name": "Countdowns",
     "backgroundColor": "",
     "color": "",
-    "path": "/entertainment",
+    "path": "/countdown",
     "apps": [
       {
-        "route": "christmas-countdown",
+        "route": "/countdown/christmas-countdown",
         "displayName": "Christmas Countdown",
         "shortDescription": "How many days are left until Christmas?"
       }

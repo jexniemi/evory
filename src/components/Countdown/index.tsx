@@ -35,47 +35,56 @@ const Countdown: React.FC<CountdownProps> = ({
     `https://ewory.com/embed/countdown?targetDate=${target.toDateString()}&name=${targetDateName}`
   );
 
+  const webUrl = encodeURI(
+    `https://ewory.com/countdown?targetDate=${target.toDateString()}&name=${targetDateName}`
+  );
+
   return (
     <div>
-      <div>
-        <h2 className="text-xl">
-          <b>
-            {targetDateName}{" "}
-            {target.toLocaleDateString().replace("/", ".").replace("/", ".")}{" "}
-          </b>
-          countdown:
-        </h2>
-        <div className="grid grid-flow-col gap-5 text-center auto-cols-max mt-5">
-          <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-            <span className="countdown font-mono text-5xl">
-              <span style={{ "--value": days } as React.CSSProperties}></span>
-            </span>
-            days
-          </div>
-          <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-            <span className="countdown font-mono text-5xl">
-              <span style={{ "--value": hours } as React.CSSProperties}></span>
-            </span>
-            hours
-          </div>
-          <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-            <span className="countdown font-mono text-5xl">
-              <span
-                style={{ "--value": minutes } as React.CSSProperties}
-              ></span>
-            </span>
-            min
-          </div>
-          <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-            <span className="countdown font-mono text-5xl">
-              <span
-                style={{ "--value": seconds } as React.CSSProperties}
-              ></span>
-            </span>
-            sec
+      <a href={`${webUrl}`}>
+        <div>
+          <h2 className="text-xl">
+            <b>
+              {targetDateName}{" "}
+              {target.toLocaleDateString().replace("/", ".").replace("/", ".")}{" "}
+            </b>
+            countdown:
+          </h2>
+
+          <div className="grid grid-flow-col gap-5 text-center auto-cols-max mt-5">
+            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+              <span className="countdown font-mono text-5xl">
+                <span style={{ "--value": days } as React.CSSProperties}></span>
+              </span>
+              days
+            </div>
+            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+              <span className="countdown font-mono text-5xl">
+                <span
+                  style={{ "--value": hours } as React.CSSProperties}
+                ></span>
+              </span>
+              hours
+            </div>
+            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+              <span className="countdown font-mono text-5xl">
+                <span
+                  style={{ "--value": minutes } as React.CSSProperties}
+                ></span>
+              </span>
+              min
+            </div>
+            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+              <span className="countdown font-mono text-5xl">
+                <span
+                  style={{ "--value": seconds } as React.CSSProperties}
+                ></span>
+              </span>
+              sec
+            </div>
           </div>
         </div>
-      </div>
+      </a>
       {allowUserSelection && (
         <div className="mt-10">
           <b></b>

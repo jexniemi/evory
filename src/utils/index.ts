@@ -12,8 +12,9 @@ export const isMobile = () => {
   }
 
   return width < 1000;
-}
+};
 
 export const getAppIconPath = (appRoute: string) => {
-  return "/icons/" + appRoute + ".png"
-}
+  const route = appRoute.split("/").pop();
+  return "/icons/" + route + ".png";
+};

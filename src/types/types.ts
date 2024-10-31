@@ -27,6 +27,7 @@ export interface App {
 }
 
 export interface Category {
+  name: string;
   backgroundColor: string;
   color: string;
   path: string;

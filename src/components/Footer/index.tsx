@@ -14,7 +14,7 @@ export default function Footer() {
             <nav key={category} className="m-10 md:m-0">
               <p className="font-bold mb-5 text-2xl text-main">{category}</p>
               {apps[category].apps.map((app) => (
-                <Link href={"/app/" + app.route} key={app.route}>
+                <Link href={app.route} key={app.route}>
                   <span className="block text-md mb-3 md:mb-1">
                     {app.displayName}
                   </span>
