@@ -31,8 +31,6 @@ export default async function CountdownPage({
 }) {
   const { targetDate, name } = searchParams;
 
-  console.log(searchParams);
-
   if (
     !targetDate ||
     !name ||

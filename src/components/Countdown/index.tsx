@@ -1,5 +1,6 @@
 "use client";
 import DateSelector from "@/components/DatePicker";
+import { copyTextToClipboard } from "@/utils/general";
 import React, { useState, useEffect } from "react";
 
 interface CountdownProps {
@@ -45,8 +46,7 @@ const Countdown: React.FC<CountdownProps> = ({
         <div>
           <h2 className="text-xl">
             <b>
-              {targetDateName}{" "}
-              {target.toLocaleDateString().replace("/", ".").replace("/", ".")}{" "}
+              {targetDateName} {target.toLocaleDateString()}{" "}
             </b>
             countdown:
           </h2>
@@ -87,7 +87,6 @@ const Countdown: React.FC<CountdownProps> = ({
       </a>
       {allowUserSelection && (
         <div className="mt-10">
-          <b></b>
           <DateSelector
             onDateChange={(date: Date) => setTarget(date)}
             initialDate={target}
@@ -102,9 +101,17 @@ const Countdown: React.FC<CountdownProps> = ({
             Add this countdown on your website:
           </div>
           <div className="border-base-300 bg-base-200 border rounded p-5">
-            <p className="break-all">{`<iframe src="${embedUrl} height="100%" width="100%""></iframe>`}</p>
+            <p
+              className="break-all"
+              id="embed-text"
+            >{`<iframe src="${embedUrl} height="100%" width="100%""></iframe>`}</p>
           </div>
-          <button className="btn btn-primary mt-5">Copy code</button>
+          <button
+            className="btn btn-primary mt-6"
+            onClick={() => copyTextToClipboard("embed-text")}
+          >
+            Copy code
+          </button>
         </div>
       )}
     </div>

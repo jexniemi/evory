@@ -113,6 +113,11 @@
         "route": "/countdown/christmas-countdown",
         "displayName": "Christmas Countdown",
         "shortDescription": "How many days are left until Christmas?"
+      },
+      {
+        "route": "/countdown/us-presidential-election-countdown-2024",
+        "displayName": "Presidential Election Countdown 2024",
+        "shortDescription": "Countdown and information about 2024 Presidential Election of the United States."
       }
     ]
   }
