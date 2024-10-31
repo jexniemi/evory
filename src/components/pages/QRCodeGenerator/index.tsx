@@ -22,7 +22,7 @@ export default function QRCodeGenerator() {
     <div className="flex flex-col items-center w-full">
       <textarea
         className="textarea textarea-bordered w-96"
-        placeholder="Kirjoita QR-koodin sisältö tähän."
+        placeholder="Write the content of the QR code here."
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
