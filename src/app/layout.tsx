@@ -1,14 +1,8 @@
 import "./globals.css";
-import Header from "@/components/Header";
-import ShareButtons from "@/components/ShareButtons";
-import Footer from "@/components/Footer";
 import Head from "next/head";
-import MiddleColumn from "@/components/common/MiddleColumn";
-import AppSuggestionBar from "@/components/AppSuggestionsBar";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Anek_Devanagari } from "next/font/google";
 
-/* import { motion } from "framer-motion"; */
 const font = Anek_Devanagari({
   weight: ["400", "500", "600", "700"],
   style: ["normal"],
@@ -33,13 +27,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         ></script>
       </Head>
-      <body className={font.className}>
-        <Header />
-        <MiddleColumn location="front">{children}</MiddleColumn>
-        <AppSuggestionBar />
-        <ShareButtons />
-        <Footer />
-      </body>
+      <body className={font.className}>{children}</body>
     </html>
   );
 }

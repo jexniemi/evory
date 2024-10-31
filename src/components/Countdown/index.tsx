@@ -6,12 +6,14 @@ interface CountdownProps {
   targetDate: Date;
   targetDateName: string;
   allowUserSelection?: boolean;
+  hideEmbedLink?: boolean;
 }
 
 const Countdown: React.FC<CountdownProps> = ({
   targetDate,
   targetDateName,
   allowUserSelection,
+  hideEmbedLink,
 }) => {
   const [target, setTarget] = useState(targetDate);
   const [timeLeft, setTimeLeft] = useState(target.getTime() - Date.now());
@@ -28,6 +30,10 @@ const Countdown: React.FC<CountdownProps> = ({
   const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
   const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
   const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+
+  const embedUrl = encodeURI(
+    `https://ewory.com/embed/countdown?targetDate=${target.toDateString()}&name=${targetDateName}`
+  );
 
   return (
     <div>
@@ -78,6 +84,18 @@ const Countdown: React.FC<CountdownProps> = ({
             initialDate={target}
             label="Onko kesälomasi jonain muuna päivänä? Valitse tästä päivä."
           />
+        </div>
+      )}
+      {!hideEmbedLink && (
+        <div className="my-10">
+          <hr className="my-12 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
+          <div className="mb-5 text-xl font-medium">
+            Add this countdown on your website:
+          </div>
+          <div className="border-base-300 bg-base-200 border rounded p-5">
+            <p className="break-all">{`<iframe src="${embedUrl} height="100%" width="100%""></iframe>`}</p>
+          </div>
+          <button className="btn btn-primary mt-5">Copy code</button>
         </div>
       )}
     </div>
