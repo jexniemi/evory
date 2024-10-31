@@ -37,22 +37,30 @@ const Countdown: React.FC<CountdownProps> = ({
           {target.toLocaleDateString().replace("/", ".").replace("/", ".")}{" "}
           countdown:
         </h2>
-        <div className="text-xl flex flex-row flex-wrap">
-          <div className="flex flex-col items-center mr-2 bg-blue-100 p-4 my-5">
-            <div>{days}</div>
-            <div className="text-xs">Days</div>
+        <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
+          <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+            <span className="countdown font-mono text-5xl">
+              <span style={{ "--value": days }}></span>
+            </span>
+            days
           </div>
-          <div className="flex flex-col items-center mr-2 bg-blue-100 p-4 my-5">
-            {hours}
-            <div className="text-xs">Hours</div>
+          <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+            <span className="countdown font-mono text-5xl">
+              <span style={{ "--value": hours }}></span>
+            </span>
+            hours
           </div>
-          <div className="flex flex-col items-center mr-2 bg-blue-100 p-4 my-5">
-            {minutes}
-            <div className="text-xs">Minutes</div>
+          <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+            <span className="countdown font-mono text-5xl">
+              <span style={{ "--value": minutes }}></span>
+            </span>
+            min
           </div>
-          <div className="flex flex-col items-center mr-2 bg-blue-100 p-4 my-5">
-            {seconds}
-            <div className="text-xs">Seconds</div>
+          <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+            <span className="countdown font-mono text-5xl">
+              <span style={{ "--value": seconds }}></span>
+            </span>
+            sec
           </div>
         </div>
       </div>
