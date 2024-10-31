@@ -47,16 +47,13 @@ export const getCategoryNameByRoute = (route: string) => {
   try {
     const routeArray = route.split("/");
     const lastElement = routeArray[routeArray.length - 1];
-    Object.keys(apps).forEach((category) => {
-      apps[category].apps.forEach((app) => {
-        console.log(app.route, lastElement);
-        if (app.route === lastElement) {
-          result = {
-            categoryName: category,
-            categoryPath: apps[category].path,
-          };
-        }
-      });
+    apps.forEach((category) => {
+      if (category.path === lastElement) {
+        result = {
+          categoryName: category.name,
+          categoryPath: category.path,
+        };
+      }
     });
   } catch (error) {
     console.error(error);

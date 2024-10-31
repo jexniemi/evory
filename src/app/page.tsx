@@ -14,18 +14,18 @@ export default function Home() {
     <BasicLayout>
       <div className="w-full flex-1 pb-20">
         <div className="w-full">
-          {Object.keys(apps).map((category, index) => (
-            <div key={category}>
+          {apps.map((category, index) => (
+            <div key={category.name}>
               <div>
                 <h2
                   className={`text-2xl ${
                     index === 0 ? "mt-8" : ""
                   } font-bold text-black text-left dark:text-white`}
                 >
-                  {category}
+                  {category.name}
                 </h2>
               </div>
-              <AppCards apps={apps[category].apps} />
+              <AppCards apps={category.apps} />
               <div className="flex w-full flex-col">
                 <div className="divider h-12"></div>
               </div>

@@ -41,11 +41,11 @@ export default function Header() {
         <MiddleColumn overflow backgroundColor="bg-background">
           <nav className="flex flex-row py-4">
             <HeaderItem path="/" name="Home" selected={path === "/"} />
-            {Object.entries(apps).map(([name, category], idx) => (
+            {apps.map((category, idx) => (
               <React.Fragment key={idx}>
                 <HeaderItem
                   key={idx}
-                  name={name}
+                  name={category.name}
                   path={category.path}
                   selected={category.path === path}
                 />

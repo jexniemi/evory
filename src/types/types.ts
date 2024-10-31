@@ -16,9 +16,7 @@ export type Application = {
   shortDescription: string;
 };
 
-export interface ApplicationsJSON {
-  [key: string]: Category;
-}
+export type ApplicationsJSON = Category[];
 
 export interface App {
   route: string;

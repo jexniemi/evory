@@ -1,5 +1,5 @@
-{
-  "Finance": {
+[
+  {
     "name": "Finance",
     "backgroundColor": "",
     "color": "",
@@ -52,7 +52,7 @@
       }
     ]
   },
-  "Health": {
+  {
     "name": "Health",
     "backgroundColor": "",
     "color": "",
@@ -80,30 +80,30 @@
       }
     ]
   },
-  "Utility": {
-    "name": "Utility",
-    "backgroundColor": "",
-    "color": "",
-    "path": "/utility",
-    "apps": [
-      {
-        "route": "/app/flight-carbon-footprint-calculator",
-        "displayName": "Flight Carbon Footprint Calculator",
-        "shortDescription": "Calculate the carbon emissions of your flight."
-      },
-      {
-        "route": "/app/qr-generator",
-        "displayName": "QR Generator",
-        "shortDescription": "Generate a QR code based on text or link."
-      },
-      {
-        "route": "/app/word-counter",
-        "displayName": "Word Counter",
-        "shortDescription": "Easily count the number of words in a sentence."
-      }
-    ]
-  },
-  "Countdowns": {
+  {
+    "Utility": {
+      "name": "Utility",
+      "backgroundColor": "",
+      "color": "",
+      "path": "/utility",
+      "apps": [
+        {
+          "route": "/app/flight-carbon-footprint-calculator",
+          "displayName": "Flight Carbon Footprint Calculator",
+          "shortDescription": "Calculate the carbon emissions of your flight."
+        },
+        {
+          "route": "/app/qr-generator",
+          "displayName": "QR Generator",
+          "shortDescription": "Generate a QR code based on text or link."
+        },
+        {
+          "route": "/app/word-counter",
+          "displayName": "Word Counter",
+          "shortDescription": "Easily count the number of words in a sentence."
+        }
+      ]
+    },
     "name": "Countdowns",
     "backgroundColor": "",
     "color": "",
@@ -116,4 +116,4 @@
       }
     ]
   }
-}
+]
