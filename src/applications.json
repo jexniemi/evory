@@ -110,6 +110,11 @@
     "path": "/countdown",
     "apps": [
       {
+        "route": "/countdown/trump-end-of-term-countdown",
+        "displayName": "Trump End of Term Countdown",
+        "shortDescription": "Track how much time is left in Trump's presidency"
+      },
+      {
         "route": "/countdown/christmas-countdown",
         "displayName": "Christmas Countdown",
         "shortDescription": "How many days are left until Christmas?"
