@@ -8,7 +8,7 @@ export default function ChristmasCountdown() {
     <Page {...pageProps}>
       <Countdown
         targetDateName="Christmas Eve"
-        targetDate={new Date("2024-12-24T00:00:00")}
+        targetDate={new Date("2025-12-24T00:00:00")}
       />
     </Page>
   );
