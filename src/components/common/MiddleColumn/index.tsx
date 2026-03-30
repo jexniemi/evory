@@ -20,8 +20,8 @@ export default function MiddleColumn({
         isFooter
           ? "bg-black"
           : isAppSuggestionBar
-          ? "bg-gray-100 dark:bg-transparent"
-          : "bg-transparent"
+            ? "bg-gray-100"
+            : "bg-transparent"
       } ${backgroundColor} flex flex-row ${overflow ? "overflow-auto" : ""}`}
     >
       <div className="xl:w-40 2xl:w-72 hidden xl:flex" />

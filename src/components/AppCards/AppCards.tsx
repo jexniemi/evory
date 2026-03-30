@@ -3,7 +3,7 @@ import AppCard from "../AppCard";
 
 export default function AppCards({ apps }: { apps: App[] }) {
   return (
-    <div className="flex flex-row flex-wrap justify-start w-full p-0 sm:w-full sm:flex sm:m-0 sm:mb-10 z-10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
       {apps.map((application, idx) => {
         return <AppCard key={idx} application={application} index={idx} />;
       })}

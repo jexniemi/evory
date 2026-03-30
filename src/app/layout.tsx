@@ -1,16 +1,15 @@
 import "./globals.css";
+import Header from "@/components/Header";
+import ShareButtons from "@/components/ShareButtons";
+import Footer from "@/components/Footer";
 import Head from "next/head";
+import MiddleColumn from "@/components/common/MiddleColumn";
+import AppSuggestionBar from "@/components/AppSuggestionsBar";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { Anek_Devanagari } from "next/font/google";
 
-const font = Anek_Devanagari({
-  weight: ["400", "500", "600", "700"],
-  style: ["normal"],
-  subsets: ["latin"],
-  display: "swap",
-});
+/* import { motion } from "framer-motion"; */
 
-const gaTrackingId = "G-9PPYT95BLE";
+const gaTrackingId = "G-ZHP8R21E7S";
 
 export default function RootLayout({
   children,
@@ -18,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html>
+    <html data-theme="light">
       <GoogleAnalytics gaId={gaTrackingId} />
       <Head>
         <script
@@ -27,7 +26,13 @@ export default function RootLayout({
           crossOrigin="anonymous"
         ></script>
       </Head>
-      <body className={font.className}>{children}</body>
+      <body>
+        <Header />
+        <MiddleColumn location="front">{children}</MiddleColumn>
+        <AppSuggestionBar />
+        <ShareButtons />
+        <Footer />
+      </body>
     </html>
   );
 }

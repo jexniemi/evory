@@ -11,6 +11,8 @@ interface State {
   score: number;
   negativeScore: number;
   disableButtons: boolean;
+  streak: number;
+  bestStreak: number;
 }
 
 const initialState: State = {
@@ -21,25 +23,36 @@ const initialState: State = {
   score: 0,
   negativeScore: 0,
   disableButtons: false,
+  streak: 0,
+  bestStreak: 0,
 };
 
 function reducer(
   state: typeof initialState,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  action: { type: string; payload?: any }
+  action: { type: string; payload?: any },
 ): State {
   const { payload, type } = action;
   switch (type) {
     case "set_state":
       return { ...state, ...payload };
-    case "correct_answer":
-      return { ...state, revealAnswer: true, score: state.score + 1 };
+    case "correct_answer": {
+      const newStreak = state.streak + 1;
+      return {
+        ...state,
+        revealAnswer: true,
+        score: state.score + 1,
+        streak: newStreak,
+        bestStreak: Math.max(state.bestStreak, newStreak),
+      };
+    }
     case "false_answer":
       return {
         ...state,
         revealAnswer: true,
         negativeScore: state.negativeScore + 1,
         chosenAnswer: payload,
+        streak: 0,
       };
     case "reset":
       return { ...initialState, correctAnswer: state.correctAnswer };
@@ -52,7 +65,7 @@ interface Props {
   quizOptions: Option[];
   winScore: number;
   loseScore: number;
-  idKey: string; // Attribute that identifies each option
+  idKey: string;
 }
 
 export default function UseGame({
@@ -79,9 +92,34 @@ export default function UseGame({
     return Math.floor(Math.random() * maxIndex);
   };
 
+  const getUniqueIndices = (
+    count: number,
+    maxIndex: number,
+    exclude: number,
+  ) => {
+    const indices = new Set<number>();
+    indices.add(exclude);
+    while (indices.size < count + 1) {
+      indices.add(getRandomIndex(maxIndex));
+    }
+    indices.delete(exclude);
+    return Array.from(indices);
+  };
+
+  const buildNewRound = () => {
+    const maxIndex = quizOptions.length;
+    const correctIdx = getRandomIndex(maxIndex);
+    const wrongIndices = getUniqueIndices(3, maxIndex, correctIdx);
+    const correctAnswer = quizOptions[correctIdx];
+    const newOptions = wrongIndices.map((i) => quizOptions[i]);
+    const insertAt = getRandomIndex(newOptions.length + 1);
+    newOptions.splice(insertAt, 0, correctAnswer);
+    return { correctAnswer, answerOptions: newOptions };
+  };
+
   const getGameState = (gameStatus: GameStatus) => {
     if (gameStatus === GameStatus.RoundStart) {
-      newAnswerOptions();
+      setState(buildNewRound());
       return;
     }
     if (gameStatus === GameStatus.OnGoing) {
@@ -89,31 +127,11 @@ export default function UseGame({
         setState({
           revealAnswer: false,
           chosenAnswer: "",
+          disableButtons: false,
+          ...buildNewRound(),
         });
-        newAnswerOptions();
-        setState({ disableButtons: false, animate: true });
-      }, 2000);
+      }, 1200);
     }
-  };
-
-  const newAnswerOptions = () => {
-    const maxIndex = quizOptions.length;
-    const newCorrectAnswerIndex = getRandomIndex(maxIndex);
-    let optionIndex1 = getRandomIndex(maxIndex);
-    let optionIndex2 = getRandomIndex(maxIndex);
-    while (
-      optionIndex1 === newCorrectAnswerIndex ||
-      optionIndex2 === newCorrectAnswerIndex ||
-      optionIndex1 === optionIndex2
-    ) {
-      optionIndex1 = getRandomIndex(maxIndex);
-      optionIndex2 = getRandomIndex(maxIndex);
-    }
-    const correctAnswer = quizOptions[newCorrectAnswerIndex];
-    const newOptions = [quizOptions[optionIndex1], quizOptions[optionIndex2]];
-    const randomIndex = getRandomIndex(newOptions.length + 1);
-    newOptions.splice(randomIndex, 0, correctAnswer);
-    setState({ correctAnswer, answerOptions: newOptions });
   };
 
   const checkAnswer = (guess: string) => {
@@ -136,9 +154,6 @@ export default function UseGame({
 
   return {
     state,
-    dispatch,
-    setState,
-    getGameState,
     checkAnswer,
     reset,
     gameStatus,

@@ -2,14 +2,29 @@
 
 import createMDX from "@next/mdx";
 
-const withMDX = createMDX({
-  // Add markdown plugins here, as desired
-});
+const withMDX = createMDX({});
 
 const nextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   async redirects() {
     return [
+      // Old category paths → new category paths
+      {
+        source: "/talous",
+        destination: "/palkka-ja-verot",
+        permanent: true,
+      },
+      {
+        source: "/terveys",
+        destination: "/terveys-ja-liikunta",
+        permanent: true,
+      },
+      {
+        source: "/hyoty",
+        destination: "/tyokalut",
+        permanent: true,
+      },
+      // App redirects
       {
         source: "/alennuslaskuri",
         destination: "/sovellus/alennuslaskuri",
@@ -121,6 +136,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/alv-laskuri",
+        destination: "/sovellus/alv-laskuri",
+        permanent: true,
+      },
+      {
         source: "/tuntipalkkalaskuri",
         destination: "/sovellus/tuntipalkkalaskuri",
         permanent: true,
@@ -128,6 +148,36 @@ const nextConfig = {
       {
         source: "/vuosipalkkalaskuri",
         destination: "/sovellus/vuosipalkkalaskuri",
+        permanent: true,
+      },
+      {
+        source: "/nettopalkkalaskuri",
+        destination: "/sovellus/nettopalkkalaskuri",
+        permanent: true,
+      },
+      {
+        source: "/saastotavoite-laskuri",
+        destination: "/sovellus/saastotavoite-laskuri",
+        permanent: true,
+      },
+      {
+        source: "/neliohinta-laskuri",
+        destination: "/sovellus/neliohinta-laskuri",
+        permanent: true,
+      },
+      {
+        source: "/vesitarve-laskuri",
+        destination: "/sovellus/vesitarve-laskuri",
+        permanent: true,
+      },
+      {
+        source: "/ika-laskuri",
+        destination: "/sovellus/ika-laskuri",
+        permanent: true,
+      },
+      {
+        source: "/noppageneraattori",
+        destination: "/sovellus/noppageneraattori",
         permanent: true,
       },
     ];

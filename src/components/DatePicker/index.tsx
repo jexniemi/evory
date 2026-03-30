@@ -32,7 +32,7 @@ export default function DateSelector({
         id="date"
         locale={"fi"}
         selected={selectedDate}
-        onChange={(date) => {
+        onChange={(date: Date | null) => {
           if (date) {
             handleDateChange(date);
           }

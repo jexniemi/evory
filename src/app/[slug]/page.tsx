@@ -1,20 +1,64 @@
 import { Metadata } from "next";
 import { apps } from "../../applications";
-import AppCards from "@/components/AppCards/AppCards";
+import { getThemeBySlug, appIcons } from "@/utils/categoryTheme";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Ewory.com - Free calculators and web apps.",
-  description:
-    "Ewory.com offers free calculators and online applications for everyone..",
+  title: "Appit.fi - Ilmaiset selainsovellukset.",
+  description: "Appit.fi:stä löydät ilmaisia selainsovelluksia.",
 };
 
-export default function Page({ params }: { params: { slug: string } }) {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const result = getThemeBySlug(slug);
   const applications = Object.values(apps).find((category) =>
-    category.path?.includes(params.slug)
+    category.path?.includes(slug),
   );
+
+  if (!applications || !result) {
+    return <div className="mt-8 mb-20">Kategoriaa ei löytynyt.</div>;
+  }
+
+  const { name, theme } = result;
+
   return (
-    <div className="flex flex-row flex-wrap mb-20">
-      {applications ? <AppCards apps={applications.apps} /> : null}
+    <div className="mt-8 mb-20">
+      <div className="flex items-center gap-3 mb-6">
+        <span className="text-2xl">{theme.icon}</span>
+        <h1 className="text-2xl font-bold text-gray-900">{name}</h1>
+        <span
+          className={`text-xs font-semibold px-2.5 py-1 rounded-full ${theme.badge}`}
+        >
+          {applications.apps.length} sovellusta
+        </span>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+        {applications.apps.map((application) => (
+          <Link
+            key={application.route}
+            href={`/sovellus/${application.route}`}
+            className={`group flex items-start gap-3 rounded-xl border border-gray-200 border-l-4 ${theme.accent} bg-white p-4 transition-all duration-200 ${theme.hoverBorder} hover:shadow-md hover:-translate-y-0.5`}
+          >
+            <span className="text-xl mt-0.5 flex-shrink-0">
+              {appIcons[application.route] ?? "🔧"}
+            </span>
+            <div className="min-w-0">
+              <h3
+                className={`text-sm font-semibold text-gray-900 group-hover:${theme.text} transition-colors`}
+              >
+                {application.displayName}
+              </h3>
+              <p className="mt-0.5 text-xs text-gray-500 leading-relaxed line-clamp-2">
+                {application.shortDescription}
+              </p>
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 const texts = {
-  description: "Ewory.com offers free online calculators and applications.",
+  description:
+    "Appit.fi tarjoaa ilmaisia nettisovelluksia arkipäivän tarpeisiin ja viihdekäyttöön.",
 };
 
 export default texts;

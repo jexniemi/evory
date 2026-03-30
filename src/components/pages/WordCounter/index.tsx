@@ -8,17 +8,17 @@ export default function WordCounter() {
     <div className="text-left w-full flex flex-col">
       <div className="m-0 mb-8 self-center">
         <h3 className="m-1 border border-black rounded p-2 w-48">
-          Character: {text.length}
+          Merkkejä: {text.length}
         </h3>
         <h3 className="m-1 border border-black rounded p-2 w-48">
-          Words: {words}
+          Sanoja: {words}
         </h3>
       </div>
       <textarea
         className="textarea textarea-bordered"
         value={text}
         onChange={(e) => setText(e.target.value)}
-        placeholder="Enter text here..."
+        placeholder="Syötä tekstisi tähän..."
       />
     </div>
   );

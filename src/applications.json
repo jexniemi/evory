@@ -1,129 +1,359 @@
-[
-  {
-    "name": "Finance",
+{
+  "Palkka & Verot": {
     "backgroundColor": "",
     "color": "",
-    "path": "/finance",
+    "path": "/palkka-ja-verot",
     "apps": [
       {
-        "route": "/app/monthly-salary-calculator",
-        "displayName": "Monthly Salary Calculator",
-        "shortDescription": "Calculate monthly salary based on hourly wage."
+        "route": "kuukausipalkkalaskuri",
+        "displayName": "Kuukausipalkkalaskuri",
+        "shortDescription": "Laske kuukausipalkka tuntipalkan perusteella."
       },
       {
-        "route": "/app/hourly-wage-calculator",
-        "displayName": "Hourly Wage Calculator",
-        "shortDescription": "Calculate hourly wage based on monthly salary."
+        "route": "tuntipalkkalaskuri",
+        "displayName": "Tuntipalkkalaskuri",
+        "shortDescription": "Laske tuntipalkka kuukausipalkan perusteella."
       },
       {
-        "route": "/app/annual-salary-calculator",
-        "displayName": "Annual Salary Calculator",
-        "shortDescription": "Calculate annual salary based on hourly or monthly wage."
+        "route": "vuosipalkkalaskuri",
+        "displayName": "Vuosipalkkalaskuri",
+        "shortDescription": "Laske vuosipalkka tunti- tai kuukausipalkan perusteella."
       },
       {
-        "route": "/app/compound-interest-calculator",
-        "displayName": "Compound Interest Calculator",
-        "shortDescription": "Calculate how compound interest impacts your investments."
+        "route": "veroprosentti-laskuri",
+        "displayName": "Veroprosentti-laskuri",
+        "shortDescription": "Laske henkilökohtainen verokantasi nettopalkan perusteella."
       },
       {
-        "route": "/app/electric-vehicle-trip-cost-calculator",
-        "displayName": "Electric Vehicle Trip Cost Calculator",
-        "shortDescription": "Calculate the costs of your electric vehicle trips."
+        "route": "alv-laskuri",
+        "displayName": "ALV-laskuri",
+        "shortDescription": "Laske arvonlisävero helposti nettohinnasta tai bruttohinnasta."
       },
       {
-        "route": "/app/gasoline-cost-calculator",
-        "displayName": "Gasoline Cost Calculator",
-        "shortDescription": "Calculate the fuel cost for your trip."
+        "route": "opintolainahyvityslaskuri",
+        "displayName": "Opintolainahyvityslaskuri",
+        "shortDescription": "Laske helposti kuinka suuren opintolainahyvityksen voit saada."
       },
       {
-        "route": "/app/discount-calculator",
-        "displayName": "Discount Calculator",
-        "shortDescription": "Easily calculate the discounted price of a product or service."
+        "route": "nettopalkkalaskuri",
+        "displayName": "Nettopalkkalaskuri",
+        "shortDescription": "Laske nettopalkka bruttopalkasta verojen ja sivukulujen jälkeen."
       },
       {
-        "route": "/app/installment-calculator",
-        "displayName": "Installment Calculator",
-        "shortDescription": "Calculate monthly installment payments and total costs."
-      },
-      {
-        "route": "/app/tip-calculator",
-        "displayName": "Tip Calculator",
-        "shortDescription": "Find out how much you should tip."
+        "route": "tyotuntilaskuri",
+        "displayName": "Työtuntilaskuri",
+        "shortDescription": "Laske päivän työtunnit ja ansiot tulo- ja lähtöajan perusteella."
       }
     ]
   },
-  {
-    "name": "Health",
+  "Säästöt & Sijoitukset": {
     "backgroundColor": "",
     "color": "",
-    "path": "/health",
+    "path": "/saastot-ja-sijoitukset",
     "apps": [
       {
-        "route": "/app/basal-metabolic-rate-calculator",
-        "displayName": "Basal Metabolic Rate Calculator",
-        "shortDescription": "Calculate how many calories you burn at rest daily."
+        "route": "korkoa-korolle-laskuri",
+        "displayName": "Korkoa korolle -laskuri",
+        "shortDescription": "Laske miten korkoa korolle -ilmiö vaikuttaa sijoituksiisi."
       },
       {
-        "route": "/app/daily-caloric-needs-calculator",
-        "displayName": "Daily Caloric Needs Calculator",
-        "shortDescription": "Calculate your daily caloric needs."
+        "route": "yksinkertainen-korkoa-korolle-laskuri",
+        "displayName": "Yksinkertainen korkoa korolle -laskuri",
+        "shortDescription": "Laske kuinka paljon rahasi kasvaa korkoa korolle periaatteella."
       },
       {
-        "route": "/app/flight-carbon-footprint-calculator",
-        "displayName": "Flight Carbon Footprint Calculator",
-        "shortDescription": "Calculate the carbon emissions of your flight."
+        "route": "sijoitustuoton-laskuri",
+        "displayName": "Sijoitustuoton laskuri",
+        "shortDescription": "Laske sijoituksestasi saatu tuottoprosentti (ROI)."
       },
       {
-        "route": "/app/running-pace-calculator",
-        "displayName": "Running Pace Calculator",
-        "shortDescription": "Calculate your running pace based on distance and time."
+        "route": "lainan-lyhennyslaskuri",
+        "displayName": "Lainan lyhennyslaskuri",
+        "shortDescription": "Laske lainan kuukausierät ja kokonaiskustannukset."
+      },
+      {
+        "route": "osamaksulaskuri",
+        "displayName": "Osamaksulaskuri",
+        "shortDescription": "Laske osamaksun kuukausierä ja kokonaiskustannukset."
+      },
+      {
+        "route": "saastotavoite-laskuri",
+        "displayName": "Säästötavoitelaskuri",
+        "shortDescription": "Laske kuinka kauan säästötavoitteesi saavuttaminen kestää."
+      },
+      {
+        "route": "vuokratuottolaskuri",
+        "displayName": "Vuokratuottolaskuri",
+        "shortDescription": "Laske sijoitusasunnon brutto- ja nettovuokratuotto sekä kassavirta."
       }
     ]
   },
-  {
-    "Utility": {
-      "name": "Utility",
-      "backgroundColor": "",
-      "color": "",
-      "path": "/utility",
-      "apps": [
-        {
-          "route": "/app/flight-carbon-footprint-calculator",
-          "displayName": "Flight Carbon Footprint Calculator",
-          "shortDescription": "Calculate the carbon emissions of your flight."
-        },
-        {
-          "route": "/app/qr-generator",
-          "displayName": "QR Generator",
-          "shortDescription": "Generate a QR code based on text or link."
-        },
-        {
-          "route": "/app/word-counter",
-          "displayName": "Word Counter",
-          "shortDescription": "Easily count the number of words in a sentence."
-        }
-      ]
-    },
-    "name": "Countdowns",
+  "Arki & Koti": {
     "backgroundColor": "",
     "color": "",
-    "path": "/countdown",
+    "path": "/arki-ja-koti",
     "apps": [
       {
-        "route": "/countdown/trump-end-of-term-countdown",
-        "displayName": "Trump End of Term Countdown",
-        "shortDescription": "Track how much time is left in Trump's presidency"
+        "route": "prosenttilaskuri",
+        "displayName": "Prosenttilaskuri",
+        "shortDescription": "Laske prosenttiarvo, osuusprosentti ja muutosprosentti helposti."
       },
       {
-        "route": "/countdown/christmas-countdown",
-        "displayName": "Christmas Countdown",
-        "shortDescription": "How many days are left until Christmas?"
+        "route": "alennuslaskuri",
+        "displayName": "Alennuslaskuri",
+        "shortDescription": "Laske helposti tuotteen tai palvelun alennettu hinta."
       },
       {
-        "route": "/countdown/us-presidential-election-countdown-2024",
-        "displayName": "Presidential Election Countdown 2024",
-        "shortDescription": "Countdown and information about 2024 Presidential Election of the United States."
+        "route": "tippilaskuri",
+        "displayName": "Tippilaskuri",
+        "shortDescription": "Selvitä paljonko sinun pitäisi maksaa juomarahaa."
+      },
+      {
+        "route": "sahkolaskun-laskuri",
+        "displayName": "Sähkölaskun laskuri",
+        "shortDescription": "Laske sähkölaskun summa kulutuksen perusteella."
+      },
+      {
+        "route": "bensakululaskuri",
+        "displayName": "Bensakululaskuri",
+        "shortDescription": "Laske ajomatkasi polttoainekustannukset."
+      },
+      {
+        "route": "sahkoauton-matkakululaskuri",
+        "displayName": "Sähköauton matkakululaskuri",
+        "shortDescription": "Laske sähköautolla ajetun ajomatkasi kustannukset."
+      },
+      {
+        "route": "ajokustannuslaskuri",
+        "displayName": "Ajokustannuslaskuri",
+        "shortDescription": "Laske ajomatkan polttoainekustannukset."
+      },
+      {
+        "route": "neliohinta-laskuri",
+        "displayName": "Neliöhintalaskuri",
+        "shortDescription": "Laske asunnon neliöhinta helposti myyntihinnan ja pinta-alan perusteella."
+      },
+      {
+        "route": "pituusmuunnin",
+        "displayName": "Pituusmuunnin",
+        "shortDescription": "Muunna pituus cm, m, jalkaa, tuumaa, km ja maileiksi."
+      },
+      {
+        "route": "painomuunnin",
+        "displayName": "Painomuunnin",
+        "shortDescription": "Muunna paino kg, g, lbs, stoonoina ja tonneina."
+      },
+      {
+        "route": "valuuttamuunnin",
+        "displayName": "Valuuttamuunnin",
+        "shortDescription": "Muunna yli 20 valuutan väliset kurssit euron kautta."
+      },
+      {
+        "route": "nopeusmuunnin",
+        "displayName": "Nopeusmuunnin",
+        "shortDescription": "Muunna nopeus km/h, m/s, mph, solmut ja ft/s välillä."
+      },
+      {
+        "route": "pinta-alamuunnin",
+        "displayName": "Pinta-alamuunnin",
+        "shortDescription": "Muunna pinta-ala m², cm², km², ft², ha ja aakkereiden välillä."
+      },
+      {
+        "route": "annoslaskuri",
+        "displayName": "Annoslaskuri",
+        "shortDescription": "Skaalaa reseptin ainekset haluamallesi annosmäärälle."
+      }
+    ]
+  },
+  "Terveys & Liikunta": {
+    "backgroundColor": "",
+    "color": "",
+    "path": "/terveys-ja-liikunta",
+    "apps": [
+      {
+        "route": "promillelaskuri",
+        "displayName": "Promillelaskuri",
+        "shortDescription": "Arvioi veren alkoholipitoisuus Widmark-kaavalla — sisältää ajan selviämiseen."
+      },
+      {
+        "route": "bmi-laskuri",
+        "displayName": "BMI-laskuri",
+        "shortDescription": "Laske painoindeksisi ja selvitä normaalipainon vaihteluväli."
+      },
+      {
+        "route": "perusaineenvaihduntalaskuri",
+        "displayName": "Perusaineenvaihduntalaskuri",
+        "shortDescription": "Laske paljon kaloreita kulutat päivässä levossa."
+      },
+      {
+        "route": "paivittainen-kalorintarve-laskuri",
+        "displayName": "Päivittäinen kalorintarve -laskuri",
+        "shortDescription": "Laske henkilökohtainen päivittäinen kalorintarve."
+      },
+      {
+        "route": "unen-tarve-laskuri",
+        "displayName": "Unen tarve -laskuri",
+        "shortDescription": "Laske kuinka paljon unta tarvitset liikuntamäärän perusteella."
+      },
+      {
+        "route": "juoksuvauhtilaskuri",
+        "displayName": "Juoksuvauhtilaskuri",
+        "shortDescription": "Laske juoksuvauhtisi juostun matkan ja ajan perusteella."
+      },
+      {
+        "route": "vesitarve-laskuri",
+        "displayName": "Vesitarvelaskuri",
+        "shortDescription": "Laske päivittäinen vedentarpeesi painon ja aktiivisuustason perusteella."
+      },
+      {
+        "route": "makrolaskuri",
+        "displayName": "Makrolaskuri",
+        "shortDescription": "Laske päivittäinen kalorintarve ja makroravinteet tavoitteesi mukaan."
+      },
+      {
+        "route": "unisyklilaskuri",
+        "displayName": "Unisyklilaskuri",
+        "shortDescription": "Laske optimaalinen nukkumaanmeno- tai heräämisaika 90 min unisyklien mukaan."
+      },
+      {
+        "route": "raskauslaskuri",
+        "displayName": "Raskauslaskuri",
+        "shortDescription": "Laske laskettu aika, raskausviikko ja trimesteri."
+      },
+      {
+        "route": "sydansykelaskuri",
+        "displayName": "Sydänsykelaskuri",
+        "shortDescription": "Laske optimaaliset sykevyöhykkeesi Karvonenin kaavalla."
+      },
+      {
+        "route": "kalorienpolttolaskuri",
+        "displayName": "Kalorienpolttolaskuri",
+        "shortDescription": "Laske liikunnan aikana poltetut kalorit MET-arvojen perusteella."
+      },
+      {
+        "route": "tuuliviimalaskuri",
+        "displayName": "Tuuliviimalaskuri",
+        "shortDescription": "Laske tuuliviimalämpötila ja sen tunne kylmällä säällä."
+      }
+    ]
+  },
+  "Työkalut": {
+    "backgroundColor": "",
+    "color": "",
+    "path": "/tyokalut",
+    "apps": [
+      {
+        "route": "lampotilamuunnin",
+        "displayName": "Lämpötilamuunnin",
+        "shortDescription": "Muunna lämpötila Celsiuksen, Fahrenheitin ja Kelvinin välillä."
+      },
+      {
+        "route": "qr-generaattori",
+        "displayName": "QR Generaattori",
+        "shortDescription": "Generoi QR-koodi tekstin tai linkin perusteella."
+      },
+      {
+        "route": "sanalaskuri",
+        "displayName": "Sanalaskuri",
+        "shortDescription": "Laske sanojen määrä lauseessa helposti."
+      },
+      {
+        "route": "opintojen-keskiarvolaskuri",
+        "displayName": "Opintojen Keskiarvolaskuri",
+        "shortDescription": "Laske opintojesi keskiarvo helposti."
+      },
+      {
+        "route": "nimipaivahakukone",
+        "displayName": "Nimipäivähakukone",
+        "shortDescription": "Hae nimipäivää joko nimen tai päivän perusteella."
+      },
+      {
+        "route": "lentojen-hiilijalanjalkilaskuri",
+        "displayName": "Lentojen hiilijalanjälkilaskuri",
+        "shortDescription": "Laske lentosi ilmastopäästöt."
+      },
+      {
+        "route": "ika-laskuri",
+        "displayName": "Ikälaskuri",
+        "shortDescription": "Laske tarkka ikäsi syntymäpäivästä vuosina, kuukausina ja päivinä."
+      },
+      {
+        "route": "paivamaara-laskuri",
+        "displayName": "Päivämäärälaskuri",
+        "shortDescription": "Laske päivien, viikkojen ja kuukausien ero kahden päivämäärän välillä."
+      },
+      {
+        "route": "satunnaislukugeneraattori",
+        "displayName": "Satunnaislukugeneraattori",
+        "shortDescription": "Arvo satunnaisia lukuja haluamaltasi väliltä – sopii arvontoihin ja peleihin."
+      }
+    ]
+  },
+  "Viihde": {
+    "backgroundColor": "",
+    "color": "",
+    "path": "/viihde",
+    "apps": [
+      {
+        "route": "nimikone/koirat",
+        "displayName": "Koirien nimikone",
+        "shortDescription": "Nimikoneen avulla keksit nopeasti koirallesi nimen."
+      },
+      {
+        "route": "nimikone/kissat",
+        "displayName": "Kissojen nimikone",
+        "shortDescription": "Nimikone auttaa sinua keksimään kissalle nimen."
+      },
+      {
+        "route": "kesalomalaskuri",
+        "displayName": "Kesälomalaskuri",
+        "shortDescription": "Kesälomalaskuri laskee montako päivää on jäljellä kesälomaan."
+      },
+      {
+        "route": "joululaskuri",
+        "displayName": "Joululaskuri",
+        "shortDescription": "Montako päivää on jäljellä jouluun?"
+      },
+      {
+        "route": "kuukausikone",
+        "displayName": "Kuukausikone",
+        "shortDescription": "Selvitä kuukausien päivien määrät, selaa kalentereita ja tarkista karkausvuodet."
+      },
+      {
+        "route": "lippupeli",
+        "displayName": "Lippupeli",
+        "shortDescription": "Lippupelissä arvaat maiden nimiä lippujen avulla. Testaa tietosi!"
+      },
+      {
+        "route": "sotilasmerkit",
+        "displayName": "Maavoimien arvomerkit",
+        "shortDescription": "Tunnetko maavoimien sotilasmerkit? Näytä osaamisesi tässä pelissä."
+      },
+      {
+        "route": "noppageneraattori",
+        "displayName": "Noppageneraattori",
+        "shortDescription": "Heitä virtuaalisia noppia – valitse noppien määrä ja tyyppi."
+      },
+      {
+        "route": "horoskooppi",
+        "displayName": "Horoskooppi",
+        "shortDescription": "Katso horoskooppimerkkisi kuvaus, yhteensopivat merkit ja päivän numero."
+      },
+      {
+        "route": "lotonumerogeneraattori",
+        "displayName": "Lotto-numerogeneraattori",
+        "shortDescription": "Arvo 7 ainutkertaista Lotto-numeroa väliltä 1–40 satunnaisesti."
+      },
+      {
+        "route": "arvontakone",
+        "displayName": "Arvontakone",
+        "shortDescription": "Arvo voittaja listalta – sopii arvontoihin ja arpajaisiin."
+      },
+      {
+        "route": "elamalaskuri",
+        "displayName": "Elämälaskuri",
+        "shortDescription": "Laske kuinka monta päivää, tuntia ja sydämenlyöntiä olet elänyt."
       }
     ]
   }
-]
+}

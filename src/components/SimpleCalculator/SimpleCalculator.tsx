@@ -23,7 +23,6 @@ interface Props {
   header?: string;
   extradata?: string; // If any outside dependencies are needed for the calculation, pass theme here
   suffix?: string;
-  prefix?: string;
   resultButtonStyle?: string;
 }
 
@@ -31,7 +30,6 @@ type Results = Array<{
   result: number;
   label: string;
   suffix?: string;
-  prefix?: string;
   decimals?: number;
 }>;
 
@@ -47,8 +45,7 @@ export default function SimpleCalculator({
   calculate,
   extradata,
   header,
-  suffix,
-  prefix,
+  suffix = "€",
   resultButtonStyle = "",
 }: Props) {
   const init = inputs.map((input) =>
@@ -120,8 +117,7 @@ export default function SimpleCalculator({
                 decimals={res.decimals !== undefined ? res.decimals : 2}
                 duration={1}
                 suffix={res.suffix ? res.suffix : suffix}
-                prefix={res.prefix ? res.prefix : prefix}
-                decimal={"."}
+                decimal={","}
                 extraStyles={
                   resultButtonStyle
                     ? `${resultButtonStyle}`

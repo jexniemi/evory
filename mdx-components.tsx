@@ -16,8 +16,25 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         <div className="divider">{children}</div>
       </div>
     ),
-    ul: ({ children }) => <ul className="list-disc list-inside">{children}</ul>,
-    li: ({ children }) => <li className="list-disc">{children}</li>,
+    table: ({ children }) => (
+      <div className="overflow-x-auto my-5">
+        <table className="table table-sm">{children}</table>
+      </div>
+    ),
+    thead: ({ children }) => <thead className="bg-base-200">{children}</thead>,
+    th: ({ children }) => <th className="text-sm font-semibold">{children}</th>,
+    td: ({ children }) => <td>{children}</td>,
+    ul: ({ children }) => (
+      <ul className="list-disc list-outside pl-5 my-4 space-y-2">{children}</ul>
+    ),
+    ol: ({ children }) => (
+      <ol className="list-decimal list-outside pl-5 my-4 space-y-2">
+        {children}
+      </ol>
+    ),
+    li: ({ children }) => (
+      <li className="text-gray-700 leading-relaxed pl-1">{children}</li>
+    ),
     p: ({ children }) => <p className="my-5">{children}</p>,
     a: ({ children, href }) => (
       <a href={href} className="link" target="_blank">
