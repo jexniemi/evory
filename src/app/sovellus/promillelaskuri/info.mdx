@@ -1,0 +1,82 @@
+## Miten promillelaskuri toimii?
+
+Laskuri käyttää **Widmark-kaavaa**, joka on laajalti käytetty tapa arvioida veren alkoholipitoisuus (BAC, Blood Alcohol Concentration):
+
+**BAC (‰) = (annokset × 12) ÷ (paino × r) − (0,15 × tunnit)**
+
+Missä:
+- **12** = grammaa puhdasta alkoholia per suomalainen standardiannos
+- **r** = jakautumiskerroin (miehet 0,68 · naiset 0,55)
+- **0,15 ‰/h** = alkoholin palamisnopeus veressä (keskiarvo)
+
+## Mikä on yksi alkoholiannos?
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Juoma</th>
+      <th>Määrä</th>
+      <th>Alkoholia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Olut (4,7 %)</td><td>33 cl</td><td>~12 g</td></tr>
+    <tr><td>Siideri (4,5 %)</td><td>33 cl</td><td>~11 g</td></tr>
+    <tr><td>Viini (12 %)</td><td>12 cl</td><td>~11 g</td></tr>
+    <tr><td>Väkevä viini (18 %)</td><td>8 cl</td><td>~11 g</td></tr>
+    <tr><td>Väkevä alkoholi (40 %)</td><td>4 cl</td><td>~12 g</td></tr>
+  </tbody>
+</table>
+
+## Suomen promillerajat liikenteessä
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Raja</th>
+      <th>Tilanne</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>0,5 ‰</td><td>Rattijuoppous (sakko, ajokielto)</td></tr>
+    <tr><td>1,2 ‰</td><td>Törkeä rattijuoppous (ehdoton ajokielto, sakko/vankeutta)</td></tr>
+    <tr><td>0,0 ‰</td><td>Ammattiautoilijat ja uudet kuljettajat (käytännön nollatoleranssi)</td></tr>
+  </tbody>
+</table>
+
+## Miksi tulos on vain arvio?
+
+Widmark-kaava antaa **suuntaa-antavan arvion** — todelliset promillet voivat poiketa usealla kymmenellä prosentilla yksilöllisten tekijöiden vuoksi:
+
+- Aineenvaihdunnan nopeus vaihtelee henkilöittäin
+- Ruoka hidastaa alkoholin imeytymistä merkittävästi
+- Lääkkeet, väsymys ja terveydentila vaikuttavat
+- Juomisrytmi (nopeasti vs. hitaasti) vaikuttaa huippupromilleisiin
+
+**⚠️ Älä koskaan aja, jos olet nauttinut alkoholia.** Ainoa varma tapa tietää promilleesi on virallinen puhalluskoetesti.
+
+## Alkoholin vaikutus suorituskykyyn
+
+Reaktioaika hidastuu merkittävästi jo alle laillisen rajan:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Promillemäärä</th>
+      <th>Tyypilliset vaikutukset</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>0,2–0,5 ‰</td><td>Rentoutunut olo, lievä reaktioajan hidastuminen</td></tr>
+    <tr><td>0,5–1,0 ‰</td><td>Koordinaatio heikkenee, arviointikyky alenee</td></tr>
+    <tr><td>1,0–2,0 ‰</td><td>Selkeä humala, liikkuminen vaikeutuu</td></tr>
+    <tr><td>2,0–3,0 ‰</td><td>Voimakas humala, sammumisen riski</td></tr>
+    <tr><td>{'> 3,0 ‰'}</td><td>Hengenvaarallinen tila</td></tr>
+  </tbody>
+</table>
+
+## Lähteet
+
+- THL: [Alkoholi ja terveys](https://thl.fi/aiheet/alkoholi-tupakka-ja-riippuvuudet/alkoholi)
+- Traficom: [Rattijuopumus](https://www.traficom.fi/fi/liikenne/tieliikenne/rattijuopumus)
+- Widmark, E.M.P. (1932). *Principles and applications of medicolegal alcohol determination.*

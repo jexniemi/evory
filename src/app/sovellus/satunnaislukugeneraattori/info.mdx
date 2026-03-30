@@ -1,0 +1,43 @@
+## Satunnaislukugeneraattori – Arvo satunnaisia lukuja haluamaltasi väliltä
+
+Satunnaislukugeneraattori tuottaa täysin satunnaisia kokonaislukuja haluamaltasi lukuväliltä. Voit valita kuinka monta lukua arvotaan ja haluatko ne ainutkertaisina.
+
+### Mihin satunnaislukugeneraattoria käytetään?
+
+- **Arvonnat ja kilpailut** – Arvo voittaja numeroidusta osallistujajoukosta
+- **Pelaaminen** – Satunnaiset numerot peleihin ja simulointeihin
+- **Joukkueiden jako** – Arvo pelaajat joukkueisiin neutraalisti
+- **Opiskelun testaus** – Arvo satunnaisia tehtäviä tai kysymyksiä
+- **Tilastollinen otanta** – Valitse satunnainen otos suuremmasta joukosta
+- **Päätösten teko** – Kun on vaikea valita vaihtoehtojen välillä
+
+### Kuinka satunnaisuus toimii?
+
+Generaattori käyttää selaimen sisäänrakennettua `Math.random()`-funktiota, joka tuottaa pseudosatunnaisia lukuja. Tämä on riittävä useimpiin käytännön tarkoituksiin, mutta ei kryptografiseen turvallisuuteen.
+
+Ainutkertaisten lukujen arvonnassa käytetään **Fisher-Yatesin sekoitusalgoritmia**, joka takaa tasaisen jakauman kaikille mahdollisille yhdistelmille.
+
+### Esimerkkejä
+
+<table className="table table-sm my-4">
+  <thead>
+    <tr className="bg-base-200">
+      <th>Käyttötapaus</th>
+      <th>Min</th>
+      <th>Max</th>
+      <th>Lukumäärä</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Yksi satunnainen luku</td><td>1</td><td>100</td><td>1</td></tr>
+    <tr><td>Nopan heitto</td><td>1</td><td>6</td><td>1</td></tr>
+    <tr><td>Kolikko (0=kruuna, 1=klaava)</td><td>0</td><td>1</td><td>1</td></tr>
+    <tr><td>5 ainutkertaista numeroa 30:stä</td><td>1</td><td>30</td><td>5</td></tr>
+    <tr><td>Joukkuejako (10 pelaajaa, 2 joukkuetta)</td><td>1</td><td>10</td><td>5</td></tr>
+  </tbody>
+</table>
+
+### Katso myös
+
+- [Lotto-numerogeneraattori](/sovellus/lotonumerogeneraattori) – Arvo Suomen Loton numerot
+- [Noppageneraattori](/sovellus/noppageneraattori) – Heitä virtuaalisia noppia
