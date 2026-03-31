@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## Loan Repayment Calculator — Monthly Payments and Total Interest
 
 The loan repayment calculator shows your monthly payment, total interest cost, and amortization breakdown for any loan amount, interest rate, and term. Whether you are shopping for a mortgage, auto loan, or personal loan, this tool helps you compare scenarios before committing.
@@ -71,19 +73,12 @@ This calculator uses the fixed-rate annuity method, which is the most common for
 5. **Check for prepayment penalties** — Some loans charge fees for paying off early.
 6. **Lock your rate** — When applying for a mortgage, a rate lock protects you from increases during processing.
 
-### Frequently Asked Questions
-
-#### What is a good mortgage interest rate?
-Rates depend on the economic environment, your credit score, down payment, and loan type. As of 2024, rates between 6–7% are common for 30-year fixed mortgages. A credit score above 740 typically qualifies for the best rates.
-
-#### Should I choose a 15-year or 30-year mortgage?
-A 15-year mortgage has higher monthly payments but significantly lower total interest. Choose 15 years if you can comfortably afford the payments; otherwise, choose 30 years and make extra payments when possible.
-
-#### How does my credit score affect my rate?
-Lenders offer lower rates to borrowers with higher credit scores because they represent less risk. A difference of 1 percentage point on a $300,000 mortgage can cost over $60,000 in additional interest over 30 years.
-
-#### What is PMI?
-Private Mortgage Insurance (PMI) is required when your down payment is less than 20%. It typically costs 0.5–1% of the loan amount annually and can be removed once you reach 20% equity.
+<FAQ items={[
+  { q: "What is a good mortgage interest rate?", a: "Rates depend on the economic environment, your credit score, down payment, and loan type. As of 2024, rates between 6–7% are common for 30-year fixed mortgages. A credit score above 740 typically qualifies for the best rates." },
+  { q: "Should I choose a 15-year or 30-year mortgage?", a: "A 15-year mortgage has higher monthly payments but significantly lower total interest. Choose 15 years if you can comfortably afford the payments; otherwise, choose 30 years and make extra payments when possible." },
+  { q: "How does my credit score affect my rate?", a: "Lenders offer lower rates to borrowers with higher credit scores because they represent less risk. A difference of 1 percentage point on a $300,000 mortgage can cost over $60,000 in additional interest over 30 years." },
+  { q: "What is PMI?", a: "Private Mortgage Insurance (PMI) is required when your down payment is less than 20%. It typically costs 0.5–1% of the loan amount annually and can be removed once you reach 20% equity." },
+]} />
 
 ### Related Tools
 

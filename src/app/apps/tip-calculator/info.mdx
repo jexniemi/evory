@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## How Does the Tip Calculator Work?
 
 The tip calculator helps you figure out the exact tip amount and split the total bill evenly among all payers. Simply enter the bill amount, your desired tip percentage, and the number of people splitting the check. The calculator uses a straightforward formula:
@@ -65,19 +67,12 @@ Etiquette experts generally recommend tipping on the **pre-tax** subtotal, since
 - Pre-tax 20% tip: $100 × 0.20 = **$20.00**
 - Post-tax 20% tip: $108 × 0.20 = **$21.60**
 
-## Frequently Asked Questions
-
-### Is 15% still an acceptable tip?
-Yes, 15% is the baseline for adequate service. However, 18–20% has become more common as the expected standard in the US, especially in cities.
-
-### Should I tip on takeout orders?
-Tipping 10% on takeout is a nice gesture, especially for large or complex orders. During the pandemic, tipping on takeout became much more common.
-
-### How do I tip on a discounted meal (coupon / gift card)?
-Tip on the **original** (pre-discount) amount. If your meal was $60 but you had a $20 coupon, tip on $60.
-
-### What if the service was bad?
-A 10% tip signals dissatisfaction while still compensating the server. Speaking to a manager is more effective than leaving no tip.
+<FAQ items={[
+  { q: "Is 15% still an acceptable tip?", a: "Yes, 15% is the baseline for adequate service. However, 18–20% has become more common as the expected standard in the US, especially in cities." },
+  { q: "Should I tip on takeout orders?", a: "Tipping 10% on takeout is a nice gesture, especially for large or complex orders. During the pandemic, tipping on takeout became much more common." },
+  { q: "How do I tip on a discounted meal (coupon / gift card)?", a: "Tip on the original (pre-discount) amount. If your meal was $60 but you had a $20 coupon, tip on $60." },
+  { q: "What if the service was bad?", a: "A 10% tip signals dissatisfaction while still compensating the server. Speaking to a manager is more effective than leaving no tip." },
+]} />
 
 ## Related Tools
 

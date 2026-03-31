@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## Pregnancy Calculator — Due Date and Weekly Tracker
 
 The pregnancy calculator estimates your due date, current pregnancy week, and trimester based on the first day of your last menstrual period (LMP). It also highlights important milestone dates such as ultrasound windows and the start of each trimester.
@@ -69,19 +71,12 @@ The due date is an estimate, not a deadline. Full-term birth spans **weeks 37 th
 
 An early ultrasound (before 14 weeks) is the most accurate method for confirming the due date, often more precise than LMP-based calculation.
 
-### Frequently Asked Questions
-
-#### How do I calculate my due date without knowing my LMP?
-If your periods are irregular, a dating ultrasound in the first trimester is the best way to estimate gestational age. The ultrasound measures the crown-rump length of the fetus.
-
-#### Can my due date change?
-Yes. If an early ultrasound shows a significant discrepancy from the LMP-based date, your provider may adjust the due date. Later ultrasounds are less accurate for dating.
-
-#### What is the difference between gestational age and fetal age?
-Gestational age counts from LMP (includes ~2 weeks before conception). Fetal age (embryonic age) counts from actual conception and is about 2 weeks less.
-
-#### Is it safe to exercise during pregnancy?
-In most healthy pregnancies, moderate exercise is recommended. The ACOG suggests at least 150 minutes of moderate activity per week. Always consult your healthcare provider.
+<FAQ items={[
+  { q: "How do I calculate my due date without knowing my LMP?", a: "If your periods are irregular, a dating ultrasound in the first trimester is the best way to estimate gestational age. The ultrasound measures the crown-rump length of the fetus." },
+  { q: "Can my due date change?", a: "Yes. If an early ultrasound shows a significant discrepancy from the LMP-based date, your provider may adjust the due date. Later ultrasounds are less accurate for dating." },
+  { q: "What is the difference between gestational age and fetal age?", a: "Gestational age counts from LMP (includes ~2 weeks before conception). Fetal age (embryonic age) counts from actual conception and is about 2 weeks less." },
+  { q: "Is it safe to exercise during pregnancy?", a: "In most healthy pregnancies, moderate exercise is recommended. The ACOG suggests at least 150 minutes of moderate activity per week. Always consult your healthcare provider." },
+]} />
 
 ### Related Tools
 

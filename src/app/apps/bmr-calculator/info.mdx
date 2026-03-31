@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## What Is Basal Metabolic Rate (BMR)?
 
 Basal Metabolic Rate (BMR) is the number of calories your body needs each day just to stay alive — even if you spent the entire day in bed. This energy fuels essential functions: breathing, blood circulation, cell repair, brain activity, and maintaining body temperature.
@@ -89,19 +91,12 @@ Several factors influence your basal metabolic rate:
 
 If you want a complete calorie target for weight loss, maintenance, or muscle gain, use the [Daily Calorie Needs Calculator](/apps/daily-calorie-needs-calculator), which adds your activity level to your BMR.
 
-## Frequently Asked Questions
-
-### How can I increase my BMR?
-Build muscle through resistance training, stay well-hydrated, get adequate sleep (7–9 hours), eat enough protein, and avoid crash diets that trigger metabolic adaptation.
-
-### Is BMR the same as resting metabolic rate (RMR)?
-They are similar but not identical. RMR is measured under less strict conditions than BMR and is typically 10–20% higher. For practical purposes, the terms are often used interchangeably.
-
-### How accurate is the Harris-Benedict formula?
-Studies show it is accurate within ±10% for most people. The Mifflin-St Jeor equation (1990) may be slightly more accurate for overweight individuals. Both formulas are estimates — indirect calorimetry in a lab is the gold standard.
-
-### Why does my metabolism slow with age?
-Primarily due to loss of lean muscle mass (sarcopenia). Maintaining strength training as you age is the best way to counteract metabolic decline.
+<FAQ items={[
+  { q: "How can I increase my BMR?", a: "Build muscle through resistance training, stay well-hydrated, get adequate sleep (7–9 hours), eat enough protein, and avoid crash diets that trigger metabolic adaptation." },
+  { q: "Is BMR the same as resting metabolic rate (RMR)?", a: "They are similar but not identical. RMR is measured under less strict conditions than BMR and is typically 10–20% higher. For practical purposes, the terms are often used interchangeably." },
+  { q: "How accurate is the Harris-Benedict formula?", a: "Studies show it is accurate within ±10% for most people. The Mifflin-St Jeor equation (1990) may be slightly more accurate for overweight individuals. Both formulas are estimates — indirect calorimetry in a lab is the gold standard." },
+  { q: "Why does my metabolism slow with age?", a: "Primarily due to loss of lean muscle mass (sarcopenia). Maintaining strength training as you age is the best way to counteract metabolic decline." },
+]} />
 
 ## Related Tools
 

@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## What Is BMI?
 
 BMI (Body Mass Index) is a widely used screening tool that estimates body fat by comparing a person's weight to their height. Doctors, insurance companies, and public-health organizations around the world rely on it because the calculation is quick and requires no special equipment — just a scale and a tape measure.
@@ -101,22 +103,13 @@ While BMI is a useful first screening, it has several well-known blind spots:
 
 **Body composition analysis** — such as a DEXA scan or bioelectrical impedance analysis (BIA) — provides a far more detailed picture by measuring fat, muscle, and bone separately.
 
-## Frequently Asked Questions
-
-### What is a good BMI?
-A BMI between **18.5 and 24.9** is considered normal weight by the WHO. Within that range, most people face the lowest statistical risk for weight-related health conditions such as type-2 diabetes, hypertension, and cardiovascular disease.
-
-### Is BMI accurate for muscular people?
-No. BMI cannot tell the difference between muscle and fat. A 200-pound, 5′10″ bodybuilder with 10% body fat will show a BMI of 28.7 ("overweight"), even though they are extremely lean. If you are athletic, waist circumference or body-fat percentage is a better indicator.
-
-### How often should I check my BMI?
-For most adults, checking BMI once or twice a year is sufficient. If you are actively trying to lose or gain weight, monthly tracking alongside waist measurements gives a clearer picture of progress.
-
-### Does BMI apply to children?
-Standard BMI categories are for adults 20 and older. For children and teens ages 2–19, the CDC uses **BMI-for-age percentiles** that compare a child's BMI to others of the same age and sex.
-
-### At what BMI should I see a doctor?
-If your BMI is below **18.5** or above **30**, it is a good idea to discuss your weight with a healthcare provider. However, BMI is just one data point — a doctor will also consider blood pressure, blood sugar, cholesterol, family history, and lifestyle.
+<FAQ items={[
+  { q: "What is a good BMI?", a: "A BMI between 18.5 and 24.9 is considered normal weight by the WHO. Within that range, most people face the lowest statistical risk for weight-related health conditions such as type-2 diabetes, hypertension, and cardiovascular disease." },
+  { q: "Is BMI accurate for muscular people?", a: "No. BMI cannot tell the difference between muscle and fat. A 200-pound, 5′10″ bodybuilder with 10% body fat will show a BMI of 28.7 (overweight), even though they are extremely lean. If you are athletic, waist circumference or body-fat percentage is a better indicator." },
+  { q: "How often should I check my BMI?", a: "For most adults, checking BMI once or twice a year is sufficient. If you are actively trying to lose or gain weight, monthly tracking alongside waist measurements gives a clearer picture of progress." },
+  { q: "Does BMI apply to children?", a: "Standard BMI categories are for adults 20 and older. For children and teens ages 2–19, the CDC uses BMI-for-age percentiles that compare a child's BMI to others of the same age and sex." },
+  { q: "At what BMI should I see a doctor?", a: "If your BMI is below 18.5 or above 30, it is a good idea to discuss your weight with a healthcare provider. However, BMI is just one data point — a doctor will also consider blood pressure, blood sugar, cholesterol, family history, and lifestyle." },
+]} />
 
 ## When to Contact a Professional
 

@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## BAC Calculator — Estimate Your Blood Alcohol Concentration
 
 The BAC (Blood Alcohol Concentration) calculator estimates your blood alcohol level based on the number of standard drinks consumed, your body weight, gender, and the time elapsed since drinking. This tool is for **educational purposes only** — never rely on any calculator to determine if you are safe to drive.
@@ -90,19 +92,12 @@ The Widmark formula provides a rough estimate. Your actual BAC can differ signif
 
 **Never drive after drinking alcohol. The only guaranteed safe BAC for driving is 0.00%.**
 
-### Frequently Asked Questions
-
-#### How long does it take to sober up?
-The body eliminates alcohol at roughly **0.015% per hour**. If your BAC is 0.08%, it takes about 5.3 hours to reach 0.00%. Coffee, cold showers, and fresh air do **not** speed up alcohol metabolism.
-
-#### Why do women get drunk faster?
-Women generally have lower body water content, higher body fat percentage, and less alcohol dehydrogenase enzyme. This means the same amount of alcohol produces a higher BAC in women.
-
-#### Can I trust a personal breathalyzer?
-Consumer breathalyzers vary widely in accuracy. Professional-grade fuel-cell sensors are more reliable, but even these have a margin of error. Never rely on any device to determine driving fitness.
-
-#### How many drinks is the legal limit?
-There is no universal answer — it depends on weight, gender, food intake, and drinking pace. For a 160 lb man, two drinks in one hour might produce a BAC around 0.04%. But individual variation is significant.
+<FAQ items={[
+  { q: "How long does it take to sober up?", a: "The body eliminates alcohol at roughly 0.015% per hour. If your BAC is 0.08%, it takes about 5.3 hours to reach 0.00%. Coffee, cold showers, and fresh air do not speed up alcohol metabolism." },
+  { q: "Why do women get drunk faster?", a: "Women generally have lower body water content, higher body fat percentage, and less alcohol dehydrogenase enzyme. This means the same amount of alcohol produces a higher BAC in women." },
+  { q: "Can I trust a personal breathalyzer?", a: "Consumer breathalyzers vary widely in accuracy. Professional-grade fuel-cell sensors are more reliable, but even these have a margin of error. Never rely on any device to determine driving fitness." },
+  { q: "How many drinks is the legal limit?", a: "There is no universal answer — it depends on weight, gender, food intake, and drinking pace. For a 160 lb man, two drinks in one hour might produce a BAC around 0.04%. But individual variation is significant." },
+]} />
 
 ### Related Tools
 

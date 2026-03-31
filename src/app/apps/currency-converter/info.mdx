@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## Currency Converter — Convert Currencies Instantly
 
 The currency converter lets you convert over 20 major world currencies with indicative exchange rates. Whether you are planning a vacation, shopping from an international website, or comparing overseas prices, this tool gives you a fast estimate.
@@ -71,19 +73,12 @@ Exchange rates fluctuate constantly based on supply and demand, interest rates, 
 
 The global foreign exchange (forex) market trades over **$7.5 trillion per day**, making it the largest financial market in the world (BIS 2022 Triennial Survey).
 
-### Frequently Asked Questions
-
-#### Why do exchange rates change?
-Rates move due to differences in interest rates, inflation expectations, trade balances, political stability, and market speculation. Central bank decisions (like the Federal Reserve raising rates) have the most immediate impact.
-
-#### Should I exchange money before traveling?
-Exchange a small amount for immediate expenses (taxi, tips) and use ATMs at your destination for the rest. This typically gives the best overall rate.
-
-#### What is purchasing power parity (PPP)?
-PPP adjusts exchange rates to reflect what money can actually buy in different countries. A $5 coffee in New York might cost the equivalent of $1.50 in Vietnam, even though the nominal exchange rate doesn't reflect that difference.
-
-#### Are crypto exchange rates the same as fiat rates?
-No. Cryptocurrency exchange rates are determined by supply and demand on crypto exchanges and can vary significantly between platforms. This converter handles traditional (fiat) currencies only.
+<FAQ items={[
+  { q: "Why do exchange rates change?", a: "Rates move due to differences in interest rates, inflation expectations, trade balances, political stability, and market speculation. Central bank decisions (like the Federal Reserve raising rates) have the most immediate impact." },
+  { q: "Should I exchange money before traveling?", a: "Exchange a small amount for immediate expenses (taxi, tips) and use ATMs at your destination for the rest. This typically gives the best overall rate." },
+  { q: "What is purchasing power parity (PPP)?", a: "PPP adjusts exchange rates to reflect what money can actually buy in different countries. A $5 coffee in New York might cost the equivalent of $1.50 in Vietnam, even though the nominal exchange rate doesn't reflect that difference." },
+  { q: "Are crypto exchange rates the same as fiat rates?", a: "No. Cryptocurrency exchange rates are determined by supply and demand on crypto exchanges and can vary significantly between platforms. This converter handles traditional (fiat) currencies only." },
+]} />
 
 ### Related Tools
 

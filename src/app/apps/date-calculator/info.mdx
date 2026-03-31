@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## Date Calculator — Days, Weeks, and Months Between Dates
 
 The date calculator is a versatile tool for finding the exact time between two dates or calculating a future/past date by adding or subtracting days. Results are displayed in days, weeks, months, and even business days.
@@ -70,19 +72,12 @@ The second mode of the calculator lets you start from any date and add or subtra
 - The Gregorian calendar was introduced in 1582 by Pope Gregory XIII to correct the drift of the Julian calendar.
 - **Doomsday Algorithm** — A mental trick to determine the day of the week for any date, invented by mathematician John Conway.
 
-### Frequently Asked Questions
-
-#### How many days are in a year?
-A common year has **365 days**. A leap year has **366 days**. On average, accounting for leap years, a year is 365.2425 days.
-
-#### How do I calculate business days between two dates?
-Count only Monday through Friday. This calculator can show you weekday counts. For more precision, you would also need to exclude public holidays specific to your region.
-
-#### What is the Julian date?
-The Julian date is a continuous count of days since January 1, 4713 BC. It is used in astronomy, military operations, and food packaging (where it is a 3-digit day-of-year code).
-
-#### How many weeks are in a year?
-There are **52 weeks and 1 day** in a common year (52 weeks and 2 days in a leap year).
+<FAQ items={[
+  { q: "How many days are in a year?", a: "A common year has 365 days. A leap year has 366 days. On average, accounting for leap years, a year is 365.2425 days." },
+  { q: "How do I calculate business days between two dates?", a: "Count only Monday through Friday. This calculator can show you weekday counts. For more precision, you would also need to exclude public holidays specific to your region." },
+  { q: "What is the Julian date?", a: "The Julian date is a continuous count of days since January 1, 4713 BC. It is used in astronomy, military operations, and food packaging (where it is a 3-digit day-of-year code)." },
+  { q: "How many weeks are in a year?", a: "There are 52 weeks and 1 day in a common year (52 weeks and 2 days in a leap year)." },
+]} />
 
 ### Related Tools
 

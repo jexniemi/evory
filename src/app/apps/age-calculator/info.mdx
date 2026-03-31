@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## Age Calculator — Calculate Your Exact Age
 
 The age calculator determines your precise age from your date of birth to today's date. The result is displayed in multiple formats: years, months, and days, as well as totals in days, weeks, and months. Whether you need your exact age for an official form or just for fun, this tool handles leap years and varying month lengths automatically.
@@ -84,19 +86,12 @@ The calculator shows your age in six different ways:
   </tbody>
 </table>
 
-### Frequently Asked Questions
-
-#### How accurate is this age calculator?
-The calculator is accurate to the day. It correctly handles leap years (including century rules), different month lengths, and time-zone-independent date arithmetic.
-
-#### What if I was born on February 29?
-The calculator handles leap-day birthdays correctly. In non-leap years, your birthday is typically counted as March 1 for age purposes.
-
-#### How do I calculate age difference between two people?
-Calculate each person's age in days using this tool, then subtract. Or use the [Date Calculator](/apps/date-calculator) to find the exact difference between two birth dates.
-
-#### What day of the week was I born?
-Enter your birth date and the calculator will tell you the day of the week alongside your age.
+<FAQ items={[
+  { q: "How accurate is this age calculator?", a: "The calculator is accurate to the day. It correctly handles leap years (including century rules), different month lengths, and time-zone-independent date arithmetic." },
+  { q: "What if I was born on February 29?", a: "The calculator handles leap-day birthdays correctly. In non-leap years, your birthday is typically counted as March 1 for age purposes." },
+  { q: "How do I calculate age difference between two people?", a: "Calculate each person's age in days using this tool, then subtract. Or use the Date Calculator to find the exact difference between two birth dates." },
+  { q: "What day of the week was I born?", a: "Enter your birth date and the calculator will tell you the day of the week alongside your age." },
+]} />
 
 ### Related Tools
 

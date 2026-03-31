@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## How Compound Interest Works — Explained Simply
 
 Compound interest is often called the "eighth wonder of the world" (a quote commonly attributed to Albert Einstein). It is the single most powerful concept in personal finance — and understanding it can mean the difference between retiring comfortably and struggling financially.
@@ -99,19 +101,12 @@ A quick mental shortcut: divide 72 by the annual interest rate to estimate how m
 
 More frequent compounding produces slightly higher returns, but the difference between monthly and daily compounding is minimal.
 
-### Frequently Asked Questions
-
-#### What is the difference between APR and APY?
-**APR** (Annual Percentage Rate) is the stated interest rate without compounding. **APY** (Annual Percentage Yield) includes the effect of compounding and is always equal to or higher than APR. When comparing savings accounts, always compare APY.
-
-#### Does compound interest work against me with debt?
-Yes. Credit card debt compounds against you — unpaid interest is added to your balance, and you are charged interest on the new, larger balance. This is why high-interest debt should be paid off as quickly as possible.
-
-#### What return should I expect from the stock market?
-The S&P 500 has returned approximately **10% per year** (nominal) or **7% after inflation** over the past century. Individual years vary widely.
-
-#### When should I start investing?
-As early as possible. A 25-year-old who invests $200/month at 7% will have **$525,000** at age 65. A 35-year-old doing the same will have **$244,000** — less than half, despite only starting 10 years later.
+<FAQ items={[
+  { q: "What is the difference between APR and APY?", a: "APR (Annual Percentage Rate) is the stated interest rate without compounding. APY (Annual Percentage Yield) includes the effect of compounding and is always equal to or higher than APR. When comparing savings accounts, always compare APY." },
+  { q: "Does compound interest work against me with debt?", a: "Yes. Credit card debt compounds against you — unpaid interest is added to your balance, and you are charged interest on the new, larger balance. This is why high-interest debt should be paid off as quickly as possible." },
+  { q: "What return should I expect from the stock market?", a: "The S&P 500 has returned approximately 10% per year (nominal) or 7% after inflation over the past century. Individual years vary widely." },
+  { q: "When should I start investing?", a: "As early as possible. A 25-year-old who invests $200/month at 7% will have $525,000 at age 65. A 35-year-old doing the same will have $244,000 — less than half, despite only starting 10 years later." },
+]} />
 
 ### Related Tools
 
