@@ -1,82 +1,82 @@
-## Miten promillelaskuri toimii?
+## How does the BAC calculator work?
 
-Laskuri käyttää **Widmark-kaavaa**, joka on laajalti käytetty tapa arvioida veren alkoholipitoisuus (BAC, Blood Alcohol Concentration):
+The calculator uses the **Widmark formula**, which is widely used to estimate blood alcohol concentration (BAC, Blood Alcohol Concentration):
 
-**BAC (‰) = (annokset × 12) ÷ (paino × r) − (0,15 × tunnit)**
+**BAC (‰) = (drinks × 12) ÷ (weight × r) − (0.15 × hours)**
 
-Missä:
-- **12** = grammaa puhdasta alkoholia per suomalainen standardiannos
-- **r** = jakautumiskerroin (miehet 0,68 · naiset 0,55)
-- **0,15 ‰/h** = alkoholin palamisnopeus veressä (keskiarvo)
+Where:
+- **12** = grams of pure alcohol per Finnish standard drink
+- **r** = distribution factor (men 0.68 · women 0.55)
+- **0.15 ‰/h** = alcohol burn rate in blood (average)
 
-## Mikä on yksi alkoholiannos?
-
-<table className="table table-sm my-4">
-  <thead className="bg-base-200">
-    <tr>
-      <th>Juoma</th>
-      <th>Määrä</th>
-      <th>Alkoholia</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Olut (4,7 %)</td><td>33 cl</td><td>~12 g</td></tr>
-    <tr><td>Siideri (4,5 %)</td><td>33 cl</td><td>~11 g</td></tr>
-    <tr><td>Viini (12 %)</td><td>12 cl</td><td>~11 g</td></tr>
-    <tr><td>Väkevä viini (18 %)</td><td>8 cl</td><td>~11 g</td></tr>
-    <tr><td>Väkevä alkoholi (40 %)</td><td>4 cl</td><td>~12 g</td></tr>
-  </tbody>
-</table>
-
-## Suomen promillerajat liikenteessä
+## What is one alcohol unit?
 
 <table className="table table-sm my-4">
   <thead className="bg-base-200">
     <tr>
-      <th>Raja</th>
-      <th>Tilanne</th>
+      <th>Drink</th>
+      <th>Amount</th>
+      <th>Alcohol</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>0,5 ‰</td><td>Rattijuoppous (sakko, ajokielto)</td></tr>
-    <tr><td>1,2 ‰</td><td>Törkeä rattijuoppous (ehdoton ajokielto, sakko/vankeutta)</td></tr>
-    <tr><td>0,0 ‰</td><td>Ammattiautoilijat ja uudet kuljettajat (käytännön nollatoleranssi)</td></tr>
+    <tr><td>Beer (4.7%)</td><td>33 cl</td><td>~12 g</td></tr>
+    <tr><td>Cider (4.5%)</td><td>33 cl</td><td>~11 g</td></tr>
+    <tr><td>Wine (12%)</td><td>12 cl</td><td>~11 g</td></tr>
+    <tr><td>Fortified wine (18%)</td><td>8 cl</td><td>~11 g</td></tr>
+    <tr><td>Spirits (40%)</td><td>4 cl</td><td>~12 g</td></tr>
   </tbody>
 </table>
 
-## Miksi tulos on vain arvio?
-
-Widmark-kaava antaa **suuntaa-antavan arvion** — todelliset promillet voivat poiketa usealla kymmenellä prosentilla yksilöllisten tekijöiden vuoksi:
-
-- Aineenvaihdunnan nopeus vaihtelee henkilöittäin
-- Ruoka hidastaa alkoholin imeytymistä merkittävästi
-- Lääkkeet, väsymys ja terveydentila vaikuttavat
-- Juomisrytmi (nopeasti vs. hitaasti) vaikuttaa huippupromilleisiin
-
-**⚠️ Älä koskaan aja, jos olet nauttinut alkoholia.** Ainoa varma tapa tietää promilleesi on virallinen puhalluskoetesti.
-
-## Alkoholin vaikutus suorituskykyyn
-
-Reaktioaika hidastuu merkittävästi jo alle laillisen rajan:
+## Finnish BAC limits in traffic
 
 <table className="table table-sm my-4">
   <thead className="bg-base-200">
     <tr>
-      <th>Promillemäärä</th>
-      <th>Tyypilliset vaikutukset</th>
+      <th>Limit</th>
+      <th>Situation</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>0,2–0,5 ‰</td><td>Rentoutunut olo, lievä reaktioajan hidastuminen</td></tr>
-    <tr><td>0,5–1,0 ‰</td><td>Koordinaatio heikkenee, arviointikyky alenee</td></tr>
-    <tr><td>1,0–2,0 ‰</td><td>Selkeä humala, liikkuminen vaikeutuu</td></tr>
-    <tr><td>2,0–3,0 ‰</td><td>Voimakas humala, sammumisen riski</td></tr>
-    <tr><td>{'> 3,0 ‰'}</td><td>Hengenvaarallinen tila</td></tr>
+    <tr><td>0.5 ‰</td><td>DUI (fine, driving ban)</td></tr>
+    <tr><td>1.2 ‰</td><td>Gross DUI (mandatory driving ban, fine/imprisonment)</td></tr>
+    <tr><td>0.0 ‰</td><td>Professional drivers and new drivers (practical zero tolerance)</td></tr>
   </tbody>
 </table>
 
-## Lähteet
+## Why is the result only an estimate?
 
-- THL: [Alkoholi ja terveys](https://thl.fi/aiheet/alkoholi-tupakka-ja-riippuvuudet/alkoholi)
-- Traficom: [Rattijuopumus](https://www.traficom.fi/fi/liikenne/tieliikenne/rattijuopumus)
+The Widmark formula gives an **indicative estimate** — actual BAC can deviate by several tens of percent due to individual factors:
+
+- Metabolism rate varies from person to person
+- Food significantly slows alcohol absorption
+- Medications, fatigue and health status affect
+- Drinking pace (fast vs. slow) affects peak BAC
+
+**⚠️ Never drive if you have consumed alcohol.** The only sure way to know your BAC is an official breathalyzer test.
+
+## Alcohol's effect on performance
+
+Reaction time slows significantly even below the legal limit:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>BAC level</th>
+      <th>Typical effects</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>0.2–0.5 ‰</td><td>Relaxed feeling, mild slowing of reaction time</td></tr>
+    <tr><td>0.5–1.0 ‰</td><td>Coordination weakens, judgment decreases</td></tr>
+    <tr><td>1.0–2.0 ‰</td><td>Clear intoxication, movement difficult</td></tr>
+    <tr><td>2.0–3.0 ‰</td><td>Strong intoxication, risk of passing out</td></tr>
+    <tr><td>> 3.0 ‰</td><td>Life-threatening condition</td></tr>
+  </tbody>
+</table>
+
+## Sources
+
+- THL: [Alcohol and Health](https://thl.fi/en/web/thlfi-en/research-and-expertwork/population-studies/alcohol-and-health)
+- Traficom: [DUI](https://www.traficom.fi/en/transport/driving-and-vehicles/driving-under-the-influence)
 - Widmark, E.M.P. (1932). *Principles and applications of medicolegal alcohol determination.*

@@ -12,12 +12,12 @@ export default function PaivamaaraLaskuriPage() {
 }
 
 const pageProps = {
-  title: "Päivämäärälaskuri",
-  seoTitle: "Päivämäärälaskuri – Laske päivien, viikkojen ja kuukausien ero",
+  title: "Date Calculator",
+  seoTitle: "Date Calculator – Calculate the difference in days, weeks, and months",
   description:
-    "Ilmainen päivämäärälaskuri: laske kuinka monta päivää, viikkoa tai kuukautta kahden päivämäärän välillä on, tai lisää päiviä valitsemaasi päivämäärään.",
+    "Free date calculator: calculate how many days, weeks, or months are between two dates, or add days to your selected date.",
   instructions:
-    "Valitse kaksi päivämäärää nähdäksesi niiden välisen eron. Voit myös lisätä tai vähentää päiviä mistä tahansa päivämäärästä.",
+    "Select two dates to see the difference between them. You can also add or subtract days from any date.",
   Info,
 };
 

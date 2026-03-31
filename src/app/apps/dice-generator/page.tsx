@@ -12,12 +12,12 @@ export default function DiceGeneratorPage() {
 }
 
 const pageProps = {
-  seoTitle: "Noppageneraattori - Heitä Virtuaalisia Noppia",
-  title: "Noppageneraattori",
+  seoTitle: "Dice Generator - Roll Virtual Dice",
+  title: "Dice Generator",
   description:
-    "Heitä virtuaalisia noppia verkossa. Valitse noppien määrä ja tyyppi. Sopii lautapeleihin, roolipeleihin ja muuhun noppien heittämiseen.",
+    "Roll virtual dice online. Choose the number and type of dice. Suitable for board games, role-playing games, and other dice rolling.",
   instructions:
-    "Valitse noppien määrä ja sivujen lukumäärä, ja paina 'Heitä nopat!' -nappia. Laskuri näyttää tulokset animaation kera.",
+    "Choose the number of dice and the number of sides, and press the 'Roll Dice!' button. The generator shows the results with animation.",
   Info,
 };
 

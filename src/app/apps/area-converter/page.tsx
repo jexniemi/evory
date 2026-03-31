@@ -12,12 +12,12 @@ export default function PintaalamuunninPage() {
 }
 
 const pageProps = {
-  title: "Pinta-alamuunnin",
-  seoTitle: "Pinta-alamuunnin – Muunna m², ft², hehtaari, acre ja muut",
+  title: "Area Converter",
+  seoTitle: "Area Converter – Convert m², ft², hectare, acre and more",
   description:
-    "Ilmainen pinta-alamuunnin: muunna neliömetrit, neliöjalat, hehtaarit, acret, neliökilometrit ja muut pinta-alayksiköt helposti.",
+    "Free area converter: easily convert square meters, square feet, hectares, acres, square kilometers and other area units.",
   instructions:
-    "Valitse lähtöyksikkö, syötä pinta-ala ja saat kaikki muunnokset välittömästi.",
+    "Select the source unit, enter the area and get all conversions instantly.",
   Info,
 };
 

@@ -12,12 +12,12 @@ export default function QRGenerator() {
 }
 
 const pageProps = {
-  title: "QR Generaattori",
-  seoTitle: "QR Generaattori - Luo QR-koodi tekstistä",
+  title: "QR Generator",
+  seoTitle: "QR Generator - Create QR Code from Text",
   description:
-    "Luo QR-koodi mistä tahansa tekstistä. Voit myös ladata QR-koodin .png kuvatiedostona.",
-  instructions: `Kirjoita kenttään haluttu QR-koodin sisältö ja sovellus luo QR-koodin
-  tekstin perusteella. Voit ladata QR-koodin .png kuvatiedostona.`,
+    "Create a QR code from any text. You can also download the QR code as a .png image file.",
+  instructions: `Write the desired QR code content in the field and the app will create a QR code
+  based on the text. You can download the QR code as a .png image file.`,
   Info,
 };
 

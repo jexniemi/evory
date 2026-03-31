@@ -12,12 +12,12 @@ export default function AnnoslaskuriPage() {
 }
 
 const pageProps = {
-  title: "Annoslaskuri",
-  seoTitle: "Annoslaskuri – Skaalaa resepti oikealle annoskoalle",
+  title: "Portion Calculator",
+  seoTitle: "Portion Calculator – Scale Recipe to the Right Serving Size",
   description:
-    "Ilmainen annoslaskuri: muuta reseptin annoskoko helposti. Syötä ainesosat ja alkuperäinen annoskoko, valitse haluttu annoskoko ja saat skaalatut määrät automaattisesti.",
+    "Free portion calculator: easily change the serving size of a recipe. Enter the ingredients and original serving size, select the desired serving size, and get the scaled amounts automatically.",
   instructions:
-    "Syötä alkuperäinen annoskoko, haluttu annoskoko ja ainesosat. Skaalatut määrät lasketaan automaattisesti.",
+    "Enter the original serving size, desired serving size, and ingredients. Scaled amounts are calculated automatically.",
   Info,
 };
 

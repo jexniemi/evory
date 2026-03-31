@@ -12,12 +12,12 @@ export default function MakrolaskuriPage() {
 }
 
 const pageProps = {
-  title: "Makrolaskuri",
-  seoTitle: "Makrolaskuri – Laske päivittäiset kalorit ja makrot",
+  title: "Macro Calculator",
+  seoTitle: "Macro Calculator – Calculate daily calories and macros",
   description:
-    "Ilmainen makrolaskuri: laske päivittäinen kalorintarpeesi ja sopivat proteiini-, hiilihydraatti- ja rasvatarpeet tavoitteesi mukaan. Sopii laihduttajille, lihasmassan kasvattajille ja painon ylläpitäjille.",
+    "Free macro calculator: calculate your daily calorie needs and appropriate protein, carbohydrate and fat needs according to your goal. Suitable for dieters, muscle builders and weight maintainers.",
   instructions:
-    "Syötä painosi, valitse tavoitteesi ja aktiivisuustasosi. Saat laskelman päivittäisistä kaloreista ja makroravinteista.",
+    "Enter your weight, select your goal and activity level. You get a calculation of daily calories and macronutrients.",
   Info,
 };
 

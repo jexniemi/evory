@@ -12,12 +12,12 @@ export default function RaskauslaskuriPage() {
 }
 
 const pageProps = {
-  title: "Raskauslaskuri",
-  seoTitle: "Raskauslaskuri – Laske laskettu aika ja raskausviikot",
+  title: "Pregnancy Calculator",
+  seoTitle: "Pregnancy Calculator – Calculate Due Date and Pregnancy Weeks",
   description:
-    "Ilmainen raskauslaskuri: laske laskettu aika, nykyinen raskausviikko, trimesteri ja tärkeät virstanpylväät synnytyksen arvioituun päivämäärään. Syötä viimeisten kuukautisten päivä.",
+    "Free pregnancy calculator: calculate due date, current pregnancy week, trimester, and important milestones to the estimated delivery date. Enter the first day of your last menstrual period.",
   instructions:
-    "Syötä viimeisten kuukautisten ensimmäinen päivä tai laskettu aika, niin näet raskausviikon, trimesterin ja tärkeät päivämäärät.",
+    "Enter the first day of your last menstrual period or the due date, and you'll see the pregnancy week, trimester, and important dates.",
   Info,
 };
 

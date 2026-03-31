@@ -13,12 +13,12 @@ export default function ArmyQuiz() {
 }
 
 const pageProps = {
-  title: "Maavoimien sotilasarvot -tietovisa",
-  seoTitle: "Sotilasarvot-tietovisa – Tunnista Suomen maavoimien arvomerkit",
+  title: "Army Military Ranks Quiz",
+  seoTitle: "Military Ranks Quiz – Identify Finnish Army insignia",
   description:
-    "Tunnetko Suomen maavoimien sotilasarvot? Tietovisassa näet arvomerkin kuvan ja valitset oikean sotilasarvon neljästä vaihtoehdosta. Mukana kaikki 21 arvoa sotamiehestä kenraaliin.",
+    "Do you know the Finnish Army military ranks? In the quiz, you see an insignia image and choose the correct military rank from four options. Includes all 21 ranks from private to general.",
   instructions:
-    "Tunnista sotilasarvo arvomerkin perusteella. Sinulla on 3 elämää — arvaa 10 oikein niin voitat!",
+    "Identify the military rank based on the insignia. You have 3 lives — guess 10 correctly to win!",
   Info,
 };
 

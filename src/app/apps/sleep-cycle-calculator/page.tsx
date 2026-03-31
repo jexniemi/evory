@@ -12,12 +12,12 @@ export default function UnisyklilaskuriPage() {
 }
 
 const pageProps = {
-  title: "Unisyklilaskuri",
-  seoTitle: "Unisyklilaskuri – Milloin herätä tai mennä nukkumaan?",
+  title: "Sleep Cycle Calculator",
+  seoTitle: "Sleep Cycle Calculator – When to Wake Up or Go to Sleep?",
   description:
-    "Ilmainen unisyklilaskuri: syötä heräämisaika tai nukkumaanmenoaika ja laske optimaaliset ajat 90 minuutin unisyklien perusteella. Herää virkeänä!",
+    "Free sleep cycle calculator: enter wake-up time or bedtime and calculate optimal times based on 90-minute sleep cycles. Wake up refreshed!",
   instructions:
-    "Valitse haluatko laskea nukkumaanmenoajan vai heräämisajan, syötä aika ja katso optimaaliset vaihtoehdot.",
+    "Choose if you want to calculate bedtime or wake-up time, enter the time, and see optimal options.",
   Info,
 };
 

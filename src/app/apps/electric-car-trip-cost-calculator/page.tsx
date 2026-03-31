@@ -12,11 +12,11 @@ export default function ElectricCarCalculatorPage() {
 }
 
 const pageProps = {
-  title: "Sähköauton matkakululaskuri",
-  seoTitle: "Sähköauton matkakululaskuri - Laske Matkasi Sähkökustannukset",
+  title: "Electric Car Trip Cost Calculator",
+  seoTitle: "Electric Car Trip Cost Calculator - Calculate Your Trip's Electricity Costs",
   description:
-    "Laske ajomatkasi sähköauton sähkökustannukset helposti ja nopeasti sähköauton matkakululaskurilla. Syötä matkan pituus, ajoneuvosi energiankulutus ja sähkön hinta saadaksesi tarkan arvion matkasi kustannuksista. Säästä rahaa ja suunnittele matkasi tehokkaammin!",
-  instructions: `Syötä ajomatkasi pituus kilometreinä, ajoneuvosi keskimääräinen energiankulutus (kWh per 100 kilometriä) ja sähkön hinta per kWh euroina. Paina laskenta-painiketta ja katso, kuinka helposti ja nopeasti sähköauton matkakululaskurimme antaa sinulle tarkan arvion matkasi sähkökustannuksista. Näillä yksinkertaisilla ohjeilla voit suunnitella matkasi tehokkaammin ja säästää rahaa – laske sähkökulut käden käänteessä!`,
+    "Calculate your trip's electric car electricity costs easily and quickly with the electric car trip cost calculator. Enter the trip distance, your vehicle's energy consumption, and electricity price to get an accurate estimate of your trip costs. Save money and plan your trips more efficiently!",
+  instructions: `Enter your trip distance in kilometers, your vehicle's average energy consumption (kWh per 100 kilometers), and electricity price per kWh in euros. Press the calculate button and see how easily and quickly our electric car trip cost calculator gives you an accurate estimate of your trip's electricity costs. With these simple instructions, you can plan your trips more efficiently and save money – calculate electricity costs in a flash!`,
   Info,
 };
 

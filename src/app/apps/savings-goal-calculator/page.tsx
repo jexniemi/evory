@@ -12,12 +12,12 @@ export default function SavingsGoalCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle: "Säästötavoitelaskuri - Kuinka Kauan Säästäminen Kestää?",
-  title: "Säästötavoitelaskuri",
+  seoTitle: "Savings Goal Calculator - How Long Will Saving Take?",
+  title: "Savings Goal Calculator",
   description:
-    "Laske kuinka kauan säästötavoitteen saavuttaminen kestää. Huomioi kuukausittainen säästösumma ja tuotto-odotus.",
+    "Calculate how long it takes to reach your savings goal. Consider monthly savings amount and expected return.",
   instructions:
-    "Syötä säästötavoite euroissa, kuukausittainen säästösumma sekä arvioitu vuotuinen tuotto. Laskuri kertoo, kuinka kauan tavoitteen saavuttaminen kestää.",
+    "Enter the savings goal in euros, monthly savings amount, and estimated annual return. The calculator tells you how long it takes to reach the goal.",
   Info,
 };
 

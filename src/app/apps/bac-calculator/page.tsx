@@ -12,12 +12,12 @@ export default function PromillelaskuriPage() {
 }
 
 const pageProps = {
-  title: "Promillelaskuri",
-  seoTitle: "Promillelaskuri – Arvioi veren alkoholipitoisuus Widmark-kaavalla",
+  title: "BAC Calculator",
+  seoTitle: "BAC Calculator – Estimate Blood Alcohol Content with Widmark Formula",
   description:
-    "Laske arvioitu promillemäärä sukupuolen, painon, juotujen annosten ja kuluneen ajan perusteella. Laskuri näyttää myös arvioidun ajan selviämiseen ja ajokuntoon.",
+    "Calculate estimated BAC based on gender, weight, drinks consumed, and time elapsed. The calculator also shows estimated time to sober up and to be fit to drive.",
   instructions:
-    "Syötä tietosi ja saat heti arvion promilleistasi. Tulos on vain suuntaa-antava — älä aja, jos olet nauttinut alkoholia.",
+    "Enter your details and get an instant estimate of your BAC. The result is only indicative — do not drive if you have consumed alcohol.",
   Info,
 };
 

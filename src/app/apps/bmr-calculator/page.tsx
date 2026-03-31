@@ -12,12 +12,12 @@ export default function BMRCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle: "Perusaineenvaihduntalaskuri (BMR) – Laske lepokalorit",
-  title: "Perusaineenvaihduntalaskuri",
+  seoTitle: "Basal Metabolic Rate Calculator (BMR) – Calculate Resting Calories",
+  title: "Basal Metabolic Rate Calculator",
   description:
-    "Laske perusaineenvaihduntasi (BMR) Harris-Benedictin kaavalla. Syötä ikä, sukupuoli, paino ja pituus – saat BMR:n sekä arvion päivittäisestä kalorintarpeesta eri aktiivisuustasoilla.",
+    "Calculate your basal metabolic rate (BMR) using the Harris-Benedict formula. Enter age, gender, weight, and height – get your BMR and an estimate of daily calorie needs at different activity levels.",
   instructions:
-    "Syötä tietosi alle. Laskuri laskee perusaineenvaihduntasi Harris-Benedictin kaavalla ja näyttää päivittäisen kalorintarpeen kolmella eri aktiivisuustasolla.",
+    "Enter your details below. The calculator calculates your basal metabolic rate using the Harris-Benedict formula and shows daily calorie needs at three different activity levels.",
   Info,
 };
 

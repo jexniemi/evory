@@ -12,12 +12,12 @@ export default function CaloriePage() {
 }
 
 const pageProps = {
-  seoTitle: "Päivittäinen kalorintarve -laskuri – Laske kaloritarpeesi",
-  title: "Päivittäinen kalorintarve -laskuri",
+  seoTitle: "Daily Calorie Needs Calculator – Calculate Your Calorie Needs",
+  title: "Daily Calorie Needs Calculator",
   description:
-    "Laske päivittäinen kalorintarpeesi Mifflin-St Jeor -kaavalla. Valitse aktiivisuustasosi ja saat tarkan arvion ylläpitokalorien lisäksi tavoitteet painon pudotukseen ja lihasmassan kasvatukseen.",
+    "Calculate your daily calorie needs using the Mifflin-St Jeor formula. Select your activity level and get an accurate estimate of maintenance calories plus goals for weight loss and muscle gain.",
   instructions:
-    "Syötä tietosi ja valitse aktiivisuustasosi. Laskuri näyttää päivittäisen kalorintarpeesi sekä suositellut kalorimäärät laihdutukseen ja lihasmassan kasvatukseen.",
+    "Enter your information and select your activity level. The calculator will show your daily calorie needs as well as recommended calorie amounts for weight loss and muscle gain.",
   Info,
 };
 

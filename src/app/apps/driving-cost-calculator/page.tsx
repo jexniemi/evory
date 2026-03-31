@@ -13,12 +13,12 @@ export default function FuelCostPage() {
 
 const pageProps = {
   seoTitle:
-    "Ajokustannuslaskuri \u2013 Laske polttoainekulut ja vuosikustannukset",
-  title: "Ajokustannuslaskuri",
+    "Driving Cost Calculator – Calculate Fuel Costs and Annual Costs",
+  title: "Driving Cost Calculator",
   description:
-    "Laske ajomatkan polttoainekustannus, kustannus per kilometri ja vuosikulut. Sy\u00f6t\u00e4 matka, kulutus, polttoaineen hinta ja vuosikilometrit.",
+    "Calculate the fuel cost of a trip, cost per kilometer, and annual costs. Enter the distance, consumption, fuel price, and annual kilometers.",
   instructions:
-    "Sy\u00f6t\u00e4 ajomatkan pituus, auton kulutus, polttoaineen litrahinta ja arvioidut vuosikilometrit. Laskuri n\u00e4ytt\u00e4\u00e4 matkan kustannuksen, tarvittavan polttoaineen m\u00e4\u00e4r\u00e4n, kilometrikustannuksen ja vuosikulut.",
+    "Enter the trip distance, car consumption, fuel price per liter, and estimated annual kilometers. The calculator shows the trip cost, required fuel amount, cost per kilometer, and annual costs.",
   Info,
 };
 

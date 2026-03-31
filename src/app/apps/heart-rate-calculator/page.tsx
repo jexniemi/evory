@@ -12,12 +12,12 @@ export default function SydansykelaskuriPage() {
 }
 
 const pageProps = {
-  title: "Sydänsykelaskuri",
-  seoTitle: "Sydänsykelaskuri – Laske sykevyöhykkeet iän ja leposykkeen mukaan",
+  title: "Heart Rate Calculator",
+  seoTitle: "Heart Rate Calculator – Calculate heart rate zones based on age and resting heart rate",
   description:
-    "Ilmainen sydänsykelaskuri: laske 5 sykevyöhykettä ikäsi ja leposykkeen perusteella Karvosen kaavalla. Optimoi harjoittelusi oikeille intensiteettialueille.",
+    "Free heart rate calculator: calculate 5 heart rate zones based on your age and resting heart rate using Karvonen formula. Optimize your training to the right intensity zones.",
   instructions:
-    "Syötä ikäsi ja leposykeesi. Voit myös syöttää mitatun maksimisykkeesi tarkempia tuloksia varten.",
+    "Enter your age and resting heart rate. You can also enter your measured maximum heart rate for more accurate results.",
   Info,
 };
 

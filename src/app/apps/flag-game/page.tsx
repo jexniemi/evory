@@ -18,12 +18,12 @@ export default function FlagQuiz() {
 }
 
 const pageProps = {
-  title: "Lippupeli",
-  seoTitle: "Lippupeli – Tunnista maailman maiden liput",
+  title: "Flag Game",
+  seoTitle: "Flag Game – Identify the Flags of the World's Countries",
   description:
-    "Kuinka hyvin tunnet maailman liput? Lippupelissä näet lipun ja valitset oikean maan neljästä vaihtoehdosta. Pelissä on mukana kaikki maailman maat.",
+    "How well do you know the world's flags? In the flag game, you see a flag and choose the correct country from four options. The game includes all countries in the world.",
   instructions:
-    "Tunnista maa lipun perusteella. Sinulla on 10 elämää — arvaa 20 oikein niin voitat. Kuinka pitkän putken saat?",
+    "Identify the country based on the flag. You have 10 lives — guess 20 correctly to win. How long a streak can you get?",
   Info,
 };
 

@@ -12,12 +12,12 @@ export default function LoanPage() {
 }
 
 const pageProps = {
-  seoTitle: "Lainan lyhennyslaskuri – Laske kuukausierä ja korot",
-  title: "Lainan lyhennyslaskuri",
+  seoTitle: "Loan Repayment Calculator – Calculate monthly payment and interest",
+  title: "Loan Repayment Calculator",
   description:
-    "Laske lainan kuukausierä, kokonaiskustannukset ja korkomenot. Syötä lainasumma, korko ja laina-aika – näet tarkan kuukausierän ja kuinka paljon maksat korkoja.",
+    "Calculate loan monthly payment, total costs and interest expenses. Enter loan amount, interest rate and loan term – see exact monthly payment and how much you pay in interest.",
   instructions:
-    "Syötä lainasumma, vuotuinen korko ja laina-aika vuosissa. Laskuri näyttää kuukausierän, korkokulut, kokonaismaksun ja takaisinmaksukertoimen.",
+    "Enter loan amount, annual interest rate and loan term in years. The calculator shows monthly payment, interest costs, total payment and payback ratio.",
   Info,
 };
 

@@ -12,12 +12,12 @@ export default function ElectricityPage() {
 }
 
 const pageProps = {
-  seoTitle: "Sähkölaskun laskuri - Laske Sähkönkulutus",
-  title: "Sähkölaskun laskuri",
+  seoTitle: "Electricity Bill Calculator - Calculate Electricity Consumption",
+  title: "Electricity Bill Calculator",
   description:
-    "Laske sähkölaskunsa helposti tietäessäsi kulutuksen ja sähkön hinnan.",
+    "Calculate your electricity bill easily knowing the consumption and electricity price.",
   instructions:
-    "Syötä sähkön kulutus kWh:ssa ja sähkön hinta €/kWh. Laskuri näyttää sähkölaskun summan.",
+    "Enter electricity consumption in kWh and electricity price in €/kWh. The calculator shows the electricity bill amount.",
   Info,
 };
 

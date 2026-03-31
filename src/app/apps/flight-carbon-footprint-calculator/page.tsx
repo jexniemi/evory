@@ -13,12 +13,12 @@ export default function Lentopaastolaskuri() {
 
 const pageProps = {
   seoTitle:
-    "Lentojen Hiilijalanjälkilaskuri - Laske Lennot CO2 Päästöt Helposti",
-  title: "Lentojen Hiilijalanjälkilaskuri",
+    "Flight Carbon Footprint Calculator - Calculate Flight CO2 Emissions Easily",
+  title: "Flight Carbon Footprint Calculator",
   description:
-    "Laske lentomatkasi hiilijalanjälki helposti lentojen hiilijalanjälkilaskurilla. Syötä lähtö- ja määränpääkaupunkisi, ja saat tarkan arvion lennon aiheuttamista hiilidioksidipäästöistä. Ymmärrä lentämisen ympäristövaikutuksia ja tee vastuullisia matkustusvalintoja.",
+    "Calculate your flight's carbon footprint easily with the flight carbon footprint calculator. Enter your departure and destination cities, and get an accurate estimate of the flight's carbon dioxide emissions. Understand the environmental impact of flying and make responsible travel choices.",
   instructions:
-    "Käytä lentojen hiilijalanjälkilaskuria selvittääksesi lentomatkasi ympäristövaikutukset. Syötä lähtö- ja määränpääkaupunkien lentokenttien tiedot, ja laskuri antaa sinulle tarkan arvion lennon hiilidioksidipäästöistä. Näin voit ymmärtää lentämisen ympäristövaikutuksia ja tehdä vastuullisempia matkustusvalintoja.",
+    "Use the flight carbon footprint calculator to find out the environmental impact of your flight. Enter the details of the departure and destination airports, and the calculator will give you an accurate estimate of the flight's carbon dioxide emissions. This way, you can understand the environmental impact of flying and make more responsible travel choices.",
   Info,
 };
 

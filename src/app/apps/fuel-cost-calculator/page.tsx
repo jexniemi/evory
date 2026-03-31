@@ -12,11 +12,11 @@ export default function GasCostCalculatorPage() {
 }
 
 const pageProps = {
-  title: "Bensakululaskuri",
-  seoTitle: "Bensakululaskuri - Laske Matkasi Polttoainekustannukset",
+  title: "Fuel Cost Calculator",
+  seoTitle: "Fuel Cost Calculator - Calculate Your Trip's Fuel Costs",
   description:
-    "Laske ajomatkasi polttoainekustannukset helposti ja nopeasti bensakululaskurilla. Syötä matkan pituus, polttoaineenkulutus ja polttoaineen hinta saadaksesi tarkan arvion matkasi kustannuksista. Säästä rahaa ja suunnittele matkasi tehokkaammin!",
-  instructions: `Syötä ajomatkasi pituus kilometreinä, ajoneuvosi keskimääräinen polttoaineenkulutus (litraa per 100 kilometriä) ja nykyinen polttoaineen hinta per litra euroina. Paina laskenta-painiketta ja katso, kuinka helposti ja nopeasti bensakululaskurimme antaa sinulle tarkan arvion matkasi polttoainekustannuksista. Näillä yksinkertaisilla ohjeilla voit suunnitella matkasi tehokkaammin ja säästää rahaa – laske bensakulut käden käänteessä!`,
+    "Calculate your trip's fuel costs easily and quickly with the fuel cost calculator. Enter the trip distance, fuel consumption, and fuel price to get an accurate estimate of your trip costs. Save money and plan your trips more efficiently!",
+  instructions: `Enter your trip distance in kilometers, your vehicle's average fuel consumption (liters per 100 kilometers), and the current fuel price per liter in euros. Press the calculate button and see how easily and quickly our fuel cost calculator gives you an accurate estimate of your trip's fuel costs. With these simple instructions, you can plan your trips more efficiently and save money – calculate fuel costs in a flash!`,
   Info,
 };
 

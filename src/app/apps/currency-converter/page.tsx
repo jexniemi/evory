@@ -12,12 +12,12 @@ export default function ValuuttamuunninPage() {
 }
 
 const pageProps = {
-  title: "Valuuttamuunnin",
-  seoTitle: "Valuuttamuunnin – Muunna valuutat EUR, USD, GBP ja yli 20 muuta",
+  title: "Currency Converter",
+  seoTitle: "Currency Converter – Convert currencies EUR, USD, GBP and over 20 more",
   description:
-    "Ilmainen valuuttamuunnin: muunna euro, dollari, punta, kruunu, jeni ja yli 20 muuta valuuttaa. Viitteelliset kurssit, sopii budjetin suunnitteluun ja matkailuun.",
+    "Free currency converter: convert euro, dollar, pound, crown, yen and over 20 other currencies. Indicative rates, suitable for budget planning and travel.",
   instructions:
-    "Syötä summa, valitse lähtö- ja kohdivaluutta. Tulos lasketaan viitteellisillä kursseilla.",
+    "Enter the amount, select source and target currency. The result is calculated with indicative rates.",
   Info,
 };
 

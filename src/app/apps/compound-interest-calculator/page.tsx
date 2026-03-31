@@ -12,11 +12,11 @@ export default function CompoundInterestCalculatorPage() {
 }
 
 const pageProps = {
-  title: "Korkoa korolle -laskuri",
-  seoTitle: "Korkoa Korolle Laskuri - Laske Sijoituksesi Tuleva Arvo Helposti",
+  title: "Compound Interest Calculator",
+  seoTitle: "Compound Interest Calculator - Calculate Your Investment's Future Value Easily",
   description:
-    "Laske sijoituksesi tuleva arvo helposti korkoa korolle -laskurillamme! Syötä alkuperäinen pääoma, korkoprosentti, sijoitusaika, ja kuukausittainen säästösummasi, ja näe kuinka sijoituksesi kasvaa eksponentiaalisesti ajan myötä. Käytä laskuriamme suunnitellaksesi säästöt ja sijoitukset tehokkaasti.",
-  instructions: `Tällä laskurilla lasket kätevästi säästöjesi tai sijoituksesi tulevaisuuden arvon, ottaen huomioon korkoea korolle -ilmiön. Syötä alkupääomasi, vuotuinen korkoprosentti, sijoitusaika vuosina ja kuukausittainen säästösumma. Paina laskenta-painiketta ja katso, kuinka helposti ja nopeasti korkoa korolle -laskurimme antaa sinulle tarkan arvion sijoituksesi tuotosta.`,
+    "Calculate your investment's future value easily with our compound interest calculator! Enter the initial principal, interest rate, investment time, and monthly savings amount, and see how your investment grows exponentially over time. Use our calculator to plan your savings and investments effectively.",
+  instructions: `With this calculator, you can easily calculate the future value of your savings or investment, taking into account the compound interest phenomenon. Enter your initial principal, annual interest rate, investment time in years, and monthly savings amount. Press the calculate button and see how easily and quickly our compound interest calculator gives you an accurate estimate of your investment's return.`,
   Info,
 };
 

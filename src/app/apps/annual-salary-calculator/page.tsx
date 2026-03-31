@@ -12,12 +12,12 @@ export default function YearlyPayCalculatorPage() {
 }
 
 const pageProps = {
-  title: "Vuosipalkkalaskuri",
-  seoTitle: "Vuosipalkkalaskuri - Laske vuosipalkkasi helposti",
+  title: "Annual Salary Calculator",
+  seoTitle: "Annual Salary Calculator - Calculate Your Annual Salary Easily",
   description:
-    "Laske vuosipalkkasi kuukausipalkan tai tuntipalkan perusteella. Huomioi lomarahan, bonukset ja eri viikkotyöajat.",
+    "Calculate your annual salary based on monthly or hourly pay. Take into account holiday pay, bonuses, and different weekly working hours.",
   instructions:
-    "Syötä kuukausipalkkasi tai tuntipalkkasi ja viikkotyöaikasi. Laskuri huomioi lomarahan (0,5 kk) ja mahdolliset bonukset.",
+    "Enter your monthly salary or hourly wage and weekly working hours. The calculator takes into account holiday pay (0.5 months) and possible bonuses.",
   Info,
 };
 

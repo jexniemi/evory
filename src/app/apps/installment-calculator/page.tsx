@@ -13,12 +13,12 @@ export default function InstallmentCalculatorPage() {
 
 const pageProps = {
   seoTitle:
-    "Osamaksulaskuri - Laske Kuukausierät ja Korkokustannukset Helposti",
-  title: "Osamaksulaskuri",
+    "Installment Calculator - Calculate Monthly Payments and Interest Costs Easily",
+  title: "Installment Calculator",
   description:
-    "Laske osamaksujesi kuukausierät ja kokonaiskustannukset helposti osamaksulaskurillamme. Syötä lainan tai tuotteen kokonaissumma, vuosikorko ja maksuaika, ja saat tarkan arvion kuukausieristä, kokonaiskustannuksista ja korkojen määrästä.",
+    "Calculate your installment monthly payments and total costs easily with our installment calculator. Enter the total amount of the loan or product, annual interest rate and payment period, and get an accurate estimate of monthly payments, total costs and interest amount.",
   instructions:
-    "Käytä osamaksulaskuria selvittääksesi lainasi tai osamaksusi kuukausierät, kokonaishinnan ja korkokustannukset. Syötä lainan tai tuotteen kokonaissumma, vuosikorko ja maksuaika, ja laskuri antaa sinulle tarkan arvion näistä tiedoista. Näin voit tehdä parempia taloudellisia päätöksiä ja hallita budjettiasi tehokkaammin. Tämä laskuri on suuntaa antava, tarkistathan myyjän tai rahoitusyhtiön tarjoamat ehdot ennen osamaksun ottamista.",
+    "Use the installment calculator to find out your loan or installment monthly payments, total price and interest costs. Enter the total amount of the loan or product, annual interest rate and payment period, and the calculator will give you an accurate estimate of this information. This way you can make better financial decisions and manage your budget more efficiently. This calculator is indicative, check the terms offered by the seller or financing company before taking out an installment.",
   Info,
 };
 

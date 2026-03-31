@@ -12,12 +12,12 @@ export default function RoiPage() {
 }
 
 const pageProps = {
-  seoTitle: "Sijoitustuoton laskuri – Laske ROI ja vuosituotto",
-  title: "Sijoitustuoton laskuri",
+  seoTitle: "Investment Return Calculator – Calculate ROI and annual return",
+  title: "Investment Return Calculator",
   description:
-    "Laske sijoituksesi tuottoprosentti (ROI) ja vuosituotto (CAGR). Syötä alkusijoitus, nykyarvo ja sijoitusaika – saat voiton, kokonaistuoton ja annualisoidun tuottoprosentin.",
+    "Calculate your investment return percentage (ROI) and annual return (CAGR). Enter initial investment, current value and investment time – get profit, total return and annualized return percentage.",
   instructions:
-    "Syötä alkusijoituksen arvo, nykyinen arvo tai myyntihinta ja sijoitusaika. Laskuri näyttää voiton euroissa, kokonaistuottoprosentin ja vuosittaisen tuoton.",
+    "Enter the initial investment value, current value or sale price and investment time. The calculator shows profit in euros, total return percentage and annual return.",
   Info,
 };
 

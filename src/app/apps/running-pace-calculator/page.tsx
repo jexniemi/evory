@@ -12,12 +12,12 @@ export default function RunningSpeedCalculatorPage() {
 }
 
 const pageProps = {
-  title: "Juoksuvauhtilaskuri",
-  seoTitle: "Juoksuvauhtilaskuri – Laske juoksuvauhti, tahti ja arvioajat",
+  title: "Running Pace Calculator",
+  seoTitle: "Running Pace Calculator – Calculate Running Speed, Pace, and Estimated Times",
   description:
-    "Laske juoksuvauhtisi (km/h), tahtisi (min/km) sekä arvioajat 5 km:n ja 10 km:n matkoille. Syötä juoksuaika ja matka, niin laskuri hoitaa loput.",
+    "Calculate your running speed (km/h), pace (min/km), and estimated times for 5 km and 10 km distances. Enter running time and distance, and the calculator does the rest.",
   instructions:
-    "Syötä juoksuun käytetty aika minuutteina ja juostu etäisyys kilometreinä. Saat vauhdin, tahdin ja arvioajat yleisille kilpailumatkoille.",
+    "Enter the time spent running in minutes and the distance run in kilometers. Get speed, pace, and estimated times for common race distances.",
   Info,
 };
 

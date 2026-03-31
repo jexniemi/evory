@@ -12,12 +12,12 @@ export default function VuokratuottolaskuriPage() {
 }
 
 const pageProps = {
-  title: "Vuokratuottolaskuri",
-  seoTitle: "Vuokratuottolaskuri – Laske sijoitusasunnon tuotto",
+  title: "Rental Yield Calculator",
+  seoTitle: "Rental Yield Calculator – Calculate Investment Property Return",
   description:
-    "Ilmainen vuokratuottolaskuri: laske sijoitusasunnon brutto- ja nettovuokratuotto, kuukausittainen kassavirta ja takaisinmaksuaika. Arvioi asuntosijoituksen kannattavuus.",
+    "Free rental yield calculator: calculate the gross and net rental yield of an investment property, monthly cash flow, and payback period. Assess the profitability of property investment.",
   instructions:
-    "Syötä asunnon ostohinta, kuukausivuokra ja vuotuiset kulut. Saat laskelman tuottoprosenteista ja kassavirrasta.",
+    "Enter the property's purchase price, monthly rent, and annual costs. Get a calculation of yield percentages and cash flow.",
   Info,
 };
 

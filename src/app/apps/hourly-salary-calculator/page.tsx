@@ -12,12 +12,12 @@ export default function HourlyPayCalculatorPage() {
 }
 
 const pageProps = {
-  title: "Tuntipalkkalaskuri",
-  seoTitle: "Tuntipalkkalaskuri - Laske tuntipalkkasi helposti",
+  title: "Hourly Salary Calculator",
+  seoTitle: "Hourly Salary Calculator - Calculate your hourly wage easily",
   description:
-    "Muunna kuukausipalkka tuntipalkaksi helposti. Syötä kuukausipalkkasi ja viikkotyöaikasi, niin laskuri näyttää tuntipalkkasi, päiväpalkkasi ja vuosipalkkasi.",
+    "Convert monthly salary to hourly wage easily. Enter your monthly salary and weekly working hours, and the calculator will show your hourly wage, daily wage and annual salary.",
   instructions:
-    "Syötä kuukausipalkkasi ja viikkotyöaikasi. Laskuri laskee tuntipalkkasi, päiväpalkkasi ja vuosipalkkasi. Yleisimmät viikkotyöajat ovat 37,5 h (toimisto, kauppa) ja 40 h (teollisuus).",
+    "Enter your monthly salary and weekly working hours. The calculator calculates your hourly wage, daily wage and annual salary. The most common weekly working hours are 37.5 h (office, retail) and 40 h (industry).",
   Info,
 };
 

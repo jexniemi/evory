@@ -7,7 +7,7 @@ export default function ChristmasCountdown() {
   return (
     <Page {...pageProps}>
       <Countdown
-        targetDateName="Jouluaattoon"
+        targetDateName="Christmas Eve"
         targetDate={new Date("2026-12-24T00:00:00")}
       />
     </Page>
@@ -15,11 +15,11 @@ export default function ChristmasCountdown() {
 }
 
 const pageProps = {
-  title: "Joululaskuri",
-  seoTitle: "Joululaskuri - Katso kuinka monta päivää on jäljellä jouluun.",
+  title: "Christmas Countdown",
+  seoTitle: "Christmas Countdown - See how many days until Christmas.",
   description:
-    "Montako päivää on jouluun? Seuraa odotustasi jouluun reaaliaikaisesti käyttämällä kätevää joululaskuriamme. Näet päivien, tuntien ja minuuttien vähenemisen kohti jouluaattoa. Aloita joulun odottaminen nyt ja valmistaudu juhlimaan täysin sydämin! Käytä joululaskuriamme ja tuo jouluiloa laskurisi avulla",
-  instructions: `Tervetuloa joululaskuriin! Seuraa jännityksellä päivien, tuntien ja minuuttien vähenemistä kohti odotettua jouluaattoa. Anna lähtöpäiväsi, ja laskuri näyttää reaaliaikaisesti, kuinka kauan on jäljellä jouluun. Aloita odotuksen laskeminen nyt ja valmistaudu juhlimaan jouluasi täysin sydämin!`,
+    "How many days until Christmas? Follow your anticipation of Christmas in real-time using our convenient Christmas countdown. You will see the countdown of days, hours, and minutes towards Christmas Eve. Start waiting for Christmas now and prepare to celebrate with all your heart! Use our Christmas countdown and bring Christmas joy with your calculator",
+  instructions: `Welcome to the Christmas countdown! Follow with excitement the countdown of days, hours, and minutes towards the awaited Christmas Eve. Enter your start date, and the countdown will show in real-time how long until Christmas. Start counting the anticipation now and prepare to celebrate your Christmas with all your heart!`,
   Info,
 };
 

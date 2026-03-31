@@ -12,12 +12,12 @@ export default function ArvontakonePage() {
 }
 
 const pageProps = {
-  title: "Arvontakone",
-  seoTitle: "Arvontakone – Arvo voittaja listalta ilmaiseksi",
+  title: "Raffle Machine",
+  seoTitle: "Raffle Machine – Draw a Winner from a List for Free",
   description:
-    "Ilmainen arvontakone: syötä osallistujien nimet tai kohteet, paina nappia ja arvo voittaja animoidulla arvonnalla. Sopii kilpailuihin, opettajille, joukkueiden jakoon ja somearpontoihin.",
+    "Free raffle machine: enter participants' names or items, press the button and draw a winner with an animated draw. Suitable for contests, teachers, team divisions, and social media raffles.",
   instructions:
-    "Kirjoita osallistujat listaan (yksi per rivi) ja paina arvontanappia.",
+    "Write the participants in the list (one per line) and press the draw button.",
   Info,
 };
 

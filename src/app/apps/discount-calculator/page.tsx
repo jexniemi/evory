@@ -12,12 +12,12 @@ export default function DiscountCalculator() {
 }
 
 const pageProps = {
-  seoTitle: "Alennuslaskuri - Laske Alennettu Hinta ja Säästöt Helposti",
-  title: "Alennuslaskuri",
+  seoTitle: "Discount Calculator - Calculate Discounted Price and Savings Easily",
+  title: "Discount Calculator",
   description:
-    "Laske tuotteesi tai palvelusi alennettu hinta helposti alennuslaskurillamme. Syötä alkuperäinen hinta ja alennusprosentti, ja saat tarkan arvion alennetusta hinnasta ja säästöistä. Ymmärrä, kuinka paljon rahaa voit säästää ja tee fiksumpia ostospäätöksiä.",
+    "Calculate the discounted price of your product or service easily with our discount calculator. Enter the original price and discount percentage, and get an accurate estimate of the discounted price and savings. Understand how much money you can save and make smarter purchasing decisions.",
   instructions:
-    "Käytä alennuslaskuria selvittääksesi tuotteesi tai palvelusi alennetun hinnan ja säästöt. Syötä alkuperäinen hinta ja alennusprosentti, ja laskuri antaa sinulle tarkan arvion siitä, kuinka paljon alennus vaikuttaa hintaan ja kuinka paljon rahaa säästät. Näin voit tehdä parempia ostospäätöksiä ja hallita budjettiasi tehokkaammin.",
+    "Use the discount calculator to find out the discounted price and savings of your product or service. Enter the original price and discount percentage, and the calculator will give you an accurate estimate of how much the discount affects the price and how much money you save. This way, you can make better purchasing decisions and manage your budget more efficiently.",
   Info,
 };
 

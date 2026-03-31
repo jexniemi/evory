@@ -12,11 +12,11 @@ export default function HoroskooppiPage() {
 }
 
 const pageProps = {
-  title: "Horoskooppi",
-  seoTitle: "Horoskooppi – Kaikki horoskooppimerkit ja päivän numero",
+  title: "Horoscope",
+  seoTitle: "Horoscope – All horoscope signs and daily number",
   description:
-    "Katso oma horoskooppimerkkisi kuvaus, yhteensopivat merkit, elementti ja päivän onnenluku. Kaikki 12 horoskooppimerkki yhdessä paikassa.",
-  instructions: "Valitse horoskooppimerkkisi napsauttamalla symbolia.",
+    "Check your horoscope sign description, compatible signs, element and daily lucky number. All 12 horoscope signs in one place.",
+  instructions: "Select your horoscope sign by clicking the symbol.",
   Info,
 };
 

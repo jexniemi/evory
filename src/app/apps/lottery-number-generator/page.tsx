@@ -12,12 +12,12 @@ export default function LotonumerogeneraattoriPage() {
 }
 
 const pageProps = {
-  title: "Lotto-numerogeneraattori",
-  seoTitle: "Lotto-numerogeneraattori – Arvo Lotto-numerot ilmaiseksi",
+  title: "Lottery Number Generator",
+  seoTitle: "Lottery Number Generator – Draw Lotto numbers for free",
   description:
-    "Ilmainen Lotto-numerogeneraattori: arvo 7 ainutkertaista numeroa väliltä 1–40 Suomen Loton säännöillä. Täysin satunnainen arvonta heti selaimen.",
+    "Free Lotto number generator: draw 7 unique numbers from 1–40 according to Finnish Lotto rules. Completely random draw right in the browser.",
   instructions:
-    "Paina nappia ja generaattori arpoo sinulle seitsemän Lotto-numeroa. Tulokset tallentuvat historiaan.",
+    "Press the button and the generator draws seven Lotto numbers for you. Results are saved to history.",
   Info,
 };
 

@@ -12,12 +12,12 @@ export default function NameDaySearch() {
 }
 
 const pageProps = {
-  title: "Nimipäivähakukone",
-  seoTitle: "Nimipäivähakukone – Kenen nimipäivä on tänään?",
+  title: "Name Day Search Engine",
+  seoTitle: "Name Day Search Engine – Whose name day is today?",
   description:
-    "Ilmainen nimipäivähakukone: selvitä kenen nimipäivä on tänään tai etsi suomalaisen nimen nimipäivä hetkessä. Hae nimellä tai valitse päivämäärä.",
+    "Free name day search engine: find out whose name day is today or search for a Finnish name's name day instantly. Search by name or select date.",
   instructions:
-    "Hakukone näyttää automaattisesti tämän päivän nimipäivänimet. Voit myös hakea minkä tahansa nimen nimipäivän tai selata koko kalenteria päivämäärän mukaan.",
+    "The search engine automatically shows today's name day names. You can also search for any name's name day or browse the entire calendar by date.",
   Info,
 };
 

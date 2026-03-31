@@ -1,55 +1,55 @@
-## Miten lainan kuukausierä lasketaan?
+## How is the loan monthly payment calculated?
 
-Laskuri käyttää annuiteettimenetelmää, jossa kuukausierä pysyy samana koko laina-ajan. Alkuvaiheessa suurempi osa erästä on korkoa, ja loppuvaiheessa pääomanlyhennystä.
+The calculator uses the annuity method, where the monthly payment remains the same throughout the loan period. In the early stages, a larger part of the installment is interest, and in the later stages, principal repayment.
 
-**Kaava:**
+**Formula:**
 
-Kuukausierä = P × [r(1+r)ⁿ] / [(1+r)ⁿ − 1]
+Monthly payment = P × [r(1+r)ⁿ] / [(1+r)ⁿ − 1]
 
-missä P = lainasumma, r = kuukausikorko ja n = kuukausien määrä.
+where P = loan amount, r = monthly interest rate and n = number of months.
 
-## Koron vaikutus kuukausierään
+## The effect of interest on monthly payment
 
 <table className="table table-sm my-4">
   <thead className="bg-base-200">
     <tr>
-      <th>Lainasumma</th>
-      <th>Korko</th>
-      <th>Aika</th>
-      <th>Kuukausierä</th>
-      <th>Korot yht.</th>
+      <th>Loan amount</th>
+      <th>Interest</th>
+      <th>Time</th>
+      <th>Monthly payment</th>
+      <th>Interest total</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>150 000 €</td><td>3 %</td><td>25 v</td><td>711 €</td><td>63 400 €</td></tr>
-    <tr><td>150 000 €</td><td>4,5 %</td><td>25 v</td><td>834 €</td><td>100 100 €</td></tr>
-    <tr><td>150 000 €</td><td>6 %</td><td>25 v</td><td>966 €</td><td>139 700 €</td></tr>
-    <tr><td>250 000 €</td><td>4,5 %</td><td>25 v</td><td>1 390 €</td><td>166 800 €</td></tr>
-    <tr><td>250 000 €</td><td>4,5 %</td><td>30 v</td><td>1 267 €</td><td>206 000 €</td></tr>
+    <tr><td>150 000 €</td><td>3 %</td><td>25 y</td><td>711 €</td><td>63 400 €</td></tr>
+    <tr><td>150 000 €</td><td>4.5 %</td><td>25 y</td><td>834 €</td><td>100 100 €</td></tr>
+    <tr><td>150 000 €</td><td>6 %</td><td>25 y</td><td>966 €</td><td>139 700 €</td></tr>
+    <tr><td>250 000 €</td><td>4.5 %</td><td>25 y</td><td>1 390 €</td><td>166 800 €</td></tr>
+    <tr><td>250 000 €</td><td>4.5 %</td><td>30 y</td><td>1 267 €</td><td>206 000 €</td></tr>
   </tbody>
 </table>
 
-## Takaisinmaksukerroin
+## Payback ratio
 
-Takaisinmaksukerroin kertoo, kuinka moninkertaisesti maksat lainasumman takaisin. Esimerkiksi kerroin 1,67 tarkoittaa, että maksat 67 % lainasummasta korkoja.
+The payback ratio tells how many times you pay back the loan amount. For example, a ratio of 1.67 means you pay 67% of the loan amount in interest.
 
-Mitä pidempi laina-aika ja korkeampi korko, sitä suurempi kerroin — ja sitä enemmän maksat ylimääräistä.
+The longer the loan term and the higher the interest rate, the higher the ratio — and the more you pay extra.
 
-## Annuiteetti vai tasalyhennys?
+## Annuity or equal repayment?
 
-- **Annuiteetti:** kuukausierä pysyy samana koko laina-ajan. Helpottaa budjetointia.
-- **Tasalyhennys:** pääomanlyhennys on vakio, mutta kuukausierä pienenee ajan myötä koron pienentyessä. Kokonaiskorkokulut jäävät pienemmiksi.
+- **Annuity:** monthly payment remains the same throughout the loan period. Makes budgeting easier.
+- **Equal repayment:** principal repayment is constant, but monthly payment decreases over time as interest decreases. Total interest costs remain lower.
 
-Tämä laskuri käyttää annuiteettimenetelmää, joka on Suomessa yleisin asuntolainoissa.
+This calculator uses the annuity method, which is the most common in Finland for housing loans.
 
-## Vinkkejä lainanottoon
+## Tips for borrowing
 
-- Vertaa aina **todellista vuosikorkoa** (sisältää marginaalin + viitekoron + kulut)
-- Lyhyempi laina-aika = enemmän kuukaudessa, mutta huomattavasti vähemmän korkoja
-- Harkitse lyhennysvapaata jaksoa vain tarpeen mukaan — korot kertyvät silti
+- Always compare the **effective annual interest rate** (includes margin + reference rate + costs)
+- Shorter loan term = more per month, but significantly less interest
+- Consider payment-free period only as needed — interest still accrues
 
-## Muita laskureita
+## Other calculators
 
-- [Osamaksulaskuri](/apps/osamaksulaskuri) — osamaksuostosten kokonaiskulut
-- [Korkoa korolle -laskuri](/apps/yksinkertainen-korkoa-korolle-laskuri) — sijoituksen kasvu ajan myötä
-- [Sijoitustuoton laskuri](/apps/sijoitustuoton-laskuri) — laske ROI ja vuosituotto
+- [Installment Calculator](/apps/installment-calculator) — total costs of installment purchases
+- [Compound Interest Calculator](/apps/simple-compound-interest-calculator) — investment growth over time
+- [Investment Return Calculator](/apps/investment-return-calculator) — calculate ROI and annual return

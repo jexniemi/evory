@@ -1,68 +1,68 @@
-## Noppageneraattori – virtuaalinen nopanheitto
+## Dice Generator – Virtual Dice Rolling
 
-Noppageneraattori on kätevä työkalu virtuaaliseen nopanheittoon. Se soveltuu lautapelien pelaamiseen, roolipeleihin, opetuskäyttöön ja mihin tahansa tilanteeseen, jossa tarvitaan satunnaislukuja.
+The dice generator is a convenient tool for virtual dice rolling. It is suitable for playing board games, role-playing games, educational use, and any situation where random numbers are needed.
 
-### Tuetut noppatyypit
+### Supported Dice Types
 
-Noppageneraattori tukee useita erilaisia noppia, jotka tunnetaan roolipelien maailmasta:
+The dice generator supports several different dice known from the world of role-playing games:
 
 <table className="table table-sm my-4">
-<thead className="bg-base-200"><tr><th>Noppa</th><th>Sivut</th><th>Käyttö</th></tr></thead>
+<thead className="bg-base-200"><tr><th>Dice</th><th>Sides</th><th>Use</th></tr></thead>
 <tbody>
-<tr><td>d4</td><td>4</td><td>Tetraedri, roolipelit</td></tr>
-<tr><td>d6</td><td>6</td><td>Tavallinen noppa, lautapelit</td></tr>
-<tr><td>d8</td><td>8</td><td>Oktaedri, roolipelit</td></tr>
-<tr><td>d10</td><td>10</td><td>Prosenttinoppa, roolipelit</td></tr>
-<tr><td>d12</td><td>12</td><td>Dodekaedri, roolipelit</td></tr>
-<tr><td>d20</td><td>20</td><td>Ikosaedri, D&D ja muut roolipelit</td></tr>
-<tr><td>d100</td><td>100</td><td>Prosenttitulokset</td></tr>
+<tr><td>d4</td><td>4</td><td>Tetrahedron, role-playing games</td></tr>
+<tr><td>d6</td><td>6</td><td>Standard die, board games</td></tr>
+<tr><td>d8</td><td>8</td><td>Octahedron, role-playing games</td></tr>
+<tr><td>d10</td><td>10</td><td>Percentile die, role-playing games</td></tr>
+<tr><td>d12</td><td>12</td><td>Dodecahedron, role-playing games</td></tr>
+<tr><td>d20</td><td>20</td><td>Icosahedron, D&D and other role-playing games</td></tr>
+<tr><td>d100</td><td>100</td><td>Percentage results</td></tr>
 </tbody>
 </table>
 
-### Miten satunnaisluvut generoidaan?
+### How are random numbers generated?
 
-Noppageneraattori käyttää JavaScriptin `Math.random()`-funktiota, joka tuottaa pseudosatunnaislukuja. Jokainen heitto on toisistaan riippumaton, aivan kuten oikean nopan heitto. Tulos on tasaisesti jakautunut kaikkien mahdollisten arvojen kesken.
+The dice generator uses JavaScript's `Math.random()` function, which produces pseudorandom numbers. Each roll is independent, just like a real die roll. The result is evenly distributed among all possible values.
 
-### Todennäköisyydet kahden d6-nopan heitossa
+### Probabilities in rolling two d6 dice
 
-Kahden kuusisivuisen nopan summan todennäköisyydet:
+The probabilities of the sum of two six-sided dice:
 
 <table className="table table-sm my-4">
-<thead className="bg-base-200"><tr><th>Summa</th><th>Yhdistelmät</th><th>Todennäköisyys</th></tr></thead>
+<thead className="bg-base-200"><tr><th>Sum</th><th>Combinations</th><th>Probability</th></tr></thead>
 <tbody>
-<tr><td>2</td><td>1</td><td>2,78 %</td></tr>
-<tr><td>3</td><td>2</td><td>5,56 %</td></tr>
-<tr><td>4</td><td>3</td><td>8,33 %</td></tr>
-<tr><td>5</td><td>4</td><td>11,11 %</td></tr>
-<tr><td>6</td><td>5</td><td>13,89 %</td></tr>
-<tr><td>7</td><td>6</td><td>16,67 %</td></tr>
-<tr><td>8</td><td>5</td><td>13,89 %</td></tr>
-<tr><td>9</td><td>4</td><td>11,11 %</td></tr>
-<tr><td>10</td><td>3</td><td>8,33 %</td></tr>
-<tr><td>11</td><td>2</td><td>5,56 %</td></tr>
-<tr><td>12</td><td>1</td><td>2,78 %</td></tr>
+<tr><td>2</td><td>1</td><td>2.78 %</td></tr>
+<tr><td>3</td><td>2</td><td>5.56 %</td></tr>
+<tr><td>4</td><td>3</td><td>8.33 %</td></tr>
+<tr><td>5</td><td>4</td><td>11.11 %</td></tr>
+<tr><td>6</td><td>5</td><td>13.89 %</td></tr>
+<tr><td>7</td><td>6</td><td>16.67 %</td></tr>
+<tr><td>8</td><td>5</td><td>13.89 %</td></tr>
+<tr><td>9</td><td>4</td><td>11.11 %</td></tr>
+<tr><td>10</td><td>3</td><td>8.33 %</td></tr>
+<tr><td>11</td><td>2</td><td>5.56 %</td></tr>
+<tr><td>12</td><td>1</td><td>2.78 %</td></tr>
 </tbody>
 </table>
 
-Summa 7 on todennäköisin tulos (16,67 %).
+The sum of 7 is the most probable result (16.67 %).
 
-### Käyttökohteita
+### Use Cases
 
-**Lautapelit:** Kun oikeat nopat ovat hukassa tai pelataan etänä, virtuaalinen noppa korvaa fyysisen nopan.
+**Board Games:** When real dice are lost or playing remotely, virtual dice replace physical dice.
 
-**Roolipelit (D&D, Pathfinder):** d20-noppa on roolipelien ydin. Noppageneraattori tukee kaikkia tarvittavia noppatyyppejä hyökkäys-, taito- ja pelastusheittoihin.
+**Role-Playing Games (D&D, Pathfinder):** The d20 die is the core of role-playing games. The dice generator supports all necessary dice types for attack, skill, and saving throws.
 
-**Opetus:** Todennäköisyyslaskennan havainnollistaminen – heitä satoja kertoja ja tarkkaile tulosten jakaumaa.
+**Education:** Illustrating probability calculation – roll hundreds of times and observe the distribution of results.
 
-**Päätöksenteko:** Kun mikä tahansa vaihtoehto on yhtä hyvä, anna nopan päättää!
+**Decision Making:** When any option is equally good, let the dice decide!
 
-### Ominaisuudet
+### Features
 
-- 🎲 Valittavissa 1–10 noppaa kerralla
-- 🎯 Tuetut noppatyypit: d4, d6, d8, d10, d12, d20, d100
-- 📊 Heittohistoria tallentuu automaattisesti
-- ✨ Animoitu nopanheitto lisää tunnelmaa
-- 📱 Toimii kaikilla laitteilla
+- 🎲 Selectable 1–10 dice at a time
+- 🎯 Supported dice types: d4, d6, d8, d10, d12, d20, d100
+- 📊 Roll history is saved automatically
+- ✨ Animated dice rolling adds atmosphere
+- 📱 Works on all devices
 
-**Lähteet:**
-- [Todennäköisyyslaskenta – Wikipedia](https://fi.wikipedia.org/wiki/Todenn%C3%A4k%C3%B6isyyslaskenta)
+**Sources:**
+- [Probability – Wikipedia](https://en.wikipedia.org/wiki/Probability)

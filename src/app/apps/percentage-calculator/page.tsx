@@ -12,12 +12,12 @@ export default function ProsenttilaskuriPage() {
 }
 
 const pageProps = {
-  title: "Prosenttilaskuri",
-  seoTitle: "Prosenttilaskuri – Laske prosentti, osuus ja muutos helposti",
+  title: "Percentage Calculator",
+  seoTitle: "Percentage Calculator – Calculate percentage, share and change easily",
   description:
-    "Ilmainen prosenttilaskuri kolmella toiminnolla: laske kuinka paljon on X% Y:stä, kuinka monta prosenttia X on Y:stä, ja kuinka monta prosenttia arvo muuttui.",
+    "Free percentage calculator with three functions: calculate how much is X% of Y, what percentage X is of Y, and how much the value changed in percentage.",
   instructions:
-    "Valitse laskutoimitus alta: laske prosenttiarvo, osuusprosentti tai muutosprosentti. Syötä luvut ja tulos päivittyy välittömästi.",
+    "Select the operation below: calculate percentage value, share percentage or change percentage. Enter numbers and the result updates immediately.",
   Info,
 };
 

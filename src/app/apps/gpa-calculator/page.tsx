@@ -12,11 +12,11 @@ export default function GPACalculatorPage() {
 }
 
 const pageProps = {
-  title: "Opintojen Keskiarvolaskuri",
-  seoTitle: "Opintojen Keskiarvolaskuri – Laske Helposti GPA-arvosi",
+  title: "GPA Calculator",
+  seoTitle: "GPA Calculator – Calculate Your GPA Easily",
   description:
-    "Laske opintojen keskiarvosi (GPA) helposti ja nopeasti opintojen keskiarvolaskurimme avulla. Syötä kurssiarvosanat ja opintopisteet saadaksesi tarkan arvion keskiarvostasi. Seuraa edistymistäsi ja aseta tavoitteita opintomenestyksellesi tehokkaan laskurimme avulla. Laskuri sopii niin korkeakoulu-, lukio-, kuin peruskouluopintoihin.",
-  instructions: `Opintojen keskiarvolaskuri on monipuolinen työkalu, joka auttaa sekä korkeakoulu-, lukio- että peruskouluopiskelijoita laskemaan kurssiarvosanojen ja opintopisteiden keskiarvon helposti ja nopeasti. Syötä vain kurssiesi arvosanat ja niiden opintopisteet tai tuntimäärät, ja laskuri antaa tarkan arvion keskiarvostasi. Tämä auttaa sinua seuraamaan opintomenestystäsi, asettamaan tavoitteita ja suunnittelemaan tulevaa opiskelua tehokkaammin.`,
+    "Calculate your GPA easily and quickly with our GPA calculator. Enter course grades and credits to get an accurate estimate of your average. Track your progress and set goals for your academic success with our efficient calculator. The calculator is suitable for university, high school, and elementary school studies.",
+  instructions: `The GPA calculator is a versatile tool that helps university, high school, and elementary school students calculate the average of course grades and credits easily and quickly. Just enter your course grades and their credits or hours, and the calculator will give an accurate estimate of your average. This helps you track your academic success, set goals, and plan your future studies more efficiently.`,
   Info,
 };
 

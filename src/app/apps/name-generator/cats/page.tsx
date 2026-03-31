@@ -13,11 +13,11 @@ export default function CatNameGenerator() {
 }
 
 const pageProps = {
-  title: "Kissojen nimikone",
-  seoTitle: "Kissojen nimikone - Löydä täydellinen nimi kissallesi",
+  title: "Cat Name Generator",
+  seoTitle: "Cat Name Generator - Find the Perfect Name for Your Cat",
   description:
-    "Vaikeuksia keksiä nimeä kissalle? Kokeile nimikoneen avulla löytää sopiva nimi lemmikillesi. Nimikone kertoo myös kissan nimipäivän!",
-  instructions: `Tervetuloa kissanystävien nimimaailmaan! Kukoista luovuutesi ja löydä täydellinen nimi karvaiselle ystävällesi meidän kissan nimikoneellamme. Syötä kissasi persoonallisuus, värit ja erityispiirteet, ja anna koneen taikoa ainutlaatuinen nimi, joka kuvastaa täydellisesti juuri sinun hännänheiluttajasi ainutlaatuista charmia. Unohda arkiset nimet ja astu fantasiamaailmaan, jossa kissasi nimi kertoo tarinan kauniista yhteiselosta ihmisen ja lemmikin välillä. Aloita seikkailu nimien maailmassa kanssamme – jokainen kissa ansaitsee oman erityisen nimensä!`,
+    "Having trouble coming up with a name for your cat? Try using the name generator to find a suitable name for your pet. The name generator also tells you your cat's name day!",
+  instructions: `Welcome to the world of cat lovers' names! Unleash your creativity and find the perfect name for your furry friend with our cat name generator. Enter your cat's personality, colors, and special features, and let the machine's magic create a unique name that perfectly captures the charm of your tail-wagger. Forget ordinary names and step into a fantasy world where your cat's name tells a story of the beautiful coexistence between human and pet. Start the adventure in the world of names with us – every cat deserves its own special name!`,
   Info,
 };
 

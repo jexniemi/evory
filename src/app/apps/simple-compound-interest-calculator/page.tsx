@@ -12,12 +12,12 @@ export default function CompoundPage() {
 }
 
 const pageProps = {
-  seoTitle: "Korkoa korolle -laskuri – Laske sijoituksen kasvu",
-  title: "Yksinkertainen korkoa korolle -laskuri",
+  seoTitle: "Compound Interest Calculator – Calculate Investment Growth",
+  title: "Simple Compound Interest Calculator",
   description:
-    "Laske kuinka paljon sijoituksesi kasvaa korkoa korolle -periaatteella. Syötä alkupääoma, vuotuinen tuotto ja sijoitusaika – saat loppusaldon, korkotuoton ja tuplausajan.",
+    "Calculate how much your investment grows with the compound interest principle. Enter initial capital, annual return, and investment time – get final balance, interest earnings, and doubling time.",
   instructions:
-    "Syötä alkupääoma, vuotuinen tuottoprosentti ja sijoitusaika vuosissa. Laskuri näyttää loppusaldon, kertyneen koron, kokonaiskasvun ja pääoman tuplausajan.",
+    "Enter initial capital, annual return percentage, and investment time in years. The calculator shows final balance, accumulated interest, total growth, and capital doubling time.",
   Info,
 };
 

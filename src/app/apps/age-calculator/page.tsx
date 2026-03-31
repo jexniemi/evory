@@ -12,12 +12,12 @@ export default function AgeCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle: "Ikälaskuri - Laske Ikäsi Tarkasti Syntymäpäivästä",
-  title: "Ikälaskuri",
+  seoTitle: "Age Calculator - Calculate Your Age Accurately from Birthdate",
+  title: "Age Calculator",
   description:
-    "Laske ikäsi tarkasti vuosina, kuukausina ja päivinä. Syötä syntymäpäiväsi ja selvitä tarkka ikäsi.",
+    "Calculate your age accurately in years, months, and days. Enter your birthdate and find out your exact age.",
   instructions:
-    "Valitse syntymäpäiväsi, kuukausi ja vuosi. Laskuri näyttää tarkan ikäsi vuosina, kuukausina ja päivinä.",
+    "Select your birthdate, month, and year. The calculator will show your exact age in years, months, and days.",
   Info,
 };
 

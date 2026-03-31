@@ -13,12 +13,12 @@ export default function DogNameGenerator() {
 }
 
 const pageProps = {
-  title: "Koirien nimikone",
-  seoTitle: "Koirien nimikone - Löydä täydellinen nimi koirallesi",
+  title: "Dog Name Generator",
+  seoTitle: "Dog Name Generator - Find the Perfect Name for Your Dog",
   description:
-    "Vaikeuksia keksiä nimeä koiralle? Kokeile nimikoneen avulla löytää sopiva nimi lemmikillesi. Nimikone kertoo myös koirasi nimipäivän!",
+    "Having trouble coming up with a name for your dog? Try using the name generator to find a suitable name for your pet. The name generator also tells you your dog's name day!",
   instructions: `
-  Koirien nimigeneraattori on hauska ja nopea tapa löytää lemmikillesi täydellinen nimi ilman turhia mutkia! Syötä yksinkertaisesti generaattoriin mieltymyksesi, tunnelmasi tai jopa sattumanvarainen sana, ja se tuottaa välittömästi ainutlaatuisia ja suloisia koiran nimiä. Kokeile sitä nyt, ja anna lemmikillesi nimi, joka kuvastaa täydellisesti sen persoonaa – ilman ylimääräisiä tietoja tarvitaan!`,
+  The dog name generator is a fun and quick way to find the perfect name for your pet without unnecessary complications! Simply enter your preferences, mood, or even a random word into the generator, and it will instantly produce unique and cute dog names. Try it now, and give your pet a name that perfectly reflects its personality – no extra information needed!`,
   Info,
 };
 

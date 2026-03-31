@@ -12,12 +12,12 @@ export default function ElamapaivaLaskuriPage() {
 }
 
 const pageProps = {
-  title: "Elämälaskuri",
-  seoTitle: "Elämälaskuri – Kuinka monta päivää olet elänyt?",
+  title: "Life Calculator",
+  seoTitle: "Life Calculator – How many days have you lived?",
   description:
-    "Ilmainen elämälaskuri: syötä syntymäpäivä ja saat tarkan laskelman elettyjen päivien, viikkojen, tuntien, sydämenlyöntien ja hengitysten määrästä. Kuinka kauan seuraavaan syntymäpäivään?",
+    "Free life calculator: enter your birthday and get an accurate calculation of lived days, weeks, hours, heartbeats and breaths. How long until your next birthday?",
   instructions:
-    "Syötä syntymäpäiväsi ja katso elämäsi tilastot: päivät, tunnit, sydämenlyönnit ja paljon muuta.",
+    "Enter your birthday and see your life statistics: days, hours, heartbeats and much more.",
   Info,
 };
 

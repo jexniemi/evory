@@ -12,12 +12,12 @@ export default function PituusmuunninPage() {
 }
 
 const pageProps = {
-  title: "Pituusmuunnin",
-  seoTitle: "Pituusmuunnin – Muunna cm, m, jalkaa, tuumaa, km ja mailia",
+  title: "Length Converter",
+  seoTitle: "Length Converter – Convert cm, m, feet, inches, km and miles",
   description:
-    "Ilmainen pituusmuunnin: muunna senttimetrit, metrit, jalat, tuumat, kilometrit ja mailit helposti. Syötä arvo ja valitse yksikkö – muunnos tapahtuu automaattisesti.",
+    "Free length converter: convert centimeters, meters, feet, inches, kilometers and miles easily. Enter value and select unit – conversion happens automatically.",
   instructions:
-    "Valitse lähtöyksikkö, syötä arvo ja näet kaikki muunnokset välittömästi.",
+    "Select source unit, enter value and see all conversions immediately.",
   Info,
 };
 

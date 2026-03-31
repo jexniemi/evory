@@ -12,12 +12,12 @@ export default function KalorienpolttolaskuriPage() {
 }
 
 const pageProps = {
-  title: "Kalorienpolttolaskuri",
-  seoTitle: "Kalorienpolttolaskuri – Laske liikunnan kalorinkulutus",
+  title: "Calorie Burn Calculator",
+  seoTitle: "Calorie Burn Calculator – Calculate exercise calorie expenditure",
   description:
-    "Ilmainen kalorienpolttolaskuri: laske kuinka monta kaloria poltat eri aktiviteeteissa MET-arvojen avulla. Syötä paino, valitse laji ja kesto.",
+    "Free calorie burn calculator: calculate how many calories you burn in different activities using MET values. Enter weight, select sport and duration.",
   instructions:
-    "Syötä painosi, valitse aktiviteetti ja harjoituksen kesto minuutteina.",
+    "Enter your weight, select the activity and exercise duration in minutes.",
   Info,
 };
 

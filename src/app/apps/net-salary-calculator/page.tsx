@@ -12,12 +12,12 @@ export default function NetSalaryCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle: "Nettopalkkalaskuri - Laske Nettopalkka Bruttopalkasta",
-  title: "Nettopalkkalaskuri",
+  seoTitle: "Net Salary Calculator - Calculate Net Salary from Gross Salary",
+  title: "Net Salary Calculator",
   description:
-    "Laske nettopalkka bruttopalkasta. Selvitä kuinka paljon palkkaa jää käteen verojen ja sivukulujen jälkeen.",
+    "Calculate net salary from gross salary. Find out how much salary remains after taxes and side costs.",
   instructions:
-    "Syötä bruttopalkka, veroprosentti sekä lakisääteiset sivukulut. Laskuri näyttää nettopalkkasi eli käteen jäävän summan kuukaudessa.",
+    "Enter gross salary, tax percentage and statutory side costs. The calculator shows your net salary, i.e. the take-home amount per month.",
   Info,
 };
 

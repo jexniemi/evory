@@ -12,12 +12,12 @@ export default function MonthMachinePage() {
 }
 
 const pageProps = {
-  title: "Kuukausikone",
-  seoTitle: "Kuukausikone – Kuukausien päivät, kalenteri ja karkausvuodet",
+  title: "Calendar Tool",
+  seoTitle: "Calendar Tool – Days in months, calendar and leap years",
   description:
-    "Selvitä kuinka monta päivää on missäkin kuukaudessa, tarkista karkausvuodet ja selaa minkä tahansa vuoden kuukausikalentereita.",
+    "Find out how many days are in each month, check leap years, and browse monthly calendars for any year.",
   instructions:
-    "Valitse vuosi nuolilla ja klikkaa kuukautta nähdäksesi päivien määrän ja kalenterinäkymän. Tänään-päivä on korostettu vihreällä.",
+    "Select the year with arrows and click on a month to see the number of days and calendar view. Today's date is highlighted in green.",
   Info,
 };
 
