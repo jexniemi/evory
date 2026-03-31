@@ -13,9 +13,9 @@ export default function Footer() {
         {/* Top section: Logo + tagline */}
         <div className="mb-12">
           <Image
-            src={"/icon.svg"}
-            width={28}
-            height={28}
+            src={"/logowhite.svg"}
+            width={140}
+            height={35}
             alt="ewory.com logo"
           />
           <p className="mt-3 max-w-sm text-sm text-gray-400 leading-relaxed">
