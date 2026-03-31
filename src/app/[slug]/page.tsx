@@ -3,10 +3,38 @@ import { apps } from "../../applications";
 import { getThemeBySlug, appIcons } from "@/utils/categoryTheme";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Ewory.com - Free Web Applications.",
-  description: "Find free web applications on Ewory.com.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const result = getThemeBySlug(slug);
+  const category = Object.values(apps).find((c) => c.path?.includes(slug));
+
+  if (!result || !category) {
+    return { title: "Category Not Found" };
+  }
+
+  const title = `${result.name} — Free Online ${result.name} Calculators & Tools`;
+  const description = `${category.apps.length} free ${result.name.toLowerCase()} tools: ${category.apps
+    .slice(0, 5)
+    .map((a) => a.displayName)
+    .join(", ")} and more. No login required.`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `https://ewory.com${category.path}`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `https://ewory.com${category.path}`,
+    },
+  };
+}
 
 export default async function Page({
   params,

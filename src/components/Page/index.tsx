@@ -1,4 +1,3 @@
-import SEO from "@/components/common/SEO";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 import PageAccent from "./PageAccent";
 
@@ -12,8 +11,6 @@ export interface PageProps {
   Info?: React.FC;
 }
 
-/* import { FAQPage, WithContext } from "schema-dts"; */
-
 export default function Page({
   seoTitle,
   title,
@@ -23,58 +20,33 @@ export default function Page({
   additionalInfo,
   Info,
 }: PageProps) {
-  /*   const questions = additionalInfo?.reduce(
-    (acc: Array<string[]>, curr, index) => {
-      try {
-        if (curr.endsWith("?")) {
-          return [...acc, [curr.split("! ")[1], additionalInfo[index + 1]]];
-        }
-        return [...acc];
-      } catch {
-        throw new Error("Invalid FAQ format");
-      }
-    },
-    []
-  );
-
-  const structuredData: WithContext<FAQPage> = {
+  const structuredData = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity:
-      (questions &&
-        questions.map(([question, answer]) => {
-          return {
-            "@type": "Question",
-            name: question,
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: answer,
-            },
-          };
-        })) ||
-      undefined,
-    headline: seoTitle || title,
+    "@type": "WebApplication",
+    name: seoTitle || title,
     description,
+    applicationCategory: "UtilityApplication",
+    operatingSystem: "Any",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
     author: {
       "@type": "Organization",
-      name: "ewory.com",
+      name: "Ewory.com",
       url: "https://ewory.com",
     },
-    datePublished: "2023-12-10",
-    dateModified: "2023-12-28"
-  }; */
+  };
 
   return (
     <>
-      <SEO title={seoTitle || title} description={description} />
-      {/*       {structuredData?.mainEntity && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
-          }}
-        />
-      )} */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
       <main>
         <Breadcrumbs pageTitle={title} />
         <PageAccent title={title} instructions={instructions} />

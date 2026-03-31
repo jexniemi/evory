@@ -4,9 +4,12 @@ import Link from "next/link";
 import { getCategoryTheme, appIcons } from "@/utils/categoryTheme";
 
 export const metadata: Metadata = {
-  title: "Ewory.com - Free calculators and web applications.",
+  title: "Ewory.com — 60+ Free Online Calculators for Finance, Health & Math",
   description:
-    "From Ewory.com you will find free calculators and web applications of all kinds.",
+    "Free online calculators and tools: salary, BMI, loan, tip, compound interest, date, unit converters and more. No login, no ads — works instantly in your browser.",
+  alternates: {
+    canonical: "https://ewory.com",
+  },
 };
 
 export default function Home() {

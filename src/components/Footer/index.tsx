@@ -47,7 +47,7 @@ export default function Footer() {
                   {apps[category].apps.map((app) => (
                     <li key={app.route}>
                       <Link
-                        href={"/sovellus/" + app.route}
+                        href={"/apps/" + app.route}
                         className="text-[13px] text-gray-400 hover:text-white transition-colors leading-snug block truncate"
                         title={app.shortDescription}
                       >

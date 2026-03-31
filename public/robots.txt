@@ -1,0 +1,9 @@
+# robots.txt for ewory.com
+User-agent: *
+Allow: /
+
+# Block API routes and internal assets
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://ewory.com/sitemap.xml
