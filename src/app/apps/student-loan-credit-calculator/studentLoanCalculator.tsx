@@ -3,9 +3,9 @@ import SimpleCalculator from "@/components/SimpleCalculator/SimpleCalculator";
 
 export default function StudentLoanCalculator() {
   const inputs = [
-    { label: "Nostettu opintolaina (€)", initialValue: 10800 },
+    { label: "Student loan taken ($)", initialValue: 10800 },
     {
-      label: "Tutkinnon laajuus (op)",
+      label: "Degree scope (credits)",
       values: [180, 210, 240, 270, 300, 330, 360],
     },
   ];
@@ -40,7 +40,7 @@ export default function StudentLoanCalculator() {
     } catch (error) {
       console.error(error);
     }
-    return [{ result, label: "Opintolainahyvityksen enimmäismäärä:" }];
+    return [{ result, label: "Maximum student loan credit:" }];
   };
 
   return <SimpleCalculator inputs={inputs} calculate={calculate} />;

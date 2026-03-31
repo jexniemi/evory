@@ -13,7 +13,7 @@ export default function QRCodeGenerator() {
       link.href = document?.getElementById("qr")?.toDataURL();
       link.click();
     } catch {
-      alert("Tapahtui virhe latauksessa.");
+      alert("An error occurred while downloading.");
     }
   };
 
@@ -22,7 +22,7 @@ export default function QRCodeGenerator() {
     <div className="flex flex-col items-center w-full">
       <textarea
         className="textarea textarea-bordered w-96"
-        placeholder="Kirjoita QR-koodin sisältö tähän."
+        placeholder="Enter QR code content here."
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
@@ -33,7 +33,7 @@ export default function QRCodeGenerator() {
           disabled={error}
           onClick={() => download()}
         >
-          Lataa
+          Download
         </button>
       </div>
     </div>

@@ -7,7 +7,7 @@ export default function SummerVacationCountdown() {
   return (
     <Page {...pageProps}>
       <Countdown
-        targetDateName="Kesälomaan"
+        targetDateName="Until Summer Vacation"
         targetDate={new Date("2026-06-01T00:00:00")}
         allowUserSelection
       />
@@ -16,12 +16,12 @@ export default function SummerVacationCountdown() {
 }
 
 const pageProps = {
-  title: "Kesälomalaskuri",
+  title: "Summer Vacation Countdown",
   seoTitle:
-    "Kesälomalaskuri – Laske Helposti Päivät, Tunnit ja Minuutit Kesälomaan",
+    "Summer Vacation Countdown – Easily Count Days, Hours and Minutes Until Vacation",
   description:
-    "Seuraa odotustasi kesälomaan reaaliaikaisesti käyttämällä kätevää kesälomalaskuriamme. Näytämme sinulle päivien, tuntien ja minuuttien vähenemisen kohti ansaittua lomaa. Aloita laskeminen nyt ja valmistaudu rentouttavaan kesälomaan!",
-  instructions: `Tervetuloa kesälomalaskuriin! Tämä kätevä laskuri näyttää reaaliaikaisesti, kuinka monta päivää, tuntia ja minuuttia on jäljellä odottaessasi ansaittua kesälomaasi. Seuraa päivien, tuntien ja minuuttien vähenemistä matkallasi kohti rentouttavaa kesälomaa. Koulujen kesälomat alkavat suurimmassa osassa maata 01.06.2026, mutta voit myös valita oman kesälomasi alkamispäivän. Valitse haluamasi päivämäärä ja aloita laskeminen!`,
+    "Track your wait until summer vacation in real time using our handy countdown calculator. We show you the days, hours and minutes ticking down toward your well-earned time off. Start counting now and get ready for a relaxing summer vacation!",
+  instructions: `Welcome to the summer vacation countdown! This handy calculator shows in real time how many days, hours and minutes remain until your well-earned summer vacation. School summer vacations begin in most of the country on June 1, 2026, but you can also select your own vacation start date. Choose your desired date and start counting!`,
   Info,
 };
 

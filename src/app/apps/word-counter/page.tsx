@@ -12,11 +12,11 @@ export default function FlagQuiz() {
 }
 
 const pageProps = {
-  title: "Sanalaskuri",
-  seoTitle: "Sanalaskuri - Laske sanojen määrä helposti",
+  title: "Word Counter",
+  seoTitle: "Word Counter - Easily count words and characters",
   description:
-    "Montako sanaa on lauseessa? Tällä sovelluksella lasket helposti kuinka monta sanaa ja merkkiä tekstissäsi on. Lisää vain tekstisi kirjoituskenttään, ja laskuri hoitaa loput. Aloita laskeminen nyt ja tarkista sanamääräsi!",
-  instructions: `Tällä sovelluksella lasket helposti kuinka monta  merkkiä ja sanaa tekstissäsi on. Lisää vain tekstisi kirjoituskenttään, ja laskuri hoitaa loput.`,
+    "How many words are in a sentence? With this tool you can easily count how many words and characters are in your text. Just paste your text into the field and the counter does the rest. Start counting now!",
+  instructions: `With this tool you can easily count how many characters and words are in your text. Just paste your text into the field and the counter does the rest.`,
   Info,
 };
 

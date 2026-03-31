@@ -12,12 +12,12 @@ export default function LampotilamuunninPage() {
 }
 
 const pageProps = {
-  title: "Lämpötilamuunnin",
-  seoTitle: "Lämpötilamuunnin – Muunna Celsius, Fahrenheit ja Kelvin",
+  title: "Temperature Converter",
+  seoTitle: "Temperature Converter – Convert Celsius, Fahrenheit and Kelvin",
   description:
-    "Muunna lämpötila nopeasti Celsiuksen, Fahrenheitin ja Kelvinin välillä. Syötä lämpötila ja valitse yksikkö – kaikki muunnokset lasketaan automaattisesti.",
+    "Quickly convert temperature between Celsius, Fahrenheit and Kelvin. Enter a temperature and select a unit – all conversions are calculated automatically.",
   instructions:
-    "Valitse lämpötilayksikkö, syötä arvo ja saat tuloksen kaikissa kolmessa yksikössä välittömästi.",
+    "Select the temperature unit, enter the value and instantly get the result in all three units.",
   Info,
 };
 

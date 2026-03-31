@@ -9,7 +9,7 @@ export default function GasCostCalculator() {
       initialValue: 15,
     },
     {
-      label: "Sähkön hinta (€/kWh)",
+      label: "Electricity price ($/kWh)",
       initialValue: 0.15,
       step: 0.01,
     },
@@ -22,14 +22,14 @@ export default function GasCostCalculator() {
     } catch (error) {
       console.error(error);
     }
-    return [{ result, label: "Matkan sähkökustannukset:" }];
+    return [{ result, label: "Trip electricity cost:" }];
   };
 
   return (
     <SimpleCalculator
       inputs={inputs}
       calculate={calculate}
-      suffix="€"
+      suffix="$"
       resultButtonStyle="bg-pastelblue"
     />
   );

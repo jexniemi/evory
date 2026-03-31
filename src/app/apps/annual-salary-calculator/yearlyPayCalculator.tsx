@@ -3,15 +3,15 @@ import SimpleCalculator from "@/components/SimpleCalculator/SimpleCalculator";
 
 export default function YearlyPayCalculator() {
   const inputsMonthly = [
-    { label: "Kuukausipalkka (€)", initialValue: 3200, step: 50 },
-    { label: "Vuosittaiset bonukset (€)", initialValue: 0, step: 100 },
-    { label: "Saatko lomarahaa?", values: [1, 0], labels: ["Kyllä", "Ei"] },
+    { label: "Monthly salary ($)", initialValue: 3200, step: 50 },
+    { label: "Annual bonuses ($)", initialValue: 0, step: 100 },
+    { label: "Holiday bonus?", values: [1, 0], labels: ["Yes", "No"] },
   ];
 
   const inputsHourly = [
-    { label: "Tuntipalkka (€)", initialValue: 18, step: 0.5 },
-    { label: "Työtunteja viikossa", initialValue: 37.5, step: 0.5 },
-    { label: "Saatko lomarahaa?", values: [1, 0], labels: ["Kyllä", "Ei"] },
+    { label: "Hourly wage ($)", initialValue: 18, step: 0.5 },
+    { label: "Hours worked per week", initialValue: 40, step: 0.5 },
+    { label: "Holiday bonus?", values: [1, 0], labels: ["Yes", "No"] },
   ];
 
   const calculateYearlyFromMonthly = (values: number[]) => {
@@ -22,14 +22,19 @@ export default function YearlyPayCalculator() {
     const holidayBonus = monthly * holidayBonusMonths;
 
     return [
-      { result: yearly, label: "Vuosipalkka", suffix: " €/v", decimals: 0 },
+      { result: yearly, label: "Annual salary", suffix: " $/yr", decimals: 0 },
       {
         result: monthly,
-        label: "Kuukausipalkka",
-        suffix: " €/kk",
+        label: "Monthly salary",
+        suffix: " $/mo",
         decimals: 0,
       },
-      { result: holidayBonus, label: "Lomaraha", suffix: " €", decimals: 0 },
+      {
+        result: holidayBonus,
+        label: "Holiday bonus",
+        suffix: " $",
+        decimals: 0,
+      },
     ];
   };
 
@@ -42,14 +47,14 @@ export default function YearlyPayCalculator() {
     const yearly = monthly * (12 + holidayBonusMonths);
 
     return [
-      { result: yearly, label: "Vuosipalkka", suffix: " €/v", decimals: 0 },
+      { result: yearly, label: "Annual salary", suffix: " $/yr", decimals: 0 },
       {
         result: monthly,
-        label: "Kuukausipalkka",
-        suffix: " €/kk",
+        label: "Monthly salary",
+        suffix: " $/mo",
         decimals: 2,
       },
-      { result: hourly, label: "Tuntipalkka", suffix: " €/h", decimals: 2 },
+      { result: hourly, label: "Hourly wage", suffix: " $/h", decimals: 2 },
     ];
   };
 
@@ -57,15 +62,15 @@ export default function YearlyPayCalculator() {
     <div>
       <SimpleCalculator
         inputs={inputsMonthly}
-        header="Laske vuosipalkka kuukausipalkasta"
+        header="Calculate annual salary from monthly salary"
         calculate={calculateYearlyFromMonthly}
       />
       <div className="flex w-full flex-col">
-        <div className="divider h-40">TAI</div>
+        <div className="divider h-40">OR</div>
       </div>
       <SimpleCalculator
         inputs={inputsHourly}
-        header="Laske vuosipalkka tuntipalkasta"
+        header="Calculate annual salary from hourly wage"
         calculate={calculateYearlyFromHourly}
         resultButtonStyle="bg-pastelgreen"
       />

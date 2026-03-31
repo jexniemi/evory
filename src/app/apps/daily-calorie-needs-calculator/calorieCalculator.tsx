@@ -3,21 +3,21 @@ import SimpleCalculator from "@/components/SimpleCalculator/SimpleCalculator";
 
 const inputs = [
   {
-    label: "Sukupuoli",
-    labels: ["Mies", "Nainen"],
+    label: "Gender",
+    labels: ["Male", "Female"],
     values: [1, 2],
   },
-  { label: "Ikä (vuotta)", initialValue: 30 },
-  { label: "Paino (kg)", initialValue: 70 },
-  { label: "Pituus (cm)", initialValue: 170 },
+  { label: "Age (years)", initialValue: 30 },
+  { label: "Weight (kg)", initialValue: 70 },
+  { label: "Height (cm)", initialValue: 170 },
   {
-    label: "Aktiivisuustaso",
+    label: "Activity level",
     labels: [
-      "Istumatyö, ei liikuntaa",
-      "Kevyt liikunta 1–3 pv/vk",
-      "Kohtalainen liikunta 3–5 pv/vk",
-      "Rankka liikunta 6–7 pv/vk",
-      "Erittäin rankka / fyysinen työ",
+      "Sedentary, no exercise",
+      "Light exercise 1–3 days/wk",
+      "Moderate exercise 3–5 days/wk",
+      "Heavy exercise 6–7 days/wk",
+      "Very intense / physical work",
     ],
     values: [1.2, 1.375, 1.55, 1.725, 1.9],
   },
@@ -42,19 +42,19 @@ export default function DailyCalorieCalculator() {
     return [
       {
         result: dailyNeed,
-        label: "Päivittäinen kalorintarve",
+        label: "Daily calorie needs",
         suffix: " kcal",
         decimals: 0,
       },
       {
         result: dailyNeed - 500,
-        label: "Painon pudotus (−500 kcal)",
+        label: "Weight loss (−500 kcal)",
         suffix: " kcal",
         decimals: 0,
       },
       {
         result: dailyNeed + 500,
-        label: "Lihasmassan kasvatus (+500 kcal)",
+        label: "Muscle gain (+500 kcal)",
         suffix: " kcal",
         decimals: 0,
       },

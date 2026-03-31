@@ -3,13 +3,13 @@ import SimpleCalculator from "@/components/SimpleCalculator/SimpleCalculator";
 
 const inputs = [
   {
-    label: "Sukupuoli",
-    labels: ["Mies", "Nainen"],
+    label: "Gender",
+    labels: ["Male", "Female"],
     values: [1, 2],
   },
-  { label: "Ikä (vuotta)", initialValue: 30 },
-  { label: "Paino (kg)", initialValue: 75 },
-  { label: "Pituus (cm)", initialValue: 175 },
+  { label: "Age (years)", initialValue: 30 },
+  { label: "Weight (kg)", initialValue: 75 },
+  { label: "Height (cm)", initialValue: 175 },
 ];
 
 export default function BMRCalculator() {
@@ -28,26 +28,26 @@ export default function BMRCalculator() {
     return [
       {
         result: bmr,
-        label: "Perusaineenvaihdunta (BMR)",
+        label: "Basal Metabolic Rate (BMR)",
         suffix: " kcal",
         decimals: 0,
       },
       {
         result: bmr * 1.2,
-        label: "Istumatyö, ei liikuntaa",
-        suffix: " kcal/pv",
+        label: "Sedentary, no exercise",
+        suffix: " kcal/day",
         decimals: 0,
       },
       {
         result: bmr * 1.55,
-        label: "Kohtalainen liikunta",
-        suffix: " kcal/pv",
+        label: "Moderate exercise",
+        suffix: " kcal/day",
         decimals: 0,
       },
       {
         result: bmr * 1.725,
-        label: "Rankka liikunta",
-        suffix: " kcal/pv",
+        label: "Heavy exercise",
+        suffix: " kcal/day",
         decimals: 0,
       },
     ];

@@ -10,18 +10,18 @@ const DRIVING_LIMIT = 0.5;
 
 const inputs = [
   {
-    label: "Sukupuoli",
-    labels: ["Mies", "Nainen"],
+    label: "Gender",
+    labels: ["Male", "Female"],
     // Widmark r-factor: men 0.68, women 0.55
     values: [0.68, 0.55],
   },
-  { label: "Paino (kg)", initialValue: 80, step: 1 },
+  { label: "Weight (kg)", initialValue: 80, step: 1 },
   {
-    label: "Alkoholiannoksia (à ~12g alkoholia)",
+    label: "Alcohol drinks (à ~12g alcohol)",
     initialValue: 3,
     step: 0.5,
   },
-  { label: "Juomisesta kulunut aika (h)", initialValue: 1, step: 0.5 },
+  { label: "Time since drinking (h)", initialValue: 1, step: 0.5 },
 ];
 
 const calculate = (values: number[]) => {
@@ -41,19 +41,19 @@ const calculate = (values: number[]) => {
   return [
     {
       result: currentBAC,
-      label: "Promillearvio nyt",
+      label: "BAC estimate now",
       suffix: " ‰",
       decimals: 2,
     },
     {
       result: Math.round(hoursToSober * 10) / 10,
-      label: "Arvioitu aika täysin selväksi",
+      label: "Estimated time to fully sober",
       suffix: " h",
       decimals: 1,
     },
     {
       result: Math.round(hoursToLegal * 10) / 10,
-      label: `Aika alle ${DRIVING_LIMIT}‰ (ajokunto)`,
+      label: `Time to reach below ${DRIVING_LIMIT}‰ (legal to drive)`,
       suffix: " h",
       decimals: 1,
     },

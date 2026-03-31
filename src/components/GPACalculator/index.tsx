@@ -24,18 +24,18 @@ const GpaCalculator = () => {
         ...course,
         grade: value,
         credits: isUniversity ? 5 : 1,
-      }))
+      })),
     );
   };
 
   const calculateGPA = () => {
     const totalPoints = courses.reduce(
       (acc, course) => acc + course.grade * course.credits,
-      0
+      0,
     );
     const totalCredits = courses.reduce(
       (acc, course) => acc + course.credits,
-      0
+      0,
     );
     return Number((totalPoints / totalCredits).toFixed(2));
   };
@@ -47,17 +47,17 @@ const GpaCalculator = () => {
           selectedValue={defaultValue}
           values={[5, 10]}
           setSelectedValue={onSelectDefaultValue}
-          labels={["Korkeakoulu", "Peruskoulu / Lukio"]}
+          labels={["University", "High School / Secondary"]}
         />
       </div>
       {courses.map((course, index) => (
         <div key={index} className="mb-4 flex flex-col mt-5">
           <h2>
-            <b>{`Kurssi ${index + 1}`}</b>
+            <b>{`Course ${index + 1}`}</b>
           </h2>
           <div className="flex flex-row">
             <div className="flex flex-col">
-              <Label text={`Arvosana`} />
+              <Label text={`Grade`} />
               <input
                 type="number"
                 className={`input input-bordered mr-2 w-28 ${
@@ -67,14 +67,14 @@ const GpaCalculator = () => {
                 onChange={(e) =>
                   setCourses(
                     courses.map((c, i) =>
-                      i === index ? { ...c, grade: Number(e.target.value) } : c
-                    )
+                      i === index ? { ...c, grade: Number(e.target.value) } : c,
+                    ),
                   )
                 }
               />
             </div>
             <div className={`flex flex-col ${!isUniversity ? "hidden" : ""}`}>
-              <Label text={`Opintopisteet`} />
+              <Label text={`Credits`} />
               <input
                 type="number"
                 className="input input-bordered w-28"
@@ -84,8 +84,8 @@ const GpaCalculator = () => {
                     courses.map((c, i) =>
                       i === index
                         ? { ...c, credits: Number(e.target.value) }
-                        : c
-                    )
+                        : c,
+                    ),
                   )
                 }
               />
@@ -94,7 +94,7 @@ const GpaCalculator = () => {
         </div>
       ))}
       <button className="btn btn-primary mb-4" onClick={addCourse}>
-        Lisää kurssi
+        Add course
       </button>
       <button
         className={
@@ -102,11 +102,11 @@ const GpaCalculator = () => {
         }
         onClick={() =>
           setCourses(
-            courses.filter((course, index) => index !== courses.length - 1)
+            courses.filter((course, index) => index !== courses.length - 1),
           )
         }
       >
-        Poista kurssi
+        Remove course
       </button>
       <div className="mt-5">
         <CountUpResult
@@ -115,7 +115,7 @@ const GpaCalculator = () => {
           decimals={2}
           duration={1}
           decimal=","
-          label="Opintojesi keskiarvo:"
+          label="Your GPA:"
           extraStyles="bg-pastelorange"
         />
       </div>

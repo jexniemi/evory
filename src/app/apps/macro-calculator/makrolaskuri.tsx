@@ -4,17 +4,17 @@ import SimpleCalculator from "@/components/SimpleCalculator/SimpleCalculator";
 const inputs = [
   { label: "Paino (kg)", initialValue: 75, step: 0.5 },
   {
-    label: "Tavoite",
-    labels: ["Ylläpidä painoa", "Laihdu", "Kasvata lihasmassaa"],
+    label: "Goal",
+    labels: ["Maintain weight", "Lose weight", "Build muscle"],
     values: [0, 1, 2],
   },
   {
-    label: "Aktiivisuustaso",
+    label: "Activity level",
     labels: [
-      "Istumatyö, ei liikuntaa",
-      "Kevyt liikunta 1–3 pv/vk",
-      "Kohtalainen liikunta 3–5 pv/vk",
-      "Rankka liikunta 6–7 pv/vk",
+      "Sedentary, no exercise",
+      "Light exercise 1–3 days/wk",
+      "Moderate exercise 3–5 days/wk",
+      "Heavy exercise 6–7 days/wk",
     ],
     values: [1.2, 1.375, 1.55, 1.725],
   },
@@ -45,23 +45,23 @@ export default function Makrolaskuri() {
     return [
       {
         result: Math.round(calories),
-        label: "Päivittäiset kalorit",
+        label: "Daily calories",
         suffix: " kcal",
         decimals: 0,
       },
       {
         result: Math.round(protein),
-        label: "Proteiini",
-        suffix: " g/pv",
+        label: "Protein",
+        suffix: " g/day",
         decimals: 0,
       },
       {
         result: Math.round(carbs),
-        label: "Hiilihydraatit",
-        suffix: " g/pv",
+        label: "Carbohydrates",
+        suffix: " g/day",
         decimals: 0,
       },
-      { result: Math.round(fat), label: "Rasva", suffix: " g/pv", decimals: 0 },
+      { result: Math.round(fat), label: "Fat", suffix: " g/day", decimals: 0 },
     ];
   };
 

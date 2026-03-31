@@ -12,12 +12,13 @@ export default function StudentLoanCalculatorPage() {
 }
 
 const pageProps = {
-  title: "Opintolainahyvityslaskuri",
-  seoTitle: "Opintolainahyvityslaskuri - Laske opintolainahyvityksen määrä",
+  title: "Student Loan Credit Calculator",
+  seoTitle:
+    "Student Loan Credit Calculator - Calculate your student loan credit amount",
   description:
-    "Opintolainahyvityslaskuri lasket helposti paljonko voit saada opintolainahyvitys nostamasi opintolainan määrän perusteella.",
+    "The student loan credit calculator easily calculates how much student loan credit you can receive based on the amount of student loan you have taken.",
   instructions: `
-    Opintolainahyvityslaskuri on työkalu, joka auttaa opiskelijoita arvioimaan opintolainan takaisinmaksun mahdollista hyvitystä valmistumisen jälkeen. Käyttäjä syöttää laskuriin nostetun (tai nostettavan) opintolainan määrän ja tutkinnon laajuden opintopisteinä. Laskuri laskee sitten arvioidun hyvityksen määrän. HUOM! Tämä laskuri on suuntaa antava, tarkistathan aina viimeisimmät tiedot Kelan sivuilta. Tämä laskuri pätee toistaiseksi vain Suomessa suoritettuihin korkeakoulututkintoihin.`,
+    The student loan credit calculator is a tool that helps students estimate the potential credit for repaying their student loan after graduation. The user enters the amount of student loan taken (or planned to take) and the scope of the degree in credit points. The calculator then computes the estimated credit amount. NOTE! This calculator is indicative – always check the latest information from the official source. This calculator currently applies only to higher education degrees.`,
   Info,
 };
 

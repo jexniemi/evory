@@ -10,38 +10,38 @@ export default function MonthPicker() {
   const [selected, setSelected] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const options = [
-    "Tammikuu",
-    "Helmikuu",
-    "Maaliskuu",
-    "Huhtikuu",
-    "Toukokuu",
-    "Kesäkuu",
-    "Heinäkuu",
-    "Elokuu",
-    "Syyskuu",
-    "Lokakuu",
-    "Marraskuu",
-    "Joulukuu",
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
 
   const results = [
-    31, // Tammikuu
-    isLeapYear() ? 29 : 28, // Helmikuu (29 karkausvuonna)
-    31, // Maaliskuu
-    30, // Huhtikuu
-    31, // Toukokuu
-    30, // Kesäkuu
-    31, // Heinäkuu
-    31, // Elokuu
-    30, // Syyskuu
-    31, // Lokakuu
-    30, // Marraskuu
-    31, // Joulukuu
+    31, // January
+    isLeapYear() ? 29 : 28, // February (29 in leap year)
+    31, // March
+    30, // April
+    31, // May
+    30, // June
+    31, // July
+    31, // August
+    30, // September
+    31, // October
+    30, // November
+    31, // December
   ];
 
   return (
     <div className="relative inline-block text-left">
-      <label className="text-lg">Valitse kuukausi: </label>
+      <label className="text-lg">Select month: </label>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="bg-gray-300 rounded-md px-4 py-1"
@@ -73,7 +73,7 @@ export default function MonthPicker() {
       )}
       <div className="mt-10 text-4xl">
         <b>
-          {options[selected]}ssa on {results[selected]} päivää
+          {options[selected]} has {results[selected]} days
         </b>
       </div>
     </div>

@@ -4,11 +4,11 @@ import SimpleCalculator from "@/components/SimpleCalculator/SimpleCalculator";
 export default function RunningSpeedCalculator() {
   const inputs = [
     {
-      label: "Juoksuun käytetty aika (min)",
+      label: "Time spent running (min)",
       initialValue: 40,
       step: 0.5,
     },
-    { label: "Juostu etäisyys (km)", initialValue: 5, step: 0.1 },
+    { label: "Distance run (km)", initialValue: 5, step: 0.1 },
   ];
 
   const calculate = (values: number[]) => {
@@ -18,22 +18,27 @@ export default function RunningSpeedCalculator() {
     const paceMinPerKm = timeMin / distKm;
 
     return [
-      { result: speedKmh, label: "Juoksuvauhti", suffix: " km/h", decimals: 1 },
+      {
+        result: speedKmh,
+        label: "Running speed",
+        suffix: " km/h",
+        decimals: 1,
+      },
       {
         result: paceMinPerKm,
-        label: "Juoksutahti",
+        label: "Running pace",
         suffix: " min/km",
         decimals: 2,
       },
       {
         result: paceMinPerKm * 5,
-        label: "Arvio 5 km aika",
+        label: "Estimated 5 km time",
         suffix: " min",
         decimals: 0,
       },
       {
         result: paceMinPerKm * 10,
-        label: "Arvio 10 km aika",
+        label: "Estimated 10 km time",
         suffix: " min",
         decimals: 0,
       },

@@ -12,12 +12,12 @@ export default function NopeusmuunninPage() {
 }
 
 const pageProps = {
-  title: "Nopeusmuunnin",
-  seoTitle: "Nopeusmuunnin – Muunna km/h, m/s, mph ja solmut",
+  title: "Speed Converter",
+  seoTitle: "Speed Converter – Convert km/h, m/s, mph and knots",
   description:
-    "Ilmainen nopeusmuunnin: muunna kilometrit tunnissa, metrit sekunnissa, mailia tunnissa, solmut ja jalat sekunnissa helposti. Sopii liikenteeseen, urheiluun ja navigointiin.",
+    "Free speed converter: easily convert kilometers per hour, meters per second, miles per hour, knots and feet per second. Great for traffic, sports and navigation.",
   instructions:
-    "Valitse lähtöyksikkö, syötä nopeus ja saat välittömästi kaikki muunnokset.",
+    "Select the source unit, enter the speed and instantly get all conversions.",
   Info,
 };
 

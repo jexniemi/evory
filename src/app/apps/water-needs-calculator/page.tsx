@@ -12,12 +12,12 @@ export default function WaterIntakeCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle: "Vesitarvelaskuri - Laske Päivittäinen Vedentarve",
-  title: "Vesitarvelaskuri",
+  seoTitle: "Water Needs Calculator - Calculate Your Daily Water Intake",
+  title: "Water Needs Calculator",
   description:
-    "Laske päivittäinen vedentarpeesi painon ja aktiivisuustason perusteella. Selvitä, kuinka paljon vettä sinun tulisi juoda päivässä.",
+    "Calculate your daily water needs based on weight and activity level. Find out how much water you should drink per day.",
   instructions:
-    "Syötä painosi ja valitse aktiivisuustasosi. Laskuri arvioi, kuinka paljon vettä sinun tulisi juoda päivittäin.",
+    "Enter your weight and select your activity level. The calculator estimates how much water you should drink daily.",
   Info,
 };
 

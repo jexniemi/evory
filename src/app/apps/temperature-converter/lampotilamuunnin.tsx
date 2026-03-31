@@ -3,11 +3,11 @@ import SimpleCalculator from "@/components/SimpleCalculator/SimpleCalculator";
 
 const inputs = [
   {
-    label: "Lämpötilayksikkö",
+    label: "Temperature unit",
     labels: ["Celsius (°C)", "Fahrenheit (°F)", "Kelvin (K)"],
     values: [0, 1, 2],
   },
-  { label: "Lämpötila", initialValue: 20, step: 0.5 },
+  { label: "Temperature", initialValue: 20, step: 0.5 },
 ];
 
 const calculate = (values: number[]) => {

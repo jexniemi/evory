@@ -29,12 +29,12 @@ export default function NameGenerator({ data }: Props) {
         <h2 className="underline text-5xl mb-5">{selected.name}</h2>
         <h3>
           {selected.name !== ""
-            ? "Nimipäivä: " + selected.date
-            : "Paina nappia saadaksesi uusi nimi"}
+            ? "Name day: " + selected.date
+            : "Press the button to get a new name"}
         </h3>
       </div>
       <button className="btn btn-primary mt-5" onClick={onClick}>
-        Uusi nimi
+        New name
       </button>
     </div>
   );

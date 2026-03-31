@@ -43,7 +43,7 @@ export default function Lotonumerogeneraattori() {
     <div className="flex flex-col gap-6 w-full max-w-md mx-auto">
       <div className="text-center">
         <p className="text-sm text-gray-500 mb-1">
-          Suomen Lotto: 7 numeroa väliltä 1–40
+          Lottery: 7 numbers from 1–40
         </p>
       </div>
 
@@ -62,7 +62,7 @@ export default function Lotonumerogeneraattori() {
           </div>
         ) : (
           <p className="text-gray-400 text-sm">
-            Paina nappia arvotaksesi numerot
+            Press the button to draw numbers
           </p>
         )}
       </div>
@@ -72,14 +72,14 @@ export default function Lotonumerogeneraattori() {
         disabled={isAnimating}
         className="btn btn-primary w-full text-base font-semibold"
       >
-        {isAnimating ? "Arvotaan..." : "🎰 Arvo Lotto-numerot"}
+        {isAnimating ? "Drawing..." : "🎰 Draw Lottery Numbers"}
       </button>
 
       {/* History */}
       {history.length > 1 && (
         <div>
           <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
-            Aiemmat arvonnat
+            Previous draws
           </h4>
           <div className="flex flex-col gap-2">
             {history.slice(1).map((h, idx) => (

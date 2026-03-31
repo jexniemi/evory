@@ -11,8 +11,8 @@ function parseTimeToMin(t: string): number | null {
 function formatDuration(totalMin: number): string {
   const h = Math.floor(totalMin / 60);
   const m = totalMin % 60;
-  if (m === 0) return `${h} t`;
-  return `${h} t ${m} min`;
+  if (m === 0) return `${h} h`;
+  return `${h} h ${m} min`;
 }
 
 export default function Tyotuntilaskuri() {
@@ -47,7 +47,7 @@ export default function Tyotuntilaskuri() {
       <div className="grid grid-cols-2 gap-3">
         <div>
           <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1">
-            Töihin tulo
+            Work start
           </label>
           <input
             type="time"
@@ -58,7 +58,7 @@ export default function Tyotuntilaskuri() {
         </div>
         <div>
           <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1">
-            Töistä lähtö
+            Work end
           </label>
           <input
             type="time"
@@ -71,7 +71,7 @@ export default function Tyotuntilaskuri() {
 
       <div>
         <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1">
-          Tauot (minuuttia)
+          Break (minutes)
         </label>
         <input
           type="number"
@@ -85,7 +85,7 @@ export default function Tyotuntilaskuri() {
 
       <div>
         <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1">
-          Tuntipalkka (€) – valinnainen
+          Hourly rate ($) – optional
         </label>
         <input
           type="number"
@@ -95,7 +95,7 @@ export default function Tyotuntilaskuri() {
           onChange={(e) =>
             setHourlyRate(e.target.value === "" ? "" : Number(e.target.value))
           }
-          placeholder="Jätä tyhjäksi jos ei tarvita"
+          placeholder="Leave empty if not needed"
           className={inputClass}
         />
       </div>
@@ -108,7 +108,7 @@ export default function Tyotuntilaskuri() {
           onChange={(e) => setNightShift(e.target.checked)}
         />
         <span className="text-sm text-gray-700">
-          Yövuoro (ylittää keskiyön)
+          Night shift (crosses midnight)
         </span>
       </label>
 
@@ -119,16 +119,16 @@ export default function Tyotuntilaskuri() {
               {formatDuration(workedMin)}
             </div>
             <div className="text-sm text-gray-500 mt-1">
-              {(workedMin / 60).toFixed(2).replace(".", ",")} tuntia
+              {(workedMin / 60).toFixed(2)} hours
             </div>
-            <div className="text-xs text-gray-400 mt-0.5">Tehty työaika</div>
+            <div className="text-xs text-gray-400 mt-0.5">Hours worked</div>
           </div>
           {earnings !== null && (
             <div className="bg-green-50 rounded-2xl p-4 text-center border border-green-100">
               <div className="text-3xl font-bold text-green-700">
-                {earnings.toFixed(2).replace(".", ",")} €
+                ${earnings.toFixed(2)}
               </div>
-              <div className="text-xs text-gray-400 mt-1">Ansiot (brutto)</div>
+              <div className="text-xs text-gray-400 mt-1">Earnings (gross)</div>
             </div>
           )}
         </div>

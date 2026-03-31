@@ -50,7 +50,7 @@ export default function Arvontakone() {
     <div className="flex flex-col gap-5 w-full max-w-lg mx-auto">
       <div>
         <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1">
-          Osallistujat (yksi per rivi)
+          Participants (one per line)
         </label>
         <textarea
           value={text}
@@ -63,7 +63,7 @@ export default function Arvontakone() {
           className="textarea textarea-bordered w-full font-mono text-sm"
         />
         <p className="text-xs text-gray-400 mt-1">
-          {entries.length} osallistujaa
+          {entries.length} participant{entries.length === 1 ? "" : "s"}
         </p>
       </div>
 
@@ -80,11 +80,11 @@ export default function Arvontakone() {
           <div className="text-center">
             <div className="text-3xl mb-1">🎉</div>
             <div className="text-2xl font-bold text-yellow-700">{winner}</div>
-            <div className="text-sm text-gray-500 mt-1">Voittaja!</div>
+            <div className="text-sm text-gray-500 mt-1">Winner!</div>
           </div>
         ) : (
           <p className="text-gray-400 text-sm">
-            Paina nappia aloittaaksesi arvonnan
+            Press the button to start the draw
           </p>
         )}
       </div>
@@ -95,20 +95,20 @@ export default function Arvontakone() {
           disabled={isAnimating || entries.length === 0}
           className="btn btn-primary flex-1 font-semibold"
         >
-          {isAnimating ? "Arvotaan..." : "🎰 Arvo voittaja"}
+          {isAnimating ? "Drawing..." : "🎰 Draw winner"}
         </button>
         {winner && (
           <button
             onClick={() => setRemoved((prev) => [...prev, winner!])}
             className="btn btn-outline btn-sm self-center"
-            title="Poista voittaja osallistujalistasta"
+            title="Remove winner from participants list"
           >
-            Poista voittaja
+            Remove winner
           </button>
         )}
         {(allWinners.length > 0 || removed.length > 0) && (
           <button onClick={reset} className="btn btn-ghost btn-sm self-center">
-            Nollaa
+            Reset
           </button>
         )}
       </div>
@@ -116,7 +116,7 @@ export default function Arvontakone() {
       {allWinners.length > 1 && (
         <div>
           <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
-            Aiemmat voittajat
+            Previous winners
           </h4>
           <div className="flex flex-wrap gap-2">
             {allWinners.slice(1).map((w, i) => (

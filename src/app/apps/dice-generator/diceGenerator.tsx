@@ -69,7 +69,7 @@ export default function DiceGenerator() {
       <div className="grid grid-cols-2 gap-4">
         <div className="flex flex-col gap-1">
           <label className="text-sm font-medium text-gray-600">
-            Noppien määrä
+            Number of dice
           </label>
           <select
             className="select select-bordered w-full"
@@ -81,14 +81,14 @@ export default function DiceGenerator() {
           >
             {[1, 2, 3, 4, 5, 6, 8, 10].map((n) => (
               <option key={n} value={n}>
-                {n} {n === 1 ? "noppa" : "noppaa"}
+                {n} {n === 1 ? "die" : "dice"}
               </option>
             ))}
           </select>
         </div>
         <div className="flex flex-col gap-1">
           <label className="text-sm font-medium text-gray-600">
-            Sivujen määrä
+            Number of sides
           </label>
           <select
             className="select select-bordered w-full"
@@ -100,7 +100,7 @@ export default function DiceGenerator() {
           >
             {[4, 6, 8, 10, 12, 20, 100].map((s) => (
               <option key={s} value={s}>
-                d{s} ({s}-sivuinen)
+                d{s} ({s}-sided)
               </option>
             ))}
           </select>
@@ -111,7 +111,7 @@ export default function DiceGenerator() {
         className="btn btn-primary btn-lg text-white text-xl"
         onClick={rollDice}
       >
-        🎲 Heitä {numDice === 1 ? "noppa" : "nopat"}!
+        🎲 Roll {numDice === 1 ? "die" : "dice"}!
       </button>
 
       {results.length > 0 && (
@@ -142,7 +142,7 @@ export default function DiceGenerator() {
 
           {numDice > 1 && (
             <div className="text-center">
-              <span className="text-sm text-gray-500">Yhteensä</span>
+              <span className="text-sm text-gray-500">Total</span>
               <p className="text-4xl font-bold text-primary">{total}</p>
             </div>
           )}
@@ -152,15 +152,15 @@ export default function DiceGenerator() {
       {history.length > 0 && (
         <div className="mt-4">
           <h3 className="text-sm font-semibold text-gray-500 mb-2">
-            Heittohistoria
+            Roll history
           </h3>
           <div className="overflow-x-auto">
             <table className="table table-sm">
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>Tulokset</th>
-                  <th>Yhteensä</th>
+                  <th>Results</th>
+                  <th>Total</th>
                 </tr>
               </thead>
               <tbody>
