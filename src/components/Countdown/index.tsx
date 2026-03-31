@@ -1,6 +1,6 @@
 "use client";
 import DateSelector from "@/components/DatePicker";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 interface CountdownProps {
   targetDate: Date;
@@ -47,7 +47,7 @@ const Countdown: React.FC<CountdownProps> = ({
   allowUserSelection,
 }) => {
   const [target, setTarget] = useState(targetDate);
-  const [timeLeft, setTimeLeft] = useState(target.getTime() - Date.now());
+  const [timeLeft, setTimeLeft] = useState(() => target.getTime() - Date.now());
 
   useEffect(() => {
     setTimeLeft(target.getTime() - Date.now());
@@ -59,10 +59,12 @@ const Countdown: React.FC<CountdownProps> = ({
 
   const isPast = timeLeft <= 0;
 
-  const totalMs =
-    target.getTime() - targetDate.getTime() === 0
+  const totalMs = useMemo(() => {
+    return target.getTime() - targetDate.getTime() === 0
       ? target.getTime() - (target.getTime() - 365 * 24 * 3600 * 1000)
+      // eslint-disable-next-line react-hooks/purity
       : target.getTime() - Date.now();
+  }, [target, targetDate]);
 
   // Progress: rough percentage of year elapsed toward the target
   const oneYearMs = 365 * 24 * 3600 * 1000;

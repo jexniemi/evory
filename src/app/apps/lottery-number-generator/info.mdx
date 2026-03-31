@@ -1,0 +1,42 @@
+## Lotto-numerogeneraattori – Arvo Lotto-numerot ilmaiseksi
+
+Lotto-numerogeneraattori arpoo sinulle seitsemän ainutkertaista numeroa väliltä 1–40 Suomen Loton sääntöjen mukaisesti. Kaikki arvonnat ovat täysin satunnaisia ja riippumattomia toisistaan.
+
+### Kuinka Suomen Lotto toimii?
+
+Suomen Lotossa pelaaja valitsee 7 numeroa väliltä 1–40. Voittoluokkia on useita:
+
+<table className="table table-sm my-4">
+  <thead>
+    <tr className="bg-base-200">
+      <th>Oikein</th>
+      <th>Voittoluokka</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>7 oikein</td><td>1. palkinto (Jackpot)</td></tr>
+    <tr><td>6 oikein</td><td>2. palkinto</td></tr>
+    <tr><td>5 oikein</td><td>3. palkinto</td></tr>
+    <tr><td>4 oikein</td><td>4. palkinto</td></tr>
+    <tr><td>3 oikein</td><td>5. palkinto</td></tr>
+  </tbody>
+</table>
+
+### Todennäköisyydet
+
+Todennäköisyys osua kaikkiin 7 oikeaan numeroon on noin **1 / 18 643 560** – toisin sanoen erittäin harvinainen tapahtuma. Silti joku voittaa!
+
+Kaavana yhdistelmien laskemiseen käytetään kombinaatiota:
+
+> **C(40,7)** = 40! / (7! × 33!) = **18 643 560**
+
+### Onko satunnaisilla luvuilla merkitystä?
+
+Matemaattisesti jokaisella numeroyhdistelmällä on täsmälleen sama todennäköisyys voittaa. Tilastollisesti aiemmat voittonumerot eivät vaikuta tuleviin arvontoihin. Generaattorimme tuottaa täysin satunnaisia lukuja selaimessa – ei parempia eikä huonompia kuin itse valitsemasi.
+
+Lue lisää: [Veikkauksen Lotto-sivusto](https://www.veikkaus.fi/fi/lotto)
+
+### Katso myös
+
+- [Random Number Generator](/apps/random-number-generator) – Generate numbers from your desired range
+- [Dice Generator](/apps/dice-generator) – Roll virtual dice

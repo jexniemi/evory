@@ -40,7 +40,7 @@ export default async function Page({
         {applications.apps.map((application) => (
           <Link
             key={application.route}
-            href={`/sovellus/${application.route}`}
+            href={`/apps/${application.route}`}
             className={`group flex items-start gap-3 rounded-xl border border-gray-200 border-l-4 ${theme.accent} bg-white p-4 transition-all duration-200 ${theme.hoverBorder} hover:shadow-md hover:-translate-y-0.5`}
           >
             <span className="text-xl mt-0.5 flex-shrink-0">

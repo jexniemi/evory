@@ -1,6 +1,6 @@
 const texts = {
   description:
-    "Appit.fi tarjoaa ilmaisia nettisovelluksia arkipäivän tarpeisiin ja viihdekäyttöön.",
+    "Apps.fi provides free web applications for everyday needs and entertainment.",
 };
 
 export default texts;

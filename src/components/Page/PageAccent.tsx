@@ -11,8 +11,8 @@ export default function PageAccent({
   instructions: string;
 }) {
   const pathname = usePathname();
-  // Extract the app route from /sovellus/{route}
-  const route = pathname.replace("/sovellus/", "");
+  // Extract the app route from /apps/{route}
+  const route = pathname.replace("/apps/", "");
   const theme = getThemeByRoute(route);
 
   return (

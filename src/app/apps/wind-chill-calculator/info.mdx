@@ -1,0 +1,43 @@
+## Tuuliviimalaskuri – Laske miltä pakkanen tuntuu tuulessa
+
+Tuuliviimalaskuri laskee niin sanotun **tuuliviimalämpötilan** – sen, miltä kylmä ilma tuntuu iholle tuulen vaikutuksesta. Vaikka lämpömittari näyttää tietyn lämpötilan, tuuli saa sen tuntumaan paljon kylmemmältä.
+
+### Tuuliviiman kaava
+
+Laskuri käyttää **Environment Canada / WMO -kaavaa** (2001), joka on kansainvälinen standardi:
+
+> **Tw = 13,12 + 0,6215×T − 11,37×V^0,16 + 0,3965×T×V^0,16**
+
+Jossa T = lämpötila (°C) ja V = tuulen nopeus (km/h). Kaava pätee kun T ≤ 10°C ja tuulen nopeus > 4,8 km/h.
+
+### Tuuliviimalämpötilan taulukko
+
+<table className="table table-sm my-4">
+  <thead>
+    <tr className="bg-base-200">
+      <th>Lämpötila</th>
+      <th>Tuuli 10 km/h</th>
+      <th>Tuuli 20 km/h</th>
+      <th>Tuuli 40 km/h</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>0 °C</td><td>-3 °C</td><td>-5 °C</td><td>-8 °C</td></tr>
+    <tr><td>-10 °C</td><td>-15 °C</td><td>-18 °C</td><td>-22 °C</td></tr>
+    <tr><td>-20 °C</td><td>-27 °C</td><td>-31 °C</td><td>-37 °C</td></tr>
+    <tr><td>-30 °C</td><td>-39 °C</td><td>-44 °C</td><td>-51 °C</td></tr>
+  </tbody>
+</table>
+
+### Paleltumisriski
+
+- **−10 °C → −27 °C tuuliviimaindeksillä** – Riski kasvaa pitkässä altistuksessa
+- **−28 °C → −39 °C** – Paleltumisriski 10–30 minuutissa
+- **−40 °C tai alle** – Paleltumisriski alle 2 minuutissa
+
+Lue lisää: [Ilmatieteen laitos – Talvisää](https://www.ilmatieteenlaitos.fi/talvisää)
+
+### Katso myös
+
+- [Lämpötilamuunnin](/apps/lampotilamuunnin) – Celsius, Fahrenheit ja Kelvin
+- [Bensakululaskuri](/apps/bensakululaskuri) – Laske talviajamisen kulut

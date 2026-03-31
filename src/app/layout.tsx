@@ -2,7 +2,6 @@ import "./globals.css";
 import Header from "@/components/Header";
 import ShareButtons from "@/components/ShareButtons";
 import Footer from "@/components/Footer";
-import Head from "next/head";
 import MiddleColumn from "@/components/common/MiddleColumn";
 import AppSuggestionBar from "@/components/AppSuggestionsBar";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -19,13 +18,6 @@ export default function RootLayout({
   return (
     <html data-theme="light">
       <GoogleAnalytics gaId={gaTrackingId} />
-      <Head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4542692298814139"
-          crossOrigin="anonymous"
-        ></script>
-      </Head>
       <body>
         <Header />
         <MiddleColumn location="front">{children}</MiddleColumn>

@@ -1,0 +1,43 @@
+## Random Number Generator – Generate random numbers from your desired range
+
+The Random Number Generator produces completely random integers from your desired number range. You can choose how many numbers to generate and whether you want them unique.
+
+### What is the random number generator used for?
+
+- **Draws and competitions** – Draw a winner from a numbered group of participants
+- **Gaming** – Random numbers for games and simulations
+- **Team division** – Draw players into teams neutrally
+- **Study testing** – Draw random tasks or questions
+- **Statistical sampling** – Select a random sample from a larger set
+- **Decision making** – When it's hard to choose between options
+
+### How does randomness work?
+
+The generator uses the browser's built-in `Math.random()` function, which produces pseudorandom numbers. This is sufficient for most practical purposes, but not for cryptographic security.
+
+For generating unique numbers, the **Fisher-Yates shuffle algorithm** is used, which ensures an even distribution for all possible combinations.
+
+### Examples
+
+<table className="table table-sm my-4">
+  <thead>
+    <tr className="bg-base-200">
+      <th>Use Case</th>
+      <th>Min</th>
+      <th>Max</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>One random number</td><td>1</td><td>100</td><td>1</td></tr>
+    <tr><td>Dice roll</td><td>1</td><td>6</td><td>1</td></tr>
+    <tr><td>Coin (0=heads, 1=tails)</td><td>0</td><td>1</td><td>1</td></tr>
+    <tr><td>5 unique numbers from 30</td><td>1</td><td>30</td><td>5</td></tr>
+    <tr><td>Team division (10 players, 2 teams)</td><td>1</td><td>10</td><td>5</td></tr>
+  </tbody>
+</table>
+
+### See also
+
+- [Lottery Number Generator](/apps/lottery-number-generator) – Generate Finnish Lotto numbers
+- [Dice Generator](/apps/dice-generator) – Roll virtual dice

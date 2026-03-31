@@ -14,7 +14,7 @@ export default function Footer() {
             <nav key={category} className="m-10 md:m-0">
               <p className="font-bold mb-5 text-2xl text-main">{category}</p>
               {apps[category].apps.map((app) => (
-                <Link href={"/sovellus/" + app.route} key={app.route}>
+                <Link href={"/apps/" + app.route} key={app.route}>
                   <span className="block text-md mb-3 md:mb-1">
                     {app.displayName}
                   </span>
@@ -25,9 +25,9 @@ export default function Footer() {
         </div>
         <div className="flex items-center mt-10">
           <Image src={"/logo192.png"} width={28} height={28} alt="logo" />
-          <p className="inline-block font-semibold ml-1 text-main">appit.fi</p>
+          <p className="inline-block font-semibold ml-1 text-main">apps.fi</p>
         </div>
-        <p className="mt-5 w-72 italic">{texts.description} © 2026 Appit.fi</p>
+        <p className="mt-5 w-72 italic">{texts.description} © 2026 Apps.fi</p>
 
         <p className="mt-5">
           In english:{" "}

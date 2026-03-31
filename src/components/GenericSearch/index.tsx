@@ -1,6 +1,6 @@
 "use client";
 import Label from "@/components/common/Label/Label";
-import { useState, useEffect, ChangeEvent, FC } from "react";
+import { useState, useEffect, useMemo, ChangeEvent, FC } from "react";
 
 interface SearchProps<T> {
   data: T[];
@@ -19,31 +19,25 @@ const Search: FC<SearchProps<any>> = ({
   placeholder,
 }) => {
   const [search, setSearch] = useState("");
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [results, setResults] = useState<any[]>([]);
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
+  const results = useMemo(() => {
     if (search === "") {
-      setResults([]);
-      return;
+      return [];
     }
 
-    const searchResults = data
+    return data
       .filter((item) =>
         String(item[displayProperty])
           .toLowerCase()
           .includes(search.toLowerCase())
       )
       .slice(0, 10);
-
-    setResults(searchResults);
   }, [search, data, displayProperty]);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleSelect = (item: any) => {
     setSearch(String(item[displayProperty]));
-    setResults([]);
     setSearchResult(item);
     setIsOpen(false);
   };

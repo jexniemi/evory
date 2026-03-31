@@ -18,7 +18,7 @@ export default function Header() {
             <Link href="/">
               <Image
                 src="/logo.png"
-                alt="Appit.fi logo"
+                alt="Apps.fi logo"
                 width={150}
                 height={150}
               />
@@ -33,7 +33,7 @@ export default function Header() {
         </div>
         <MiddleColumn overflow backgroundColor="bg-background">
           <nav className="flex flex-row flex-nowrap overflow-x-auto py-3 gap-x-5 sm:gap-x-7 scrollbar-none [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            <HeaderItem path="/" name="Etusivu" selected={path === "/"} />
+            <HeaderItem path="/" name="Home" selected={path === "/"} />
             {Object.entries(apps).map(([name, category], idx) => (
               <React.Fragment key={idx}>
                 <HeaderItem

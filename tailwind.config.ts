@@ -27,5 +27,8 @@ const config: Config = {
     },
   },
   plugins: [daisyui],
+  daisyui: {
+    logs: false,
+  },
 };
 export default config;

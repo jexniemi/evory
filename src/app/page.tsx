@@ -4,9 +4,9 @@ import Link from "next/link";
 import { getCategoryTheme, appIcons } from "@/utils/categoryTheme";
 
 export const metadata: Metadata = {
-  title: "Appit.fi - Ilmaiset laskurit ja selainsovellukset.",
+  title: "Apps.fi - Free calculators and web applications.",
   description:
-    "Appit.fi:stä löydät ilmaisia laskureita ja selainsovelluksia laidasta laitaan.",
+    "From Apps.fi you will find free calculators and web applications of all kinds.",
 };
 
 export default function Home() {
@@ -25,13 +25,13 @@ export default function Home() {
                 <span className="text-2xl">{meta.icon}</span>
                 <h2 className="text-2xl font-bold text-gray-900">{category}</h2>
                 <span className="text-sm text-gray-400 font-medium">
-                  {categoryApps.length} sovellusta
+                  {categoryApps.length} applications
                 </span>
               </div>
 
               {/* Featured first card — wider */}
               <Link
-                href={`/sovellus/${featured.route}`}
+                href={`/apps/${featured.route}`}
                 className={`group block rounded-xl border border-gray-200 border-l-4 ${meta.accent} ${meta.bg} p-6 mb-4 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5`}
               >
                 <div className="flex items-start gap-4">
@@ -46,7 +46,7 @@ export default function Home() {
                       {featured.shortDescription}
                     </p>
                     <span className="inline-flex items-center mt-2 text-xs font-semibold text-main opacity-0 group-hover:opacity-100 transition-opacity">
-                      Avaa sovellus →
+                      Open application →
                     </span>
                   </div>
                 </div>
@@ -57,7 +57,7 @@ export default function Home() {
                 {rest.map((application) => (
                   <Link
                     key={application.route}
-                    href={`/sovellus/${application.route}`}
+                    href={`/apps/${application.route}`}
                     className={`group flex items-start gap-3 rounded-xl border border-gray-200 border-l-4 ${meta.accent} bg-white p-4 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5`}
                   >
                     <span className="text-xl mt-0.5 flex-shrink-0">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useMemo } from "react";
 import { usePathname } from "next/navigation";
 import { getRandomApps } from "../../applications";
 import { Application } from "@/types/types";
@@ -54,12 +54,7 @@ const appIcons: Record<string, string> = {
 
 export default function AppSuggestionBar() {
   const path = usePathname();
-  const [appSuggestions, setAppSuggestions] = useState<Application[]>([]);
-
-  useEffect(() => {
-    const apps = getRandomApps(path, 3);
-    setAppSuggestions(apps);
-  }, [path]);
+  const appSuggestions = useMemo(() => getRandomApps(path, 3), [path]);
 
   if (path === "/") {
     return null;
@@ -78,7 +73,7 @@ export default function AppSuggestionBar() {
           {appSuggestions.map((application) => (
             <Link
               key={application.route}
-              href={`/sovellus/${application.route}`}
+              href={`/apps/${application.route}`}
               className="group relative flex flex-col items-center text-center rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-200 hover:shadow-lg hover:-translate-y-1 hover:border-main"
             >
               <span className="text-4xl mb-3">
