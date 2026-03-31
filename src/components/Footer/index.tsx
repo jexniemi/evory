@@ -3,37 +3,82 @@ import Image from "next/image";
 import Link from "next/link";
 import { apps } from "../../applications";
 import MiddleColumn from "@/components/common/MiddleColumn";
+import { getCategoryTheme } from "@/utils/categoryTheme";
 
 export default function Footer() {
   const categories = Object.keys(apps);
   return (
     <MiddleColumn location="footer">
-      <div className="text-white py-20">
-        <div className="flex flex-col items-center text-center md:text-left md:flex-row md:flex-wrap md:justify-between md:gap-20 md:items-start">
-          {categories.map((category) => (
-            <nav key={category} className="m-10 md:m-0">
-              <p className="font-bold mb-5 text-2xl text-main">{category}</p>
-              {apps[category].apps.map((app) => (
-                <Link href={"/apps/" + app.route} key={app.route}>
-                  <span className="block text-md mb-3 md:mb-1">
-                    {app.displayName}
-                  </span>
-                </Link>
-              ))}
-            </nav>
-          ))}
-        </div>
-        <div className="flex items-center mt-10">
+      <footer className="text-gray-300 pt-16 pb-10">
+        {/* Top section: Logo + tagline */}
+        <div className="mb-12">
           <Image
             src={"/icon.svg"}
             width={28}
             height={28}
             alt="ewory.com logo"
           />
-          <p className="inline-block font-semibold ml-1 text-main">ewory.com</p>
+          <p className="mt-3 max-w-sm text-sm text-gray-400 leading-relaxed">
+            Free calculation and applications for study, leisure and work. All
+            tools work directly in the browser — no login, no ads.
+          </p>
         </div>
-        <p className="mt-5 w-72 italic">{texts.description} © 2026 ewory.com</p>
-      </div>
+
+        {/* Category link grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-y-10 gap-x-8">
+          {categories.map((category) => {
+            const theme = getCategoryTheme(category);
+            return (
+              <nav
+                key={category}
+                aria-label={`${category} -sovellukset`}
+                className="min-w-0"
+              >
+                <Link
+                  href={apps[category].path}
+                  className="flex items-center gap-1.5 mb-3 group"
+                >
+                  <span className="text-base shrink-0">{theme.icon}</span>
+                  <h3 className="text-sm font-bold text-white group-hover:text-orange-400 transition-colors truncate">
+                    {category}
+                  </h3>
+                </Link>
+                <ul className="space-y-1">
+                  {apps[category].apps.map((app) => (
+                    <li key={app.route}>
+                      <Link
+                        href={"/sovellus/" + app.route}
+                        className="text-[13px] text-gray-400 hover:text-white transition-colors leading-snug block truncate"
+                        title={app.shortDescription}
+                      >
+                        {app.displayName}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            );
+          })}
+        </div>
+
+        {/* Divider */}
+        <div className="mt-14 mb-6 border-t border-gray-800" />
+
+        {/* Bottom bar */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs text-gray-500">
+          <p>
+            © {new Date().getFullYear()} Appit.fi — Kaikki oikeudet pidätetään.
+          </p>
+          <div className="flex items-center gap-4">
+            <Link
+              href="https://ewory.com/"
+              className="hover:text-gray-300 transition-colors"
+            >
+              In English: Ewory.com
+            </Link>
+          </div>
+        </div>
+      </footer>
     </MiddleColumn>
   );
 }
