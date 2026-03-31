@@ -17,10 +17,10 @@ export default function Header() {
           <div className="z-50 flex flex-row items-center py-3">
             <Link href="/">
               <Image
-                src="/logo.png"
-                alt="Apps.fi logo"
-                width={150}
-                height={150}
+                src="/logo.svg"
+                alt="ewory.com logo"
+                width={160}
+                height={40}
               />
               {/* <div className="text-gray-500 text-xs">
                 Laskurit ja selainsovellukset
