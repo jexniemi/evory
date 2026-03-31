@@ -13,7 +13,8 @@ export default function ProsenttilaskuriPage() {
 
 const pageProps = {
   title: "Percentage Calculator",
-  seoTitle: "Percentage Calculator – Calculate percentage, share and change easily",
+  seoTitle:
+    "Percentage Calculator – Calculate percentage, share and change easily",
   description:
     "Free percentage calculator with three functions: calculate how much is X% of Y, what percentage X is of Y, and how much the value changed in percentage.",
   instructions:

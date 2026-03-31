@@ -13,7 +13,8 @@ export default function PaivamaaraLaskuriPage() {
 
 const pageProps = {
   title: "Date Calculator",
-  seoTitle: "Date Calculator – Calculate the difference in days, weeks, and months",
+  seoTitle:
+    "Date Calculator – Calculate the difference in days, weeks, and months",
   description:
     "Free date calculator: calculate how many days, weeks, or months are between two dates, or add days to your selected date.",
   instructions:

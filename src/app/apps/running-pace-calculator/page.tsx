@@ -13,7 +13,8 @@ export default function RunningSpeedCalculatorPage() {
 
 const pageProps = {
   title: "Running Pace Calculator",
-  seoTitle: "Running Pace Calculator – Calculate Running Speed, Pace, and Estimated Times",
+  seoTitle:
+    "Running Pace Calculator – Calculate Running Speed, Pace, and Estimated Times",
   description:
     "Calculate your running speed (km/h), pace (min/km), and estimated times for 5 km and 10 km distances. Enter running time and distance, and the calculator does the rest.",
   instructions:

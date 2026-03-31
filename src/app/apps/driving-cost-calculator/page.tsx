@@ -12,8 +12,7 @@ export default function FuelCostPage() {
 }
 
 const pageProps = {
-  seoTitle:
-    "Driving Cost Calculator – Calculate Fuel Costs and Annual Costs",
+  seoTitle: "Driving Cost Calculator – Calculate Fuel Costs and Annual Costs",
   title: "Driving Cost Calculator",
   description:
     "Calculate the fuel cost of a trip, cost per kilometer, and annual costs. Enter the distance, consumption, fuel price, and annual kilometers.",

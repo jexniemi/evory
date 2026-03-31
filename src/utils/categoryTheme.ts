@@ -153,7 +153,7 @@ export const appIcons: Record<string, string> = {
   "rental-yield-calculator": "🏠",
   "length-converter": "📏",
   "weight-converter": "⚖️",
-  "horoscope": "✨",
+  horoscope: "✨",
   "lottery-number-generator": "🎰",
   "random-number-generator": "🎲",
   "work-hours-calculator": "⏰",

@@ -12,7 +12,8 @@ export default function DiscountCalculator() {
 }
 
 const pageProps = {
-  seoTitle: "Discount Calculator - Calculate Discounted Price and Savings Easily",
+  seoTitle:
+    "Discount Calculator - Calculate Discounted Price and Savings Easily",
   title: "Discount Calculator",
   description:
     "Calculate the discounted price of your product or service easily with our discount calculator. Enter the original price and discount percentage, and get an accurate estimate of the discounted price and savings. Understand how much money you can save and make smarter purchasing decisions.",

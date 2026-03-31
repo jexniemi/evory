@@ -13,7 +13,8 @@ export default function PromillelaskuriPage() {
 
 const pageProps = {
   title: "BAC Calculator",
-  seoTitle: "BAC Calculator – Estimate Blood Alcohol Content with Widmark Formula",
+  seoTitle:
+    "BAC Calculator – Estimate Blood Alcohol Content with Widmark Formula",
   description:
     "Calculate estimated BAC based on gender, weight, drinks consumed, and time elapsed. The calculator also shows estimated time to sober up and to be fit to drive.",
   instructions:

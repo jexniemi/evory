@@ -12,7 +12,8 @@ export default function PricePerSqmPage() {
 }
 
 const pageProps = {
-  seoTitle: "Price Per Square Foot Calculator - Calculate Apartment Price Per Square Foot",
+  seoTitle:
+    "Price Per Square Foot Calculator - Calculate Apartment Price Per Square Foot",
   title: "Price Per Square Foot Calculator",
   description:
     "Easily calculate the price per square foot of an apartment. Enter the apartment's price and area, and the calculator will tell you the price per square meter.",

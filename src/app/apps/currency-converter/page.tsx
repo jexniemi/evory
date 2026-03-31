@@ -13,7 +13,8 @@ export default function ValuuttamuunninPage() {
 
 const pageProps = {
   title: "Currency Converter",
-  seoTitle: "Currency Converter – Convert currencies EUR, USD, GBP and over 20 more",
+  seoTitle:
+    "Currency Converter – Convert currencies EUR, USD, GBP and over 20 more",
   description:
     "Free currency converter: convert euro, dollar, pound, crown, yen and over 20 other currencies. Indicative rates, suitable for budget planning and travel.",
   instructions:

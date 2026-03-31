@@ -13,7 +13,8 @@ export default function SydansykelaskuriPage() {
 
 const pageProps = {
   title: "Heart Rate Calculator",
-  seoTitle: "Heart Rate Calculator – Calculate heart rate zones based on age and resting heart rate",
+  seoTitle:
+    "Heart Rate Calculator – Calculate heart rate zones based on age and resting heart rate",
   description:
     "Free heart rate calculator: calculate 5 heart rate zones based on your age and resting heart rate using Karvonen formula. Optimize your training to the right intensity zones.",
   instructions:

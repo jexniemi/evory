@@ -12,7 +12,8 @@ export default function LoanPage() {
 }
 
 const pageProps = {
-  seoTitle: "Loan Repayment Calculator – Calculate monthly payment and interest",
+  seoTitle:
+    "Loan Repayment Calculator – Calculate monthly payment and interest",
   title: "Loan Repayment Calculator",
   description:
     "Calculate loan monthly payment, total costs and interest expenses. Enter loan amount, interest rate and loan term – see exact monthly payment and how much you pay in interest.",

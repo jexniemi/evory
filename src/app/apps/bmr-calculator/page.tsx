@@ -12,7 +12,8 @@ export default function BMRCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle: "Basal Metabolic Rate Calculator (BMR) – Calculate Resting Calories",
+  seoTitle:
+    "Basal Metabolic Rate Calculator (BMR) – Calculate Resting Calories",
   title: "Basal Metabolic Rate Calculator",
   description:
     "Calculate your basal metabolic rate (BMR) using the Harris-Benedict formula. Enter age, gender, weight, and height – get your BMR and an estimate of daily calorie needs at different activity levels.",
