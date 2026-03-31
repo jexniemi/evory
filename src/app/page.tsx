@@ -16,7 +16,11 @@ const popularTools = [
   { route: "mortgage-calculator", label: "Mortgage Calculator", emoji: "🏠" },
   { route: "bmi-calculator", label: "BMI Calculator", emoji: "⚖️" },
   { route: "paycheck-calculator", label: "Paycheck Calculator", emoji: "🏧" },
-  { route: "compound-interest-calculator", label: "Compound Interest", emoji: "📈" },
+  {
+    route: "compound-interest-calculator",
+    label: "Compound Interest",
+    emoji: "📈",
+  },
   { route: "tip-calculator", label: "Tip Calculator", emoji: "🍽️" },
   { route: "age-calculator", label: "Age Calculator", emoji: "🎂" },
   { route: "password-generator", label: "Password Generator", emoji: "🔐" },
