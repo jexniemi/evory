@@ -114,6 +114,8 @@ export const appIcons: Record<string, string> = {
   "work-hours-calculator": "⏰",
   "paycheck-calculator": "🏧",
   "overtime-calculator": "🕐",
+  "tax-bracket-calculator": "🗂️",
+  "freelance-rate-calculator": "💼",
   // Savings & Investments
   "compound-interest-calculator": "📈",
   "simple-compound-interest-calculator": "🔄",
@@ -129,6 +131,12 @@ export const appIcons: Record<string, string> = {
   "debt-payoff-calculator": "🔓",
   "retirement-calculator": "🌅",
   "cd-calculator": "📜",
+  "student-loan-calculator": "🎓",
+  "roth-ira-calculator": "🏦",
+  "net-worth-calculator": "💎",
+  "inflation-calculator": "📉",
+  "emergency-fund-calculator": "🛡️",
+  "home-affordability-calculator": "🔑",
   // Daily Life & Home
   "percentage-calculator": "🔢",
   "discount-calculator": "🏷️",
@@ -150,6 +158,8 @@ export const appIcons: Record<string, string> = {
   "paint-calculator": "🎨",
   "moving-cost-calculator": "📦",
   "square-footage-calculator": "🏗️",
+  "car-loan-calculator": "🚗",
+  "break-even-calculator": "⚖️",
   // Health & Fitness
   "bac-calculator": "🍺",
   "bmi-calculator": "⚖️",

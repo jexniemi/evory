@@ -58,6 +58,18 @@ const applications = {
         shortDescription:
           "Calculate overtime pay based on hourly rate, overtime hours, and multiplier.",
       },
+      {
+        route: "tax-bracket-calculator",
+        displayName: "Tax Bracket Calculator",
+        shortDescription:
+          "Estimate your 2024 federal income tax, effective tax rate, and marginal bracket.",
+      },
+      {
+        route: "freelance-rate-calculator",
+        displayName: "Freelance Rate Calculator",
+        shortDescription:
+          "Calculate the minimum hourly rate you need to charge as a freelancer.",
+      },
     ],
   },
   "Savings & Investments": {
@@ -147,6 +159,42 @@ const applications = {
         displayName: "CD Calculator",
         shortDescription:
           "Calculate certificate of deposit interest earned and total value at maturity.",
+      },
+      {
+        route: "student-loan-calculator",
+        displayName: "Student Loan Calculator",
+        shortDescription:
+          "Calculate monthly student loan payments, total interest, and total repayment amount.",
+      },
+      {
+        route: "roth-ira-calculator",
+        displayName: "Roth IRA Calculator",
+        shortDescription:
+          "Calculate your Roth IRA balance at retirement and see how tax-free growth compounds.",
+      },
+      {
+        route: "net-worth-calculator",
+        displayName: "Net Worth Calculator",
+        shortDescription:
+          "Calculate your net worth by entering all assets and liabilities.",
+      },
+      {
+        route: "inflation-calculator",
+        displayName: "Inflation Calculator",
+        shortDescription:
+          "Calculate how inflation erodes purchasing power over time.",
+      },
+      {
+        route: "emergency-fund-calculator",
+        displayName: "Emergency Fund Calculator",
+        shortDescription:
+          "Calculate your emergency fund target and how long until you reach your goal.",
+      },
+      {
+        route: "home-affordability-calculator",
+        displayName: "Home Affordability Calculator",
+        shortDescription:
+          "Find out how much house you can afford using the 28/36 rule.",
       },
     ],
   },
@@ -269,6 +317,18 @@ const applications = {
         displayName: "Square Footage Calculator",
         shortDescription:
           "Calculate square footage from length and width and estimate property value.",
+      },
+      {
+        route: "car-loan-calculator",
+        displayName: "Car Loan Calculator",
+        shortDescription:
+          "Calculate monthly car loan payments, total interest, and total cost for any vehicle.",
+      },
+      {
+        route: "break-even-calculator",
+        displayName: "Break-Even Calculator",
+        shortDescription:
+          "Calculate the break-even point for your business in units and monthly revenue.",
       },
     ],
   },

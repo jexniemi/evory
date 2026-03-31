@@ -1,0 +1,132 @@
+import FAQ from "@/components/FAQ"
+
+## How the Roth IRA Calculator Works
+
+This calculator projects the future value of your Roth IRA at retirement using the **future value of an annuity** formula. It assumes you make consistent annual contributions at the start of each year and earn a fixed compounding return. The result shows your projected balance broken down into total contributions and tax-free investment growth.
+
+### The Growth Formula
+
+> **Balance = C × [(1 + r)ⁿ − 1] / r**
+
+Where:
+- **C** = Annual contribution amount
+- **r** = Annual expected return rate (as a decimal)
+- **n** = Number of years until retirement
+
+This is the future value of an **ordinary annuity** — contributions made at the end of each period. The actual balance may vary based on contribution timing, market performance, and fees.
+
+### Worked Example
+
+A **30-year-old** contributes **$7,000/year** to a Roth IRA, plans to retire at **65**, and expects an average annual return of **7%**:
+
+1. **Years to retirement:** 65 − 30 = **35 years**
+2. **Balance:** $7,000 × [(1.07³⁵ − 1) / 0.07] = $7,000 × 138.24 = **$967,700**
+3. **Total contributions:** $7,000 × 35 = **$245,000**
+4. **Tax-free growth:** $967,700 − $245,000 = **$722,700**
+
+You contribute $245,000 over your working life and receive nearly **$968,000 in tax-free retirement income** — with over $722,000 being investment gains you'll never pay taxes on.
+
+## 2024 Roth IRA Contribution Limits
+
+The IRS sets annual contribution limits for IRAs. For 2024:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Age</th>
+      <th>Annual Contribution Limit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Under 50</td><td>$7,000</td></tr>
+    <tr><td>50 and older (catch-up)</td><td>$8,000</td></tr>
+  </tbody>
+</table>
+
+These limits apply across **all** your IRA accounts combined (Roth + Traditional). You cannot contribute more than your earned income for the year.
+
+## Roth IRA Income Limits (2024)
+
+Unlike Traditional IRAs, the ability to contribute directly to a Roth IRA is restricted for higher earners:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Filing Status</th>
+      <th>Full Contribution (MAGI)</th>
+      <th>Phase-Out Range</th>
+      <th>No Contribution Allowed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Single / Head of Household</td><td>Under $146,000</td><td>$146,000 – $161,000</td><td>Over $161,000</td></tr>
+    <tr><td>Married Filing Jointly</td><td>Under $230,000</td><td>$230,000 – $240,000</td><td>Over $240,000</td></tr>
+    <tr><td>Married Filing Separately</td><td>$0</td><td>$0 – $10,000</td><td>Over $10,000</td></tr>
+  </tbody>
+</table>
+
+**MAGI** = Modified Adjusted Gross Income. If your income exceeds these limits, you may still be able to contribute through a **backdoor Roth IRA** conversion.
+
+## Roth IRA vs. Traditional IRA
+
+Choosing between a Roth and Traditional IRA is one of the most impactful decisions in retirement planning:
+
+| Feature | Roth IRA | Traditional IRA |
+|---|---|---|
+| Contributions | After-tax dollars | Pre-tax (may be deductible) |
+| Tax on growth | **None** | Taxed on withdrawal |
+| Required Minimum Distributions | **None** during owner's lifetime | Required starting at age 73 |
+| Withdrawal flexibility | Contributions can be withdrawn anytime | 10% penalty before age 59½ |
+| Best for | Expect higher taxes in retirement | Expect lower taxes in retirement |
+
+**General rule of thumb:** Choose a Roth IRA if you're early in your career or expect to be in a higher tax bracket in retirement. Choose a Traditional IRA if you want an immediate tax deduction and expect lower income in retirement.
+
+## The Backdoor Roth IRA
+
+High earners who exceed Roth IRA income limits can use a two-step "backdoor" strategy:
+
+1. Make a **non-deductible contribution** to a Traditional IRA (no income limits)
+2. **Convert** the Traditional IRA to a Roth IRA shortly after
+
+This is perfectly legal and widely used. However, if you have existing pre-tax money in Traditional IRAs, the "pro-rata rule" may result in partial taxation of the conversion. Consult a tax advisor before executing this strategy.
+
+## Tax-Free Withdrawal Rules
+
+To withdraw Roth IRA earnings **completely tax-free and penalty-free**, you must meet two conditions:
+
+- **Age 59½ or older** at the time of withdrawal
+- **Five-year rule** — the account must have been open for at least 5 years
+
+Your **contributions** (not earnings) can always be withdrawn at any time, tax-free and penalty-free — one of the Roth IRA's most attractive features for building an emergency fund backup.
+
+## Related Tools
+
+- [401(k) Calculator](/apps/401k-calculator)
+- [Retirement Calculator](/apps/retirement-calculator)
+- [Compound Interest Calculator](/apps/compound-interest-calculator)
+- [Investment Return Calculator](/apps/investment-return-calculator)
+- [CD Calculator](/apps/cd-calculator)
+
+## Sources
+
+- [IRS Publication 590-A – Contributions to Individual Retirement Arrangements](https://www.irs.gov/publications/p590a)
+- [IRS – Amount of Roth IRA Contributions You Can Make for 2024](https://www.irs.gov/retirement-plans/amount-of-roth-ira-contributions-that-you-can-make-for-2024)
+
+<FAQ items={[
+  {
+    q: "Is a Roth IRA better than a 401(k)?",
+    a: "They serve different purposes and many financial advisors recommend using both. A 401(k) offers higher contribution limits ($23,000 in 2024 vs $7,000 for an IRA) and often comes with employer matching. A Roth IRA offers more investment flexibility, no required minimum distributions, and completely tax-free withdrawals in retirement. The most powerful strategy is to contribute enough to your 401(k) to get the full employer match, then max out a Roth IRA, and then contribute more to the 401(k) if you have additional savings capacity."
+  },
+  {
+    q: "Can I contribute to a Roth IRA if I also have a 401(k)?",
+    a: "Yes, as long as you meet the Roth IRA income limits, you can contribute to both a Roth IRA and a 401(k) in the same year. Having both allows you to diversify your tax exposure in retirement — withdrawals from the 401(k) are taxable while Roth IRA withdrawals are tax-free."
+  },
+  {
+    q: "What happens to my Roth IRA when I die?",
+    a: "Roth IRAs can be passed to beneficiaries. Surviving spouses can roll the account into their own IRA with no changes. Non-spouse beneficiaries generally must withdraw all funds within 10 years under the SECURE 2.0 Act, but those withdrawals remain income tax-free since the original contributions were made with after-tax dollars. This makes a Roth IRA a powerful estate planning tool."
+  },
+  {
+    q: "How does the 7% return assumption in the example compare to historical stock market returns?",
+    a: "The U.S. stock market (S&P 500) has historically returned approximately 10% per year before inflation and around 7% per year after adjusting for inflation over long time horizons. Using 7% as a nominal return is actually a conservative estimate for a stock-heavy portfolio. Many target-date funds and diversified index funds used in IRAs have averaged in this range over 20–30 year periods, though past performance does not guarantee future results."
+  }
+]} />

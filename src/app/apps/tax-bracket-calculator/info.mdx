@@ -1,0 +1,116 @@
+import FAQ from "@/components/FAQ"
+
+## How the Tax Bracket Calculator Works
+
+The Tax Bracket Calculator estimates your 2024 U.S. federal income tax liability based on your annual gross income and filing status. It applies the standard deduction first to arrive at taxable income, then runs that amount through the seven progressive federal tax brackets to calculate total tax owed, your effective (average) tax rate, your marginal bracket, and your after-tax take-home income.
+
+This tool is ideal for employees, freelancers, and anyone planning their finances who wants a fast, accurate estimate without paying for tax software.
+
+### The Progressive Tax System Explained
+
+The U.S. federal income tax system is **progressive**: you don't pay the same rate on every dollar you earn. Instead, each dollar falls into a bracket and is taxed only at that bracket's rate. A common misconception is that earning more can somehow leave you with less money — that's not how it works. Only the dollars *within* a higher bracket are taxed at the higher rate.
+
+### Standard Deduction (2024)
+
+Before applying brackets, the IRS allows most taxpayers to reduce their taxable income by a fixed standard deduction:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Filing Status</th>
+      <th>2024 Standard Deduction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Single</td><td>$14,600</td></tr>
+    <tr><td>Married Filing Jointly (MFJ)</td><td>$29,200</td></tr>
+    <tr><td>Head of Household (HoH)</td><td>$21,900</td></tr>
+  </tbody>
+</table>
+
+**Taxable income = Gross income − Standard deduction**
+
+### 2024 Federal Tax Brackets (Single Filers)
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Tax Rate</th>
+      <th>Taxable Income Range</th>
+      <th>Tax Owed in Bracket</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>10%</td><td>$0 – $11,600</td><td>Up to $1,160</td></tr>
+    <tr><td>12%</td><td>$11,601 – $47,150</td><td>Up to $4,266</td></tr>
+    <tr><td>22%</td><td>$47,151 – $100,525</td><td>Up to $11,742</td></tr>
+    <tr><td>24%</td><td>$100,526 – $191,950</td><td>Up to $21,953</td></tr>
+    <tr><td>32%</td><td>$191,951 – $243,725</td><td>Up to $16,560</td></tr>
+    <tr><td>35%</td><td>$243,726 – $609,350</td><td>Up to $127,962</td></tr>
+    <tr><td>37%</td><td>Over $609,350</td><td>37¢ per dollar</td></tr>
+  </tbody>
+</table>
+
+### Worked Example
+
+A **single filer** earning **$75,000** in 2024:
+
+1. **Taxable income:** $75,000 − $14,600 = **$60,400**
+2. **10% bracket** (first $11,600): $1,160.00
+3. **12% bracket** ($11,601–$47,150): ($47,150 − $11,600) × 12% = $4,266.00
+4. **22% bracket** ($47,151–$60,400): ($60,400 − $47,150) × 22% = $2,915.00
+5. **Total federal tax:** $1,160 + $4,266 + $2,915 = **$8,341**
+6. **Effective rate:** $8,341 ÷ $75,000 = **11.1%**
+7. **Marginal bracket:** 22%
+8. **After-tax income:** $75,000 − $8,341 = **$66,659**
+
+## Effective Rate vs. Marginal Rate
+
+These two numbers are frequently confused:
+
+- **Marginal tax rate** — the rate that applies to the *last dollar* you earned. This is your "tax bracket." It tells you how much of any additional income you earn will be taxed.
+- **Effective tax rate** — your *average* tax rate across all income. This is always lower than your marginal rate because your first dollars are taxed at 10%, your next at 12%, and so on.
+
+Understanding the difference helps with financial planning. For instance, a traditional IRA deduction reduces taxable income at your **marginal rate**, while your overall tax burden is reflected by your **effective rate**.
+
+## Other Taxes Not Included
+
+This calculator covers only **federal income tax**. Your total tax burden includes:
+
+- **State income tax** — ranges from 0% (TX, FL, WA, etc.) to over 13% (CA)
+- **Social Security tax** — 6.2% on wages up to $168,600 (2024)
+- **Medicare tax** — 1.45% on all wages (+ 0.9% additional Medicare for high earners)
+- **Self-employment tax** — 15.3% for freelancers and independent contractors (see the [Freelance Rate Calculator](/apps/freelance-rate-calculator))
+- **Alternative Minimum Tax (AMT)** — a parallel tax system that may affect higher earners; consult a tax professional if your income exceeds $85,700 (single) or $133,300 (MFJ) for 2024.
+
+## Related Tools
+
+- [Paycheck Calculator](/apps/paycheck-calculator)
+- [Net Salary Calculator](/apps/net-salary-calculator)
+- [Overtime Calculator](/apps/overtime-calculator)
+- [Freelance Rate Calculator](/apps/freelance-rate-calculator)
+- [401(k) Calculator](/apps/401k-calculator)
+
+## Sources
+
+- [IRS Revenue Procedure 2023-34 – 2024 Tax Brackets](https://www.irs.gov/newsroom/irs-provides-tax-inflation-adjustments-for-tax-year-2024)
+- [Tax Foundation – 2024 Federal Income Tax Brackets](https://taxfoundation.org/data/all/federal/2024-tax-brackets/)
+
+<FAQ items={[
+  {
+    q: "What is the difference between my tax bracket and my effective tax rate?",
+    a: "Your tax bracket (marginal rate) is the rate applied to your last dollar of taxable income. Your effective tax rate is the average rate across all your income. Because the U.S. uses a progressive system, your effective rate is always lower than your marginal bracket."
+  },
+  {
+    q: "Does this calculator include state income tax?",
+    a: "No. This calculator only estimates federal income tax. State income taxes vary widely — from 0% in states like Texas and Florida to over 13% in California. Add your state tax separately for a complete picture."
+  },
+  {
+    q: "Should I itemize or take the standard deduction?",
+    a: "Take whichever is larger. The 2024 standard deduction ($14,600 single, $29,200 MFJ) is high enough that the majority of taxpayers benefit more from it than from itemizing. You should only itemize if your qualifying deductions (mortgage interest, charitable donations, state taxes up to $10,000, etc.) exceed the standard deduction."
+  },
+  {
+    q: "What is the Alternative Minimum Tax (AMT)?",
+    a: "The AMT is a parallel tax calculation that limits certain deductions used by higher-income taxpayers. If your AMT liability exceeds your regular tax, you pay the difference. The AMT exemption for 2024 is $85,700 for single filers and $133,300 for married filing jointly. Most middle-income taxpayers are not affected."
+  }
+]} />

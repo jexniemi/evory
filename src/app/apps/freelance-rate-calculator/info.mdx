@@ -1,0 +1,131 @@
+import FAQ from "@/components/FAQ"
+
+## How the Freelance Rate Calculator Works
+
+Setting a freelance rate that's too low is one of the most common mistakes new independent contractors make. This calculator solves that problem by working backwards from your financial needs: it takes your desired take-home income, adds your business expenses and self-employment taxes, then divides by your available billable hours to produce the **minimum hourly rate** you must charge to meet your goals.
+
+The key word is *minimum* — this is your floor, not your ceiling. Market rates, your experience level, and specialized skills may allow you to charge significantly more.
+
+### The Freelance Rate Formula
+
+> **Total Revenue Needed = Desired Income + Annual Expenses + Self-Employment Tax**
+
+> **Hourly Rate = Total Revenue Needed ÷ Billable Hours Per Year**
+
+Where:
+- **Annual Expenses** = Monthly business expenses × 12
+- **Self-Employment Tax** ≈ Desired Income × 15.3%
+- **Billable Hours Per Year** = Hours per week × Weeks worked per year
+
+### Worked Example
+
+A freelance web developer wants to take home **$80,000/year**, works **30 billable hours/week** for **48 weeks**, and has **$500/month** in business expenses:
+
+1. **Annual expenses:** $500 × 12 = **$6,000**
+2. **SE tax:** $80,000 × 15.3% = **$12,240**
+3. **Total revenue needed:** $80,000 + $6,000 + $12,240 = **$98,240**
+4. **Billable hours/year:** 30 × 48 = **1,440 hours**
+5. **Minimum hourly rate:** $98,240 ÷ 1,440 = **$68.22/hr**
+6. **Daily rate (8 hrs):** $68.22 × 8 = **$545.78/day**
+
+## Understanding Self-Employment Tax
+
+When you work as an employee, your employer pays half of your Social Security and Medicare taxes (FICA). As a freelancer, you pay **both halves**:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Tax Component</th>
+      <th>Rate</th>
+      <th>Wage Base (2024)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Social Security</td><td>12.4%</td><td>Up to $168,600</td></tr>
+    <tr><td>Medicare</td><td>2.9%</td><td>All net earnings</td></tr>
+    <tr><td>Additional Medicare</td><td>0.9%</td><td>Over $200,000 (single)</td></tr>
+    <tr><td><strong>Total SE Tax</strong></td><td><strong>15.3%</strong></td><td>Up to Social Security wage base</td></tr>
+  </tbody>
+</table>
+
+The IRS does allow you to deduct half of your SE tax from your gross income when calculating federal income tax, which partially offsets the burden. You'll also owe federal (and state) income tax on top of SE tax — consider using the [Tax Bracket Calculator](/apps/tax-bracket-calculator) to estimate your full federal tax liability.
+
+## Billable vs. Non-Billable Hours
+
+A common mistake is assuming all working hours are billable. In reality, a large portion of a freelancer's time goes to non-revenue activities:
+
+- **Client prospecting & proposals** — typically 10–20% of total work time
+- **Project management & communication** — emails, meetings, status updates
+- **Invoicing & accounting** — especially without dedicated software
+- **Skill development** — staying current in your field
+- **Marketing & content creation** — building your online presence
+
+If you work 40 hours per week but only 30 are billable, your effective annual billable hours are 1,440 (assuming 48 working weeks). This is why this calculator uses billable hours rather than total work hours.
+
+## Typical Market Rates by Freelance Role (2024)
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Role</th>
+      <th>Entry Level</th>
+      <th>Mid-Level</th>
+      <th>Senior / Expert</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Web Developer (Full-Stack)</td><td>$35–$60/hr</td><td>$75–$120/hr</td><td>$150–$250+/hr</td></tr>
+    <tr><td>Graphic Designer</td><td>$25–$45/hr</td><td>$50–$85/hr</td><td>$100–$150+/hr</td></tr>
+    <tr><td>Copywriter / Content Writer</td><td>$25–$50/hr</td><td>$60–$100/hr</td><td>$125–$200+/hr</td></tr>
+    <tr><td>SEO Specialist</td><td>$30–$60/hr</td><td>$75–$125/hr</td><td>$150–$250+/hr</td></tr>
+    <tr><td>Virtual Assistant</td><td>$15–$25/hr</td><td>$30–$50/hr</td><td>$60–$90+/hr</td></tr>
+    <tr><td>Video Editor</td><td>$25–$50/hr</td><td>$60–$100/hr</td><td>$120–$200+/hr</td></tr>
+  </tbody>
+</table>
+
+These are U.S. market averages. Rates vary by niche, geography, platform, and the client's industry.
+
+## Common Business Expenses to Factor In
+
+Your monthly expenses figure should include anything you spend to run your freelance business:
+
+- **Software subscriptions** — Adobe Creative Cloud, Figma, project management tools
+- **Hardware amortization** — laptop, camera, microphone, second monitor
+- **Home office deduction** — a proportional share of rent/mortgage and utilities
+- **Professional development** — courses, certifications, conferences
+- **Health insurance premiums** — often fully deductible for self-employed individuals
+- **Accounting / legal fees** — bookkeeper, CPA, contract templates
+
+Accurately tracking these costs is critical both for setting your rate and for reducing your taxable income at tax time.
+
+## Related Tools
+
+- [Paycheck Calculator](/apps/paycheck-calculator)
+- [Overtime Calculator](/apps/overtime-calculator)
+- [Tax Bracket Calculator](/apps/tax-bracket-calculator)
+- [Net Salary Calculator](/apps/net-salary-calculator)
+- [Hourly Salary Calculator](/apps/hourly-salary-calculator)
+
+## Sources
+
+- [IRS – Self-Employment Tax (SE Tax)](https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes)
+- [Freelancers Union – Resources for Independent Workers](https://www.freelancersunion.org/resources/)
+
+<FAQ items={[
+  {
+    q: "Why does the calculator add 15.3% to my desired income?",
+    a: "As a self-employed person, you pay both the employee and employer portions of Social Security and Medicare taxes — a combined rate of 15.3% on net self-employment income. This is in addition to regular federal and state income tax. Failing to account for SE tax is one of the most common reasons new freelancers find themselves underpaid."
+  },
+  {
+    q: "How many billable hours per year is realistic for a full-time freelancer?",
+    a: "Most full-time freelancers bill 1,000–1,500 hours per year. A 40-hour work week rarely translates to 40 billable hours — administrative work, marketing, and skill development consume 20–35% of total time. A conservative estimate of 25–30 billable hours per week is more realistic for solo operators."
+  },
+  {
+    q: "Should I charge a day rate or an hourly rate?",
+    a: "Both are common. Day rates (typically 7–8× your hourly rate) are often preferred for on-site or consulting work because they simplify billing and set clear expectations. Hourly rates work well for ongoing retainer relationships. For project-based work, many experienced freelancers prefer fixed project fees calculated from an estimated number of hours multiplied by their target rate."
+  },
+  {
+    q: "Can I deduct business expenses from my freelance income?",
+    a: "Yes. Legitimate business expenses — software, equipment, home office, professional development, health insurance premiums, and half of your SE tax — are deductible from your gross freelance income, reducing both your income tax and SE tax. Keeping accurate records with accounting software or a spreadsheet is essential."
+  }
+]} />

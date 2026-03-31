@@ -40,4 +40,4 @@
 
 - next.config.mjs — do not touch.
 
-- before creating new application, check that similar app does not already exist in applications.json
+- applications need to be UNIQUE. Before creating new application, check that similar app does not already exist in applications.json

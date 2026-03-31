@@ -1,0 +1,116 @@
+import FAQ from "@/components/FAQ"
+
+## What Is the Inflation Calculator?
+
+This inflation calculator helps you understand how **purchasing power changes over time**. By entering a dollar amount, an average annual inflation rate, and a number of years, you can see how much more you will need in the future to buy the same goods and services you can buy today. It also shows what today's dollars are truly worth in the future after inflation's erosion.
+
+Inflation is one of the most important — and most overlooked — forces in personal finance. Even a modest 3% annual inflation rate cuts the purchasing power of your money roughly in half over 24 years.
+
+### How the Inflation Calculation Works
+
+The calculator uses **compound inflation** — the same exponential math as compound interest, but working against you:
+
+**Future Equivalent = Initial Amount × (1 + Rate)^Years**
+
+This tells you how many future dollars you will need to match today's purchasing power. The inverse gives you the **real value** of today's money:
+
+**Real Value = Initial Amount ÷ (1 + Rate)^Years**
+
+### Worked Example
+
+Suppose you have **$1,000** today and average inflation is **3% per year** over **20 years**:
+
+- Future equivalent needed: $1,000 × (1.03)^20 = **$1,806**
+- Purchasing power lost: $1,806 − $1,000 = **$806**
+- Real value of today's $1,000 in 20 years: $1,000 ÷ (1.03)^20 = **$554**
+
+In other words, $1,000 today will only buy what $554 buys today — a loss of nearly half its purchasing power.
+
+### The Rule of 72 for Inflation
+
+A quick mental shortcut: **divide 72 by the inflation rate** to find how many years it takes for prices to double (and your money's purchasing power to halve).
+
+- At 2% inflation → prices double in **36 years**
+- At 3% inflation → prices double in **24 years**
+- At 6% inflation → prices double in **12 years**
+- At 8% inflation → prices double in **9 years**
+
+This rule underscores why even "low" inflation meaningfully erodes long-term wealth.
+
+## Historical US Inflation Rates by Decade
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Decade</th>
+      <th>Avg. Annual Inflation</th>
+      <th>Cumulative Price Rise</th>
+      <th>Notable Events</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1960s</td><td>2.5%</td><td>~28%</td><td>Post-war growth, Great Society spending</td></tr>
+    <tr><td>1970s</td><td>7.4%</td><td>~104%</td><td>Oil embargoes, Nixon shock, stagflation</td></tr>
+    <tr><td>1980s</td><td>5.1%</td><td>~64%</td><td>Volcker rate hikes tamed inflation</td></tr>
+    <tr><td>1990s</td><td>3.0%</td><td>~34%</td><td>Tech boom, declining energy prices</td></tr>
+    <tr><td>2000s</td><td>2.6%</td><td>~29%</td><td>Housing boom, brief energy spikes</td></tr>
+    <tr><td>2010s</td><td>1.8%</td><td>~19%</td><td>Post-recession low inflation</td></tr>
+    <tr><td>2020–2023</td><td>5.4%</td><td>~24%</td><td>COVID stimulus, supply chain disruptions</td></tr>
+  </tbody>
+</table>
+
+The Federal Reserve's official target is **2% annual inflation** — considered the sweet spot that supports economic growth without eroding savings too quickly.
+
+## How Inflation Affects Your Savings and Investments
+
+### The Savings Account Problem
+
+A traditional savings account yielding 0.5% APY while inflation runs at 3% means your **real return is −2.5% per year**. Your nominal balance grows, but your purchasing power shrinks.
+
+To protect your savings from inflation, the return on your money must **exceed the inflation rate**. This is why high-yield savings accounts, Treasury Inflation-Protected Securities (TIPS), I-Bonds, and diversified stock portfolios are commonly recommended as inflation hedges.
+
+### Stocks and Real Assets
+
+Historically, the US stock market has returned approximately **7% annually after inflation** over the long run. Real assets like real estate, commodities, and infrastructure investments also tend to hold their value during inflationary periods because their prices rise along with the general price level.
+
+### Retirement Planning and Inflation
+
+Inflation is especially dangerous for retirees on fixed incomes. A retiree spending $5,000 per month today will need approximately **$9,030 per month** in 20 years just to maintain the same lifestyle at 3% annual inflation. This is why retirement planners factor in an inflation adjustment when calculating how large a nest egg you need.
+
+Social Security benefits do include a **Cost of Living Adjustment (COLA)** each year, but private pensions and fixed annuities often do not. Planning for an inflation-adjusted income stream is one of the most important steps in retirement preparation.
+
+## What Is the Consumer Price Index (CPI)?
+
+The **Consumer Price Index (CPI)** is the most widely used measure of inflation in the United States. It is published monthly by the Bureau of Labor Statistics (BLS) and tracks the average price changes of a "basket" of goods and services including:
+
+- **Food and beverages** (~15% weight)
+- **Housing** (~43% weight — the largest component)
+- **Transportation** (~16%)
+- **Medical care** (~8%)
+- **Education and communication** (~6%)
+- **Recreation, apparel, and other** (~12%)
+
+When the media reports "inflation is 3.2%," they are typically referring to the **year-over-year change in CPI**.
+
+**Core CPI** strips out volatile food and energy prices and is closely watched by the Federal Reserve when making interest rate decisions.
+
+## Related Tools
+
+- [Compound Interest Calculator](/apps/compound-interest-calculator)
+- [Retirement Calculator](/apps/retirement-calculator)
+- [Savings Goal Calculator](/apps/savings-goal-calculator)
+- [Investment Return Calculator](/apps/investment-return-calculator)
+- [CD Calculator](/apps/cd-calculator)
+
+## Sources
+
+- [Bureau of Labor Statistics — CPI Data](https://www.bls.gov/cpi/)
+- [Federal Reserve — Monetary Policy and Inflation](https://www.federalreserve.gov/monetarypolicy/inflation.htm)
+- [US Inflation Calculator — Historical Data](https://www.usinflationcalculator.com/)
+
+<FAQ items={[
+  { q: "What is a normal inflation rate?", a: "The US Federal Reserve targets 2% annual inflation as an ideal level that supports economic growth while keeping prices stable. Historically, US inflation has averaged around 3–4% over long periods, with spikes during the 1970s energy crisis and during 2021–2023 supply chain disruptions." },
+  { q: "How does inflation affect my savings account?", a: "If your savings account earns less interest than the inflation rate, your purchasing power is shrinking even though your balance grows. For example, at 3% inflation and 0.5% APY, you lose roughly 2.5% of real purchasing power each year. High-yield savings accounts, I-Bonds, and TIPS are better options for protecting savings from inflation." },
+  { q: "What is the difference between CPI and core CPI?", a: "CPI (Consumer Price Index) measures price changes for all goods and services including food and energy. Core CPI excludes food and energy because those prices are highly volatile month to month. The Federal Reserve focuses more on core CPI (and the PCE index) when making monetary policy decisions." },
+  { q: "How do I beat inflation with investments?", a: "Historically, a diversified portfolio of US stocks has returned approximately 7% annually after inflation. Other inflation-resistant assets include real estate, Treasury Inflation-Protected Securities (TIPS), Series I Savings Bonds (I-Bonds), and commodities. The key is ensuring your returns exceed the inflation rate over the long term." },
+]} />

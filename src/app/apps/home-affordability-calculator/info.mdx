@@ -1,0 +1,106 @@
+import FAQ from "@/components/FAQ"
+
+## How Much House Can You Afford?
+
+Buying a home is the largest financial decision most people ever make. Before browsing listings or talking to a real estate agent, it is critical to understand your **true buying power** — not just what a bank might approve you for, but what you can comfortably afford without straining your finances.
+
+This home affordability calculator uses the **28/36 rule** — the industry-standard guideline used by mortgage underwriters, financial advisors, and lenders — to estimate the maximum home price you can responsibly purchase given your income, existing debts, down payment, and current interest rates.
+
+### The 28/36 Rule Explained
+
+The 28/36 rule sets two limits on your housing-related debt:
+
+**The 28% Front-End Ratio** — Your total monthly housing payment (mortgage principal + interest + property taxes + homeowner's insurance, sometimes called PITI) should not exceed **28% of your gross monthly income**.
+
+**The 36% Back-End Ratio** — Your total monthly debt payments — including housing, car loans, student loans, credit cards, and all other recurring debt — should not exceed **36% of your gross monthly income**.
+
+The calculator takes the **lower of the two limits** as your maximum monthly mortgage payment, then uses reverse amortization to find the loan amount and adds your down payment.
+
+### Worked Example
+
+- Annual income: **$90,000** → Monthly gross: **$7,500**
+- Existing monthly debts: **$400** (car loan + student loan minimum)
+- Down payment: **$60,000**
+- Interest rate: **6.5%** | Loan term: **30 years**
+
+**28% rule:** $7,500 × 0.28 = **$2,100** max housing payment
+
+**36% rule:** $7,500 × 0.36 − $400 = $2,700 − $400 = **$2,300** max mortgage
+
+Binding limit: **$2,100** (the lower of the two)
+
+Using reverse amortization at 6.5% for 30 years:
+- Maximum loan: approximately **$331,000**
+- Maximum home price: $331,000 + $60,000 = **$391,000**
+
+## Debt-to-Income Ratio (DTI) Reference
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Annual Income</th>
+      <th>Max Housing (28%)</th>
+      <th>Max Total Debt (36%)</th>
+      <th>Max Home Price (6.5%, 30yr, $60K down)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>$60,000</td><td>$1,400/mo</td><td>$1,800/mo</td><td>approx. $281,000</td></tr>
+    <tr><td>$80,000</td><td>$1,867/mo</td><td>$2,400/mo</td><td>approx. $355,000</td></tr>
+    <tr><td>$100,000</td><td>$2,333/mo</td><td>$3,000/mo</td><td>approx. $427,000</td></tr>
+    <tr><td>$120,000</td><td>$2,800/mo</td><td>$3,600/mo</td><td>approx. $500,000</td></tr>
+    <tr><td>$150,000</td><td>$3,500/mo</td><td>$4,500/mo</td><td>approx. $613,000</td></tr>
+  </tbody>
+</table>
+
+Note: Assumes no existing monthly debts. Values are estimates; actual affordability depends on local property taxes, insurance, and HOA fees.
+
+## The True Cost of Homeownership
+
+The mortgage payment is only one part of homeownership costs. Many first-time buyers underestimate the full financial picture:
+
+**Property Taxes** — Vary dramatically by location, typically 0.5–2.5% of the home's value per year. A $400,000 home in a high-tax area could cost $8,000–$10,000 per year in property taxes alone.
+
+**Homeowner's Insurance** — Average US cost is roughly $1,500–$2,500 per year for a $300,000–$400,000 home, though it varies significantly by region and risk factors.
+
+**HOA Fees** — If applicable, these range from $100 to $1,000+ per month in high-amenity communities.
+
+**Maintenance and Repairs** — A widely used rule of thumb is to budget **1% of the home's value per year** for maintenance. A $400,000 home means roughly $4,000 per year for repairs, appliances, roof maintenance, HVAC servicing, etc.
+
+**Closing Costs** — Typically **2–5% of the loan amount** and must be paid upfront. On a $300,000 mortgage, that's $6,000–$15,000 at closing, in addition to your down payment.
+
+## Private Mortgage Insurance (PMI)
+
+If your down payment is **less than 20%** of the home's purchase price, most conventional lenders will require **Private Mortgage Insurance (PMI)**. PMI protects the lender — not you — if you default, and typically costs **0.5–1.5% of the loan amount per year**.
+
+On a $350,000 loan, PMI could add $145–$437 per month to your payment. PMI is automatically canceled once your equity reaches 20% (your loan balance drops to 80% of the original appraised value), and you can request cancellation once you believe your equity has reached that threshold.
+
+Putting 20% down eliminates PMI entirely — one of the strongest financial reasons to save a larger down payment.
+
+## Tips to Increase Your Affordability
+
+- **Pay down existing debts** — Eliminating a $400/month car payment can add $50,000–$70,000 to your maximum home price under the 36% rule
+- **Improve your credit score** — A higher score unlocks lower interest rates, which dramatically increases buying power
+- **Save a larger down payment** — Every extra dollar in down payment translates directly to a higher maximum home price
+- **Extend your loan term** — A 30-year mortgage has lower monthly payments than a 15-year, increasing affordability (though you pay more interest over time)
+- **Shop multiple lenders** — Even a 0.25% difference in interest rate can change your maximum loan amount by tens of thousands of dollars
+
+## Related Tools
+
+- [Mortgage Calculator](/apps/mortgage-calculator)
+- [Down Payment Calculator](/apps/down-payment-calculator)
+- [Debt Payoff Calculator](/apps/debt-payoff-calculator)
+- [Net Worth Calculator](/apps/net-worth-calculator)
+- [Savings Goal Calculator](/apps/savings-goal-calculator)
+
+## Sources
+
+- [Consumer Financial Protection Bureau — Buying a House](https://www.consumerfinance.gov/owning-a-home/)
+- [Fannie Mae — Eligibility and Underwriting Guidelines](https://www.fanniemae.com/learning-center/home-buying-process)
+
+<FAQ items={[
+  { q: "What is the 28/36 rule for buying a house?", a: "The 28/36 rule says your monthly housing costs should not exceed 28% of your gross monthly income, and your total monthly debt payments (housing plus all other debts) should not exceed 36% of gross monthly income. Mortgage lenders use these thresholds to determine whether you qualify for a loan and how large a mortgage you can receive." },
+  { q: "What is a good debt-to-income ratio for a mortgage?", a: "Most conventional lenders prefer a front-end DTI (housing costs only) of 28% or less and a back-end DTI (all debts) of 36% or less. FHA loans allow back-end DTIs up to 43% with compensating factors. A DTI below 36% generally gives you access to the best rates and terms." },
+  { q: "How much should I put down on a house?", a: "A 20% down payment is the traditional recommendation because it eliminates PMI, reduces your monthly payment, and gives you instant equity. However, many buyers put down 3–10% with the help of low-down-payment programs. The right amount depends on your savings, local market, and how quickly you want to build equity." },
+  { q: "Does my credit score affect how much house I can afford?", a: "Yes, significantly. Your credit score affects the interest rate you qualify for. A borrower with an 800 credit score might get a 6.0% mortgage while someone with a 650 score pays 7.5% or more. Over 30 years on a $350,000 mortgage, that difference can amount to over $100,000 in total interest paid." },
+]} />

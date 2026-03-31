@@ -1,0 +1,131 @@
+import FAQ from "@/components/FAQ"
+
+## How the Student Loan Calculator Works
+
+This calculator uses the standard loan amortization formula to compute your **monthly payment**, **total interest paid**, and **total amount repaid** over the life of your student loan. It works for both federal and private student loans on a standard repayment schedule.
+
+### Amortization Formula
+
+The monthly payment for a fixed-rate loan is calculated using the standard amortization formula:
+
+> **M = P × [r(1+r)ⁿ] / [(1+r)ⁿ − 1]**
+
+Where:
+- **M** = Monthly payment
+- **P** = Principal loan balance
+- **r** = Monthly interest rate (annual rate ÷ 12)
+- **n** = Total number of payments (years × 12)
+
+### Worked Example
+
+A borrower has **$35,000** in student loans at **6.5% interest** on a **10-year** repayment plan:
+
+1. **Monthly rate:** 6.5% ÷ 12 = **0.5417%** (0.005417)
+2. **Number of payments:** 10 × 12 = **120**
+3. **Monthly payment:** $35,000 × [0.005417 × (1.005417)¹²⁰] ÷ [(1.005417)¹²⁰ − 1] = **$396.03**
+4. **Total paid:** $396.03 × 120 = **$47,523**
+5. **Total interest:** $47,523 − $35,000 = **$12,523**
+
+That's over $12,500 in interest on a $35,000 loan — illustrating why minimizing interest and paying off loans faster can result in substantial savings.
+
+## Federal vs. Private Student Loans
+
+Understanding the type of loans you have is crucial, as they come with different protections and options:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Feature</th>
+      <th>Federal Loans</th>
+      <th>Private Loans</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Interest rates (2024–25)</td><td>6.53% – 9.08% fixed</td><td>Variable or fixed; varies by lender/credit</td></tr>
+    <tr><td>Income-driven repayment</td><td>Yes (IBR, PAYE, SAVE)</td><td>Rarely available</td></tr>
+    <tr><td>Public Service Loan Forgiveness</td><td>Yes</td><td>No</td></tr>
+    <tr><td>Deferment / forbearance</td><td>Broad federal options</td><td>Limited; lender discretion</td></tr>
+    <tr><td>Interest subsidy</td><td>Available on subsidized loans</td><td>No</td></tr>
+    <tr><td>Origination fees</td><td>Yes (1.057% – 4.228%)</td><td>Varies; often none</td></tr>
+  </tbody>
+</table>
+
+For most borrowers, federal loans should be exhausted before taking out private loans due to their superior protections and flexible repayment options.
+
+## 2024–2025 Federal Student Loan Interest Rates
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Loan Type</th>
+      <th>Borrower</th>
+      <th>2024–25 Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Direct Subsidized / Unsubsidized</td><td>Undergraduate</td><td>6.53%</td></tr>
+    <tr><td>Direct Unsubsidized</td><td>Graduate / Professional</td><td>8.08%</td></tr>
+    <tr><td>Direct PLUS</td><td>Graduate or Parent</td><td>9.08%</td></tr>
+  </tbody>
+</table>
+
+Federal student loan interest rates are set annually by Congress based on the 10-year Treasury note rate plus a fixed margin.
+
+## Repayment Plan Options
+
+### Standard Repayment (10 Years)
+Fixed monthly payments over 10 years. You pay the least total interest but have the highest monthly payment. This is the default plan for federal loans.
+
+### Extended Repayment (up to 25 Years)
+Lower monthly payments spread over a longer term. You pay significantly more total interest — sometimes doubling your cost. Use the calculator to compare a 10-year vs. 25-year plan for your balance.
+
+### Income-Driven Repayment (IDR) Plans
+Federal borrowers who struggle with standard payments can enroll in income-driven plans that cap payments at a percentage of discretionary income:
+
+- **IBR (Income-Based Repayment)** — 10–15% of discretionary income; forgiveness after 20–25 years
+- **PAYE (Pay As You Earn)** — 10% of discretionary income; forgiveness after 20 years
+- **SAVE (Saving on a Valuable Education)** — the newest plan; 5% of discretionary income for undergraduate loans; replaces REPAYE
+
+### Public Service Loan Forgiveness (PSLF)
+If you work full-time for a qualifying government or non-profit employer and make 120 qualifying monthly payments (10 years), the remaining federal loan balance is forgiven tax-free. This is one of the most valuable benefits of federal student loans for eligible borrowers.
+
+## Strategies to Reduce Total Interest Paid
+
+- **Make extra payments** — Even $50–$100 extra per month can shave years off repayment
+- **Pay bi-weekly** — Results in one extra full payment per year
+- **Refinance private loans** — If your credit score has improved significantly, refinancing can lower your rate
+- **Avoid capitalizing interest** — Unpaid interest that gets added to principal increases the effective loan balance
+
+You can use the [Debt Payoff Calculator](/apps/debt-payoff-calculator) to model accelerated repayment scenarios.
+
+## Related Tools
+
+- [Debt Payoff Calculator](/apps/debt-payoff-calculator)
+- [Loan Repayment Calculator](/apps/loan-repayment-calculator)
+- [Compound Interest Calculator](/apps/compound-interest-calculator)
+- [401(k) Calculator](/apps/401k-calculator)
+- [Roth IRA Calculator](/apps/roth-ira-calculator)
+
+## Sources
+
+- [Federal Student Aid (StudentAid.gov) – Interest Rates & Fees](https://studentaid.gov/understand-aid/types/loans/interest-rates)
+- [Consumer Financial Protection Bureau – Repayment Plans](https://www.consumerfinance.gov/paying-for-college/repay-student-debt/)
+
+<FAQ items={[
+  {
+    q: "What is the difference between subsidized and unsubsidized federal loans?",
+    a: "With subsidized loans, the government pays the interest while you're enrolled at least half-time, during the grace period, and during deferment. With unsubsidized loans, interest accrues from the day the loan is disbursed. If you don't pay the interest as it accrues, it capitalizes (gets added to your principal), increasing your total debt."
+  },
+  {
+    q: "Should I pay off student loans early or invest instead?",
+    a: "It depends on your interest rate. If your student loan rate is below ~6–7%, many financial advisors suggest investing in a 401(k) (especially to get employer match) before aggressively paying off loans. If your rate is above 7%, paying off the debt often provides a better guaranteed return than average market investments. Always prioritize capturing any employer 401(k) match first."
+  },
+  {
+    q: "Can I deduct student loan interest on my taxes?",
+    a: "Yes. The IRS allows a deduction of up to $2,500 in student loan interest per year, subject to income limits. For 2024, the deduction phases out for single filers with MAGI between $75,000 and $90,000, and for married filing jointly between $155,000 and $185,000. This reduces your taxable income, not just your tax bill."
+  },
+  {
+    q: "What happens if I can't make my student loan payments?",
+    a: "For federal loans, you have several options: apply for an income-driven repayment plan, request deferment (if unemployed, enrolled in school, or facing economic hardship), or request forbearance. For private loans, contact your lender directly — options are more limited. Defaulting on federal loans has severe consequences including wage garnishment, tax refund seizure, and damage to your credit score."
+  }
+]} />
