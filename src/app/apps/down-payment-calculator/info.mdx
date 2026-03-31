@@ -1,0 +1,135 @@
+import FAQ from "@/components/FAQ"
+
+## How the Down Payment Calculator Works
+
+The down payment calculator helps you plan for a home purchase by showing exactly how much you need to save for a down payment, how much more saving is required, and how many months it will take to reach your goal at your current savings rate. It also displays the resulting loan amount so you can understand the full financial picture before speaking with a lender. Whether you are a first-time buyer saving from scratch or looking to upgrade, this tool provides a clear timeline for your savings journey.
+
+### Down Payment Formula
+
+The calculations are straightforward:
+
+> **Down Payment Amount = Home Price × (Down Payment Percentage ÷ 100)**
+
+> **Remaining to Save = Down Payment Amount − Current Savings**
+
+> **Months to Goal = Remaining to Save ÷ Monthly Savings**
+
+> **Loan Amount = Home Price − Down Payment Amount**
+
+### Worked Example
+
+Suppose you want to buy a $350,000 home with a 20% down payment. You currently have $30,000 saved and can set aside $1,500 per month:
+
+- **Down payment needed:** $350,000 × 20% = **$70,000**
+- **Remaining to save:** $70,000 − $30,000 = **$40,000**
+- **Months to goal:** $40,000 ÷ $1,500 = **27 months** (about 2 years 3 months)
+- **Loan amount:** $350,000 − $70,000 = **$280,000**
+
+This gives you a clear savings target and timeline. If 27 months feels too long, you can adjust your strategy — consider a lower down payment percentage, increase monthly savings, or explore homes in a lower price range.
+
+## Understanding Down Payments
+
+A down payment is the upfront cash you pay toward the purchase price of a home. The remainder is financed through a mortgage. The size of your down payment has significant implications for your monthly payment, interest rate, mortgage insurance, and overall borrowing costs.
+
+### The 20% Rule
+
+The traditional recommendation is to put 20% down on a home. There are several advantages to meeting this threshold:
+
+- **No private mortgage insurance (PMI)** — saving $100–$300+ per month
+- **Lower monthly mortgage payments** — borrowing less means smaller installments
+- **Better interest rates** — lenders view larger down payments as lower risk
+- **Instant equity** — you own 20% of the home from day one
+- **Stronger offer** — sellers often favor buyers with larger down payments
+
+However, 20% is not always necessary or even advisable. Many buyers successfully purchase homes with much less down.
+
+### PMI: The Cost of Low Down Payments
+
+If you put less than 20% down on a conventional loan, lenders require private mortgage insurance to protect themselves against default. PMI costs typically range from 0.5% to 1.5% of the original loan amount per year:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Down Payment</th>
+      <th>Loan Amount ($350k home)</th>
+      <th>Est. Annual PMI</th>
+      <th>Est. Monthly PMI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>3%</td><td>$339,500</td><td>$2,547–$5,093</td><td>$212–$424</td></tr>
+    <tr><td>5%</td><td>$332,500</td><td>$2,494–$4,988</td><td>$208–$416</td></tr>
+    <tr><td>10%</td><td>$315,000</td><td>$2,363–$4,725</td><td>$197–$394</td></tr>
+    <tr><td>15%</td><td>$297,500</td><td>$2,231–$4,463</td><td>$186–$372</td></tr>
+    <tr><td>20%</td><td>$280,000</td><td>$0</td><td>$0</td></tr>
+  </tbody>
+</table>
+
+PMI is automatically removed from conventional loans once you reach 22% equity (based on the original value) or upon request at 20% equity.
+
+### Low Down Payment Options
+
+Several programs exist for buyers who cannot reach the 20% threshold:
+
+**Conventional loans (3–5% down):** Fannie Mae and Freddie Mac back conventional loans with as little as 3% down for first-time buyers or 5% for repeat buyers. Private mortgage insurance is required until 20% equity is reached.
+
+**FHA loans (3.5% down):** Backed by the Federal Housing Administration, these loans accept credit scores as low as 580 with 3.5% down (or 500 with 10% down). FHA loans carry both an upfront mortgage insurance premium (1.75% of the loan) and an annual premium (0.55%–1.05%) for the life of the loan in most cases.
+
+**VA loans (0% down):** Available to eligible veterans, active-duty service members, and certain surviving spouses. VA loans require no down payment and no mortgage insurance, making them one of the most powerful homebuying benefits available.
+
+**USDA loans (0% down):** For eligible rural and suburban homebuyers with income below area limits. No down payment required, but a guarantee fee applies.
+
+### Conventional vs. FHA: A Quick Comparison
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Feature</th>
+      <th>Conventional</th>
+      <th>FHA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Minimum down payment</td><td>3%</td><td>3.5%</td></tr>
+    <tr><td>Minimum credit score</td><td>620</td><td>580 (3.5% down)</td></tr>
+    <tr><td>Mortgage insurance</td><td>PMI until 20% equity</td><td>MIP for life of loan*</td></tr>
+    <tr><td>Upfront fee</td><td>None</td><td>1.75% of loan</td></tr>
+    <tr><td>Property requirements</td><td>Standard appraisal</td><td>Stricter standards</td></tr>
+  </tbody>
+</table>
+
+*FHA MIP can be removed only by refinancing into a conventional loan after reaching 20% equity.
+
+### First-Time Buyer Programs
+
+Many states and municipalities offer down payment assistance programs for first-time buyers, including:
+
+- **Grants** — free money that does not need to be repaid
+- **Forgivable second mortgages** — loans forgiven after living in the home for a set period
+- **Matched savings programs** — government or nonprofit matches your savings 2:1 or 3:1
+- **Tax credits** — mortgage credit certificates that reduce federal tax liability
+
+Check your state's housing finance agency for programs available in your area.
+
+<FAQ items={[
+  { q: "How much do I need for a down payment?", a: "It depends on the loan type. Conventional loans require as little as 3%, FHA loans 3.5%, and VA/USDA loans 0%. A 20% down payment avoids mortgage insurance and lowers monthly payments, but is not strictly required." },
+  { q: "Is it better to save 20% or buy sooner with less down?", a: "It depends on your market and finances. In fast-appreciating markets, buying sooner with less down can build equity through price growth. In stable markets, saving 20% avoids PMI and reduces total borrowing costs. Run the numbers both ways." },
+  { q: "Can I use a gift for my down payment?", a: "Yes. Most loan programs allow gifts from family members for part or all of the down payment. You will need a gift letter confirming the funds are not a loan. FHA, VA, and USDA loans all allow gift funds." },
+  { q: "What other costs do I need besides the down payment?", a: "Closing costs typically add 2–5% of the purchase price. These include lender fees, appraisal, title insurance, escrow deposits, and prepaid taxes and insurance. Budget for both down payment and closing costs." },
+  { q: "Does the calculator account for investment returns on savings?", a: "This calculator assumes a simple monthly savings rate without investment returns. Keeping your down payment fund in a high-yield savings account can accelerate your timeline by 10–15% depending on rates." },
+]} />
+
+### Related Tools
+
+- [Mortgage Calculator](/apps/mortgage-calculator) — Calculate monthly mortgage payments and total cost
+- [Savings Goal Calculator](/apps/savings-goal-calculator) — Plan a savings timeline for any financial goal
+- [Loan Repayment Calculator](/apps/loan-repayment-calculator) — Calculate loan payments and total interest
+- [Price Per Square Foot Calculator](/apps/price-per-square-foot-calculator) — Compare home values by area
+- [Compound Interest Calculator](/apps/compound-interest-calculator) — See how savings grow over time
+
+### Sources
+
+- Consumer Financial Protection Bureau: [How Much Down Payment Do You Need?](https://www.consumerfinance.gov/owning-a-home/loan-options/)
+- HUD: [FHA Loan Requirements](https://www.hud.gov/buying/loans)
+- VA: [VA Home Loan Benefits](https://www.va.gov/housing-assistance/home-loans/)
+- Freddie Mac: [Down Payment Resource](https://myhome.freddiemac.com/buying/down-payment-resource)

@@ -1,0 +1,105 @@
+import FAQ from "@/components/FAQ"
+
+## Unit Price Calculator — Find the Best Deal by Comparing Price Per Unit
+
+The unit price calculator helps you compare two products side by side to determine which one offers better value for your money. Simply enter the price and quantity of each product, and the calculator instantly reveals the price per ounce (or per unit), the savings per unit, and which product is the better deal. This is the same math grocery stores use on shelf tags — but now you can do it for any two products, anywhere.
+
+### Why Does Unit Price Matter?
+
+Larger packages are not always cheaper per unit. Marketing tactics like "family size," "bonus pack," and "value size" can be misleading. The only reliable way to compare value between different product sizes is by calculating the **unit price** — the cost per standard unit of measurement (per ounce, per pound, per count, etc.).
+
+### How Is Unit Price Calculated?
+
+> **Unit price = Total price ÷ Quantity**
+
+For example:
+- Product A: $5.99 for 16 oz → $5.99 ÷ 16 = **$0.3744/oz**
+- Product B: $8.49 for 32 oz → $8.49 ÷ 32 = **$0.2653/oz**
+
+Product B costs less per ounce, saving you **$0.1091 per ounce** — even though its total price is higher. Over multiple purchases, these savings add up significantly.
+
+### Common Misleading Packaging Sizes
+
+Manufacturers frequently use packaging tricks that make comparisons difficult:
+
+- **Shrinkflation** — Same package appearance but less product inside (e.g., ice cream shrinking from 64 oz to 48 oz at the same price)
+- **Odd quantities** — Products sold in unusual sizes like 11.5 oz or 13.7 oz to prevent easy mental math
+- **Multi-packs** — A 3-pack at $8.97 seems like a deal, but single units at $2.79 are actually cheaper
+- **"Bonus" packs** — 25% more free sounds great, but the base price may have been raised
+
+Always calculate unit price to cut through these tactics.
+
+### Unit Conversion Reference Table
+
+When products use different units, convert them to a common unit before comparing:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>From</th>
+      <th>To</th>
+      <th>Multiply by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1 pound (lb)</td><td>Ounces (oz)</td><td>16</td></tr>
+    <tr><td>1 kilogram (kg)</td><td>Ounces (oz)</td><td>35.274</td></tr>
+    <tr><td>1 liter (L)</td><td>Fluid ounces (fl oz)</td><td>33.814</td></tr>
+    <tr><td>1 gallon</td><td>Fluid ounces (fl oz)</td><td>128</td></tr>
+    <tr><td>1 quart</td><td>Fluid ounces (fl oz)</td><td>32</td></tr>
+    <tr><td>1 pint</td><td>Fluid ounces (fl oz)</td><td>16</td></tr>
+    <tr><td>1 cup</td><td>Fluid ounces (fl oz)</td><td>8</td></tr>
+    <tr><td>1 milliliter (ml)</td><td>Fluid ounces (fl oz)</td><td>0.03381</td></tr>
+  </tbody>
+</table>
+
+### How Stores Display Unit Prices
+
+In many U.S. states, grocery stores are required by law to display unit prices on shelf tags. However, the format varies:
+
+- Some stores show price per ounce, others per pound
+- Different products in the same category may use different units on the shelf tag
+- Sale tags sometimes omit unit pricing entirely
+- Online grocery stores may not display unit prices at all
+
+This calculator eliminates that confusion by letting you compare any two products using the same unit.
+
+### Smart Shopping Tips
+
+- **Always check unit price** — not just the sticker price or "sale" price
+- **Store brands vs. name brands** — Store brands often have 20–40% lower unit prices with comparable quality
+- **Buy in bulk wisely** — Only buy bulk if you will use the product before it expires
+- **Compare across stores** — The same product can have dramatically different unit prices at different retailers
+- **Watch for sales** — A name-brand item on sale may beat the store brand's everyday unit price
+- **Consider waste** — A cheaper bulk item is no deal if half of it expires before you use it
+
+### Real-World Example: Laundry Detergent
+
+- Brand A: 50 oz bottle for $9.99 → $0.200/oz
+- Brand B: 100 oz bottle for $15.99 → $0.160/oz
+- Brand C: 150 oz bottle for $26.99 → $0.180/oz
+
+The 100 oz bottle (Brand B) has the lowest unit price — not the largest size. The 150 oz bottle is actually more expensive per ounce than the medium size, proving that bigger is not always better.
+
+<FAQ items={[
+  { q: "What is unit price?", a: "Unit price is the cost per standard unit of measurement (such as per ounce, per pound, or per count). It allows you to compare the true value of products regardless of their package size. Lower unit price means better value." },
+  { q: "Is the bigger size always a better deal?", a: "No. While bulk sizes are often cheaper per unit, this is not always the case. Manufacturers sometimes charge a premium for larger sizes. Always calculate the unit price to verify which size offers the best value." },
+  { q: "How do I compare products sold in different units?", a: "Convert both products to the same unit before comparing. For example, if one product is priced per ounce and another per pound, convert the pound price to ounces (1 lb = 16 oz) and then compare the per-ounce prices." },
+  { q: "Do grocery stores have to show unit prices?", a: "Requirements vary by state and country. Many U.S. states require unit pricing on shelf tags, but the format and units used may differ between stores and product categories. This calculator gives you a consistent comparison." },
+  { q: "How much can I save by comparing unit prices?", a: "Savings vary, but regularly comparing unit prices can save the average household 10–20% on groceries. On a $600/month grocery budget, that could mean $60–$120 in monthly savings, or $720–$1,440 per year." },
+]} />
+
+### Related Tools
+
+- [Discount Calculator](/apps/discount-calculator) — Calculate discounted prices and savings on sale items
+- [Percentage Calculator](/apps/percentage-calculator) — Quickly calculate percentages for price comparisons
+- [Tip Calculator](/apps/tip-calculator) — Calculate tips and split bills at restaurants
+- [Portion Calculator](/apps/portion-calculator) — Scale recipe ingredients to your desired number of servings
+- [Sales Tax Calculator](/apps/sales-tax-calculator) — Calculate sales tax amount and total price with tax
+
+### Sources
+
+- USDA: [Food Prices and Spending](https://www.ers.usda.gov/topics/food-markets-prices/)
+- Consumer Reports: [How to Save on Groceries](https://www.consumerreports.org/cro/money/shopping/grocery-shopping/)
+- National Conference of State Legislatures: [Unit Pricing Laws](https://www.ncsl.org/financial-services/unit-pricing)
+- Bureau of Labor Statistics: [Consumer Price Index — Food](https://www.bls.gov/cpi/factsheets/common-misconceptions-about-cpi.htm)

@@ -1,0 +1,93 @@
+import FAQ from "@/components/FAQ"
+
+## How Rock Paper Scissors Works
+
+Our free online Rock Paper Scissors game lets you play against the computer with a single click. Choose your move — 🪨 Rock, 📄 Paper, or ✂️ Scissors — and the computer randomly selects its own. The classic rules apply: Rock crushes Scissors, Scissors cuts Paper, Paper covers Rock. If both players choose the same option, it is a draw. The game tracks your wins, losses, draws, and overall win rate so you can monitor your performance over multiple rounds.
+
+## The History of Rock Paper Scissors
+
+Rock Paper Scissors (RPS) has ancient origins. The earliest known version is the Chinese game **shoushiling** (手勢令), which dates back to the Han Dynasty (206 BC – 220 AD). The game later spread to Japan where it evolved into **jan-ken** (じゃんけん), which closely resembles the modern version. Japanese immigrants brought the game to the West in the early 20th century.
+
+The game became widely popular in Western culture throughout the 20th century and is now used worldwide as a quick, fair decision-making tool. The World Rock Paper Scissors Society was established in 1918 in London, and international RPS tournaments attract thousands of competitors annually. The game has been formalised enough to be studied by mathematicians, economists, and psychologists.
+
+## Game Theory and Strategy
+
+From a game theory perspective, Rock Paper Scissors is a **zero-sum game** with a clear **Nash equilibrium**: each player should choose Rock, Paper, and Scissors with equal probability (1/3 each). This mixed strategy ensures that no opponent can gain an advantage, regardless of their strategy.
+
+However, humans are notoriously bad at being random. Research from Zhejiang University in China (published in 2014) revealed several psychological patterns in human RPS play:
+
+- **Win-stay strategy** — Winners tend to repeat their winning move.
+- **Lose-shift strategy** — Losers tend to switch to the move that would have beaten their losing move.
+- **Rock bias** — Inexperienced players throw Rock more often, especially on the first throw. This is sometimes called "Rock is for rookies."
+
+Against a truly random computer opponent (like this tool), no strategy can give you an edge — each round is an independent event with a 1/3 chance of winning, losing, or drawing.
+
+## The Mathematics of RPS
+
+The probability structure of Rock Paper Scissors is straightforward:
+
+| Your Move   | Computer: Rock | Computer: Paper | Computer: Scissors |
+|------------|---------------|----------------|-------------------|
+| Rock       | Draw          | Lose           | Win               |
+| Paper      | Win           | Draw           | Lose              |
+| Scissors   | Lose          | Win            | Draw              |
+
+Each cell has a probability of 1/9 (since each player independently chooses from 3 options). This gives:
+
+- **P(Win)** = 3/9 = 1/3 ≈ 33.3%
+- **P(Lose)** = 3/9 = 1/3 ≈ 33.3%
+- **P(Draw)** = 3/9 = 1/3 ≈ 33.3%
+
+Over many games, you should expect to win, lose, and draw approximately equally often against a random opponent.
+
+## RPS Tournaments and Competitive Play
+
+Competitive Rock Paper Scissors is a real phenomenon. The **World RPS Championship** ran for many years in Toronto, Canada, attracting hundreds of competitors and offering cash prizes. The **USA Rock Paper Scissors League** (USARPS) held events across the United States with a $50,000 grand prize.
+
+Tournament players study opponent tendencies, use deliberate patterns and counter-patterns, and employ psychological tactics like verbal misdirection and body language manipulation. At the highest levels, RPS becomes a game of reading people rather than pure chance.
+
+## Variations: Rock Paper Scissors Lizard Spock
+
+Created by Sam Kass and popularised by the TV show *The Big Bang Theory*, **Rock Paper Scissors Lizard Spock (RPSLS)** adds two additional moves to reduce the probability of draws:
+
+- Scissors cuts Paper
+- Paper covers Rock
+- Rock crushes Lizard
+- Lizard poisons Spock
+- Spock smashes Scissors
+- Scissors decapitates Lizard
+- Lizard eats Paper
+- Paper disproves Spock
+- Spock vaporises Rock
+- Rock crushes Scissors
+
+With five options, the probability of a draw drops from 33.3% to 20%, making games resolve more quickly.
+
+## RPS in Culture and Decision Making
+
+Rock Paper Scissors transcends mere entertainment. It has been used to settle legal disputes, business negotiations, and even art auctions. In 2005, the president of Maspro Denkoh Corporation in Japan used RPS to decide which auction house — Christie's or Sotheby's — would sell the company's art collection worth millions. Christie's won by playing Scissors against Sotheby's Paper.
+
+The game serves as an excellent teaching tool for probability, game theory, and human psychology in academic settings. Its elegant simplicity — three choices, three outcomes, perfect symmetry — makes it a cornerstone example in introductory statistics and economics courses worldwide.
+
+<FAQ items={[
+  { q: "Is the computer's choice truly random?", a: "Yes. The computer uses Math.random() to select Rock, Paper, or Scissors with equal probability (1/3 each). It does not analyse your previous moves or use any strategy — every round is completely independent." },
+  { q: "Is there a strategy to beat the computer?", a: "No. Against a truly random opponent, no strategy can improve your odds beyond 33.3%. Every move has an equal chance of winning, losing, or drawing. Strategies only work against human opponents who exhibit patterns." },
+  { q: "What are the odds of winning 5 games in a row?", a: "The probability of winning any single game is 1/3. To win 5 in a row, the probability is (1/3)^5 = 1/243, or about 0.41%. It is unlikely but certainly possible." },
+  { q: "Why do humans tend to throw Rock first?", a: "Psychological research suggests Rock feels 'strong' and is the most instinctive choice. This tendency is well-documented and is sometimes exploited in competitive RPS by experienced players who will choose Paper as their opening move." },
+  { q: "Where was Rock Paper Scissors invented?", a: "The game originated in China during the Han Dynasty (around 200 BC) as 'shoushiling.' It later spread to Japan where it became 'jan-ken,' and eventually reached the Western world through Japanese cultural exchange in the early 1900s." },
+]} />
+
+### Related Tools
+
+- [Coin Flip](/apps/coin-flip) — Flip a virtual coin for quick decisions
+- [Dice Generator](/apps/dice-generator) — Roll virtual dice for games
+- [Random Number Generator](/apps/random-number-generator) — Generate random numbers in any range
+- [Raffle Machine](/apps/raffle-machine) — Draw a random winner from a list
+- [Lottery Number Generator](/apps/lottery-number-generator) — Generate random lottery numbers
+
+### Sources
+
+- Zhejiang University (2014) — Social cycling and conditional responses in RPS: [Nature Scientific Reports](https://www.nature.com/articles/srep05830)
+- World RPS Society — History and Rules: [wrpsa.com](https://www.wrpsa.com/)
+- Stanford Encyclopedia of Philosophy — Game Theory: [plato.stanford.edu](https://plato.stanford.edu/entries/game-theory/)
+- Encyclopaedia Britannica — Rock Paper Scissors: [britannica.com](https://www.britannica.com/topic/rock-paper-scissors)

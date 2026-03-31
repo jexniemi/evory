@@ -1,0 +1,95 @@
+import FAQ from "@/components/FAQ"
+
+## How the Password Generator Works
+
+Our free online password generator creates cryptographically secure random passwords using the Web Crypto API built into your browser. Every password is generated entirely on your device — nothing is ever sent to a server. Simply choose your desired length (8–64 characters), toggle the character sets you want (uppercase, lowercase, numbers, symbols), and click **Generate Password**. The tool instantly produces a strong, unpredictable password and shows you its entropy rating so you know exactly how secure it is.
+
+## Why Strong Passwords Matter
+
+Weak passwords remain the number-one cause of data breaches. According to Verizon's Data Breach Investigations Report, over 80 % of hacking-related breaches involve stolen or weak credentials. Cybercriminals use automated brute-force attacks, dictionary attacks, and credential-stuffing tools that can test billions of combinations per second. A short, predictable password like "password123" or "qwerty" can be cracked in under one second.
+
+A truly random password with sufficient length and character diversity is your first line of defence. The longer and more complex the password, the more combinations an attacker must try — making brute-force attacks computationally infeasible.
+
+## Understanding Password Entropy
+
+Password entropy is a measure of unpredictability, expressed in bits. The formula is:
+
+**Entropy = L × log₂(R)**
+
+where **L** is the password length and **R** is the size of the character pool. For example, a 16-character password using uppercase, lowercase, digits, and 27 symbols has a pool of 89 characters:
+
+**Entropy = 16 × log₂(89) ≈ 103 bits**
+
+Security experts generally recommend at least 80 bits of entropy for important accounts and 128+ bits for critical systems.
+
+## Common Password Mistakes
+
+Avoid these pitfalls that weaken your security:
+
+- **Reusing passwords** across multiple sites — one breach exposes them all.
+- **Using personal information** like birthdays, pet names, or addresses.
+- **Simple substitutions** like "p@ssw0rd" — attackers know these tricks.
+- **Short passwords** under 12 characters, regardless of complexity.
+- **Dictionary words** or common phrases, even with numbers appended.
+- **Sharing passwords** via email or messaging apps in plain text.
+
+## NIST Password Guidelines
+
+The National Institute of Standards and Technology (NIST) updated its Digital Identity Guidelines (SP 800-63B) with modern recommendations:
+
+- Passwords should be at least **8 characters minimum**, with 15+ strongly recommended.
+- Allow passwords up to **64 characters or more**.
+- Do **not** require periodic password changes unless a breach is suspected.
+- Do **not** impose arbitrary composition rules (e.g., must contain one symbol).
+- Screen passwords against lists of **commonly compromised passwords**.
+- Support **password managers** and paste functionality in password fields.
+- Enable **multi-factor authentication** wherever possible.
+
+## Password Length vs. Time to Crack
+
+The table below shows approximate brute-force cracking times assuming 100 billion guesses per second (a high-end modern GPU cluster) with a full 95-character ASCII set:
+
+| Length | Possible Combinations | Estimated Time to Crack |
+|--------|----------------------|------------------------|
+| 8      | 6.6 × 10¹⁵         | ~1 minute              |
+| 10     | 5.9 × 10¹⁹         | ~7 days                |
+| 12     | 5.4 × 10²³         | ~170 years             |
+| 14     | 4.9 × 10²⁷         | ~1.5 billion years     |
+| 16     | 4.4 × 10³¹         | ~14 trillion years     |
+| 20     | 3.6 × 10³⁹         | Practically impossible |
+
+As the table shows, every additional character multiplies the difficulty exponentially. A 12-character password is orders of magnitude stronger than an 8-character one.
+
+## Password Manager Recommendations
+
+No one can memorise dozens of unique, random, 16+ character passwords. That is why security experts universally recommend using a **password manager**. These tools store all your passwords in an encrypted vault protected by a single master password. Popular, reputable options include:
+
+- **Bitwarden** — open-source, free tier available, cross-platform
+- **1Password** — excellent user experience, family and team plans
+- **KeePassXC** — fully offline, open-source, local database
+- **Dashlane** — built-in VPN and dark-web monitoring
+
+Use your password manager to generate and autofill unique passwords for every account. Combined with two-factor authentication, this approach provides robust protection against most attack vectors.
+
+<FAQ items={[
+  { q: "Is this password generator safe to use?", a: "Yes. The password is generated entirely in your browser using the Web Crypto API. No passwords are transmitted to or stored on any server. You can even use this tool offline." },
+  { q: "How long should my password be?", a: "Security experts recommend at least 12–16 characters for standard accounts and 20+ characters for high-security accounts such as banking, email, or cryptocurrency wallets. Longer passwords are exponentially harder to crack." },
+  { q: "What is password entropy?", a: "Entropy measures how unpredictable a password is, expressed in bits. Higher entropy means more possible combinations an attacker must try. A password with 80+ bits of entropy is considered strong; 128+ bits is excellent." },
+  { q: "Should I use symbols and numbers in my password?", a: "Including a variety of character types (uppercase, lowercase, numbers, and symbols) increases the character pool and thus the entropy. However, length is generally more important than complexity — a 20-character lowercase password is stronger than an 8-character password with all character types." },
+  { q: "How often should I change my passwords?", a: "NIST no longer recommends routine password rotation. Change your password immediately if you suspect a breach, but otherwise a strong, unique password managed by a password manager can remain in use indefinitely." },
+]} />
+
+### Related Tools
+
+- [QR Generator](/apps/qr-generator) — Generate QR codes from text or URLs
+- [Word Counter](/apps/word-counter) — Count words in any text
+- [Character Counter](/apps/character-counter) — Count characters, words, and sentences
+- [Random Number Generator](/apps/random-number-generator) — Generate random numbers in a range
+- [JSON Formatter](/apps/json-formatter) — Format and validate JSON data
+
+### Sources
+
+- NIST Special Publication 800-63B — Digital Identity Guidelines: [NIST.gov](https://pages.nist.gov/800-63-3/sp800-63b.html)
+- Verizon 2023 Data Breach Investigations Report: [Verizon DBIR](https://www.verizon.com/business/resources/reports/dbir/)
+- OWASP Password Storage Cheat Sheet: [OWASP.org](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
+- Electronic Frontier Foundation — Creating Strong Passwords: [EFF.org](https://ssd.eff.org/module/creating-strong-passwords)

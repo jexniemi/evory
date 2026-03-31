@@ -1,0 +1,104 @@
+import FAQ from "@/components/FAQ"
+
+## Paint Calculator — Estimate How Much Paint You Need for Any Room
+
+Planning a painting project starts with knowing exactly how much paint to buy. Too little and you make extra trips to the store; too much and you waste money on cans that sit in the garage for years. This paint calculator takes the guesswork out by computing your total wall area, subtracting doors and windows, and telling you exactly how many gallons you need — including a standard two-coat application.
+
+### How the Paint Calculator Works
+
+The calculator uses a straightforward formula to estimate paint needs:
+
+1. **Total wall area** = 2 × (length + width) × height
+2. **Subtract openings** — each standard door (3 ft × 7 ft = 21 sq ft) and each standard window (3 ft × 5 ft = 15 sq ft) are removed from the total
+3. **Paintable area** = total wall area − door area − window area
+4. **Gallons needed** = paintable area ÷ 350 sq ft per gallon × 2 coats
+
+Most latex paints cover approximately **350 square feet per gallon** on smooth, primed surfaces. Rough or textured walls may require more paint — plan for 250–300 sq ft per gallon on textured surfaces.
+
+### Worked Example
+
+Consider a bedroom that is **15 ft long × 12 ft wide × 8 ft tall** with 2 doors and 3 windows:
+
+- Wall area: 2 × (15 + 12) × 8 = **432 sq ft**
+- Door area: 2 × 21 = 42 sq ft
+- Window area: 3 × 15 = 45 sq ft
+- Paintable area: 432 − 42 − 45 = **345 sq ft**
+- Gallons per coat: 345 ÷ 350 ≈ 0.99 gallons
+- For 2 coats: 0.99 × 2 ≈ **2.0 gallons**
+
+So you would need **2 gallons** of paint to give this room two solid coats of color.
+
+### Do You Need Primer?
+
+Primer is recommended in these situations:
+
+- **New drywall** — bare drywall soaks up paint unevenly without primer
+- **Dark-to-light color changes** — primer blocks the old color from bleeding through
+- **Stained walls** — smoke, water, or crayon stains need a stain-blocking primer
+- **Glossy surfaces** — primer helps new paint adhere to slick finishes
+
+Self-priming paints (paint + primer combos) work well for minor color changes over already-painted walls, but a dedicated primer is usually better for the cases above.
+
+### Types of Interior Paint
+
+| Paint Type | Finish | Best For | Durability |
+|---|---|---|---|
+| Flat / Matte | No sheen | Ceilings, low-traffic rooms | Low — hard to clean |
+| Eggshell | Slight sheen | Living rooms, bedrooms | Medium |
+| Satin | Soft sheen | Hallways, family rooms | Medium-high |
+| Semi-Gloss | Noticeable sheen | Kitchens, bathrooms, trim | High — easy to clean |
+| High-Gloss | Mirror-like | Cabinets, doors, accents | Very high |
+
+### Room Size and Paint Estimate Reference
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Room Size</th>
+      <th>Wall Area (approx.)</th>
+      <th>Gallons (2 coats)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>10 × 10 × 8 ft</td><td>320 sq ft</td><td>1.5 – 2</td></tr>
+    <tr><td>12 × 12 × 8 ft</td><td>384 sq ft</td><td>2</td></tr>
+    <tr><td>14 × 14 × 8 ft</td><td>448 sq ft</td><td>2 – 3</td></tr>
+    <tr><td>16 × 16 × 8 ft</td><td>512 sq ft</td><td>3</td></tr>
+    <tr><td>20 × 20 × 8 ft</td><td>640 sq ft</td><td>3 – 4</td></tr>
+    <tr><td>20 × 24 × 8 ft</td><td>704 sq ft</td><td>4</td></tr>
+  </tbody>
+</table>
+
+### Tips for an Accurate Estimate
+
+- **Measure twice** — small errors in room dimensions compound when you multiply by height and number of coats.
+- **Add 10% extra** for touch-ups, corners, and cutting in around trim.
+- **Textured walls** (knockdown, orange peel, popcorn) absorb more paint; increase your estimate by 15–20%.
+- **Ceiling paint** is calculated separately — simply multiply length × width for the ceiling area.
+- **Accent walls** — if only painting one wall, measure just that single wall's area.
+
+### When to Buy More Paint
+
+It is generally better to buy slightly more than the estimate suggests. Leftover paint is useful for touch-ups over the years, and most stores accept returns of unopened gallons. Running out of paint mid-project and buying a new batch risks a slight color mismatch between batches (called "lot variation").
+
+<FAQ items={[
+  { q: "How much does one gallon of paint cover?", a: "One gallon of interior latex paint covers approximately 350–400 square feet on smooth, primed surfaces. Rough or textured walls may reduce coverage to 250–300 square feet per gallon." },
+  { q: "How many coats of paint do I need?", a: "Two coats are standard for most painting projects. You may need three coats when covering a very dark color with a lighter one, or when using low-quality paint with less pigment." },
+  { q: "Should I use primer before painting?", a: "Use primer on new drywall, over dark colors, on stained surfaces, and on glossy finishes. For repainting a similar color on already-painted walls, a paint-and-primer combo is usually sufficient." },
+  { q: "How do I calculate paint for a ceiling?", a: "For a ceiling, simply multiply the room length by the room width to get the square footage. One gallon covers about 350 sq ft, so a 12×14 ft ceiling (168 sq ft) needs about 1 gallon for two coats." },
+  { q: "How much paint do I need for trim and baseboards?", a: "One quart of paint typically covers about 75–100 linear feet of standard trim. Measure the total linear footage of your baseboards, door frames, and window frames to estimate." },
+]} />
+
+### Related Tools
+
+- [Area Converter](/apps/area-converter) — Convert between square feet, square meters, acres, and more
+- [Length Converter](/apps/length-converter) — Convert between feet, meters, inches, and other length units
+- [Unit Price Calculator](/apps/unit-price-calculator) — Compare paint prices to find the best deal per gallon
+- [Square Footage Calculator](/apps/square-footage-calculator) — Calculate total square footage for floors and rooms
+- [Moving Cost Calculator](/apps/moving-cost-calculator) — Estimate the cost of moving to a new home
+
+### Sources
+
+- Behr: [How Much Paint Do I Need?](https://www.behr.com/consumer/tools/paint-calculator/)
+- Sherwin-Williams: [Paint Coverage Calculator](https://www.sherwin-williams.com/homeowners/ask-sherwin-williams/tools/paint-calculator)
+- This Old House: [How to Estimate Paint](https://www.thisoldhouse.com/painting/21015257/how-to-estimate-paint)

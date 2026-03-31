@@ -1,0 +1,93 @@
+import FAQ from "@/components/FAQ"
+
+## How the JSON Formatter Works
+
+This free online JSON formatter takes raw or minified JSON data and transforms it into a clean, readable, indented format. Simply paste your JSON into the input area, select your preferred indentation (2 or 4 spaces), and click **Format / Beautify**. The tool parses the JSON, validates its syntax, and outputs a beautifully formatted version. Need to compress JSON for production? Click **Minify** to remove all unnecessary whitespace.
+
+All processing happens entirely in your browser — your data never leaves your device.
+
+## What Is JSON?
+
+JSON (JavaScript Object Notation) is a lightweight, text-based data interchange format. Despite its name, JSON is language-independent and is used across virtually every modern programming language including Python, Java, C#, Go, Ruby, PHP, and of course JavaScript/TypeScript.
+
+JSON was derived from JavaScript object literal syntax but has become the de facto standard for web APIs, configuration files, data storage, and inter-system communication. It was formalised by Douglas Crockford in the early 2000s and is defined by two standards: RFC 8259 and ECMA-404.
+
+A valid JSON document consists of:
+
+- **Objects** — unordered collections of key-value pairs enclosed in curly braces `{}`
+- **Arrays** — ordered lists of values enclosed in square brackets `[]`
+- **Values** — strings (double-quoted), numbers, booleans (`true`/`false`), `null`, objects, or arrays
+- **Keys** — always double-quoted strings
+
+## When to Use JSON
+
+JSON is used extensively in software development:
+
+- **REST APIs** — The vast majority of web APIs send and receive data in JSON format. When you interact with services like GitHub, Stripe, OpenAI, or Google Maps, you are exchanging JSON.
+- **Configuration files** — Tools like `package.json` (Node.js), `tsconfig.json` (TypeScript), `.eslintrc.json`, and VS Code settings all use JSON.
+- **Databases** — NoSQL databases like MongoDB and CouchDB store documents as JSON (or the closely related BSON). PostgreSQL and MySQL also support JSON columns.
+- **Data transfer** — JSON is used for message queues, webhooks, server-sent events, and WebSocket communication.
+- **Local storage** — Browser localStorage and sessionStorage serialize data as JSON strings.
+
+## Common JSON Errors
+
+Even experienced developers make JSON syntax mistakes. Here are the most common errors this formatter catches:
+
+- **Trailing commas** — JSON does not allow commas after the last item in an object or array: `{"a": 1,}` is invalid.
+- **Single quotes** — JSON requires double quotes: `{'key': 'value'}` is invalid.
+- **Unquoted keys** — Unlike JavaScript objects, all JSON keys must be double-quoted: `{key: "value"}` is invalid.
+- **Comments** — Standard JSON does not support comments. Use JSONC or JSON5 if you need comments.
+- **Missing brackets** — Unclosed `{`, `}`, `[`, or `]` make the entire document invalid.
+- **Invalid escape sequences** — Only specific escape sequences like `\"`, `\\`, `\n`, `\t` are allowed.
+
+## JSON vs XML
+
+Before JSON became dominant, XML (eXtensible Markup Language) was the standard data interchange format. Here is how they compare:
+
+| Feature         | JSON                        | XML                          |
+|----------------|-----------------------------|------------------------------|
+| Readability    | Concise and easy to read    | Verbose with opening/closing tags |
+| File Size      | Smaller                     | Larger due to tag overhead   |
+| Parsing        | Native in JavaScript        | Requires XML parser          |
+| Data Types     | Strings, numbers, booleans, null, arrays, objects | Everything is text |
+| Comments       | Not supported (standard)    | Supported                    |
+| Schema         | JSON Schema                 | XSD, DTD                     |
+| Namespaces     | Not supported               | Supported                    |
+| Adoption       | Dominant for web APIs       | Still used in enterprise/SOAP |
+
+For most modern web development, JSON is the preferred choice due to its simplicity, smaller payload size, and native support in JavaScript.
+
+## JSON in Web Development
+
+In the modern web development stack, JSON is everywhere:
+
+- **Fetch API responses:** `const data = await response.json()`
+- **Express.js middleware:** `app.use(express.json())`
+- **Next.js API routes** return JSON by default
+- **GraphQL** responses are JSON
+- **Webpack, Vite, ESLint, Prettier** — all configured via JSON or JSON-like files
+
+Understanding JSON structure and being able to quickly format, validate, and debug JSON data is an essential developer skill.
+
+<FAQ items={[
+  { q: "Is this JSON formatter free to use?", a: "Yes, it is completely free with no limits. You can format, beautify, or minify as much JSON as you want. All processing happens in your browser — no data is sent to any server." },
+  { q: "Can this tool validate JSON?", a: "Yes. When you click Format or Minify, the tool parses your JSON and will display a clear error message if the syntax is invalid, including the specific error details from the parser." },
+  { q: "What is the difference between formatting and minifying?", a: "Formatting (beautifying) adds indentation and line breaks to make JSON human-readable. Minifying removes all unnecessary whitespace to create the smallest possible file size, which is ideal for production use and API payloads." },
+  { q: "Why does my JSON show an error about trailing commas?", a: "Standard JSON (RFC 8259) does not allow trailing commas after the last element in an array or object. Remove the comma before the closing bracket or brace. Some tools support trailing commas in JSONC format, but standard JSON parsers will reject them." },
+  { q: "Is my data safe when using this tool?", a: "Absolutely. All JSON processing happens locally in your browser using JavaScript's built-in JSON.parse() and JSON.stringify() functions. No data is ever sent to a server, making it safe for sensitive data." },
+]} />
+
+### Related Tools
+
+- [Character Counter](/apps/character-counter) — Count characters, words, and sentences
+- [Word Counter](/apps/word-counter) — Count words in any text
+- [Password Generator](/apps/password-generator) — Generate strong, secure passwords
+- [QR Generator](/apps/qr-generator) — Generate QR codes from text or URLs
+- [Percentage Calculator](/apps/percentage-calculator) — Calculate percentages easily
+
+### Sources
+
+- ECMA-404 — The JSON Data Interchange Standard: [ecma-international.org](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)
+- RFC 8259 — The JavaScript Object Notation (JSON) Data Interchange Format: [ietf.org](https://datatracker.ietf.org/doc/html/rfc8259)
+- MDN Web Docs — Working with JSON: [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
+- JSON.org — Introducing JSON: [json.org](https://www.json.org/json-en.html)

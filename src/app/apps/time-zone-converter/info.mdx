@@ -1,0 +1,84 @@
+import FAQ from "@/components/FAQ"
+
+## How to Convert Time Between Time Zones
+
+Time zone conversion is essential in our globally connected world. Whether you are scheduling a meeting with colleagues overseas, planning an international call, or tracking a live event happening in another country, knowing the exact time difference is critical. This converter lets you instantly translate a time from one time zone to another, supporting major US and international time zones.
+
+## Understanding Time Zones
+
+Time zones are regions of the globe that observe a uniform standard time. The system was formalized in the late 19th century as railroad and telegraph networks made coordinated time essential. The world is divided into 24 primary time zones, each roughly 15 degrees of longitude wide, offset from Coordinated Universal Time (UTC, formerly called Greenwich Mean Time or GMT).
+
+UTC serves as the global reference point. Time zones east of the Prime Meridian (which passes through Greenwich, London) are ahead of UTC (positive offsets), while zones to the west are behind UTC (negative offsets). For example, Eastern Standard Time (EST) is UTC−5, meaning it is five hours behind UTC.
+
+## US Time Zones
+
+The continental United States spans four main time zones:
+
+- **Eastern Standard Time (EST / UTC−5)**: New York, Washington D.C., Miami, Atlanta, Boston. The most populated US time zone.
+- **Central Standard Time (CST / UTC−6)**: Chicago, Houston, Dallas, Minneapolis, New Orleans. One hour behind Eastern.
+- **Mountain Standard Time (MST / UTC−7)**: Denver, Phoenix, Salt Lake City, Albuquerque. Note: Arizona does not observe daylight saving time (except the Navajo Nation).
+- **Pacific Standard Time (PST / UTC−8)**: Los Angeles, San Francisco, Seattle, Portland. Three hours behind Eastern.
+
+In addition, the US has two non-contiguous time zones:
+- **Alaska Standard Time (AKST / UTC−9)**: Used throughout most of Alaska.
+- **Hawaii-Aleutian Standard Time (HST / UTC−10)**: Used in Hawaii and the western Aleutian Islands. Hawaii does not observe daylight saving time.
+
+## Major World Time Zones
+
+| Time Zone | UTC Offset | Major Cities |
+|-----------|-----------|--------------|
+| HST | UTC−10 | Honolulu |
+| AKST | UTC−9 | Anchorage |
+| PST | UTC−8 | Los Angeles, Vancouver |
+| MST | UTC−7 | Denver, Phoenix |
+| CST | UTC−6 | Chicago, Mexico City |
+| EST | UTC−5 | New York, Toronto |
+| AST | UTC−4 | Halifax, San Juan |
+| GMT | UTC+0 | London, Lisbon, Accra |
+| CET | UTC+1 | Paris, Berlin, Rome |
+| EET | UTC+2 | Athens, Helsinki, Cairo |
+| MSK | UTC+3 | Moscow, Istanbul |
+| GST | UTC+4 | Dubai, Baku |
+| IST | UTC+5:30 | Mumbai, Delhi, Kolkata |
+| ICT | UTC+7 | Bangkok, Jakarta |
+| CST (China) | UTC+8 | Beijing, Shanghai, Singapore |
+| JST | UTC+9 | Tokyo, Seoul |
+| AEST | UTC+10 | Sydney, Melbourne |
+| NZST | UTC+12 | Auckland, Wellington |
+
+## Daylight Saving Time (DST)
+
+Daylight saving time complicates time zone conversions. In the US, clocks spring forward one hour on the second Sunday of March and fall back on the first Sunday of November. During DST, EST becomes EDT (UTC−4), CST becomes CDT (UTC−5), and so on. Not all regions observe DST — Arizona, Hawaii, and most US territories do not. Internationally, the European Union observes DST (called "summer time"), while most of Asia, Africa, and South America do not.
+
+When converting times during DST periods, make sure to use the correct offset. For example, during summer months, the difference between New York (EDT, UTC−4) and London (BST, UTC+1) is five hours, not the usual five hours during standard time. This converter uses standard time offsets, so adjust accordingly during DST periods.
+
+## The International Date Line
+
+The International Date Line (IDL) runs roughly along the 180° meridian in the Pacific Ocean. When you cross the IDL traveling westward, you skip ahead one calendar day; traveling eastward, you go back one day. This is why a flight from the US to Australia can appear to "arrive two days later" despite being only a 15-hour flight. The converter alerts you when a conversion crosses midnight with a "next day" or "previous day" indicator.
+
+## Tips for Scheduling Across Time Zones
+
+When scheduling international meetings, look for overlapping business hours. For US-Europe calls, mornings in the US (afternoons in Europe) work best. For US-Asia calls, early morning US time (evening Asia time) or late afternoon US time (morning Asia time the next day) are common options. Using a consistent reference time zone (such as UTC) in calendar invitations helps avoid confusion.
+
+<FAQ items={[
+  { q: "What is the difference between UTC and GMT?", a: "UTC (Coordinated Universal Time) and GMT (Greenwich Mean Time) are often used interchangeably, but they are technically different. UTC is the international time standard maintained by atomic clocks, while GMT is a time zone based on the mean solar time at Greenwich, London. For most practical purposes, they are the same (UTC+0)." },
+  { q: "How do I account for daylight saving time?", a: "This converter uses standard time offsets. During daylight saving time (typically March–November in the US), add one hour to the standard offset. For example, EST (UTC−5) becomes EDT (UTC−4) during summer. Check whether both the source and destination regions observe DST." },
+  { q: "Why do some time zones have half-hour offsets?", a: "Several countries adopted half-hour or even 45-minute offsets to better align their clocks with solar noon. India uses UTC+5:30, Nepal uses UTC+5:45, and parts of Australia use UTC+9:30. These offsets exist because the countries do not fall neatly into the 15-degree longitude bands." },
+  { q: "What time zone does China use?", a: "Despite spanning five geographical time zones, all of China uses a single time zone: China Standard Time (CST), which is UTC+8. This means that in western China, solar noon can occur as late as 3:00 PM local time." },
+  { q: "How many time zones are there in the world?", a: "There are 24 primary time zones based on hourly offsets from UTC, but in practice there are over 38 local time zones because some regions use half-hour or quarter-hour offsets. Additionally, daylight saving time creates seasonal variations in many regions." },
+]} />
+
+### Related Tools
+
+- [Date Calculator](/apps/date-calculator) — Calculate the difference between two dates
+- [Age Calculator](/apps/age-calculator) — Calculate exact age from a birthdate
+- [Work Hours Calculator](/apps/work-hours-calculator) — Calculate daily work hours and earnings
+- [Days Until Christmas](/apps/days-until-christmas) — Count down the days to Christmas
+- [Calendar Tool](/apps/calendar-tool) — Browse calendars and check days in months
+
+### Sources
+
+- National Institute of Standards and Technology: [Time and Frequency](https://www.nist.gov/topics/physics/time-and-frequency)
+- timeanddate.com: [World Time Zones](https://www.timeanddate.com/time/map/)
+- U.S. Department of Transportation: [Time Zone Boundaries](https://www.transportation.gov/regulations/time-zones)
+- International Telecommunication Union: [Coordinated Universal Time (UTC)](https://www.itu.int/en/ITU-R/space/Pages/UTC.aspx)

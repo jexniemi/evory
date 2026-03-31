@@ -1,0 +1,114 @@
+import FAQ from "@/components/FAQ"
+
+## Protein Intake Calculator — Find Your Daily Protein Target
+
+Protein is the most important macronutrient for building muscle, recovering from exercise, and maintaining overall health. But how much do you actually need? The answer depends on your body weight, activity level, and fitness goals. This protein intake calculator gives you a personalized daily target in grams, breaks it down per meal, and shows you how many calories your protein contributes to your daily intake.
+
+### How Daily Protein Needs Are Calculated
+
+The calculator uses a simple, evidence-based formula:
+
+> **Daily protein (grams) = Body weight (lbs) × Activity multiplier (g/lb)**
+
+The activity multiplier ranges from the USDA's recommended dietary allowance (RDA) for sedentary adults to the upper range used by competitive athletes:
+
+| Activity Level | Multiplier | Example (170 lbs) |
+|---|---|---|
+| Sedentary (minimal exercise) | 0.36 g/lb | 61 g/day |
+| Light activity (walking, light workouts) | 0.50 g/lb | 85 g/day |
+| Moderate (regular exercise 3–4×/week) | 0.70 g/lb | 119 g/day |
+| Active / Muscle gain (strength training 4–6×/week) | 0.90 g/lb | 153 g/day |
+| Athlete (intense daily training) | 1.00 g/lb | 170 g/day |
+
+Each gram of protein provides **4 calories**, so protein intake directly affects your caloric budget.
+
+### Worked Example
+
+A **170 lb person** who exercises moderately (0.7 g/lb):
+
+- Daily protein: 170 × 0.7 = **119 grams**
+- Protein per meal (3 meals): 119 ÷ 3 = **39.7 g per meal**
+- Protein per meal (4 meals): 119 ÷ 4 = **29.8 g per meal**
+- Calories from protein: 119 × 4 = **476 kcal**
+
+If this person eats 2,200 calories per day, protein accounts for about 22% of their total intake — right in the recommended range.
+
+### RDA vs. Optimal Protein Intake
+
+The USDA's Recommended Dietary Allowance (RDA) for protein is **0.36 grams per pound** (0.8 g/kg) of body weight. This is the **minimum** to prevent deficiency — not the optimal amount for most people. Research consistently shows that higher intakes benefit:
+
+- **Muscle building** — Studies recommend 0.7–1.0 g/lb for maximizing muscle protein synthesis
+- **Weight loss** — Higher protein (0.7–0.9 g/lb) preserves lean mass during calorie restriction
+- **Older adults** — People over 65 benefit from 0.5–0.7 g/lb to counteract age-related muscle loss (sarcopenia)
+- **Recovery from injury** — Increased protein supports tissue repair
+
+### Complete vs. Incomplete Proteins
+
+**Complete proteins** contain all nine essential amino acids in adequate amounts. Animal sources like meat, fish, eggs, and dairy are all complete proteins. **Soy, quinoa, and buckwheat** are among the few plant-based complete proteins.
+
+**Incomplete proteins** lack or have low levels of one or more essential amino acids. Most plant proteins (beans, rice, nuts, seeds) are incomplete individually, but combining different plant sources throughout the day easily provides all essential amino acids. For example, rice + beans together form a complete amino acid profile.
+
+### High-Protein Food Reference
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Food</th>
+      <th>Serving Size</th>
+      <th>Protein (g)</th>
+      <th>Calories</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Chicken breast (grilled)</td><td>6 oz (170 g)</td><td>54</td><td>280</td></tr>
+    <tr><td>Salmon (baked)</td><td>6 oz (170 g)</td><td>40</td><td>350</td></tr>
+    <tr><td>Lean ground beef (93%)</td><td>6 oz (170 g)</td><td>48</td><td>340</td></tr>
+    <tr><td>Eggs</td><td>3 large</td><td>18</td><td>210</td></tr>
+    <tr><td>Greek yogurt (nonfat)</td><td>1 cup (245 g)</td><td>20</td><td>130</td></tr>
+    <tr><td>Cottage cheese (low-fat)</td><td>1 cup (226 g)</td><td>28</td><td>180</td></tr>
+    <tr><td>Tofu (firm)</td><td>1/2 block (200 g)</td><td>20</td><td>180</td></tr>
+    <tr><td>Lentils (cooked)</td><td>1 cup (198 g)</td><td>18</td><td>230</td></tr>
+    <tr><td>Black beans (cooked)</td><td>1 cup (172 g)</td><td>15</td><td>230</td></tr>
+    <tr><td>Whey protein powder</td><td>1 scoop (30 g)</td><td>24</td><td>120</td></tr>
+    <tr><td>Peanut butter</td><td>2 tbsp (32 g)</td><td>8</td><td>190</td></tr>
+    <tr><td>Almonds</td><td>1 oz (28 g)</td><td>6</td><td>160</td></tr>
+  </tbody>
+</table>
+
+### Plant-Based vs. Animal Protein
+
+Both plant and animal proteins can support health and muscle building. Key differences:
+
+- **Digestibility** — Animal proteins are 90–99% digestible; plant proteins average 70–90%
+- **Leucine content** — Animal sources are richer in leucine, the amino acid most critical for triggering muscle protein synthesis
+- **Fiber and micronutrients** — Plant proteins come packaged with fiber, antioxidants, and phytochemicals
+- **Saturated fat** — Red meat and full-fat dairy contain more saturated fat than plant sources
+- **Environmental impact** — Plant proteins generally have a lower carbon footprint per gram of protein
+
+For plant-based eaters, consuming a **variety of protein sources** and aiming for the upper end of the recommended range (0.8–1.0 g/lb) can compensate for lower digestibility and leucine content.
+
+### Timing Your Protein Intake
+
+Research suggests distributing protein evenly across meals optimizes muscle protein synthesis. Aim for **25–40 grams per meal** rather than consuming most of your protein in a single sitting. A post-workout protein serving within 1–2 hours of exercise is beneficial, but total daily protein intake matters more than precise timing.
+
+<FAQ items={[
+  { q: "How much protein do I need per day?", a: "The USDA RDA is 0.36 g per pound of body weight, but most active people benefit from 0.5–1.0 g per pound. For a 170 lb person, that ranges from 61 g (sedentary) to 170 g (athlete) per day." },
+  { q: "Can you eat too much protein?", a: "For healthy adults, protein intakes up to 1.0 g per pound of body weight are safe and well-studied. Very high intakes (above 1.5 g/lb) offer no additional benefit and may stress the kidneys in people with pre-existing kidney disease." },
+  { q: "Is plant protein as good as animal protein?", a: "Plant proteins can fully support health and muscle building when consumed in adequate amounts and variety. Soy, quinoa, and combinations like rice + beans provide all essential amino acids. Plant-based eaters may benefit from slightly higher total protein targets." },
+  { q: "When should I eat protein for muscle building?", a: "Distribute protein evenly across 3–4 meals, aiming for 25–40 g per meal. Having protein within 1–2 hours after resistance training is beneficial, but total daily intake matters more than precise timing." },
+  { q: "How many calories does protein have?", a: "Protein contains 4 calories per gram. If you eat 120 grams of protein daily, that contributes 480 calories — typically about 20–30% of a standard diet." },
+]} />
+
+### Related Tools
+
+- [Macro Calculator](/apps/macro-calculator) — Calculate daily targets for protein, carbs, and fat based on your goals
+- [Daily Calorie Needs Calculator](/apps/daily-calorie-needs-calculator) — Find your total daily energy expenditure (TDEE)
+- [BMI Calculator](/apps/bmi-calculator) — Check your Body Mass Index from height and weight
+- [BMR Calculator](/apps/bmr-calculator) — Calculate your Basal Metabolic Rate
+- [Calorie Burn Calculator](/apps/calorie-burn-calculator) — Estimate calories burned during different exercises
+
+### Sources
+
+- Institute of Medicine: [Dietary Reference Intakes for Energy, Carbohydrate, Fiber, Fat, Fatty Acids, Cholesterol, Protein, and Amino Acids](https://nap.nationalacademies.org/catalog/10490)
+- International Society of Sports Nutrition: [Protein and Exercise Position Stand](https://jissn.biomedcentral.com/articles/10.1186/s12970-017-0177-8)
+- Harvard T.H. Chan School of Public Health: [The Nutrition Source — Protein](https://www.hsph.harvard.edu/nutritionsource/what-should-you-eat/protein/)

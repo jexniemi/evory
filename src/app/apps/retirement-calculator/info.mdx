@@ -1,0 +1,103 @@
+import FAQ from "@/components/FAQ"
+
+## Retirement Calculator — Project Your Savings and Monthly Income
+
+The retirement calculator helps you estimate how much money you will have when you retire and what monthly income you can expect. By entering your current age, retirement age, savings, monthly contributions, and expected investment return, you get a clear picture of your financial future. Planning early is the single most powerful way to build a comfortable retirement nest egg.
+
+### How Does the Retirement Calculation Work?
+
+The calculator uses the **future value formula with recurring contributions** to project your savings growth over time:
+
+> **FV = PV × (1 + r)^n + PMT × [((1 + r)^n − 1) / r]**
+
+Where:
+- **FV** = future value (total at retirement)
+- **PV** = present value (current savings)
+- **r** = monthly interest rate (annual return ÷ 12)
+- **n** = total months until retirement
+- **PMT** = monthly contribution
+
+The **4% rule** is then applied to estimate sustainable monthly income:
+
+> **Annual withdrawal = Total savings × 4%**
+>
+> **Monthly income = Annual withdrawal ÷ 12**
+
+### Worked Example
+
+A 30-year-old with **$50,000 saved**, contributing **$500/month**, earning **7% annual return**, retiring at **65**:
+
+- Years to retirement: 35 (420 months)
+- Monthly rate: 0.07 / 12 = 0.005833
+- Growth factor: (1.005833)^420 = 11.42
+- Future value: $50,000 × 11.42 + $500 × [(11.42 − 1) / 0.005833] = **$1,465,450**
+- Total contributions: $50,000 + $500 × 420 = $260,000
+- Investment growth: $1,465,450 − $260,000 = **$1,205,450**
+- Monthly income (4% rule): $1,465,450 × 0.04 / 12 = **$4,885/month**
+
+Over 82% of the final balance comes from compound growth — not from contributions. This demonstrates the extraordinary power of starting early.
+
+### Age-Based Retirement Savings Benchmarks
+
+Financial advisors generally recommend having the following multiples of your annual salary saved by each milestone age:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Age</th>
+      <th>Savings Target</th>
+      <th>Example ($75K salary)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>30</td><td>1× salary</td><td>$75,000</td></tr>
+    <tr><td>35</td><td>2× salary</td><td>$150,000</td></tr>
+    <tr><td>40</td><td>3× salary</td><td>$225,000</td></tr>
+    <tr><td>45</td><td>4× salary</td><td>$300,000</td></tr>
+    <tr><td>50</td><td>6× salary</td><td>$450,000</td></tr>
+    <tr><td>55</td><td>7× salary</td><td>$525,000</td></tr>
+    <tr><td>60</td><td>8× salary</td><td>$600,000</td></tr>
+    <tr><td>67</td><td>10× salary</td><td>$750,000</td></tr>
+  </tbody>
+</table>
+
+### The 4% Rule Explained
+
+The 4% rule comes from the **Trinity Study** (1998), which found that retirees who withdraw 4% of their portfolio in the first year of retirement — then adjust for inflation each subsequent year — have a high probability of their money lasting 30 years or more. While no rule guarantees success, the 4% withdrawal rate remains one of the most widely cited benchmarks in retirement planning.
+
+### Retirement Account Types
+
+**401(k)** — Employer-sponsored plan with pre-tax contributions and potential employer matching. The 2025 contribution limit is $23,500 (plus $7,500 catch-up for ages 50+). Withdrawals are taxed as ordinary income.
+
+**Traditional IRA** — Individual retirement account with potential tax deduction on contributions. The 2025 limit is $7,000 ($8,000 for 50+). Withdrawals are taxed as ordinary income.
+
+**Roth IRA** — Contributions are made with after-tax dollars, but withdrawals in retirement are completely tax-free. Same contribution limits as a Traditional IRA. Ideal for those who expect to be in a higher tax bracket in retirement.
+
+**Roth 401(k)** — Combines features of a 401(k) and Roth IRA: employer-sponsored with after-tax contributions and tax-free qualified withdrawals.
+
+### The Power of Starting Early
+
+Starting to invest just 5 years earlier can add hundreds of thousands of dollars to your retirement balance. A person who invests $500/month from age 25 at 7% return will have about **$1,900,000** by age 65. Waiting until age 30 yields roughly **$1,465,000** — a difference of over **$435,000** from just 5 years of delay, despite only $30,000 more in contributions.
+
+<FAQ items={[
+  { q: "How much do I need to retire comfortably?", a: "A common guideline is to save 10–12 times your pre-retirement annual income. If you earn $75,000, aim for $750,000–$900,000. However, your actual needs depend on lifestyle, healthcare costs, location, and Social Security benefits." },
+  { q: "What is the 4% rule?", a: "The 4% rule suggests withdrawing 4% of your retirement portfolio in the first year, then adjusting for inflation each year. Based on historical data, this approach has a high likelihood of making your savings last 30+ years." },
+  { q: "What annual return should I assume?", a: "A 7% average annual return is a commonly used estimate for a diversified stock portfolio after inflation. Conservative investors may use 5–6%, while aggressive investors might use 8–10%. Past performance does not guarantee future results." },
+  { q: "Should I contribute to a 401(k) or IRA first?", a: "Start by contributing enough to your 401(k) to capture the full employer match — that is an immediate 50–100% return. After that, consider maxing a Roth IRA for tax-free growth, then return to your 401(k) for additional contributions." },
+  { q: "How does compound growth work in retirement savings?", a: "Compound growth means you earn returns not only on your contributions but also on accumulated returns from previous years. Over decades, this snowball effect can multiply your contributions many times over, which is why starting early is so impactful." },
+]} />
+
+### Related Tools
+
+- [401(k) Calculator](/apps/401k-calculator) — Project 401(k) balance with employer match and compound growth
+- [Compound Interest Calculator](/apps/compound-interest-calculator) — See how compound interest grows your investments over time
+- [Social Security Calculator](/apps/social-security-calculator) — Estimate Social Security benefits based on claiming age
+- [Investment Return Calculator](/apps/investment-return-calculator) — Calculate ROI and total return on investments
+- [Savings Goal Calculator](/apps/savings-goal-calculator) — Plan how long it takes to save for a specific financial goal
+
+### Sources
+
+- Fidelity Investments: [How Much to Save for Retirement](https://www.fidelity.com/viewpoints/retirement/how-much-do-i-need-to-retire)
+- Investopedia: [The 4% Rule for Retirement](https://www.investopedia.com/terms/f/four-percent-rule.asp)
+- U.S. Department of Labor: [Savings Fitness Guide](https://www.dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/publications/savings-fitness.pdf)
+- IRS: [Retirement Plan Contribution Limits](https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-contributions)

@@ -1,0 +1,117 @@
+import FAQ from "@/components/FAQ"
+
+## Body Fat Calculator — Estimate Your Body Fat Percentage
+
+Body fat percentage is one of the most meaningful indicators of fitness and health — far more informative than weight alone. Two people can weigh the same but have vastly different body compositions. This calculator uses the **US Navy body fat formula** to estimate your body fat percentage from simple tape measurements, without expensive equipment or a trip to the lab.
+
+### The US Navy Body Fat Method
+
+The US Navy method was developed to assess the fitness of military personnel using only a tape measure. It relies on the relationship between body circumferences and height to estimate body fat:
+
+**Male formula:**
+> Body fat % = 86.010 × log₁₀(waist − neck) − 70.041 × log₁₀(height) + 36.76
+
+**Female formula (full version):**
+> Body fat % = 163.205 × log₁₀(waist + hip − neck) − 97.684 × log₁₀(height) − 78.387
+
+This calculator uses the male formula directly. For females, it uses an adjusted approximation without the hip measurement. For the most accurate female results, consider also measuring your hip circumference and using the full formula.
+
+### Worked Example (Male)
+
+A **180 lb male**, height **70 inches**, waist **34 inches**, neck **15 inches**:
+
+- waist − neck = 34 − 15 = 19
+- log₁₀(19) = 1.2788
+- log₁₀(70) = 1.8451
+- Body fat % = 86.010 × 1.2788 − 70.041 × 1.8451 + 36.76
+- Body fat % = 110.0 − 129.2 + 36.76 = **17.5%**
+- Fat mass = 0.175 × 180 = **31.5 lbs**
+- Lean mass = 180 − 31.5 = **148.5 lbs**
+
+At 17.5%, this individual falls into the **Fitness** category for males.
+
+### How to Take Accurate Measurements
+
+Proper measurement technique is critical for accurate results:
+
+- **Waist** — Measure at the navel level (belly button), keeping the tape horizontal. Do not suck in your stomach; stand relaxed.
+- **Neck** — Measure just below the larynx (Adam's apple), with the tape sloping slightly downward at the front.
+- **Height** — Stand barefoot against a wall, heels together, and measure in inches.
+- Take each measurement **twice** and use the average for best accuracy.
+- Measure in the morning before eating for the most consistent results.
+
+### Body Fat Categories by Gender
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Category</th>
+      <th>Men</th>
+      <th>Women</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Essential Fat</td><td>2 – 5%</td><td>10 – 13%</td></tr>
+    <tr><td>Athletic</td><td>6 – 13%</td><td>14 – 20%</td></tr>
+    <tr><td>Fitness</td><td>14 – 17%</td><td>21 – 24%</td></tr>
+    <tr><td>Average</td><td>18 – 24%</td><td>25 – 31%</td></tr>
+    <tr><td>Obese</td><td>25%+</td><td>32%+</td></tr>
+  </tbody>
+</table>
+
+### Body Fat vs. BMI — What's the Difference?
+
+**BMI (Body Mass Index)** is calculated from height and weight alone. It does not distinguish between muscle and fat, so a muscular athlete may have a "overweight" BMI despite having low body fat. Body fat percentage directly measures the proportion of your weight that is fat, making it a more accurate health metric for most people.
+
+That said, BMI is still useful as a quick screening tool, especially for large population studies. For individual fitness assessment, body fat percentage provides a clearer picture.
+
+### Why Body Fat Percentage Matters
+
+Maintaining a healthy body fat level is linked to:
+
+- **Reduced risk of cardiovascular disease** — excess visceral fat (around organs) is a major risk factor
+- **Better hormonal balance** — very low or very high body fat can disrupt hormone production
+- **Improved athletic performance** — lower fat mass means a better power-to-weight ratio
+- **Joint health** — excess weight puts strain on knees, hips, and ankles
+- **Metabolic health** — healthy body fat levels correlate with better insulin sensitivity
+
+### Other Methods to Measure Body Fat
+
+| Method | Accuracy | Cost | Accessibility |
+|---|---|---|---|
+| US Navy tape method | ±3–4% | Free | High — tape measure only |
+| Skinfold calipers | ±3% | $10–$30 | Moderate — requires practice |
+| Bioelectrical impedance (BIA) | ±3–5% | $30–$200 | High — smart scales |
+| DEXA scan | ±1–2% | $50–$150 | Low — medical facility |
+| Hydrostatic weighing | ±1–2% | $50–$100 | Low — specialized lab |
+| Bod Pod (air displacement) | ±2–3% | $50–$75 | Low — specialized facility |
+
+### Tips for Reducing Body Fat
+
+- **Create a moderate calorie deficit** — aim for 300–500 calories below maintenance, not extreme restriction
+- **Prioritize protein intake** — 0.7–1.0 g per pound of body weight preserves muscle during fat loss
+- **Strength train consistently** — resistance training maintains lean mass while losing fat
+- **Get adequate sleep** — poor sleep increases cortisol and hunger hormones
+- **Manage stress** — chronic stress promotes fat storage, especially around the midsection
+
+<FAQ items={[
+  { q: "How accurate is the US Navy body fat formula?", a: "The US Navy method is accurate to within ±3–4% compared to DEXA scans. It is most accurate for individuals with average body proportions and may be less precise for very muscular or very obese individuals." },
+  { q: "What is a healthy body fat percentage?", a: "For men, 14–24% is considered average/healthy, with athletes typically at 6–13%. For women, 21–31% is average/healthy, with athletes at 14–20%. Essential fat minimums are about 2–5% for men and 10–13% for women." },
+  { q: "Can I measure body fat at home?", a: "Yes. The US Navy tape method (used by this calculator) requires only a tape measure. Smart scales with bioelectrical impedance and skinfold calipers are also available for home use, though results can vary with hydration and technique." },
+  { q: "How often should I measure my body fat?", a: "Measure every 2–4 weeks at the same time of day (morning, fasted) for consistent tracking. Daily measurements will fluctuate due to water retention and are not meaningful." },
+  { q: "Is it possible to have too little body fat?", a: "Yes. Essential fat is needed for hormone production, organ protection, and temperature regulation. Men below 2–5% and women below 10–13% body fat may experience hormonal disruption, immune suppression, and other health issues." },
+]} />
+
+### Related Tools
+
+- [BMI Calculator](/apps/bmi-calculator) — Calculate your Body Mass Index from height and weight
+- [BMR Calculator](/apps/bmr-calculator) — Find your Basal Metabolic Rate and daily calorie burn at rest
+- [Macro Calculator](/apps/macro-calculator) — Calculate daily macronutrient targets for your goals
+- [Calorie Burn Calculator](/apps/calorie-burn-calculator) — Estimate calories burned during exercise
+- [Daily Calorie Needs Calculator](/apps/daily-calorie-needs-calculator) — Calculate your total daily calorie requirement
+
+### Sources
+
+- Hodgdon, J.A. & Beckett, M.B. (1984). Prediction of percent body fat for U.S. Navy men and women from body circumferences and height. Naval Health Research Center, Report No. 84-29.
+- American Council on Exercise: [Body Fat Percentage Chart](https://www.acefitness.org/resources/everyone/tools-calculators/percent-body-fat-calculator/)
+- National Institutes of Health: [Assessing Your Weight and Health Risk](https://www.nhlbi.nih.gov/health/educational/lose_wt/risk.htm)

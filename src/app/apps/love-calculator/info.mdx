@@ -1,0 +1,82 @@
+import FAQ from "@/components/FAQ"
+
+## How Does the Love Calculator Work?
+
+The love calculator takes two names, combines them, and runs the characters through a deterministic hash algorithm to produce a compatibility percentage between 0 and 100. Because the result is based on the specific characters in both names, entering the same two names will always return the same score. It is a lighthearted, fun tool — not a scientifically validated relationship predictor.
+
+The algorithm sums the character codes of both names (converted to lowercase), applies a polynomial hash, and reduces the result modulo 101 to guarantee a score in the 0–100 range. This ensures even distribution across the full percentage spectrum.
+
+## A Brief History of Love Compatibility Tests
+
+People have tried to measure romantic compatibility for centuries. Ancient Greek philosophers linked love to the four humors — blood, phlegm, yellow bile, and black bile — and believed balanced temperaments produced the happiest unions. In medieval Europe, the geomantic divination game known as **Ars Amatoria** asked lovers to draw rows of dots; the remainders were read as omens of affection, much like today's online love calculators reduce names to numbers.
+
+By the 20th century, magazine quizzes became the dominant form of compatibility testing. Cosmopolitan and similar publications published questionnaires that scored readers on traits like communication style, values, and physical attraction. The internet era simply digitized the concept: the first web-based love calculators appeared in the late 1990s and quickly became viral novelties.
+
+## Numerology and Name-Based Compatibility
+
+Numerology assigns numerical values to letters and uses those values to reveal personality traits and relational dynamics. In the Pythagorean system each letter maps to a digit from 1 to 9 (A = 1, B = 2, … I = 9, J = 1, and so on). A "life path number" is derived by summing the digits of a birthdate, while a "destiny number" comes from the full name.
+
+Practitioners claim that certain number pairings are naturally harmonious (e.g., 1 and 5 share adventurous energy) while others may clash. Although mainstream science does not support numerology as a predictive tool, millions of people worldwide enjoy exploring it for entertainment and self-reflection.
+
+## Zodiac Compatibility
+
+Astrology groups individuals by sun sign based on birth date, then evaluates compatibility by element (fire, earth, air, water) and modality (cardinal, fixed, mutable). For example, fire signs (Aries, Leo, Sagittarius) are often said to pair well with air signs (Gemini, Libra, Aquarius) because air feeds fire.
+
+While zodiac compatibility is not empirically proven, a 2021 survey by YouGov found that nearly 30 percent of Americans believe astrology is at least somewhat scientific, and dating apps like Bumble and Hinge now display zodiac signs on profiles, reflecting genuine consumer interest.
+
+## Famous Couples and Compatibility
+
+Some of history's most celebrated couples have inspired the notion that certain pairings are "meant to be":
+
+| Couple | Together Since | Fun Fact |
+|---|---|---|
+| Barack & Michelle Obama | 1992 | Met at a law firm in Chicago |
+| David & Victoria Beckham | 1997 | Known as "Posh and Becks" |
+| John Legend & Chrissy Teigen | 2007 | Met on a music video set |
+| Ryan Reynolds & Blake Lively | 2011 | Co-starred in *Green Lantern* |
+| Beyoncé & Jay-Z | 2002 | Combined net worth over $2 billion |
+
+Whether compatibility can be quantified is debatable, but these couples demonstrate that shared values, mutual respect, and humor tend to matter more than any algorithm.
+
+## What Relationship Science Actually Says
+
+Dr. John Gottman's research at the University of Washington identified the **"magic ratio"** of 5:1 — couples who maintain at least five positive interactions for every negative one are significantly more likely to stay together. Key predictors of relationship success include:
+
+- **Emotional responsiveness** — turning toward a partner's bids for attention rather than away.
+- **Shared meaning** — building rituals, goals, and narratives together.
+- **Conflict management** — disagreeing without contempt, criticism, defensiveness, or stonewalling (Gottman's "Four Horsemen").
+
+While a name-based love calculator cannot capture these dynamics, understanding real relationship science can help couples build stronger bonds.
+
+## Score Interpretation Guide
+
+| Score Range | Message | Meaning |
+|---|---|---|
+| 0 – 20 % | Keep looking... 💔 | Low compatibility — but don't take it to heart! |
+| 21 – 40 % | There might be a spark! ✨ | Some potential — give it time |
+| 41 – 60 % | Not bad — worth exploring! 😊 | Middle ground — room to grow |
+| 61 – 80 % | Strong connection! ❤️ | High compatibility vibes |
+| 81 – 100 % | Perfect match! 💕 | Outstanding score — celebrate! |
+
+<FAQ items={[
+  { q: "Is the love calculator scientifically accurate?", a: "No. The love calculator is a fun entertainment tool that generates a score from the characters in two names. It is not based on psychology, astrology, or any validated science. Enjoy it for laughs, not life decisions." },
+  { q: "Why do the same names always give the same score?", a: "The calculator uses a deterministic hash function. Given identical inputs (names), the mathematical operations always produce the same output number, so your score is consistent every time." },
+  { q: "Does the order of the names matter?", a: "Yes, swapping the names may produce a different score because the hash combines the characters in sequence. Try both orders for fun!" },
+  { q: "Can I use nicknames or full names?", a: "You can enter any text — first names, full names, or nicknames. Different inputs will yield different scores, so experiment and see which combination you like best." },
+  { q: "What is the highest possible score?", a: "The maximum score is 100 %, displayed as a 'Perfect match! 💕' result. The minimum is 0 %." }
+]} />
+
+## Related Tools
+
+- [Dog Name Generator](/apps/name-generator/dogs) — Find the perfect name for your new puppy.
+- [Cat Name Generator](/apps/name-generator/cats) — Browse creative name ideas for your cat.
+- [Baby Name Generator](/apps/baby-name-generator) — Discover popular baby names by gender and starting letter.
+- [Horoscope](/apps/horoscope) — Check your zodiac sign description and daily number.
+- [Dice Generator](/apps/dice-generator) — Roll virtual dice for games and decision-making.
+
+## Sources
+
+- Gottman Institute: [Research on Relationships](https://www.gottman.com/about/research/)
+- YouGov: [Astrology Survey 2021](https://today.yougov.com/topics/society/articles-reports/2022/04/26/one-in-four-americans-believe-in-astrology)
+- Social Security Administration: [Baby Names Data](https://www.ssa.gov/oact/babynames/)
+- Britannica: [Numerology Overview](https://www.britannica.com/topic/numerology)

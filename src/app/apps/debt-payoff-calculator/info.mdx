@@ -1,0 +1,94 @@
+import FAQ from "@/components/FAQ"
+
+## Debt Payoff Calculator — Plan Your Path to Debt Freedom
+
+The debt payoff calculator helps you estimate how long it will take to pay off credit card debt, personal loans, or any other outstanding balance. By entering your total debt, interest rate, and monthly payment, you can see the exact number of months until you are debt-free, how much interest you will pay over time, and the total cost of your debt. Understanding these numbers is the first step toward taking control of your finances.
+
+### How Does the Debt Payoff Calculation Work?
+
+The calculator uses **standard amortization logic**. Each month, interest is charged on the remaining balance, and your monthly payment covers that interest plus a portion of the principal:
+
+> **Monthly interest = Balance × (Annual rate ÷ 12)**
+>
+> **Principal paid = Monthly payment − Monthly interest**
+>
+> **New balance = Previous balance − Principal paid**
+
+This process repeats until the balance reaches zero. In the early months, a large portion of your payment goes toward interest. As the balance shrinks, more of each payment goes toward reducing the principal — accelerating payoff over time.
+
+### Worked Example
+
+Suppose you have **$15,000** in credit card debt at **18% APR** and you pay **$500 per month**:
+
+- Month 1: Interest = $15,000 × 0.015 = $225 → Principal = $275 → Balance = $14,725
+- Month 2: Interest = $14,725 × 0.015 = $220.88 → Principal = $279.12 → Balance = $14,445.88
+- Continue this process each month...
+- **Result: Paid off in approximately 38 months, with about $3,862 in total interest**
+
+### Payment Comparison Table
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Debt Balance</th>
+      <th>APR</th>
+      <th>Monthly Payment</th>
+      <th>Months to Payoff</th>
+      <th>Total Interest</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>$5,000</td><td>18%</td><td>$200</td><td>31</td><td>$1,098</td></tr>
+    <tr><td>$10,000</td><td>18%</td><td>$300</td><td>44</td><td>$3,093</td></tr>
+    <tr><td>$15,000</td><td>18%</td><td>$500</td><td>38</td><td>$3,862</td></tr>
+    <tr><td>$15,000</td><td>18%</td><td>$750</td><td>23</td><td>$2,293</td></tr>
+    <tr><td>$20,000</td><td>22%</td><td>$600</td><td>49</td><td>$9,127</td></tr>
+    <tr><td>$20,000</td><td>22%</td><td>$1,000</td><td>25</td><td>$4,712</td></tr>
+  </tbody>
+</table>
+
+Paying even $250 more per month on $15,000 of debt cuts payoff time by 15 months and saves over $1,500 in interest.
+
+### Debt Payoff Strategies: Avalanche vs. Snowball
+
+Two popular methods help people tackle multiple debts:
+
+**Debt Avalanche Method** — Pay minimum on all debts, then put every extra dollar toward the debt with the **highest interest rate**. This method saves the most money mathematically because you eliminate the most expensive debt first.
+
+**Debt Snowball Method** — Pay minimum on all debts, then put extra money toward the **smallest balance** first. Once that debt is paid off, roll its payment into the next smallest debt. This method builds psychological momentum as you see debts disappear quickly.
+
+Both strategies work — the avalanche saves more money, while the snowball keeps you motivated. Choose the one that fits your personality and financial situation.
+
+### The Minimum Payment Trap
+
+Credit card companies often set minimum payments at just 1–3% of the outstanding balance. Paying only the minimum on a $15,000 balance at 18% APR could take **over 30 years** and cost more than **$20,000 in interest** — far exceeding the original debt. Always aim to pay significantly more than the minimum to avoid this costly trap.
+
+### Tips for Faster Debt Payoff
+
+- **Increase monthly payments** — Even small increases dramatically reduce total interest
+- **Balance transfer cards** — Move high-interest debt to a 0% APR introductory card
+- **Debt consolidation loans** — Combine multiple debts into one lower-rate loan
+- **Cut discretionary spending** — Redirect saved money toward debt payments
+- **Generate extra income** — Side jobs or selling unused items can accelerate payoff
+
+<FAQ items={[
+  { q: "How is the debt payoff time calculated?", a: "Each month, interest accrues on your remaining balance (balance × monthly rate). Your payment covers that interest plus some principal. The calculator repeats this process month by month until the balance reaches zero, counting the total months required." },
+  { q: "What happens if my payment is less than the monthly interest?", a: "If your monthly payment does not exceed the monthly interest charge, your debt will never be paid off — the balance will actually grow. The calculator requires your payment to exceed the monthly interest to produce a valid payoff timeline." },
+  { q: "Should I use the avalanche or snowball method?", a: "The avalanche method (highest interest first) saves more money overall. The snowball method (smallest balance first) provides quicker psychological wins. Both work — choose the approach that keeps you motivated to stay on track." },
+  { q: "How much should I pay above the minimum?", a: "As much as your budget allows. Even paying $50–$100 above the minimum can save thousands in interest and cut years off your repayment timeline. Use this calculator to see the impact of different payment amounts." },
+  { q: "Does this calculator account for new charges?", a: "No. This calculator assumes you stop adding new charges to the debt. If you continue spending on the card while paying it off, the actual payoff time will be longer than the estimate." },
+]} />
+
+### Related Tools
+
+- [Loan Repayment Calculator](/apps/loan-repayment-calculator) — Calculate monthly payments and total interest on any loan
+- [Compound Interest Calculator](/apps/compound-interest-calculator) — See how compound interest grows investments or debt over time
+- [Mortgage Calculator](/apps/mortgage-calculator) — Estimate monthly mortgage payments and total home loan costs
+- [Savings Goal Calculator](/apps/savings-goal-calculator) — Plan how long it takes to reach a savings target
+- [Percentage Calculator](/apps/percentage-calculator) — Quickly calculate percentages for rates and comparisons
+
+### Sources
+
+- Consumer Financial Protection Bureau: [Paying Off Credit Card Debt](https://www.consumerfinance.gov/ask-cfpb/how-do-i-pay-down-my-credit-card-debt-en-1573/)
+- Federal Reserve: [Consumer Credit Data](https://www.federalreserve.gov/releases/g19/current/)
+- Investopedia: [Debt Avalanche vs. Debt Snowball](https://www.investopedia.com/articles/personal-finance/080716/debt-avalanche-vs-debt-snowball-which-best-you.asp)

@@ -1,0 +1,114 @@
+import FAQ from "@/components/FAQ"
+
+## CD Calculator — Estimate Your Certificate of Deposit Earnings
+
+A certificate of deposit (CD) is one of the safest ways to grow your savings with a guaranteed return. This CD calculator shows you exactly how much interest you will earn on your deposit, the total value at maturity, and your effective monthly earnings. Use it to compare CD terms and rates before locking in your money.
+
+### How Does a CD Work?
+
+When you open a CD, you deposit a fixed amount of money with a bank for a set period (the term). In exchange, the bank pays you a guaranteed interest rate — typically higher than a regular savings account. At the end of the term (maturity), you receive your original deposit plus all accrued interest.
+
+The key trade-off: your money is locked up during the term. Withdrawing early usually triggers an **early withdrawal penalty**, which can eat into your interest or even your principal.
+
+### How Is CD Interest Calculated?
+
+This calculator uses **monthly compounding**, which is the most common method for CDs:
+
+> **Total at maturity = Principal × (1 + APY/12)^months**
+>
+> **Interest earned = Total at maturity − Principal**
+
+Where:
+- **Principal** = your initial deposit amount
+- **APY** = annual percentage yield (the advertised rate)
+- **months** = term length in months
+
+### Worked Example
+
+A **$10,000 deposit** at **5.00% APY** for **12 months**:
+
+- Monthly rate: 5.00% / 12 = 0.4167%
+- Total at maturity: $10,000 × (1.004167)^12 = **$10,511.62**
+- Interest earned: **$511.62**
+- Effective monthly earnings: $511.62 / 12 = **$42.64/month**
+
+### CD Term and Rate Comparison
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Deposit</th>
+      <th>APY</th>
+      <th>Term</th>
+      <th>Interest Earned</th>
+      <th>Total at Maturity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>$5,000</td><td>4.50%</td><td>6 months</td><td>$113</td><td>$5,113</td></tr>
+    <tr><td>$10,000</td><td>4.75%</td><td>12 months</td><td>$486</td><td>$10,486</td></tr>
+    <tr><td>$10,000</td><td>5.00%</td><td>12 months</td><td>$512</td><td>$10,512</td></tr>
+    <tr><td>$10,000</td><td>5.00%</td><td>24 months</td><td>$1,049</td><td>$11,049</td></tr>
+    <tr><td>$25,000</td><td>4.50%</td><td>36 months</td><td>$3,578</td><td>$28,578</td></tr>
+    <tr><td>$50,000</td><td>5.00%</td><td>60 months</td><td>$14,170</td><td>$64,170</td></tr>
+  </tbody>
+</table>
+
+Longer terms generally lock in a rate for more time but also tie up your funds. Compare short-term and long-term options to find the balance that works for your goals.
+
+### CD Laddering Strategy
+
+CD laddering is a strategy where you split your total investment across multiple CDs with staggered maturity dates. For example, instead of putting $20,000 into a single 3-year CD, you could:
+
+- $5,000 in a 1-year CD
+- $5,000 in a 2-year CD
+- $5,000 in a 3-year CD
+- $5,000 in a 4-year CD
+
+As each CD matures, you reinvest it into a new long-term CD. This gives you regular access to a portion of your money while still capturing higher long-term rates. Laddering reduces interest rate risk and provides liquidity without sacrificing returns.
+
+### Early Withdrawal Penalties
+
+Banks charge penalties for withdrawing CD funds before maturity. Common penalties include:
+
+- **Short-term CDs (under 1 year):** 3–6 months of interest
+- **Medium-term CDs (1–3 years):** 6–12 months of interest
+- **Long-term CDs (3+ years):** 12–18 months of interest
+
+Some banks offer **no-penalty CDs** with slightly lower rates but full flexibility to withdraw without fees.
+
+### CDs vs. High-Yield Savings Accounts
+
+Both are low-risk savings options, but they serve different purposes:
+
+- **CDs** offer a **locked-in rate** that won't change — ideal when rates are high and you expect them to drop
+- **High-yield savings accounts** offer **variable rates** with full liquidity — better when rates are rising or you need access to your money
+- CDs typically offer **slightly higher rates** than savings accounts for the same bank
+- Savings accounts are **FDIC insured** up to $250,000 — and so are CDs
+
+### When Should You Choose a CD?
+
+CDs make the most sense when you have money you won't need for a specific period and want a guaranteed return. They are ideal for short-to-medium-term goals like a down payment fund, a planned purchase in 1–3 years, or building a conservative portion of your investment portfolio.
+
+<FAQ items={[
+  { q: "What is a certificate of deposit (CD)?", a: "A CD is a time deposit offered by banks where you lock in a fixed sum of money for a set term at a guaranteed interest rate. At maturity, you receive your deposit plus accrued interest. CDs are FDIC insured up to $250,000." },
+  { q: "How is APY different from interest rate?", a: "APY (Annual Percentage Yield) includes the effect of compounding, so it reflects your true annual return. A stated interest rate of 4.89% with monthly compounding produces an APY of approximately 5.00%. Always compare CDs using APY." },
+  { q: "What happens if I withdraw my CD early?", a: "Most banks charge an early withdrawal penalty, typically equal to several months of interest. For example, a bank might charge 6 months of interest on a 2-year CD. Some banks offer no-penalty CDs with slightly lower rates." },
+  { q: "Are CDs a good investment?", a: "CDs are excellent for capital preservation and guaranteed returns. They are ideal for money you want to keep safe while earning more than a regular savings account. However, returns are lower than stocks or bonds over the long term." },
+  { q: "What is a CD ladder?", a: "A CD ladder involves splitting your investment across multiple CDs with different maturity dates. As each CD matures, you reinvest at current rates. This strategy provides regular access to your funds while capturing higher long-term rates." },
+]} />
+
+### Related Tools
+
+- [Compound Interest Calculator](/apps/compound-interest-calculator) — Calculate how compound interest grows savings and investments
+- [Savings Goal Calculator](/apps/savings-goal-calculator) — Plan how long to save for a specific financial target
+- [Investment Return Calculator](/apps/investment-return-calculator) — Calculate total return and ROI on any investment
+- [Retirement Calculator](/apps/retirement-calculator) — Project retirement savings and monthly income
+- [401(k) Calculator](/apps/401k-calculator) — Estimate 401(k) balance with employer match and growth
+
+### Sources
+
+- FDIC: [Deposit Insurance Coverage](https://www.fdic.gov/resources/deposit-insurance/understanding-deposit-insurance/)
+- Investopedia: [Certificate of Deposit (CD)](https://www.investopedia.com/terms/c/certificateofdeposit.asp)
+- Bankrate: [CD Rates and Laddering Strategy](https://www.bankrate.com/banking/cds/cd-ladder-strategy/)
+- Federal Reserve: [Selected Interest Rates](https://www.federalreserve.gov/releases/h15/)

@@ -1,0 +1,111 @@
+import FAQ from "@/components/FAQ"
+
+## Square Footage Calculator — Calculate Area and Property Value
+
+Square footage is one of the most important measurements in real estate, construction, and interior design. Whether you are buying a home, planning a renovation, or listing a property for sale, knowing the exact square footage helps you make informed decisions. This calculator quickly converts length and width measurements into total area and estimates property value based on price per square foot.
+
+### How to Calculate Square Footage
+
+The formula is simple:
+
+> **Square footage = Length (ft) × Width (ft)**
+
+For example, a room that is **20 feet long × 15 feet wide** has a total area of **300 square feet**. To convert to square meters, multiply by 0.0929:
+
+> 300 sq ft × 0.0929 = **27.87 sq m**
+
+For irregularly shaped rooms, divide the space into rectangles, calculate each area separately, and add them together.
+
+### Worked Example
+
+A homeowner is measuring a living room that is **20 ft × 15 ft** in a market where homes sell for **$150 per square foot**:
+
+- Total area: 20 × 15 = **300 sq ft**
+- Area in square meters: 300 × 0.0929 = **27.87 sq m**
+- Estimated value: 300 × $150 = **$45,000** (for that room's proportional share)
+
+### How Square Footage Affects Home Value
+
+Square footage is the primary factor in determining a home's market value. Buyers and appraisers both use **price per square foot** to compare properties in the same neighborhood. A larger home in the same area typically commands a higher total price, but the price per square foot may actually decrease as size increases.
+
+Key considerations:
+- **Finished vs. unfinished space** — basements and garages are usually not included in official square footage
+- **Usable vs. gross area** — condos and apartments may include shared walls in the gross area
+- **Lot size vs. living area** — outdoor space adds value but is measured separately
+
+### Average Price Per Square Foot by US City
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>City</th>
+      <th>Avg. Price/sq ft (2024)</th>
+      <th>Median Home Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>New York City, NY</td><td>$750 – $1,500</td><td>$750,000+</td></tr>
+    <tr><td>San Francisco, CA</td><td>$700 – $1,200</td><td>$1,200,000+</td></tr>
+    <tr><td>Los Angeles, CA</td><td>$500 – $900</td><td>$850,000+</td></tr>
+    <tr><td>Miami, FL</td><td>$350 – $600</td><td>$550,000+</td></tr>
+    <tr><td>Austin, TX</td><td>$250 – $400</td><td>$450,000+</td></tr>
+    <tr><td>Denver, CO</td><td>$275 – $425</td><td>$530,000+</td></tr>
+    <tr><td>Chicago, IL</td><td>$200 – $400</td><td>$330,000+</td></tr>
+    <tr><td>Dallas, TX</td><td>$175 – $300</td><td>$375,000+</td></tr>
+    <tr><td>Atlanta, GA</td><td>$150 – $275</td><td>$350,000+</td></tr>
+    <tr><td>Indianapolis, IN</td><td>$100 – $175</td><td>$250,000+</td></tr>
+  </tbody>
+</table>
+
+### How to Measure a Room Accurately
+
+1. **Use a tape measure or laser distance meter** — laser tools are faster and more accurate for large rooms.
+2. **Measure the longest wall** for length and the perpendicular wall for width.
+3. **For L-shaped rooms**, divide into two rectangles, measure each, and add the areas.
+4. **Include closets and alcoves** if they are part of the living space.
+5. **Exclude exterior walls** — measure from the interior surface of each wall.
+6. **Measure in feet and inches**, then convert inches to decimal feet (e.g., 6 inches = 0.5 ft).
+
+### Common Square Footage Conversions
+
+| From | To | Multiply By |
+|---|---|---|
+| Square feet | Square meters | 0.0929 |
+| Square meters | Square feet | 10.764 |
+| Square feet | Acres | 0.0000229568 |
+| Acres | Square feet | 43,560 |
+| Square feet | Square yards | 0.1111 |
+
+### Uses Beyond Real Estate
+
+Square footage calculations are essential for:
+
+- **Flooring projects** — ordering tile, hardwood, carpet, or laminate
+- **Painting estimates** — calculating wall area for paint coverage
+- **Landscaping** — measuring lawn, garden, or patio area
+- **HVAC sizing** — determining the right air conditioner or furnace capacity
+- **Rental agreements** — verifying listed square footage matches actual measurements
+
+Understanding square footage empowers you to compare spaces objectively, negotiate better deals, and plan projects with precision.
+
+<FAQ items={[
+  { q: "How do I calculate the square footage of a room?", a: "Multiply the length of the room in feet by the width in feet. For example, a 12 ft × 14 ft room has 168 square feet. For irregular shapes, break the room into rectangles, calculate each area, and add them together." },
+  { q: "Is square footage the same as square meters?", a: "No. One square foot equals 0.0929 square meters. To convert square feet to square meters, multiply by 0.0929. To convert square meters to square feet, multiply by 10.764." },
+  { q: "Does square footage include the garage or basement?", a: "Typically, no. Most real estate listings and appraisals count only heated, finished living space in the official square footage. Garages, unfinished basements, and attics are usually listed separately." },
+  { q: "What is a good price per square foot?", a: "A 'good' price per square foot varies enormously by location. In affordable markets, $100–$175/sq ft is common. In expensive coastal cities, $500–$1,500/sq ft is normal. Compare prices within the same neighborhood for the most useful benchmark." },
+  { q: "How accurate is this calculator?", a: "This calculator gives an exact result for rectangular spaces. For L-shaped, circular, or irregular rooms, measure each section separately and add the areas together for the most accurate total." },
+]} />
+
+### Related Tools
+
+- [Area Converter](/apps/area-converter) — Convert between square feet, square meters, hectares, and acres
+- [Price Per Square Foot Calculator](/apps/price-per-square-foot-calculator) — Calculate home price per square foot from sale price and area
+- [Paint Calculator](/apps/paint-calculator) — Estimate how many gallons of paint you need for any room
+- [Length Converter](/apps/length-converter) — Convert between feet, meters, inches, and other units
+- [Mortgage Calculator](/apps/mortgage-calculator) — Calculate monthly mortgage payments and total interest
+
+### Sources
+
+- U.S. Census Bureau: [Characteristics of New Housing](https://www.census.gov/construction/chars/)
+- National Association of Realtors: [Home Buyer and Seller Generational Trends](https://www.nar.realtor/research-and-statistics)
+- Zillow: [Home Values by Region](https://www.zillow.com/research/)

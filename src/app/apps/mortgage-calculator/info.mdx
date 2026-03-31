@@ -1,0 +1,112 @@
+import FAQ from "@/components/FAQ"
+
+## How the Mortgage Calculator Works
+
+The mortgage calculator estimates your monthly principal and interest (P&I) payment based on the home price, down payment, interest rate, and loan term. It also calculates the total interest you will pay over the life of the loan and the total cost of the home including the down payment. Understanding these numbers helps you compare loan options, set a realistic housing budget, and see how different interest rates and terms affect your payments.
+
+### Mortgage Payment Formula
+
+Monthly mortgage payments are calculated using the standard amortization formula:
+
+> **M = P × [r(1 + r)ⁿ] / [(1 + r)ⁿ − 1]**
+
+Where:
+- **M** = monthly payment
+- **P** = loan principal (home price minus down payment)
+- **r** = monthly interest rate (annual rate ÷ 12)
+- **n** = total number of payments (years × 12)
+
+### Worked Example
+
+For a $350,000 home with 20% down payment at 6.5% interest over 30 years:
+
+- **Down payment:** $350,000 × 20% = **$70,000**
+- **Loan amount:** $350,000 − $70,000 = **$280,000**
+- **Monthly rate:** 6.5% ÷ 12 = **0.5417%**
+- **Number of payments:** 30 × 12 = **360**
+- **Monthly payment:** $280,000 × [0.005417 × 1.005417³⁶⁰] / [1.005417³⁶⁰ − 1] = **$1,770.09**
+- **Total paid:** $1,770.09 × 360 = **$637,232**
+- **Total interest:** $637,232 − $280,000 = **$357,232**
+
+Over 30 years at 6.5%, you pay more in interest than the original loan amount — a striking illustration of the long-term cost of borrowing.
+
+## Understanding Mortgages
+
+A mortgage is a loan used to purchase real estate, with the property itself serving as collateral. Mortgages are typically the largest financial commitment most people make. Understanding the different types, terms, and costs is essential to making smart homebuying decisions.
+
+### Fixed-Rate vs. Adjustable-Rate Mortgages
+
+**Fixed-rate mortgages** lock in the same interest rate for the entire loan term. Your monthly payment never changes, providing predictability and ease of budgeting. The most common terms are 15 and 30 years.
+
+**Adjustable-rate mortgages (ARMs)** start with a lower introductory rate that adjusts periodically based on market conditions. A 5/1 ARM, for example, has a fixed rate for the first 5 years, then adjusts annually. ARMs carry more risk but can save money if you plan to sell or refinance before the adjustment period.
+
+### How Interest Rates Affect Payments
+
+Even small differences in interest rates have a dramatic impact on monthly payments and total cost. Consider a $300,000 loan over 30 years:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Interest Rate</th>
+      <th>Monthly Payment</th>
+      <th>Total Interest</th>
+      <th>Total Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>5.0%</td><td>$1,610</td><td>$279,767</td><td>$579,767</td></tr>
+    <tr><td>5.5%</td><td>$1,703</td><td>$313,212</td><td>$613,212</td></tr>
+    <tr><td>6.0%</td><td>$1,799</td><td>$347,515</td><td>$647,515</td></tr>
+    <tr><td>6.5%</td><td>$1,896</td><td>$382,633</td><td>$682,633</td></tr>
+    <tr><td>7.0%</td><td>$1,996</td><td>$418,527</td><td>$718,527</td></tr>
+    <tr><td>7.5%</td><td>$2,098</td><td>$455,148</td><td>$755,148</td></tr>
+  </tbody>
+</table>
+
+A 1% increase from 6% to 7% adds nearly $100 to the monthly payment and over $70,000 in total interest over 30 years.
+
+### Amortization: How Payments Are Split
+
+In the early years of a mortgage, most of your monthly payment goes toward interest rather than reducing the loan balance (principal). This gradually shifts over time through a process called amortization. On a 30-year $280,000 loan at 6.5%:
+
+- **Month 1:** $1,517 interest / $253 principal
+- **Month 180 (year 15):** $985 interest / $785 principal
+- **Month 360 (final):** $10 interest / $1,760 principal
+
+This front-loaded interest structure is why making extra principal payments early in the loan has such a powerful effect on total interest savings.
+
+### Private Mortgage Insurance (PMI)
+
+If your down payment is less than 20% of the home price, most conventional lenders require private mortgage insurance (PMI). PMI typically costs between 0.5% and 1% of the loan amount annually, adding $100–$250 per month on a $300,000 loan. PMI can be removed once you reach 20% equity through payments or home appreciation. This is a key reason why a 20% down payment is often recommended — it eliminates PMI from day one.
+
+### 15-Year vs. 30-Year Loans
+
+A 15-year mortgage has significantly higher monthly payments but offers major savings on total interest. For a $280,000 loan at 6.5%:
+
+- **30-year:** $1,770/month, $357,232 total interest
+- **15-year:** $2,441/month, $159,394 total interest
+
+The 15-year loan saves nearly $200,000 in interest but requires $671 more per month. Choose the shorter term if you can comfortably afford the higher payments without sacrificing emergency savings or retirement contributions.
+
+<FAQ items={[
+  { q: "What is included in a monthly mortgage payment?", a: "The basic payment includes principal and interest (P&I). Many homeowners also pay property taxes, homeowners insurance, and PMI through an escrow account, often referred to as PITI (principal, interest, taxes, insurance)." },
+  { q: "How much house can I afford?", a: "A common guideline is that your total housing costs should not exceed 28% of your gross monthly income. With a $6,000 monthly income, this means a maximum housing payment of about $1,680 including taxes and insurance." },
+  { q: "Should I make a 20% down payment?", a: "A 20% down payment eliminates PMI, lowers your monthly payment, and gives you immediate equity. However, some buyers benefit from lower down payments (3–10%) to preserve savings for emergencies and investments." },
+  { q: "How do extra payments affect my mortgage?", a: "Extra principal payments reduce the loan balance faster, saving interest and shortening the loan term. Even one extra payment per year on a 30-year mortgage can shave 4–5 years off the term." },
+  { q: "What credit score do I need for a mortgage?", a: "Conventional loans typically require a minimum score of 620. FHA loans accept scores as low as 580 with 3.5% down. Better credit scores qualify you for lower interest rates, saving thousands over the loan term." },
+]} />
+
+### Related Tools
+
+- [Loan Repayment Calculator](/apps/loan-repayment-calculator) — Calculate payments and total cost for any loan
+- [Down Payment Calculator](/apps/down-payment-calculator) — Plan how to save for a home down payment
+- [Compound Interest Calculator](/apps/compound-interest-calculator) — Understand the power of compound growth
+- [Price Per Square Foot Calculator](/apps/price-per-square-foot-calculator) — Compare home values by size
+- [Installment Calculator](/apps/installment-calculator) — Calculate monthly installment payments
+
+### Sources
+
+- Consumer Financial Protection Bureau: [Mortgage Key Terms](https://www.consumerfinance.gov/owning-a-home/loan-options/)
+- Freddie Mac: [Primary Mortgage Market Survey](http://www.freddiemac.com/pmms/)
+- Investopedia: [Mortgage Amortization](https://www.investopedia.com/terms/a/amortization.asp)
+- HUD: [FHA Loan Requirements](https://www.hud.gov/buying/loans)

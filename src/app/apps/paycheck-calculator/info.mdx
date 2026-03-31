@@ -1,0 +1,105 @@
+import FAQ from "@/components/FAQ"
+
+## How the Paycheck Calculator Works
+
+The paycheck calculator estimates your take-home pay by subtracting federal income tax, state income tax, FICA taxes (Social Security and Medicare), and voluntary deductions like 401(k) contributions from your gross pay. The result is an approximation — actual withholding depends on your W-4 elections, filing status, and pre-tax benefits.
+
+### Paycheck Calculation Formula
+
+> **Net Pay = Gross Pay − Federal Tax − State Tax − FICA − Deductions**
+
+For a biweekly pay schedule (26 pay periods per year):
+
+> **Biweekly Gross = Annual Salary ÷ 26**
+
+**Worked Example:** An employee earning $65,000/year with a 22% federal rate, 5% state rate, and 6% 401(k):
+
+- Biweekly gross: $65,000 ÷ 26 = **$2,500.00**
+- 401(k): $2,500 × 6% = **$150.00**
+- Taxable income: $2,500 − $150 = **$2,350.00**
+- Federal tax: $2,350 × 22% = **$517.00**
+- State tax: $2,350 × 5% = **$117.50**
+- FICA: $2,500 × 7.65% = **$191.25**
+- Net pay: $2,500 − $517 − $117.50 − $191.25 − $150 = **$1,524.25**
+
+## Understanding Your Pay Stub
+
+Every paycheck stub contains several key sections. Here is what each line means:
+
+### Gross Pay
+Your total earnings before any deductions. For salaried employees this is your annual salary divided by the number of pay periods. Hourly workers multiply hours worked by their hourly rate.
+
+### Federal Income Tax
+Withheld based on IRS tax brackets, your filing status, and the allowances on your W-4. The US uses a progressive tax system — only income in each bracket is taxed at that bracket's rate.
+
+### FICA Taxes
+FICA stands for the Federal Insurance Contributions Act. It funds Social Security (6.2% on the first $168,600 of earnings in 2024) and Medicare (1.45% on all earnings, plus an additional 0.9% on earnings above $200,000 for single filers).
+
+### State Income Tax
+Varies dramatically by state. Nine states — Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, and Wyoming — have **no state income tax**. California's top rate is 13.3%, while most states fall between 3% and 6%.
+
+## 2024 Federal Tax Brackets (Single Filer)
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Taxable Income</th>
+      <th>Tax Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>$0 – $11,600</td><td>10%</td></tr>
+    <tr><td>$11,601 – $47,150</td><td>12%</td></tr>
+    <tr><td>$47,151 – $100,525</td><td>22%</td></tr>
+    <tr><td>$100,526 – $191,950</td><td>24%</td></tr>
+    <tr><td>$191,951 – $243,725</td><td>32%</td></tr>
+    <tr><td>$243,726 – $609,350</td><td>35%</td></tr>
+    <tr><td>$609,351+</td><td>37%</td></tr>
+  </tbody>
+</table>
+
+## Pay Schedule Comparison
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Schedule</th>
+      <th>Pay Periods/Year</th>
+      <th>$60,000 Gross/Period</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Weekly</td><td>52</td><td>$1,153.85</td></tr>
+    <tr><td>Biweekly</td><td>26</td><td>$2,307.69</td></tr>
+    <tr><td>Semi-monthly</td><td>24</td><td>$2,500.00</td></tr>
+    <tr><td>Monthly</td><td>12</td><td>$5,000.00</td></tr>
+  </tbody>
+</table>
+
+## Tips to Maximize Your Take-Home Pay
+
+1. **Optimize your W-4** — Claiming the right number of allowances prevents over-withholding (giving the IRS a free loan).
+2. **Max out pre-tax deductions** — 401(k) contributions and HSA/FSA reduce your taxable income.
+3. **Use tax credits** — Credits like the Earned Income Tax Credit reduce your tax bill dollar-for-dollar.
+4. **Consider a Roth conversion** — If you expect higher future tax rates, a Roth 401(k) may yield better after-tax income in retirement.
+
+<FAQ items={[
+  { q: "How many pay periods are in a year?", a: "Most salaried employees are paid biweekly (26 pay periods) or semi-monthly (24 pay periods). Some employers pay weekly (52) or monthly (12). Your pay schedule affects the gross amount per paycheck but not your annual total." },
+  { q: "Why is my first paycheck smaller than expected?", a: "Your first paycheck may be prorated if you started mid-pay-period. Deductions for benefits (health insurance, 401k) also begin immediately, and initial tax withholding may be higher before your W-4 adjustments take effect." },
+  { q: "What is the FICA tax rate for 2024?", a: "The combined FICA rate is 7.65% for employees — 6.2% for Social Security (on the first $168,600 of earnings) and 1.45% for Medicare. Your employer pays a matching 7.65%." },
+  { q: "Do I pay state income tax if I work remotely in a different state?", a: "It depends. Generally you owe state tax where you physically perform the work, but some states have reciprocity agreements. A few states also tax nonresidents who work for companies headquartered there." },
+]} />
+
+### Related Tools
+
+- [Net Salary Calculator](/apps/net-salary-calculator) — Calculate net salary from gross
+- [Annual Salary Calculator](/apps/annual-salary-calculator) — Convert hourly to annual pay
+- [Hourly Salary Calculator](/apps/hourly-salary-calculator) — Convert salary to hourly wage
+- [Tax Percentage Calculator](/apps/tax-percentage-calculator) — Find your effective tax rate
+- [401(k) Calculator](/apps/401k-calculator) — Project your retirement savings
+
+### Sources
+
+- IRS: [Tax Withholding Estimator](https://www.irs.gov/individuals/tax-withholding-estimator)
+- IRS: [2024 Tax Brackets](https://www.irs.gov/newsroom/irs-provides-tax-inflation-adjustments-for-tax-year-2024)
+- SSA: [Contribution and Benefit Base](https://www.ssa.gov/oact/cola/cbb.html)

@@ -1,0 +1,124 @@
+import FAQ from "@/components/FAQ"
+
+## Gas Mileage Calculator — Track Your Vehicle's Fuel Economy
+
+The gas mileage calculator helps you determine your vehicle's fuel efficiency in miles per gallon (MPG), the cost per mile of driving, and total fuel expenses. Whether you are comparing vehicles, tracking driving habits, or budgeting for a road trip, knowing your actual MPG helps you make smarter transportation decisions.
+
+### How Is Gas Mileage (MPG) Calculated?
+
+The calculation is straightforward:
+
+> **MPG = Miles driven ÷ Gallons used**
+>
+> **Cost per mile = Total fuel cost ÷ Miles driven**
+>
+> **Total fuel cost = Gallons used × Price per gallon**
+
+### Worked Example
+
+You drove **300 miles** and used **10 gallons** of gas at **$3.50 per gallon**:
+
+- MPG: 300 ÷ 10 = **30 MPG**
+- Total fuel cost: 10 × $3.50 = **$35.00**
+- Cost per mile: $35.00 ÷ 300 = **$0.117 per mile**
+
+### Average MPG by Vehicle Type
+
+The EPA tracks fuel economy ratings for all vehicles sold in the United States. Here are typical averages by vehicle class:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Vehicle Type</th>
+      <th>Average MPG (Combined)</th>
+      <th>Cost per Mile ($3.50/gal)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Compact car</td><td>33 MPG</td><td>$0.106</td></tr>
+    <tr><td>Midsize sedan</td><td>30 MPG</td><td>$0.117</td></tr>
+    <tr><td>Full-size sedan</td><td>27 MPG</td><td>$0.130</td></tr>
+    <tr><td>Small SUV / Crossover</td><td>28 MPG</td><td>$0.125</td></tr>
+    <tr><td>Large SUV</td><td>21 MPG</td><td>$0.167</td></tr>
+    <tr><td>Pickup truck</td><td>20 MPG</td><td>$0.175</td></tr>
+    <tr><td>Minivan</td><td>22 MPG</td><td>$0.159</td></tr>
+    <tr><td>Hybrid sedan</td><td>50 MPG</td><td>$0.070</td></tr>
+    <tr><td>Plug-in hybrid</td><td>80+ MPGe</td><td>$0.044</td></tr>
+  </tbody>
+</table>
+
+These are approximate combined (city/highway) figures. Your actual MPG varies based on driving conditions, maintenance, and habits.
+
+### How to Improve Your Gas Mileage
+
+Small changes in driving behavior can significantly improve fuel economy:
+
+**Driving habits:**
+- Drive at steady speeds — aggressive acceleration and braking can reduce MPG by 15–30%
+- Use cruise control on highways to maintain consistent speed
+- Avoid excessive idling — idling gets 0 MPG
+- Observe the speed limit — fuel economy drops significantly above 50 mph
+
+**Vehicle maintenance:**
+- Keep tires properly inflated — underinflated tires reduce MPG by about 0.2% per PSI below optimal
+- Replace air filters regularly — a clogged filter reduces efficiency
+- Use the manufacturer-recommended grade of motor oil
+- Keep the engine tuned — fixing a serious maintenance issue can improve MPG by up to 4%
+
+**Other tips:**
+- Remove unnecessary weight from your vehicle — every 100 lbs reduces MPG by about 1%
+- Reduce aerodynamic drag — remove roof racks when not in use
+- Plan and combine trips to avoid cold starts
+- Use air conditioning sparingly — it can reduce MPG by more than 25% in certain conditions
+
+### Gas vs. Hybrid vs. Electric: Cost Comparison
+
+Over 15,000 miles per year at $3.50/gallon gas and $0.14/kWh electricity:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Vehicle Type</th>
+      <th>Efficiency</th>
+      <th>Annual Fuel Cost</th>
+      <th>Cost per Mile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Gas sedan (30 MPG)</td><td>30 MPG</td><td>$1,750</td><td>$0.117</td></tr>
+    <tr><td>Hybrid (50 MPG)</td><td>50 MPG</td><td>$1,050</td><td>$0.070</td></tr>
+    <tr><td>Plug-in hybrid</td><td>80 MPGe</td><td>$656</td><td>$0.044</td></tr>
+    <tr><td>Electric (3.5 mi/kWh)</td><td>3.5 mi/kWh</td><td>$600</td><td>$0.040</td></tr>
+  </tbody>
+</table>
+
+Electric vehicles have the lowest per-mile fuel cost but higher upfront purchase prices. Hybrids offer a middle ground with better efficiency than gas cars and no range anxiety.
+
+### Understanding EPA Fuel Economy Ratings
+
+The EPA tests vehicles under controlled laboratory conditions to produce city, highway, and combined MPG ratings. Real-world results typically differ by 10–20% depending on your driving conditions. City driving with frequent stops yields lower MPG than highway cruising. Cold weather, mountainous terrain, and heavy loads also reduce fuel economy below EPA estimates.
+
+The EPA window sticker on new cars shows estimated annual fuel cost, which makes it easy to compare running costs between models before you buy.
+
+<FAQ items={[
+  { q: "How do I calculate my car's MPG?", a: "Fill your tank completely, reset your trip odometer, drive normally until you need fuel again, then fill up and note the gallons added. Divide the miles driven by the gallons used. For example, 300 miles ÷ 10 gallons = 30 MPG." },
+  { q: "What is a good MPG for a car?", a: "For gasoline cars, 30+ MPG combined is considered good. Hybrids achieve 45–60 MPG, and plug-in hybrids can exceed 80 MPGe. The national fleet average is about 25.4 MPG for all light-duty vehicles." },
+  { q: "Why is my actual MPG lower than the EPA estimate?", a: "EPA tests are conducted in a lab under controlled conditions. Real-world factors like aggressive driving, cold weather, short trips, heavy loads, underinflated tires, and stop-and-go traffic all reduce actual fuel economy compared to the lab estimate." },
+  { q: "Does driving faster use more gas?", a: "Yes. Aerodynamic drag increases with the square of speed. Most vehicles reach peak fuel economy between 35–45 mph. Above 50 mph, each 5 mph increase is roughly equivalent to paying an extra $0.20–$0.30 per gallon." },
+  { q: "How much money can I save by improving MPG?", a: "Improving from 25 MPG to 30 MPG over 15,000 miles per year at $3.50/gallon saves approximately $350 per year. Going from 25 MPG to 40 MPG saves about $787 per year." },
+]} />
+
+### Related Tools
+
+- [Fuel Cost Calculator](/apps/fuel-cost-calculator) — Calculate total fuel cost for a trip based on distance and consumption
+- [Driving Cost Calculator](/apps/driving-cost-calculator) — Estimate total driving costs including fuel for any trip
+- [Electric Car Trip Cost Calculator](/apps/electric-car-trip-cost-calculator) — Calculate electricity costs for EV trips
+- [Speed Converter](/apps/speed-converter) — Convert between mph, km/h, knots, and other speed units
+- [Length Converter](/apps/length-converter) — Convert between miles, kilometers, and other length units
+
+### Sources
+
+- U.S. Environmental Protection Agency: [Fuel Economy Guide](https://www.fueleconomy.gov/)
+- U.S. Department of Energy: [Tips to Improve Your Gas Mileage](https://www.fueleconomy.gov/feg/driveHabits.jsp)
+- EPA: [Annual Fuel Economy Trends Report](https://www.epa.gov/automotive-trends)
+- AAA: [Gas Prices and Fuel Cost Data](https://gasprices.aaa.com/)

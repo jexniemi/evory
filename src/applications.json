@@ -38,6 +38,16 @@
         "route": "work-hours-calculator",
         "displayName": "Work Hours Calculator",
         "shortDescription": "Calculate daily work hours and earnings based on start and end time."
+      },
+      {
+        "route": "paycheck-calculator",
+        "displayName": "Paycheck Calculator",
+        "shortDescription": "Estimate take-home pay after federal tax, state tax, FICA, and 401(k) deductions."
+      },
+      {
+        "route": "overtime-calculator",
+        "displayName": "Overtime Calculator",
+        "shortDescription": "Calculate overtime pay based on hourly rate, overtime hours, and multiplier."
       }
     ]
   },
@@ -77,9 +87,44 @@
         "shortDescription": "Calculate how long it will take to reach your savings goal."
       },
       {
+        "route": "401k-calculator",
+        "displayName": "401(k) Calculator",
+        "shortDescription": "Project your 401(k) balance at retirement with employer match and compound growth."
+      },
+      {
+        "route": "social-security-calculator",
+        "displayName": "Social Security Calculator",
+        "shortDescription": "Estimate Social Security benefits based on your claiming age."
+      },
+      {
+        "route": "mortgage-calculator",
+        "displayName": "Mortgage Calculator",
+        "shortDescription": "Calculate monthly mortgage payments, total interest, and total cost."
+      },
+      {
+        "route": "down-payment-calculator",
+        "displayName": "Down Payment Calculator",
+        "shortDescription": "Calculate down payment amount and savings timeline for a home purchase."
+      },
+      {
         "route": "rental-yield-calculator",
         "displayName": "Rental Yield Calculator",
         "shortDescription": "Calculate gross and net rental yield and cash flow for investment property."
+      },
+      {
+        "route": "debt-payoff-calculator",
+        "displayName": "Debt Payoff Calculator",
+        "shortDescription": "Calculate how long to pay off debt, total interest, and total cost."
+      },
+      {
+        "route": "retirement-calculator",
+        "displayName": "Retirement Calculator",
+        "shortDescription": "Project retirement savings and monthly income using compound growth and the 4% rule."
+      },
+      {
+        "route": "cd-calculator",
+        "displayName": "CD Calculator",
+        "shortDescription": "Calculate certificate of deposit interest earned and total value at maturity."
       }
     ]
   },
@@ -102,6 +147,11 @@
         "route": "tip-calculator",
         "displayName": "Tip Calculator",
         "shortDescription": "Find out how much you should pay as a tip."
+      },
+      {
+        "route": "sales-tax-calculator",
+        "displayName": "Sales Tax Calculator",
+        "shortDescription": "Calculate sales tax amount and total price with tax."
       },
       {
         "route": "electricity-bill-calculator",
@@ -157,6 +207,31 @@
         "route": "portion-calculator",
         "displayName": "Portion Calculator",
         "shortDescription": "Scale recipe ingredients to your desired number of servings."
+      },
+      {
+        "route": "gas-mileage-calculator",
+        "displayName": "Gas Mileage Calculator",
+        "shortDescription": "Calculate MPG, cost per mile, and total fuel cost for your vehicle."
+      },
+      {
+        "route": "unit-price-calculator",
+        "displayName": "Unit Price Calculator",
+        "shortDescription": "Compare two products by unit price to find the better deal."
+      },
+      {
+        "route": "paint-calculator",
+        "displayName": "Paint Calculator",
+        "shortDescription": "Calculate how much paint you need for any room based on dimensions, doors, and windows."
+      },
+      {
+        "route": "moving-cost-calculator",
+        "displayName": "Moving Cost Calculator",
+        "shortDescription": "Estimate professional moving costs based on distance, home size, and packing services."
+      },
+      {
+        "route": "square-footage-calculator",
+        "displayName": "Square Footage Calculator",
+        "shortDescription": "Calculate square footage from length and width and estimate property value."
       }
     ]
   },
@@ -229,6 +304,31 @@
         "route": "wind-chill-calculator",
         "displayName": "Wind Chill Calculator",
         "shortDescription": "Calculate wind chill temperature and how cold it feels in windy weather."
+      },
+      {
+        "route": "body-fat-calculator",
+        "displayName": "Body Fat Calculator",
+        "shortDescription": "Estimate body fat percentage using the US Navy formula from simple measurements."
+      },
+      {
+        "route": "protein-intake-calculator",
+        "displayName": "Protein Intake Calculator",
+        "shortDescription": "Calculate daily protein needs based on body weight and activity level."
+      },
+      {
+        "route": "ideal-weight-calculator",
+        "displayName": "Ideal Weight Calculator",
+        "shortDescription": "Calculate ideal body weight using Devine, Robinson, and Miller formulas."
+      },
+      {
+        "route": "due-date-calculator",
+        "displayName": "Due Date Calculator",
+        "shortDescription": "Calculate your pregnancy due date, current week, and trimester using Naegele's rule."
+      },
+      {
+        "route": "blood-pressure-checker",
+        "displayName": "Blood Pressure Checker",
+        "shortDescription": "Check your blood pressure category based on AHA guidelines."
       }
     ]
   },
@@ -281,6 +381,36 @@
         "route": "random-number-generator",
         "displayName": "Random Number Generator",
         "shortDescription": "Generate random numbers within your desired range — suitable for draws and games."
+      },
+      {
+        "route": "time-zone-converter",
+        "displayName": "Time Zone Converter",
+        "shortDescription": "Convert time between major world time zones instantly."
+      },
+      {
+        "route": "grade-calculator",
+        "displayName": "Grade Calculator",
+        "shortDescription": "Calculate what score you need on your final exam to reach your desired grade."
+      },
+      {
+        "route": "password-generator",
+        "displayName": "Password Generator",
+        "shortDescription": "Generate strong, random passwords with customizable length and character types."
+      },
+      {
+        "route": "character-counter",
+        "displayName": "Character Counter",
+        "shortDescription": "Count characters, words, sentences, and paragraphs with social media limit checks."
+      },
+      {
+        "route": "json-formatter",
+        "displayName": "JSON Formatter",
+        "shortDescription": "Format, beautify, validate, and minify JSON data instantly."
+      },
+      {
+        "route": "countdown-timer",
+        "displayName": "Countdown Timer",
+        "shortDescription": "Set a countdown timer with hours, minutes, and seconds and get alerted when time is up."
       }
     ]
   },
@@ -348,6 +478,26 @@
         "route": "life-calculator",
         "displayName": "Life Calculator",
         "shortDescription": "Calculate how many days, hours, and heartbeats you have lived."
+      },
+      {
+        "route": "coin-flip",
+        "displayName": "Coin Flip",
+        "shortDescription": "Flip a virtual coin and track heads vs tails statistics."
+      },
+      {
+        "route": "rock-paper-scissors",
+        "displayName": "Rock Paper Scissors",
+        "shortDescription": "Play Rock Paper Scissors against the computer with score tracking."
+      },
+      {
+        "route": "love-calculator",
+        "displayName": "Love Calculator",
+        "shortDescription": "Test love compatibility between two names with a fun percentage score."
+      },
+      {
+        "route": "baby-name-generator",
+        "displayName": "Baby Name Generator",
+        "shortDescription": "Generate popular American baby names by gender and starting letter."
       }
     ]
   }

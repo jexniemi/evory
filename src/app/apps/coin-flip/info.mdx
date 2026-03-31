@@ -1,0 +1,81 @@
+import FAQ from "@/components/FAQ"
+
+## How the Coin Flip Simulator Works
+
+Our free online coin flip simulator uses JavaScript's cryptographically-informed `Math.random()` function to generate a fair, unbiased 50/50 result every time you click the button. Each flip is completely independent — previous results have absolutely no influence on future outcomes. The tool includes a visual animation, displays "Heads" or "Tails," and tracks a complete history of your last 10 flips along with running statistics.
+
+## The Mathematics of Coin Flipping
+
+A fair coin flip is one of the simplest and most fundamental concepts in probability theory. The probability of getting heads on any single flip is exactly **1/2 (50%)**, and the probability of tails is also **1/2 (50%)**. These two outcomes are mutually exclusive and exhaustive — one of them must occur.
+
+For multiple independent flips, probabilities compound multiplicatively. The probability of getting a specific sequence of outcomes across **n** flips is:
+
+**P = (1/2)ⁿ**
+
+For example, the probability of getting heads five times in a row is (1/2)⁵ = 1/32 ≈ 3.125%.
+
+## Probability Reference Table
+
+Here are the probabilities for specific outcomes across multiple coin flips:
+
+| Flips | P(All Heads)   | P(All Tails)   | P(At Least One Head) | Total Outcomes |
+|-------|---------------|---------------|---------------------|----------------|
+| 1     | 50%           | 50%           | 50%                 | 2              |
+| 2     | 25%           | 25%           | 75%                 | 4              |
+| 3     | 12.5%         | 12.5%         | 87.5%               | 8              |
+| 5     | 3.125%        | 3.125%        | 96.875%             | 32             |
+| 7     | 0.78%         | 0.78%         | 99.22%              | 128            |
+| 10    | 0.098%        | 0.098%        | 99.9%               | 1,024          |
+| 20    | 0.0001%       | 0.0001%       | ~100%               | 1,048,576      |
+
+As you can see, extreme streaks become exponentially unlikely as the number of flips increases, though they remain possible.
+
+## The Law of Large Numbers
+
+One of the most important concepts in probability is the **law of large numbers**. It states that as the number of trials increases, the observed ratio of outcomes will converge toward the theoretical probability. For coin flipping, this means:
+
+- After 10 flips, you might see 7 heads and 3 tails (70%/30%) — perfectly normal.
+- After 100 flips, you would likely see something close to 55/45 or similar.
+- After 10,000 flips, the ratio will be very close to 50%/50%.
+
+This does **not** mean the coin "remembers" previous flips or that tails becomes "due" after a streak of heads. Each flip remains independent. The convergence happens because the early imbalance becomes statistically insignificant relative to the total number of flips. This misconception — believing past results influence future ones — is known as the **gambler's fallacy**.
+
+## Uses in Decision Making
+
+Coin flips have been used for centuries to make fair, unbiased decisions:
+
+- **Settling disputes** — When two parties cannot agree, a coin flip provides a neutral resolution that both sides accept beforehand.
+- **Sports** — The coin toss determines which team kicks off or chooses sides. In NFL overtime, the team that wins the coin toss can choose to receive the ball.
+- **Elections** — In some jurisdictions, tied local elections are resolved by a coin flip. This has happened multiple times in U.S. municipal elections.
+- **Random assignment** — In scientific experiments, coin flips (or their digital equivalent) assign participants to control or treatment groups.
+
+## The NFL Overtime Coin Toss
+
+In American football, the overtime coin toss has been a subject of significant debate. Under the previous rules, the team winning the toss could elect to receive the kickoff and win the game with a single touchdown drive — without the opposing team ever touching the ball. Statistical analysis showed that the coin toss winner won approximately 52-54% of overtime games, sparking rule changes. Since 2024, the NFL adopted a modified overtime format ensuring both teams get at least one possession.
+
+## Famous Coin Flips in History
+
+Coin flips have decided some remarkable moments: Wilbur and Orville Wright flipped a coin to decide who would pilot their first powered flight at Kitty Hawk in 1903 — Wilbur won the toss but his attempt failed, so Orville made the historic first flight three days later. The city of Portland, Oregon, was named by a coin flip between founders Asa Lovejoy (who wanted "Boston") and Francis Pettygrove (who wanted "Portland") in 1845.
+
+<FAQ items={[
+  { q: "Is the coin flip truly random and fair?", a: "Yes. Each flip uses JavaScript's Math.random() function, which produces a uniform distribution between 0 and 1. Results above 0.5 are heads, below 0.5 are tails — giving an exact 50/50 probability for each independent flip." },
+  { q: "Can I get heads 10 times in a row?", a: "Yes, although it is unlikely. The probability of getting 10 consecutive heads is (1/2)^10 = 1/1024, or about 0.098%. It is rare but entirely possible and does not indicate the coin is biased." },
+  { q: "Does the coin remember previous flips?", a: "No. Each coin flip is an independent event. Previous results have zero influence on future outcomes. Believing otherwise is known as the gambler's fallacy." },
+  { q: "What is the gambler's fallacy?", a: "The gambler's fallacy is the mistaken belief that past random events affect the probability of future ones. For example, believing tails is 'due' after five consecutive heads. In reality, the probability of tails on the next flip remains exactly 50%." },
+  { q: "Can I use this for making real decisions?", a: "Absolutely. A coin flip is a perfectly fair way to decide between two equally weighted options. Many people also use it as a decision-making trick: flip the coin, and your emotional reaction to the result reveals what you actually prefer." },
+]} />
+
+### Related Tools
+
+- [Dice Generator](/apps/dice-generator) — Roll virtual dice for games and decisions
+- [Random Number Generator](/apps/random-number-generator) — Generate random numbers in any range
+- [Lottery Number Generator](/apps/lottery-number-generator) — Generate random lottery numbers
+- [Raffle Machine](/apps/raffle-machine) — Draw a winner from a list of names
+- [Percentage Calculator](/apps/percentage-calculator) — Calculate percentages and probabilities
+
+### Sources
+
+- Khan Academy — Probability and Coin Flips: [khanacademy.org](https://www.khanacademy.org/math/statistics-probability/probability-library)
+- Stanford Encyclopedia of Philosophy — Probability Interpretations: [plato.stanford.edu](https://plato.stanford.edu/entries/probability-interpret/)
+- NFL Football Operations — Overtime Rules: [operations.nfl.com](https://operations.nfl.com/the-rules/nfl-overtime-rules/)
+- Encyclopaedia Britannica — Law of Large Numbers: [britannica.com](https://www.britannica.com/science/law-of-large-numbers)

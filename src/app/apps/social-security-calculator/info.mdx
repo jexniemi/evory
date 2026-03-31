@@ -1,0 +1,128 @@
+import FAQ from "@/components/FAQ"
+
+## How the Social Security Calculator Works
+
+The Social Security calculator estimates your monthly retirement benefit based on when you choose to start claiming. Your benefit amount depends critically on the age at which you file — claiming before your full retirement age (FRA) permanently reduces your benefit, while delaying past FRA increases it. This calculator uses the actual Social Security Administration (SSA) reduction and delayed retirement credit formulas to project your adjusted monthly benefit, annual benefit, and total lifetime benefits received by age 85.
+
+### Benefit Adjustment Formula
+
+The SSA uses a precise formula to adjust benefits based on claiming age relative to full retirement age (67 for those born in 1960 or later):
+
+**Early claiming (before age 67):**
+
+> For the first 36 months early: benefit is reduced by **5/9 of 1% per month** (6.67% per year)
+
+> For each additional month beyond 36: benefit is reduced by **5/12 of 1% per month** (5% per year)
+
+**Delayed claiming (after age 67, up to 70):**
+
+> Benefit increases by **2/3 of 1% per month** (8% per year) for each month you delay
+
+### Worked Example
+
+Suppose your full retirement age benefit (at 67) is $2,000/month:
+
+**Claiming at age 62 (60 months early):**
+- First 36 months: 36 × 5/900 = 20.0% reduction
+- Next 24 months: 24 × 5/1200 = 10.0% reduction
+- Total reduction: 30.0%
+- Adjusted benefit: $2,000 × 0.70 = **$1,400/month**
+
+**Claiming at age 67 (full retirement age):**
+- No adjustment: **$2,000/month**
+
+**Claiming at age 70 (36 months delayed):**
+- Increase: 36 × 2/300 = 24.0%
+- Adjusted benefit: $2,000 × 1.24 = **$2,480/month**
+
+The difference between claiming at 62 versus 70 is $1,080 per month — a 77% larger benefit by waiting.
+
+## Understanding Social Security Retirement Benefits
+
+Social Security is the largest income source for most American retirees. Funded through FICA payroll taxes (6.2% of wages up to $168,600 in 2024 from both employees and employers), the program provides monthly benefits to eligible workers and their dependents.
+
+### Full Retirement Age (FRA)
+
+Your full retirement age depends on your birth year:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Birth Year</th>
+      <th>Full Retirement Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1943–1954</td><td>66</td></tr>
+    <tr><td>1955</td><td>66 and 2 months</td></tr>
+    <tr><td>1956</td><td>66 and 4 months</td></tr>
+    <tr><td>1957</td><td>66 and 6 months</td></tr>
+    <tr><td>1958</td><td>66 and 8 months</td></tr>
+    <tr><td>1959</td><td>66 and 10 months</td></tr>
+    <tr><td>1960 or later</td><td>67</td></tr>
+  </tbody>
+</table>
+
+This calculator uses FRA of 67, which applies to anyone born in 1960 or later.
+
+### Early vs. Delayed Claiming: The Trade-Off
+
+Claiming early means smaller monthly checks but more total checks. Claiming later means larger checks but fewer years of payments. The **break-even age** is the age at which total lifetime benefits from delayed claiming surpass total benefits from early claiming.
+
+For a $2,000 FRA benefit:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Claiming Age</th>
+      <th>Monthly Benefit</th>
+      <th>Annual Benefit</th>
+      <th>Total by Age 85</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>62</td><td>$1,400</td><td>$16,800</td><td>$386,400</td></tr>
+    <tr><td>64</td><td>$1,600</td><td>$19,200</td><td>$403,200</td></tr>
+    <tr><td>67</td><td>$2,000</td><td>$24,000</td><td>$432,000</td></tr>
+    <tr><td>70</td><td>$2,480</td><td>$29,760</td><td>$446,400</td></tr>
+  </tbody>
+</table>
+
+In this example, claiming at 70 beats claiming at 62 in total lifetime benefits around age 80–81. If you expect to live past your early 80s, delaying generally pays off financially.
+
+### Factors That Affect Your Decision
+
+Several personal factors influence the optimal claiming age:
+
+- **Health and life expectancy** — those in poor health may benefit from claiming early
+- **Other income sources** — pensions, 401(k), and savings can bridge the gap while delaying
+- **Spousal benefits** — married couples can coordinate strategies for maximum household income
+- **Tax implications** — up to 85% of Social Security benefits may be taxable depending on total income
+- **Working while claiming** — earning above $22,320 (2024) before FRA reduces benefits temporarily
+
+### Cost-of-Living Adjustments (COLA)
+
+Social Security benefits are adjusted annually for inflation through COLA increases. In recent years, COLA has ranged from 1.3% to 8.7%. This means the real purchasing power of your benefit is somewhat protected against inflation, making it an especially valuable source of guaranteed lifetime income.
+
+<FAQ items={[
+  { q: "When is the best age to claim Social Security?", a: "There is no single best age — it depends on your health, other income sources, and financial needs. Delaying until 70 maximizes monthly benefits but only pays off if you live past your early 80s. Claiming at 62 makes sense if you need income immediately or have health concerns." },
+  { q: "Can I work while receiving Social Security?", a: "Yes, but if you claim before full retirement age and earn above $22,320 (2024 limit), your benefits are temporarily reduced by $1 for every $2 earned above the limit. After reaching FRA, there is no earnings penalty, and withheld benefits are recalculated and restored." },
+  { q: "Are Social Security benefits taxed?", a: "Up to 85% of your benefits may be subject to federal income tax if your combined income exceeds certain thresholds ($25,000 for individuals, $32,000 for married filing jointly). Thirteen states also tax Social Security benefits." },
+  { q: "What if I change my mind after claiming?", a: "You can withdraw your application within 12 months of your first payment, but you must repay all benefits received. After that, you can suspend benefits at FRA to earn delayed credits until age 70." },
+  { q: "How is my benefit amount calculated?", a: "SSA calculates your Average Indexed Monthly Earnings (AIME) from your highest 35 years of earnings, then applies a formula to determine your Primary Insurance Amount (PIA) — your benefit at full retirement age." },
+]} />
+
+### Related Tools
+
+- [401(k) Calculator](/apps/401k-calculator) — Project your 401(k) retirement savings
+- [Paycheck Calculator](/apps/paycheck-calculator) — Estimate take-home pay after FICA and taxes
+- [Age Calculator](/apps/age-calculator) — Calculate your exact age in years, months, and days
+- [Compound Interest Calculator](/apps/compound-interest-calculator) — See how savings grow with compound returns
+- [Investment Return Calculator](/apps/investment-return-calculator) — Calculate ROI on investments
+
+### Sources
+
+- Social Security Administration: [Retirement Benefits](https://www.ssa.gov/benefits/retirement/)
+- Social Security Administration: [Early or Late Retirement](https://www.ssa.gov/oact/quickcalc/earlyretire.html)
+- Social Security Administration: [Delayed Retirement Credits](https://www.ssa.gov/benefits/retirement/planner/delayret.html)
+- IRS: [Social Security Benefits Taxation](https://www.irs.gov/taxtopics/tc423)

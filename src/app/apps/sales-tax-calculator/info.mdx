@@ -1,0 +1,101 @@
+import FAQ from "@/components/FAQ"
+
+## How the Sales Tax Calculator Works
+
+The sales tax calculator helps you quickly determine how much sales tax you owe on a purchase and what the total price will be after tax. It also performs a reverse calculation, showing you the pre-tax price if you already know the total amount paid. Sales tax is a consumption tax imposed by state and local governments on the sale of goods and certain services in the United States. Unlike value-added tax (VAT) used in many other countries, US sales tax is applied only at the final point of sale and varies significantly by jurisdiction.
+
+### Sales Tax Formula
+
+The basic formula for calculating sales tax is straightforward:
+
+> **Tax Amount = Item Price × (Tax Rate ÷ 100)**
+
+> **Total Price = Item Price + Tax Amount**
+
+For the reverse calculation (finding the pre-tax price from a total that already includes tax):
+
+> **Pre-Tax Price = Total Price ÷ (1 + Tax Rate ÷ 100)**
+
+### Worked Example
+
+Suppose you are purchasing a laptop priced at $899.99 in Texas, where the combined state and local sales tax rate is 8.25%:
+
+- **Tax amount:** $899.99 × 0.0825 = **$74.25**
+- **Total price:** $899.99 + $74.25 = **$974.24**
+- **Reverse calculation:** If a receipt shows $974.24 total, the pre-tax price is $974.24 ÷ 1.0825 = **$899.99**
+
+This reverse feature is especially useful when splitting bills, filing expense reports, or reconciling receipts that only show the total amount paid.
+
+## Understanding US Sales Tax
+
+Sales tax in the United States is a patchwork system. There is no federal sales tax — instead, 45 states and the District of Columbia impose their own state-level sales taxes, and many localities add additional taxes on top.
+
+### States with No Sales Tax
+
+Five states charge **no state sales tax** at all: **Alaska, Delaware, Montana, New Hampshire, and Oregon**. However, Alaska allows local municipalities to levy their own sales taxes, so some Alaskan cities do charge sales tax. Delaware, Montana, New Hampshire, and Oregon have no sales tax at any level.
+
+### How Rates Vary
+
+Sales tax rates range from as low as 2.9% in Colorado to as high as 7.25% in California at the state level. When combined with local taxes, total rates can exceed 10% in some jurisdictions. For example, parts of Louisiana, Tennessee, and Arkansas have combined rates above 10%.
+
+## State Sales Tax Rate Reference
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>State</th>
+      <th>State Rate</th>
+      <th>Avg. Combined Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>California</td><td>7.25%</td><td>8.68%</td></tr>
+    <tr><td>Texas</td><td>6.25%</td><td>8.20%</td></tr>
+    <tr><td>New York</td><td>4.00%</td><td>8.52%</td></tr>
+    <tr><td>Florida</td><td>6.00%</td><td>7.02%</td></tr>
+    <tr><td>Illinois</td><td>6.25%</td><td>8.82%</td></tr>
+    <tr><td>Pennsylvania</td><td>6.00%</td><td>6.34%</td></tr>
+    <tr><td>Ohio</td><td>5.75%</td><td>7.24%</td></tr>
+    <tr><td>Washington</td><td>6.50%</td><td>9.29%</td></tr>
+    <tr><td>Tennessee</td><td>7.00%</td><td>9.55%</td></tr>
+    <tr><td>Louisiana</td><td>4.45%</td><td>9.56%</td></tr>
+    <tr><td>Colorado</td><td>2.90%</td><td>7.81%</td></tr>
+    <tr><td>Oregon</td><td>0.00%</td><td>0.00%</td></tr>
+    <tr><td>Delaware</td><td>0.00%</td><td>0.00%</td></tr>
+    <tr><td>Montana</td><td>0.00%</td><td>0.00%</td></tr>
+    <tr><td>New Hampshire</td><td>0.00%</td><td>0.00%</td></tr>
+  </tbody>
+</table>
+
+### What Is Taxed?
+
+Most tangible personal property — clothing, electronics, furniture, and vehicles — is subject to sales tax. However, many states exempt essential items. Groceries are exempt or taxed at a reduced rate in most states. Prescription medications are exempt in nearly every state. Some states also exempt clothing (such as Pennsylvania and New Jersey) or impose tax holidays during back-to-school seasons.
+
+Services are generally not taxed in most states, though some states tax certain services like auto repair, landscaping, or dry cleaning. Digital goods — including downloaded software, e-books, and streaming services — are taxed in a growing number of states, though rules vary widely.
+
+### Use Tax
+
+When you purchase items from out-of-state sellers who do not collect sales tax, you are technically required to pay **use tax** at your home state's rate. After the 2018 Supreme Court ruling in *South Dakota v. Wayfair*, most online retailers now collect sales tax on behalf of the states, but use tax obligations still apply to private and out-of-state purchases.
+
+<FAQ items={[
+  { q: "How do I find my exact local sales tax rate?", a: "Visit your state's department of revenue website or use a rate lookup tool by entering your ZIP code. Combined rates include state, county, city, and special district taxes." },
+  { q: "Is sales tax included in the listed price in the US?", a: "No. Unlike many countries, US prices shown on shelves and online listings typically do not include sales tax. Tax is added at checkout." },
+  { q: "Do I pay sales tax on online purchases?", a: "Yes. Since the 2018 Wayfair decision, most states require online retailers to collect sales tax if they have economic nexus in the state, even without a physical presence." },
+  { q: "What is the difference between sales tax and VAT?", a: "Sales tax is collected only at the final point of sale. VAT (value-added tax) is collected at every stage of production and distribution. The US uses sales tax; most other developed countries use VAT." },
+  { q: "Are groceries taxed?", a: "It depends on the state. Most states exempt unprepared grocery food from sales tax, but some — like Alabama, Mississippi, and South Dakota — tax groceries at the full rate or a reduced rate." },
+]} />
+
+### Related Tools
+
+- [Tip Calculator](/apps/tip-calculator) — Calculate restaurant tips and split bills
+- [Discount Calculator](/apps/discount-calculator) — Find sale prices after percentage discounts
+- [Percentage Calculator](/apps/percentage-calculator) — Calculate percentages, ratios, and changes
+- [VAT Calculator](/apps/vat-calculator) — Calculate value-added tax for international pricing
+- [Paycheck Calculator](/apps/paycheck-calculator) — Estimate take-home pay after taxes
+
+### Sources
+
+- Tax Foundation: [State Sales Tax Rates](https://taxfoundation.org/publications/state-and-local-sales-tax-rates/)
+- IRS: [Sales Tax Deduction](https://www.irs.gov/taxtopics/tc503)
+- US Supreme Court: [South Dakota v. Wayfair (2018)](https://www.supremecourt.gov/opinions/17pdf/17-494_j4el.pdf)
+- Federation of Tax Administrators: [State Tax Rates](https://www.taxadmin.org/sales-tax-rates)
