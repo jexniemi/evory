@@ -130,8 +130,8 @@ export default function NameSearchEngine() {
             ) : (
               <div className="alert alert-error">
                 <span>
-                  No name days found for &ldquo;{nameQuery}&rdquo;.
-                  Please check the spelling.
+                  No name days found for &ldquo;{nameQuery}&rdquo;. Please check
+                  the spelling.
                 </span>
               </div>
             ))}

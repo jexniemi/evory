@@ -11,9 +11,7 @@ const calcPctOf = (values: number[]) => {
   const pct = values[0];
   const val = values[1];
   const result = (pct / 100) * val;
-  return [
-    { result, label: `${pct}% of ${val} is`, suffix: " ", decimals: 2 },
-  ];
+  return [{ result, label: `${pct}% of ${val} is`, suffix: " ", decimals: 2 }];
 };
 
 // ── Section 2: What % is X of Y ─────────────────────────────────────────────
@@ -23,9 +21,7 @@ const whatPctInputs = [
 ];
 const calcWhatPct = (values: number[]) => {
   const result = values[1] !== 0 ? (values[0] / values[1]) * 100 : 0;
-  return [
-    { result, label: "Share of the whole", suffix: " %", decimals: 2 },
-  ];
+  return [{ result, label: "Share of the whole", suffix: " %", decimals: 2 }];
 };
 
 // ── Section 3: Percentage change from A to B ─────────────────────────────────

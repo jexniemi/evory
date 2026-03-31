@@ -49,7 +49,7 @@ export default function SimpleCalculator({
   resultButtonStyle = "",
 }: Props) {
   const init = inputs.map((input) =>
-    "initialValue" in input ? input.initialValue : input.values[0]
+    "initialValue" in input ? input.initialValue : input.values[0],
   );
   const [values, setValues] = useState<number[]>(init);
   const [result, setResult] = useState<Results>(calculate(init));

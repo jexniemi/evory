@@ -20,7 +20,12 @@ export default function ElectricityCalculator() {
     }
 
     return [
-      { result: cost, label: "Electricity bill total:", suffix: "$", decimals: 2 },
+      {
+        result: cost,
+        label: "Electricity bill total:",
+        suffix: "$",
+        decimals: 2,
+      },
     ];
   };
 

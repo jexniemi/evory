@@ -44,7 +44,7 @@ export default function FlightCO2Calculator() {
     lat1: number,
     lon1: number,
     lat2: number,
-    lon2: number
+    lon2: number,
   ): number {
     const R = 6371.0; // Radius of the Earth in kilometers
     const toRadians = (degree: number) => degree * (Math.PI / 180);
@@ -69,13 +69,13 @@ export default function FlightCO2Calculator() {
     airport1: Airport,
     airport2: Airport,
     passengers: number = 1,
-    numberOfTrips: number = 1
+    numberOfTrips: number = 1,
   ): number {
     const distance = haversineDistance(
       parseFloat(airport1._geoloc.lat),
       parseFloat(airport1._geoloc.lon),
       parseFloat(airport2._geoloc.lat),
-      parseFloat(airport2._geoloc.lon)
+      parseFloat(airport2._geoloc.lon),
     );
 
     const fuelConsumptionPerKmPerPassenger = 2.5 / 100; // Average fuel consumption in liters per passenger-kilometer
