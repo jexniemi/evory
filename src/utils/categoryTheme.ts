@@ -11,7 +11,7 @@ export interface CategoryTheme {
 }
 
 export const categoryThemes: Record<string, CategoryTheme> = {
-  "Palkka & Verot": {
+  "Salary & Taxes": {
     icon: "💼",
     accent: "border-l-amber-400",
     bg: "bg-amber-50",
@@ -20,7 +20,7 @@ export const categoryThemes: Record<string, CategoryTheme> = {
     badge: "bg-amber-100 text-amber-700",
     text: "text-amber-600",
   },
-  "Säästöt & Sijoitukset": {
+  "Savings & Investments": {
     icon: "📈",
     accent: "border-l-emerald-400",
     bg: "bg-emerald-50",
@@ -29,7 +29,7 @@ export const categoryThemes: Record<string, CategoryTheme> = {
     badge: "bg-emerald-100 text-emerald-700",
     text: "text-emerald-600",
   },
-  "Arki & Koti": {
+  "Daily Life & Home": {
     icon: "🏠",
     accent: "border-l-orange-400",
     bg: "bg-orange-50",
@@ -38,7 +38,7 @@ export const categoryThemes: Record<string, CategoryTheme> = {
     badge: "bg-orange-100 text-orange-700",
     text: "text-orange-600",
   },
-  "Terveys & Liikunta": {
+  "Health & Fitness": {
     icon: "❤️",
     accent: "border-l-rose-400",
     bg: "bg-rose-50",
@@ -47,7 +47,7 @@ export const categoryThemes: Record<string, CategoryTheme> = {
     badge: "bg-rose-100 text-rose-700",
     text: "text-rose-600",
   },
-  Työkalut: {
+  Tools: {
     icon: "🛠️",
     accent: "border-l-sky-400",
     bg: "bg-sky-50",
@@ -56,7 +56,7 @@ export const categoryThemes: Record<string, CategoryTheme> = {
     badge: "bg-sky-100 text-sky-700",
     text: "text-sky-600",
   },
-  Viihde: {
+  Entertainment: {
     icon: "🎮",
     accent: "border-l-violet-400",
     bg: "bg-violet-50",
