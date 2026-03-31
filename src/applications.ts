@@ -566,6 +566,12 @@ const applications = {
         shortDescription: "How many days until Christmas?",
       },
       {
+        route: "trump-term-countdown",
+        displayName: "Trump Term Countdown",
+        shortDescription:
+          "Live countdown to January 20, 2029 — the end of Trump's second presidential term.",
+      },
+      {
         route: "calendar-tool",
         displayName: "Calendar Tool",
         shortDescription:

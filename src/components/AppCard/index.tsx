@@ -145,6 +145,7 @@ const appIcons: Record<string, string> = {
   "name-generator/cats": "🐈",
   "vacation-days-calculator": "☀️",
   "days-until-christmas": "🎄",
+  "trump-term-countdown": "🇺🇸",
   "calendar-tool": "📆",
   "flag-game": "🏁",
   "military-insignia-quiz": "⭐",
