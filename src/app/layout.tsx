@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     default: "Ewory.com — Free Online Calculators & Web Tools",
     template: "%s | Ewory.com",
   },
+  verification: {
+    google: "enZGqP460TxbNrFNACp4ZDxAWmWs-JfxCHjecGQuILM",
+  },
   description:
     "60+ free online calculators for finance, health, math, and everyday life. No login, no ads — all tools work instantly in your browser.",
   openGraph: {
