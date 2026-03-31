@@ -1,55 +1,100 @@
-## How is the loan monthly payment calculated?
+## Loan Repayment Calculator — Monthly Payments and Total Interest
 
-The calculator uses the annuity method, where the monthly payment remains the same throughout the loan period. In the early stages, a larger part of the installment is interest, and in the later stages, principal repayment.
+The loan repayment calculator shows your monthly payment, total interest cost, and amortization breakdown for any loan amount, interest rate, and term. Whether you are shopping for a mortgage, auto loan, or personal loan, this tool helps you compare scenarios before committing.
+
+### How Is the Monthly Payment Calculated?
+
+The calculator uses the **annuity method** (also called a fixed-rate amortization), where the monthly payment stays the same throughout the loan term. In the early years, most of each payment goes toward interest; in later years, the balance shifts toward principal repayment.
 
 **Formula:**
 
-Monthly payment = P × [r(1+r)ⁿ] / [(1+r)ⁿ − 1]
+> **Monthly payment = P × [r(1+r)^n] / [(1+r)^n − 1]**
 
-where P = loan amount, r = monthly interest rate and n = number of months.
+Where:
+- **P** = loan principal (amount borrowed)
+- **r** = monthly interest rate (annual rate ÷ 12)
+- **n** = total number of monthly payments
 
-## The effect of interest on monthly payment
+**Example:** $250,000 mortgage at 6.5% for 30 years:
+
+r = 0.065 / 12 = 0.005417, n = 360
+
+Monthly payment = $250,000 × [0.005417 × (1.005417)^360] / [(1.005417)^360 − 1] = **$1,580**
+
+Total paid over 30 years: $1,580 × 360 = $568,800 — meaning you pay **$318,800 in interest** on a $250,000 loan.
+
+### Impact of Interest Rate on Total Cost
 
 <table className="table table-sm my-4">
   <thead className="bg-base-200">
     <tr>
-      <th>Loan amount</th>
-      <th>Interest</th>
-      <th>Time</th>
-      <th>Monthly payment</th>
-      <th>Interest total</th>
+      <th>Loan Amount</th>
+      <th>Interest Rate</th>
+      <th>Term</th>
+      <th>Monthly Payment</th>
+      <th>Total Interest</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>150 000 €</td><td>3 %</td><td>25 y</td><td>711 €</td><td>63 400 €</td></tr>
-    <tr><td>150 000 €</td><td>4.5 %</td><td>25 y</td><td>834 €</td><td>100 100 €</td></tr>
-    <tr><td>150 000 €</td><td>6 %</td><td>25 y</td><td>966 €</td><td>139 700 €</td></tr>
-    <tr><td>250 000 €</td><td>4.5 %</td><td>25 y</td><td>1 390 €</td><td>166 800 €</td></tr>
-    <tr><td>250 000 €</td><td>4.5 %</td><td>30 y</td><td>1 267 €</td><td>206 000 €</td></tr>
+    <tr><td>$200,000</td><td>5.0%</td><td>30 yr</td><td>$1,074</td><td>$186,512</td></tr>
+    <tr><td>$200,000</td><td>6.5%</td><td>30 yr</td><td>$1,264</td><td>$255,088</td></tr>
+    <tr><td>$200,000</td><td>7.5%</td><td>30 yr</td><td>$1,398</td><td>$303,435</td></tr>
+    <tr><td>$300,000</td><td>6.5%</td><td>30 yr</td><td>$1,896</td><td>$382,633</td></tr>
+    <tr><td>$300,000</td><td>6.5%</td><td>15 yr</td><td>$2,613</td><td>$170,389</td></tr>
   </tbody>
 </table>
 
-## Payback ratio
+Notice: shortening the term from 30 to 15 years raises the monthly payment but cuts total interest by more than half.
 
-The payback ratio tells how many times you pay back the loan amount. For example, a ratio of 1.67 means you pay 67% of the loan amount in interest.
+### Payback Ratio
 
-The longer the loan term and the higher the interest rate, the higher the ratio — and the more you pay extra.
+The payback ratio tells you how many times over you repay the original loan amount:
 
-## Annuity or equal repayment?
+> **Payback ratio = total payments ÷ loan amount**
 
-- **Annuity:** monthly payment remains the same throughout the loan period. Makes budgeting easier.
-- **Equal repayment:** principal repayment is constant, but monthly payment decreases over time as interest decreases. Total interest costs remain lower.
+A ratio of 2.0 means you pay back double what you borrowed. The higher the interest rate and the longer the term, the higher this ratio — and the more you pay in interest.
 
-This calculator uses the annuity method, which is common for housing loans.
+### Fixed-Rate (Annuity) vs. Adjustable-Rate Loans
 
-## Tips for borrowing
+- **Fixed-rate (annuity):** Monthly payment stays the same for the life of the loan. Budgeting is predictable.
+- **Adjustable-rate (ARM):** Rate changes after an initial fixed period (e.g., 5/1 ARM = fixed for 5 years, then adjusts annually). Lower initial payments but risk of increases.
+- **Equal principal repayment:** The principal portion is constant each month, but total payment decreases over time as interest shrinks. Lower total interest cost.
 
-- Always compare the **effective annual interest rate** (includes margin + reference rate + costs)
-- Shorter loan term = more per month, but significantly less interest
-- Consider payment-free period only as needed — interest still accrues
+This calculator uses the fixed-rate annuity method, which is the most common for mortgages and auto loans in the US.
 
-## Other calculators
+### Tips for Borrowers
 
-- [Installment Calculator](/apps/installment-calculator) — total costs of installment purchases
-- [Compound Interest Calculator](/apps/simple-compound-interest-calculator) — investment growth over time
-- [Investment Return Calculator](/apps/investment-return-calculator) — calculate ROI and annual return
+1. **Compare the APR, not just the rate** — APR includes fees and points, giving a truer cost picture.
+2. **Shorter term = huge savings** — A 15-year mortgage at the same rate saves tens of thousands vs. 30 years.
+3. **Extra payments** — Even $100/month extra toward principal can shave years off a mortgage.
+4. **Avoid payment holidays unless necessary** — Interest still accrues during deferment.
+5. **Check for prepayment penalties** — Some loans charge fees for paying off early.
+6. **Lock your rate** — When applying for a mortgage, a rate lock protects you from increases during processing.
+
+### Frequently Asked Questions
+
+#### What is a good mortgage interest rate?
+Rates depend on the economic environment, your credit score, down payment, and loan type. As of 2024, rates between 6–7% are common for 30-year fixed mortgages. A credit score above 740 typically qualifies for the best rates.
+
+#### Should I choose a 15-year or 30-year mortgage?
+A 15-year mortgage has higher monthly payments but significantly lower total interest. Choose 15 years if you can comfortably afford the payments; otherwise, choose 30 years and make extra payments when possible.
+
+#### How does my credit score affect my rate?
+Lenders offer lower rates to borrowers with higher credit scores because they represent less risk. A difference of 1 percentage point on a $300,000 mortgage can cost over $60,000 in additional interest over 30 years.
+
+#### What is PMI?
+Private Mortgage Insurance (PMI) is required when your down payment is less than 20%. It typically costs 0.5–1% of the loan amount annually and can be removed once you reach 20% equity.
+
+### Related Tools
+
+- [Installment Calculator](/apps/installment-calculator) — Calculate total costs of installment purchases
+- [Compound Interest Calculator](/apps/compound-interest-calculator) — See how investments grow over time
+- [Investment Return Calculator](/apps/investment-return-calculator) — Calculate ROI and annual return
+- [Percentage Calculator](/apps/percentage-calculator) — Work out interest rate differences
+- [Net Salary Calculator](/apps/net-salary-calculator) — See how much you take home for loan affordability
+
+### Sources
+
+- Consumer Financial Protection Bureau: [Mortgage Basics](https://www.consumerfinance.gov/owning-a-home/)
+- Federal Reserve: [Consumer Credit](https://www.federalreserve.gov/releases/g19/current/)
+- Freddie Mac: [Primary Mortgage Market Survey](https://www.freddiemac.com/pmms)

@@ -1,49 +1,121 @@
-## Macro Calculator – Calculate daily calories and macronutrients
+## Macro Calculator — Daily Calories and Macronutrient Targets
 
-The macro calculator calculates your daily calorie needs and appropriate macronutrient ratios – protein, carbohydrates and fat – based on your body's weight, goal and activity level.
+The macro calculator estimates your daily calorie needs and breaks them down into the three macronutrients — protein, carbohydrates, and fat — based on your weight, activity level, and fitness goal. Whether you want to lose fat, build muscle, or maintain your current weight, tracking macros gives you far more control than counting calories alone.
 
-### What are macronutrients?
+### What Are Macronutrients?
 
-Macronutrients (or "macros") are nutrients from which the body gets energy:
+Macronutrients ("macros") are the three types of nutrients that provide energy:
 
-- **Protein** – 4 kcal/g. Needed for muscle building and maintenance. Important for everyone.
-- **Carbohydrates** – 4 kcal/g. The body's and brain's primary energy source.
-- **Fat** – 9 kcal/g. Needed for hormone function, vitamin absorption and cell building.
+- **Protein** — 4 kcal per gram. Essential for muscle repair, immune function, and enzyme production. Found in meat, fish, eggs, dairy, legumes, and tofu.
+- **Carbohydrates** — 4 kcal per gram. The body's and brain's preferred fuel source. Found in grains, fruits, vegetables, and sugars.
+- **Fat** — 9 kcal per gram. Needed for hormone production, vitamin absorption (A, D, E, K), and cell membrane integrity. Found in oils, nuts, avocados, and fatty fish.
 
-### How does calorie calculation work?
+### How the Calculator Works
 
-The calculator uses a simplified BMR (Basal Metabolic Rate) estimate, which is multiplied by an activity factor. Depending on your goal, calories are added or subtracted:
+1. **Estimate BMR** — The calculator uses your weight, height, age, and gender to estimate Basal Metabolic Rate.
+2. **Apply activity factor** — BMR is multiplied by an activity multiplier to get Total Daily Energy Expenditure (TDEE).
+3. **Adjust for goal** — Calories are added or subtracted based on your objective.
+4. **Split macros** — Calories are divided into protein, carbs, and fat according to evidence-based ratios.
+
+### Calorie Adjustments by Goal
 
 <table className="table table-sm my-4">
-  <thead>
-    <tr className="bg-base-200">
+  <thead className="bg-base-200">
+    <tr>
       <th>Goal</th>
-      <th>Calorie change</th>
-      <th>Protein recommendation</th>
+      <th>Calorie Adjustment</th>
+      <th>Protein Target</th>
+      <th>Fat Target</th>
+      <th>Carbs</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>Maintain weight</td><td>TDEE</td><td>1.6 g / kg</td></tr>
-    <tr><td>Lose weight</td><td>–15 % TDEE</td><td>2.2 g / kg</td></tr>
-    <tr><td>Gain muscle mass</td><td>+10 % TDEE</td><td>2.0 g / kg</td></tr>
+    <tr><td>Lose weight</td><td>TDEE − 15–20%</td><td>1.0 g/lb (2.2 g/kg)</td><td>0.35 g/lb</td><td>Remaining calories</td></tr>
+    <tr><td>Maintain weight</td><td>TDEE</td><td>0.8 g/lb (1.6 g/kg)</td><td>0.35 g/lb</td><td>Remaining calories</td></tr>
+    <tr><td>Build muscle</td><td>TDEE + 10–15%</td><td>0.9 g/lb (2.0 g/kg)</td><td>0.35 g/lb</td><td>Remaining calories</td></tr>
   </tbody>
 </table>
 
-### Activity levels
+### Sample Macro Plan — 2,200 Calorie Day
 
-- **Sedentary work** – No exercise or very little (factor 1.2)
-- **Light exercise** – 1–3 days per week (factor 1.375)
-- **Moderate exercise** – 3–5 days per week (factor 1.55)
-- **Intense exercise** – 6–7 days per week (factor 1.725)
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Macro</th>
+      <th>Grams</th>
+      <th>Calories</th>
+      <th>% of Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Protein</td><td>165 g</td><td>660 kcal</td><td>30%</td></tr>
+    <tr><td>Carbohydrates</td><td>248 g</td><td>990 kcal</td><td>45%</td></tr>
+    <tr><td>Fat</td><td>61 g</td><td>550 kcal</td><td>25%</td></tr>
+    <tr><td>**Total**</td><td></td><td>**2,200 kcal**</td><td>**100%**</td></tr>
+  </tbody>
+</table>
 
-### Important note
+### Activity Level Definitions
 
-The calculator gives an indicative estimate. Individual differences in metabolism, age, gender and body composition affect actual needs. For more accurate guidance, consult a nutritionist.
+- **Sedentary** — Desk job, minimal walking (factor 1.2)
+- **Lightly active** — Exercise 1–3 days per week or active commute (factor 1.375)
+- **Moderately active** — Exercise 3–5 days per week (factor 1.55)
+- **Very active** — Hard exercise 6–7 days per week (factor 1.725)
+- **Extremely active** — Physical labor job + daily intense training (factor 1.9)
 
-More information about macronutrients: [CDC – Nutrition](https://www.cdc.gov/nutrition/)
+### High-Protein Food Sources
 
-### See also
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Food</th>
+      <th>Serving</th>
+      <th>Protein</th>
+      <th>Calories</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Chicken breast</td><td>6 oz (170 g)</td><td>42 g</td><td>187 kcal</td></tr>
+    <tr><td>Salmon</td><td>6 oz (170 g)</td><td>34 g</td><td>280 kcal</td></tr>
+    <tr><td>Greek yogurt (nonfat)</td><td>1 cup</td><td>17 g</td><td>100 kcal</td></tr>
+    <tr><td>Eggs</td><td>2 large</td><td>12 g</td><td>140 kcal</td></tr>
+    <tr><td>Tofu (firm)</td><td>1/2 block</td><td>20 g</td><td>180 kcal</td></tr>
+    <tr><td>Lentils (cooked)</td><td>1 cup</td><td>18 g</td><td>230 kcal</td></tr>
+    <tr><td>Whey protein</td><td>1 scoop</td><td>25 g</td><td>120 kcal</td></tr>
+  </tbody>
+</table>
 
-- [Calorie Needs Calculator](/apps/daily-calorie-needs-calculator) – Calculate your daily calorie needs in more detail
-- [BMI Calculator](/apps/bmi-calculator) – Calculate your body mass index
-- [BMR Calculator](/apps/bmr-calculator) – BMR calculator
+### Common Macro Mistakes
+
+1. **Not eating enough protein** — Most people undereat protein, especially when cutting calories. Aim for at least 0.7 g per pound of body weight.
+2. **Fearing fat** — Dietary fat is essential for hormones and satiety. Going below 20% of calories from fat can disrupt hormone function.
+3. **Ignoring fiber** — While technically a carbohydrate, fiber does not significantly contribute to calories and is crucial for digestive health. Aim for 25–35 g per day.
+4. **Obsessing over precision** — Hitting your targets within ±10% is perfectly fine. Consistency over weeks matters more than daily perfection.
+
+### Frequently Asked Questions
+
+#### What is the best macro ratio for weight loss?
+A common evidence-based split is **40% protein, 35% carbs, 25% fat** during a calorie deficit. High protein preserves muscle mass while you lose fat.
+
+#### Do I need to track macros forever?
+No. Most people track for 2–3 months to build awareness of portion sizes and food composition. After that, intuitive eating with occasional check-ins is usually sufficient.
+
+#### Can I build muscle in a calorie deficit?
+Yes, but only under specific conditions: if you are a beginner, returning after a layoff, or significantly overweight. For experienced lifters, a slight calorie surplus is needed for optimal muscle growth.
+
+#### How do I track my macros?
+Use a food tracking app like MyFitnessPal, Cronometer, or MacroFactor. Weigh food with a kitchen scale for the most accuracy.
+
+### Related Tools
+
+- [Daily Calorie Needs Calculator](/apps/daily-calorie-needs-calculator) — Get your TDEE estimate
+- [BMR Calculator](/apps/bmr-calculator) — Find your basal metabolic rate
+- [Calorie Burn Calculator](/apps/calorie-burn-calculator) — Estimate exercise calorie expenditure
+- [BMI Calculator](/apps/bmi-calculator) — Check your body mass index
+- [Portion Calculator](/apps/portion-calculator) — Scale recipes to your macro targets
+
+### Sources
+
+- CDC: [Nutrition](https://www.cdc.gov/nutrition/)
+- ISSN Position Stand: [Protein and Exercise](https://jissn.biomedcentral.com/articles/10.1186/s12970-017-0177-8)
+- Dietary Guidelines for Americans: [2020–2025](https://www.dietaryguidelines.gov/)

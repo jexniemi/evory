@@ -1,6 +1,4 @@
-# Description
-
-Many web "apps", such as calculators, helper tools and fun applications in different categories. The aim is max SEO optimization for traffic, but the apps need to also be useful.
+Every page (info.mdx) follows the SEO template: formula → worked example → reference table → FAQ (3–5 questions targeting "People Also Ask") → related tools (internal links) → authoritative sources.
 
 # Files
 
@@ -8,8 +6,3 @@ Many web "apps", such as calculators, helper tools and fun applications in diffe
 - The info.mdx files need to have good amount of text for SEO optimization, and source links as well if possible. Interlinking applications is also recommended.
 - applications.json contains route configs and display names for each app
 - next.config.mjs do not touch
-
-# Tech:
-
-- Next.js
-- Daisy UI

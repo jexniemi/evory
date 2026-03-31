@@ -1,79 +1,119 @@
-## How does the BAC calculator work?
+## BAC Calculator — Estimate Your Blood Alcohol Concentration
 
-The calculator uses the **Widmark formula**, which is widely used to estimate blood alcohol concentration (BAC, Blood Alcohol Concentration):
+The BAC (Blood Alcohol Concentration) calculator estimates your blood alcohol level based on the number of standard drinks consumed, your body weight, gender, and the time elapsed since drinking. This tool is for **educational purposes only** — never rely on any calculator to determine if you are safe to drive.
 
-**BAC (‰) = (drinks × 14) ÷ (weight × r) − (0.15 × hours)**
+### How the Widmark Formula Works
+
+The calculator uses the **Widmark formula**, the most widely recognized method for estimating BAC:
+
+> **BAC (%) = (drinks × 14 g) ÷ (weight in grams × r) × 100 − (0.015 × hours)**
 
 Where:
-- **14** = grams of pure alcohol per US standard drink
-- **r** = distribution factor (men 0.68 · women 0.55)
-- **0.15 ‰/h** = alcohol burn rate in blood (average)
+- **14 g** = grams of pure alcohol in one US standard drink
+- **r** = Widmark distribution factor (0.68 for men, 0.55 for women)
+- **0.015%/hour** = average alcohol elimination rate
 
-## What is one standard drink?
+Women reach higher BAC levels than men at the same intake because of a lower distribution factor (less body water relative to body weight) and generally lower levels of alcohol dehydrogenase enzyme.
 
-<table className="table table-sm my-4">
-  <thead className="bg-base-200">
-    <tr>
-      <th>Drink</th>
-      <th>Amount</th>
-      <th>Alcohol</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Beer (5%)</td><td>12 oz</td><td>~14 g</td></tr>
-    <tr><td>Wine (12%)</td><td>5 oz</td><td>~14 g</td></tr>
-    <tr><td>Distilled spirits (40%)</td><td>1.5 oz</td><td>~14 g</td></tr>
-  </tbody>
-</table>
-
-## US BAC limits in traffic
+### What Is One Standard Drink?
 
 <table className="table table-sm my-4">
   <thead className="bg-base-200">
     <tr>
-      <th>Limit</th>
-      <th>Situation</th>
+      <th>Drink Type</th>
+      <th>Serving Size</th>
+      <th>Alcohol Content</th>
+      <th>Pure Alcohol</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>0.08 ‰</td><td>DUI (fine, license suspension)</td></tr>
-    <tr><td>0.00 ‰</td><td>Commercial drivers and drivers under 21</td></tr>
+    <tr><td>Regular beer</td><td>12 oz (355 ml)</td><td>5%</td><td>~14 g</td></tr>
+    <tr><td>Craft / IPA beer</td><td>12 oz (355 ml)</td><td>7–9%</td><td>~20–25 g</td></tr>
+    <tr><td>Wine</td><td>5 oz (148 ml)</td><td>12%</td><td>~14 g</td></tr>
+    <tr><td>Distilled spirits</td><td>1.5 oz (44 ml)</td><td>40%</td><td>~14 g</td></tr>
+    <tr><td>Cocktail (mixed)</td><td>Varies</td><td>Varies</td><td>14–28 g+</td></tr>
   </tbody>
 </table>
 
-## Why is the result only an estimate?
+**Important:** Many drinks served at bars and restaurants contain more alcohol than one standard drink. A large glass of wine (8 oz) is 1.6 standard drinks. A strong cocktail can be 2–3 standard drinks.
 
-The Widmark formula gives an **indicative estimate** — actual BAC can deviate by several tens of percent due to individual factors:
-
-- Metabolism rate varies from person to person
-- Food significantly slows alcohol absorption
-- Medications, fatigue and health status affect
-- Drinking pace (fast vs. slow) affects peak BAC
-
-**⚠️ Never drive if you have consumed alcohol.** The only sure way to know your BAC is an official breathalyzer test.
-
-## Alcohol's effect on performance
-
-Reaction time slows significantly even below the legal limit:
+### US Legal BAC Limits
 
 <table className="table table-sm my-4">
   <thead className="bg-base-200">
     <tr>
-      <th>BAC level</th>
-      <th>Typical effects</th>
+      <th>BAC Level</th>
+      <th>Legal Status</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>0.2–0.5 ‰</td><td>Relaxed feeling, mild slowing of reaction time</td></tr>
-    <tr><td>0.5–1.0 ‰</td><td>Coordination weakens, judgment decreases</td></tr>
-    <tr><td>1.0–2.0 ‰</td><td>Clear intoxication, movement difficult</td></tr>
-    <tr><td>2.0–3.0 ‰</td><td>Strong intoxication, risk of passing out</td></tr>
-    <tr><td>> 3.0 ‰</td><td>Life-threatening condition</td></tr>
+    <tr><td>0.08%</td><td>DUI limit for drivers 21+ in all 50 states</td></tr>
+    <tr><td>0.04%</td><td>DUI limit for commercial drivers (CDL holders)</td></tr>
+    <tr><td>0.00% – 0.02%</td><td>Zero-tolerance limit for drivers under 21 (varies by state)</td></tr>
   </tbody>
 </table>
 
-## Sources
+In Utah, the DUI limit is **0.05%** — the lowest in the nation. Many countries use 0.05% as their standard limit.
 
+### Effects of Alcohol by BAC Level
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>BAC (%)</th>
+      <th>Typical Effects</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>0.02 – 0.03</td><td>Mild relaxation, slight mood elevation</td></tr>
+    <tr><td>0.04 – 0.06</td><td>Lowered inhibitions, mild impairment of reasoning</td></tr>
+    <tr><td>0.07 – 0.09</td><td>Impaired balance and speech, reduced reaction time</td></tr>
+    <tr><td>0.10 – 0.12</td><td>Significant motor impairment, slurred speech</td></tr>
+    <tr><td>0.13 – 0.15</td><td>Blurred vision, anxiety, severe motor impairment</td></tr>
+    <tr><td>0.16 – 0.20</td><td>Nausea, "sloppy drunk" appearance</td></tr>
+    <tr><td>0.25 – 0.30</td><td>Severe intoxication, risk of blackout, vomiting</td></tr>
+    <tr><td>0.30 – 0.40</td><td>Loss of consciousness, life-threatening</td></tr>
+    <tr><td>{'> 0.40'}</td><td>Coma, respiratory failure, death</td></tr>
+  </tbody>
+</table>
+
+### Why the Estimate May Be Inaccurate
+
+The Widmark formula provides a rough estimate. Your actual BAC can differ significantly due to:
+
+- **Food** — Eating before or while drinking slows absorption, lowering peak BAC by up to 20%.
+- **Metabolism** — Elimination rate ranges from 0.010 to 0.020%/hour depending on the individual.
+- **Medications** — Many common medications interact with alcohol and affect absorption.
+- **Body composition** — Muscle tissue absorbs alcohol differently than fat tissue.
+- **Drinking pace** — Rapid consumption produces a higher peak BAC than slow sipping.
+- **Hydration** — Dehydration concentrates alcohol in the blood.
+
+**Never drive after drinking alcohol. The only guaranteed safe BAC for driving is 0.00%.**
+
+### Frequently Asked Questions
+
+#### How long does it take to sober up?
+The body eliminates alcohol at roughly **0.015% per hour**. If your BAC is 0.08%, it takes about 5.3 hours to reach 0.00%. Coffee, cold showers, and fresh air do **not** speed up alcohol metabolism.
+
+#### Why do women get drunk faster?
+Women generally have lower body water content, higher body fat percentage, and less alcohol dehydrogenase enzyme. This means the same amount of alcohol produces a higher BAC in women.
+
+#### Can I trust a personal breathalyzer?
+Consumer breathalyzers vary widely in accuracy. Professional-grade fuel-cell sensors are more reliable, but even these have a margin of error. Never rely on any device to determine driving fitness.
+
+#### How many drinks is the legal limit?
+There is no universal answer — it depends on weight, gender, food intake, and drinking pace. For a 160 lb man, two drinks in one hour might produce a BAC around 0.04%. But individual variation is significant.
+
+### Related Tools
+
+- [BMI Calculator](/apps/bmi-calculator) — Check your body mass index
+- [Calorie Burn Calculator](/apps/calorie-burn-calculator) — Calories burned during activities
+- [Daily Calorie Needs Calculator](/apps/daily-calorie-needs-calculator) — Track your nutrition
+- [Age Calculator](/apps/age-calculator) — Verify legal drinking age
+
+### Sources
+
+- NHTSA: [Drunk Driving](https://www.nhtsa.gov/risky-driving/drunk-driving)
 - CDC: [Alcohol and Public Health](https://www.cdc.gov/alcohol/)
-- NHTSA: [DUI](https://www.nhtsa.gov/risky-driving/drunk-driving)
-- Widmark, E.M.P. (1932). *Principles and applications of medicolegal alcohol determination.*
+- Widmark, E.M.P. (1932). *Principles and Applications of Medicolegal Alcohol Determination.*
+- NIAAA: [What Is a Standard Drink?](https://www.niaaa.nih.gov/alcohols-effects-health/overview-alcohol-consumption/what-standard-drink)

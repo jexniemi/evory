@@ -1,70 +1,138 @@
-## What is BMI?
+## What Is BMI?
 
-BMI (Body Mass Index) is a commonly used measure that assesses the relationship between body weight and height. It is calculated using the formula:
+BMI (Body Mass Index) is a widely used screening tool that estimates body fat by comparing a person's weight to their height. Doctors, insurance companies, and public-health organizations around the world rely on it because the calculation is quick and requires no special equipment — just a scale and a tape measure.
 
-**BMI = weight (kg) ÷ height (m)²**
+BMI was originally developed by Belgian mathematician Adolphe Quetelet in the 1830s and adopted by the World Health Organization (WHO) in the 1990s as the standard classification system for underweight, normal weight, overweight, and obesity.
 
-For example, a person who is 170 cm tall and weighs 70 kg: BMI = 70 ÷ 1.70² = **24.2** (normal weight).
+## How to Calculate BMI
+
+The BMI formula differs slightly depending on whether you use metric or imperial units.
+
+### Metric formula
+
+> **BMI = weight (kg) ÷ height (m)²**
+
+**Example:** A person who is 5 ft 7 in (1.70 m) and weighs 154 lb (70 kg):
+
+BMI = 70 ÷ (1.70 × 1.70) = 70 ÷ 2.89 = **24.2** → Normal weight
+
+### Imperial formula
+
+> **BMI = (weight in pounds × 703) ÷ height in inches²**
+
+**Example:** 154 lb, 67 inches tall:
+
+BMI = (154 × 703) ÷ (67 × 67) = 108,262 ÷ 4,489 = **24.1** → Normal weight
 
 ## WHO BMI Classification
 
 <table className="table table-sm my-4">
   <thead className="bg-base-200">
     <tr>
-      <th>BMI</th>
+      <th>BMI Range</th>
       <th>Classification</th>
+      <th>Health Risk</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>{'< 16.0'}</td><td>Severe underweight</td></tr>
-    <tr><td>16.0–16.9</td><td>Moderate underweight</td></tr>
-    <tr><td>17.0–18.4</td><td>Mild underweight</td></tr>
-    <tr><td>18.5–24.9</td><td>Normal weight</td></tr>
-    <tr><td>25.0–29.9</td><td>Overweight</td></tr>
-    <tr><td>30.0–34.9</td><td>Obesity, grade I</td></tr>
-    <tr><td>35.0–39.9</td><td>Obesity, grade II</td></tr>
-    <tr><td>{'≥ 40.0'}</td><td>Morbid obesity (grade III)</td></tr>
+    <tr><td>{'< 16.0'}</td><td>Severe underweight</td><td>Very high</td></tr>
+    <tr><td>16.0 – 16.9</td><td>Moderate underweight</td><td>High</td></tr>
+    <tr><td>17.0 – 18.4</td><td>Mild underweight</td><td>Moderate</td></tr>
+    <tr><td>18.5 – 24.9</td><td>Normal weight</td><td>Average</td></tr>
+    <tr><td>25.0 – 29.9</td><td>Overweight</td><td>Mildly increased</td></tr>
+    <tr><td>30.0 – 34.9</td><td>Obesity class I</td><td>Increased</td></tr>
+    <tr><td>35.0 – 39.9</td><td>Obesity class II</td><td>High</td></tr>
+    <tr><td>{'≥ 40.0'}</td><td>Obesity class III (morbid)</td><td>Very high</td></tr>
   </tbody>
 </table>
 
-The calculator also shows the lower and upper limits of normal weight based on your height in addition to the BMI value.
+The calculator also shows the lower and upper limits of normal weight based on your height, so you can see the healthy weight range at a glance.
+
+## BMI Ranges by Height — Quick-Reference Table
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Height</th>
+      <th>Normal Weight Range (BMI 18.5–24.9)</th>
+      <th>Overweight Starts At</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>5′0″ (152 cm)</td><td>95 – 127 lb</td><td>128 lb</td></tr>
+    <tr><td>5′2″ (157 cm)</td><td>101 – 136 lb</td><td>137 lb</td></tr>
+    <tr><td>5′4″ (163 cm)</td><td>108 – 145 lb</td><td>146 lb</td></tr>
+    <tr><td>5′6″ (168 cm)</td><td>115 – 154 lb</td><td>155 lb</td></tr>
+    <tr><td>5′8″ (173 cm)</td><td>122 – 164 lb</td><td>165 lb</td></tr>
+    <tr><td>5′10″ (178 cm)</td><td>129 – 174 lb</td><td>175 lb</td></tr>
+    <tr><td>6′0″ (183 cm)</td><td>137 – 184 lb</td><td>185 lb</td></tr>
+    <tr><td>6′2″ (188 cm)</td><td>144 – 194 lb</td><td>195 lb</td></tr>
+    <tr><td>6′4″ (193 cm)</td><td>152 – 205 lb</td><td>206 lb</td></tr>
+  </tbody>
+</table>
 
 ## Limitations of BMI
 
-BMI is a rough indicator that **does not distinguish**:
+While BMI is a useful first screening, it has several well-known blind spots:
 
-- **Muscle mass from fat** — an athlete may be "overweight" according to BMI
-- **Fat distribution** — abdominal obesity is a health risk that BMI does not measure
-- **Age and gender** — body composition differs in the elderly and women
-- **Children and youth** — growth curves are used for children, not BMI
+- **Does not distinguish muscle from fat** — Athletes and bodybuilders often register as "overweight" despite having very low body-fat percentages.
+- **Ignores fat distribution** — Abdominal (visceral) fat carries greater health risk than fat carried in the hips and thighs, but BMI cannot tell where fat is stored.
+- **Age and gender** — Body composition changes with age; women naturally carry more body fat than men at the same BMI.
+- **Ethnicity** — Research shows health risks may rise at lower BMI thresholds for people of South Asian and East Asian descent.
+- **Children and teens** — Growth is accounted for with age- and sex-specific percentile charts, not the standard adult BMI scale.
 
-## Alternative Measures
+## Better Alternatives to BMI
 
 <table className="table table-sm my-4">
   <thead className="bg-base-200">
     <tr>
       <th>Measure</th>
       <th>Risk Threshold</th>
-      <th>Description</th>
+      <th>What It Measures</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>Waist circumference (women)</td><td>{'> 80 cm'}</td><td>Increased health-related risk</td></tr>
-    <tr><td>Waist circumference (men)</td><td>{'> 94 cm'}</td><td>Increased health-related risk</td></tr>
-    <tr><td>Waist-to-height ratio</td><td>{'> 0.5'}</td><td>Waist divided by height</td></tr>
+    <tr><td>Waist circumference (women)</td><td>{'> 35 in (88 cm)'}</td><td>Visceral fat risk</td></tr>
+    <tr><td>Waist circumference (men)</td><td>{'> 40 in (102 cm)'}</td><td>Visceral fat risk</td></tr>
+    <tr><td>Waist-to-height ratio</td><td>{'> 0.5'}</td><td>Central obesity</td></tr>
+    <tr><td>Body-fat percentage (DEXA)</td><td>Varies by age/sex</td><td>Actual fat vs. lean mass</td></tr>
   </tbody>
 </table>
 
-**Body composition analysis** (e.g., InBody measurement) is a more accurate method that measures the proportions of fat and muscle mass separately.
+**Body composition analysis** — such as a DEXA scan or bioelectrical impedance analysis (BIA) — provides a far more detailed picture by measuring fat, muscle, and bone separately.
 
-## When to Contact a Professional?
+## Frequently Asked Questions
 
-If your BMI is below 18.5 or above 30, it is recommended to discuss with a doctor or nutritionist. BMI is just one measure — health status is always assessed as a whole.
+### What is a good BMI?
+A BMI between **18.5 and 24.9** is considered normal weight by the WHO. Within that range, most people face the lowest statistical risk for weight-related health conditions such as type-2 diabetes, hypertension, and cardiovascular disease.
 
-Try also the [basal metabolic rate calculator](/apps/bmr-calculator) or the [daily calorie needs calculator](/apps/daily-calorie-needs-calculator)!
+### Is BMI accurate for muscular people?
+No. BMI cannot tell the difference between muscle and fat. A 200-pound, 5′10″ bodybuilder with 10% body fat will show a BMI of 28.7 ("overweight"), even though they are extremely lean. If you are athletic, waist circumference or body-fat percentage is a better indicator.
+
+### How often should I check my BMI?
+For most adults, checking BMI once or twice a year is sufficient. If you are actively trying to lose or gain weight, monthly tracking alongside waist measurements gives a clearer picture of progress.
+
+### Does BMI apply to children?
+Standard BMI categories are for adults 20 and older. For children and teens ages 2–19, the CDC uses **BMI-for-age percentiles** that compare a child's BMI to others of the same age and sex.
+
+### At what BMI should I see a doctor?
+If your BMI is below **18.5** or above **30**, it is a good idea to discuss your weight with a healthcare provider. However, BMI is just one data point — a doctor will also consider blood pressure, blood sugar, cholesterol, family history, and lifestyle.
+
+## When to Contact a Professional
+
+A BMI outside the normal range does not automatically mean you are unhealthy, but it is a signal worth investigating. Your doctor or a registered dietitian can run additional tests and create a personalized plan that accounts for your full health picture.
+
+## Related Tools
+
+- [BMR Calculator](/apps/bmr-calculator) — Find out how many calories your body burns at rest
+- [Daily Calorie Needs Calculator](/apps/daily-calorie-needs-calculator) — Calculate your total daily energy expenditure (TDEE)
+- [Macro Calculator](/apps/macro-calculator) — Get personalized protein, carb, and fat targets
+- [Calorie Burn Calculator](/apps/calorie-burn-calculator) — See how many calories different exercises burn
+- [Heart Rate Calculator](/apps/heart-rate-calculator) — Explore more health tools
 
 ## Sources
 
-- WHO: [Body mass index – BMI](https://www.who.int/europe/news-room/fact-sheets/item/a-healthy-lifestyle---who-recommendations)
-- CDC: [Obesity in the US](https://www.cdc.gov/obesity/)
-- Duodecim Health Library: [Body Mass Index](https://www.terveyskirjasto.fi/dlk01001)
+- WHO: [Body Mass Index](https://www.who.int/europe/news-room/fact-sheets/item/a-healthy-lifestyle---who-recommendations)
+- CDC: [About Adult BMI](https://www.cdc.gov/bmi/adult-calculator/bmi-categories.html)
+- NIH/NHLBI: [Calculate Your BMI](https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm)
+- Harvard Health: [BMI Calculator](https://www.health.harvard.edu/blog/how-useful-is-the-body-mass-index-bmi-201603309339)

@@ -1,42 +1,98 @@
-## Date Calculator – Calculating Days, Weeks, and Months
+## Date Calculator — Days, Weeks, and Months Between Dates
 
-The date calculator is a useful tool when you want to find out the time between two dates or calculate the date of an event. The calculator shows the difference in days, weeks, and months.
+The date calculator is a versatile tool for finding the exact time between two dates or calculating a future/past date by adding or subtracting days. Results are displayed in days, weeks, months, and even business days.
 
-### When is the date calculator useful?
+### How Does the Date Calculator Work?
 
-- **Project scheduling** – Calculate how many days or weeks between project start and end dates
-- **Birthdays and anniversaries** – How many days until birthday or anniversary?
-- **Pregnancy calculation** – How many weeks from the estimated date?
-- **Contracts and deadlines** – When does a 30 or 90-day deadline expire?
-- **Travel** – How long is your visa valid or how long does the trip last?
+The calculator computes the difference between two dates using calendar arithmetic. It handles varying month lengths (28–31 days), leap years, and the Gregorian calendar rules. The core conversion:
 
-### Adding Days to a Date
+- **Days** — Exact number of days between the two dates
+- **Weeks** — Days divided by 7
+- **Months** — Approximate, using the average month length of 30.44 days
+- **Business days** — Weekdays only (Monday–Friday), excluding weekends
 
-With the calculator, you can also add or subtract days from any date. Enter the start date and the desired number of days, and the calculator will give you the exact result with the day of the week.
-
-### Example Calculations
+### Common Uses
 
 <table className="table table-sm my-4">
-  <thead>
-    <tr className="bg-base-200">
-      <th>Situation</th>
-      <th>Example</th>
+  <thead className="bg-base-200">
+    <tr>
+      <th>Scenario</th>
+      <th>How to Use</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>Work project duration</td><td>Sept 1 – Dec 31 = 121 days</td></tr>
-    <tr><td>30-day payment term</td><td>June 1 + 30 days = July 1</td></tr>
-    <tr><td>Anniversary countdown</td><td>Today – celebration day</td></tr>
-    <tr><td>Day of week lookup</td><td>Dec 25, 2025 = Thursday</td></tr>
+    <tr><td>Project deadline</td><td>Enter start and end dates to see how many working days you have</td></tr>
+    <tr><td>Payment terms</td><td>Add 30, 60, or 90 days to an invoice date</td></tr>
+    <tr><td>Lease duration</td><td>Calculate exact months between move-in and move-out dates</td></tr>
+    <tr><td>Event countdown</td><td>How many days until a wedding, birthday, or vacation</td></tr>
+    <tr><td>Travel visa</td><td>Check if your visa covers your entire trip duration</td></tr>
+    <tr><td>Contract terms</td><td>Verify notice periods and renewal dates</td></tr>
+    <tr><td>Shipping estimates</td><td>Add business days to a ship date for estimated delivery</td></tr>
+    <tr><td>Age verification</td><td>Calculate exact days between two birth dates</td></tr>
   </tbody>
 </table>
 
-### How does the calculation work?
+### Adding or Subtracting Days
 
-The difference between dates is calculated in milliseconds and converted to days by dividing by 86,400,000 (milliseconds in a day). Weeks are obtained by dividing days by 7 and months by dividing days by 30.44 (average month length).
+The second mode of the calculator lets you start from any date and add or subtract a specific number of days. The result includes the target date and the day of the week.
 
-### See also
+**Examples:**
+- January 15 + 90 days = **April 15** (Tuesday)
+- December 25 − 30 days = **November 25** (Tuesday)
+- March 1, 2024 + 365 days = **March 1, 2025** (Saturday)
 
-- [Days Until Christmas](/apps/days-until-christmas) – How many days until Christmas?
-- [Vacation Days Calculator](/apps/vacation-days-calculator) – Calculate time remaining until vacation
-- [Calendar Tool](/apps/calendar-tool) – Browse months and calendar
+### Days in Each Month — Quick Reference
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Month</th>
+      <th>Days</th>
+      <th>Month</th>
+      <th>Days</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>January</td><td>31</td><td>July</td><td>31</td></tr>
+    <tr><td>February</td><td>28 / 29</td><td>August</td><td>31</td></tr>
+    <tr><td>March</td><td>31</td><td>September</td><td>30</td></tr>
+    <tr><td>April</td><td>30</td><td>October</td><td>31</td></tr>
+    <tr><td>May</td><td>31</td><td>November</td><td>30</td></tr>
+    <tr><td>June</td><td>30</td><td>December</td><td>31</td></tr>
+  </tbody>
+</table>
+
+**Leap year rule:** A year is a leap year if it is divisible by 4, **except** century years — unless also divisible by 400. So 2000 was a leap year, but 1900 was not. 2024 is a leap year; 2100 will not be.
+
+### Interesting Date Facts
+
+- There are **365.2422 days** in a solar year, which is why we need leap years.
+- The Gregorian calendar was introduced in 1582 by Pope Gregory XIII to correct the drift of the Julian calendar.
+- **Doomsday Algorithm** — A mental trick to determine the day of the week for any date, invented by mathematician John Conway.
+
+### Frequently Asked Questions
+
+#### How many days are in a year?
+A common year has **365 days**. A leap year has **366 days**. On average, accounting for leap years, a year is 365.2425 days.
+
+#### How do I calculate business days between two dates?
+Count only Monday through Friday. This calculator can show you weekday counts. For more precision, you would also need to exclude public holidays specific to your region.
+
+#### What is the Julian date?
+The Julian date is a continuous count of days since January 1, 4713 BC. It is used in astronomy, military operations, and food packaging (where it is a 3-digit day-of-year code).
+
+#### How many weeks are in a year?
+There are **52 weeks and 1 day** in a common year (52 weeks and 2 days in a leap year).
+
+### Related Tools
+
+- [Days Until Christmas](/apps/days-until-christmas) — Countdown to December 25
+- [Age Calculator](/apps/age-calculator) — Calculate exact age from a birth date
+- [Pregnancy Calculator](/apps/pregnancy-calculator) — Track pregnancy weeks
+- [Vacation Days Calculator](/apps/vacation-days-calculator) — Plan your time off
+- [Calendar Tool](/apps/calendar-tool) — Browse months and view calendars
+
+### Sources
+
+- US Naval Observatory: [Calendar Information](https://aa.usno.navy.mil/data/calendar)
+- timeanddate.com: [Date Calculator](https://www.timeanddate.com/date/dateadd.html)

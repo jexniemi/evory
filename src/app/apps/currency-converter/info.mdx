@@ -1,38 +1,99 @@
-## Currency Converter – Convert currencies quickly
+## Currency Converter — Convert Currencies Instantly
 
-The currency converter converts over 20 currencies to each other with indicative rates. Suitable for travel budgeting, online shopping, and comparing international prices.
+The currency converter lets you convert over 20 major world currencies with indicative exchange rates. Whether you are planning a vacation, shopping from an international website, or comparing overseas prices, this tool gives you a fast estimate.
+
+### How Currency Conversion Works
+
+Every currency pair has an **exchange rate** that tells you how much one unit of the first currency is worth in the second. For example, if the EUR/USD rate is 1.08, then 1 euro = 1.08 US dollars.
+
+> **Converted amount = original amount × exchange rate**
+
+Exchange rates fluctuate constantly based on supply and demand, interest rates, inflation, geopolitical events, and market sentiment. The rates in this tool are **indicative** — actual rates from banks and exchange services will include a spread or commission.
 
 ### Supported Currencies
 
 <table className="table table-sm my-4">
-  <thead>
-    <tr className="bg-base-200">
+  <thead className="bg-base-200">
+    <tr>
       <th>Currency</th>
       <th>Code</th>
       <th>Region</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>Euro</td><td>EUR</td><td>Eurozone</td></tr>
-    <tr><td>US Dollar</td><td>USD</td><td>USA</td></tr>
-    <tr><td>British Pound</td><td>GBP</td><td>Britain</td></tr>
+    <tr><td>US Dollar</td><td>USD</td><td>United States</td></tr>
+    <tr><td>Euro</td><td>EUR</td><td>Eurozone (20 countries)</td></tr>
+    <tr><td>British Pound</td><td>GBP</td><td>United Kingdom</td></tr>
+    <tr><td>Japanese Yen</td><td>JPY</td><td>Japan</td></tr>
+    <tr><td>Swiss Franc</td><td>CHF</td><td>Switzerland</td></tr>
+    <tr><td>Canadian Dollar</td><td>CAD</td><td>Canada</td></tr>
+    <tr><td>Australian Dollar</td><td>AUD</td><td>Australia</td></tr>
     <tr><td>Swedish Krona</td><td>SEK</td><td>Sweden</td></tr>
     <tr><td>Norwegian Krone</td><td>NOK</td><td>Norway</td></tr>
-    <tr><td>Swiss Franc</td><td>CHF</td><td>Switzerland</td></tr>
-    <tr><td>Japanese Yen</td><td>JPY</td><td>Japan</td></tr>
     <tr><td>Thai Baht</td><td>THB</td><td>Thailand</td></tr>
   </tbody>
 </table>
 
-### Important note on rates
+### Understanding Exchange Rate Types
 
-The calculator's rates are **indicative** and based on approximate reference rates. Actual exchange rates vary daily and the bank or exchange point charges its own margin.
+- **Mid-market rate (interbank rate)** — The "real" rate at which banks trade with each other. This is the rate shown by Google, XE, and this converter.
+- **Buy rate** — The rate a bank gives you when you sell foreign currency (always lower than mid-market).
+- **Sell rate** — The rate a bank charges when you buy foreign currency (always higher than mid-market).
+- **Spread** — The difference between buy and sell rates, which is how exchange services make money. Airport kiosks typically have the widest spreads (3–10%).
 
-You can find up-to-date rates at:
-- [ECB – Reference Rates](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/)
+### Tips for Getting the Best Exchange Rate
 
-### See Also
+1. **Avoid airport currency exchanges** — They charge the highest margins (up to 10%).
+2. **Use your debit card at local ATMs** — Usually offers near-interbank rates plus a small fee.
+3. **Pay in local currency** — When given the option of "pay in your home currency" (Dynamic Currency Conversion), always decline. The merchant's rate is almost always worse.
+4. **Compare online services** — Services like Wise (TransferWise), Revolut, and OFX often offer rates closer to mid-market than traditional banks.
+5. **Order currency from your bank in advance** — Better rates than last-minute airport exchanges.
+6. **Watch for zero-commission traps** — "No commission" services often hide costs in a poor exchange rate.
 
-- [Discount Calculator](/apps/discount-calculator) – Calculate discounted price quickly
-- [Percentage Calculator](/apps/percentage-calculator) – Calculate percentage changes
-- [Tip Calculator](/apps/tip-calculator) – Calculate tip abroad
+### Major Currency Pairs
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Pair</th>
+      <th>Nickname</th>
+      <th>Daily Volume</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>EUR/USD</td><td>Euro-Dollar</td><td>{'~'}$1.1 trillion</td></tr>
+    <tr><td>USD/JPY</td><td>Dollar-Yen</td><td>{'~'}$550 billion</td></tr>
+    <tr><td>GBP/USD</td><td>Cable</td><td>{'~'}$420 billion</td></tr>
+    <tr><td>USD/CHF</td><td>Swissie</td><td>{'~'}$160 billion</td></tr>
+    <tr><td>AUD/USD</td><td>Aussie</td><td>{'~'}$220 billion</td></tr>
+  </tbody>
+</table>
+
+The global foreign exchange (forex) market trades over **$7.5 trillion per day**, making it the largest financial market in the world (BIS 2022 Triennial Survey).
+
+### Frequently Asked Questions
+
+#### Why do exchange rates change?
+Rates move due to differences in interest rates, inflation expectations, trade balances, political stability, and market speculation. Central bank decisions (like the Federal Reserve raising rates) have the most immediate impact.
+
+#### Should I exchange money before traveling?
+Exchange a small amount for immediate expenses (taxi, tips) and use ATMs at your destination for the rest. This typically gives the best overall rate.
+
+#### What is purchasing power parity (PPP)?
+PPP adjusts exchange rates to reflect what money can actually buy in different countries. A $5 coffee in New York might cost the equivalent of $1.50 in Vietnam, even though the nominal exchange rate doesn't reflect that difference.
+
+#### Are crypto exchange rates the same as fiat rates?
+No. Cryptocurrency exchange rates are determined by supply and demand on crypto exchanges and can vary significantly between platforms. This converter handles traditional (fiat) currencies only.
+
+### Related Tools
+
+- [Discount Calculator](/apps/discount-calculator) — Calculate discounted prices quickly
+- [Percentage Calculator](/apps/percentage-calculator) — Work out percentage changes
+- [Tip Calculator](/apps/tip-calculator) — Calculate tips when traveling abroad
+- [VAT Calculator](/apps/vat-calculator) — Add or remove sales tax
+
+### Sources
+
+- ECB: [Euro Reference Exchange Rates](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/)
+- BIS: [Triennial Central Bank Survey 2022](https://www.bis.org/statistics/rpfx22.htm)
+- Federal Reserve: [Foreign Exchange Rates](https://www.federalreserve.gov/releases/h10/current/)

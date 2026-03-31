@@ -1,45 +1,102 @@
-## Calorie Burn Calculator – Calculate exercise calorie expenditure
+## Calorie Burn Calculator — Estimate Exercise Energy Expenditure
 
-The calorie burn calculator calculates an estimate of the calorie expenditure of a physical performance using MET values (Metabolic Equivalent of Task). MET tells the energy consumption of the activity relative to rest.
+The calorie burn calculator estimates how many calories you burn during physical activity using MET values (Metabolic Equivalent of Task). MET is a standardized measure of exercise intensity relative to rest — the higher the MET, the more energy the activity demands.
 
-### How do MET values work?
+### How Do MET Values Work?
 
-MET value 1 corresponds to sitting at rest (about 1 kcal/kg/h). The calorie consumption of the activity is calculated with the formula:
+A MET value of 1.0 corresponds to sitting quietly at rest, which burns approximately **1 kcal per kilogram of body weight per hour**. The calorie expenditure of any activity is calculated with a simple formula:
 
-> **Calories (kcal)** = MET × weight (kg) × time (h)
+> **Calories (kcal) = MET × weight (kg) × time (hours)**
 
-Example: 75 kg person runs 30 min (MET 10):
-> 10 × 75 × 0.5 h = **375 kcal**
+**Example:** A 165 lb (75 kg) person runs for 30 minutes at moderate pace (MET 10):
 
-### MET values for common activities
+10 × 75 × 0.5 = **375 kcal**
+
+### MET Values for 30+ Common Activities
 
 <table className="table table-sm my-4">
-  <thead>
-    <tr className="bg-base-200">
+  <thead className="bg-base-200">
+    <tr>
       <th>Activity</th>
-      <th>MET value</th>
+      <th>MET</th>
+      <th>Calories / 30 min (155 lb person)</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>Walking (4 km/h)</td><td>3.0</td></tr>
-    <tr><td>Brisk walking (6 km/h)</td><td>4.5</td></tr>
-    <tr><td>Jogging (8 km/h)</td><td>8.0</td></tr>
-    <tr><td>Running (10 km/h)</td><td>10.5</td></tr>
-    <tr><td>Cycling (light)</td><td>5.5</td></tr>
-    <tr><td>Swimming</td><td>7.0</td></tr>
-    <tr><td>Yoga</td><td>2.5</td></tr>
-    <tr><td>Gym (intense)</td><td>6.0</td></tr>
+    <tr><td>Sitting (desk work)</td><td>1.3</td><td>46</td></tr>
+    <tr><td>Walking slowly (2 mph)</td><td>2.5</td><td>88</td></tr>
+    <tr><td>Walking briskly (3.5 mph)</td><td>4.3</td><td>152</td></tr>
+    <tr><td>Hiking (moderate terrain)</td><td>5.3</td><td>187</td></tr>
+    <tr><td>Cycling (leisure, 10 mph)</td><td>6.8</td><td>240</td></tr>
+    <tr><td>Cycling (vigorous, 14+ mph)</td><td>10.0</td><td>353</td></tr>
+    <tr><td>Swimming (moderate laps)</td><td>7.0</td><td>247</td></tr>
+    <tr><td>Jogging (5 mph)</td><td>8.3</td><td>293</td></tr>
+    <tr><td>Running (6 mph)</td><td>9.8</td><td>346</td></tr>
+    <tr><td>Running (8 mph)</td><td>11.8</td><td>416</td></tr>
+    <tr><td>Yoga (hatha)</td><td>2.5</td><td>88</td></tr>
+    <tr><td>Yoga (power / vinyasa)</td><td>4.0</td><td>141</td></tr>
+    <tr><td>Weight training (moderate)</td><td>5.0</td><td>176</td></tr>
+    <tr><td>Weight training (vigorous)</td><td>6.0</td><td>212</td></tr>
+    <tr><td>HIIT / CrossFit</td><td>8.0</td><td>282</td></tr>
+    <tr><td>Jump rope</td><td>11.0</td><td>388</td></tr>
+    <tr><td>Rowing machine (moderate)</td><td>7.0</td><td>247</td></tr>
+    <tr><td>Elliptical trainer</td><td>5.0</td><td>176</td></tr>
+    <tr><td>Dancing (moderate)</td><td>4.5</td><td>159</td></tr>
+    <tr><td>Basketball (game)</td><td>8.0</td><td>282</td></tr>
+    <tr><td>Tennis (singles)</td><td>8.0</td><td>282</td></tr>
+    <tr><td>Soccer (casual)</td><td>7.0</td><td>247</td></tr>
+    <tr><td>Gardening</td><td>3.5</td><td>123</td></tr>
+    <tr><td>Housework (general)</td><td>3.0</td><td>106</td></tr>
+    <tr><td>Shoveling snow</td><td>6.0</td><td>212</td></tr>
   </tbody>
 </table>
 
-### Notes on calorie calculation
+### How to Burn More Calories
 
-MET values are averages and the calculator does not take into account gender, age, fitness level or exercise efficiency. Actual values may deviate 10–30%. The calculator is suitable for indicative estimation.
+Several strategies can increase your calorie expenditure:
 
-Calorie calculation is based on Ainsworth et al. (2011) *Compendium of Physical Activities* research. Explore the original database: [Compendium of Physical Activities](https://sites.google.com/site/compendiumofphysicalactivities/)
+1. **Increase intensity** — Running at 8 mph burns 55% more calories than running at 6 mph.
+2. **Add resistance** — Wearing a weighted vest or hiking uphill raises MET values.
+3. **Extend duration** — Even low-intensity activities add up over time; a 60-minute walk burns more than a 20-minute jog.
+4. **Build muscle** — Muscle tissue burns more calories at rest than fat tissue, raising your BMR.
+5. **Try interval training** — Alternating high and low intensity (HIIT) can boost post-exercise calorie burn (EPOC).
 
-### See Also
+### Important Limitations
 
-- [Daily Calorie Needs Calculator](/apps/daily-calorie-needs-calculator) – Calculate your total daily calorie amount
-- [Macro Calculator](/apps/macro-calculator) – Calculate protein, carbohydrates and fat
-- [Heart Rate Calculator](/apps/heart-rate-calculator) – Calculate your heart rate zones
+MET values are population averages and the calculator does not account for:
+
+- **Gender** — Men typically burn slightly more due to higher muscle mass
+- **Age** — Metabolism slows approximately 1–2% per decade
+- **Fitness level** — A trained runner is more efficient (burns fewer calories) at the same pace than a beginner
+- **Environmental factors** — Heat, cold, and altitude affect calorie burn
+- **Body composition** — Two people at the same weight but different muscle-to-fat ratios will burn different amounts
+
+Actual calorie expenditure may deviate **10–30%** from the estimate. For more precise tracking, consider using a heart-rate monitor or fitness tracker.
+
+### Frequently Asked Questions
+
+#### How many calories should I burn per day to lose weight?
+A deficit of about **500 calories per day** leads to roughly 1 pound of weight loss per week. This can come from exercise, dietary changes, or a combination of both.
+
+#### Does walking really burn calories?
+Yes. A 155 lb person burns approximately 150 calories walking briskly for 30 minutes. It adds up — a daily 30-minute walk burns over 1,000 calories per week.
+
+#### Do I keep burning calories after exercise?
+Yes. Intense exercise creates an "afterburn effect" (Excess Post-Exercise Oxygen Consumption, or EPOC) that can elevate your metabolism for hours. HIIT and heavy strength training produce the strongest EPOC.
+
+#### Are fitness tracker calorie counts accurate?
+Studies show wearable devices can be off by 15–30%. They are useful for tracking trends over time but should not be relied upon for exact calorie counts.
+
+### Related Tools
+
+- [Daily Calorie Needs Calculator](/apps/daily-calorie-needs-calculator) — Calculate your total daily calorie needs
+- [Macro Calculator](/apps/macro-calculator) — Get your protein, carb, and fat targets
+- [BMR Calculator](/apps/bmr-calculator) — Find your resting metabolic rate
+- [Heart Rate Calculator](/apps/heart-rate-calculator) — Determine your training heart rate zones
+- [BMI Calculator](/apps/bmi-calculator) — Check your body mass index
+
+### Sources
+
+- Ainsworth, B.E. et al. (2011). *Compendium of Physical Activities: A Second Update.* Medicine & Science in Sports & Exercise.
+- [Compendium of Physical Activities](https://sites.google.com/site/compendiumofphysicalactivities/)
+- Harvard Health: [Calories Burned in 30 Minutes](https://www.health.harvard.edu/diet-and-weight-loss/calories-burned-in-30-minutes-for-people-of-three-different-weights)
