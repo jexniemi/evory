@@ -30,7 +30,7 @@ export default function PasswordGenerator() {
     const array = new Uint32Array(length);
     crypto.getRandomValues(array);
     const result = Array.from(array, (x) => charset[x % charset.length]).join(
-      ""
+      "",
     );
     setPassword(result);
     setCopied(false);

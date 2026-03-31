@@ -12,7 +12,8 @@ export default function BodyFatCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle: "Body Fat Calculator – US Navy Formula Body Fat Estimator | ewory.com",
+  seoTitle:
+    "Body Fat Calculator – US Navy Formula Body Fat Estimator | ewory.com",
   title: "Body Fat Calculator",
   description:
     "Estimate your body fat percentage using the US Navy formula. Calculate fat mass, lean mass, and body fat category from simple measurements.",

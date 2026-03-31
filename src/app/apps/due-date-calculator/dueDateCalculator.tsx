@@ -18,7 +18,7 @@ export default function DueDateCalculator() {
 
   const daysRemaining = Math.max(
     0,
-    Math.ceil((dueDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24))
+    Math.ceil((dueDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24)),
   );
 
   let trimester = "";

@@ -22,11 +22,36 @@ export default function OvertimeCalculator() {
     const annualEstimate = weeklyTotal * 52;
 
     return [
-      { result: overtimeRate, label: "Overtime hourly rate:", suffix: "$", decimals: 2 },
-      { result: regularPay, label: "Regular weekly pay:", suffix: "$", decimals: 2 },
-      { result: overtimePay, label: "Overtime weekly pay:", suffix: "$", decimals: 2 },
-      { result: weeklyTotal, label: "Total weekly pay:", suffix: "$", decimals: 2 },
-      { result: annualEstimate, label: "Estimated annual pay:", suffix: "$", decimals: 0 },
+      {
+        result: overtimeRate,
+        label: "Overtime hourly rate:",
+        suffix: "$",
+        decimals: 2,
+      },
+      {
+        result: regularPay,
+        label: "Regular weekly pay:",
+        suffix: "$",
+        decimals: 2,
+      },
+      {
+        result: overtimePay,
+        label: "Overtime weekly pay:",
+        suffix: "$",
+        decimals: 2,
+      },
+      {
+        result: weeklyTotal,
+        label: "Total weekly pay:",
+        suffix: "$",
+        decimals: 2,
+      },
+      {
+        result: annualEstimate,
+        label: "Estimated annual pay:",
+        suffix: "$",
+        decimals: 0,
+      },
     ];
   };
 

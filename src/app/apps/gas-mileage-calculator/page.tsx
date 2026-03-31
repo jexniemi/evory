@@ -12,8 +12,7 @@ export default function GasMileageCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle:
-    "Gas Mileage Calculator – Calculate MPG and Fuel Cost | ewory.com",
+  seoTitle: "Gas Mileage Calculator – Calculate MPG and Fuel Cost | ewory.com",
   title: "Gas Mileage Calculator",
   description:
     "Calculate your vehicle's miles per gallon (MPG), cost per mile, and total fuel cost. Free gas mileage calculator for tracking fuel economy.",

@@ -107,7 +107,7 @@ export default function CountdownTimer() {
               value={minutes}
               onChange={(e) =>
                 setMinutes(
-                  Math.max(0, Math.min(59, Number(e.target.value) || 0))
+                  Math.max(0, Math.min(59, Number(e.target.value) || 0)),
                 )
               }
             />
@@ -124,7 +124,7 @@ export default function CountdownTimer() {
               value={seconds}
               onChange={(e) =>
                 setSeconds(
-                  Math.max(0, Math.min(59, Number(e.target.value) || 0))
+                  Math.max(0, Math.min(59, Number(e.target.value) || 0)),
                 )
               }
             />
@@ -143,8 +143,8 @@ export default function CountdownTimer() {
             isFinished
               ? "text-success"
               : totalSeconds <= 10 && totalSeconds > 0 && isRunning
-              ? "text-error"
-              : ""
+                ? "text-error"
+                : ""
           }`}
         >
           {pad(displayHours)}:{pad(displayMinutes)}:{pad(displaySeconds)}

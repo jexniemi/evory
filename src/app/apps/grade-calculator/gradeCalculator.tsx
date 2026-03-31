@@ -16,8 +16,7 @@ export default function GradeCalculator() {
     const finalWeightDecimal = finalWeight / 100;
     const courseWorkWeight = 1 - finalWeightDecimal;
 
-    const needed =
-      (desired - current * courseWorkWeight) / finalWeightDecimal;
+    const needed = (desired - current * courseWorkWeight) / finalWeightDecimal;
 
     const currentWeighted = current * courseWorkWeight;
 

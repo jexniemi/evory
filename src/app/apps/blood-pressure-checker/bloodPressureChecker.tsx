@@ -3,7 +3,7 @@ import { useState } from "react";
 
 function getCategory(
   sys: number,
-  dia: number
+  dia: number,
 ): { label: string; color: string; description: string } {
   if (sys > 180 || dia > 120) {
     return {

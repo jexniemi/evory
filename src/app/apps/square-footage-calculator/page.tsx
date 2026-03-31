@@ -12,7 +12,8 @@ export default function SquareFootageCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle: "Square Footage Calculator – Free Online Area Calculator | ewory.com",
+  seoTitle:
+    "Square Footage Calculator – Free Online Area Calculator | ewory.com",
   title: "Square Footage Calculator",
   description:
     "Calculate square footage from length and width. Estimate property value with price per square foot. Convert to square meters instantly.",

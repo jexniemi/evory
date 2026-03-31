@@ -20,7 +20,7 @@ export default function JsonFormatter() {
       setError("");
     } catch (e) {
       setError(
-        `Invalid JSON: ${e instanceof Error ? e.message : "Unknown error"}`
+        `Invalid JSON: ${e instanceof Error ? e.message : "Unknown error"}`,
       );
       setOutput("");
     }
@@ -38,7 +38,7 @@ export default function JsonFormatter() {
       setError("");
     } catch (e) {
       setError(
-        `Invalid JSON: ${e instanceof Error ? e.message : "Unknown error"}`
+        `Invalid JSON: ${e instanceof Error ? e.message : "Unknown error"}`,
       );
       setOutput("");
     }

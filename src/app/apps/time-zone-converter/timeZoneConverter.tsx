@@ -62,7 +62,9 @@ export default function TimeZoneConverter() {
     <div className="flex flex-col gap-6">
       <div className="grid grid-cols-2 gap-4">
         <div className="flex flex-col gap-1">
-          <label className="text-sm font-medium text-gray-600">Hour (0–23)</label>
+          <label className="text-sm font-medium text-gray-600">
+            Hour (0–23)
+          </label>
           <input
             type="number"
             className="input input-bordered w-full"
@@ -75,7 +77,9 @@ export default function TimeZoneConverter() {
           />
         </div>
         <div className="flex flex-col gap-1">
-          <label className="text-sm font-medium text-gray-600">Minute (0–59)</label>
+          <label className="text-sm font-medium text-gray-600">
+            Minute (0–59)
+          </label>
           <input
             type="number"
             className="input input-bordered w-full"
@@ -91,7 +95,9 @@ export default function TimeZoneConverter() {
 
       <div className="grid grid-cols-2 gap-4">
         <div className="flex flex-col gap-1">
-          <label className="text-sm font-medium text-gray-600">From Timezone</label>
+          <label className="text-sm font-medium text-gray-600">
+            From Timezone
+          </label>
           <select
             className="select select-bordered w-full"
             value={fromTz}
@@ -105,7 +111,9 @@ export default function TimeZoneConverter() {
           </select>
         </div>
         <div className="flex flex-col gap-1">
-          <label className="text-sm font-medium text-gray-600">To Timezone</label>
+          <label className="text-sm font-medium text-gray-600">
+            To Timezone
+          </label>
           <select
             className="select select-bordered w-full"
             value={toTz}

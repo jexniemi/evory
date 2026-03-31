@@ -25,9 +25,24 @@ export default function PaintCalculator() {
     const gallonsNeeded = Math.ceil(gallonsOnCoat * 2 * 10) / 10; // 2 coats, round up to nearest 0.1
 
     return [
-      { result: wallArea, label: "Total Wall Area:", suffix: " sq ft", decimals: 0 },
-      { result: paintableArea, label: "Paintable Area:", suffix: " sq ft", decimals: 0 },
-      { result: gallonsNeeded, label: "Gallons Needed (2 coats):", suffix: " gal", decimals: 1 },
+      {
+        result: wallArea,
+        label: "Total Wall Area:",
+        suffix: " sq ft",
+        decimals: 0,
+      },
+      {
+        result: paintableArea,
+        label: "Paintable Area:",
+        suffix: " sq ft",
+        decimals: 0,
+      },
+      {
+        result: gallonsNeeded,
+        label: "Gallons Needed (2 coats):",
+        suffix: " gal",
+        decimals: 1,
+      },
       { result: 2, label: "Recommended Coats:", suffix: "", decimals: 0 },
     ];
   };

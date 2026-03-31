@@ -12,8 +12,7 @@ export default function BloodPressureCheckerPage() {
 }
 
 const pageProps = {
-  seoTitle:
-    "Blood Pressure Checker – Free Online BP Category Tool | ewory.com",
+  seoTitle: "Blood Pressure Checker – Free Online BP Category Tool | ewory.com",
   title: "Blood Pressure Checker",
   description:
     "Check your blood pressure category based on AHA guidelines. Enter systolic and diastolic readings to see if your BP is normal, elevated, or hypertensive.",

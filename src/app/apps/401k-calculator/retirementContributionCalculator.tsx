@@ -38,7 +38,10 @@ export default function RetirementContributionCalculator() {
     }
 
     const investmentGrowth =
-      balance - currentBalance - totalContributions - totalEmployerContributions;
+      balance -
+      currentBalance -
+      totalContributions -
+      totalEmployerContributions;
 
     return [
       {

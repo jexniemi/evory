@@ -12,8 +12,7 @@ export default function RockPaperScissorsPage() {
 }
 
 const pageProps = {
-  seoTitle:
-    "Rock Paper Scissors – Free Online Game vs Computer | ewory.com",
+  seoTitle: "Rock Paper Scissors – Free Online Game vs Computer | ewory.com",
   title: "Rock Paper Scissors",
   description:
     "Play Rock Paper Scissors against the computer online. Track your wins, losses, and draws. Free, instant, and fun RPS game simulator.",

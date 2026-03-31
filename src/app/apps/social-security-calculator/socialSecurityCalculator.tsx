@@ -33,8 +33,7 @@ export default function SocialSecurityCalculator() {
       // First 36 months early: 5/9 of 1% per month (6.67% per year)
       const firstReduction = Math.min(monthsEarly, 36) * (5 / 900);
       // Additional months beyond 36: 5/12 of 1% per month (5% per year)
-      const additionalReduction =
-        Math.max(monthsEarly - 36, 0) * (5 / 1200);
+      const additionalReduction = Math.max(monthsEarly - 36, 0) * (5 / 1200);
       adjustmentFactor = 1 - firstReduction - additionalReduction;
     } else if (claimingAge > fullRetirementAge) {
       // Delayed retirement credits: 8% per year (2/3 of 1% per month)

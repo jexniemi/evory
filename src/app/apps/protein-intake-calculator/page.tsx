@@ -12,7 +12,8 @@ export default function ProteinIntakeCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle: "Protein Intake Calculator – Daily Protein Needs Estimator | ewory.com",
+  seoTitle:
+    "Protein Intake Calculator – Daily Protein Needs Estimator | ewory.com",
   title: "Protein Intake Calculator",
   description:
     "Calculate your daily protein needs based on body weight and activity level. Get per-meal targets and calories from protein instantly.",

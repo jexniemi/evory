@@ -23,9 +23,24 @@ export default function MovingCostCalculator() {
     const perMileCost = distance > 0 ? grandTotal / distance : 0;
 
     return [
-      { result: baseCost + distanceCost, label: "Estimated Moving Cost:", suffix: "$", decimals: 2 },
-      { result: perMileCost, label: "Cost Per Mile:", suffix: "$", decimals: 2 },
-      { result: packingCost, label: "Packing Service Total:", suffix: "$", decimals: 2 },
+      {
+        result: baseCost + distanceCost,
+        label: "Estimated Moving Cost:",
+        suffix: "$",
+        decimals: 2,
+      },
+      {
+        result: perMileCost,
+        label: "Cost Per Mile:",
+        suffix: "$",
+        decimals: 2,
+      },
+      {
+        result: packingCost,
+        label: "Packing Service Total:",
+        suffix: "$",
+        decimals: 2,
+      },
       { result: grandTotal, label: "Grand Total:", suffix: "$", decimals: 2 },
     ];
   };

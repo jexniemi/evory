@@ -14,8 +14,7 @@ export default function CdCalculator() {
     const termMonths = values[2];
 
     const monthlyRate = apy / 100 / 12;
-    const totalAtMaturity =
-      principal * Math.pow(1 + monthlyRate, termMonths);
+    const totalAtMaturity = principal * Math.pow(1 + monthlyRate, termMonths);
     const interestEarned = totalAtMaturity - principal;
     const effectiveMonthlyEarnings =
       termMonths > 0 ? interestEarned / termMonths : 0;

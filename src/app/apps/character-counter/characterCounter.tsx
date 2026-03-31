@@ -17,11 +17,11 @@ export default function CharacterCounter() {
   const charactersNoSpaces = text.replace(/\s/g, "").length;
   const words = text.trim() === "" ? 0 : text.trim().split(/\s+/).length;
   const sentences =
-    text.trim() === "" ? 0 : text.split(/[.!?]+/).filter((s) => s.trim()).length;
-  const paragraphs =
     text.trim() === ""
       ? 0
-      : text.split(/\n\n+/).filter((p) => p.trim()).length;
+      : text.split(/[.!?]+/).filter((s) => s.trim()).length;
+  const paragraphs =
+    text.trim() === "" ? 0 : text.split(/\n\n+/).filter((p) => p.trim()).length;
   const readingTime = Math.max(1, Math.ceil(words / 225));
   const speakingTime = Math.max(1, Math.ceil(words / 150));
 
@@ -63,14 +63,11 @@ export default function CharacterCounter() {
             {PLATFORM_LIMITS.map((platform) => {
               const percentage = Math.min(
                 100,
-                Math.round((characters / platform.limit) * 100)
+                Math.round((characters / platform.limit) * 100),
               );
               const isOver = characters > platform.limit;
               return (
-                <div
-                  key={platform.name}
-                  className="bg-base-200 rounded-lg p-3"
-                >
+                <div key={platform.name} className="bg-base-200 rounded-lg p-3">
                   <div className="flex justify-between text-sm mb-1">
                     <span className="font-medium">{platform.name}</span>
                     <span className={isOver ? "text-error font-bold" : ""}>

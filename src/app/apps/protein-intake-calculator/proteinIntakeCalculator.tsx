@@ -28,10 +28,30 @@ export default function ProteinIntakeCalculator() {
     const caloriesFromProtein = dailyProtein * CALORIES_PER_GRAM_PROTEIN;
 
     return [
-      { result: dailyProtein, label: "Daily Protein:", suffix: " g", decimals: 0 },
-      { result: proteinPerMeal3, label: "Protein Per Meal (3 meals):", suffix: " g", decimals: 1 },
-      { result: proteinPerMeal4, label: "Protein Per Meal (4 meals):", suffix: " g", decimals: 1 },
-      { result: caloriesFromProtein, label: "Calories from Protein:", suffix: " kcal", decimals: 0 },
+      {
+        result: dailyProtein,
+        label: "Daily Protein:",
+        suffix: " g",
+        decimals: 0,
+      },
+      {
+        result: proteinPerMeal3,
+        label: "Protein Per Meal (3 meals):",
+        suffix: " g",
+        decimals: 1,
+      },
+      {
+        result: proteinPerMeal4,
+        label: "Protein Per Meal (4 meals):",
+        suffix: " g",
+        decimals: 1,
+      },
+      {
+        result: caloriesFromProtein,
+        label: "Calories from Protein:",
+        suffix: " kcal",
+        decimals: 0,
+      },
     ];
   };
 

@@ -18,9 +18,24 @@ export default function SquareFootageCalculator() {
     const estimatedValue = totalAreaSqFt * pricePerSqFt;
 
     return [
-      { result: totalAreaSqFt, label: "Total Area:", suffix: " sq ft", decimals: 1 },
-      { result: totalAreaSqM, label: "Total Area:", suffix: " sq m", decimals: 2 },
-      { result: estimatedValue, label: "Estimated Value:", suffix: "$", decimals: 0 },
+      {
+        result: totalAreaSqFt,
+        label: "Total Area:",
+        suffix: " sq ft",
+        decimals: 1,
+      },
+      {
+        result: totalAreaSqM,
+        label: "Total Area:",
+        suffix: " sq m",
+        decimals: 2,
+      },
+      {
+        result: estimatedValue,
+        label: "Estimated Value:",
+        suffix: "$",
+        decimals: 0,
+      },
     ];
   };
 

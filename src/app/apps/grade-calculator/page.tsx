@@ -12,8 +12,7 @@ export default function GradeCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle:
-    "Grade Calculator – What Do I Need on My Final Exam? | ewory.com",
+  seoTitle: "Grade Calculator – What Do I Need on My Final Exam? | ewory.com",
   title: "Grade Calculator",
   description:
     "Calculate what score you need on your final exam to reach your desired grade. Enter current grade, final weight, and target to see your required score.",

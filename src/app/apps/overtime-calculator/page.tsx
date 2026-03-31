@@ -12,7 +12,8 @@ export default function OvertimeCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle: "Overtime Calculator – Calculate Overtime Pay Instantly | ewory.com",
+  seoTitle:
+    "Overtime Calculator – Calculate Overtime Pay Instantly | ewory.com",
   title: "Overtime Calculator",
   description:
     "Calculate overtime pay based on hourly rate, overtime hours, and multiplier. See weekly and annual earnings with time-and-a-half or double time.",

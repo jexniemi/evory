@@ -12,8 +12,7 @@ export default function SocialSecurityCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle:
-    "Social Security Calculator – Estimate Your Benefits | ewory.com",
+  seoTitle: "Social Security Calculator – Estimate Your Benefits | ewory.com",
   title: "Social Security Calculator",
   description:
     "Estimate Social Security benefits based on claiming age. See how early or delayed retirement affects your monthly benefit. Free online calculator.",

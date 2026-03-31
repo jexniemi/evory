@@ -19,7 +19,8 @@ export default function CoinFlip() {
     setIsFlipping(true);
 
     setTimeout(() => {
-      const outcome: "Heads" | "Tails" = Math.random() < 0.5 ? "Heads" : "Tails";
+      const outcome: "Heads" | "Tails" =
+        Math.random() < 0.5 ? "Heads" : "Tails";
       setResult(outcome);
       setFlipCount((c) => c + 1);
 
@@ -39,8 +40,10 @@ export default function CoinFlip() {
   }, [isFlipping]);
 
   const total = totalHeads + totalTails;
-  const headsPercent = total > 0 ? ((totalHeads / total) * 100).toFixed(1) : "0";
-  const tailsPercent = total > 0 ? ((totalTails / total) * 100).toFixed(1) : "0";
+  const headsPercent =
+    total > 0 ? ((totalHeads / total) * 100).toFixed(1) : "0";
+  const tailsPercent =
+    total > 0 ? ((totalTails / total) * 100).toFixed(1) : "0";
 
   return (
     <div className="flex flex-col items-center gap-6">
@@ -112,9 +115,7 @@ export default function CoinFlip() {
               <span
                 key={flip.id}
                 className={`badge ${
-                  flip.result === "Heads"
-                    ? "badge-primary"
-                    : "badge-secondary"
+                  flip.result === "Heads" ? "badge-primary" : "badge-secondary"
                 }`}
               >
                 {flip.result}

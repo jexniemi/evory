@@ -12,8 +12,7 @@ export default function DownPaymentCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle:
-    "Down Payment Calculator – Home Savings Planner | ewory.com",
+  seoTitle: "Down Payment Calculator – Home Savings Planner | ewory.com",
   title: "Down Payment Calculator",
   description:
     "Calculate how much you need for a down payment and how long it will take to save. Plan your home purchase with our free down payment calculator.",

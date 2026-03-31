@@ -12,8 +12,7 @@ export default function MortgageCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle:
-    "Mortgage Calculator – Free Monthly Payment Estimator | ewory.com",
+  seoTitle: "Mortgage Calculator – Free Monthly Payment Estimator | ewory.com",
   title: "Mortgage Calculator",
   description:
     "Calculate monthly mortgage payments, total interest, and total cost. Compare rates and loan terms. Free online mortgage payment calculator.",

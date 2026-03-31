@@ -61,7 +61,9 @@ export default function LoveCalculator() {
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text font-semibold">Partner&apos;s Name</span>
+            <span className="label-text font-semibold">
+              Partner&apos;s Name
+            </span>
           </label>
           <input
             type="text"
@@ -89,7 +91,15 @@ export default function LoveCalculator() {
           }`}
         >
           <div className="text-6xl mb-4">
-            {score > 80 ? "💕" : score > 60 ? "❤️" : score > 40 ? "💛" : score > 20 ? "🤔" : "💔"}
+            {score > 80
+              ? "💕"
+              : score > 60
+                ? "❤️"
+                : score > 40
+                  ? "💛"
+                  : score > 20
+                    ? "🤔"
+                    : "💔"}
           </div>
 
           <div className="mb-4">
@@ -104,12 +114,12 @@ export default function LoveCalculator() {
               score > 80
                 ? "progress-primary"
                 : score > 60
-                ? "progress-success"
-                : score > 40
-                ? "progress-info"
-                : score > 20
-                ? "progress-warning"
-                : "progress-error"
+                  ? "progress-success"
+                  : score > 40
+                    ? "progress-info"
+                    : score > 20
+                      ? "progress-warning"
+                      : "progress-error"
             }`}
             value={score}
             max="100"

@@ -12,8 +12,7 @@ export default function RetirementCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle:
-    "401(k) Calculator – Free Retirement Savings Estimator | ewory.com",
+  seoTitle: "401(k) Calculator – Free Retirement Savings Estimator | ewory.com",
   title: "401(k) Calculator",
   description:
     "Estimate your 401(k) balance at retirement. Calculate contributions, employer match, and compound growth. Free 401(k) retirement savings calculator.",
