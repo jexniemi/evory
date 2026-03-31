@@ -45,7 +45,7 @@ export default function SimpleCalculator({
   calculate,
   extradata,
   header,
-  suffix = "€",
+  suffix = "$",
   resultButtonStyle = "",
 }: Props) {
   const init = inputs.map((input) =>

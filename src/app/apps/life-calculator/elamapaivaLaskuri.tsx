@@ -1,25 +1,25 @@
 "use client";
 import { useState } from "react";
 
-const MONTHS_FI = [
-  "tammikuuta", "helmikuuta", "maaliskuuta", "huhtikuuta", "toukokuuta",
-  "kesäkuuta", "heinäkuuta", "elokuuta", "syyskuuta", "lokakuuta",
-  "marraskuuta", "joulukuuta",
+const MONTHS_EN = [
+  "January", "February", "March", "April", "May",
+  "June", "July", "August", "September", "October",
+  "November", "December",
 ];
 
 const ZODIAC = [
-  { sign: "Kauris ♑", from: [12, 22], to: [1, 19] },
-  { sign: "Vesimies ♒", from: [1, 20], to: [2, 18] },
-  { sign: "Kalat ♓", from: [2, 19], to: [3, 20] },
-  { sign: "Oinas ♈", from: [3, 21], to: [4, 19] },
-  { sign: "Härkä ♉", from: [4, 20], to: [5, 20] },
-  { sign: "Kaksoset ♊", from: [5, 21], to: [6, 20] },
-  { sign: "Rapu ♋", from: [6, 21], to: [7, 22] },
-  { sign: "Leijona ♌", from: [7, 23], to: [8, 22] },
-  { sign: "Neitsyt ♍", from: [8, 23], to: [9, 22] },
-  { sign: "Vaaka ♎", from: [9, 23], to: [10, 23] },
-  { sign: "Skorpioni ♏", from: [10, 24], to: [11, 22] },
-  { sign: "Jousimies ♐", from: [11, 23], to: [12, 21] },
+  { sign: "Capricorn ♑", from: [12, 22], to: [1, 19] },
+  { sign: "Aquarius ♒", from: [1, 20], to: [2, 18] },
+  { sign: "Pisces ♓", from: [2, 19], to: [3, 20] },
+  { sign: "Aries ♈", from: [3, 21], to: [4, 19] },
+  { sign: "Taurus ♉", from: [4, 20], to: [5, 20] },
+  { sign: "Gemini ♊", from: [5, 21], to: [6, 20] },
+  { sign: "Cancer ♋", from: [6, 21], to: [7, 22] },
+  { sign: "Leo ♌", from: [7, 23], to: [8, 22] },
+  { sign: "Virgo ♍", from: [8, 23], to: [9, 22] },
+  { sign: "Libra ♎", from: [9, 23], to: [10, 23] },
+  { sign: "Scorpio ♏", from: [10, 24], to: [11, 22] },
+  { sign: "Sagittarius ♐", from: [11, 23], to: [12, 21] },
 ];
 
 function getZodiac(month: number, day: number): string {
@@ -28,7 +28,7 @@ function getZodiac(month: number, day: number): string {
     const [tm, td] = z.to;
     if ((month === fm && day >= fd) || (month === tm && day <= td)) return z.sign;
   }
-  return "Kauris ♑";
+  return "Capricorn ♑";
 }
 
 export default function ElamapaivaLaskuri() {
@@ -53,23 +53,23 @@ export default function ElamapaivaLaskuri() {
   })() : null;
 
   const zodiac = birth ? getZodiac(birth.getMonth() + 1, birth.getDate()) : null;
-  const birthMonth = birth ? `${birth.getDate()}. ${MONTHS_FI[birth.getMonth()]}` : null;
+  const birthMonth = birth ? `${birth.getDate()}. ${MONTHS_EN[birth.getMonth()]}` : null;
 
   const stats = birth && totalDays !== null ? [
-    { icon: "📅", value: totalDays.toLocaleString("fi-FI"), label: "Elettyjä päiviä" },
-    { icon: "🗓️", value: totalWeeks!.toLocaleString("fi-FI"), label: "Viikkoa" },
-    { icon: "📆", value: totalMonths!.toLocaleString("fi-FI"), label: "Kuukautta" },
-    { icon: "⏰", value: totalHours!.toLocaleString("fi-FI"), label: "Tuntia" },
-    { icon: "❤️", value: heartbeats!.toLocaleString("fi-FI"), label: "Sydämenlyöntiä (arvio)" },
-    { icon: "💨", value: breaths!.toLocaleString("fi-FI"), label: "Hengitystä (arvio)" },
-    { icon: "🎂", value: `${nextBirthday} pv`, label: "Seuraavaan syntymäpäivään" },
-    { icon: "✨", value: zodiac!, label: "Horoskooppimerkki" },
+    { icon: "📅", value: totalDays.toLocaleString("en-US"), label: "Days lived" },
+    { icon: "🗓️", value: totalWeeks!.toLocaleString("en-US"), label: "Weeks" },
+    { icon: "📆", value: totalMonths!.toLocaleString("en-US"), label: "Months" },
+    { icon: "⏰", value: totalHours!.toLocaleString("en-US"), label: "Hours" },
+    { icon: "❤️", value: heartbeats!.toLocaleString("en-US"), label: "Heartbeats (est.)" },
+    { icon: "💨", value: breaths!.toLocaleString("en-US"), label: "Breaths (est.)" },
+    { icon: "🎂", value: `${nextBirthday} d`, label: "Until next birthday" },
+    { icon: "✨", value: zodiac!, label: "Zodiac sign" },
   ] : [];
 
   return (
     <div className="flex flex-col gap-5 w-full max-w-lg mx-auto">
       <div>
-        <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1">Syntymäpäivä</label>
+        <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1">Birthday</label>
         <input
           type="date"
           value={birthday}
@@ -77,7 +77,7 @@ export default function ElamapaivaLaskuri() {
           onChange={e => setBirthday(e.target.value)}
           className="input input-bordered w-full text-lg"
         />
-        {birthMonth && <p className="text-sm text-gray-400 mt-1">Syntynyt {birthMonth}</p>}
+        {birthMonth && <p className="text-sm text-gray-400 mt-1">Born {birthMonth}</p>}
       </div>
 
       {stats.length > 0 && (

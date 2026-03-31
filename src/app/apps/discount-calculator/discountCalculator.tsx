@@ -3,8 +3,8 @@ import SimpleCalculator from "@/components/SimpleCalculator/SimpleCalculator";
 
 export default function DiscountCalculator() {
   const inputs = [
-    { label: "Tuotteen hinta (€)", initialValue: 100 },
-    { label: "Alennusprosentti (%)", initialValue: 20 },
+    { label: "Product price ($)", initialValue: 100 },
+    { label: "Discount (%)", initialValue: 20 },
   ];
 
   const calculate = (values: number[]) => {
@@ -17,8 +17,8 @@ export default function DiscountCalculator() {
       console.error(error);
     }
     return [
-      { result: salePrice || 0, label: "Alennettu hinta:", suffix: "€" },
-      { result: savedMoney || 0, label: "Säästetty raha:", suffix: "€" },
+      { result: salePrice || 0, label: "Sale price:", suffix: "$" },
+      { result: savedMoney || 0, label: "Savings:", suffix: "$" },
     ];
   };
 

@@ -2,10 +2,10 @@
 import SimpleCalculator from "@/components/SimpleCalculator/SimpleCalculator";
 
 const inputs = [
-  { label: "Alkupääoma (€)", initialValue: 2000 },
-  { label: "Vuotuinen korkoprosentti (%)", initialValue: 5 },
-  { label: "Sijoitusaika vuosina", initialValue: 20 },
-  { label: "Kuukausittainen sijoitussumma (€)", initialValue: 100 },
+  { label: "Initial principal ($)", initialValue: 2000 },
+  { label: "Annual interest rate (%)", initialValue: 5 },
+  { label: "Investment period (years)", initialValue: 20 },
+  { label: "Monthly contribution ($)", initialValue: 100 },
 ];
 
 export default function CompoundInterestCalculator() {
@@ -23,9 +23,9 @@ export default function CompoundInterestCalculator() {
     }
 
     return [
-      { result: Number(result.toFixed(2)), label: "Sijoituksen tuleva arvo:" },
+      { result: Number(result.toFixed(2)), label: "Future investment value:" },
     ];
   };
 
-  return <SimpleCalculator inputs={inputs} calculate={calculate} suffix="€" />;
+  return <SimpleCalculator inputs={inputs} calculate={calculate} suffix="$" />;
 }

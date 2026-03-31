@@ -17,7 +17,7 @@ const pageProps = {
   description:
     "Calculate your electricity bill easily knowing the consumption and electricity price.",
   instructions:
-    "Enter electricity consumption in kWh and electricity price in €/kWh. The calculator shows the electricity bill amount.",
+    "Enter electricity consumption in kWh and electricity price in $/kWh. The calculator shows the electricity bill amount.",
   Info,
 };
 

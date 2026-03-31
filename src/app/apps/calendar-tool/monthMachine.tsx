@@ -2,21 +2,21 @@
 import { useState } from "react";
 
 const MONTH_NAMES = [
-  "Tammikuu",
-  "Helmikuu",
-  "Maaliskuu",
-  "Huhtikuu",
-  "Toukokuu",
-  "Kesäkuu",
-  "Heinäkuu",
-  "Elokuu",
-  "Syyskuu",
-  "Lokakuu",
-  "Marraskuu",
-  "Joulukuu",
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
 ];
 
-const DAY_NAMES = ["Ma", "Ti", "Ke", "To", "Pe", "La", "Su"];
+const DAY_NAMES = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
 
 function isLeapYear(year: number) {
   return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
@@ -65,8 +65,8 @@ export default function MonthMachine() {
       </div>
 
       <p className="text-sm text-gray-500">
-        {isLeapYear(year) ? "🗓️ Karkausvuosi" : "📅 Tavallinen vuosi"} —{" "}
-        {totalDaysInYear} päivää
+        {isLeapYear(year) ? "🗓️ Leap year" : "📅 Regular year"} —{" "}
+        {totalDaysInYear} days
       </p>
 
       {/* Month grid */}
@@ -95,7 +95,7 @@ export default function MonthMachine() {
               >
                 {d}
               </span>
-              <span className="text-xs text-gray-400">päivää</span>
+              <span className="text-xs text-gray-400">days</span>
             </button>
           );
         })}

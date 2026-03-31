@@ -83,7 +83,7 @@ export default function QuizEngine({
       <div className="flex items-center justify-between w-full">
         <div
           className="flex gap-0.5 text-xl"
-          aria-label={`${livesLeft} elämää jäljellä`}
+          aria-label={`${livesLeft} lives remaining`}
         >
           {Array.from({ length: loseScore }).map((_, i) => (
             <span
@@ -103,7 +103,7 @@ export default function QuizEngine({
               exit={{ scale: 0.5, opacity: 0 }}
               className="flex items-center gap-1 bg-orange-100 text-orange-700 font-bold rounded-full px-3 py-1 text-sm"
             >
-              🔥 {streak} putkeen!
+              🔥 {streak} in a row!
             </motion.div>
           )}
         </AnimatePresence>

@@ -12,12 +12,12 @@ export default function AlvCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle: "ALV-laskuri - Laske Arvonlisävero Helposti",
-  title: "ALV-laskuri",
+  seoTitle: "Sales Tax Calculator – Calculate Tax Amount Easily",
+  title: "Sales Tax Calculator",
   description:
-    "Laske arvonlisävero (ALV) helposti. Selvitä ALV-summa, bruttohinta tai nettohinta Suomen ALV-kannoilla: 25,5 %, 14 % ja 10 %.",
+    "Calculate sales tax easily. Find the tax amount, gross price, or net price using common US sales tax rates: 10%, 5%, and 0%.",
   instructions:
-    "Syötä hinta ja valitse sopiva ALV-kanta. Laskuri näyttää ALV-summan sekä silloin kun hinta ei sisällä ALV:tä (netto → brutto) että silloin kun hinta jo sisältää ALV:n (brutto → netto).",
+    "Enter a price and select the appropriate tax rate. The calculator shows the tax amount for both adding tax (pre-tax → total) and removing tax (total → pre-tax).",
   Info,
 };
 

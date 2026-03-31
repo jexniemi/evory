@@ -2,8 +2,8 @@
 import SimpleCalculator from "@/components/SimpleCalculator/SimpleCalculator";
 
 const inputs = [
-  { label: "Sähkön kulutus (kWh)", initialValue: 1000 },
-  { label: "Sähkön hinta (€/kWh)", initialValue: 0.25 },
+  { label: "Electricity consumption (kWh)", initialValue: 1000 },
+  { label: "Electricity price ($/kWh)", initialValue: 0.25 },
 ];
 
 export default function ElectricityCalculator() {
@@ -20,7 +20,7 @@ export default function ElectricityCalculator() {
     }
 
     return [
-      { result: cost, label: "Sähkölaskun summa:", suffix: "€", decimals: 2 },
+      { result: cost, label: "Electricity bill total:", suffix: "$", decimals: 2 },
     ];
   };
 

@@ -12,12 +12,12 @@ export default function TuuliviimalaskuriPage() {
 }
 
 const pageProps = {
-  title: "Tuuliviimalaskuri",
-  seoTitle: "Tuuliviimalaskuri – Laske tuuliviima ja pakkasen tuntuma",
+  title: "Wind Chill Calculator",
+  seoTitle: "Wind Chill Calculator – Calculate Apparent Temperature in Wind",
   description:
-    "Ilmainen tuuliviimalaskuri: laske tuuliviimalämpötila lämpötilan ja tuulen nopeuden perusteella. Selvitä miltä pakkanen oikeasti tuntuu tuulessa.",
+    "Free wind chill calculator: calculate the apparent temperature based on temperature and wind speed. Find out what cold really feels like in the wind.",
   instructions:
-    "Syötä lämpötila ja tuulen nopeus. Laskuri käyttää kansainvälistä Environment Canada -kaavaa.",
+    "Enter temperature and wind speed. The calculator uses the international Environment Canada formula.",
   Info,
 };
 

@@ -2,9 +2,9 @@
 import SimpleCalculator from "@/components/SimpleCalculator/SimpleCalculator";
 
 const inputs = [
-  { label: "Säästötavoite (€)", initialValue: 10000, step: 100 },
-  { label: "Kuukausittainen säästösumma (€)", initialValue: 200, step: 10 },
-  { label: "Vuotuinen tuotto-odotus (%)", initialValue: 5, step: 0.5 },
+  { label: "Savings goal ($)", initialValue: 10000, step: 100 },
+  { label: "Monthly savings ($)", initialValue: 200, step: 10 },
+  { label: "Expected annual return (%)", initialValue: 5, step: 0.5 },
 ];
 
 export default function SavingsGoalCalculator() {
@@ -15,7 +15,7 @@ export default function SavingsGoalCalculator() {
     const monthlyReturn = annualReturn / 12;
 
     if (monthlySaving <= 0) {
-      return [{ result: 0, label: "Aika", suffix: " kuukautta", decimals: 0 }];
+      return [{ result: 0, label: "Time", suffix: " months", decimals: 0 }];
     }
 
     let months = 0;
@@ -38,23 +38,23 @@ export default function SavingsGoalCalculator() {
     const remainingMonths = months % 12;
 
     return [
-      { result: years, label: "Vuosia", suffix: " v", decimals: 0 },
+      { result: years, label: "Years", suffix: " yr", decimals: 0 },
       {
         result: remainingMonths,
-        label: "Kuukausia",
-        suffix: " kk",
+        label: "Months",
+        suffix: " mo",
         decimals: 0,
       },
       {
         result: totalSaved,
-        label: "Säästetty yhteensä",
-        suffix: " €",
+        label: "Total saved",
+        suffix: " $",
         decimals: 0,
       },
       {
         result: Math.max(0, totalReturn),
-        label: "Tuotot yhteensä",
-        suffix: " €",
+        label: "Total returns",
+        suffix: " $",
         decimals: 0,
       },
     ];

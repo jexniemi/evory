@@ -2,19 +2,19 @@
 import SimpleCalculator from "@/components/SimpleCalculator/SimpleCalculator";
 
 const inputs = [
-  { label: "Bruttopalkka (€/kk)", initialValue: 3500 },
+  { label: "Gross salary ($/mo)", initialValue: 3500 },
   {
-    label: "Veroprosentti (%)",
+    label: "Tax rate (%)",
     initialValue: 25,
     step: 0.5,
   },
   {
-    label: "Työeläkemaksu (%)",
+    label: "Pension contribution (%)",
     initialValue: 7.15,
     step: 0.01,
   },
   {
-    label: "Työttömyysvakuutusmaksu (%)",
+    label: "Unemployment insurance (%)",
     initialValue: 1.36,
     step: 0.01,
   },
@@ -34,18 +34,18 @@ export default function NetSalaryCalculator() {
     const net = gross - tax - pension - unemployment;
 
     return [
-      { result: net, label: "Nettopalkka", suffix: " €/kk", decimals: 2 },
-      { result: tax, label: "Tulovero", suffix: " €/kk", decimals: 2 },
+      { result: net, label: "Net salary", suffix: " $/mo", decimals: 2 },
+      { result: tax, label: "Income tax", suffix: " $/mo", decimals: 2 },
       {
         result: pension,
-        label: "Työeläkemaksu (TyEL)",
-        suffix: " €/kk",
+        label: "Pension (401k)",
+        suffix: " $/mo",
         decimals: 2,
       },
       {
         result: unemployment,
-        label: "Työttömyysvakuutus",
-        suffix: " €/kk",
+        label: "Unemployment insurance",
+        suffix: " $/mo",
         decimals: 2,
       },
     ];

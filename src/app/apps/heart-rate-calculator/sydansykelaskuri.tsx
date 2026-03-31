@@ -3,39 +3,39 @@ import { useState } from "react";
 
 const ZONES = [
   {
-    name: "Vyöhyke 1 – Palautuminen",
+    name: "Zone 1 – Recovery",
     pctMin: 50,
     pctMax: 60,
     color: "bg-blue-100 border-blue-300 text-blue-800",
-    desc: "Kevyin vyöhyke. Sopii lämmittelyyn, jäähdyttelyyn ja aktiiviseen palautumiseen.",
+    desc: "Lightest zone. Ideal for warm-ups, cool-downs, and active recovery.",
   },
   {
-    name: "Vyöhyke 2 – Aerobinen peruskunto",
+    name: "Zone 2 – Aerobic base",
     pctMin: 60,
     pctMax: 70,
     color: "bg-green-100 border-green-300 text-green-800",
-    desc: "Rasvapolton tehokkain alue. Parantaa aerobista kestävyyttä ja aineenvaihduntaa.",
+    desc: "Most effective zone for fat burning. Improves aerobic endurance and metabolism.",
   },
   {
-    name: "Vyöhyke 3 – Aerobinen teho",
+    name: "Zone 3 – Aerobic power",
     pctMin: 70,
     pctMax: 80,
     color: "bg-yellow-100 border-yellow-300 text-yellow-800",
-    desc: "Parantaa aerobista kapasiteettia ja lihaskestävyyttä. Sopii pitkiin treenisuorituksiin.",
+    desc: "Improves aerobic capacity and muscular endurance. Good for longer training sessions.",
   },
   {
-    name: "Vyöhyke 4 – Anaerobinen kynnys",
+    name: "Zone 4 – Anaerobic threshold",
     pctMin: 80,
     pctMax: 90,
     color: "bg-orange-100 border-orange-300 text-orange-800",
-    desc: "Raskas vyöhyke. Parantaa nopeuskestävyyttä ja laktaattikynnystä.",
+    desc: "Heavy zone. Improves speed endurance and lactate threshold.",
   },
   {
-    name: "Vyöhyke 5 – Maksimisuoritus",
+    name: "Zone 5 – Maximum effort",
     pctMin: 90,
     pctMax: 100,
     color: "bg-red-100 border-red-300 text-red-800",
-    desc: "Maksimaalinen suoritus. Käytetään intervalliharjoittelussa ja nopeusharjoittelussa.",
+    desc: "Maximum performance. Used for interval training and speed work.",
   },
 ];
 
@@ -61,7 +61,7 @@ export default function Sydansykelaskuri() {
       <div className="grid grid-cols-2 gap-3">
         <div>
           <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1">
-            Ikä (vuotta)
+            Age (years)
           </label>
           <input
             type="number"
@@ -74,7 +74,7 @@ export default function Sydansykelaskuri() {
         </div>
         <div>
           <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1">
-            Leposyke (lyöntiä/min)
+            Resting HR (bpm)
           </label>
           <input
             type="number"
@@ -98,7 +98,7 @@ export default function Sydansykelaskuri() {
             onChange={(e) => setUseCustom(e.target.checked)}
           />
           <span className="text-sm text-gray-700">
-            Syötä mitattu maksimisyke itse
+            Enter measured max heart rate
           </span>
         </label>
         {useCustom && (
@@ -110,7 +110,7 @@ export default function Sydansykelaskuri() {
             onChange={(e) =>
               setCustomMax(e.target.value === "" ? "" : Number(e.target.value))
             }
-            placeholder="Esim. 185"
+            placeholder="E.g. 185"
             className={inputClass}
           />
         )}
@@ -119,20 +119,20 @@ export default function Sydansykelaskuri() {
       <div className="bg-base-200 rounded-xl p-3 flex gap-4 text-sm">
         <div className="text-center flex-1">
           <div className="text-2xl font-bold text-main">{maxHR}</div>
-          <div className="text-xs text-gray-500">Maksimisyke</div>
+          <div className="text-xs text-gray-500">Max HR</div>
           {!useCustom && (
-            <div className="text-xs text-gray-400">kaava: 220 − {age}</div>
+            <div className="text-xs text-gray-400">formula: 220 − {age}</div>
           )}
         </div>
         <div className="text-center flex-1">
           <div className="text-2xl font-bold text-main">{restHRVal}</div>
-          <div className="text-xs text-gray-500">Leposyke</div>
+          <div className="text-xs text-gray-500">Resting HR</div>
         </div>
         <div className="text-center flex-1">
           <div className="text-2xl font-bold text-main">
             {maxHR - restHRVal}
           </div>
-          <div className="text-xs text-gray-500">Sykereservi</div>
+          <div className="text-xs text-gray-500">HR reserve</div>
         </div>
       </div>
 

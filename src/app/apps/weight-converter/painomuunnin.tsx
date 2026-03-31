@@ -4,21 +4,21 @@ import SimpleCalculator from "@/components/SimpleCalculator/SimpleCalculator";
 const KG_PER_UNIT = [1, 0.001, 0.453592, 6.35029, 1000];
 const UNIT_NAMES = [
   "kg",
-  "grammaa (g)",
-  "paunaa (lbs)",
-  "stoonaa (st)",
-  "tonnia (t)",
+  "grams (g)",
+  "pounds (lbs)",
+  "stone (st)",
+  "metric tons (t)",
 ];
 const UNIT_SUFFIXES = [" kg", " g", " lbs", " st", " t"];
 const UNIT_DECIMALS = [4, 1, 3, 4, 6];
 
 const inputs = [
   {
-    label: "Lähtöyksikkö",
+    label: "From unit",
     labels: UNIT_NAMES,
     values: [0, 1, 2, 3, 4],
   },
-  { label: "Arvo", initialValue: 75, step: 0.1 },
+  { label: "Value", initialValue: 75, step: 0.1 },
 ];
 
 export default function Painomuunnin() {

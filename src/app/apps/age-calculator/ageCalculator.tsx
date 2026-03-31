@@ -32,35 +32,35 @@ export default function AgeCalculator() {
   const results =
     birthDate <= today
       ? [
-          { end: years, label: "Vuosia", suffix: " v" },
-          { end: months, label: "Kuukausia", suffix: " kk" },
-          { end: days, label: "Päiviä", suffix: " pv" },
-          { end: totalDays, label: "Päiviä yhteensä", suffix: " pv" },
-          { end: totalWeeks, label: "Viikkoja yhteensä", suffix: " vko" },
-          { end: totalMonths, label: "Kuukausia yhteensä", suffix: " kk" },
+          { end: years, label: "Years", suffix: " yr" },
+          { end: months, label: "Months", suffix: " mo" },
+          { end: days, label: "Days", suffix: " d" },
+          { end: totalDays, label: "Total days", suffix: " d" },
+          { end: totalWeeks, label: "Total weeks", suffix: " wk" },
+          { end: totalMonths, label: "Total months", suffix: " mo" },
         ]
       : [];
 
   const months_fi = [
-    "Tammikuu",
-    "Helmikuu",
-    "Maaliskuu",
-    "Huhtikuu",
-    "Toukokuu",
-    "Kesäkuu",
-    "Heinäkuu",
-    "Elokuu",
-    "Syyskuu",
-    "Lokakuu",
-    "Marraskuu",
-    "Joulukuu",
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
 
   return (
     <div className="flex flex-col gap-6">
       <div className="grid grid-cols-3 gap-4">
         <div className="flex flex-col gap-1">
-          <label className="text-sm font-medium text-gray-600">Päivä</label>
+          <label className="text-sm font-medium text-gray-600">Day</label>
           <select
             className="select select-bordered w-full"
             value={birthDay}
@@ -74,7 +74,7 @@ export default function AgeCalculator() {
           </select>
         </div>
         <div className="flex flex-col gap-1">
-          <label className="text-sm font-medium text-gray-600">Kuukausi</label>
+          <label className="text-sm font-medium text-gray-600">Month</label>
           <select
             className="select select-bordered w-full"
             value={birthMonth}
@@ -88,7 +88,7 @@ export default function AgeCalculator() {
           </select>
         </div>
         <div className="flex flex-col gap-1">
-          <label className="text-sm font-medium text-gray-600">Vuosi</label>
+          <label className="text-sm font-medium text-gray-600">Year</label>
           <input
             type="number"
             className="input input-bordered w-full"

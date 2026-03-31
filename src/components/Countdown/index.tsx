@@ -8,8 +8,8 @@ interface CountdownProps {
   allowUserSelection?: boolean;
 }
 
-function formatFinnishDate(date: Date) {
-  return date.toLocaleDateString("fi-FI", {
+function formatDate(date: Date) {
+  return date.toLocaleDateString("en-US", {
     day: "numeric",
     month: "long",
     year: "numeric",
@@ -86,10 +86,10 @@ const Countdown: React.FC<CountdownProps> = ({
       {/* Header */}
       <div className="flex flex-col gap-1">
         <p className="text-sm text-gray-500 uppercase tracking-wide font-medium">
-          Aikaa {targetDateName.toLowerCase()}
+          Time until {targetDateName}
         </p>
         <p className="text-base font-semibold text-base-content">
-          📅 {formatFinnishDate(target)}
+          📅 {formatDate(target)}
         </p>
       </div>
 
@@ -97,32 +97,32 @@ const Countdown: React.FC<CountdownProps> = ({
         <div className="alert alert-success shadow-sm">
           <span className="text-lg">🎉</span>
           <span className="font-semibold">
-            {targetDateName} on jo koittanut!
+            {targetDateName} has already passed!
           </span>
         </div>
       ) : (
         <>
           {/* Countdown tiles */}
           <div className="flex flex-row gap-3 sm:gap-4 flex-wrap">
-            <CountdownUnit value={days} label="päivää" highlight={days > 0} />
-            <CountdownUnit value={hours} label="tuntia" />
+            <CountdownUnit value={days} label="days" highlight={days > 0} />
+            <CountdownUnit value={hours} label="hours" />
             <CountdownUnit value={minutes} label="min" />
-            <CountdownUnit value={seconds} label="sek" />
+            <CountdownUnit value={seconds} label="sec" />
           </div>
 
           {/* Summary line */}
           <p className="text-sm text-gray-500">
-            Yhteensä{" "}
+            Total of{" "}
             <span className="font-bold text-base-content">
-              {totalDays.toLocaleString("fi-FI")} päivää
+              {totalDays.toLocaleString("en-US")} days
             </span>{" "}
-            jäljellä
+            remaining
           </p>
 
           {/* Progress bar */}
           <div className="flex flex-col gap-1">
             <div className="flex justify-between text-xs text-gray-400">
-              <span>Tänään</span>
+              <span>Today</span>
               <span>{targetDateName}</span>
             </div>
             <progress
@@ -144,11 +144,11 @@ const Countdown: React.FC<CountdownProps> = ({
       {allowUserSelection && (
         <div className="card border border-base-200 bg-base-100 shadow-sm mt-2">
           <div className="card-body p-4 gap-2">
-            <p className="text-sm font-semibold">📆 Valitse oma päivämäärä</p>
+            <p className="text-sm font-semibold">📆 Choose custom date</p>
             <DateSelector
               onDateChange={(date: Date) => setTarget(date)}
               initialDate={target}
-              label="Päivämäärä"
+              label="Date"
             />
           </div>
         </div>

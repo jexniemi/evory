@@ -3,8 +3,8 @@ import SimpleCalculator from "@/components/SimpleCalculator/SimpleCalculator";
 
 export default function MonthlyPayCalculator() {
   const inputs = [
-    { label: "Tuntipalkka (€)", initialValue: 18, step: 0.5 },
-    { label: "Työtunteja viikossa", initialValue: 37.5, step: 0.5 },
+    { label: "Hourly wage ($)", initialValue: 18, step: 0.5 },
+    { label: "Work hours per week", initialValue: 37.5, step: 0.5 },
   ];
 
   const calculate = (values: number[]) => {
@@ -18,13 +18,13 @@ export default function MonthlyPayCalculator() {
     return [
       {
         result: monthly,
-        label: "Kuukausipalkka",
-        suffix: " €/kk",
+        label: "Monthly salary",
+        suffix: " $/mo",
         decimals: 2,
       },
-      { result: daily, label: "Päiväpalkka", suffix: " €/pv", decimals: 2 },
-      { result: hourly, label: "Tuntipalkka", suffix: " €/h", decimals: 2 },
-      { result: annual, label: "Vuosipalkka", suffix: " €/v", decimals: 0 },
+      { result: daily, label: "Daily pay", suffix: " $/day", decimals: 2 },
+      { result: hourly, label: "Hourly wage", suffix: " $/hr", decimals: 2 },
+      { result: annual, label: "Annual salary", suffix: " $/yr", decimals: 0 },
     ];
   };
 

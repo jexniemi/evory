@@ -12,12 +12,12 @@ export default function PainomuunninPage() {
 }
 
 const pageProps = {
-  title: "Painomuunnin",
-  seoTitle: "Painomuunnin – Muunna kg, g, lbs, stoonat ja tonnit",
+  title: "Weight Converter",
+  seoTitle: "Weight Converter – Convert kg, g, lbs, Stone, and Tons",
   description:
-    "Ilmainen painomuunnin: muunna kilogrammat, grammat, naudat (lbs), stoonat ja tonnit helposti. Syötä arvo, valitse yksikkö ja näe kaikki muunnokset.",
+    "Free weight converter: easily convert kilograms, grams, pounds (lbs), stone, and metric tons. Enter a value, select a unit, and see all conversions instantly.",
   instructions:
-    "Valitse lähtöyksikkö, syötä arvo ja saat kaikki muunnokset heti.",
+    "Select the source unit, enter a value, and get all conversions immediately.",
   Info,
 };
 

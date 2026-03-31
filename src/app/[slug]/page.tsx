@@ -20,7 +20,7 @@ export default async function Page({
   );
 
   if (!applications || !result) {
-    return <div className="mt-8 mb-20">Kategoriaa ei löytynyt.</div>;
+    return <div className="mt-8 mb-20">Category not found.</div>;
   }
 
   const { name, theme } = result;

@@ -5,21 +5,21 @@ const CM_PER_UNIT = [1, 100, 30.48, 2.54, 100000, 160934];
 const UNIT_NAMES = [
   "cm",
   "m",
-  "jalkaa (ft)",
-  "tuumaa (in)",
+  "feet (ft)",
+  "inches (in)",
   "km",
-  "mailia (mi)",
+  "miles (mi)",
 ];
 const UNIT_SUFFIXES = [" cm", " m", " ft", " in", " km", " mi"];
 const UNIT_DECIMALS = [2, 4, 4, 3, 6, 6];
 
 const inputs = [
   {
-    label: "Lähtöyksikkö",
+    label: "From unit",
     labels: UNIT_NAMES,
     values: [0, 1, 2, 3, 4, 5],
   },
-  { label: "Arvo", initialValue: 170, step: 0.1 },
+  { label: "Value", initialValue: 170, step: 0.1 },
 ];
 
 export default function Pituusmuunnin() {

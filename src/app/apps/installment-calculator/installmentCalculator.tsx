@@ -12,18 +12,18 @@ export default function InstallmentCalculator() {
     const totalInterest = totalCost - principal;
 
     return [
-      { result: monthlyPayment || 0, label: "Kuukausierä:", suffix: "€" },
-      { result: totalCost || 0, label: "Kokonaishinta:", suffix: "€" },
-      { result: totalInterest || 0, label: "Korkojen määrä:", suffix: "€" },
+      { result: monthlyPayment || 0, label: "Monthly payment:", suffix: "$" },
+      { result: totalCost || 0, label: "Total cost:", suffix: "$" },
+      { result: totalInterest || 0, label: "Total interest:", suffix: "$" },
     ];
   };
 
   return (
     <SimpleCalculator
       inputs={[
-        { label: "Lainan/tuotteen kokonaissumma (€)", initialValue: 1000 },
-        { label: "Vuosikorko (%)", initialValue: 5 },
-        { label: "Maksuaika (kuukausina)", initialValue: 12 },
+        { label: "Loan/product total ($)", initialValue: 1000 },
+        { label: "Annual interest rate (%)", initialValue: 5 },
+        { label: "Payment period (months)", initialValue: 12 },
       ]}
       calculate={calculateInstallment}
     />

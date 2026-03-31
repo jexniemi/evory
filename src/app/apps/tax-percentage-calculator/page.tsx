@@ -12,12 +12,12 @@ export default function TaxRatePage() {
 }
 
 const pageProps = {
-  seoTitle: "Veroprosentti-laskuri – Laske todellinen veroprosenttisi",
-  title: "Veroprosentti-laskuri",
+  seoTitle: "Tax Rate Calculator – Calculate Your Effective Tax Rate",
+  title: "Tax Rate Calculator",
   description:
-    "Laske efektiivinen veroprosenttisi nettopalkan ja maksamiesi verojen perusteella. Näet myös vuositason bruttotulot ja verot.",
+    "Calculate your effective tax rate based on your net salary and taxes paid. Also see annual gross income and total taxes.",
   instructions:
-    "Syötä kuukausittainen nettopalkka ja maksamasi verot. Laskuri näyttää bruttopalkan, veroprosentin sekä vuosiluvut.",
+    "Enter your monthly net salary and taxes paid. The calculator shows gross salary, tax rate, and annual figures.",
   Info,
 };
 

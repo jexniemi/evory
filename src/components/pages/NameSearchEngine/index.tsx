@@ -12,19 +12,19 @@ type Nameday = {
   type: string;
 };
 
-const MONTHS_FI = [
-  "tammikuuta",
-  "helmikuuta",
-  "maaliskuuta",
-  "huhtikuuta",
-  "toukokuuta",
-  "kesäkuuta",
-  "heinäkuuta",
-  "elokuuta",
-  "syyskuuta",
-  "lokakuuta",
-  "marraskuuta",
-  "joulukuuta",
+const MONTHS_EN = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
 ];
 
 function findByDate(day: number, month: number): Nameday[] {
@@ -54,8 +54,8 @@ export default function NameSearchEngine() {
 
   const todayNames = findByDate(today.getDate(), today.getMonth());
   const nameResults = searchByName(nameQuery);
-  const formattedToday = `${today.getDate()}. ${MONTHS_FI[today.getMonth()]}`;
-  const formattedSelected = `${selectedDate.getDate()}.${selectedDate.getMonth() + 1}.`;
+  const formattedToday = `${MONTHS_EN[today.getMonth()]} ${today.getDate()}`;
+  const formattedSelected = `${selectedDate.getMonth() + 1}/${selectedDate.getDate()}`;
 
   return (
     <div className="w-full flex flex-col gap-6">
@@ -63,7 +63,7 @@ export default function NameSearchEngine() {
       <div className="rounded-xl bg-primary/5 border border-primary/20 p-4 flex gap-3 items-start">
         <span className="text-2xl">🗓️</span>
         <div>
-          <p className="text-sm text-gray-500 mb-2">Tänään {formattedToday}</p>
+          <p className="text-sm text-gray-500 mb-2">Today, {formattedToday}</p>
           {todayNames.length > 0 ? (
             <div className="flex flex-wrap gap-2">
               {todayNames.map((nd) => (
@@ -76,7 +76,7 @@ export default function NameSearchEngine() {
               ))}
             </div>
           ) : (
-            <p className="font-medium text-gray-500">Ei nimipäiviä tänään</p>
+            <p className="font-medium text-gray-500">No name days today</p>
           )}
         </div>
       </div>
@@ -85,13 +85,13 @@ export default function NameSearchEngine() {
       <div className="card border border-base-200 shadow-sm bg-base-100">
         <div className="card-body p-4 gap-3">
           <h2 className="font-bold text-base flex items-center gap-2">
-            <span>🔍</span> Hae nimipäivää nimellä
+            <span>🔍</span> Search name days by name
           </h2>
           <div className="relative">
             <input
               type="text"
               className="input input-bordered w-full pr-10"
-              placeholder="Esim. Matti, Anna, Ville…"
+              placeholder="E.g. Matthew, Anna, William…"
               value={nameQuery}
               onChange={(e) => setNameQuery(e.target.value)}
               autoComplete="off"
@@ -100,7 +100,7 @@ export default function NameSearchEngine() {
               <button
                 className="absolute right-2 top-1/2 -translate-y-1/2 btn btn-ghost btn-xs btn-circle"
                 onClick={() => setNameQuery("")}
-                aria-label="Tyhjennä haku"
+                aria-label="Clear search"
               >
                 ✕
               </button>
@@ -123,15 +123,15 @@ export default function NameSearchEngine() {
                 ))}
                 {nameResults.length === 24 && (
                   <p className="text-xs text-gray-400 text-center pt-1">
-                    Tarkenna hakua nähdäksesi lisää tuloksia
+                    Refine your search to see more results
                   </p>
                 )}
               </div>
             ) : (
               <div className="alert alert-error">
                 <span>
-                  Nimellä &ldquo;{nameQuery}&rdquo; ei löydy nimipäiviä.
-                  Tarkista kirjoitusasu.
+                  No name days found for &ldquo;{nameQuery}&rdquo;.
+                  Please check the spelling.
                 </span>
               </div>
             ))}
@@ -142,7 +142,7 @@ export default function NameSearchEngine() {
       <div className="card border border-base-200 shadow-sm bg-base-100">
         <div className="card-body p-4 gap-3">
           <h2 className="font-bold text-base flex items-center gap-2">
-            <span>📅</span> Hae nimipäiviä päivämäärällä
+            <span>📅</span> Search name days by date
           </h2>
           <DateSelector
             onDateChange={(date) => {
@@ -153,7 +153,7 @@ export default function NameSearchEngine() {
           {dateResults.length > 0 ? (
             <div>
               <p className="text-sm text-gray-500 mb-2">
-                {formattedSelected} nimipäivät:
+                Name days for {formattedSelected}:
               </p>
               <div className="flex flex-wrap gap-2">
                 {dateResults.map((nd) => (
@@ -168,7 +168,7 @@ export default function NameSearchEngine() {
             </div>
           ) : (
             <div className="alert alert-warning">
-              <span>Valitulle päivämäärälle ei löydy nimipäiviä.</span>
+              <span>No name days found for the selected date.</span>
             </div>
           )}
         </div>

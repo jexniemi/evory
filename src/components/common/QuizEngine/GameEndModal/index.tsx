@@ -37,15 +37,15 @@ export default function GameEndModal({
         className="text-center"
       >
         <h2 className="text-2xl font-bold mb-2">
-          {win ? "Voitit pelin!" : "Peli päättyi!"}
+          {win ? "You won!" : "Game over!"}
         </h2>
         <p className="text-gray-600">
-          Pisteesi: <span className="font-bold text-gray-900">{score}</span> /{" "}
+          Your score: <span className="font-bold text-gray-900">{score}</span> /{" "}
           {winCondition}
         </p>
         {bestStreak >= 2 && (
           <p className="text-orange-600 font-semibold mt-1">
-            🔥 Paras putki: {bestStreak} peräkkäin
+            🔥 Best streak: {bestStreak} in a row
           </p>
         )}
       </motion.div>
@@ -57,7 +57,7 @@ export default function GameEndModal({
         onClick={reset}
         className="mt-2 px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-xl transition-colors shadow-lg shadow-emerald-200 active:scale-95 cursor-pointer"
       >
-        Pelaa uudestaan
+        Play again
       </motion.button>
     </div>
   );

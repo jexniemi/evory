@@ -12,12 +12,12 @@ export default function TyotuntilaskuriPage() {
 }
 
 const pageProps = {
-  title: "Työtuntilaskuri",
-  seoTitle: "Työtuntilaskuri – Laske tehdyt työtunnit ja ansiot",
+  title: "Work Hours Calculator",
+  seoTitle: "Work Hours Calculator – Track Hours Worked and Earnings",
   description:
-    "Ilmainen työtuntilaskuri: syötä töihin tulo- ja lähtöaika sekä tauot, niin lasket välittömästi tehdyt työtunnit ja halutessasi ansiot. Sopii tuntipalkkaisille ja tuntiseurantaan.",
+    "Free work hours calculator: enter your start and end times plus breaks to instantly calculate hours worked and optional earnings. Perfect for hourly workers and time tracking.",
   instructions:
-    "Syötä töihin tuloaika, lähtöaika ja taukojen pituus. Lisää tuntipalkka ansiolaskelmaa varten.",
+    "Enter your start time, end time, and break duration. Add an hourly rate to calculate earnings.",
   Info,
 };
 

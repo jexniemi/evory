@@ -66,7 +66,7 @@ export default function AppSuggestionBar() {
         <div className="flex items-center gap-2 mb-5">
           <span className="text-xl">🔍</span>
           <h5 className="text-lg font-bold text-gray-900">
-            Kokeile myös näitä
+            Try these too
           </h5>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">

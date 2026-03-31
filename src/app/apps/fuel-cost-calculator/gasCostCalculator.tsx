@@ -3,9 +3,9 @@ import SimpleCalculator from "@/components/SimpleCalculator/SimpleCalculator";
 
 export default function GasCostCalculator() {
   const inputs = [
-    { label: "Ajettu matka (km)", initialValue: 50 },
-    { label: "Polttoaineen keskikulutus (litraa / 100km)", initialValue: 5 },
-    { label: "Polttoaineen litrahinta (€)", initialValue: 1.979, step: 0.001 },
+    { label: "Distance driven (miles)", initialValue: 50 },
+    { label: "Fuel consumption (gal/100mi)", initialValue: 5 },
+    { label: "Fuel price per gallon ($)", initialValue: 3.5, step: 0.001 },
   ];
 
   const calculate = (values: number[]) => {
@@ -15,8 +15,8 @@ export default function GasCostCalculator() {
     } catch (error) {
       console.error(error);
     }
-    return [{ result, label: "Matkan polttoainekustannukset:" }];
+    return [{ result, label: "Trip fuel cost:" }];
   };
 
-  return <SimpleCalculator inputs={inputs} calculate={calculate} suffix="€" />;
+  return <SimpleCalculator inputs={inputs} calculate={calculate} suffix="$" />;
 }

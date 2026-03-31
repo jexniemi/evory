@@ -9,25 +9,25 @@ const CURRENCIES: {
   flag: string;
 }[] = [
   { code: "EUR", name: "Euro", rateToEur: 1.0, flag: "🇪🇺" },
-  { code: "USD", name: "Yhdysvaltain dollari", rateToEur: 1.08, flag: "🇺🇸" },
-  { code: "GBP", name: "Englannin punta", rateToEur: 0.85, flag: "🇬🇧" },
-  { code: "SEK", name: "Ruotsin kruunu", rateToEur: 11.35, flag: "🇸🇪" },
-  { code: "NOK", name: "Norjan kruunu", rateToEur: 11.55, flag: "🇳🇴" },
-  { code: "DKK", name: "Tanskan kruunu", rateToEur: 7.46, flag: "🇩🇰" },
-  { code: "CHF", name: "Sveitsin frangi", rateToEur: 0.97, flag: "🇨🇭" },
-  { code: "JPY", name: "Japanin jeni", rateToEur: 161, flag: "🇯🇵" },
-  { code: "CNY", name: "Kiinan yuan", rateToEur: 7.8, flag: "🇨🇳" },
-  { code: "CAD", name: "Kanadan dollari", rateToEur: 1.47, flag: "🇨🇦" },
-  { code: "AUD", name: "Australian dollari", rateToEur: 1.65, flag: "🇦🇺" },
-  { code: "THB", name: "Thaimaan baht", rateToEur: 38.5, flag: "🇹🇭" },
-  { code: "TRY", name: "Turkin liira", rateToEur: 37.0, flag: "🇹🇷" },
-  { code: "PLN", name: "Puolan zloty", rateToEur: 4.25, flag: "🇵🇱" },
-  { code: "CZK", name: "Tšekin kruunu", rateToEur: 25.2, flag: "🇨🇿" },
-  { code: "HUF", name: "Unkarin forintti", rateToEur: 395, flag: "🇭🇺" },
-  { code: "RUB", name: "Venäjän rupla", rateToEur: 100, flag: "🇷🇺" },
-  { code: "MXN", name: "Meksikon peso", rateToEur: 20.5, flag: "🇲🇽" },
-  { code: "BRL", name: "Brasilian real", rateToEur: 6.0, flag: "🇧🇷" },
-  { code: "INR", name: "Intian rupia", rateToEur: 90, flag: "🇮🇳" },
+  { code: "USD", name: "US Dollar", rateToEur: 1.08, flag: "🇺🇸" },
+  { code: "GBP", name: "British Pound", rateToEur: 0.85, flag: "🇬🇧" },
+  { code: "SEK", name: "Swedish Krona", rateToEur: 11.35, flag: "🇸🇪" },
+  { code: "NOK", name: "Norwegian Krone", rateToEur: 11.55, flag: "🇳🇴" },
+  { code: "DKK", name: "Danish Krone", rateToEur: 7.46, flag: "🇩🇰" },
+  { code: "CHF", name: "Swiss Franc", rateToEur: 0.97, flag: "🇨🇭" },
+  { code: "JPY", name: "Japanese Yen", rateToEur: 161, flag: "🇯🇵" },
+  { code: "CNY", name: "Chinese Yuan", rateToEur: 7.8, flag: "🇨🇳" },
+  { code: "CAD", name: "Canadian Dollar", rateToEur: 1.47, flag: "🇨🇦" },
+  { code: "AUD", name: "Australian Dollar", rateToEur: 1.65, flag: "🇦🇺" },
+  { code: "THB", name: "Thai Baht", rateToEur: 38.5, flag: "🇹🇭" },
+  { code: "TRY", name: "Turkish Lira", rateToEur: 37.0, flag: "🇹🇷" },
+  { code: "PLN", name: "Polish Zloty", rateToEur: 4.25, flag: "🇵🇱" },
+  { code: "CZK", name: "Czech Koruna", rateToEur: 25.2, flag: "🇨🇿" },
+  { code: "HUF", name: "Hungarian Forint", rateToEur: 395, flag: "🇭🇺" },
+  { code: "RUB", name: "Russian Ruble", rateToEur: 100, flag: "🇷🇺" },
+  { code: "MXN", name: "Mexican Peso", rateToEur: 20.5, flag: "🇲🇽" },
+  { code: "BRL", name: "Brazilian Real", rateToEur: 6.0, flag: "🇧🇷" },
+  { code: "INR", name: "Indian Rupee", rateToEur: 90, flag: "🇮🇳" },
 ];
 
 export default function Valuuttamuunnin() {
@@ -56,7 +56,7 @@ export default function Valuuttamuunnin() {
     <div className="flex flex-col gap-4 w-full max-w-sm mx-auto">
       <div>
         <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1">
-          Summa
+          Amount
         </label>
         <input
           type="number"
@@ -72,7 +72,7 @@ export default function Valuuttamuunnin() {
 
       <div>
         <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1">
-          Mistä valuutasta
+          From currency
         </label>
         <select
           value={fromIdx}
@@ -91,7 +91,7 @@ export default function Valuuttamuunnin() {
         <button
           onClick={swap}
           className="btn btn-circle btn-sm btn-ghost text-lg"
-          title="Vaihda suunta"
+          title="Swap currencies"
         >
           ⇅
         </button>
@@ -99,7 +99,7 @@ export default function Valuuttamuunnin() {
 
       <div>
         <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1">
-          Mihin valuuttaan
+          To currency
         </label>
         <select
           value={toIdx}
@@ -118,12 +118,12 @@ export default function Valuuttamuunnin() {
         <div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-5 text-center mt-2">
           <div className="text-sm text-gray-500 mb-1">
             {typeof amount === "number"
-              ? amount.toLocaleString("fi-FI", { maximumFractionDigits: 2 })
+              ? amount.toLocaleString("en-US", { maximumFractionDigits: 2 })
               : "—"}{" "}
             {CURRENCIES[fromIdx].code} =
           </div>
           <div className="text-4xl font-bold text-blue-700">
-            {result.toLocaleString("fi-FI", {
+            {result.toLocaleString("en-US", {
               minimumFractionDigits: 2,
               maximumFractionDigits: 2,
             })}
@@ -133,15 +133,14 @@ export default function Valuuttamuunnin() {
           </div>
           <div className="text-xs text-gray-400 mt-3">
             1 {CURRENCIES[fromIdx].code} ≈{" "}
-            {convert(1, fromIdx, toIdx).toLocaleString("fi-FI", {
+            {convert(1, fromIdx, toIdx).toLocaleString("en-US", {
               minimumFractionDigits: 4,
               maximumFractionDigits: 4,
             })}{" "}
             {CURRENCIES[toIdx].code}
           </div>
           <div className="text-xs text-gray-400 mt-0.5">
-            ⚠️ Kurssit ovat viitteellisiä — tarkista ajantasaiset kurssit
-            pankistasi.
+            ⚠️ Rates are indicative — check current rates with your bank.
           </div>
         </div>
       )}

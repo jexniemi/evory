@@ -4,9 +4,9 @@ import Link from "next/link";
 import { getCategoryTheme, appIcons } from "@/utils/categoryTheme";
 
 export const metadata: Metadata = {
-  title: "Apps.fi - Free calculators and web applications.",
+  title: "Ewory.com - Free calculators and web applications.",
   description:
-    "From Apps.fi you will find free calculators and web applications of all kinds.",
+    "From Ewory.com you will find free calculators and web applications of all kinds.",
 };
 
 export default function Home() {

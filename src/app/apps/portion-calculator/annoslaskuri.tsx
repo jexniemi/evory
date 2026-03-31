@@ -14,9 +14,9 @@ export default function Annoslaskuri() {
   const [originalServings, setOriginalServings] = useState(4);
   const [desiredServings, setDesiredServings] = useState(2);
   const [ingredients, setIngredients] = useState<Ingredient[]>([
-    { id: 1, name: "Jauheliha", amount: "400", unit: "g" },
-    { id: 2, name: "Tomaattimurska", amount: "400", unit: "g" },
-    { id: 3, name: "Makarooni", amount: "300", unit: "g" },
+    { id: 1, name: "Ground beef", amount: "400", unit: "g" },
+    { id: 2, name: "Crushed tomatoes", amount: "400", unit: "g" },
+    { id: 3, name: "Macaroni", amount: "300", unit: "g" },
   ]);
 
   const ratio = originalServings > 0 ? desiredServings / originalServings : 1;
@@ -61,7 +61,7 @@ export default function Annoslaskuri() {
       <div className="grid grid-cols-2 gap-3">
         <div>
           <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1">
-            Alkuperäinen annoskoko
+            Original serving size
           </label>
           <input
             type="number"
@@ -76,7 +76,7 @@ export default function Annoslaskuri() {
         </div>
         <div>
           <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1">
-            Haluttu annoskoko
+            Desired serving size
           </label>
           <input
             type="number"
@@ -93,7 +93,7 @@ export default function Annoslaskuri() {
 
       {ratio !== 1 && (
         <div className="text-center text-sm bg-blue-50 border border-blue-200 rounded-xl p-2 text-blue-700 font-semibold">
-          Skaalauskerroin: ×{ratio.toFixed(4).replace(/\.?0+$/, "")}
+          Scale factor: ×{ratio.toFixed(4).replace(/\.?0+$/, "")}
         </div>
       )}
 
@@ -101,19 +101,19 @@ export default function Annoslaskuri() {
       <div>
         <div className="flex items-center justify-between mb-2">
           <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
-            Ainesosat
+            Ingredients
           </label>
           <button onClick={addIngredient} className="btn btn-xs btn-ghost">
-            + Lisää
+            + Add
           </button>
         </div>
 
         <div className="flex flex-col gap-2">
           {/* Header */}
           <div className="grid grid-cols-[1fr_80px_60px_80px_28px] gap-1 text-xs text-gray-400 px-1">
-            <span>Ainesosa</span>
-            <span className="text-center">Alkup.</span>
-            <span className="text-center">Yksikkö</span>
+            <span>Ingredient</span>
+            <span className="text-center">Orig.</span>
+            <span className="text-center">Unit</span>
             <span className="text-center font-semibold text-green-600">
               Skaalattu
             </span>
@@ -131,7 +131,7 @@ export default function Annoslaskuri() {
                 onChange={(e) =>
                   updateIngredient(ing.id, "name", e.target.value)
                 }
-                placeholder="Nimi"
+                placeholder="Name"
                 className={inputClass + " w-full"}
               />
               <input
@@ -169,7 +169,7 @@ export default function Annoslaskuri() {
       </div>
 
       <button onClick={addIngredient} className="btn btn-outline btn-sm w-full">
-        + Lisää ainesosa
+        + Add ingredient
       </button>
     </div>
   );

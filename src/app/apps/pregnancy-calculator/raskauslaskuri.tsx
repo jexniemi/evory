@@ -1,28 +1,28 @@
 "use client";
 import { useState } from "react";
 
-const DAYS_FI = [
-  "Sunnuntai",
-  "Maanantai",
-  "Tiistai",
-  "Keskiviikko",
-  "Torstai",
-  "Perjantai",
-  "Lauantai",
+const DAYS_EN = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
 ];
-const MONTHS_FI = [
-  "tammikuuta",
-  "helmikuuta",
-  "maaliskuuta",
-  "huhtikuuta",
-  "toukokuuta",
-  "kesäkuuta",
-  "heinäkuuta",
-  "elokuuta",
-  "syyskuuta",
-  "lokakuuta",
-  "marraskuuta",
-  "joulukuuta",
+const MONTHS_EN = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
 ];
 
 function addWeeks(d: Date, weeks: number) {
@@ -32,7 +32,7 @@ function addWeeks(d: Date, weeks: number) {
 }
 
 function formatDate(d: Date) {
-  return `${d.getDate()}. ${MONTHS_FI[d.getMonth()]} ${d.getFullYear()} (${DAYS_FI[d.getDay()]})`;
+  return `${DAYS_EN[d.getDay()]}, ${MONTHS_EN[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
 }
 
 function weeksBetween(a: Date, b: Date) {
@@ -72,18 +72,18 @@ export default function Raskauslaskuri() {
     currentWeek === null
       ? null
       : currentWeek < 13
-        ? "1. trimesteri (vk 1–12)"
+        ? "1st trimester (wk 1–12)"
         : currentWeek < 27
-          ? "2. trimesteri (vk 13–27)"
-          : "3. trimesteri (vk 28–40)";
+          ? "2nd trimester (wk 13–27)"
+          : "3rd trimester (wk 28–40)";
 
   const milestones = lmp
     ? [
-        { week: 12, label: "Ensimmäinen ultraääni (yleensä vk 11–14)" },
-        { week: 20, label: "Rakenneultraääni (vk 18–21)" },
-        { week: 28, label: "Kolmas trimesteri alkaa" },
-        { week: 36, label: "Täysiaikainen raskaus alkaa" },
-        { week: 40, label: "Laskettu aika" },
+        { week: 12, label: "First ultrasound (usually wk 11–14)" },
+        { week: 20, label: "Anatomy scan (wk 18–21)" },
+        { week: 28, label: "Third trimester begins" },
+        { week: 36, label: "Full-term pregnancy begins" },
+        { week: 40, label: "Due date" },
       ].map((m) => ({ ...m, date: addWeeks(lmp!, m.week) }))
     : [];
 
@@ -95,20 +95,20 @@ export default function Raskauslaskuri() {
           className={`tab flex-1 rounded-lg transition-all ${mode === "lmp" ? "tab-active bg-white shadow font-semibold" : ""}`}
           onClick={() => setMode("lmp")}
         >
-          Viimeisten kuukautisten päivä
+          Last menstrual period date
         </button>
         <button
           className={`tab flex-1 rounded-lg transition-all ${mode === "duedate" ? "tab-active bg-white shadow font-semibold" : ""}`}
           onClick={() => setMode("duedate")}
         >
-          Laskettu aika tiedossa
+          Due date known
         </button>
       </div>
 
       {mode === "lmp" ? (
         <div>
           <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1">
-            Viimeisten kuukautisten ensimmäinen päivä
+            First day of last menstrual period
           </label>
           <input
             type="date"
@@ -120,7 +120,7 @@ export default function Raskauslaskuri() {
       ) : (
         <div>
           <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1">
-            Laskettu aika (synnytyksen arvioitu päivä)
+            Due date (estimated delivery date)
           </label>
           <input
             type="date"
@@ -137,35 +137,35 @@ export default function Raskauslaskuri() {
           <div className="grid grid-cols-2 gap-3">
             <div className="bg-pink-50 border border-pink-200 rounded-2xl p-4 text-center">
               <div className="text-3xl font-bold text-pink-600">
-                {currentWeek}. vk
+                Wk {currentWeek}
               </div>
-              <div className="text-xs text-gray-500 mt-1">Raskauden viikko</div>
+              <div className="text-xs text-gray-500 mt-1">Pregnancy week</div>
             </div>
             <div className="bg-purple-50 border border-purple-200 rounded-2xl p-4 text-center">
               <div className="text-2xl font-bold text-purple-600">
                 {daysLeft !== null && daysLeft > 0
-                  ? `${daysLeft} pv`
+                  ? `${daysLeft} d`
                   : daysLeft === 0
-                    ? "Tänään!"
-                    : "Ohitettu"}
+                    ? "Today!"
+                    : "Passed"}
               </div>
               <div className="text-xs text-gray-500 mt-1">
-                Päiviä laskettuun aikaan
+                Days until due date
               </div>
             </div>
           </div>
 
           <div className="bg-base-200 rounded-xl p-4 flex flex-col gap-2 text-sm">
             <div className="flex justify-between">
-              <span className="text-gray-500">Laskettu aika</span>
+              <span className="text-gray-500">Due date</span>
               <span className="font-semibold">{formatDate(dueDate)}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-500">Raskauden päivä</span>
-              <span className="font-semibold">{currentDay}. päivä / 280</span>
+              <span className="text-gray-500">Day of pregnancy</span>
+              <span className="font-semibold">{currentDay}. day / 280</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-500">Trimesteri</span>
+              <span className="text-gray-500">Trimester</span>
               <span className="font-semibold">{trimester}</span>
             </div>
           </div>
@@ -173,11 +173,11 @@ export default function Raskauslaskuri() {
           {/* Progress bar */}
           <div>
             <div className="flex justify-between text-xs text-gray-400 mb-1">
-              <span>Raskausviiikko 1</span>
+              <span>Week 1</span>
               <span>
                 {Math.min(100, Math.round((currentWeek / 40) * 100))}%
               </span>
-              <span>Viikko 40</span>
+              <span>Week 40</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-3">
               <div
@@ -190,7 +190,7 @@ export default function Raskauslaskuri() {
           {/* Milestones */}
           <div>
             <h4 className="text-sm font-semibold text-gray-600 mb-2">
-              Tärkeät virstanpylväät
+              Key milestones
             </h4>
             <div className="flex flex-col gap-1.5">
               {milestones.map((m) => {

@@ -11,17 +11,17 @@ const SQM_PER_UNIT = [
   10_000, // ha (hehtaari)
   4046.86, // acre
 ];
-const UNIT_NAMES = ["m²", "cm²", "km²", "ft²", "yd²", "ha (hehtaari)", "acre"];
+const UNIT_NAMES = ["m²", "cm²", "km²", "ft²", "yd²", "ha (hectare)", "acre"];
 const UNIT_SUFFIXES = [" m²", " cm²", " km²", " ft²", " yd²", " ha", " acre"];
 const UNIT_DECIMALS = [4, 2, 10, 4, 4, 6, 6];
 
 const inputs = [
   {
-    label: "Lähtöyksikkö",
+    label: "From unit",
     labels: UNIT_NAMES,
     values: [0, 1, 2, 3, 4, 5, 6],
   },
-  { label: "Pinta-ala", initialValue: 100, step: 1 },
+  { label: "Area", initialValue: 100, step: 1 },
 ];
 
 export default function Pintaalamunnin() {

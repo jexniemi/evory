@@ -96,28 +96,28 @@ export default function FlightCO2Calculator() {
     } catch (error) {
       console.error(error);
     }
-    return [{ result, label: "Matkan hiilidioksidipäästöt (CO2):" }];
+    return [{ result, label: "Trip CO2 emissions:" }];
   };
 
   return (
     <div className="flex flex-col items-center flex-1">
       <div className="w-72">
         <ApiSearch
-          label="Lähtöpiste (lentokenttä)"
+          label="Departure (airport)"
           apiRoute="/api/airports"
           // displayProperty={"name"}
           initialDisplayValue={airport1.name}
           setSearchResult={setAirport1}
-          placeholder="Etsi lentokenttää"
+          placeholder="Search airports"
         />
         <div className="mt-3" />
         <ApiSearch
-          label="Määränpää (lentokenttä)"
+          label="Destination (airport)"
           apiRoute="/api/airports"
           // displayProperty={"name"}
           initialDisplayValue={airport2.name}
           setSearchResult={setAirport2}
-          placeholder="Etsi lentokenttää"
+          placeholder="Search airports"
         />
         <SimpleCalculator
           calculate={calculate}

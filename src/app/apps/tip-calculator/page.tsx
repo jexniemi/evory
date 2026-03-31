@@ -12,12 +12,12 @@ export default function TipCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle: "Tippilaskuri - Laske Maksettava Juomaraha Helposti",
-  title: "Tippilaskuri",
+  seoTitle: "Tip Calculator – Calculate Tip Amount Easily",
+  title: "Tip Calculator",
   description:
-    "Laske tippi helposti ja tarkasti tippilaskurimme avulla. Syötä laskun summa, tippiprosentti, ja henkilöiden määrä jakamassa laskua saadaksesi selville tippi, kokonaissumma, ja summa per henkilö.",
+    "Calculate tips easily and accurately. Enter the bill amount, tip percentage, and number of people splitting the bill to get the tip, total, and amount per person.",
   instructions:
-    "Käytä tippilaskuria selvittääksesi kuinka paljon tippiä antaa ja kuinka paljon kukin henkilö maksaa laskusta. Syötä laskun summa, tippiprosentti, ja henkilöiden määrä jakamassa laskua. Laskuri antaa sinulle tarkan arvion tippisummasta, kokonaissummasta (sisältäen tipin), ja summasta per henkilö.",
+    "Enter the bill amount, tip percentage, and number of people sharing the bill. The calculator gives you the exact tip amount, total bill (including tip), and the amount per person.",
   Info,
 };
 

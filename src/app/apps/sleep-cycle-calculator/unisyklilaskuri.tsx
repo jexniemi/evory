@@ -17,9 +17,9 @@ function formatTime(totalMinutes: number): string {
 }
 
 const QUALITY = [
-  "😴 Heikko (4 sykliä)",
-  "👍 Hyvä (5 sykliä)",
-  "⭐ Optimaalinen (6 sykliä)",
+  "🛌 Poor (4 cycles)",
+  "👍 Good (5 cycles)",
+  "⭐ Optimal (6 cycles)",
 ];
 const CYCLES = [4, 5, 6];
 
@@ -62,20 +62,20 @@ export default function Unisyklilaskuri() {
           className={`tab flex-1 rounded-lg transition-all ${mode === "toWake" ? "tab-active bg-white shadow font-semibold" : ""}`}
           onClick={() => setMode("toWake")}
         >
-          Halusin herätä klo…
+          I want to wake up at…
         </button>
         <button
           className={`tab flex-1 rounded-lg transition-all ${mode === "toSleep" ? "tab-active bg-white shadow font-semibold" : ""}`}
           onClick={() => setMode("toSleep")}
         >
-          Menen nukkumaan klo…
+          I’m going to sleep at…
         </button>
       </div>
 
       {/* Time input */}
       <div>
         <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1">
-          {mode === "toWake" ? "Heräämisaika" : "Nukkumaanmenoaika"}
+          {mode === "toWake" ? "Wake-up time" : "Bedtime"}
         </label>
         <input
           type="time"
@@ -87,7 +87,7 @@ export default function Unisyklilaskuri() {
 
       {/* Sleep note */}
       <p className="text-xs text-gray-400 text-center -mt-2">
-        Laskuri huomioi ~15 min nukahtamisviiveen ja 90 min unisyklit.
+        Calculator accounts for ~15 min to fall asleep and 90-min sleep cycles.
       </p>
 
       {/* Results */}
@@ -100,7 +100,7 @@ export default function Unisyklilaskuri() {
             <div>
               <div className="font-semibold text-gray-800">{opt.label}</div>
               <div className="text-xs text-gray-500 mt-0.5">
-                {opt.cycles} sykliä · {opt.hours.toFixed(1)} h unta
+                {opt.cycles} cycles · {opt.hours.toFixed(1)} h of sleep
               </div>
             </div>
             <div className="text-3xl font-bold text-gray-900">{opt.time}</div>
@@ -109,8 +109,8 @@ export default function Unisyklilaskuri() {
       </div>
 
       <p className="text-xs text-gray-400 text-center">
-        Unisyklit kestävät noin 90 minuuttia. Herääminen syklin lopussa on
-        virkeämpää kuin kesken syklin.
+        Sleep cycles last about 90 minutes. Waking at the end of a cycle feels
+        more refreshing than waking mid-cycle.
       </p>
     </div>
   );

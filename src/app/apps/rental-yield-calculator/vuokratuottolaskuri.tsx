@@ -2,14 +2,14 @@
 import SimpleCalculator from "@/components/SimpleCalculator/SimpleCalculator";
 
 const inputs = [
-  { label: "Asunnon hinta (€)", initialValue: 200000, step: 1000 },
-  { label: "Kuukausivuokra (€)", initialValue: 900, step: 10 },
+  { label: "Property price ($)", initialValue: 200000, step: 1000 },
+  { label: "Monthly rent ($)", initialValue: 900, step: 10 },
   {
-    label: "Kuukausittaiset kulut (vastike, vakuutus ym.) (€)",
+    label: "Monthly expenses (HOA, insurance, etc.) ($)",
     initialValue: 150,
     step: 10,
   },
-  { label: "Ostokulujen osuus (%)", initialValue: 4, step: 0.5 },
+  { label: "Purchase costs (%)", initialValue: 4, step: 0.5 },
 ];
 
 export default function VuokratuottolaskuriComponent() {
@@ -30,26 +30,26 @@ export default function VuokratuottolaskuriComponent() {
     return [
       {
         result: grossYield,
-        label: "Bruttovuokratuotto",
+        label: "Gross rental yield",
         suffix: " %",
         decimals: 2,
       },
       {
         result: netYield,
-        label: "Nettovuokratuotto",
+        label: "Net rental yield",
         suffix: " %",
         decimals: 2,
       },
       {
         result: annualNet,
-        label: "Vuotuinen nettotulo",
-        suffix: " €",
+        label: "Annual net income",
+        suffix: " $",
         decimals: 0,
       },
       {
         result: monthlyCashflow,
-        label: "Kuukausittainen kassavirta",
-        suffix: " €",
+        label: "Monthly cash flow",
+        suffix: " $",
         decimals: 0,
       },
     ];

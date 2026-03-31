@@ -1,32 +1,32 @@
 "use client";
 import { useState } from "react";
 
-const DAYS_FI = [
-  "sunnuntai",
-  "maanantai",
-  "tiistai",
-  "keskiviikko",
-  "torstai",
-  "perjantai",
-  "lauantai",
+const DAYS_EN = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
 ];
-const MONTHS_FI = [
-  "tammikuuta",
-  "helmikuuta",
-  "maaliskuuta",
-  "huhtikuuta",
-  "toukokuuta",
-  "kesäkuuta",
-  "heinäkuuta",
-  "elokuuta",
-  "syyskuuta",
-  "lokakuuta",
-  "marraskuuta",
-  "joulukuuta",
+const MONTHS_EN = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
 ];
 
-function formatFinnish(d: Date) {
-  return `${DAYS_FI[d.getDay()]} ${d.getDate()}. ${MONTHS_FI[d.getMonth()]} ${d.getFullYear()}`;
+function formatEnglish(d: Date) {
+  return `${DAYS_EN[d.getDay()]}, ${MONTHS_EN[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
 }
 
 function daysBetween(a: Date, b: Date) {
@@ -66,11 +66,11 @@ export default function PaivamaaraLaskuri() {
       {/* Section 1: Difference */}
       <div>
         <h3 className="text-lg font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">
-          Päivien määrä kahden päivämäärän välillä
+          Number of days between two dates
         </h3>
         <div className="grid grid-cols-2 gap-3 mb-4">
           <div>
-            <label className={labelClass}>Päivämäärä 1</label>
+            <label className={labelClass}>Date 1</label>
             <input
               type="date"
               value={date1}
@@ -78,11 +78,11 @@ export default function PaivamaaraLaskuri() {
               className={inputClass}
             />
             {d1 && (
-              <p className="text-xs text-gray-400 mt-1">{formatFinnish(d1)}</p>
+              <p className="text-xs text-gray-400 mt-1">{formatEnglish(d1)}</p>
             )}
           </div>
           <div>
-            <label className={labelClass}>Päivämäärä 2</label>
+            <label className={labelClass}>Date 2</label>
             <input
               type="date"
               value={date2}
@@ -90,7 +90,7 @@ export default function PaivamaaraLaskuri() {
               className={inputClass}
             />
             {d2 && (
-              <p className="text-xs text-gray-400 mt-1">{formatFinnish(d2)}</p>
+              <p className="text-xs text-gray-400 mt-1">{formatEnglish(d2)}</p>
             )}
           </div>
         </div>
@@ -99,20 +99,20 @@ export default function PaivamaaraLaskuri() {
           <div className="grid grid-cols-3 gap-3">
             <div className="bg-pastelblue rounded-2xl p-4 text-center">
               <div className="text-3xl font-bold text-gray-900">{days}</div>
-              <div className="text-sm text-gray-600 mt-1">päivää</div>
+              <div className="text-sm text-gray-600 mt-1">days</div>
             </div>
             <div className="bg-pastelgreen rounded-2xl p-4 text-center">
               <div className="text-3xl font-bold text-gray-900">{weeks}</div>
-              <div className="text-sm text-gray-600 mt-1">viikkoa</div>
+              <div className="text-sm text-gray-600 mt-1">weeks</div>
             </div>
             <div className="bg-pastelorange rounded-2xl p-4 text-center">
               <div className="text-3xl font-bold text-gray-900">{months}</div>
-              <div className="text-sm text-gray-600 mt-1">kk {remDays} pv</div>
+              <div className="text-sm text-gray-600 mt-1">mo {remDays} d</div>
             </div>
           </div>
         ) : (
           <p className="text-sm text-gray-400 text-center py-4">
-            Valitse molemmat päivämäärät
+            Select both dates
           </p>
         )}
       </div>
@@ -120,11 +120,11 @@ export default function PaivamaaraLaskuri() {
       {/* Section 2: Add/subtract days */}
       <div>
         <h3 className="text-lg font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">
-          Lisää tai vähennä päiviä päivämäärästä
+          Add or subtract days from a date
         </h3>
         <div className="grid grid-cols-2 gap-3 mb-4">
           <div>
-            <label className={labelClass}>Aloituspäivä</label>
+            <label className={labelClass}>Start date</label>
             <input
               type="date"
               value={baseDate}
@@ -134,7 +134,7 @@ export default function PaivamaaraLaskuri() {
           </div>
           <div>
             <label className={labelClass}>
-              Päivien määrä (neg. = takaisin)
+              Number of days (negative = backwards)
             </label>
             <input
               type="number"
@@ -148,12 +148,12 @@ export default function PaivamaaraLaskuri() {
         {resultDate && (
           <div className="bg-pastelgreen rounded-2xl p-5 text-center">
             <div className="text-2xl font-bold text-gray-900">
-              {formatFinnish(resultDate)}
+              {formatEnglish(resultDate)}
             </div>
             <div className="text-sm text-gray-500 mt-1">
               {daysToAdd >= 0
-                ? `${daysToAdd} päivää myöhemmin`
-                : `${Math.abs(daysToAdd)} päivää aiemmin`}
+                ? `${daysToAdd} days later`
+                : `${Math.abs(daysToAdd)} days earlier`}
             </div>
           </div>
         )}

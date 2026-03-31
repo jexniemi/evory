@@ -12,12 +12,12 @@ export default function SleepPage() {
 }
 
 const pageProps = {
-  seoTitle: "Unen tarve -laskuri - Kuinka Paljon Unta Tarvitset",
-  title: "Unen tarve -laskuri",
+  seoTitle: "Sleep Needs Calculator – How Much Sleep Do You Need",
+  title: "Sleep Needs Calculator",
   description:
-    "Laske kuinka paljon unta tarvitset liikuntamäärän ja intensiteetin perusteella.",
+    "Calculate how much sleep you need based on your daily exercise amount and intensity.",
   instructions:
-    "Syötä päivittäinen liikuntamääräsi minuutteina ja harjoituksen intensiteetti. Laskuri näyttää suositellun unen määrän.",
+    "Enter your daily exercise in minutes and workout intensity. The calculator shows the recommended amount of sleep.",
   Info,
 };
 

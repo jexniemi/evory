@@ -2,11 +2,11 @@
 import SimpleCalculator from "@/components/SimpleCalculator/SimpleCalculator";
 
 const inputs = [
-  { label: "Päivittäinen liikuntamäärä (minuuttia)", initialValue: 30 },
+  { label: "Daily exercise amount (minutes)", initialValue: 30 },
   {
-    label: "Harjoituksen intensiteetti",
+    label: "Exercise intensity",
     values: [1, 3, 5],
-    labels: ["Kevyt", "Kohtalainen", "Rankka"],
+    labels: ["Light", "Moderate", "Intense"],
   },
 ];
 
@@ -25,7 +25,7 @@ export default function SleepCalculator() {
       recommendedSleep = baseNeeds + (exerciseBonus * intensity) / 5;
       recommendedSleep = Math.min(10, Math.max(7, recommendedSleep)); // 7-10 hours
 
-      sleepMessage = "Riittävä unen määrä auttaa palautumisessa.";
+      sleepMessage = "Adequate sleep helps with recovery.";
     } catch (error) {
       console.error(error);
     }
@@ -33,7 +33,7 @@ export default function SleepCalculator() {
     return [
       {
         result: recommendedSleep,
-        label: "Suositeltu unen määrä:",
+        label: "Recommended sleep amount:",
         suffix: "h",
         decimals: 1,
       },

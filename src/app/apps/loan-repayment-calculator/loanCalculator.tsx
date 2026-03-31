@@ -2,9 +2,9 @@
 import SimpleCalculator from "@/components/SimpleCalculator/SimpleCalculator";
 
 const inputs = [
-  { label: "Lainasumma (€)", initialValue: 150000 },
-  { label: "Vuotuinen korko (%)", initialValue: 4.5, step: 0.1 },
-  { label: "Laina-aika (vuotta)", initialValue: 25 },
+  { label: "Loan amount ($)", initialValue: 150000 },
+  { label: "Annual interest rate (%)", initialValue: 4.5, step: 0.1 },
+  { label: "Loan term (years)", initialValue: 25 },
 ];
 
 export default function LoanCalculator() {
@@ -32,25 +32,25 @@ export default function LoanCalculator() {
     return [
       {
         result: monthlyPayment,
-        label: "Kuukausierä",
-        suffix: " €",
+        label: "Monthly payment",
+        suffix: " $",
         decimals: 2,
       },
       {
         result: totalInterest,
-        label: "Korot yhteensä",
-        suffix: " €",
+        label: "Total interest",
+        suffix: " $",
         decimals: 2,
       },
       {
         result: totalPaid,
-        label: "Takaisinmaksu yhteensä",
-        suffix: " €",
+        label: "Total repayment",
+        suffix: " $",
         decimals: 2,
       },
       {
         result: paybackRatio,
-        label: "Takaisinmaksukerroin",
+        label: "Repayment multiplier",
         suffix: "×",
         decimals: 2,
       },

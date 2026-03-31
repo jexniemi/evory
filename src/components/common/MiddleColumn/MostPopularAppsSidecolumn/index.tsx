@@ -10,7 +10,7 @@ export default function MostPopularAppsSidecolumn() {
     <div className="w-full mx-10 my-5">
       <div className="flex flex-col items-center">
         <h2 className="text-lg font-bold mb-2">
-          Päivän sovellukset <span className="text-yellow-500">⋆</span>
+          Featured Apps <span className="text-yellow-500">⋆</span>
         </h2>
         <div className="border-b border-black w-full"></div>
         <ul className="w-full">

@@ -2,15 +2,15 @@
 import SimpleCalculator from "@/components/SimpleCalculator/SimpleCalculator";
 
 const inputs = [
-  { label: "Paino (kg)", initialValue: 70, step: 1 },
+  { label: "Weight (lbs)", initialValue: 70, step: 1 },
   {
-    label: "Aktiivisuustaso",
+    label: "Activity level",
     values: [1, 1.2, 1.5, 1.8],
     labels: [
-      "Kevyt (istumatyö)",
-      "Kohtalainen (kevyt liikunta)",
-      "Aktiivinen (säännöllinen urheilu)",
-      "Erittäin aktiivinen (raskas harjoittelu)",
+      "Sedentary (desk job)",
+      "Moderate (light exercise)",
+      "Active (regular exercise)",
+      "Very active (intense training)",
     ],
   },
 ];
@@ -29,20 +29,20 @@ export default function WaterIntakeCalculator() {
     return [
       {
         result: liters,
-        label: "Päivittäinen vedestarve",
-        suffix: " litraa",
+        label: "Daily water needs",
+        suffix: " liters",
         decimals: 1,
       },
       {
         result: adjustedMl,
-        label: "Millilitroina",
+        label: "In milliliters",
         suffix: " ml",
         decimals: 0,
       },
       {
         result: glasses,
-        label: "Lasillista (2,5 dl)",
-        suffix: " kpl",
+        label: "Glasses (8 oz)",
+        suffix: " glasses",
         decimals: 0,
       },
     ];

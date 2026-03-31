@@ -2,10 +2,10 @@
 import SimpleCalculator from "@/components/SimpleCalculator/SimpleCalculator";
 
 const inputs = [
-  { label: "Ajomatka (km)", initialValue: 100 },
-  { label: "Kulutus (L/100 km)", initialValue: 7, step: 0.1 },
-  { label: "Polttoaineen hinta (€/l)", initialValue: 1.85, step: 0.01 },
-  { label: "Vuosikilometrit (km/v)", initialValue: 15000 },
+  { label: "Trip distance (miles)", initialValue: 100 },
+  { label: "Fuel consumption (gal/100mi)", initialValue: 7, step: 0.1 },
+  { label: "Fuel price ($/gal)", initialValue: 3.5, step: 0.01 },
+  { label: "Annual mileage (mi/yr)", initialValue: 15000 },
 ];
 
 export default function FuelCostCalculator() {
@@ -23,26 +23,26 @@ export default function FuelCostCalculator() {
     return [
       {
         result: tripCost,
-        label: "Matkan polttoainekustannus",
-        suffix: " €",
+        label: "Trip fuel cost",
+        suffix: " $",
         decimals: 2,
       },
       {
         result: fuelNeeded,
-        label: "Polttoainetta tarvitaan",
-        suffix: " L",
+        label: "Fuel needed",
+        suffix: " gal",
         decimals: 2,
       },
       {
         result: costPerKm,
-        label: "Kustannus per kilometri",
-        suffix: " €/km",
+        label: "Cost per mile",
+        suffix: " $/mi",
         decimals: 3,
       },
       {
         result: yearlyCost,
-        label: "Vuosikulut polttoaineeseen",
-        suffix: " €/v",
+        label: "Annual fuel cost",
+        suffix: " $/yr",
         decimals: 0,
       },
     ];
