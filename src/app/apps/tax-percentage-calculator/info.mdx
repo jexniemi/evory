@@ -1,51 +1,48 @@
-## Miten veroprosentti lasketaan?
+## How is tax percentage calculated?
 
-Veroprosentti eli efektiivinen veroaste kertoo, kuinka suuri osa **bruttotuloistasi** menee veroihin. Laskuri laskee sen kaavalla:
+Tax percentage or effective tax rate tells what portion of your **gross income** goes to taxes. The calculator calculates it with the formula:
 
-**Veroprosentti = maksetut verot ÷ bruttopalkka × 100**
+**Tax percentage = paid taxes ÷ gross salary × 100**
 
-Bruttopalkka on nettopalkan ja maksettujen verojen summa. Laskuri näyttää myös vuositason bruttotulot ja kokonaisverot.
+Gross salary is the sum of net salary and paid taxes. The calculator also shows annual gross income and total taxes.
 
-## Suomen verotuksen osat
+## US taxation parts
 
-Suomessa palkasta pidätetään useita eri veroja ja maksuja:
+In the US, several different taxes and contributions are withheld from salary:
 
 <table className="table table-sm my-4">
   <thead className="bg-base-200">
     <tr>
-      <th>Osa</th>
-      <th>Luonne</th>
-      <th>Tyypillinen taso</th>
+      <th>Part</th>
+      <th>Nature</th>
+      <th>Typical level</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>Valtion tulovero</td><td>Progressiivinen</td><td>0–44 %</td></tr>
-    <tr><td>Kunnallisvero</td><td>Tasavero</td><td>4–11 %</td></tr>
-    <tr><td>Seurakuntavero</td><td>Tasavero (kirkkoon kuuluvat)</td><td>1–2 %</td></tr>
-    <tr><td>Sairaanhoitomaksu</td><td>Tasavero</td><td>~0,6 %</td></tr>
-    <tr><td>Päivärahamaksu</td><td>Tasavero</td><td>~1,0 %</td></tr>
-    <tr><td>TyEL-maksu</td><td>Tasavero</td><td>7,15–8,65 %</td></tr>
-    <tr><td>Työttömyysvakuutusmaksu</td><td>Tasavero</td><td>~1,4 %</td></tr>
+    <tr><td>Federal income tax</td><td>Progressive</td><td>0–37%</td></tr>
+    <tr><td>State income tax</td><td>Progressive or flat</td><td>0–13.3%</td></tr>
+    <tr><td>Social Security tax</td><td>Flat</td><td>6.2%</td></tr>
+    <tr><td>Medicare tax</td><td>Flat</td><td>1.45%</td></tr>
   </tbody>
 </table>
 
-## Efektiivinen vs. marginaaliveroprosentti
+## Effective vs. marginal tax percentage
 
-- **Efektiivinen veroprosentti** kertoo todellisen verorasituksen suhteessa bruttotuloihin — tämän laskuri näyttää
-- **Marginaaliveroprosentti** kertoo, kuinka paljon veroa maksat *lisäeurosta* — voi olla yli 50 % sivukulut mukaan lukien
+- **Effective tax percentage** tells the real tax burden relative to gross income — this is what the calculator shows
+- **Marginal tax percentage** tells how much tax you pay on *additional dollar* — can be over 40% including side costs
 
-Käytännössä suomalaisen keskipalkkaisen efektiivinen kokonaisverokanta (kaikki pidätykset mukaan lukien) on tyypillisesti **25–35 %**.
+In practice, the effective total tax rate (all withholdings included) for an average American is typically **20–35%**.
 
-## Vinkkejä verotukseen
+## Tips for taxation
 
-- Tarkista **verokorttisi** vuosittain [OmaVerossa](https://www.vero.fi/sahkoiset-asiointipalvelut/omavero/) — liian suuri ennakonpidätys sitoo rahaa turhaan
-- Muista ilmoittaa **matkakulut**, **kotitalousvähennys** ja muut vähennykset veroilmoituksessa
-- Jos tulot muuttuvat merkittävästi kesken vuoden, päivitä verokortti
+- Check your **W-2** annually [on IRS website](https://www.irs.gov/individuals) — too high withholding ties up money unnecessarily
+- Remember to claim **deductions**, **credits** and other adjustments on your tax return
+- If income changes significantly mid-year, update your W-4
 
-Kokeile myös [kuukausipalkkalaskuria](/apps/kuukausipalkkalaskuri), [tuntipalkkalaskuria](/apps/tuntipalkkalaskuri) tai [vuosipalkkalaskuria](/apps/vuosipalkkalaskuri)!
+Try also [monthly salary calculator](/apps/monthly-salary-calculator), [hourly salary calculator](/apps/hourly-salary-calculator) or [annual salary calculator](/apps/annual-salary-calculator)!
 
-## Lähteet
+## Sources
 
-- Verohallinto: [vero.fi](https://www.vero.fi)
-- OmaVero: [Verokortti ja ennakonpidätys](https://www.vero.fi/sahkoiset-asiointipalvelut/omavero/)
-- Veronmaksajat: [veronmaksajat.fi](https://www.veronmaksajat.fi)
+- IRS: [irs.gov](https://www.irs.gov)
+- SSA: [Social Security Taxes](https://www.ssa.gov/)
+- Medicare: [medicare.gov](https://www.medicare.gov/)

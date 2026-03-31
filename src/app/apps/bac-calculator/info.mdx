@@ -2,14 +2,14 @@
 
 The calculator uses the **Widmark formula**, which is widely used to estimate blood alcohol concentration (BAC, Blood Alcohol Concentration):
 
-**BAC (‰) = (drinks × 12) ÷ (weight × r) − (0.15 × hours)**
+**BAC (‰) = (drinks × 14) ÷ (weight × r) − (0.15 × hours)**
 
 Where:
-- **12** = grams of pure alcohol per Finnish standard drink
+- **14** = grams of pure alcohol per US standard drink
 - **r** = distribution factor (men 0.68 · women 0.55)
 - **0.15 ‰/h** = alcohol burn rate in blood (average)
 
-## What is one alcohol unit?
+## What is one standard drink?
 
 <table className="table table-sm my-4">
   <thead className="bg-base-200">
@@ -20,15 +20,13 @@ Where:
     </tr>
   </thead>
   <tbody>
-    <tr><td>Beer (4.7%)</td><td>33 cl</td><td>~12 g</td></tr>
-    <tr><td>Cider (4.5%)</td><td>33 cl</td><td>~11 g</td></tr>
-    <tr><td>Wine (12%)</td><td>12 cl</td><td>~11 g</td></tr>
-    <tr><td>Fortified wine (18%)</td><td>8 cl</td><td>~11 g</td></tr>
-    <tr><td>Spirits (40%)</td><td>4 cl</td><td>~12 g</td></tr>
+    <tr><td>Beer (5%)</td><td>12 oz</td><td>~14 g</td></tr>
+    <tr><td>Wine (12%)</td><td>5 oz</td><td>~14 g</td></tr>
+    <tr><td>Distilled spirits (40%)</td><td>1.5 oz</td><td>~14 g</td></tr>
   </tbody>
 </table>
 
-## Finnish BAC limits in traffic
+## US BAC limits in traffic
 
 <table className="table table-sm my-4">
   <thead className="bg-base-200">
@@ -38,9 +36,8 @@ Where:
     </tr>
   </thead>
   <tbody>
-    <tr><td>0.5 ‰</td><td>DUI (fine, driving ban)</td></tr>
-    <tr><td>1.2 ‰</td><td>Gross DUI (mandatory driving ban, fine/imprisonment)</td></tr>
-    <tr><td>0.0 ‰</td><td>Professional drivers and new drivers (practical zero tolerance)</td></tr>
+    <tr><td>0.08 ‰</td><td>DUI (fine, license suspension)</td></tr>
+    <tr><td>0.00 ‰</td><td>Commercial drivers and drivers under 21</td></tr>
   </tbody>
 </table>
 
@@ -77,6 +74,6 @@ Reaction time slows significantly even below the legal limit:
 
 ## Sources
 
-- THL: [Alcohol and Health](https://thl.fi/en/web/thlfi-en/research-and-expertwork/population-studies/alcohol-and-health)
-- Traficom: [DUI](https://www.traficom.fi/en/transport/driving-and-vehicles/driving-under-the-influence)
+- CDC: [Alcohol and Public Health](https://www.cdc.gov/alcohol/)
+- NHTSA: [DUI](https://www.nhtsa.gov/risky-driving/drunk-driving)
 - Widmark, E.M.P. (1932). *Principles and applications of medicolegal alcohol determination.*

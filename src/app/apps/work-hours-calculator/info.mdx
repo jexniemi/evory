@@ -1,49 +1,49 @@
-## Työtuntilaskuri – Laske päivän työtunnit ja ansiot
+## Work Hours Calculator – Calculate daily work hours and earnings
 
-Työtuntilaskuri laskee kuinka monta tuntia olet tehnyt töitä päivän aikana ja halutessasi myös päivän ansiot. Syötä töihin tulo- ja lähtöaika sekä tauot, niin saat tarkan laskelman.
+The work hours calculator calculates how many hours you have worked in a day and optionally your daily earnings. Enter your start and end times and breaks, and you'll get an accurate calculation.
 
-### Miksi laskea työtunteja?
+### Why calculate work hours?
 
-- **Tuntiraportointi** – Asiakkaalle tai työnantajalle lähetettävä tuntikirjanpito
-- **Ylitöiden seuranta** – Kuinka monta tuntia ylityötä tuli tänään?
-- **Freelancer-laskutus** – Laske laskutettavat tunnit asiakaskohtaisesti
-- **Palkkalaskelma** – Tarkista päivittäinen bruttotulo tuntipalkasta
+- **Time reporting** – Time sheets to send to clients or employers
+- **Overtime tracking** – How many overtime hours did you get today?
+- **Freelancer billing** – Calculate billable hours per client
+- **Payroll** – Check your daily gross income from hourly wage
 
-### Työtuntien laskeminen
+### Calculating work hours
 
-Tehty työaika lasketaan yksinkertaisesti:
+The time worked is calculated simply:
 
-> **Tehty aika** = Lähtöaika – Tuloaika – Tauot
+> **Time worked** = End time – Start time – Breaks
 
-Jos teet yövuoron (esimerkiksi 22:00–06:00), aktivoi "Yövuoro"-asetus. Tällöin laskuri osaa käsitellä yli keskiyön menevät vuorot oikein.
+If you work a night shift (for example, 10:00 PM–6:00 AM), activate the "Night shift" setting. This way, the calculator handles shifts that go past midnight correctly.
 
-### Tauot ja työaikalaki
+### Breaks and labor law
 
-Suomen työaikalain mukaan:
+Under the US Fair Labor Standards Act (FLSA):
 
 <table className="table table-sm my-4">
   <thead>
     <tr className="bg-base-200">
-      <th>Vuorokauden työaika</th>
-      <th>Lepoaika</th>
+      <th>Daily work time</th>
+      <th>Rest period</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>Yli 6 tuntia</td><td>Oikeus 30 min taukoon</td></tr>
-    <tr><td>Yli 10 tuntia</td><td>Oikeus toiseen 30 min taukoon</td></tr>
+    <tr><td>Over 6 hours</td><td>Right to 30 min break</td></tr>
+    <tr><td>Over 10 hours</td><td>Right to a second 30 min break</td></tr>
   </tbody>
 </table>
 
-Lähde: [Työaikalaki 872/2019](https://www.finlex.fi/fi/laki/ajantasa/2019/20190872)
+Source: [FLSA 1938](https://www.dol.gov/agencies/whd/flsa)
 
-### Ylityöt
+### Overtime
 
-Suomessa säännöllinen työaika on enintään 8 tuntia päivässä ja 40 tuntia viikossa. Tämän ylittävältä osalta on maksettava ylityökorvaus:
-- Ensimmäiset 2 ylityötuntia: +50 % palkkaan
-- Tämän jälkeen: +100 % palkkaan
+In the US, regular working time is up to 8 hours per day and 40 hours per week. For hours exceeding this, overtime compensation must be paid:
+- First 2 overtime hours: +50% to wage
+- Thereafter: +100% to wage
 
-### Katso myös
+### See also
 
-- [Tuntipalkkalaskuri](/apps/tuntipalkkalaskuri) – Laske kuukausiansiot tuntipalkan perusteella
-- [Kuukausipalkkalaskuri](/apps/kuukausipalkkalaskuri) – Muunna kuukausipalkka netto- tai bruttopalkaksi
-- [Veroprosentti-laskuri](/apps/veroprosentti-laskuri) – Laske veroprosenttisi
+- [Hourly Salary Calculator](/apps/hourly-salary-calculator) – Calculate monthly earnings based on hourly wage
+- [Monthly Salary Calculator](/apps/monthly-salary-calculator) – Convert monthly salary to net or gross
+- [Tax Percentage Calculator](/apps/tax-percentage-calculator) – Calculate your tax percentage
