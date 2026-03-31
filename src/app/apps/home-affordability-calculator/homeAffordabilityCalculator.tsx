@@ -23,7 +23,7 @@ export default function HomeAffordabilityCalculator() {
     const maxMortgageByDebt = maxTotalDebt - monthlyDebts;
     const maxMonthlyPayment = Math.min(maxHousingPayment, maxMortgageByDebt);
 
-    const r = (interestRate / 100) / 12;
+    const r = interestRate / 100 / 12;
     const n = loanTerm * 12;
     const maxLoan =
       r > 0
@@ -33,9 +33,24 @@ export default function HomeAffordabilityCalculator() {
     const maxHomePrice = maxLoan + downPayment;
 
     return [
-      { result: maxHomePrice, label: "Maximum home price:", suffix: "$", decimals: 0 },
-      { result: maxLoan, label: "Maximum loan amount:", suffix: "$", decimals: 0 },
-      { result: maxMonthlyPayment, label: "Max monthly payment:", suffix: "$", decimals: 0 },
+      {
+        result: maxHomePrice,
+        label: "Maximum home price:",
+        suffix: "$",
+        decimals: 0,
+      },
+      {
+        result: maxLoan,
+        label: "Maximum loan amount:",
+        suffix: "$",
+        decimals: 0,
+      },
+      {
+        result: maxMonthlyPayment,
+        label: "Max monthly payment:",
+        suffix: "$",
+        decimals: 0,
+      },
     ];
   };
 

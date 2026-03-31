@@ -12,7 +12,8 @@ export default function RothIRACalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle: "Roth IRA Calculator – Tax-Free Retirement Growth Estimator | ewory.com",
+  seoTitle:
+    "Roth IRA Calculator – Tax-Free Retirement Growth Estimator | ewory.com",
   title: "Roth IRA Calculator",
   description:
     "Calculate your Roth IRA balance at retirement based on age, annual contributions, and expected return. See how tax-free growth compounds over time.",

@@ -12,7 +12,8 @@ export default function BreakEvenCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle: "Break-Even Calculator – Find Your Business Break-Even Point | ewory.com",
+  seoTitle:
+    "Break-Even Calculator – Find Your Business Break-Even Point | ewory.com",
   title: "Break-Even Calculator",
   description:
     "Calculate the break-even point for your business in units and revenue. See your contribution margin and profit at double the break-even volume.",

@@ -12,7 +12,8 @@ export default function FreelanceRateCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle: "Freelance Rate Calculator – Find Your Minimum Hourly Rate | ewory.com",
+  seoTitle:
+    "Freelance Rate Calculator – Find Your Minimum Hourly Rate | ewory.com",
   title: "Freelance Rate Calculator",
   description:
     "Calculate the minimum hourly rate you need to charge as a freelancer based on your desired income, billable hours, and business expenses.",

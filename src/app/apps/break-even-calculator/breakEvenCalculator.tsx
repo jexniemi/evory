@@ -17,10 +17,25 @@ export default function BreakEvenCalculator() {
 
     if (contributionMargin <= 0) {
       return [
-        { result: 0, label: "Break-even units per month:", suffix: " units", decimals: 0 },
-        { result: 0, label: "Break-even revenue per month:", suffix: "$", decimals: 0 },
+        {
+          result: 0,
+          label: "Break-even units per month:",
+          suffix: " units",
+          decimals: 0,
+        },
+        {
+          result: 0,
+          label: "Break-even revenue per month:",
+          suffix: "$",
+          decimals: 0,
+        },
         { result: 0, label: "Contribution margin:", suffix: "%", decimals: 1 },
-        { result: 0, label: "Profit at 2× break-even:", suffix: "$", decimals: 0 },
+        {
+          result: 0,
+          label: "Profit at 2× break-even:",
+          suffix: "$",
+          decimals: 0,
+        },
       ];
     }
 
@@ -30,10 +45,30 @@ export default function BreakEvenCalculator() {
     const profitAt2x = breakEvenUnits * 2 * contributionMargin - fixedCosts;
 
     return [
-      { result: breakEvenUnits, label: "Break-even units per month:", suffix: " units", decimals: 0 },
-      { result: breakEvenRevenue, label: "Break-even revenue per month:", suffix: "$", decimals: 0 },
-      { result: contributionMarginPct, label: "Contribution margin:", suffix: "%", decimals: 1 },
-      { result: profitAt2x, label: "Profit at 2× break-even:", suffix: "$", decimals: 0 },
+      {
+        result: breakEvenUnits,
+        label: "Break-even units per month:",
+        suffix: " units",
+        decimals: 0,
+      },
+      {
+        result: breakEvenRevenue,
+        label: "Break-even revenue per month:",
+        suffix: "$",
+        decimals: 0,
+      },
+      {
+        result: contributionMarginPct,
+        label: "Contribution margin:",
+        suffix: "%",
+        decimals: 1,
+      },
+      {
+        result: profitAt2x,
+        label: "Profit at 2× break-even:",
+        suffix: "$",
+        decimals: 0,
+      },
     ];
   };
 

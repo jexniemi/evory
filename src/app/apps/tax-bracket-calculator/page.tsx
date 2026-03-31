@@ -12,7 +12,8 @@ export default function TaxBracketCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle: "Tax Bracket Calculator – 2024 Federal Income Tax Estimator | ewory.com",
+  seoTitle:
+    "Tax Bracket Calculator – 2024 Federal Income Tax Estimator | ewory.com",
   title: "Tax Bracket Calculator",
   description:
     "Estimate your 2024 federal income tax, effective tax rate, and marginal bracket. Free online federal tax bracket calculator for all filing statuses.",

@@ -21,14 +21,30 @@ export default function FreelanceRateCalculator() {
     const totalRevenue = desiredIncome + annualExpenses + seTax;
     const billableHoursPerYear = hoursPerWeek * weeksPerYear;
 
-    const hourlyRate = billableHoursPerYear > 0 ? totalRevenue / billableHoursPerYear : 0;
+    const hourlyRate =
+      billableHoursPerYear > 0 ? totalRevenue / billableHoursPerYear : 0;
     const dailyRate = hourlyRate * 8;
     const monthlyRevenue = totalRevenue / 12;
 
     return [
-      { result: hourlyRate, label: "Minimum hourly rate:", suffix: "$", decimals: 2 },
-      { result: dailyRate, label: "Daily rate (8-hour day):", suffix: "$", decimals: 2 },
-      { result: monthlyRevenue, label: "Monthly revenue needed:", suffix: "$", decimals: 2 },
+      {
+        result: hourlyRate,
+        label: "Minimum hourly rate:",
+        suffix: "$",
+        decimals: 2,
+      },
+      {
+        result: dailyRate,
+        label: "Daily rate (8-hour day):",
+        suffix: "$",
+        decimals: 2,
+      },
+      {
+        result: monthlyRevenue,
+        label: "Monthly revenue needed:",
+        suffix: "$",
+        decimals: 2,
+      },
     ];
   };
 

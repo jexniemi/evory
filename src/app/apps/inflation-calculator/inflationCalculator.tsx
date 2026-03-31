@@ -18,9 +18,24 @@ export default function InflationCalculator() {
     const realValueRemaining = initialAmount / Math.pow(1 + rate / 100, years);
 
     return [
-      { result: futureEquivalent, label: "Future equivalent needed:", suffix: "$", decimals: 0 },
-      { result: purchasingPowerLost, label: "Purchasing power lost:", suffix: "$", decimals: 0 },
-      { result: realValueRemaining, label: "Real value of today's dollars:", suffix: "$", decimals: 2 },
+      {
+        result: futureEquivalent,
+        label: "Future equivalent needed:",
+        suffix: "$",
+        decimals: 0,
+      },
+      {
+        result: purchasingPowerLost,
+        label: "Purchasing power lost:",
+        suffix: "$",
+        decimals: 0,
+      },
+      {
+        result: realValueRemaining,
+        label: "Real value of today's dollars:",
+        suffix: "$",
+        decimals: 2,
+      },
     ];
   };
 

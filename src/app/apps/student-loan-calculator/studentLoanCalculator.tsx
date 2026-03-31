@@ -28,9 +28,24 @@ export default function StudentLoanCalculator() {
     const totalInterest = totalPaid - balance;
 
     return [
-      { result: monthlyPayment, label: "Monthly payment:", suffix: "$", decimals: 2 },
-      { result: totalInterest, label: "Total interest paid:", suffix: "$", decimals: 0 },
-      { result: totalPaid, label: "Total amount paid:", suffix: "$", decimals: 0 },
+      {
+        result: monthlyPayment,
+        label: "Monthly payment:",
+        suffix: "$",
+        decimals: 2,
+      },
+      {
+        result: totalInterest,
+        label: "Total interest paid:",
+        suffix: "$",
+        decimals: 0,
+      },
+      {
+        result: totalPaid,
+        label: "Total amount paid:",
+        suffix: "$",
+        decimals: 0,
+      },
     ];
   };
 

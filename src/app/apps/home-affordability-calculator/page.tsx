@@ -12,7 +12,8 @@ export default function HomeAffordabilityCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle: "Home Affordability Calculator – How Much House Can You Afford? | ewory.com",
+  seoTitle:
+    "Home Affordability Calculator – How Much House Can You Afford? | ewory.com",
   title: "Home Affordability Calculator",
   description:
     "Find out how much house you can afford based on your income, debts, and down payment using the 28/36 rule.",

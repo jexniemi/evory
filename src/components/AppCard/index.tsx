@@ -103,8 +103,9 @@ const appIcons: Record<string, string> = {
   "unit-price-calculator": "🛒",
   "paint-calculator": "🎨",
   "moving-cost-calculator": "📦",
-  "square-footage-calculator": "🏗️",  "car-loan-calculator": "🚗",
-  "break-even-calculator": "⚖️",  // Health & Fitness
+  "square-footage-calculator": "🏗️",
+  "car-loan-calculator": "🚗",
+  "break-even-calculator": "⚖️", // Health & Fitness
   "bac-calculator": "🍺",
   "bmi-calculator": "⚖️",
   "bmr-calculator": "🔥",

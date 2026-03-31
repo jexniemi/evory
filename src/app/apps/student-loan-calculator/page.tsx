@@ -12,7 +12,8 @@ export default function StudentLoanCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle: "Student Loan Calculator – Monthly Payment & Interest Estimator | ewory.com",
+  seoTitle:
+    "Student Loan Calculator – Monthly Payment & Interest Estimator | ewory.com",
   title: "Student Loan Calculator",
   description:
     "Calculate monthly student loan payments, total interest, and total repayment amount. Works for federal and private student loans.",

@@ -20,7 +20,8 @@ export default function RothIRACalculator() {
 
     let balance: number;
     if (annualRate > 0) {
-      balance = contribution * ((Math.pow(1 + annualRate, years) - 1) / annualRate);
+      balance =
+        contribution * ((Math.pow(1 + annualRate, years) - 1) / annualRate);
     } else {
       balance = contribution * years;
     }
@@ -29,9 +30,24 @@ export default function RothIRACalculator() {
     const totalGrowth = balance - totalContributions;
 
     return [
-      { result: balance, label: "Balance at retirement:", suffix: "$", decimals: 0 },
-      { result: totalContributions, label: "Total contributions:", suffix: "$", decimals: 0 },
-      { result: totalGrowth, label: "Tax-free growth:", suffix: "$", decimals: 0 },
+      {
+        result: balance,
+        label: "Balance at retirement:",
+        suffix: "$",
+        decimals: 0,
+      },
+      {
+        result: totalContributions,
+        label: "Total contributions:",
+        suffix: "$",
+        decimals: 0,
+      },
+      {
+        result: totalGrowth,
+        label: "Tax-free growth:",
+        suffix: "$",
+        decimals: 0,
+      },
     ];
   };
 

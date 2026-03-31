@@ -16,16 +16,29 @@ const inputs = [
 
 export default function NetWorthCalculator() {
   const calculate = (values: number[]) => {
-    const totalAssets = values[0] + values[1] + values[2] + values[3] + values[4];
-    const totalLiabilities = values[5] + values[6] + values[7] + values[8] + values[9];
+    const totalAssets =
+      values[0] + values[1] + values[2] + values[3] + values[4];
+    const totalLiabilities =
+      values[5] + values[6] + values[7] + values[8] + values[9];
     const netWorth = totalAssets - totalLiabilities;
-    const debtToAssetRatio = totalAssets > 0 ? (totalLiabilities / totalAssets) * 100 : 0;
+    const debtToAssetRatio =
+      totalAssets > 0 ? (totalLiabilities / totalAssets) * 100 : 0;
 
     return [
       { result: netWorth, label: "Net worth:", suffix: "$", decimals: 0 },
       { result: totalAssets, label: "Total assets:", suffix: "$", decimals: 0 },
-      { result: totalLiabilities, label: "Total liabilities:", suffix: "$", decimals: 0 },
-      { result: debtToAssetRatio, label: "Debt-to-asset ratio:", suffix: "%", decimals: 1 },
+      {
+        result: totalLiabilities,
+        label: "Total liabilities:",
+        suffix: "$",
+        decimals: 0,
+      },
+      {
+        result: debtToAssetRatio,
+        label: "Debt-to-asset ratio:",
+        suffix: "%",
+        decimals: 1,
+      },
     ];
   };
 
