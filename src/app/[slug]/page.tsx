@@ -4,8 +4,8 @@ import { getThemeBySlug, appIcons } from "@/utils/categoryTheme";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Appit.fi - Ilmaiset selainsovellukset.",
-  description: "Appit.fi:stä löydät ilmaisia selainsovelluksia.",
+  title: "Ewory.com - Free Web Applications.",
+  description: "Find free web applications on Ewory.com.",
 };
 
 export default async function Page({
@@ -33,7 +33,7 @@ export default async function Page({
         <span
           className={`text-xs font-semibold px-2.5 py-1 rounded-full ${theme.badge}`}
         >
-          {applications.apps.length} sovellusta
+          {applications.apps.length} applications
         </span>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
