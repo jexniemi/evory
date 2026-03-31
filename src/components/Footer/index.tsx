@@ -24,7 +24,12 @@ export default function Footer() {
           ))}
         </div>
         <div className="flex items-center mt-10">
-          <Image src={"/icon.svg"} width={28} height={28} alt="ewory.com logo" />
+          <Image
+            src={"/icon.svg"}
+            width={28}
+            height={28}
+            alt="ewory.com logo"
+          />
           <p className="inline-block font-semibold ml-1 text-main">ewory.com</p>
         </div>
         <p className="mt-5 w-72 italic">{texts.description} © 2026 ewory.com</p>
