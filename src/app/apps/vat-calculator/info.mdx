@@ -1,33 +1,44 @@
-## Miten ALV-laskuri toimii?
+## How Does the Sales Tax Calculator Work?
 
-ALV-laskuri laskee arvonlisäveron sekä nettohinnasta bruttohintaan että bruttohinnasta nettohintaan.
+The sales tax calculator works in both directions — adding tax to a pre-tax price, or removing tax from a total.
 
-**Netto → Brutto** (lisää ALV hintaan):
+**Pre-tax → Total** (add sales tax):
 
-**ALV-summa = nettohinta × (ALV-kanta / 100)**
+**Tax amount = pre-tax price × (tax rate / 100)**
 
-**Bruttohinta = nettohinta + ALV-summa**
+**Total = pre-tax price + tax amount**
 
-**Brutto → Netto** (poista ALV hinnasta):
+**Total → Pre-tax** (remove sales tax):
 
-**Nettohinta = bruttohinta / (1 + ALV-kanta / 100)**
+**Pre-tax price = total / (1 + tax rate / 100)**
 
-**ALV-summa = bruttohinta − nettohinta**
+**Tax amount = total − pre-tax price**
 
-## Suomen ALV-kannat 2024–
+## US Sales Tax Overview
+
+Sales tax in the United States is set at the state and local level — there is no federal sales tax. Rates vary significantly by state:
 
 <table className="table table-sm my-4">
-<thead className="bg-base-200"><tr><th>ALV-kanta</th><th>Soveltamisala</th></tr></thead>
+<thead className="bg-base-200"><tr><th>State</th><th>State rate</th><th>Avg. combined rate</th></tr></thead>
 <tbody>
-<tr><td>25,5 %</td><td>Yleinen kanta – suurin osa tuotteista ja palveluista</td></tr>
-<tr><td>14 %</td><td>Elintarvikkeet, ravintola- ja ateriapalvelut, eläintenruoka</td></tr>
-<tr><td>10 %</td><td>Kirjat, lääkkeet, liikuntapalvelut, henkilökuljetus, majoitus, kulttuuri- ja viihdetapahtumat</td></tr>
-<tr><td>0 %</td><td>Mm. terveydenhuolto, koulutus, rahoituspalvelut</td></tr>
+<tr><td>California</td><td>7.25%</td><td>~8.7%</td></tr>
+<tr><td>Texas</td><td>6.25%</td><td>~8.2%</td></tr>
+<tr><td>New York</td><td>4.0%</td><td>~8.5%</td></tr>
+<tr><td>Florida</td><td>6.0%</td><td>~7.0%</td></tr>
+<tr><td>Oregon / Montana</td><td>0%</td><td>0%</td></tr>
 </tbody>
 </table>
 
-Yleinen ALV-kanta nousi 24 prosentista 25,5 prosenttiin 1. syyskuuta 2024.
+Five states have no state-level sales tax: **Alaska, Delaware, Montana, New Hampshire, and Oregon.**
 
-## Kenelle ALV-laskurista on hyötyä?
+## Who Benefits from the Sales Tax Calculator?
 
-ALV-laskuri on hyödyllinen erityisesti yrittäjille, freelancereille ja pienyrityksille, jotka laskuttavat asiakkaita tai haluavat tarkistaa tuotteen oikean hinnan. Myös kuluttajat voivat hyödyntää laskuria selvittääkseen, kuinka suuri osa hinnasta on veroa.
+- **Shoppers** — find out exactly how much you'll pay at checkout
+- **Business owners** — compute tax to add to invoices
+- **Travelers** — understand price differences between states
+- **Accountants** — verify calculations on receipts and invoices
+
+## See also
+
+- [Discount Calculator](/apps/discount-calculator) – Calculate sale prices and savings
+- [Tip Calculator](/apps/tip-calculator) – Calculate tip after tax

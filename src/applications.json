@@ -30,11 +30,6 @@
         "shortDescription": "Calculate value added tax easily from net or gross price."
       },
       {
-        "route": "student-loan-credit-calculator",
-        "displayName": "Student Loan Credit Calculator",
-        "shortDescription": "Calculate how much student loan credit you can receive."
-      },
-      {
         "route": "net-salary-calculator",
         "displayName": "Net Salary Calculator",
         "shortDescription": "Calculate net salary from gross salary after taxes and deductions."

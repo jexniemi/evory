@@ -1,43 +1,43 @@
-## Tuuliviimalaskuri – Laske miltä pakkanen tuntuu tuulessa
+## Wind Chill Calculator – How Cold Does It Really Feel?
 
-Tuuliviimalaskuri laskee niin sanotun **tuuliviimalämpötilan** – sen, miltä kylmä ilma tuntuu iholle tuulen vaikutuksesta. Vaikka lämpömittari näyttää tietyn lämpötilan, tuuli saa sen tuntumaan paljon kylmemmältä.
+The wind chill calculator computes the **apparent temperature** — how cold the air actually feels on exposed skin due to wind. Even when the thermometer shows a certain temperature, wind makes it feel significantly colder.
 
-### Tuuliviiman kaava
+### The Wind Chill Formula
 
-Laskuri käyttää **Environment Canada / WMO -kaavaa** (2001), joka on kansainvälinen standardi:
+The calculator uses the **Environment Canada / WMO formula** (2001), which is the international standard:
 
-> **Tw = 13,12 + 0,6215×T − 11,37×V^0,16 + 0,3965×T×V^0,16**
+> **Tw = 13.12 + 0.6215×T − 11.37×V^0.16 + 0.3965×T×V^0.16**
 
-Jossa T = lämpötila (°C) ja V = tuulen nopeus (km/h). Kaava pätee kun T ≤ 10°C ja tuulen nopeus > 4,8 km/h.
+Where T = air temperature (°C) and V = wind speed (km/h). The formula applies when T ≤ 10°C and wind speed > 4.8 km/h.
 
-### Tuuliviimalämpötilan taulukko
+### Wind Chill Reference Table
 
 <table className="table table-sm my-4">
   <thead>
     <tr className="bg-base-200">
-      <th>Lämpötila</th>
-      <th>Tuuli 10 km/h</th>
-      <th>Tuuli 20 km/h</th>
-      <th>Tuuli 40 km/h</th>
+      <th>Temperature</th>
+      <th>Wind 10 km/h</th>
+      <th>Wind 20 km/h</th>
+      <th>Wind 40 km/h</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>0 °C</td><td>-3 °C</td><td>-5 °C</td><td>-8 °C</td></tr>
-    <tr><td>-10 °C</td><td>-15 °C</td><td>-18 °C</td><td>-22 °C</td></tr>
-    <tr><td>-20 °C</td><td>-27 °C</td><td>-31 °C</td><td>-37 °C</td></tr>
-    <tr><td>-30 °C</td><td>-39 °C</td><td>-44 °C</td><td>-51 °C</td></tr>
+    <tr><td>0 °C (32 °F)</td><td>-3 °C (27 °F)</td><td>-5 °C (23 °F)</td><td>-8 °C (18 °F)</td></tr>
+    <tr><td>-10 °C (14 °F)</td><td>-15 °C (5 °F)</td><td>-18 °C (0 °F)</td><td>-22 °C (-8 °F)</td></tr>
+    <tr><td>-20 °C (-4 °F)</td><td>-27 °C (-17 °F)</td><td>-31 °C (-24 °F)</td><td>-37 °C (-35 °F)</td></tr>
+    <tr><td>-30 °C (-22 °F)</td><td>-39 °C (-38 °F)</td><td>-44 °C (-47 °F)</td><td>-51 °C (-60 °F)</td></tr>
   </tbody>
 </table>
 
-### Paleltumisriski
+### Frostbite Risk
 
-- **−10 °C → −27 °C tuuliviimaindeksillä** – Riski kasvaa pitkässä altistuksessa
-- **−28 °C → −39 °C** – Paleltumisriski 10–30 minuutissa
-- **−40 °C tai alle** – Paleltumisriski alle 2 minuutissa
+- **−10 °C → −27 °C wind chill** – Risk increases with prolonged exposure
+- **−28 °C → −39 °C** – Frostbite possible in 10–30 minutes
+- **−40 °C or below** – Frostbite risk in under 2 minutes
 
-Lue lisää: [Ilmatieteen laitos – Talvisää](https://www.ilmatieteenlaitos.fi/talvisää)
+**Source:** [Environment Canada – Wind Chill](https://www.canada.ca/en/environment-climate-change/services/weather-general-tools-resources/wind-chill-cold-weather.html)
 
-### Katso myös
+### See also
 
-- [Lämpötilamuunnin](/apps/lampotilamuunnin) – Celsius, Fahrenheit ja Kelvin
-- [Bensakululaskuri](/apps/bensakululaskuri) – Laske talviajamisen kulut
+- [Temperature Converter](/apps/temperature-converter) – Celsius, Fahrenheit, and Kelvin
+- [BMR Calculator](/apps/bmr-calculator) – Calculate your basal metabolic rate
