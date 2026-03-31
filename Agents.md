@@ -36,7 +36,7 @@
 
 - The info.mdx files need 600+ words for SEO, source links, and internal links to related apps.
 
-- applications.json contains route configs and display names for each app.
+- applications.ts contains route configs and display names for each app.
 
 - next.config.mjs — do not touch.
 
