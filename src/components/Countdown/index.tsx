@@ -62,8 +62,8 @@ const Countdown: React.FC<CountdownProps> = ({
   const totalMs = useMemo(() => {
     return target.getTime() - targetDate.getTime() === 0
       ? target.getTime() - (target.getTime() - 365 * 24 * 3600 * 1000)
-      // eslint-disable-next-line react-hooks/purity
-      : target.getTime() - Date.now();
+      : // eslint-disable-next-line react-hooks/purity
+        target.getTime() - Date.now();
   }, [target, targetDate]);
 
   // Progress: rough percentage of year elapsed toward the target

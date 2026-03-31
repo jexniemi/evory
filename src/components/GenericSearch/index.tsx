@@ -30,7 +30,7 @@ const Search: FC<SearchProps<any>> = ({
       .filter((item) =>
         String(item[displayProperty])
           .toLowerCase()
-          .includes(search.toLowerCase())
+          .includes(search.toLowerCase()),
       )
       .slice(0, 10);
   }, [search, data, displayProperty]);
