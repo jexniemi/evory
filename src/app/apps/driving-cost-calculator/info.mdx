@@ -2,62 +2,62 @@ import FAQ from "@/components/FAQ"
 
 ## How is fuel cost calculated?
 
-Fuel consumption is often reported as liters per 100 kilometers (L/100 km) or miles per gallon (MPG). The trip cost is obtained by multiplying the required fuel amount by the fuel price.
+In the US, fuel efficiency is measured in **miles per gallon (MPG)**. The trip cost is obtained by dividing the distance by your MPG to find gallons used, then multiplying by the gas price.
 
 **Formulas:**
 
-Fuel = (distance km ÷ 100) × consumption L/100 km
+Fuel (gallons) = Distance (miles) ÷ MPG
 
-Cost = fuel × price €/l
+Cost = Fuel (gallons) × Gas price ($/gal)
 
-Km-cost = (consumption ÷ 100) × price
+Cost per mile = Gas price ($/gal) ÷ MPG
 
-## Typical consumption values
+## Typical fuel efficiency values
 
 <table className="table table-sm my-4">
   <thead className="bg-base-200">
     <tr>
       <th>Car type</th>
-      <th>Consumption (L/100 km)</th>
-      <th>Km-price (1.85 €/l)</th>
+      <th>Fuel Efficiency (MPG)</th>
+      <th>Cost per mile ($3.50/gal)</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>Small city car (gasoline)</td><td>5–6 L</td><td>9–11 cents/km</td></tr>
-    <tr><td>Mid-size family car</td><td>6–8 L</td><td>11–15 cents/km</td></tr>
-    <tr><td>SUV / off-road</td><td>8–11 L</td><td>15–20 cents/km</td></tr>
-    <tr><td>Diesel car (medium)</td><td>5–7 L</td><td>8–12 cents/km</td></tr>
-    <tr><td>Hybrid</td><td>4–6 L</td><td>7–11 cents/km</td></tr>
+    <tr><td>Small city car (gasoline)</td><td>35–40 MPG</td><td>9–10 ¢/mile</td></tr>
+    <tr><td>Mid-size family sedan</td><td>28–35 MPG</td><td>10–13 ¢/mile</td></tr>
+    <tr><td>SUV / truck</td><td>18–24 MPG</td><td>15–19 ¢/mile</td></tr>
+    <tr><td>Diesel car</td><td>30–40 MPG</td><td>10–13 ¢/mile</td></tr>
+    <tr><td>Hybrid</td><td>45–55 MPG</td><td>6–8 ¢/mile</td></tr>
   </tbody>
 </table>
 
 ## Comparison of annual costs
 
-Fuel consumption has a significant impact on annual costs. For example, someone driving 15,000 km/year:
+Fuel efficiency has a significant impact on annual costs. For example, someone driving **15,000 miles/year** at $3.50/gal:
 
-- **5 L/100 km** → 1,388 €/year (at 1.85 €/l)
-- **8 L/100 km** → 2,220 €/year
-- **11 L/100 km** → 3,053 €/year
+- **40 MPG** → ~$1,313/year
+- **28 MPG** → ~$1,875/year
+- **20 MPG** → ~$2,625/year
 
-The difference between a small and large car can be over **1,600 € per year** in fuel costs alone.
+The difference between a fuel-efficient car and a large SUV can be over **$1,300 per year** in fuel costs alone.
 
-## Tips for reducing consumption
+## Tips for reducing fuel economy losses
 
-- **Steady driving style** — fast accelerations and braking increase consumption by up to 30%
-- **Tire pressure** — low pressure increases consumption by 0.3–0.5 L/100 km
-- **Anticipatory driving** — look far ahead and let the car slow down on its own
-- **Air conditioning** — increases consumption by 0.5–1.5 L/100 km; use judiciously
-- **Winter time** — winter tires and cold engine increase consumption by 1–3 L/100 km
+- **Smooth driving** — aggressive acceleration and hard braking can reduce fuel economy by up to 30%
+- **Tire pressure** — underinflated tires can cost 1–2 MPG
+- **Anticipatory driving** — look far ahead and coast to decelerate rather than braking hard
+- **Air conditioning** — using A/C can reduce fuel economy by 5–25% in city driving
+- **Cold weather** — cold starts and winter driving can reduce MPG by 10–20%
 
 ## Other calculators
 
 - [Fuel Cost Calculator](/apps/fuel-cost-calculator) — calculate fuel costs per fill-up or monthly
-- [Electric Car Trip Cost Calculator](/apps/electric-car-trip-cost-calculator) — compare electric car kWh costs to gasoline
+- [Electric Car Trip Cost Calculator](/apps/electric-car-trip-cost-calculator) — compare EV electricity costs to gasoline
 
 <FAQ items={[
   { q: "How much does it cost to drive per mile?", a: "The IRS standard mileage rate for 2024 is 67 cents per mile, covering fuel, depreciation, and maintenance. For fuel only, it depends on your MPG and local gas prices." },
   { q: "How do I calculate fuel cost for a road trip?", a: "Divide the trip distance by your MPG to get gallons needed, then multiply by gas price per gallon. Example: 300 miles / 30 MPG x $3.50/gal = $35." },
-  { q: "What is the average fuel consumption for a car?", a: "The average new US car gets about 28 MPG. SUVs average around 22 MPG, while fuel-efficient hybrids can exceed 50 MPG." },
-  { q: "How can I reduce my fuel consumption?", a: "Drive smoothly without rapid acceleration or braking, maintain proper tire pressure, reduce highway speeds, and limit air conditioning use. These steps can improve fuel economy by 10-30%." },
-  { q: "Is it cheaper to drive or fly for a road trip?", a: "For trips under 500 miles with 2 or more passengers, driving is usually cheaper. For solo travelers or longer distances, flying may be more cost-effective." },
+  { q: "What is the average fuel efficiency for a US car?", a: "The average new US car gets about 28 MPG. SUVs and trucks average around 18-22 MPG, while fuel-efficient hybrids like the Toyota Prius can exceed 50 MPG." },
+  { q: "How can I improve my car's MPG?", a: "Drive smoothly without rapid acceleration or braking, maintain proper tire pressure, use cruise control on highways, reduce A/C use, and remove unnecessary cargo weight. These steps can improve fuel economy by 10-30%." },
+  { q: "Is it cheaper to drive or fly for a road trip?", a: "For trips under 500 miles with 2 or more passengers, driving is usually cheaper. For solo travelers or longer distances, flying may be more cost-effective when accounting for all driving costs." },
 ]} />
