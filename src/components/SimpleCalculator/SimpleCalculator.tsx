@@ -103,8 +103,17 @@ export default function SimpleCalculator({
 
   useEffect(() => {
     const doCalculate = async () => {
-      const r = await calculate(values);
-      setResult(r);
+      try {
+        const r = await calculate(values);
+        setResult(
+          r.map((item) => ({
+            ...item,
+            result: isFinite(item.result) ? item.result : 0,
+          })),
+        );
+      } catch {
+        // swallow errors (e.g. division by zero in consumer calculate())
+      }
     };
     doCalculate();
   }, [extradata, values, calculate]);
