@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import RunningSpeedCalculator from "./runningSpeedCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function RunningSpeedCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function RunningSpeedCalculatorPage() {
 }
 
 const pageProps = {
+  route: "running-pace-calculator",
   title: "Running Pace Calculator",
   seoTitle:
     "Running Pace Calculator – Calculate Running Speed, Pace, and Estimated Times",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

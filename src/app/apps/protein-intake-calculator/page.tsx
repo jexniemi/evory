@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import ProteinIntakeCalculator from "./proteinIntakeCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function ProteinIntakeCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function ProteinIntakeCalculatorPage() {
 }
 
 const pageProps = {
+  route: "protein-intake-calculator",
   seoTitle:
     "Protein Intake Calculator – Daily Protein Needs Estimator | ewory.com",
   title: "Protein Intake Calculator",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

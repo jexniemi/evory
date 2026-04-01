@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import YearlyPayCalculator from "./yearlyPayCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function YearlyPayCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function YearlyPayCalculatorPage() {
 }
 
 const pageProps = {
+  route: "annual-salary-calculator",
   title: "Annual Salary Calculator",
   seoTitle: "Annual Salary Calculator - Calculate Your Annual Salary Easily",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

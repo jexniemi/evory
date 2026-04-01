@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import PaintCalculator from "./paintCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function PaintCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function PaintCalculatorPage() {
 }
 
 const pageProps = {
+  route: "paint-calculator",
   seoTitle: "Paint Calculator – Free Online Wall Paint Estimator | ewory.com",
   title: "Paint Calculator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

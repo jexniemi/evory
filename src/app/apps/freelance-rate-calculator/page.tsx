@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import FreelanceRateCalculator from "./freelanceRateCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function FreelanceRateCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function FreelanceRateCalculatorPage() {
 }
 
 const pageProps = {
+  route: "freelance-rate-calculator",
   seoTitle:
     "Freelance Rate Calculator – Find Your Minimum Hourly Rate | ewory.com",
   title: "Freelance Rate Calculator",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

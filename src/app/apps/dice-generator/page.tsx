@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import DiceGenerator from "./diceGenerator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function DiceGeneratorPage() {
   return (
@@ -12,6 +13,7 @@ export default function DiceGeneratorPage() {
 }
 
 const pageProps = {
+  route: "dice-generator",
   seoTitle: "Dice Generator - Roll Virtual Dice",
   title: "Dice Generator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

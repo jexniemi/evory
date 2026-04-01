@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import OvertimeCalculator from "./overtimeCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function OvertimeCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function OvertimeCalculatorPage() {
 }
 
 const pageProps = {
+  route: "overtime-calculator",
   seoTitle:
     "Overtime Calculator – Calculate Overtime Pay Instantly | ewory.com",
   title: "Overtime Calculator",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

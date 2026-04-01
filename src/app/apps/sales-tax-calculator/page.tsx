@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import SalesTaxCalculator from "./salesTaxCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function SalesTaxCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function SalesTaxCalculatorPage() {
 }
 
 const pageProps = {
+  route: "sales-tax-calculator",
   seoTitle: "Sales Tax Calculator – Free Online Tax Estimator | ewory.com",
   title: "Sales Tax Calculator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

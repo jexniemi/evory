@@ -2,6 +2,7 @@ import Countdown from "@/components/Countdown";
 import Page from "@/components/Page";
 import { Metadata } from "next";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function ChristmasCountdown() {
   return (
@@ -15,6 +16,7 @@ export default function ChristmasCountdown() {
 }
 
 const pageProps = {
+  route: "days-until-christmas",
   title: "Christmas Countdown",
   seoTitle: "Christmas Countdown - See how many days until Christmas.",
   description:
@@ -23,7 +25,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

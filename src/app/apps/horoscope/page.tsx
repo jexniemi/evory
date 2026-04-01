@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Horoskooppi from "./horoskooppi";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function HoroskooppiPage() {
   return (
@@ -12,6 +13,7 @@ export default function HoroskooppiPage() {
 }
 
 const pageProps = {
+  route: "horoscope",
   title: "Horoscope",
   seoTitle: "Horoscope – All horoscope signs and daily number",
   description:
@@ -20,7 +22,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

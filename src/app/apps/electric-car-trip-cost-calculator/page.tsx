@@ -2,6 +2,7 @@ import Calculator from "./electricityCostCalculator";
 import Page from "@/components/Page";
 import { Metadata } from "next";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function ElectricCarCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function ElectricCarCalculatorPage() {
 }
 
 const pageProps = {
+  route: "electric-car-trip-cost-calculator",
   title: "Electric Car Trip Cost Calculator",
   seoTitle:
     "Electric Car Trip Cost Calculator - Calculate Your Trip's Electricity Costs",
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

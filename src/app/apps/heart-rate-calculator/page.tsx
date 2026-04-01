@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Sydansykelaskuri from "./sydansykelaskuri";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function SydansykelaskuriPage() {
   return (
@@ -12,6 +13,7 @@ export default function SydansykelaskuriPage() {
 }
 
 const pageProps = {
+  route: "heart-rate-calculator",
   title: "Heart Rate Calculator",
   seoTitle:
     "Heart Rate Calculator – Calculate heart rate zones based on age and resting heart rate",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

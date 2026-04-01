@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import NetWorthCalculator from "./netWorthCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function NetWorthCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function NetWorthCalculatorPage() {
 }
 
 const pageProps = {
+  route: "net-worth-calculator",
   seoTitle: "Net Worth Calculator – Track Your Financial Health | ewory.com",
   title: "Net Worth Calculator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

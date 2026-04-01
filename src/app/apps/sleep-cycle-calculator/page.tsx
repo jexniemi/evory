@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Unisyklilaskuri from "./unisyklilaskuri";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function UnisyklilaskuriPage() {
   return (
@@ -12,6 +13,7 @@ export default function UnisyklilaskuriPage() {
 }
 
 const pageProps = {
+  route: "sleep-cycle-calculator",
   title: "Sleep Cycle Calculator",
   seoTitle: "Sleep Cycle Calculator – When to Wake Up or Go to Sleep?",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

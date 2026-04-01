@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import TimeZoneConverter from "./timeZoneConverter";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function TimeZoneConverterPage() {
   return (
@@ -12,6 +13,7 @@ export default function TimeZoneConverterPage() {
 }
 
 const pageProps = {
+  route: "time-zone-converter",
   seoTitle:
     "Time Zone Converter – Free Online Time Conversion Tool | ewory.com",
   title: "Time Zone Converter",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

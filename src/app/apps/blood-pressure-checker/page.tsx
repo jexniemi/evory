@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import BloodPressureChecker from "./bloodPressureChecker";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function BloodPressureCheckerPage() {
   return (
@@ -12,6 +13,7 @@ export default function BloodPressureCheckerPage() {
 }
 
 const pageProps = {
+  route: "blood-pressure-checker",
   seoTitle: "Blood Pressure Checker – Free Online BP Category Tool | ewory.com",
   title: "Blood Pressure Checker",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

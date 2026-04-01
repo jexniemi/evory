@@ -2,6 +2,7 @@ import WordCounter from "@/components/pages/WordCounter";
 import Page from "@/components/Page";
 import { Metadata } from "next";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function FlagQuiz() {
   return (
@@ -12,6 +13,7 @@ export default function FlagQuiz() {
 }
 
 const pageProps = {
+  route: "word-counter",
   title: "Word Counter",
   seoTitle: "Word Counter - Easily count words and characters",
   description:
@@ -20,7 +22,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

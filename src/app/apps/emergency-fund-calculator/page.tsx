@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import EmergencyFundCalculator from "./emergencyFundCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function EmergencyFundCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function EmergencyFundCalculatorPage() {
 }
 
 const pageProps = {
+  route: "emergency-fund-calculator",
   seoTitle: "Emergency Fund Calculator – How Much Should You Save? | ewory.com",
   title: "Emergency Fund Calculator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

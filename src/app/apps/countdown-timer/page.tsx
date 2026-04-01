@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import CountdownTimer from "./countdownTimer";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function CountdownTimerPage() {
   return (
@@ -12,6 +13,7 @@ export default function CountdownTimerPage() {
 }
 
 const pageProps = {
+  route: "countdown-timer",
   seoTitle: "Countdown Timer – Free Online Timer with Alarm | ewory.com",
   title: "Countdown Timer",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

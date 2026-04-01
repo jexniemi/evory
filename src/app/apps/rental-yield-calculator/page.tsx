@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Vuokratuottolaskuri from "./vuokratuottolaskuri";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function VuokratuottolaskuriPage() {
   return (
@@ -12,6 +13,7 @@ export default function VuokratuottolaskuriPage() {
 }
 
 const pageProps = {
+  route: "rental-yield-calculator",
   title: "Rental Yield Calculator",
   seoTitle: "Rental Yield Calculator – Calculate Investment Property Return",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

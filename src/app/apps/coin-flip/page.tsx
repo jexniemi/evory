@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import CoinFlip from "./coinFlip";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function CoinFlipPage() {
   return (
@@ -12,6 +13,7 @@ export default function CoinFlipPage() {
 }
 
 const pageProps = {
+  route: "coin-flip",
   seoTitle: "Coin Flip – Free Online Coin Toss Simulator | ewory.com",
   title: "Coin Flip",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

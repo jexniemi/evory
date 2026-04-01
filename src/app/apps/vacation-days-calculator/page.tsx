@@ -2,6 +2,7 @@ import Countdown from "@/components/Countdown";
 import Page from "@/components/Page";
 import { Metadata } from "next";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function SummerVacationCountdown() {
   return (
@@ -16,6 +17,7 @@ export default function SummerVacationCountdown() {
 }
 
 const pageProps = {
+  route: "vacation-days-calculator",
   title: "Summer Vacation Countdown",
   seoTitle:
     "Summer Vacation Countdown – Easily Count Days, Hours and Minutes Until Vacation",
@@ -25,7 +27,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

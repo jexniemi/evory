@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Lotonumerogeneraattori from "./lotonumerogeneraattori";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function LotonumerogeneraattoriPage() {
   return (
@@ -12,6 +13,7 @@ export default function LotonumerogeneraattoriPage() {
 }
 
 const pageProps = {
+  route: "lottery-number-generator",
   title: "Lottery Number Generator",
   seoTitle: "Lottery Number Generator – Draw Lotto numbers for free",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

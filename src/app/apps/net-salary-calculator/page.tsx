@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import NetSalaryCalculator from "./netSalaryCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function NetSalaryCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function NetSalaryCalculatorPage() {
 }
 
 const pageProps = {
+  route: "net-salary-calculator",
   seoTitle: "Net Salary Calculator - Calculate Net Salary from Gross Salary",
   title: "Net Salary Calculator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

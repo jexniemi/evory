@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import ElamapaivaLaskuri from "./elamapaivaLaskuri";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function ElamapaivaLaskuriPage() {
   return (
@@ -12,6 +13,7 @@ export default function ElamapaivaLaskuriPage() {
 }
 
 const pageProps = {
+  route: "life-calculator",
   title: "Life Calculator",
   seoTitle: "Life Calculator – How many days have you lived?",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Tyotuntilaskuri from "./tyotuntilaskuri";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function TyotuntilaskuriPage() {
   return (
@@ -12,6 +13,7 @@ export default function TyotuntilaskuriPage() {
 }
 
 const pageProps = {
+  route: "work-hours-calculator",
   title: "Work Hours Calculator",
   seoTitle: "Work Hours Calculator – Track Hours Worked and Earnings",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

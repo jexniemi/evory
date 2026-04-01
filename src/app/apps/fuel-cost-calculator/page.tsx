@@ -2,6 +2,7 @@ import Calculator from "./gasCostCalculator";
 import Page from "@/components/Page";
 import { Metadata } from "next";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function GasCostCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function GasCostCalculatorPage() {
 }
 
 const pageProps = {
+  route: "fuel-cost-calculator",
   title: "Fuel Cost Calculator",
   seoTitle: "Fuel Cost Calculator - Calculate Your Trip's Fuel Costs",
   description:
@@ -20,7 +22,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

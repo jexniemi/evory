@@ -2,6 +2,7 @@ import QRCodeGenerator from "@/components/pages/QRCodeGenerator";
 import Page from "@/components/Page";
 import { Metadata } from "next";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function QRGenerator() {
   return (
@@ -12,6 +13,7 @@ export default function QRGenerator() {
 }
 
 const pageProps = {
+  route: "qr-generator",
   title: "QR Generator",
   seoTitle: "QR Generator - Create QR Code from Text",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

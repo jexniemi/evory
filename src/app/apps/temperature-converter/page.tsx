@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Lampotilamuunnin from "./lampotilamuunnin";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function LampotilamuunninPage() {
   return (
@@ -12,6 +13,7 @@ export default function LampotilamuunninPage() {
 }
 
 const pageProps = {
+  route: "temperature-converter",
   title: "Temperature Converter",
   seoTitle: "Temperature Converter – Convert Celsius, Fahrenheit and Kelvin",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

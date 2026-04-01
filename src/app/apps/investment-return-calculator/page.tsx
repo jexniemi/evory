@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import RoiCalculator from "./roiCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function RoiPage() {
   return (
@@ -12,6 +13,7 @@ export default function RoiPage() {
 }
 
 const pageProps = {
+  route: "investment-return-calculator",
   seoTitle: "Investment Return Calculator – Calculate ROI and annual return",
   title: "Investment Return Calculator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

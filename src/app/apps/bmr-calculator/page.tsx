@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import BMRCalculator from "./bmrCalculator";
 import { Metadata } from "next";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function BMRCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function BMRCalculatorPage() {
 }
 
 const pageProps = {
+  route: "bmr-calculator",
   seoTitle:
     "Basal Metabolic Rate Calculator (BMR) – Calculate Resting Calories",
   title: "Basal Metabolic Rate Calculator",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

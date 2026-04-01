@@ -3,6 +3,7 @@ import data from "@/data/namedays/dogs";
 import Page from "@/components/Page";
 import { Metadata } from "next";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function DogNameGenerator() {
   return (
@@ -13,6 +14,7 @@ export default function DogNameGenerator() {
 }
 
 const pageProps = {
+  route: "name-generator/dogs",
   title: "Dog Name Generator",
   seoTitle: "Dog Name Generator - Find the Perfect Name for Your Dog",
   description:
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

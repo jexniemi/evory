@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import RockPaperScissors from "./rockPaperScissors";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function RockPaperScissorsPage() {
   return (
@@ -12,6 +13,7 @@ export default function RockPaperScissorsPage() {
 }
 
 const pageProps = {
+  route: "rock-paper-scissors",
   seoTitle: "Rock Paper Scissors – Free Online Game vs Computer | ewory.com",
   title: "Rock Paper Scissors",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

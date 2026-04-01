@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import SocialSecurityCalculator from "./socialSecurityCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function SocialSecurityCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function SocialSecurityCalculatorPage() {
 }
 
 const pageProps = {
+  route: "social-security-calculator",
   seoTitle: "Social Security Calculator – Estimate Your Benefits | ewory.com",
   title: "Social Security Calculator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

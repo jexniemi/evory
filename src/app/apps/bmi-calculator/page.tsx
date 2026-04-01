@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import BmiCalculator from "./bmiCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function BmiCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function BmiCalculatorPage() {
 }
 
 const pageProps = {
+  route: "bmi-calculator",
   seoTitle: "BMI Calculator – Calculate your body mass index and normal weight range",
   title: "BMI Calculator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

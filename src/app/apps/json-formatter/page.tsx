@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import JsonFormatter from "./jsonFormatter";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function JsonFormatterPage() {
   return (
@@ -12,6 +13,7 @@ export default function JsonFormatterPage() {
 }
 
 const pageProps = {
+  route: "json-formatter",
   seoTitle:
     "JSON Formatter – Free Online JSON Beautifier & Validator | ewory.com",
   title: "JSON Formatter",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

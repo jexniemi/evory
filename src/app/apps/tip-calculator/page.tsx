@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import TipCalculator from "./tipCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function TipCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function TipCalculatorPage() {
 }
 
 const pageProps = {
+  route: "tip-calculator",
   seoTitle: "Tip Calculator – Calculate Tip Amount Easily",
   title: "Tip Calculator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

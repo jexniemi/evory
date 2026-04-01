@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import DueDateCalculator from "./dueDateCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function DueDateCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function DueDateCalculatorPage() {
 }
 
 const pageProps = {
+  route: "due-date-calculator",
   seoTitle:
     "Due Date Calculator – Free Pregnancy Due Date Estimator | ewory.com",
   title: "Due Date Calculator",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

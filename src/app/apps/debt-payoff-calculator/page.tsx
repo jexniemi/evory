@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import DebtPayoffCalculator from "./debtPayoffCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function DebtPayoffCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function DebtPayoffCalculatorPage() {
 }
 
 const pageProps = {
+  route: "debt-payoff-calculator",
   seoTitle: "Debt Payoff Calculator – Free Debt Repayment Planner | ewory.com",
   title: "Debt Payoff Calculator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

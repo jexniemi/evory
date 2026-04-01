@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import PaycheckCalculator from "./paycheckCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function PaycheckCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function PaycheckCalculatorPage() {
 }
 
 const pageProps = {
+  route: "paycheck-calculator",
   seoTitle: "Paycheck Calculator – Free Take-Home Pay Estimator | ewory.com",
   title: "Paycheck Calculator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

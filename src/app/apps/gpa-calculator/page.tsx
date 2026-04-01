@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import GpaCalculator from "@/components/GPACalculator";
 import { Metadata } from "next";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function GPACalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function GPACalculatorPage() {
 }
 
 const pageProps = {
+  route: "gpa-calculator",
   title: "GPA Calculator",
   seoTitle: "GPA Calculator – Calculate Your GPA Easily",
   description:
@@ -20,7 +22,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

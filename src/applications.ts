@@ -694,7 +694,6 @@ export const getCategoryNameByRoute = (route: string) => {
     const lastElement = routeArray[routeArray.length - 1];
     Object.keys(apps).forEach((category) => {
       apps[category].apps.forEach((app) => {
-        console.log(app.route, lastElement);
         if (app.route === lastElement) {
           result = {
             categoryName: category,

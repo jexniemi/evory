@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import BreakEvenCalculator from "./breakEvenCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function BreakEvenCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function BreakEvenCalculatorPage() {
 }
 
 const pageProps = {
+  route: "break-even-calculator",
   seoTitle:
     "Break-Even Calculator – Find Your Business Break-Even Point | ewory.com",
   title: "Break-Even Calculator",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

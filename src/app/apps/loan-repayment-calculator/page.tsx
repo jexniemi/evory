@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import LoanCalculator from "./loanCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function LoanPage() {
   return (
@@ -12,6 +13,7 @@ export default function LoanPage() {
 }
 
 const pageProps = {
+  route: "loan-repayment-calculator",
   seoTitle:
     "Loan Repayment Calculator – Calculate monthly payment and interest",
   title: "Loan Repayment Calculator",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

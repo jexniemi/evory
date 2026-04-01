@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import SavingsGoalCalculator from "./savingsGoalCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function SavingsGoalCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function SavingsGoalCalculatorPage() {
 }
 
 const pageProps = {
+  route: "savings-goal-calculator",
   seoTitle: "Savings Goal Calculator - How Long Will Saving Take?",
   title: "Savings Goal Calculator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

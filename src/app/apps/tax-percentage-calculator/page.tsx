@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import TaxRateCalculator from "./taxRateCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function TaxRatePage() {
   return (
@@ -12,6 +13,7 @@ export default function TaxRatePage() {
 }
 
 const pageProps = {
+  route: "tax-percentage-calculator",
   seoTitle: "Tax Rate Calculator – Calculate Your Effective Tax Rate",
   title: "Tax Rate Calculator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

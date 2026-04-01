@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import TaxBracketCalculator from "./taxBracketCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function TaxBracketCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function TaxBracketCalculatorPage() {
 }
 
 const pageProps = {
+  route: "tax-bracket-calculator",
   seoTitle:
     "Tax Bracket Calculator – 2024 Federal Income Tax Estimator | ewory.com",
   title: "Tax Bracket Calculator",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Annoslaskuri from "./annoslaskuri";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function AnnoslaskuriPage() {
   return (
@@ -12,6 +13,7 @@ export default function AnnoslaskuriPage() {
 }
 
 const pageProps = {
+  route: "portion-calculator",
   title: "Portion Calculator",
   seoTitle: "Portion Calculator – Scale Recipe to the Right Serving Size",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

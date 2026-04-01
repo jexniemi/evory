@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import SquareFootageCalculator from "./squareFootageCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function SquareFootageCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function SquareFootageCalculatorPage() {
 }
 
 const pageProps = {
+  route: "square-footage-calculator",
   seoTitle:
     "Square Footage Calculator – Free Online Area Calculator | ewory.com",
   title: "Square Footage Calculator",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

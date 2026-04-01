@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import IdealWeightCalculator from "./idealWeightCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function IdealWeightCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function IdealWeightCalculatorPage() {
 }
 
 const pageProps = {
+  route: "ideal-weight-calculator",
   seoTitle:
     "Ideal Weight Calculator – Free Online Tool by Height & Gender | ewory.com",
   title: "Ideal Weight Calculator",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

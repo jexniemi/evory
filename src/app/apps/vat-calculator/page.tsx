@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import AlvCalculator from "./alvCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function AlvCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function AlvCalculatorPage() {
 }
 
 const pageProps = {
+  route: "vat-calculator",
   seoTitle: "Sales Tax Calculator – Calculate Tax Amount Easily",
   title: "Sales Tax Calculator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import GradeCalculator from "./gradeCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function GradeCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function GradeCalculatorPage() {
 }
 
 const pageProps = {
+  route: "grade-calculator",
   seoTitle: "Grade Calculator – What Do I Need on My Final Exam? | ewory.com",
   title: "Grade Calculator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

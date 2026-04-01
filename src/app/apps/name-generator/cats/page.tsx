@@ -3,6 +3,7 @@ import data from "@/data/namedays/cats";
 import Page from "@/components/Page";
 import { Metadata } from "next";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function CatNameGenerator() {
   return (
@@ -13,6 +14,7 @@ export default function CatNameGenerator() {
 }
 
 const pageProps = {
+  route: "name-generator/cats",
   title: "Cat Name Generator",
   seoTitle: "Cat Name Generator - Find the Perfect Name for Your Cat",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

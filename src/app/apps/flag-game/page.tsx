@@ -3,6 +3,7 @@ import Page from "@/components/Page";
 import QuizEngine from "@/components/common/QuizEngine";
 import { Metadata } from "next";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function FlagQuiz() {
   return (
@@ -18,6 +19,7 @@ export default function FlagQuiz() {
 }
 
 const pageProps = {
+  route: "flag-game",
   title: "Flag Game",
   seoTitle: "Flag Game – Identify the Flags of the World's Countries",
   description:
@@ -27,7 +29,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

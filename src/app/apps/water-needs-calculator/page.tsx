@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import WaterIntakeCalculator from "./waterIntakeCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function WaterIntakeCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function WaterIntakeCalculatorPage() {
 }
 
 const pageProps = {
+  route: "water-needs-calculator",
   seoTitle: "Water Needs Calculator - Calculate Your Daily Water Intake",
   title: "Water Needs Calculator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

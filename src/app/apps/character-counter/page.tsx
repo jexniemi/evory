@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import CharacterCounter from "./characterCounter";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function CharacterCounterPage() {
   return (
@@ -12,6 +13,7 @@ export default function CharacterCounterPage() {
 }
 
 const pageProps = {
+  route: "character-counter",
   seoTitle:
     "Character Counter – Free Online Character & Word Count Tool | ewory.com",
   title: "Character Counter",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

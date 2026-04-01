@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Nopeusmuunnin from "./nopeusmuunnin";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function NopeusmuunninPage() {
   return (
@@ -12,6 +13,7 @@ export default function NopeusmuunninPage() {
 }
 
 const pageProps = {
+  route: "speed-converter",
   title: "Speed Converter",
   seoTitle: "Speed Converter – Convert km/h, m/s, mph and knots",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

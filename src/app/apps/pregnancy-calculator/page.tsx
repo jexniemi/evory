@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Raskauslaskuri from "./raskauslaskuri";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function RaskauslaskuriPage() {
   return (
@@ -12,6 +13,7 @@ export default function RaskauslaskuriPage() {
 }
 
 const pageProps = {
+  route: "pregnancy-calculator",
   title: "Pregnancy Calculator",
   seoTitle: "Pregnancy Calculator – Calculate Due Date and Pregnancy Weeks",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

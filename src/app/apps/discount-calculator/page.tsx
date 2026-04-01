@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Calculator from "./discountCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function DiscountCalculator() {
   return (
@@ -12,6 +13,7 @@ export default function DiscountCalculator() {
 }
 
 const pageProps = {
+  route: "discount-calculator",
   seoTitle:
     "Discount Calculator - Calculate Discounted Price and Savings Easily",
   title: "Discount Calculator",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

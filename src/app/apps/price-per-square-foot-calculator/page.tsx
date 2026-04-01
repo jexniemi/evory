@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import PricePerSqmCalculator from "./pricePerSqmCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function PricePerSqmPage() {
   return (
@@ -12,6 +13,7 @@ export default function PricePerSqmPage() {
 }
 
 const pageProps = {
+  route: "price-per-square-foot-calculator",
   seoTitle:
     "Price Per Square Foot Calculator - Calculate Apartment Price Per Square Foot",
   title: "Price Per Square Foot Calculator",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

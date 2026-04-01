@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import UnitPriceCalculator from "./unitPriceCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function UnitPriceCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function UnitPriceCalculatorPage() {
 }
 
 const pageProps = {
+  route: "unit-price-calculator",
   seoTitle:
     "Unit Price Calculator – Compare Product Prices Per Unit | ewory.com",
   title: "Unit Price Calculator",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

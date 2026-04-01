@@ -1,7 +1,9 @@
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 import PageAccent from "./PageAccent";
+import { getCategoryNameByRoute } from "@/applications";
 
 export interface PageProps {
+  route?: string;
   seoTitle?: string;
   title: string;
   description: string;
@@ -12,6 +14,7 @@ export interface PageProps {
 }
 
 export default function Page({
+  route,
   seoTitle,
   title,
   description,
@@ -20,11 +23,16 @@ export default function Page({
   additionalInfo,
   Info,
 }: PageProps) {
+  const pageUrl = route
+    ? `https://ewory.com/apps/${route}`
+    : "https://ewory.com";
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: seoTitle || title,
     description,
+    url: pageUrl,
     applicationCategory: "UtilityApplication",
     operatingSystem: "Any",
     offers: {
@@ -39,6 +47,46 @@ export default function Page({
     },
   };
 
+  /* BreadcrumbList JSON-LD: Home → Category → App */
+  const category = route ? getCategoryNameByRoute(route) : null;
+  const breadcrumbItems: Array<{
+    "@type": string;
+    position: number;
+    name: string;
+    item: string;
+  }> = [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://ewory.com",
+    },
+  ];
+
+  if (category) {
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      position: 2,
+      name: category.categoryName,
+      item: `https://ewory.com${category.categoryPath}`,
+    });
+  }
+
+  if (route) {
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      position: breadcrumbItems.length + 1,
+      name: title,
+      item: pageUrl,
+    });
+  }
+
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: breadcrumbItems,
+  };
+
   return (
     <>
       <script
@@ -47,6 +95,14 @@ export default function Page({
           __html: JSON.stringify(structuredData),
         }}
       />
+      {route && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(breadcrumbData),
+          }}
+        />
+      )}
       <main>
         <Breadcrumbs pageTitle={title} />
         <PageAccent title={title} instructions={instructions} />

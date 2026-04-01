@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Arvontakone from "./arvontakone";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function ArvontakonePage() {
   return (
@@ -12,6 +13,7 @@ export default function ArvontakonePage() {
 }
 
 const pageProps = {
+  route: "raffle-machine",
   title: "Raffle Machine",
   seoTitle: "Raffle Machine – Draw a Winner from a List for Free",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

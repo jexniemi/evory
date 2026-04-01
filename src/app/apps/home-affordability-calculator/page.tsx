@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import HomeAffordabilityCalculator from "./homeAffordabilityCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function HomeAffordabilityCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function HomeAffordabilityCalculatorPage() {
 }
 
 const pageProps = {
+  route: "home-affordability-calculator",
   seoTitle:
     "Home Affordability Calculator – How Much House Can You Afford? | ewory.com",
   title: "Home Affordability Calculator",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

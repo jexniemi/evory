@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Tuuliviimalaskuri from "./tuuliviimalaskuri";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function TuuliviimalaskuriPage() {
   return (
@@ -12,6 +13,7 @@ export default function TuuliviimalaskuriPage() {
 }
 
 const pageProps = {
+  route: "wind-chill-calculator",
   title: "Wind Chill Calculator",
   seoTitle: "Wind Chill Calculator – Calculate Apparent Temperature in Wind",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

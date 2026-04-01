@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import InflationCalculator from "./inflationCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function InflationCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function InflationCalculatorPage() {
 }
 
 const pageProps = {
+  route: "inflation-calculator",
   seoTitle: "Inflation Calculator – Purchasing Power Over Time | ewory.com",
   title: "Inflation Calculator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

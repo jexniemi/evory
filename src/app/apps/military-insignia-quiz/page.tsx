@@ -3,6 +3,7 @@ import QuizEngine from "@/components/common/QuizEngine";
 import Page from "@/components/Page";
 import { Metadata } from "next";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function ArmyQuiz() {
   return (
@@ -13,6 +14,7 @@ export default function ArmyQuiz() {
 }
 
 const pageProps = {
+  route: "military-insignia-quiz",
   title: "Army Military Ranks Quiz",
   seoTitle: "Military Ranks Quiz – Identify Finnish Army insignia",
   description:
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

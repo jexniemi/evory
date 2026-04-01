@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import PasswordGenerator from "./passwordGenerator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function PasswordGeneratorPage() {
   return (
@@ -12,6 +13,7 @@ export default function PasswordGeneratorPage() {
 }
 
 const pageProps = {
+  route: "password-generator",
   seoTitle: "Password Generator – Free Online Secure Password Tool | ewory.com",
   title: "Password Generator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

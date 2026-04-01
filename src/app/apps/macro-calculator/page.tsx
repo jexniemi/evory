@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Makrolaskuri from "./makrolaskuri";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function MakrolaskuriPage() {
   return (
@@ -12,6 +13,7 @@ export default function MakrolaskuriPage() {
 }
 
 const pageProps = {
+  route: "macro-calculator",
   title: "Macro Calculator",
   seoTitle: "Macro Calculator – Calculate daily calories and macros",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

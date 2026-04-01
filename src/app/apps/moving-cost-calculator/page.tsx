@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import MovingCostCalculator from "./movingCostCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function MovingCostCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function MovingCostCalculatorPage() {
 }
 
 const pageProps = {
+  route: "moving-cost-calculator",
   seoTitle: "Moving Cost Calculator – Free Online Moving Estimator | ewory.com",
   title: "Moving Cost Calculator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

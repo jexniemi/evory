@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import HourlyPayCalculator from "./hourlyPayCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function HourlyPayCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function HourlyPayCalculatorPage() {
 }
 
 const pageProps = {
+  route: "hourly-salary-calculator",
   title: "Hourly Salary Calculator",
   seoTitle: "Hourly Salary Calculator - Calculate your hourly wage easily",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

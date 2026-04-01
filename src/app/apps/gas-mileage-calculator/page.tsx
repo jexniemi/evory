@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import GasMileageCalculator from "./gasMileageCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function GasMileageCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function GasMileageCalculatorPage() {
 }
 
 const pageProps = {
+  route: "gas-mileage-calculator",
   seoTitle: "Gas Mileage Calculator – Calculate MPG and Fuel Cost | ewory.com",
   title: "Gas Mileage Calculator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

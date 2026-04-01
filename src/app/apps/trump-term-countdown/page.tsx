@@ -2,6 +2,7 @@ import Countdown from "@/components/Countdown";
 import Page from "@/components/Page";
 import { Metadata } from "next";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function TrumpTermCountdown() {
   return (
@@ -15,6 +16,7 @@ export default function TrumpTermCountdown() {
 }
 
 const pageProps = {
+  route: "trump-term-countdown",
   title: "Trump Term Countdown",
   seoTitle:
     "Trump Term Countdown – Days Until End of Trump's Second Term | ewory.com",
@@ -25,7 +27,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

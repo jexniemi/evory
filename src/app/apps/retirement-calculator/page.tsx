@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import RetirementCalculator from "./retirementCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function RetirementCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function RetirementCalculatorPage() {
 }
 
 const pageProps = {
+  route: "retirement-calculator",
   seoTitle:
     "Retirement Calculator – Free Retirement Savings Estimator | ewory.com",
   title: "Retirement Calculator",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

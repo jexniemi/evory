@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Valuuttamuunnin from "./valuuttamuunnin";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function ValuuttamuunninPage() {
   return (
@@ -12,6 +13,7 @@ export default function ValuuttamuunninPage() {
 }
 
 const pageProps = {
+  route: "currency-converter",
   title: "Currency Converter",
   seoTitle:
     "Currency Converter – Convert currencies EUR, USD, GBP and over 20 more",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

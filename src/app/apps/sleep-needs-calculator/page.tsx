@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import SleepCalculator from "./sleepCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function SleepPage() {
   return (
@@ -12,6 +13,7 @@ export default function SleepPage() {
 }
 
 const pageProps = {
+  route: "sleep-needs-calculator",
   seoTitle: "Sleep Needs Calculator – How Much Sleep Do You Need",
   title: "Sleep Needs Calculator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

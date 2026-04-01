@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Kalorienpolttolaskuri from "./kalorienpolttolaskuri";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function KalorienpolttolaskuriPage() {
   return (
@@ -12,6 +13,7 @@ export default function KalorienpolttolaskuriPage() {
 }
 
 const pageProps = {
+  route: "calorie-burn-calculator",
   title: "Calorie Burn Calculator",
   seoTitle: "Calorie Burn Calculator – Calculate exercise calorie expenditure",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

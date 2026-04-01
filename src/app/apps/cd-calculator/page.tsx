@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import CdCalculator from "./cdCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function CdCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function CdCalculatorPage() {
 }
 
 const pageProps = {
+  route: "cd-calculator",
   seoTitle:
     "CD Calculator – Certificate of Deposit Interest Calculator | ewory.com",
   title: "CD Calculator",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

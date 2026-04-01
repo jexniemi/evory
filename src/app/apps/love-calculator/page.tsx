@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import LoveCalculator from "./loveCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function LoveCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function LoveCalculatorPage() {
 }
 
 const pageProps = {
+  route: "love-calculator",
   seoTitle: "Love Calculator – Free Online Compatibility Test | ewory.com",
   title: "Love Calculator",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

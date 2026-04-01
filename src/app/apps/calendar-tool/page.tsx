@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import MonthMachine from "./monthMachine";
 import { Metadata } from "next";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function MonthMachinePage() {
   return (
@@ -12,6 +13,7 @@ export default function MonthMachinePage() {
 }
 
 const pageProps = {
+  route: "calendar-tool",
   title: "Calendar Tool",
   seoTitle: "Calendar Tool – Days in months, calendar and leap years",
   description:
@@ -21,7 +23,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

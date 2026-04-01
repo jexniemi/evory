@@ -2,6 +2,7 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Promillelaskuri from "./promillelaskuri";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function PromillelaskuriPage() {
   return (
@@ -12,6 +13,7 @@ export default function PromillelaskuriPage() {
 }
 
 const pageProps = {
+  route: "bac-calculator",
   title: "BAC Calculator",
   seoTitle:
     "BAC Calculator – Estimate Blood Alcohol Content with Widmark Formula",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);

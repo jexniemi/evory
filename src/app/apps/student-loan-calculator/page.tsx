@@ -2,6 +2,7 @@ import App from "@/components/Page";
 import { Metadata } from "next";
 import StudentLoanCalculator from "./studentLoanCalculator";
 import Info from "./info.mdx";
+import { generateAppMetadata } from "@/utils/seo";
 
 export default function StudentLoanCalculatorPage() {
   return (
@@ -12,6 +13,7 @@ export default function StudentLoanCalculatorPage() {
 }
 
 const pageProps = {
+  route: "student-loan-calculator",
   seoTitle:
     "Student Loan Calculator – Monthly Payment & Interest Estimator | ewory.com",
   title: "Student Loan Calculator",
@@ -22,7 +24,4 @@ const pageProps = {
   Info,
 };
 
-export const metadata: Metadata = {
-  title: pageProps.seoTitle,
-  description: pageProps.description,
-};
+export const metadata: Metadata = generateAppMetadata(pageProps);
