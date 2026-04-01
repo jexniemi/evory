@@ -11,13 +11,7 @@ import {
   Legend,
 } from "recharts";
 
-const CHART_COLORS = [
-  "#f59e0b",
-  "#10b981",
-  "#3b82f6",
-  "#8b5cf6",
-  "#ef4444",
-];
+const CHART_COLORS = ["#f59e0b", "#10b981", "#3b82f6", "#8b5cf6", "#ef4444"];
 
 interface SimpleChartProps {
   data: Record<string, number>[];
@@ -27,8 +21,7 @@ interface SimpleChartProps {
 }
 
 function formatCompact(val: number): string {
-  if (Math.abs(val) >= 1_000_000)
-    return `${(val / 1_000_000).toFixed(1)}M`;
+  if (Math.abs(val) >= 1_000_000) return `${(val / 1_000_000).toFixed(1)}M`;
   if (Math.abs(val) >= 10_000) return `${(val / 1_000).toFixed(0)}K`;
   if (Math.abs(val) >= 1_000) return `${(val / 1_000).toFixed(1)}K`;
   if (Number.isInteger(val)) return val.toString();
@@ -45,10 +38,7 @@ export default function SimpleChart({
 
   return (
     <ResponsiveContainer width="100%" height={height}>
-      <LineChart
-        data={data}
-        margin={{ top: 5, right: 20, left: 5, bottom: 5 }}
-      >
+      <LineChart data={data} margin={{ top: 5, right: 20, left: 5, bottom: 5 }}>
         <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
         <XAxis
           dataKey={xKey}

@@ -60,7 +60,6 @@ const RESULT_COLORS = [
   "bg-orange-50 border border-orange-200 border-l-4 border-l-orange-400 shadow-sm",
 ];
 
-
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
 /* ------------------------------------------------------------------ */
@@ -114,7 +113,11 @@ export default function SimpleCalculator({
     setValues((prev) => prev.map((v, i) => (i === index ? value : v)));
   };
 
-  const handleRawInput = (index: number, raw: string, input: NumberInputType) => {
+  const handleRawInput = (
+    index: number,
+    raw: string,
+    input: NumberInputType,
+  ) => {
     setRawValues((prev) => prev.map((v, i) => (i === index ? raw : v)));
     const parsed = input.step ? parseFloat(raw) : parseInt(raw);
     const num = isNaN(parsed) ? 0 : parsed;
@@ -149,9 +152,7 @@ export default function SimpleCalculator({
     const max = baseVal * 3;
     const stepSize = (max - min) / steps;
 
-    const resultIdxs = result
-      ? result.slice(0, 3).map((_, i) => i)
-      : [0];
+    const resultIdxs = result ? result.slice(0, 3).map((_, i) => i) : [0];
 
     const data: Record<string, number>[] = [];
     const yKeysSet = new Set<string>();
@@ -230,9 +231,7 @@ export default function SimpleCalculator({
                 <DropdownInput
                   values={input.values}
                   selectedValue={values[idx]}
-                  setSelectedValue={(value) =>
-                    handleInput(idx, Number(value))
-                  }
+                  setSelectedValue={(value) => handleInput(idx, Number(value))}
                   labels={input.labels}
                 />
               </div>
@@ -245,9 +244,7 @@ export default function SimpleCalculator({
       {result && result.length > 0 && (
         <div
           className={`w-full grid gap-3 mb-6 ${
-            result.length === 1
-              ? "grid-cols-1"
-              : "grid-cols-1 sm:grid-cols-2"
+            result.length === 1 ? "grid-cols-1" : "grid-cols-1 sm:grid-cols-2"
           }`}
         >
           {result.map((res, index) => {
@@ -256,8 +253,7 @@ export default function SimpleCalculator({
             const decimals = res.decimals ?? 2;
             const isHero = result.length > 1 && index === 0;
 
-            const { prefix, suffix: cSuffix } =
-              getCountUpFixes(displaySuffix);
+            const { prefix, suffix: cSuffix } = getCountUpFixes(displaySuffix);
 
             return (
               <div
@@ -286,9 +282,7 @@ export default function SimpleCalculator({
                     suffix={cSuffix}
                     preserveValue
                     className={`font-extrabold tabular-nums text-black ${
-                      isHero
-                        ? "text-3xl sm:text-4xl"
-                        : "text-2xl sm:text-3xl"
+                      isHero ? "text-3xl sm:text-4xl" : "text-2xl sm:text-3xl"
                     }`}
                   />
                 </div>
@@ -303,9 +297,7 @@ export default function SimpleCalculator({
         <div className="w-full">
           <button
             className={`btn btn-sm gap-2 ${
-              showGraph
-                ? "btn-primary"
-                : "btn-ghost border border-base-300"
+              showGraph ? "btn-primary" : "btn-ghost border border-base-300"
             }`}
             onClick={() => setShowGraph((v) => !v)}
           >
@@ -338,9 +330,7 @@ export default function SimpleCalculator({
                     <select
                       className="select select-bordered select-xs"
                       value={graphInputIdx}
-                      onChange={(e) =>
-                        setGraphInputIdx(Number(e.target.value))
-                      }
+                      onChange={(e) => setGraphInputIdx(Number(e.target.value))}
                     >
                       {numericInputs.map(({ input, idx }) => (
                         <option key={idx} value={idx}>
