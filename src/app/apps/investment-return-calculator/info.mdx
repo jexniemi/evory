@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## What is ROI?
 
 ROI (Return on Investment) or return on invested capital tells how much the investment has yielded relative to the original capital. It is one of the most used key figures for comparing the profitability of investments and business.
@@ -43,3 +45,11 @@ For example, 100% return in 10 years sounds good, but CAGR is only 7.2%/y. On th
 - [Compound Interest Calculator](/apps/simple-compound-interest-calculator) — calculate investment growth into the future
 - [Compound Interest Calculator (with additional investments)](/apps/compound-interest-calculator) — takes into account monthly additional investments
 - [Loan Repayment Calculator](/apps/loan-repayment-calculator) — calculate loan monthly payment and interest costs
+
+<FAQ items={[
+  { q: "How is investment return calculated?", a: "Return on Investment (ROI) = (Final Value - Initial Value) / Initial Value x 100. For example, investing $1,000 that grows to $1,200 gives a 20% return." },
+  { q: "What is a good annual return on investment?", a: "The S&P 500 has historically averaged about 10% annual return before inflation (roughly 7% after inflation). Returns vary widely by asset class and time period." },
+  { q: "What is the difference between simple return and annualized return?", a: "Simple return measures total gain over the entire period. Annualized return (CAGR) converts total return into an equivalent yearly rate, making different time periods comparable." },
+  { q: "How does compounding affect investment returns?", a: "Compounding means earning returns on both your original investment and prior gains. Over long periods this dramatically accelerates growth — often called the eighth wonder of the world." },
+  { q: "What is the Rule of 72?", a: "The Rule of 72 estimates how long it takes to double your investment: divide 72 by the annual return rate. At 8% annual return, your money doubles in about 9 years (72 / 8 = 9)." },
+]} />

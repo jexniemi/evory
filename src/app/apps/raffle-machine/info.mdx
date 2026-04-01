@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## Raffle Machine – Draw a Winner from a List
 
 The raffle machine is a free tool for randomly drawing a winner or item from a list. Suitable for contests, social media raffles, teaching, team divisions, and anything else where a fair random selection is needed.
@@ -27,3 +29,11 @@ When one winner is drawn and you remove them from the list, the next draw select
 - [Random Number Generator](/apps/random-number-generator) – Generate random numbers
 - [Lottery Number Generator](/apps/lottery-number-generator) – Generate Lotto numbers
 - [Dice Generator](/apps/dice-generator) – Roll virtual dice
+
+<FAQ items={[
+  { q: "How does a raffle work?", a: "Participants enter by submitting their name or ticket number. At the draw, one or more winners are selected at random. Each ticket has an equal probability of being chosen." },
+  { q: "How do I make a raffle fair?", a: "Ensure every participant has an equal chance by using a verified random selection method, like our raffle machine. Announce the rules in advance and draw in front of participants when possible." },
+  { q: "Can I use this raffle machine for large groups?", a: "Yes — paste names or entries (one per line) into the raffle machine and it will randomly select winners. It works for any size group from 2 to thousands of entries." },
+  { q: "What is the probability of winning a raffle?", a: "Your probability equals 1 divided by the total number of entries. In a raffle with 100 participants, each person has a 1% chance. Buying more tickets proportionally improves your odds." },
+  { q: "Is a digital raffle as random as drawing from a hat?", a: "Yes, modern software random number generators are cryptographically secure and statistically uniform — equivalent to or better than physical drawing methods." },
+]} />

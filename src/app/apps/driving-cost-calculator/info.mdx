@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## How is fuel cost calculated?
 
 Fuel consumption is often reported as liters per 100 kilometers (L/100 km) or miles per gallon (MPG). The trip cost is obtained by multiplying the required fuel amount by the fuel price.
@@ -51,3 +53,11 @@ The difference between a small and large car can be over **1,600 € per year** 
 
 - [Fuel Cost Calculator](/apps/fuel-cost-calculator) — calculate fuel costs per fill-up or monthly
 - [Electric Car Trip Cost Calculator](/apps/electric-car-trip-cost-calculator) — compare electric car kWh costs to gasoline
+
+<FAQ items={[
+  { q: "How much does it cost to drive per mile?", a: "The IRS standard mileage rate for 2024 is 67 cents per mile, covering fuel, depreciation, and maintenance. For fuel only, it depends on your MPG and local gas prices." },
+  { q: "How do I calculate fuel cost for a road trip?", a: "Divide the trip distance by your MPG to get gallons needed, then multiply by gas price per gallon. Example: 300 miles / 30 MPG x $3.50/gal = $35." },
+  { q: "What is the average fuel consumption for a car?", a: "The average new US car gets about 28 MPG. SUVs average around 22 MPG, while fuel-efficient hybrids can exceed 50 MPG." },
+  { q: "How can I reduce my fuel consumption?", a: "Drive smoothly without rapid acceleration or braking, maintain proper tire pressure, reduce highway speeds, and limit air conditioning use. These steps can improve fuel economy by 10-30%." },
+  { q: "Is it cheaper to drive or fly for a road trip?", a: "For trips under 500 miles with 2 or more passengers, driving is usually cheaper. For solo travelers or longer distances, flying may be more cost-effective." },
+]} />

@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## Daily Calorie Needs
 
 Daily calorie needs (TDEE, Total Daily Energy Expenditure) is the total energy your body consumes in a day. It consists of basal metabolic rate (BMR), physical activity, and the thermic effect of food.
@@ -67,3 +69,11 @@ The [Basal Metabolic Rate Calculator](/apps/bmr-calculator) shows resting metabo
 
 - Mifflin, M.D. et al. (1990). *A new predictive equation for resting energy expenditure in healthy individuals.* The American Journal of Clinical Nutrition.
 - Frankenfield, D. et al. (2005). *Comparison of predictive equations for resting metabolic rate.* Journal of the American Dietetic Association.
+
+<FAQ items={[
+  { q: "How many calories do I need per day?", a: "The average adult needs roughly 1,600-3,000 kcal/day depending on age, sex, weight, height, and activity level. Use the Mifflin-St Jeor formula with your activity multiplier for a personalized estimate." },
+  { q: "What is TDEE?", a: "TDEE stands for Total Daily Energy Expenditure: the total calories your body burns in a day including rest, physical activity, and digestion." },
+  { q: "What is the difference between BMR and TDEE?", a: "BMR (Basal Metabolic Rate) is calories burned at complete rest. TDEE multiplies BMR by an activity factor to account for daily movement and exercise." },
+  { q: "How many calories should I eat to lose 1 pound per week?", a: "A deficit of about 500 calories per day leads to roughly 1 pound (0.45 kg) of weight loss per week. Reducing below 1,200 kcal/day (women) or 1,500 kcal/day (men) is not recommended without medical guidance." },
+  { q: "Is the Mifflin-St Jeor formula accurate?", a: "Studies show the Mifflin-St Jeor formula is the most accurate BMR prediction for most people, with an average error of about 10%. Actual needs may vary based on body composition and health conditions." },
+]} />

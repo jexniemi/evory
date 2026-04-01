@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## Heart Rate Calculator – Calculate heart rate zones for training
 
 The heart rate calculator calculates 5 training zones using the Karvonen formula, which takes into account both maximum heart rate and resting heart rate. Training in the right heart rate zones enhances results and reduces the risk of overtraining.
@@ -44,3 +46,11 @@ More information: [UKK Institute – Exercise Training](https://ukkinstituutti.f
 - [Calorie Burn Calculator](/apps/calorie-burn-calculator) – Calculate activity calorie consumption
 - [Running Pace Calculator](/apps/running-pace-calculator) – Calculate running pace
 - [Macro Calculator](/apps/macro-calculator) – Calculate daily macronutrients
+
+<FAQ items={[
+  { q: "What is my maximum heart rate?", a: "The most common estimate is 220 minus your age. For a 30-year-old, estimated max heart rate is 190 BPM. The actual value can vary by 10-20 BPM between individuals." },
+  { q: "What heart rate zone burns the most fat?", a: "Zone 2 (60-70% of max heart rate) is called the fat-burning zone because a higher percentage of calories come from fat. However, higher-intensity zones burn more total calories per minute." },
+  { q: "What is the Karvonen formula?", a: "The Karvonen formula calculates target heart rate using heart rate reserve (max HR minus resting HR). Formula: Target HR = Resting HR + (HR Reserve x desired intensity%). This gives more personalized zones than percentage of max HR alone." },
+  { q: "What is a healthy resting heart rate?", a: "For adults, a normal resting heart rate is 60-100 BPM. Athletes typically have lower resting rates (40-60 BPM) due to a more efficient cardiovascular system." },
+  { q: "How should I measure my resting heart rate?", a: "Measure first thing in the morning before getting out of bed. Count beats for 60 seconds, or count for 30 seconds and double the result. Average over 3 days for the most accurate reading." },
+]} />

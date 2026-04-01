@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## Portion Calculator – Scale Recipe to the Right Serving Size
 
 The portion calculator changes the number of servings in a recipe to your desired amount. Enter the original ingredients and serving size, select the desired serving size – the calculator scales all amounts automatically.
@@ -28,3 +30,11 @@ For example, if the original recipe is for 4 and you want to make it for 10, the
 - [Discount Calculator](/apps/discount-calculator) – Calculate price changes
 - [Percentage Calculator](/apps/percentage-calculator) – Calculate percentages
 - [Macro Calculator](/apps/macro-calculator) – Calculate food macronutrients
+
+<FAQ items={[
+  { q: "How do I scale a recipe for more people?", a: "Divide each ingredient by the original number of servings, then multiply by your desired number of servings. Our portion calculator does this automatically for any recipe." },
+  { q: "What is a standard serving size?", a: "Standard serving sizes vary by food type. For example: cooked pasta is 1 cup (200g), meat is 3-4 oz (85-115g), vegetables are 1 cup raw or 0.5 cup cooked, and grains are 0.5 cup cooked." },
+  { q: "How do I calculate food portions for a party?", a: "Plan approximately 0.5 lb (225g) of protein per person, 4-6 oz (115-170g) of side dishes, and 1-2 oz (28-56g) of appetizers. Scale up generously to avoid running short." },
+  { q: "How many grams is one portion of pasta?", a: "A standard dry pasta portion is about 75-85g per person, which yields roughly 180-200g cooked. For a main course, use 100g dry per person." },
+  { q: "What is the difference between a serving and a portion?", a: "A serving is a standardized unit used on nutrition labels. A portion is the actual amount you choose to eat, which may be larger or smaller than the official serving size." },
+]} />

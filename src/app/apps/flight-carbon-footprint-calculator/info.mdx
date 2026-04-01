@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## How is the carbon footprint of flights calculated?
 
 The flight carbon footprint calculator helps you find out the environmental impact of your flight. Enter the details of the departure and destination airports into the calculator. The calculator calculates the distance between these two airports using the Haversine formula, which takes into account the curvature of the Earth and gives an accurate distance in kilometers.
@@ -7,3 +9,11 @@ Then, the calculator estimates fuel consumption using an average value of about 
 One liter of aviation fuel produces about 2.5 kilograms of carbon dioxide. The calculator multiplies the fuel consumption by the carbon dioxide production value, so you can find out the total emissions of your flight. With this information, you can understand the environmental impact of flying and make more informed decisions about your travel.
 
 Use the flight carbon footprint calculator and easily find out how much carbon dioxide emissions your trip produces. This helps you plan more responsible travel methods and reduce your environmental impact.
+
+<FAQ items={[
+  { q: "How much CO2 does a flight produce per passenger?", a: "A typical short-haul flight (~500 miles) produces roughly 100-150 kg CO2 per passenger. A transatlantic flight (New York to London) emits approximately 700-900 kg CO2 per person." },
+  { q: "Is flying the most polluting form of transport?", a: "Per kilometer, flying has a higher carbon footprint than most ground transport. A domestic flight emits roughly 255g CO2/km per passenger, compared to ~41g for rail travel." },
+  { q: "How is a flight's carbon footprint calculated?", a: "The calculator uses the Haversine formula for great-circle distance, estimates fuel burn at ~2.5 liters per passenger per 100 km, then converts to CO2 (1 liter of jet fuel ~ 2.5 kg CO2)." },
+  { q: "How can I offset my flight carbon emissions?", a: "You can offset through certified programs like Gold Standard or Verified Carbon Standard that fund renewable energy or forestry projects. The cost is typically $10-$30 per tonne of CO2." },
+  { q: "What is the radiative forcing effect of flights?", a: "Aircraft emissions at altitude have about 2-4 times the warming impact of ground-level CO2 because of contrails and high-altitude NOx effects." },
+]} />

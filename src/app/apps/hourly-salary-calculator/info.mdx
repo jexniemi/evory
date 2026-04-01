@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## How to calculate your hourly wage
 
 Hourly wage is calculated by dividing the monthly salary by the monthly working hours:
@@ -37,3 +39,11 @@ The calculator works with both gross and net salary. Gross salary is the salary 
 **Sources:**
 - [OSHA – working hours](https://www.osha.gov/workers/working-hours)
 - [BLS – salary statistics](https://www.bls.gov/oes/)
+
+<FAQ items={[
+  { q: "How do I convert hourly wage to annual salary?", a: "Multiply your hourly rate by weekly hours, then by 52. For example, $25/hr x 40 hrs/week x 52 weeks = $52,000/year." },
+  { q: "How many hours are in a work year?", a: "A standard full-time work year is 2,080 hours (40 hours/week x 52 weeks). Accounting for 10 holidays and 2 weeks vacation, the effective total is closer to 1,960 hours." },
+  { q: "What is the federal minimum wage in the US?", a: "The federal minimum wage is $7.25 per hour as of 2024. Many states and cities have higher minimum wages; for example, California and New York are at $16.00/hour." },
+  { q: "How do I calculate overtime pay?", a: "Under federal law, overtime is 1.5 times your regular rate for hours over 40 per week. Some states require overtime after 8 hours per day. Formula: Overtime pay = (Regular rate x 1.5) x overtime hours." },
+  { q: "Is a $20 per hour wage a good salary?", a: "At $20/hour and 40 hours/week, annual gross pay is approximately $41,600. Whether this is comfortable depends heavily on your location and cost of living." },
+]} />

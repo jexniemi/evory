@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## How to Calculate Annual Salary
 
 Annual Salary from Monthly Salary:
@@ -35,3 +37,11 @@ Overtime compensations are not usually included in annual salary because they va
 **Sources:**
 - [IRS — Tax Information](https://www.irs.gov/individuals)
 - [OSHA — Annual Leave](https://www.osha.gov/workers/leave)
+
+<FAQ items={[
+  { q: "How do I calculate my annual salary?", a: "Multiply your monthly salary by 12, then add any holiday pay and bonuses. For example, a $4,000/month salary with a half-month holiday bonus equals $49,000/year." },
+  { q: "Is annual salary the same as gross salary?", a: "Yes — annual salary typically refers to gross (pre-tax) income for the year, including base pay, holiday pay, and bonuses, before any deductions." },
+  { q: "How do I convert an hourly wage to annual salary?", a: "Multiply your hourly rate by the number of hours you work per week, then by 52 weeks per year. For example, $20/hr x 40 hrs x 52 = $41,600/year." },
+  { q: "Why does annual salary matter for taxes?", a: "The IRS uses your estimated annual income to determine your tax bracket and withholding. A higher annual income may push you into a higher marginal tax rate." },
+  { q: "What is the difference between annual salary and total compensation?", a: "Total compensation includes salary plus benefits such as health insurance, retirement contributions, bonuses, and paid time off." },
+]} />

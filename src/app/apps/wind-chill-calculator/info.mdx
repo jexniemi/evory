@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## Wind Chill Calculator – How Cold Does It Really Feel?
 
 The wind chill calculator computes the **apparent temperature** — how cold the air actually feels on exposed skin due to wind. Even when the thermometer shows a certain temperature, wind makes it feel significantly colder.
@@ -41,3 +43,11 @@ Where T = air temperature (°C) and V = wind speed (km/h). The formula applies w
 
 - [Temperature Converter](/apps/temperature-converter) – Celsius, Fahrenheit, and Kelvin
 - [BMR Calculator](/apps/bmr-calculator) – Calculate your basal metabolic rate
+
+<FAQ items={[
+  { q: "What is wind chill?", a: "Wind chill is the perceived decrease in air temperature due to wind. Wind increases the rate of heat loss from exposed skin, making the temperature feel colder than the actual air temperature." },
+  { q: "How is wind chill calculated?", a: "The US/Canadian formula is: Wind Chill = 35.74 + 0.6215T - 35.75(V^0.16) + 0.4275T(V^0.16), where T is temperature in Fahrenheit and V is wind speed in mph." },
+  { q: "At what wind chill is frostbite dangerous?", a: "Frostbite can develop on exposed skin in as little as 30 minutes at a wind chill of -20 F (-29 C). At -40 F (-40 C), frostbite risk rises to 10 minutes or less." },
+  { q: "Does wind chill affect the freezing point of water?", a: "No — wind chill only describes how cold humans feel. It does not lower the actual air temperature. Water freezes at 32 F (0 C) regardless of wind chill." },
+  { q: "What is the highest recorded wind chill?", a: "Extreme wind chills have been recorded in Antarctica, reaching below -100 F (-73 C). In the US, the upper Midwest has experienced wind chills below -60 F (-51 C) during polar vortex events." },
+]} />

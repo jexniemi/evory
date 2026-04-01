@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## How Does the Sales Tax Calculator Work?
 
 The sales tax calculator works in both directions — adding tax to a pre-tax price, or removing tax from a total.
@@ -42,3 +44,11 @@ Five states have no state-level sales tax: **Alaska, Delaware, Montana, New Hamp
 
 - [Discount Calculator](/apps/discount-calculator) – Calculate sale prices and savings
 - [Tip Calculator](/apps/tip-calculator) – Calculate tip after tax
+
+<FAQ items={[
+  { q: "How is VAT calculated?", a: "To add VAT to a price: multiply the net price by (1 + VAT rate/100). To remove VAT from a gross price: divide the gross price by (1 + VAT rate/100). For example, $100 + 20% VAT = $120." },
+  { q: "What is the difference between VAT and sales tax?", a: "VAT (Value Added Tax) is collected at each stage of production and distribution, with businesses reclaiming the tax they paid. Sales tax is collected only at the final point of sale by the retailer." },
+  { q: "Does the US have VAT?", a: "No — the US does not have a federal VAT. Instead, individual states levy sales tax at the point of purchase. VAT is standard in the European Union, UK, and most other countries." },
+  { q: "What are typical VAT rates in Europe?", a: "Standard VAT rates in the EU range from 17% (Luxembourg) to 27% (Hungary). The UK standard rate is 20%. Many countries apply reduced rates (5-10%) for essentials like food, medicine, and books." },
+  { q: "How do I calculate the pre-VAT price from a VAT-inclusive price?", a: "Divide the total price by (1 + VAT rate/100). For example, if a product costs $120 including 20% VAT: $120 / 1.20 = $100 pre-tax price." },
+]} />

@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## How is tax percentage calculated?
 
 Tax percentage or effective tax rate tells what portion of your **gross income** goes to taxes. The calculator calculates it with the formula:
@@ -46,3 +48,11 @@ Try also [monthly salary calculator](/apps/monthly-salary-calculator), [hourly s
 - IRS: [irs.gov](https://www.irs.gov)
 - SSA: [Social Security Taxes](https://www.ssa.gov/)
 - Medicare: [medicare.gov](https://www.medicare.gov/)
+
+<FAQ items={[
+  { q: "How do I calculate the tax percentage?", a: "Divide the tax amount by the pre-tax amount, then multiply by 100. Formula: Tax % = (Tax amount / Pre-tax amount) x 100." },
+  { q: "What is the US sales tax rate?", a: "There is no federal sales tax in the US. State sales taxes range from 0% (in Oregon, Montana, New Hampshire, Delaware, and Alaska) to about 7.25% (California). Local taxes can push the combined rate above 10%." },
+  { q: "What is the effective tax rate vs marginal tax rate?", a: "Your marginal tax rate is the rate on your last dollar of income (the highest bracket you reach). Your effective tax rate is total taxes paid divided by total taxable income — usually significantly lower than your marginal rate." },
+  { q: "How much federal income tax will I owe?", a: "Federal income tax is progressive. For 2024 (single filers): 10% on income up to $11,600, 12% up to $47,150, 22% up to $100,525, 24% up to $191,950, 32% up to $243,725, 35% up to $609,350, and 37% above that." },
+  { q: "What is a W-2 form?", a: "A W-2 is an IRS form your employer sends each January showing your total wages and taxes withheld during the prior year. You use it to file your annual income tax return." },
+]} />

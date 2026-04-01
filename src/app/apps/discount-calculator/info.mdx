@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## How does the discount calculator work?
 
 The discount calculator helps you find out how much money you save with a discount. Enter the original price and discount percentage into the calculator. The calculator calculates the discounted price using the formula:
@@ -13,3 +15,11 @@ This way, you get an accurate picture of how much the discount affects the price
 The discount calculator is a useful tool for anyone who wants to make smart purchases and save money. You can use it for everyday shopping as well as larger purchases. This helps you manage your finances better and make more informed decisions.
 
 Use the discount calculator and easily find out how much money you can save. This helps you plan your purchases more efficiently and take advantage of the best deals.
+
+<FAQ items={[
+  { q: "How do I calculate a discount?", a: "Multiply the original price by the discount percentage divided by 100. For example, a 20% discount on $50 = $50 x 0.20 = $10 savings, giving a final price of $40." },
+  { q: "What is 30% off $80?", a: "30% of $80 = $24 savings. The discounted price is $80 - $24 = $56." },
+  { q: "How do I find the original price from a discounted price?", a: "Divide the sale price by (1 - discount/100). For example, if you paid $70 after a 30% discount: $70 / 0.70 = $100 original price." },
+  { q: "How do I calculate the discount percentage?", a: "Subtract the sale price from the original price, divide by the original price, then multiply by 100. Formula: (Original - Sale) / Original x 100." },
+  { q: "Can I stack multiple discounts?", a: "Stacked discounts are applied sequentially, not added together. A 20% discount followed by another 10% discount gives a combined discount of 28%, not 30%." },
+]} />

@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## Work Hours Calculator – Calculate daily work hours and earnings
 
 The work hours calculator calculates how many hours you have worked in a day and optionally your daily earnings. Enter your start and end times and breaks, and you'll get an accurate calculation.
@@ -47,3 +49,11 @@ In the US, regular working time is up to 8 hours per day and 40 hours per week. 
 - [Hourly Salary Calculator](/apps/hourly-salary-calculator) – Calculate monthly earnings based on hourly wage
 - [Monthly Salary Calculator](/apps/monthly-salary-calculator) – Convert monthly salary to net or gross
 - [Tax Percentage Calculator](/apps/tax-percentage-calculator) – Calculate your tax percentage
+
+<FAQ items={[
+  { q: "How do I calculate my total work hours?", a: "Subtract your start time from your end time, then subtract any unpaid breaks. For example, 9:00 AM to 5:30 PM minus a 30-minute lunch = 8 hours worked." },
+  { q: "How many work hours are in a year?", a: "A standard US work year is 2,080 hours (40 hrs/week x 52 weeks). Subtracting 10 federal holidays and 2 weeks vacation leaves approximately 1,920 hours of actual work time." },
+  { q: "What is overtime and when does it apply?", a: "Federal law (FLSA) requires overtime pay (1.5x regular rate) for non-exempt employees who work more than 40 hours per week. Some states require daily overtime after 8 hours." },
+  { q: "How do I track work hours for freelancing?", a: "Use time-tracking apps like Toggl, Harvest, or Clockify to log hours per project. Accurate records are essential for billing clients and deducting home office expenses on your taxes." },
+  { q: "What is the average number of work hours per week in the US?", a: "US full-time employees work an average of 44 hours per week according to Gallup surveys. Many salaried workers regularly exceed 40 hours without additional pay." },
+]} />

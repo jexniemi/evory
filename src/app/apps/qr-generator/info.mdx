@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## What Are QR Codes?
 
 QR codes are based on two-dimensional barcodes. The term "QR" comes from "Quick Response". QR codes were originally developed in Japan in 1994 by engineers at Denso Wave. They are quickly readable and can store a larger amount of information compared to traditional one-dimensional barcodes. QR codes can contain various data, such as URLs, text, contact information, Wi-Fi network details, and much more. They have become very popular in many applications, such as mobile payments, advertising, and information sharing.
@@ -15,3 +17,11 @@ In summary, a QR code works by storing information in a two-dimensional grid, wh
 ## How to Read a QR Code with a Phone?
 
 Open your smartphone's camera app and point it at the QR code. The camera will automatically recognize the QR code and display a prompt or ask if you want to open the link or action associated with the QR code. You can then choose to perform the action or open the link directly from the camera view.
+
+<FAQ items={[
+  { q: "What is a QR code?", a: "A QR (Quick Response) code is a two-dimensional barcode that can store URLs, text, contact information, and more. Smartphones can scan them instantly using the camera app." },
+  { q: "How do I scan a QR code?", a: "Open your smartphone camera and point it at the QR code. On most modern iOS and Android devices, a link or action appears automatically without needing a separate app." },
+  { q: "What can a QR code contain?", a: "QR codes can store URLs, plain text, email addresses, phone numbers, Wi-Fi credentials, calendar events, and contact cards (vCards). The generator above supports the most common use cases." },
+  { q: "Are QR codes permanent?", a: "Static QR codes (like those generated here) are permanent — the encoded data never changes. Dynamic QR codes, offered by paid services, can be updated after printing." },
+  { q: "What is the maximum amount of data a QR code can hold?", a: "A QR code can hold up to 3,000 bytes of binary data, 4,296 alphanumeric characters, or 7,089 numeric digits. For practical use, shorter URLs and text scan more reliably." },
+]} />

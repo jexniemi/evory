@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## Number of Days in Months
 
 <table className="table table-sm my-4">
@@ -100,3 +102,11 @@ Try also the [summer vacation calculator](/apps/summer-vacation-calculator) or [
 ## Sources
 
 - Timeanddate.com: [Leap Year Rules](https://www.timeanddate.com/date/leapyear.html)
+
+<FAQ items={[
+  { q: "How many days are in a year?", a: "A regular year has 365 days. A leap year has 366 days, occurring every 4 years with some exceptions." },
+  { q: "When is the next leap year?", a: "Leap years occur every 4 years. Recent leap years include 2020 and 2024; the next is 2028." },
+  { q: "Which month has the fewest days?", a: "February has the fewest days: 28 in a regular year and 29 in a leap year." },
+  { q: "How do I remember how many days are in each month?", a: "Use the knuckle method: make a fist and count knuckles (31 days) and valleys (30 or fewer days) starting from January. July and August are both knuckles, so both have 31 days." },
+  { q: "What is the Gregorian calendar?", a: "The Gregorian calendar, introduced in 1582 by Pope Gregory XIII, is the internationally accepted civil calendar. It refined the Julian calendar to keep the calendar aligned with Earth's orbit." },
+]} />

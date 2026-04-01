@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## How are trip fuel costs calculated?
 
 Calculating trip fuel costs is easy and fast with our fuel cost calculator. Simply enter your trip distance in kilometers, your vehicle's average fuel consumption in liters per 100 kilometers, and the fuel price per liter in euros. The calculator immediately gives you an accurate estimate of your trip's fuel costs.
@@ -7,3 +9,11 @@ The fuel cost calculator uses this information to first calculate the amount of 
 This tool is especially useful when planning long car trips or estimating the costs of your daily commutes. It helps you budget your trips accurately and save money. The calculator is a fast and easy way to get a clear picture of your trip's fuel costs.
 
 With our fuel cost calculator, you can make more informed decisions about traveling. You can compare the costs of different routes or consider whether public transport is a more economical option. Use our fuel cost calculator and find out how much you can save on your trip's fuel costs!
+
+<FAQ items={[
+  { q: "How do I calculate fuel cost for a road trip?", a: "Divide the trip distance by your fuel efficiency (MPG or L/100km) to get fuel needed, then multiply by the price per gallon or liter. Our calculator does this automatically." },
+  { q: "What is the difference between MPG and L/100km?", a: "MPG (miles per gallon) is the US measure: higher is better. L/100km (liters per 100 kilometers) is the metric measure: lower is better. To convert: 235.2 divided by MPG equals L/100km." },
+  { q: "What is the average gas price in the US?", a: "US gas prices fluctuate with oil markets. The national average for regular unleaded gasoline was around $3.40-$3.80 per gallon in 2024." },
+  { q: "How much fuel does a car use on a 100-mile trip?", a: "A car getting 30 MPG uses about 3.3 gallons per 100 miles. At 25 MPG it uses 4 gallons, and at 20 MPG it uses 5 gallons." },
+  { q: "How can I improve my car's fuel efficiency?", a: "Maintain proper tire pressure, use cruise control on highways, avoid idling, keep up with tune-ups, and remove unnecessary weight. These tips can improve MPG by 5-15%." },
+]} />

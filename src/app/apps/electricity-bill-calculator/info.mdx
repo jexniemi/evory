@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## Electricity Bill Calculator
 
 The electricity bill calculator helps you estimate your monthly or annual bill.
@@ -7,3 +9,11 @@ The electricity bill calculator helps you estimate your monthly or annual bill.
 **Electricity bill = consumption (kWh) × unit price (€/kWh)**
 
 Note that the bill may include additional charges such as taxes, transmission fees, and basic fees.
+
+<FAQ items={[
+  { q: "How is an electricity bill calculated?", a: "Your bill equals total kWh consumed multiplied by the price per kWh, plus fixed charges like taxes, transmission fees, and monthly service fees." },
+  { q: "What is a kWh?", a: "A kilowatt-hour (kWh) is the energy used by a 1,000-watt device running for 1 hour. For example, a 100W light bulb running for 10 hours uses 1 kWh." },
+  { q: "What is the average electricity cost per kWh in the US?", a: "The US average retail electricity price is about 16 cents per kWh (2024), though it varies by state from under 10 cents in Louisiana to over 25 cents in Hawaii." },
+  { q: "What uses the most electricity in a home?", a: "Heating and cooling (HVAC) accounts for about 45% of home energy use, followed by water heating (~18%), large appliances (~15%), and lighting (~9%)." },
+  { q: "How can I lower my electricity bill?", a: "Switch to LED bulbs, use smart thermostats, unplug idle electronics, wash clothes in cold water, and improve home insulation. These changes can reduce usage by 20-30%." },
+]} />

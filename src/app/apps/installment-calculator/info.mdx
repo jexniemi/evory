@@ -1,3 +1,5 @@
+import FAQ from "@/components/FAQ"
+
 ## How does the installment calculator work?
 
 The installment calculator helps you determine your loan or installment monthly payments and total costs. Enter the total amount of the loan or product, annual interest rate and payment period into the calculator. The calculator calculates the monthly payment using the annuity loan formula:
@@ -9,3 +11,11 @@ Once the monthly payment is calculated, the calculator also tells you the total 
 The installment calculator is a useful tool for everyone who wants to make smart financing decisions. You can use it for smaller purchases as well as larger loans. This helps you manage your finances better and make more informed decisions.
 
 Use the installment calculator and easily find out how much you pay monthly and how much interest accrues. This helps you plan your financing more efficiently and understand the impact of the loan or installment on your budget.
+
+<FAQ items={[
+  { q: "How is an installment payment calculated?", a: "Monthly payment = (Loan amount x monthly rate) / (1 - (1 + monthly rate)^(-number of months)). This is the standard amortization formula used by lenders." },
+  { q: "What is the difference between simple interest and amortized interest?", a: "Simple interest is calculated only on the principal. Amortized interest recalculates on the remaining balance each period, meaning early payments are mostly interest while later payments are mostly principal." },
+  { q: "How does the loan term affect my monthly payment?", a: "A longer loan term reduces monthly payments but increases total interest paid. A shorter term means higher payments but less interest overall." },
+  { q: "What is APR vs interest rate?", a: "The interest rate is the base cost of borrowing. APR (Annual Percentage Rate) includes the interest rate plus fees, giving a more complete picture of the total loan cost." },
+  { q: "What happens if I pay extra on my installment loan?", a: "Extra payments reduce your principal faster, which reduces total interest and can shorten the loan term. Most loans allow extra payments without penalty — check your loan agreement." },
+]} />
