@@ -292,14 +292,11 @@ const GpaCalculator = () => {
             <p className="text-sm font-semibold uppercase tracking-wide opacity-60">
               {useWeighted ? "Weighted GPA" : "Unweighted GPA"}
             </p>
-            <p
-              className={`text-5xl font-extrabold ${getGPAColor(displayGPA)}`}
-            >
+            <p className={`text-5xl font-extrabold ${getGPAColor(displayGPA)}`}>
               {displayGPA.toFixed(2)}
             </p>
             <p className="text-lg opacity-70">
-              {getLetterFromGPA(unweightedGPA)}{" "}
-              average&nbsp;&nbsp;·&nbsp;&nbsp;
+              {getLetterFromGPA(unweightedGPA)} average&nbsp;&nbsp;·&nbsp;&nbsp;
               {totalCredits} credit{totalCredits !== 1 ? "s" : ""}
             </p>
           </div>
