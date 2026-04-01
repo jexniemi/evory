@@ -1,59 +1,117 @@
 import FAQ from "@/components/FAQ"
 
-## Work Hours Calculator – Calculate daily work hours and earnings
+## Work Hours Calculator – Track Daily Hours & Earnings
 
-The work hours calculator calculates how many hours you have worked in a day and optionally your daily earnings. Enter your start and end times and breaks, and you'll get an accurate calculation.
+Whether you're an hourly employee checking your timesheet, a freelancer logging billable hours, or a manager verifying payroll, this calculator determines exactly how many hours you've worked in a day and your gross earnings. Enter your start time, end time, break duration, and hourly rate to get an instant calculation.
 
-### Why calculate work hours?
+### The Formula
 
-- **Time reporting** – Time sheets to send to clients or employers
-- **Overtime tracking** – How many overtime hours did you get today?
-- **Freelancer billing** – Calculate billable hours per client
-- **Payroll** – Check your daily gross income from hourly wage
+> **Hours Worked = End Time − Start Time − Break Time**
+>
+> **Daily Earnings = Hours Worked × Hourly Rate**
 
-### Calculating work hours
+### Worked Example
 
-The time worked is calculated simply:
+You clock in at **8:30 AM**, take a **45-minute lunch**, and clock out at **5:15 PM**:
 
-> **Time worked** = End time – Start time – Breaks
+1. Total span: 5:15 PM − 8:30 AM = 8 hours 45 minutes
+2. Minus break: 8h 45m − 45m = **8 hours**
+3. At $22/hour: 8 × $22 = **$176 gross pay**
 
-If you work a night shift (for example, 10:00 PM–6:00 AM), activate the "Night shift" setting. This way, the calculator handles shifts that go past midnight correctly.
+If you work a night shift — say 10:00 PM to 6:30 AM — enable the "Night shift" toggle so the calculator correctly handles the shift across midnight.
 
-### Breaks and labor law
+### US Work Hour Standards
 
-Under the US Fair Labor Standards Act (FLSA):
+The standard American workweek is 40 hours (8 hours/day, 5 days/week), but actual hours vary significantly by industry and occupation:
 
 <table className="table table-sm my-4">
   <thead>
     <tr className="bg-base-200">
-      <th>Daily work time</th>
-      <th>Rest period</th>
+      <th>Industry</th>
+      <th>Avg. Weekly Hours</th>
+      <th>Common Schedule</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>Over 6 hours</td><td>Right to 30 min break</td></tr>
-    <tr><td>Over 10 hours</td><td>Right to a second 30 min break</td></tr>
+    <tr><td>Financial services</td><td>40 – 45</td><td>Mon–Fri, 9–5</td></tr>
+    <tr><td>Healthcare (nurses)</td><td>36 – 48</td><td>3 × 12-hr shifts</td></tr>
+    <tr><td>Construction</td><td>39 – 45</td><td>Mon–Fri, early start</td></tr>
+    <tr><td>Retail / hospitality</td><td>25 – 40</td><td>Variable shifts</td></tr>
+    <tr><td>Tech (salaried)</td><td>40 – 50</td><td>Flexible / hybrid</td></tr>
+    <tr><td>Trucking</td><td>50 – 60</td><td>DOT-regulated hours of service</td></tr>
+    <tr><td>Government</td><td>40</td><td>Mon–Fri, 8–4:30</td></tr>
   </tbody>
 </table>
 
-Source: [FLSA 1938](https://www.dol.gov/agencies/whd/flsa)
+### Break and Meal Period Laws
 
-### Overtime
+Federal law (FLSA) does not require meal or rest breaks, but most states have their own rules:
 
-In the US, regular working time is up to 8 hours per day and 40 hours per week. For hours exceeding this, overtime compensation must be paid:
-- First 2 overtime hours: +50% to wage
-- Thereafter: +100% to wage
+| State | Meal Break Requirement | Rest Break |
+|---|---|---|
+| California | 30 min unpaid after 5 hours | 10 min paid per 4 hours |
+| New York | 30 min between 11 AM–2 PM (factory: 60 min) | Not required |
+| Washington | 30 min after 5 hours | 10 min paid per 4 hours |
+| Illinois | 20 min after 7.5 hours | Not required |
+| Texas | Not required (federal minimum applies) | Not required |
+| Colorado | 30 min after 5 hours | 10 min paid per 4 hours |
 
-### See also
+*When a break is unpaid, it is deducted from your work hours. Paid breaks are counted as hours worked.*
 
-- [Hourly Salary Calculator](/apps/hourly-salary-calculator) – Calculate monthly earnings based on hourly wage
-- [Monthly Salary Calculator](/apps/monthly-salary-calculator) – Convert monthly salary to net or gross
-- [Tax Percentage Calculator](/apps/tax-percentage-calculator) – Calculate your tax percentage
+### Overtime Rules
+
+The Fair Labor Standards Act (FLSA) requires overtime pay for non-exempt employees:
+
+| Threshold | Rate | Details |
+|---|---|---|
+| Over 40 hours/week | **1.5× (time and a half)** | Federal law for non-exempt workers |
+| Over 8 hours/day (CA, AK, NV, CO) | **1.5×** | Some states require daily overtime |
+| Over 12 hours/day (CA) | **2× (double time)** | California only |
+| 7th consecutive day (CA) | **1.5× first 8 hrs, 2× after** | California only |
+
+**Example:** You earn $20/hour and work 48 hours in a week:
+- Regular: 40 hours × $20 = $800
+- Overtime: 8 hours × $30 (1.5×) = $240
+- **Total: $1,040**
+
+### Annual Work Hours
+
+| Calculation | Hours |
+|---|---|
+| 52 weeks × 40 hrs | 2,080 hours |
+| Minus 10 federal holidays (80 hrs) | 2,000 hours |
+| Minus 2 weeks vacation (80 hrs) | 1,920 hours |
+| Minus 5 sick days (40 hrs) | 1,880 hours |
+
+This is why the "rule of 2,000" is used to quickly convert between hourly and annual pay: **Annual Salary ≈ Hourly Rate × 2,000**.
+
+### Tips for Accurate Time Tracking
+
+- **Record hours immediately** — Don't rely on memory at the end of the week
+- **Use consistent rounding** — Most employers round to the nearest quarter-hour (15 minutes)
+- **Keep personal records** — Even if your employer tracks time, maintain your own log
+- **Review your pay stubs** — Verify that hours and overtime are calculated correctly
+- **Know your classification** — Salaried "exempt" employees don't qualify for overtime; make sure you're classified correctly
 
 <FAQ items={[
-  { q: "How do I calculate my total work hours?", a: "Subtract your start time from your end time, then subtract any unpaid breaks. For example, 9:00 AM to 5:30 PM minus a 30-minute lunch = 8 hours worked." },
-  { q: "How many work hours are in a year?", a: "A standard US work year is 2,080 hours (40 hrs/week x 52 weeks). Subtracting 10 federal holidays and 2 weeks vacation leaves approximately 1,920 hours of actual work time." },
-  { q: "What is overtime and when does it apply?", a: "Federal law (FLSA) requires overtime pay (1.5x regular rate) for non-exempt employees who work more than 40 hours per week. Some states require daily overtime after 8 hours." },
-  { q: "How do I track work hours for freelancing?", a: "Use time-tracking apps like Toggl, Harvest, or Clockify to log hours per project. Accurate records are essential for billing clients and deducting home office expenses on your taxes." },
-  { q: "What is the average number of work hours per week in the US?", a: "US full-time employees work an average of 44 hours per week according to Gallup surveys. Many salaried workers regularly exceed 40 hours without additional pay." },
+  { q: "How do I calculate my total work hours?", a: "Subtract your start time from your end time, then subtract any unpaid breaks. For example, 9:00 AM to 5:30 PM minus a 30-minute lunch = 8 hours worked. For night shifts crossing midnight, add 24 hours to the end time before subtracting." },
+  { q: "How many work hours are in a year?", a: "A standard US work year is 2,080 hours (40 hours/week × 52 weeks). After subtracting typical holidays and vacation, actual work time is approximately 1,880–1,920 hours. This is why the '2,000 hour rule' is used to approximate hourly-to-annual salary conversions." },
+  { q: "What is overtime and when does it apply?", a: "Federal law (FLSA) requires overtime pay at 1.5× the regular rate for non-exempt employees working over 40 hours per week. Some states (California, Alaska, Nevada, Colorado) also require daily overtime after 8 hours. California mandates double time after 12 hours." },
+  { q: "How do I track work hours for freelancing?", a: "Use time-tracking tools like Toggl, Harvest, Clockify, or Hubstaff to log hours per project and client. Accurate records are essential for billing, tax deductions, and project profitability analysis. Many tools also generate invoices directly." },
+  { q: "What is the average number of work hours per week in the US?", a: "US full-time employees work an average of 38.6 hours per week according to the Bureau of Labor Statistics, though Gallup surveys show many salaried workers report working 44+ hours. By comparison, European workers average 36–37 hours per week." },
 ]} />
+
+### Related Tools
+
+- [Hourly Salary Calculator](/apps/hourly-salary-calculator) — Convert salary to hourly rate
+- [Monthly Salary Calculator](/apps/monthly-salary-calculator) — Calculate monthly earnings from hourly wage
+- [Annual Salary Calculator](/apps/annual-salary-calculator) — See your total yearly compensation
+- [Net Salary Calculator](/apps/net-salary-calculator) — Calculate take-home pay after taxes
+- [Vacation Days Calculator](/apps/vacation-days-calculator) — Track and plan your time off
+
+### Sources
+
+- [U.S. Department of Labor — FLSA Overtime](https://www.dol.gov/agencies/whd/overtime)
+- [Bureau of Labor Statistics — Average Weekly Hours](https://www.bls.gov/news.release/empsit.t18.htm)
+- [California DIR — Meal and Rest Periods](https://www.dir.ca.gov/dlse/FAQ_MealPeriods.htm)
+- [SHRM — State Meal and Rest Break Laws](https://www.shrm.org/topics-tools/tools/state-law-comparison-tool)

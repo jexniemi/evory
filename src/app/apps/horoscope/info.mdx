@@ -2,9 +2,9 @@ import FAQ from "@/components/FAQ"
 
 ## Horoscope – All 12 Zodiac Signs
 
-The horoscope is based on Western astrology, where your sun sign is determined by your birth date. Each sign is associated with certain personality traits, elements, and planets.
+The horoscope is based on **Western astrology**, where your sun sign is determined by your birth date. Each zodiac sign is associated with certain personality traits, an element, a ruling planet, and a modality (cardinal, fixed, or mutable).
 
-### 12 Zodiac Signs
+### The 12 Zodiac Signs
 
 <table className="table table-sm my-4">
   <thead>
@@ -12,51 +12,104 @@ The horoscope is based on Western astrology, where your sun sign is determined b
       <th>Sign</th>
       <th>Dates</th>
       <th>Element</th>
-      <th>Planet</th>
+      <th>Ruling Planet</th>
+      <th>Modality</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>♈ Aries</td><td>Mar 21–Apr 19</td><td>Fire</td><td>Mars</td></tr>
-    <tr><td>♉ Taurus</td><td>Apr 20–May 20</td><td>Earth</td><td>Venus</td></tr>
-    <tr><td>♊ Gemini</td><td>May 21–Jun 20</td><td>Air</td><td>Mercury</td></tr>
-    <tr><td>♋ Cancer</td><td>Jun 21–Jul 22</td><td>Water</td><td>Moon</td></tr>
-    <tr><td>♌ Leo</td><td>Jul 23–Aug 22</td><td>Fire</td><td>Sun</td></tr>
-    <tr><td>♍ Virgo</td><td>Aug 23–Sep 22</td><td>Earth</td><td>Mercury</td></tr>
-    <tr><td>♎ Libra</td><td>Sep 23–Oct 23</td><td>Air</td><td>Venus</td></tr>
-    <tr><td>♏ Scorpio</td><td>Oct 24–Nov 22</td><td>Water</td><td>Pluto</td></tr>
-    <tr><td>♐ Sagittarius</td><td>Nov 23–Dec 21</td><td>Fire</td><td>Jupiter</td></tr>
-    <tr><td>♑ Capricorn</td><td>Dec 22–Jan 19</td><td>Earth</td><td>Saturn</td></tr>
-    <tr><td>♒ Aquarius</td><td>Jan 20–Feb 19</td><td>Air</td><td>Uranus</td></tr>
-    <tr><td>♓ Pisces</td><td>Feb 20–Mar 20</td><td>Water</td><td>Neptune</td></tr>
+    <tr><td>♈ Aries</td><td>Mar 21–Apr 19</td><td>Fire</td><td>Mars</td><td>Cardinal</td></tr>
+    <tr><td>♉ Taurus</td><td>Apr 20–May 20</td><td>Earth</td><td>Venus</td><td>Fixed</td></tr>
+    <tr><td>♊ Gemini</td><td>May 21–Jun 20</td><td>Air</td><td>Mercury</td><td>Mutable</td></tr>
+    <tr><td>♋ Cancer</td><td>Jun 21–Jul 22</td><td>Water</td><td>Moon</td><td>Cardinal</td></tr>
+    <tr><td>♌ Leo</td><td>Jul 23–Aug 22</td><td>Fire</td><td>Sun</td><td>Fixed</td></tr>
+    <tr><td>♍ Virgo</td><td>Aug 23–Sep 22</td><td>Earth</td><td>Mercury</td><td>Mutable</td></tr>
+    <tr><td>♎ Libra</td><td>Sep 23–Oct 23</td><td>Air</td><td>Venus</td><td>Cardinal</td></tr>
+    <tr><td>♏ Scorpio</td><td>Oct 24–Nov 22</td><td>Water</td><td>Pluto</td><td>Fixed</td></tr>
+    <tr><td>♐ Sagittarius</td><td>Nov 23–Dec 21</td><td>Fire</td><td>Jupiter</td><td>Mutable</td></tr>
+    <tr><td>♑ Capricorn</td><td>Dec 22–Jan 19</td><td>Earth</td><td>Saturn</td><td>Cardinal</td></tr>
+    <tr><td>♒ Aquarius</td><td>Jan 20–Feb 19</td><td>Air</td><td>Uranus</td><td>Fixed</td></tr>
+    <tr><td>♓ Pisces</td><td>Feb 20–Mar 20</td><td>Water</td><td>Neptune</td><td>Mutable</td></tr>
   </tbody>
 </table>
 
-### Elements and Their Meaning
+### The Four Elements
 
-Each sign belongs to one of four elements:
+Each sign belongs to one of four elements, which shape fundamental personality tendencies:
 
-- **Fire** (Aries, Leo, Sagittarius) – Energetic, passionate, impulsive
-- **Earth** (Taurus, Virgo, Capricorn) – Practical, reliable, systematic
-- **Air** (Gemini, Libra, Aquarius) – Intellectual, social, communicative
-- **Water** (Cancer, Scorpio, Pisces) – Emotionally sensitive, intuitive, empathetic
+- **🔥 Fire** (Aries, Leo, Sagittarius) — Energetic, passionate, spontaneous, and action-oriented. Fire signs are natural leaders who thrive on enthusiasm and adventure.
+- **🌍 Earth** (Taurus, Virgo, Capricorn) — Practical, reliable, grounded, and methodical. Earth signs value stability, hard work, and tangible results.
+- **💨 Air** (Gemini, Libra, Aquarius) — Intellectual, social, communicative, and idea-driven. Air signs excel at analysis, connection, and innovation.
+- **💧 Water** (Cancer, Scorpio, Pisces) — Emotionally intuitive, empathetic, and deeply feeling. Water signs navigate the world through emotion and instinct.
 
-### Compatibility
+### The Three Modalities
 
-Generally, signs of the same element get along best. Fire and air support each other, as do earth and water. However, this is only a general guideline – real compatibility is much more complex.
+In addition to elements, signs are grouped by modality — how they approach change and action:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Modality</th>
+      <th>Signs</th>
+      <th>Trait</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Cardinal</td><td>Aries, Cancer, Libra, Capricorn</td><td>Initiators — start new things</td></tr>
+    <tr><td>Fixed</td><td>Taurus, Leo, Scorpio, Aquarius</td><td>Sustainers — maintain and persist</td></tr>
+    <tr><td>Mutable</td><td>Gemini, Virgo, Sagittarius, Pisces</td><td>Adapters — flexible and changeable</td></tr>
+  </tbody>
+</table>
+
+### Zodiac Compatibility
+
+Astrology suggests that certain sign pairings are more naturally harmonious:
+
+- **Same element** signs typically understand each other intuitively (e.g., two water signs)
+- **Fire + Air** tend to energize each other — fire needs air to burn, and air is warmed by fire
+- **Earth + Water** complement each other — water nourishes earth, and earth gives water form
+- **Opposite signs** (Aries–Libra, Taurus–Scorpio, etc.) can have strong attraction but may face challenges
+
+However, full astrological compatibility considers much more than sun signs — moon signs, rising signs, Venus placements, and the full birth chart all play roles.
+
+### History of Western Astrology
+
+Western astrology has its roots in **Babylonian astronomy** (around 2000 BCE), where priests tracked planetary movements to predict seasonal changes and events. The Greeks adopted and refined the system — the word "zodiac" comes from the Greek *zōidiakos kyklos* ("circle of animals").
+
+The **twelve-sign zodiac** as we know it was established around the 5th century BCE. During the Renaissance and Enlightenment, astrology gradually separated from astronomy as science advanced. Today, about **29% of Americans** believe in astrology according to Pew Research Center surveys, with interest growing especially among younger adults.
+
+### Sun Sign vs. Full Birth Chart
+
+Your **sun sign** is determined solely by your birth date and represents your core identity and ego. However, a complete astrological profile includes:
+
+- **Moon sign** — Your emotional nature and inner world
+- **Rising (Ascendant) sign** — How others perceive you; determined by the exact time and location of birth
+- **Venus sign** — Love style and what you value
+- **Mars sign** — Drive, ambition, and how you pursue goals
+- **Mercury sign** — Communication style
 
 ### Daily Number
 
-The daily number is calculated based on the date and your sign and changes daily. It's fun entertainment value, not a scientific prediction.
-
-### See also
-
-- [Name Day Search](/apps/name-day-search) – Find out whose name day it is today
-- [Calendar Tool](/apps/calendar-tool) – Browse the calendar
+The daily number shown in the horoscope is calculated from the current date and your sign. It changes daily and is intended purely as entertainment — not as a scientific prediction or financial advice.
 
 <FAQ items={[
-  { q: "What is my zodiac sign?", a: "Your zodiac sign is determined by your birth date. The 12 signs are: Aries (Mar 21-Apr 19), Taurus (Apr 20-May 20), Gemini (May 21-Jun 20), Cancer (Jun 21-Jul 22), Leo (Jul 23-Aug 22), Virgo (Aug 23-Sep 22), Libra (Sep 23-Oct 23), Scorpio (Oct 24-Nov 22), Sagittarius (Nov 23-Dec 21), Capricorn (Dec 22-Jan 19), Aquarius (Jan 20-Feb 19), Pisces (Feb 20-Mar 20)." },
-  { q: "What are the most compatible zodiac signs?", a: "Signs of the same element tend to be most compatible. Fire signs (Aries, Leo, Sagittarius) pair well with other fire or air signs. Earth signs (Taurus, Virgo, Capricorn) pair well with earth or water signs." },
-  { q: "What is the difference between a sun sign and a moon sign?", a: "Your sun sign (based on birth date) reflects your core identity. Your moon sign (based on the moon's position at birth) reflects your emotional inner world. Both are used in a full astrological chart." },
-  { q: "Is astrology scientifically proven?", a: "No — astrology is not supported by scientific evidence. Large-scale studies have found no correlation between birth date and personality traits or life outcomes. It is considered entertainment and a cultural tradition." },
-  { q: "What are the four zodiac elements?", a: "The 12 signs are divided into 4 elements: Fire (Aries, Leo, Sagittarius), Earth (Taurus, Virgo, Capricorn), Air (Gemini, Libra, Aquarius), and Water (Cancer, Scorpio, Pisces). Each element represents different personality tendencies." },
+  { q: "What is my zodiac sign?", a: "Your zodiac sign is determined by your birth date. The 12 signs are: Aries (Mar 21–Apr 19), Taurus (Apr 20–May 20), Gemini (May 21–Jun 20), Cancer (Jun 21–Jul 22), Leo (Jul 23–Aug 22), Virgo (Aug 23–Sep 22), Libra (Sep 23–Oct 23), Scorpio (Oct 24–Nov 22), Sagittarius (Nov 23–Dec 21), Capricorn (Dec 22–Jan 19), Aquarius (Jan 20–Feb 19), Pisces (Feb 20–Mar 20)." },
+  { q: "What are the most compatible zodiac signs?", a: "Signs of the same element tend to be most compatible. Fire signs (Aries, Leo, Sagittarius) pair well with other fire or air signs. Earth signs (Taurus, Virgo, Capricorn) pair well with earth or water signs. Opposite signs can also have strong attraction." },
+  { q: "What is the difference between a sun sign and a moon sign?", a: "Your sun sign (based on birth date) reflects your core identity and ego. Your moon sign (based on the moon's position at the exact time and place of birth) reflects your emotional inner world and subconscious patterns." },
+  { q: "Is astrology scientifically proven?", a: "No — astrology is not supported by scientific evidence. Large-scale studies have found no correlation between birth date and personality traits or life outcomes. It is considered entertainment, self-reflection, and a cultural tradition." },
+  { q: "What are the four zodiac elements?", a: "The 12 signs are divided into 4 elements: Fire (Aries, Leo, Sagittarius), Earth (Taurus, Virgo, Capricorn), Air (Gemini, Libra, Aquarius), and Water (Cancer, Scorpio, Pisces). Each element represents fundamental personality tendencies." },
 ]} />
+
+### Related Tools
+
+- [Name Day Search](/apps/name-day-search) — Find out whose name day it is today
+- [Age Calculator](/apps/age-calculator) — Calculate your exact age in years, months, and days
+- [Calendar Tool](/apps/calendar-tool) — Browse the calendar and plan dates
+- [Baby Name Generator](/apps/baby-name-generator) — Find the perfect baby name
+- [Date Calculator](/apps/date-calculator) — Calculate the difference between any two dates
+
+### Sources
+
+- [Pew Research Center — Astrology Beliefs in America](https://www.pewresearch.org/short-reads/2022/04/07/paranormal-beliefs/)
+- [Britannica — Zodiac](https://www.britannica.com/topic/zodiac)
+- [History.com — History of Astrology](https://www.history.com/topics/ancient-middle-east/astrology)
+- [NASA — Zodiac Constellations](https://spaceplace.nasa.gov/starfinder2/en/)

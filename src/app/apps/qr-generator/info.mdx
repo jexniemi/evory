@@ -1,27 +1,115 @@
 import FAQ from "@/components/FAQ"
 
-## What Are QR Codes?
+## QR Code Generator – Create Free QR Codes Instantly
 
-QR codes are based on two-dimensional barcodes. The term "QR" comes from "Quick Response". QR codes were originally developed in Japan in 1994 by engineers at Denso Wave. They are quickly readable and can store a larger amount of information compared to traditional one-dimensional barcodes. QR codes can contain various data, such as URLs, text, contact information, Wi-Fi network details, and much more. They have become very popular in many applications, such as mobile payments, advertising, and information sharing.
+QR codes have become an essential part of modern life — from restaurant menus and business cards to Wi-Fi sharing and mobile payments. This free QR code generator creates scannable codes for URLs, text, contact info, and more. Simply enter your data and download the QR code image.
 
-## How Does a QR Code Work?
+### What Is a QR Code?
 
-A QR code works by storing information in a two-dimensional grid consisting of black squares on a white background. The information contained in the code can be read with a special QR code reader or a smartphone camera with a QR code reading app.
+QR stands for **Quick Response**. QR codes are two-dimensional barcodes invented in 1994 by Masahiro Hara at **Denso Wave**, a subsidiary of Toyota. Originally designed to track automotive parts on assembly lines, QR codes now appear everywhere — on product packaging, event tickets, advertisements, and digital screens.
 
-The information is stored in the QR code in a special way that allows for fast and efficient reading. One way this is achieved is by using error correction algorithms. QR codes often contain corrective bits that allow the information to be read even if the code is partially covered or damaged.
+Unlike traditional one-dimensional barcodes (UPC codes) that hold only 20–25 characters, QR codes can store thousands of characters in a compact square grid of black and white modules.
 
-When a QR code is scanned with a smartphone, the camera reads the code and converts it into digital data. This data is then directed to the QR code reading app, which interprets it and presents the user with the necessary information or action, such as opening a website, saving contact information, logging into a Wi-Fi network, or performing another defined action.
+### How Does a QR Code Work?
 
-In summary, a QR code works by storing information in a two-dimensional grid, which can then be read and interpreted using a special reader or smartphone.
+A QR code stores data in a two-dimensional grid of black squares on a white background. The code includes several functional elements:
 
-## How to Read a QR Code with a Phone?
+- **Finder patterns** — Three large squares in the corners help scanners locate and orient the code
+- **Alignment patterns** — Smaller squares that correct for distortion when the code is on a curved surface
+- **Timing patterns** — Alternating black and white modules that help the scanner determine grid size
+- **Data and error correction** — The actual encoded information plus redundancy bits
+- **Quiet zone** — White border around the code that separates it from surrounding content
 
-Open your smartphone's camera app and point it at the QR code. The camera will automatically recognize the QR code and display a prompt or ask if you want to open the link or action associated with the QR code. You can then choose to perform the action or open the link directly from the camera view.
+QR codes use **Reed-Solomon error correction**, which means they can still be read even if up to **30%** of the code is damaged or obscured. This is why QR codes with logos in the center still work.
+
+### QR Code Data Capacity
+
+<table className="table table-sm my-4">
+  <thead>
+    <tr className="bg-base-200">
+      <th>Data Type</th>
+      <th>Maximum Capacity</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Numeric only</td><td>7,089 characters</td><td>Phone numbers, IDs</td></tr>
+    <tr><td>Alphanumeric</td><td>4,296 characters</td><td>URLs, text</td></tr>
+    <tr><td>Binary (bytes)</td><td>2,953 bytes</td><td>Encoded data, vCards</td></tr>
+    <tr><td>Kanji/Kana</td><td>1,817 characters</td><td>Japanese text</td></tr>
+  </tbody>
+</table>
+
+*Shorter content produces simpler QR codes that scan faster and more reliably, especially from a distance.*
+
+### Common QR Code Uses
+
+<table className="table table-sm my-4">
+  <thead>
+    <tr className="bg-base-200">
+      <th>Use Case</th>
+      <th>Data Format</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Website link</td><td>URL</td><td>https://www.example.com</td></tr>
+    <tr><td>Wi-Fi login</td><td>WIFI:S:NetworkName;T:WPA;P:password;;</td><td>Share Wi-Fi without typing passwords</td></tr>
+    <tr><td>Contact card</td><td>vCard format</td><td>Name, phone, email, address</td></tr>
+    <tr><td>Email</td><td>mailto: URI</td><td>Pre-filled recipient and subject line</td></tr>
+    <tr><td>Phone call</td><td>tel: URI</td><td>Tap to call a number</td></tr>
+    <tr><td>SMS message</td><td>sms: URI</td><td>Open text message with preset number</td></tr>
+    <tr><td>Calendar event</td><td>iCal format</td><td>Add event with date, time, location</td></tr>
+    <tr><td>Payment</td><td>Various</td><td>Venmo, PayPal, cryptocurrency addresses</td></tr>
+  </tbody>
+</table>
+
+### How to Scan a QR Code
+
+On most modern smartphones, simply open the **camera app** and point it at the QR code. The device will automatically recognize the code and display a prompt to open the link or perform the encoded action. No separate scanning app is needed on:
+
+- **iPhone** — iOS 11 and later (built into Camera app)
+- **Android** — Most devices running Android 9+ (built into Camera or Google Lens)
+
+For older devices, free QR scanning apps are available in the App Store and Google Play.
+
+### Static vs. Dynamic QR Codes
+
+| Feature | Static QR Code | Dynamic QR Code |
+|---|---|---|
+| Data | Fixed — cannot be changed after creation | Redirects through a short URL that can be updated |
+| Cost | Free (like this generator) | Usually requires a paid subscription |
+| Tracking | No analytics | Tracks scans, location, device type |
+| Best for | Permanent links, Wi-Fi, contact cards | Marketing campaigns, menus, time-sensitive content |
+
+### Tips for Creating Effective QR Codes
+
+1. **Keep URLs short** — Shorter data creates simpler codes that scan faster, even from a distance
+2. **Test before printing** — Always scan your QR code with multiple devices before publishing
+3. **Maintain contrast** — Dark modules on a light background work best. Avoid low-contrast color combinations
+4. **Include a call to action** — Add text like "Scan for menu" or "Scan to connect" near the code
+5. **Size matters** — A QR code should be at least **1 × 1 inch** (2.5 cm) for close scanning and larger for distance
+6. **Don't invert colors** — Scanners expect dark-on-light. White-on-dark codes can fail on some devices
 
 <FAQ items={[
-  { q: "What is a QR code?", a: "A QR (Quick Response) code is a two-dimensional barcode that can store URLs, text, contact information, and more. Smartphones can scan them instantly using the camera app." },
-  { q: "How do I scan a QR code?", a: "Open your smartphone camera and point it at the QR code. On most modern iOS and Android devices, a link or action appears automatically without needing a separate app." },
-  { q: "What can a QR code contain?", a: "QR codes can store URLs, plain text, email addresses, phone numbers, Wi-Fi credentials, calendar events, and contact cards (vCards). The generator above supports the most common use cases." },
-  { q: "Are QR codes permanent?", a: "Static QR codes (like those generated here) are permanent — the encoded data never changes. Dynamic QR codes, offered by paid services, can be updated after printing." },
-  { q: "What is the maximum amount of data a QR code can hold?", a: "A QR code can hold up to 3,000 bytes of binary data, 4,296 alphanumeric characters, or 7,089 numeric digits. For practical use, shorter URLs and text scan more reliably." },
+  { q: "What is a QR code?", a: "A QR (Quick Response) code is a two-dimensional barcode that can store URLs, text, contact information, Wi-Fi credentials, and more. Invented in 1994 by Denso Wave in Japan, QR codes are now scanned billions of times daily worldwide using smartphone cameras." },
+  { q: "How do I scan a QR code?", a: "Open your smartphone camera and point it at the QR code. On most modern iOS (11+) and Android (9+) devices, a link or action prompt appears automatically without needing a separate app. For older phones, download a free QR scanner from your app store." },
+  { q: "What can a QR code contain?", a: "QR codes can store URLs, plain text, email addresses, phone numbers, Wi-Fi network credentials, calendar events, contact cards (vCards), GPS coordinates, and cryptocurrency addresses. This generator supports the most common use cases." },
+  { q: "Are QR codes permanent?", a: "Static QR codes (like those generated here) are permanent — the encoded data is baked into the pattern and never changes or expires. Dynamic QR codes, offered by paid services, use redirect URLs that can be updated after printing." },
+  { q: "What is the maximum amount of data a QR code can hold?", a: "A QR code can hold up to 7,089 numeric characters, 4,296 alphanumeric characters, or 2,953 bytes of binary data. For practical use, shorter content (under 100 characters) produces simpler codes that scan faster and more reliably." },
 ]} />
+
+### Related Tools
+
+- [Password Generator](/apps/password-generator) — Generate strong, secure passwords
+- [JSON Formatter](/apps/json-formatter) — Format and validate JSON data
+- [Character Counter](/apps/character-counter) — Count characters and words in text
+- [Word Counter](/apps/word-counter) — Analyze text length and readability
+- [Random Number Generator](/apps/random-number-generator) — Generate random numbers
+
+### Sources
+
+- [Denso Wave — QR Code History](https://www.denso-wave.com/en/technology/vol1.html)
+- [ISO/IEC 18004 — QR Code Standard](https://www.iso.org/standard/62021.html)
+- [Google — Scan QR Codes with Google Lens](https://lens.google/)
+- [Apple — Use the Camera to Scan a QR Code](https://support.apple.com/en-us/102084)

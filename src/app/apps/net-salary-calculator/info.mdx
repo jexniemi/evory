@@ -1,43 +1,124 @@
 import FAQ from "@/components/FAQ"
 
-## How is net salary calculated?
+## Net Salary Calculator – Estimate Your Take-Home Pay
 
-Net salary is the amount left in your pocket from gross salary after deducting income tax and mandatory side costs. In the US, from an employee's gross salary, three main items are deducted: federal income tax, Social Security tax, and Medicare tax.
+Your net salary — also called take-home pay — is the amount you actually receive after all taxes and deductions are subtracted from your gross paycheck. Understanding the gap between gross and net income is critical for budgeting, comparing job offers, and making smart financial decisions.
 
-### Income tax
+### How Net Salary Is Calculated
 
-Income tax in the US is progressive. The tax rate depends on your annual income, filing status, and state. Typical effective tax rate for employees varies around 15–30%. You can check your tax rate on your W-2 or in your tax return.
+> **Net Salary = Gross Salary − Federal Tax − State Tax − Social Security − Medicare − Other Deductions**
 
-### Social Security tax
+From every paycheck, multiple deductions are withheld before the money reaches your bank account. Here is a breakdown of each component.
 
-Social Security tax is a mandatory retirement insurance contribution that funds your future retirement. In 2024, the employee share is 6.2% of gross salary up to $168,600.
+### Federal Income Tax Brackets (2024, Single Filer)
 
-### Medicare tax
+The U.S. uses a **progressive tax system** — you pay a higher rate only on income above each threshold, not on your entire income:
 
-Medicare tax funds healthcare for retirees. In 2024, the employee share is 1.45% of all gross salary.
+<table className="table table-sm my-4">
+  <thead>
+    <tr className="bg-base-200">
+      <th>Taxable Income</th>
+      <th>Tax Rate</th>
+      <th>Tax on This Bracket</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>$0 – $11,600</td><td>10%</td><td>Up to $1,160</td></tr>
+    <tr><td>$11,601 – $47,150</td><td>12%</td><td>Up to $4,266</td></tr>
+    <tr><td>$47,151 – $100,525</td><td>22%</td><td>Up to $11,742</td></tr>
+    <tr><td>$100,526 – $191,950</td><td>24%</td><td>Up to $21,942</td></tr>
+    <tr><td>$191,951 – $243,725</td><td>32%</td><td>Up to $16,568</td></tr>
+    <tr><td>$243,726 – $609,350</td><td>35%</td><td>Up to $127,969</td></tr>
+    <tr><td>Over $609,350</td><td>37%</td><td>—</td></tr>
+  </tbody>
+</table>
 
-### Example
+### FICA Taxes (Social Security & Medicare)
 
-Assume gross salary is $4,000/month and tax rate 25%:
+Every employee pays **FICA** taxes regardless of filing status:
 
-- Income tax: $4,000 × 25% = $1,000
-- Social Security: $4,000 × 6.2% = $248
-- Medicare: $4,000 × 1.45% = $58
-- **Net salary: $4,000 − $1,000 − $248 − $58 = $2,694**
+- **Social Security** — 6.2% on wages up to $168,600 (2024 cap)
+- **Medicare** — 1.45% on all wages, plus an additional 0.9% surtax on wages above $200,000
 
-### Why use a net salary calculator?
+Your employer also pays a matching 6.2% + 1.45%, bringing the total FICA burden to 15.3% — but you only see the employee half on your pay stub.
 
-A net salary calculator helps you understand your pay stub details and plan your finances. It is especially useful in job searches when you want to compare the real value of different offers. The calculator also suits employers estimating employee payroll costs.
+### Worked Example
 
-**Sources:**
-- [IRS – Tax Information](https://www.irs.gov/individuals)
-- [SSA – Social Security](https://www.ssa.gov/)
-- [Medicare – Healthcare](https://www.medicare.gov/)
+A single filer earning **$65,000/year** gross in Texas (no state income tax):
+
+1. **Standard deduction (2024):** $14,600 → Taxable income: $50,400
+2. **Federal tax:** ($11,600 × 10%) + ($35,550 × 12%) + ($3,250 × 22%) = $1,160 + $4,266 + $715 = **$6,141**
+3. **Social Security:** $65,000 × 6.2% = **$4,030**
+4. **Medicare:** $65,000 × 1.45% = **$942.50**
+5. **Total deductions:** $6,141 + $4,030 + $942.50 = **$11,113.50**
+6. **Net annual salary:** $65,000 − $11,113.50 = **$53,886.50**
+7. **Monthly take-home:** $53,886.50 ÷ 12 = **$4,490.54**
+
+Effective tax rate: 17.1% — much lower than the 22% marginal bracket.
+
+### State Income Tax Comparison
+
+Your state of residence significantly impacts your net pay. Here are the extremes:
+
+<table className="table table-sm my-4">
+  <thead>
+    <tr className="bg-base-200">
+      <th>State</th>
+      <th>Income Tax Rate</th>
+      <th>Net Pay on $65K (approx.)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Texas</td><td>0%</td><td>$53,887</td></tr>
+    <tr><td>Florida</td><td>0%</td><td>$53,887</td></tr>
+    <tr><td>Nevada</td><td>0%</td><td>$53,887</td></tr>
+    <tr><td>Washington</td><td>0%</td><td>$53,887</td></tr>
+    <tr><td>Colorado</td><td>4.4% flat</td><td>$51,667</td></tr>
+    <tr><td>New York</td><td>4.0% – 10.9%</td><td>$50,400</td></tr>
+    <tr><td>California</td><td>1.0% – 13.3%</td><td>$50,800</td></tr>
+    <tr><td>New Jersey</td><td>1.4% – 10.75%</td><td>$51,000</td></tr>
+  </tbody>
+</table>
+
+*Nine states have no state income tax: Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, and Wyoming.*
+
+### Common Pre-Tax Deductions That Reduce Your Tax Bill
+
+Pre-tax deductions lower your taxable income, effectively increasing your net pay:
+
+- **401(k) contributions** — Up to $23,000 in 2024 ($30,500 if age 50+)
+- **Health insurance premiums** — Employer-sponsored plans are typically pre-tax
+- **HSA contributions** — Up to $4,150 individual / $8,300 family (2024)
+- **FSA contributions** — Up to $3,200 for healthcare expenses (2024)
+- **Commuter benefits** — Up to $315/month for transit and parking (2024)
+
+### Tips to Maximize Your Take-Home Pay
+
+1. **Optimize your W-4** — Update your withholding allowances after life changes (marriage, new baby) to avoid overpaying taxes
+2. **Max out pre-tax accounts** — 401(k) and HSA contributions directly reduce taxable income
+3. **Choose the right filing status** — Married filing jointly often yields lower tax rates
+4. **Claim all eligible credits** — The Earned Income Tax Credit, Child Tax Credit, and education credits can reduce your tax liability
+5. **Consider a Roth IRA** — While contributions are after-tax, qualified withdrawals in retirement are completely tax-free
 
 <FAQ items={[
-  { q: "What is net salary?", a: "Net salary (take-home pay) is your gross salary minus all deductions: federal income tax, state income tax, Social Security (6.2%), Medicare (1.45%), and any pre-tax benefit contributions." },
-  { q: "How much tax is taken out of my paycheck?", a: "Federal income tax ranges from 10-37% depending on your taxable income and filing status. Add Social Security (6.2%), Medicare (1.45%), and state income tax (0-13.3% depending on state)." },
-  { q: "What is the difference between gross and net pay?", a: "Gross pay is your total compensation before any deductions. Net pay is what you actually receive after taxes and other withholdings are subtracted." },
-  { q: "How do I increase my net salary?", a: "Maximize pre-tax contributions to a 401(k) or HSA, which reduce taxable income. Adjust your W-4 withholding to avoid overpaying throughout the year. Consider a Roth IRA for tax-free retirement income." },
-  { q: "What is a W-4 form?", a: "A W-4 is the IRS form you complete when starting a job to tell your employer how much federal income tax to withhold from each paycheck. Updating it after major life events (marriage, children) can optimize your withholding." },
+  { q: "What is net salary?", a: "Net salary (take-home pay) is your gross salary minus all deductions: federal income tax, state income tax, Social Security (6.2%), Medicare (1.45%), and any pre-tax contributions like 401(k) and health insurance premiums." },
+  { q: "How much tax is taken out of my paycheck?", a: "Federal income tax ranges from 10% to 37% depending on your taxable income and filing status. Add Social Security (6.2%), Medicare (1.45%), and state income tax (0% to 13.3% depending on your state). Most workers have an effective total tax rate of 20-30%." },
+  { q: "What is the difference between gross and net pay?", a: "Gross pay is your total compensation before any deductions. Net pay is what you actually receive after federal tax, state tax, FICA taxes, and other withholdings are subtracted. Net pay is always lower than gross pay." },
+  { q: "How do I increase my net salary?", a: "Maximize pre-tax contributions to a 401(k) or HSA to reduce taxable income. Update your W-4 withholding to avoid overpaying throughout the year. Move to a state with no income tax if feasible. Claim all eligible tax credits and deductions." },
+  { q: "What is a W-4 form?", a: "Form W-4 is the IRS document you complete when starting a new job. It tells your employer how much federal income tax to withhold from each paycheck. Updating it after major life events (marriage, children, second job) can optimize your withholding and increase your take-home pay." },
 ]} />
+
+### Related Tools
+
+- [Monthly Salary Calculator](/apps/monthly-salary-calculator) — Convert hourly wage to monthly income
+- [Annual Salary Calculator](/apps/annual-salary-calculator) — Calculate yearly earnings from any pay rate
+- [Paycheck Calculator](/apps/paycheck-calculator) — Estimate your biweekly or weekly paycheck
+- [Tax Bracket Calculator](/apps/tax-bracket-calculator) — See which federal tax brackets apply to you
+- [Hourly Salary Calculator](/apps/hourly-salary-calculator) — Convert salary to hourly rate
+
+### Sources
+
+- [IRS — Tax Brackets and Rates](https://www.irs.gov/newsroom/irs-provides-tax-inflation-adjustments-for-tax-year-2024)
+- [SSA — Social Security Wage Base](https://www.ssa.gov/oact/cola/cbb.html)
+- [Tax Foundation — State Income Tax Rates](https://taxfoundation.org/publications/state-individual-income-tax-rates-and-brackets/)
+- [IRS — Form W-4](https://www.irs.gov/forms-pubs/about-form-w-4)

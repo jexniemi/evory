@@ -1,58 +1,127 @@
 import FAQ from "@/components/FAQ"
 
-## How Long Does It Take to Reach a Savings Goal?
+## Savings Goal Calculator – Plan Your Path to Any Financial Target
 
-Saving is one of the most important building blocks of financial well-being. Whether your goal is a down payment for your first home, an emergency fund, or a dream vacation, the savings goal calculator helps you plan the path to get there.
+Whether you are building an emergency fund, saving for a down payment, or setting aside money for a dream vacation, the savings goal calculator shows you exactly how long it will take — and how much to save each month — to reach your target. Enter your goal, current savings, monthly contribution, and expected interest rate to get a personalized plan.
 
-### How Does the Savings Goal Calculator Work?
+### How the Calculator Works
 
-The calculator uses the compound interest formula to estimate how long it takes to reach your goal. It considers three key variables:
+The calculator uses the **future value of an annuity** formula, which accounts for regular monthly contributions growing with compound interest:
 
-1. **Savings goal** – the amount you want to achieve
-2. **Monthly savings amount** – how much you put into savings each month
-3. **Annual return expectation** – estimated interest or investment return
+> **FV = P × ((1 + r)^n − 1) ÷ r + PV × (1 + r)^n**
 
-### Compound Interest Effect
+Where:
+- **FV** = savings goal (future value)
+- **P** = monthly contribution
+- **PV** = current savings (present value)
+- **r** = monthly interest rate (annual rate ÷ 12)
+- **n** = number of months
 
-Compound interest means you earn returns not only on the original principal, but also on previously accumulated returns. The longer the savings period, the more significant this effect becomes.
+### Worked Example
 
-**Example:** By saving $200/month with 5 % annual return, you reach a $10,000 goal in about 3 years and 10 months. Without return, the same goal would take 4 years and 2 months.
+**Goal:** Save $25,000 for a down payment. Current savings: $3,000. Monthly deposit: $500. Annual return: 4.5% (high-yield savings account).
 
-### Realistic Return Expectation
+- Monthly rate: 4.5% ÷ 12 = 0.375%
+- After 12 months: ~$9,180 (including $90 interest)
+- After 24 months: ~$15,550 (including $370 interest)
+- After 36 months: ~$22,120 (including $940 interest)
+- **Goal reached in approximately 40 months** (3 years, 4 months)
 
-Return expectation varies by savings type:
+Without any interest, the same goal would take 44 months — compound interest saves you 4 months of contributions.
+
+### Where to Keep Your Savings
 
 <table className="table table-sm my-4">
-<thead className="bg-base-200"><tr><th>Savings type</th><th>Typical annual return</th></tr></thead>
-<tbody>
-<tr><td>Regular savings account</td><td>0–1 %</td></tr>
-<tr><td>Fixed deposit</td><td>1–3 %</td></tr>
-<tr><td>Money market funds</td><td>2–4 %</td></tr>
-<tr><td>Equity funds</td><td>6–10 % (long-term)</td></tr>
-<tr><td>Direct stock investing</td><td>7–12 % (long-term)</td></tr>
-</tbody>
+  <thead>
+    <tr className="bg-base-200">
+      <th>Account Type</th>
+      <th>Typical APY (2024)</th>
+      <th>FDIC Insured?</th>
+      <th>Best For</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Standard savings</td><td>0.01% – 0.50%</td><td>Yes</td><td>Immediate access, small amounts</td></tr>
+    <tr><td>High-yield savings (HYSA)</td><td>4.00% – 5.00%</td><td>Yes</td><td>Emergency fund, 1-3 year goals</td></tr>
+    <tr><td>Money market account</td><td>3.50% – 5.00%</td><td>Yes</td><td>Larger balances, check-writing ability</td></tr>
+    <tr><td>Certificate of Deposit (CD)</td><td>4.00% – 5.25%</td><td>Yes</td><td>Fixed timeline, no early withdrawal needed</td></tr>
+    <tr><td>I-Bonds (Treasury)</td><td>Inflation-adjusted</td><td>Yes (gov't)</td><td>Long-term inflation hedge, 1-year lockup</td></tr>
+    <tr><td>Brokerage (index funds)</td><td>7% – 10% avg.</td><td>SIPC</td><td>5+ year goals, higher risk tolerance</td></tr>
+  </tbody>
 </table>
 
-Note that stock market returns vary annually and historical return does not guarantee future return.
+### Monthly Savings Needed for Common Goals
 
-### Tips for Reaching Savings Goal
+<table className="table table-sm my-4">
+  <thead>
+    <tr className="bg-base-200">
+      <th>Goal</th>
+      <th>Target</th>
+      <th>Timeline</th>
+      <th>Monthly Savings (at 4.5% APY)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Emergency fund (3 months)</td><td>$10,000</td><td>12 months</td><td>$815</td></tr>
+    <tr><td>Vacation fund</td><td>$5,000</td><td>12 months</td><td>$407</td></tr>
+    <tr><td>Used car</td><td>$15,000</td><td>24 months</td><td>$597</td></tr>
+    <tr><td>Wedding</td><td>$30,000</td><td>24 months</td><td>$1,194</td></tr>
+    <tr><td>Down payment (condo)</td><td>$40,000</td><td>36 months</td><td>$1,042</td></tr>
+    <tr><td>Down payment (house)</td><td>$80,000</td><td>60 months</td><td>$1,186</td></tr>
+  </tbody>
+</table>
 
-- **Automate saving** – transfer savings amount automatically on payday to a separate account
-- **Start small** – even a small amount accumulates significantly over time
-- **Increase amount as income grows** – keep savings percentage at least the same
-- **Compare savings accounts** – the best interest can make a big difference in the long term
+### Savings Strategies That Work
 
-### Recommended Resources
+- **Automate transfers** — Set up automatic deposits on payday so you never forget to save. "Pay yourself first" eliminates willpower from the equation
+- **The 50/30/20 rule** — Allocate 50% of take-home pay to needs, 30% to wants, and 20% to savings and debt payoff
+- **Start small, increase gradually** — Even $50/month builds a habit. Increase by $25 every time you get a raise
+- **Separate accounts** — Keep savings in a different bank than your checking to reduce temptation to spend
+- **Round up purchases** — Many banks offer round-up programs that save the change from every purchase automatically
+- **Eliminate one subscription** — Cutting a $15/month subscription frees up $180/year for savings
 
-**Sources:**
-- [SEC – Saving and Investing](https://www.sec.gov/investor)
-- [Federal Reserve – Interest Rates](https://www.federalreserve.gov/)
-- [FINRA – Basics of Investing](https://www.finra.org/)
+### The Power of Compound Interest
+
+Compound interest earns returns on your returns — and time is its most powerful ingredient:
+
+| Monthly Deposit | 5 Years (at 5%) | 10 Years | 20 Years | 30 Years |
+|---|---|---|---|---|
+| $100 | $6,829 | $15,528 | $41,103 | $83,226 |
+| $250 | $17,072 | $38,821 | $102,757 | $208,065 |
+| $500 | $34,145 | $77,641 | $205,515 | $416,129 |
+| $1,000 | $68,289 | $155,283 | $411,030 | $832,259 |
+
+*Starting early matters more than the amount. $250/month for 30 years ($90,000 deposited) grows to $208,000 — more than doubling your money.*
+
+### Emergency Fund Guidelines
+
+Financial advisors recommend maintaining an emergency fund of **3–6 months of essential expenses**:
+
+- **3 months** — Minimum for dual-income households with stable employment
+- **6 months** — Recommended for single-income households, self-employed, or volatile industries
+- **9–12 months** — Consider if you have a mortgage, dependents, or seasonal income
+
+Keep your emergency fund in a **high-yield savings account** — fully liquid and FDIC-insured.
 
 <FAQ items={[
-  { q: "How do I calculate how much to save each month?", a: "Divide your savings goal by the number of months until your target date. For example, to save $6,000 in 12 months, set aside $500/month. Factor in expected investment returns for longer-term goals." },
-  { q: "How long will it take to save $10,000?", a: "At $500/month with no interest, it takes 20 months. With a 5% annual return in a savings account, it takes about 18-19 months. Use our savings goal calculator for a precise timeline." },
-  { q: "What is the best account for short-term savings goals?", a: "For goals under 2 years, high-yield savings accounts (HYSA) and money market accounts are ideal. They offer better rates than standard savings accounts while keeping money liquid and FDIC-insured." },
-  { q: "How does interest rate affect my savings goal timeline?", a: "Higher interest rates significantly reduce the time and monthly contributions needed. At 5% APY versus 0.5%, you might reach your goal months earlier with the same monthly deposit." },
-  { q: "What is the 52-week savings challenge?", a: "The 52-week challenge involves saving an increasing amount each week: $1 in week 1, $2 in week 2, up to $52 in week 52. By year end you will have saved $1,378. Our calculator can model any savings plan." },
+  { q: "How do I calculate how much to save each month?", a: "Divide your savings goal by the number of months until your target date. For example, to save $12,000 in 24 months, set aside $500/month. Factor in expected interest for a more precise estimate using our calculator." },
+  { q: "How long will it take to save $10,000?", a: "At $500/month with no interest, it takes 20 months. With a 5% APY high-yield savings account, it takes about 19 months because interest accelerates your progress. Use our calculator for an exact timeline." },
+  { q: "What is the best account for short-term savings goals?", a: "For goals under 2 years, high-yield savings accounts (HYSA) and money market accounts are ideal. They offer 4-5% APY, immediate liquidity, and FDIC insurance up to $250,000 per depositor." },
+  { q: "How does interest rate affect my savings goal timeline?", a: "Higher interest rates reduce the time and total contributions needed. At 5% APY versus 0.5%, a $20,000 goal could be reached months earlier with the same monthly deposit. The effect compounds over longer timeframes." },
+  { q: "What is the 52-week savings challenge?", a: "The 52-week challenge involves saving an increasing amount each week: $1 in week 1, $2 in week 2, up to $52 in week 52. By year-end you'll have saved $1,378. Reverse the order (start at $52) to front-load savings when motivation is highest." },
 ]} />
+
+### Related Tools
+
+- [Compound Interest Calculator](/apps/compound-interest-calculator) — See how compound interest grows your money
+- [Investment Return Calculator](/apps/investment-return-calculator) — Calculate returns on investments
+- [Emergency Fund Calculator](/apps/emergency-fund-calculator) — Determine your ideal emergency fund size
+- [Retirement Calculator](/apps/retirement-calculator) — Plan long-term retirement savings
+- [CD Calculator](/apps/cd-calculator) — Compare certificate of deposit earnings
+
+### Sources
+
+- [SEC — Saving and Investing](https://www.sec.gov/investor)
+- [Federal Reserve — Interest Rates](https://www.federalreserve.gov/)
+- [FINRA — Smart Saving and Investing](https://www.finra.org/investors/investing)
+- [FDIC — Deposit Insurance Coverage](https://www.fdic.gov/resources/deposit-insurance/)

@@ -1,51 +1,118 @@
 import FAQ from "@/components/FAQ"
 
-## Lottery Number Generator – Draw lottery numbers for free
+## Lottery Number Generator – Generate Random Lottery Picks
 
-The lottery number generator draws seven unique numbers from 1–40 according to lottery rules. All draws are completely random and independent of each other.
+The lottery number generator creates completely random number combinations for popular lottery games. Every draw is independent and random — use it for quick picks, practice, or just for fun.
 
-### How does lottery work?
-In lotter, the player chooses 7 numbers from 1–40. There are several prize categories:
+### How Lottery Games Work
+
+In most lottery games, players select a set of numbers from a defined range. If your numbers match the drawn numbers, you win. Here are the most popular U.S. lottery games:
 
 <table className="table table-sm my-4">
   <thead>
     <tr className="bg-base-200">
-      <th>Correct</th>
-      <th>Prize category</th>
+      <th>Game</th>
+      <th>Main Numbers</th>
+      <th>Bonus Number</th>
+      <th>Jackpot Odds</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>7 correct</td><td>1st prize (Jackpot)</td></tr>
-    <tr><td>6 correct</td><td>2nd prize</td></tr>
-    <tr><td>5 correct</td><td>3rd prize</td></tr>
-    <tr><td>4 correct</td><td>4th prize</td></tr>
-    <tr><td>3 correct</td><td>5th prize</td></tr>
+    <tr><td>Powerball</td><td>5 from 1–69</td><td>1 from 1–26</td><td>1 in 292.2 million</td></tr>
+    <tr><td>Mega Millions</td><td>5 from 1–70</td><td>1 from 1–25</td><td>1 in 302.6 million</td></tr>
+    <tr><td>Lotto (7/40)</td><td>7 from 1–40</td><td>—</td><td>1 in 18.6 million</td></tr>
+    <tr><td>Pick 6 (state)</td><td>6 from 1–49</td><td>—</td><td>1 in 13.9 million</td></tr>
   </tbody>
 </table>
 
-### Probabilities
+### Understanding the Odds
 
-The probability of hitting all 7 correct numbers is about **1 / 18,643,560** – in other words, a very rare event. Still, someone wins!
+The odds of winning a lottery jackpot are calculated using the **combination formula**:
 
-The formula for calculating combinations uses combination:
+> **C(n, k) = n! ÷ (k! × (n − k)!)**
 
-> **C(40,7)** = 40! / (7! × 33!) = **18,643,560**
+For Powerball: C(69, 5) × 26 = **292,201,338** possible combinations
 
-### Do random numbers matter?
+To put this in perspective:
 
-Mathematically, every number combination has exactly the same probability of winning. Statistically, previous winning numbers do not affect future draws. Our generator produces completely random numbers in the browser – no better or worse than your own choices.
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Event</th>
+      <th>Odds</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Winning Powerball jackpot</td><td>1 in 292 million</td></tr>
+    <tr><td>Being struck by lightning (lifetime)</td><td>1 in 15,300</td></tr>
+    <tr><td>Being dealt a royal flush in poker</td><td>1 in 649,740</td></tr>
+    <tr><td>Becoming a movie star</td><td>1 in 1.5 million</td></tr>
+    <tr><td>Bowling a perfect 300 game</td><td>1 in 11,500</td></tr>
+    <tr><td>Finding a four-leaf clover</td><td>1 in 10,000</td></tr>
+  </tbody>
+</table>
 
-Read more: [Powerball website](https://www.powerball.com/)
+### Largest U.S. Lottery Jackpots in History
 
-### See also
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Amount</th>
+      <th>Game</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>$2.04 billion</td><td>Powerball</td><td>November 2022</td></tr>
+    <tr><td>$1.765 billion</td><td>Powerball</td><td>October 2023</td></tr>
+    <tr><td>$1.602 billion</td><td>Mega Millions</td><td>August 2023</td></tr>
+    <tr><td>$1.586 billion</td><td>Powerball</td><td>January 2016</td></tr>
+    <tr><td>$1.537 billion</td><td>Mega Millions</td><td>October 2018</td></tr>
+  </tbody>
+</table>
 
-- [Random Number Generator](/apps/random-number-generator) – Generate numbers from your desired range
-- [Dice Generator](/apps/dice-generator) – Roll virtual dice
+### Do Random Numbers Matter?
+
+Mathematically, **every number combination has exactly the same probability** of winning. The lottery is a purely random event — previous winning numbers have zero influence on future draws. Computer-generated "quick picks" win jackpots at approximately the same rate as manually chosen numbers (in fact, quick picks account for about 70–80% of ticket sales and a similar share of jackpot wins).
+
+However, there is one strategic consideration: **choosing less popular numbers** means you are less likely to split the jackpot. Avoid birthdays (1–31), patterns, and sequences — if they do hit, more people will share the prize.
+
+### Lottery Taxes
+
+If you win big, the IRS takes a significant cut:
+
+- **Federal tax:** 24% withheld immediately; total federal tax up to **37%** for the highest bracket
+- **State tax:** Varies from 0% (California, Florida, Texas) to **10.9%** (New York)
+- **Lump sum vs. annuity:** The advertised jackpot is the annuity value (paid over 30 years). The lump sum (cash option) is typically 40–60% of the advertised amount
+
+A $1 billion Powerball jackpot might have a cash option of ~$500 million, and after taxes you would take home roughly **$300–$350 million**.
+
+### Tips for Lottery Players
+
+- **Set a budget** — Only spend what you can afford to lose. The lottery should be entertainment, not an investment strategy.
+- **Join a pool** — Buying more tickets increases odds without spending more individually. Office and friend pools are popular.
+- **Check your tickets** — Billions of dollars in lottery prizes go unclaimed every year because winners do not check their tickets.
+- **Know the deadlines** — Most states give winners 90 days to 1 year to claim prizes.
 
 <FAQ items={[
-  { q: "How are lottery numbers drawn?", a: "Official lotteries use physical ball machines or certified random number generators (RNGs) to draw numbers. Each ball has an equal probability of being drawn." },
-  { q: "Does using a random number generator improve lottery odds?", a: "No — every combination of lottery numbers has exactly the same probability of winning. A random generator, lucky numbers, or any other method all have identical odds." },
-  { q: "What are the odds of winning the Powerball jackpot?", a: "The odds of winning the Powerball jackpot are approximately 1 in 292 million. You are statistically far more likely to be struck by lightning (1 in 15,000 lifetime odds)." },
-  { q: "Should I play the same lottery numbers every week?", a: "Statistically, playing the same numbers each week versus picking new ones makes no difference. Each draw is an independent event with the same odds." },
-  { q: "What is a quick pick in the lottery?", a: "A quick pick is a ticket where the lottery terminal randomly selects numbers for you. Studies show quick picks win jackpots at approximately the same rate as manually chosen numbers." },
+  { q: "How are lottery numbers drawn?", a: "Official lotteries use certified random number generators or physical ball machines to draw numbers. Each number has an equal probability of being selected — the process is audited and regulated by state gaming commissions." },
+  { q: "Does using a random number generator improve lottery odds?", a: "No — every combination has exactly the same probability of winning. Whether you use a generator, pick your own numbers, or use a quick pick, your odds are identical." },
+  { q: "What are the odds of winning the Powerball jackpot?", a: "The odds of winning the Powerball jackpot are approximately 1 in 292 million. You are statistically more likely to be struck by lightning twice in your lifetime." },
+  { q: "Should I play the same lottery numbers every week?", a: "Statistically, playing the same numbers each week versus picking new ones makes no difference. Each draw is an independent event with the same odds regardless of past results." },
+  { q: "What is a quick pick in the lottery?", a: "A quick pick is a ticket where the terminal randomly selects numbers for you. Studies show quick picks win jackpots at approximately the same rate as manually chosen numbers — about 70–80% of winners used quick picks." },
 ]} />
+
+### Related Tools
+
+- [Random Number Generator](/apps/random-number-generator) — Generate random numbers in any range
+- [Dice Generator](/apps/dice-generator) — Roll virtual dice for board games
+- [Coin Flip](/apps/coin-flip) — Flip a virtual coin
+- [Raffle Machine](/apps/raffle-machine) — Random name or item picker
+- [Compound Interest Calculator](/apps/compound-interest-calculator) — See what investing that $2/ticket could become
+
+### Sources
+
+- [Powerball — Official Website](https://www.powerball.com/)
+- [Mega Millions — Official Website](https://www.megamillions.com/)
+- [IRS — Gambling Winnings and Taxes](https://www.irs.gov/taxtopics/tc419)
+- [North American Association of State & Provincial Lotteries](https://www.naspl.org/)

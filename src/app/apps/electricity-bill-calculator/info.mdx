@@ -2,18 +2,121 @@ import FAQ from "@/components/FAQ"
 
 ## Electricity Bill Calculator
 
-The electricity bill calculator helps you estimate your monthly or annual bill.
+The electricity bill calculator helps you estimate your monthly or annual electricity cost based on your energy consumption and local rate. Understanding your bill is the first step toward reducing it.
 
-**Formula:**
+### How to Calculate Your Electricity Bill
 
-**Electricity bill = consumption (kWh) × unit price ($/kWh)**
+The basic formula is straightforward:
 
-Note that the bill may include additional charges such as taxes, transmission fees, and basic fees.
+> **Electricity Bill = Consumption (kWh) × Unit Price ($/kWh) + Fixed Charges**
+
+Most utility bills also include additional line items beyond simple usage charges:
+
+- **Energy charge** — The cost per kWh of electricity consumed
+- **Delivery/transmission charge** — Fees for delivering power over the grid (typically 3–6 ¢/kWh)
+- **Customer/service charge** — A flat monthly fee ($5–$15) regardless of usage
+- **Taxes and surcharges** — State and local taxes, renewable energy surcharges, fuel adjustment charges
+
+### Worked Example
+
+Suppose your household uses **900 kWh** per month and your rate is **$0.16/kWh**, with a $12 monthly service charge:
+
+- Energy charge: 900 × $0.16 = **$144.00**
+- Service charge: **$12.00**
+- Estimated bill: **$156.00** (before taxes)
+
+### Average U.S. Electricity Costs by State
+
+Electricity prices vary dramatically across the United States. Here are representative rates as of 2024:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>State</th>
+      <th>Avg. Rate (¢/kWh)</th>
+      <th>Avg. Monthly Bill</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Hawaii</td><td>32.0</td><td>$168</td></tr>
+    <tr><td>Connecticut</td><td>26.5</td><td>$175</td></tr>
+    <tr><td>Massachusetts</td><td>25.5</td><td>$160</td></tr>
+    <tr><td>California</td><td>24.0</td><td>$145</td></tr>
+    <tr><td>New York</td><td>22.0</td><td>$130</td></tr>
+    <tr><td>National Average</td><td>16.0</td><td>$137</td></tr>
+    <tr><td>Florida</td><td>14.5</td><td>$150</td></tr>
+    <tr><td>Texas</td><td>13.5</td><td>$145</td></tr>
+    <tr><td>Washington</td><td>10.5</td><td>$100</td></tr>
+    <tr><td>Louisiana</td><td>10.0</td><td>$120</td></tr>
+    <tr><td>Idaho</td><td>9.5</td><td>$95</td></tr>
+  </tbody>
+</table>
+
+### Household Appliance Energy Use
+
+Knowing which appliances consume the most energy helps you target savings. Here are typical annual costs based on $0.16/kWh:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Appliance</th>
+      <th>Avg. Watts</th>
+      <th>Hours/Day</th>
+      <th>Annual kWh</th>
+      <th>Annual Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Central A/C</td><td>3,500</td><td>6</td><td>7,665</td><td>$1,226</td></tr>
+    <tr><td>Electric water heater</td><td>4,500</td><td>3</td><td>4,928</td><td>$788</td></tr>
+    <tr><td>Electric dryer</td><td>5,000</td><td>1</td><td>1,825</td><td>$292</td></tr>
+    <tr><td>Refrigerator</td><td>150</td><td>24</td><td>1,314</td><td>$210</td></tr>
+    <tr><td>Dishwasher</td><td>1,800</td><td>1</td><td>657</td><td>$105</td></tr>
+    <tr><td>LED light bulb (10W)</td><td>10</td><td>8</td><td>29</td><td>$5</td></tr>
+    <tr><td>Incandescent bulb (60W)</td><td>60</td><td>8</td><td>175</td><td>$28</td></tr>
+  </tbody>
+</table>
+
+Replacing a single 60W incandescent bulb with a 10W LED saves about **$23 per year per bulb**. An average home with 30 bulbs could save **$690 annually** by switching to LED.
+
+### Tips for Reducing Your Electricity Bill
+
+- **Upgrade to a smart thermostat** — Nest and Ecobee thermostats save 10–15% on heating and cooling by learning your schedule.
+- **Seal air leaks** — Weatherstripping doors and windows can reduce HVAC costs by 10–20%.
+- **Use ENERGY STAR appliances** — Certified appliances use 10–50% less energy than standard models.
+- **Shift usage to off-peak hours** — If your utility offers time-of-use rates, running the dishwasher and laundry at night can save 20–30%.
+- **Unplug "vampire" loads** — Electronics on standby draw 5–10% of total household energy. Use power strips to cut them off easily.
+- **Solar panels** — The average U.S. rooftop solar system pays for itself in 6–10 years and can eliminate or drastically reduce monthly bills.
+
+### Understanding Your Meter Reading
+
+Most American homes have either a traditional analog meter or a modern smart meter. To manually track usage:
+
+1. Read the meter at the same time on the first day of each month
+2. Subtract the previous reading from the current reading to get kWh used
+3. Multiply by your rate to estimate the bill
+
+Smart meters report usage to the utility automatically, and many providers offer online portals or apps where you can track daily and hourly consumption patterns.
 
 <FAQ items={[
-  { q: "How is an electricity bill calculated?", a: "Your bill equals total kWh consumed multiplied by the price per kWh, plus fixed charges like taxes, transmission fees, and monthly service fees." },
-  { q: "What is a kWh?", a: "A kilowatt-hour (kWh) is the energy used by a 1,000-watt device running for 1 hour. For example, a 100W light bulb running for 10 hours uses 1 kWh." },
-  { q: "What is the average electricity cost per kWh in the US?", a: "The US average retail electricity price is about 16 cents per kWh (2024), though it varies by state from under 10 cents in Louisiana to over 25 cents in Hawaii." },
-  { q: "What uses the most electricity in a home?", a: "Heating and cooling (HVAC) accounts for about 45% of home energy use, followed by water heating (~18%), large appliances (~15%), and lighting (~9%)." },
-  { q: "How can I lower my electricity bill?", a: "Switch to LED bulbs, use smart thermostats, unplug idle electronics, wash clothes in cold water, and improve home insulation. These changes can reduce usage by 20-30%." },
+  { q: "How is an electricity bill calculated?", a: "Your bill equals total kWh consumed multiplied by the price per kWh, plus fixed charges like taxes, transmission fees, and monthly service fees. The formula is: Bill = (kWh × rate) + fixed charges." },
+  { q: "What is a kWh?", a: "A kilowatt-hour (kWh) is the energy used by a 1,000-watt device running for 1 hour. For example, a 100W light bulb running for 10 hours uses 1 kWh, which costs about 16 cents at the national average rate." },
+  { q: "What is the average electricity cost per kWh in the US?", a: "The U.S. average retail electricity price is about 16 cents per kWh (2024), though it varies by state from under 10 cents in Idaho and Louisiana to over 30 cents in Hawaii." },
+  { q: "What uses the most electricity in a home?", a: "Heating and cooling (HVAC) accounts for about 45% of home energy use, followed by water heating (~18%), large appliances (~15%), and lighting (~9%). Central A/C alone can cost over $1,200 per year." },
+  { q: "How can I lower my electricity bill?", a: "Switch to LED bulbs, use a smart thermostat, unplug idle electronics, wash clothes in cold water, improve home insulation, and consider time-of-use rate plans. These changes can reduce usage by 20–30%." },
 ]} />
+
+### Related Tools
+
+- [Compound Interest Calculator](/apps/compound-interest-calculator) — See how energy savings grow when invested
+- [Monthly Salary Calculator](/apps/monthly-salary-calculator) — Understand how bills affect take-home pay
+- [Electric Car Trip Cost Calculator](/apps/electric-car-trip-cost-calculator) — Calculate EV charging costs
+- [Savings Goal Calculator](/apps/savings-goal-calculator) — Plan savings from reduced energy bills
+- [Net Salary Calculator](/apps/net-salary-calculator) — See your after-tax income to budget for utilities
+
+### Sources
+
+- [U.S. Energy Information Administration — Electricity Data](https://www.eia.gov/electricity/)
+- [ENERGY STAR — Appliance Energy Use](https://www.energystar.gov/)
+- [Department of Energy — Energy Saver Tips](https://www.energy.gov/energysaver/energy-saver)
+- [Bureau of Labor Statistics — Average Energy Prices](https://www.bls.gov/regions/midwest/data/averageenergyprices_selectedareas_table.htm)

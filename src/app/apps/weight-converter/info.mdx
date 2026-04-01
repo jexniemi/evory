@@ -1,57 +1,104 @@
 import FAQ from "@/components/FAQ"
 
-## Weight Converter – Convert Kilograms, Pounds, Stone, and More
+## Weight Converter – Pounds, Kilograms, Ounces, Stone & More
 
-The weight converter instantly converts between weight units. Enter a value and select a unit to see all conversions at once — kilograms, grams, pounds, stone, and metric tons.
+Whether you're tracking your weight at the gym, converting a recipe, or figuring out luggage limits for a flight, this converter handles all common weight and mass units instantly. Enter a value in any unit and see all conversions at once.
 
-### Weight Unit Conversion Table
+### Weight Unit Reference
 
 <table className="table table-sm my-4">
   <thead>
     <tr className="bg-base-200">
       <th>Unit</th>
       <th>Abbreviation</th>
-      <th>Relation to kg</th>
+      <th>Equals in Pounds</th>
+      <th>Equals in Kilograms</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>Kilogram</td><td>kg</td><td>1 kg</td></tr>
-    <tr><td>Gram</td><td>g</td><td>0.001 kg</td></tr>
-    <tr><td>Pound</td><td>lbs</td><td>0.4536 kg</td></tr>
-    <tr><td>Stone</td><td>st</td><td>6.350 kg</td></tr>
-    <tr><td>Metric ton</td><td>t</td><td>1,000 kg</td></tr>
+    <tr><td>Ounce</td><td>oz</td><td>0.0625 lb</td><td>0.02835 kg</td></tr>
+    <tr><td>Pound</td><td>lb</td><td>1 lb</td><td>0.4536 kg</td></tr>
+    <tr><td>Stone</td><td>st</td><td>14 lb</td><td>6.350 kg</td></tr>
+    <tr><td>Kilogram</td><td>kg</td><td>2.2046 lb</td><td>1 kg</td></tr>
+    <tr><td>Gram</td><td>g</td><td>0.002205 lb</td><td>0.001 kg</td></tr>
+    <tr><td>Milligram</td><td>mg</td><td>—</td><td>0.000001 kg</td></tr>
+    <tr><td>Metric ton</td><td>t</td><td>2,204.6 lb</td><td>1,000 kg</td></tr>
+    <tr><td>US ton (short)</td><td>ton</td><td>2,000 lb</td><td>907.2 kg</td></tr>
   </tbody>
 </table>
 
-### Common Conversions
+### Quick Conversion Formulas
 
-- **1 pound (lb) = 0.453 kg** – Used in the US and UK
-- **1 stone = 14 lbs = 6.35 kg** – Common in the UK and Ireland for body weight
-- **1 metric ton = 1,000 kg** – Standard in industry and shipping
-- **70 kg ≈ 154 lbs ≈ 11 st** – Typical adult body weight
+> **Pounds → Kilograms:** Multiply by 0.4536 (or divide by 2.205)
+>
+> **Kilograms → Pounds:** Multiply by 2.2046
+>
+> **Ounces → Grams:** Multiply by 28.35
+>
+> **Grams → Ounces:** Multiply by 0.03527
 
-### When Is a Weight Converter Useful?
+### Worked Example
 
-- **Travel** – Convert between metric and imperial weights
-- **Sports** – Compare competition weight categories
-- **Cooking** – Convert recipe measurements between US and metric units
-- **Online shopping** – Check product weights from international stores before buying
+Convert **175 pounds** to kilograms:
 
-### Quick Conversion Tips
+175 × 0.4536 = **79.4 kg**
 
-To convert **pounds → kilograms**: multiply by 0.454.  
-To convert **kilograms → pounds**: multiply by 2.205.
+Convert **5 kg 250 g** of flour to pounds and ounces:
 
-### See also
+5.25 kg × 2.2046 = 11.57 lbs → **11 lbs 9 oz**
 
-- [Length Converter](/apps/length-converter) – Convert cm, m, feet, inches, and miles
-- [Temperature Converter](/apps/temperature-converter) – Celsius, Fahrenheit, and Kelvin
-- [BMI Calculator](/apps/bmi-calculator) – Calculate your BMI from weight and height
+### Common Weight References
+
+| Item | Weight (lbs) | Weight (kg) |
+|---|---|---|
+| Gallon of water | 8.34 lb | 3.79 kg |
+| Gallon of milk | 8.6 lb | 3.9 kg |
+| Bag of sugar (standard) | 5 lb | 2.27 kg |
+| Bag of flour (standard) | 5 lb | 2.27 kg |
+| Newborn baby (average) | 7.5 lb | 3.4 kg |
+| Bowling ball | 6–16 lb | 2.7–7.3 kg |
+| Carry-on luggage limit (most airlines) | 15–22 lb | 7–10 kg |
+| Checked bag limit (most airlines) | 50 lb | 23 kg |
+
+### Cooking Measurement Conversions
+
+American recipes use ounces and pounds while most international recipes use grams. Here are the most common baking conversions:
+
+| Ingredient | 1 Cup (US) | In Grams | In Ounces |
+|---|---|---|---|
+| All-purpose flour | 1 cup | 120 g | 4.2 oz |
+| Granulated sugar | 1 cup | 200 g | 7.1 oz |
+| Brown sugar (packed) | 1 cup | 220 g | 7.8 oz |
+| Butter | 1 cup (2 sticks) | 227 g | 8 oz |
+| Rice (uncooked) | 1 cup | 185 g | 6.5 oz |
+| Chocolate chips | 1 cup | 170 g | 6 oz |
+
+### US Ton vs. Metric Ton
+
+Americans use the **short ton** (2,000 lbs / 907 kg), while most of the world uses the **metric ton** or "tonne" (2,204.6 lbs / 1,000 kg). The difference is about 10%, which matters significantly in shipping, commodities trading, and industrial applications. The UK historically used the **long ton** (2,240 lbs / 1,016 kg), though it has largely been replaced by the metric ton.
+
+### Mass vs. Weight — The Technical Difference
+
+In everyday conversation, "weight" and "mass" are interchangeable. Scientifically, however, **mass** measures the amount of matter (constant everywhere) while **weight** is the force of gravity on that mass (varies by location). A 150 lb person on Earth would weigh only 25 lbs on the Moon but would still have the same mass.
 
 <FAQ items={[
-  { q: "How many pounds are in a kilogram?", a: "One kilogram equals 2.20462 pounds. Conversely, one pound equals 0.453592 kilograms." },
-  { q: "How do I convert my weight from pounds to kilograms?", a: "Divide your weight in pounds by 2.20462. For example, 150 lbs / 2.20462 = 68.04 kg." },
-  { q: "What is a stone in pounds?", a: "One stone equals 14 pounds or 6.35 kilograms. Stones are commonly used to measure body weight in the UK and Ireland." },
-  { q: "How many ounces are in a pound?", a: "There are 16 ounces in 1 pound. In the metric system, 1 ounce equals 28.3495 grams." },
-  { q: "What is the difference between mass and weight?", a: "Mass measures the amount of matter in an object (in kg or lbs) and does not change with location. Weight is the force gravity exerts on that mass and varies on different planets." },
+  { q: "How many pounds are in a kilogram?", a: "One kilogram equals 2.20462 pounds. Conversely, one pound equals 0.453592 kilograms. A quick estimate: double the kg and add 10%. For example, 70 kg × 2 = 140, plus 10% = 154 lbs (actual: 154.3 lbs)." },
+  { q: "How do I convert my weight from pounds to kilograms?", a: "Divide your weight in pounds by 2.20462, or multiply by 0.4536. For example, 180 lbs ÷ 2.205 = 81.6 kg." },
+  { q: "What is a stone in pounds and kilograms?", a: "One stone equals 14 pounds or 6.35 kilograms. Stones are commonly used to measure body weight in the United Kingdom and Ireland. For example, 10 stone = 140 lbs = 63.5 kg." },
+  { q: "How many ounces are in a pound?", a: "There are 16 ounces in 1 pound. In the metric system, 1 ounce equals 28.3495 grams. There are also troy ounces (31.1 g), used specifically for precious metals like gold and silver." },
+  { q: "What is the difference between mass and weight?", a: "Mass measures the amount of matter in an object (in kg or lbs) and stays constant regardless of location. Weight is the force of gravity on that mass and changes depending on gravitational pull — you would weigh less on the Moon but your mass stays the same." },
 ]} />
+
+### Related Tools
+
+- [Length Converter](/apps/length-converter) — Convert inches, feet, meters, and miles
+- [Temperature Converter](/apps/temperature-converter) — Convert Fahrenheit, Celsius, and Kelvin
+- [Area Converter](/apps/area-converter) — Convert square feet, acres, hectares, and more
+- [BMI Calculator](/apps/bmi-calculator) — Calculate your Body Mass Index
+- [Speed Converter](/apps/speed-converter) — Convert mph, km/h, knots, and m/s
+
+### Sources
+
+- [NIST — Weights and Measures](https://www.nist.gov/pml/owm/metric-si/si-units-mass)
+- [USDA — Baking Ingredient Weights](https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/)
+- [FAA — Airline Baggage Rules](https://www.faa.gov/travelers)

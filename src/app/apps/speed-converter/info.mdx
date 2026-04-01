@@ -1,51 +1,115 @@
 import FAQ from "@/components/FAQ"
 
-## Speed Converter – Convert km/h, m/s, mph, Knots, and ft/s
+## Speed Converter – Convert mph, km/h, m/s, Knots, and ft/s
 
-The speed converter instantly converts between different speed units. Enter a value, select a unit, and get all conversions at once — kilometers per hour, meters per second, miles per hour, knots, and feet per second.
+The speed converter instantly translates between all major speed units. Enter a value in any unit and see the equivalent in miles per hour (mph), kilometers per hour (km/h), meters per second (m/s), knots (kn), and feet per second (ft/s). Essential for travel, science, aviation, and everyday conversions.
 
-### Speed Unit Conversion Table
+### Speed Unit Conversion Factors
 
 <table className="table table-sm my-4">
   <thead>
     <tr className="bg-base-200">
       <th>Unit</th>
       <th>Abbreviation</th>
-      <th>Relation to m/s</th>
+      <th>Relative to 1 m/s</th>
+      <th>Used In</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>Kilometer per hour</td><td>km/h</td><td>1 km/h = 0.2778 m/s</td></tr>
-    <tr><td>Meter per second</td><td>m/s</td><td>SI base unit</td></tr>
-    <tr><td>Mile per hour</td><td>mph</td><td>1 mph = 0.4470 m/s</td></tr>
-    <tr><td>Knot</td><td>kn</td><td>1 kn = 0.5144 m/s</td></tr>
-    <tr><td>Foot per second</td><td>ft/s</td><td>1 ft/s = 0.3048 m/s</td></tr>
+    <tr><td>Kilometer per hour</td><td>km/h</td><td>1 km/h = 0.2778 m/s</td><td>Most countries (speed limits, weather)</td></tr>
+    <tr><td>Mile per hour</td><td>mph</td><td>1 mph = 0.4470 m/s</td><td>US, UK (roads, weather)</td></tr>
+    <tr><td>Meter per second</td><td>m/s</td><td>SI base unit</td><td>Science, engineering, physics</td></tr>
+    <tr><td>Knot</td><td>kn</td><td>1 kn = 0.5144 m/s</td><td>Aviation, maritime navigation</td></tr>
+    <tr><td>Foot per second</td><td>ft/s</td><td>1 ft/s = 0.3048 m/s</td><td>US engineering, ballistics</td></tr>
+  </tbody>
+</table>
+
+### Quick Conversion Reference
+
+<table className="table table-sm my-4">
+  <thead>
+    <tr className="bg-base-200">
+      <th>From → To</th>
+      <th>Multiply By</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>mph → km/h</td><td>1.60934</td><td>60 mph = 96.6 km/h</td></tr>
+    <tr><td>km/h → mph</td><td>0.62137</td><td>100 km/h = 62.1 mph</td></tr>
+    <tr><td>m/s → mph</td><td>2.23694</td><td>10 m/s = 22.4 mph</td></tr>
+    <tr><td>mph → m/s</td><td>0.44704</td><td>60 mph = 26.8 m/s</td></tr>
+    <tr><td>knots → mph</td><td>1.15078</td><td>100 kn = 115.1 mph</td></tr>
+    <tr><td>mph → knots</td><td>0.86898</td><td>100 mph = 86.9 kn</td></tr>
+    <tr><td>km/h → m/s</td><td>0.27778</td><td>36 km/h = 10 m/s</td></tr>
   </tbody>
 </table>
 
 ### Common Speed References
 
-- **Walking** – ~3 mph (~5 km/h)
-- **Jogging** – ~6 mph (~10 km/h)
-- **Cycling** – ~12–19 mph (20–30 km/h)
-- **Urban speed limit** – 31 mph (50 km/h)
-- **Highway** – 62 mph (100 km/h / 54 kn)
-- **Airplane** – ~560 mph (~900 km/h / 486 kn)
+<table className="table table-sm my-4">
+  <thead>
+    <tr className="bg-base-200">
+      <th>Activity / Object</th>
+      <th>mph</th>
+      <th>km/h</th>
+      <th>m/s</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Walking</td><td>3.1</td><td>5</td><td>1.4</td></tr>
+    <tr><td>Jogging</td><td>6.2</td><td>10</td><td>2.8</td></tr>
+    <tr><td>Cycling (casual)</td><td>12</td><td>19</td><td>5.3</td></tr>
+    <tr><td>US residential speed limit</td><td>25</td><td>40</td><td>11.2</td></tr>
+    <tr><td>US highway speed limit</td><td>65</td><td>105</td><td>29.1</td></tr>
+    <tr><td>Fastest human (Usain Bolt)</td><td>27.3</td><td>44.0</td><td>12.2</td></tr>
+    <tr><td>Commercial airplane</td><td>575</td><td>925</td><td>257</td></tr>
+    <tr><td>Speed of sound (sea level)</td><td>767</td><td>1,235</td><td>343</td></tr>
+  </tbody>
+</table>
 
-### Knots – A Navigator's Unit
+### Why Different Speed Units Exist
 
-The knot is the standard speed unit for ships and aircraft. One knot equals one nautical mile per hour (1.852 km/h). It is internationally used in maritime navigation and aviation.
+- **mph** — Used in the United States, United Kingdom, and a few other countries that retained Imperial measurements for road speed. All US speed limits and car speedometers display mph
+- **km/h** — The standard in most of the world. Used for road signs, weather reports, and everyday purposes across Europe, Asia, South America, and Africa
+- **m/s** — The SI base unit for speed. Used universally in science, physics, and engineering. Wind speeds in weather forecasts are sometimes given in m/s
+- **Knots** — The nautical mile per hour. One knot = one nautical mile (1.852 km) per hour. Used universally in aviation and maritime navigation because nautical miles relate directly to degrees of latitude
 
-### See also
+### Understanding Knots in Aviation and Sailing
 
-- [Length Converter](/apps/length-converter) – Convert cm, m, feet, and miles
-- [Running Pace Calculator](/apps/running-pace-calculator) – Calculate pace per km or mile
-- [Fuel Cost Calculator](/apps/fuel-cost-calculator) – Calculate trip fuel costs
+The knot is the international standard for aviation and marine speed. Pilots report airspeed, ground speed, and wind speed in knots. Air traffic control, weather reports (METARs and TAFs), and nautical charts all use knots.
+
+**Why?** One nautical mile equals one minute of latitude, making navigation calculations simpler. At 60 knots, a vessel covers 1 degree of latitude per hour.
+
+### The Mach Number
+
+For very high speeds, the **Mach number** expresses speed relative to the speed of sound:
+
+- **Mach 1** = speed of sound ≈ 767 mph (1,235 km/h) at sea level
+- **Mach 2** = twice the speed of sound ≈ 1,534 mph
+- Commercial jets fly at about **Mach 0.80–0.85** (500–575 mph)
+- The SR-71 Blackbird reached **Mach 3.3** (2,200 mph)
+- The Space Shuttle re-entered the atmosphere at **Mach 25** (17,500 mph)
 
 <FAQ items={[
-  { q: "How do I convert mph to km/h?", a: "Multiply mph by 1.60934. For example, 60 mph x 1.60934 = 96.56 km/h." },
-  { q: "How fast is 100 km/h in mph?", a: "100 km/h equals 62.14 mph. This is a common highway speed limit in many countries." },
-  { q: "What is the difference between speed and velocity?", a: "Speed is a scalar quantity: just how fast something is moving. Velocity is a vector quantity: speed plus direction. For everyday conversions, speed is what matters." },
-  { q: "How do I convert m/s to mph?", a: "Multiply m/s by 2.23694. For example, 10 m/s x 2.23694 = 22.37 mph." },
-  { q: "What is the speed of light in mph?", a: "The speed of light is approximately 670,616,629 mph (299,792,458 m/s or about 1.08 billion km/h). It is the universal speed limit in physics." },
+  { q: "How do I convert mph to km/h?", a: "Multiply mph by 1.60934. For example, 60 mph × 1.60934 = 96.56 km/h. For a quick estimate, multiply by 1.6 — so 60 mph ≈ 96 km/h." },
+  { q: "How fast is 100 km/h in mph?", a: "100 km/h equals 62.14 mph. This is a common highway speed limit in countries using the metric system, roughly equivalent to a 60 mph US highway speed limit." },
+  { q: "What is the difference between speed and velocity?", a: "Speed is a scalar quantity — just how fast something moves, regardless of direction. Velocity is a vector quantity — speed plus direction. For everyday unit conversions, speed is the relevant measurement." },
+  { q: "How do I convert m/s to mph?", a: "Multiply m/s by 2.23694. For example, 10 m/s × 2.23694 = 22.37 mph. This is useful for converting scientific measurements to everyday units." },
+  { q: "What is the speed of light in mph?", a: "The speed of light is approximately 670,616,629 mph (299,792,458 m/s or about 1.08 billion km/h). It is the universal speed limit — nothing with mass can reach or exceed it." },
 ]} />
+
+### Related Tools
+
+- [Length Converter](/apps/length-converter) — Convert between inches, feet, meters, miles, and km
+- [Running Pace Calculator](/apps/running-pace-calculator) — Calculate your running pace per mile or km
+- [Temperature Converter](/apps/temperature-converter) — Convert between °F, °C, and Kelvin
+- [Fuel Cost Calculator](/apps/fuel-cost-calculator) — Calculate trip fuel costs
+- [Area Converter](/apps/area-converter) — Convert between sq ft, sq m, acres, and hectares
+
+### Sources
+
+- [NIST — SI Units](https://www.nist.gov/pml/owm/metric-si/si-units)
+- [FAA — Aeronautical Information Manual](https://www.faa.gov/air_traffic/publications/atpubs/aim_html/)
+- [International Bureau of Weights and Measures (BIPM)](https://www.bipm.org/en/measurement-units)
+- [Britannica — Knot (unit of speed)](https://www.britannica.com/science/knot-unit-of-speed)

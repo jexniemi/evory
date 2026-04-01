@@ -1,21 +1,110 @@
 import FAQ from "@/components/FAQ"
 
-## How does the installment calculator work?
+## Installment Calculator – Monthly Payment Estimator
 
-The installment calculator helps you determine your loan or installment monthly payments and total costs. Enter the total amount of the loan or product, annual interest rate and payment period into the calculator. The calculator calculates the monthly payment using the annuity loan formula:
+The installment calculator helps you determine the monthly payment, total cost, and interest charges for any loan or financed purchase. Whether you are financing a car, appliance, furniture, or personal loan, this tool shows you exactly what you will pay.
 
-**Monthly payment = (total amount * monthly interest rate) / (1 - (1 + monthly interest rate)^-months).**
+### The Amortization Formula
 
-Once the monthly payment is calculated, the calculator also tells you the total costs of the loan or installment and the amount of interest. This helps you understand how much you pay for the loan or installment in total and how much of it is interest.
+The calculator uses the **standard annuity (amortization) formula** used by banks and lenders:
 
-The installment calculator is a useful tool for everyone who wants to make smart financing decisions. You can use it for smaller purchases as well as larger loans. This helps you manage your finances better and make more informed decisions.
+> **Monthly Payment = (P × r) ÷ (1 − (1 + r)⁻ⁿ)**
 
-Use the installment calculator and easily find out how much you pay monthly and how much interest accrues. This helps you plan your financing more efficiently and understand the impact of the loan or installment on your budget.
+Where:
+- **P** = Principal (loan amount)
+- **r** = Monthly interest rate (annual rate ÷ 12)
+- **n** = Total number of monthly payments
+
+### Worked Example
+
+You finance a **$5,000 laptop and equipment package** at **8.99% APR** for **24 months**:
+
+- Monthly rate: 8.99% ÷ 12 = **0.749%**
+- Monthly payment: ($5,000 × 0.00749) ÷ (1 − (1.00749)⁻²⁴) = **$228.42**
+- Total paid: $228.42 × 24 = **$5,482.08**
+- Total interest: $5,482.08 − $5,000 = **$482.08**
+
+### How Interest Rates Affect Your Payment
+
+The interest rate dramatically impacts total cost. Here is a $10,000 loan over 36 months at different rates:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>APR</th>
+      <th>Monthly Payment</th>
+      <th>Total Interest</th>
+      <th>Total Paid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>0% (promo)</td><td>$277.78</td><td>$0</td><td>$10,000</td></tr>
+    <tr><td>4.99%</td><td>$299.66</td><td>$787.76</td><td>$10,787.76</td></tr>
+    <tr><td>8.99%</td><td>$317.53</td><td>$1,431.08</td><td>$11,431.08</td></tr>
+    <tr><td>14.99%</td><td>$346.22</td><td>$2,463.92</td><td>$12,463.92</td></tr>
+    <tr><td>24.99%</td><td>$397.09</td><td>$4,295.24</td><td>$14,295.24</td></tr>
+  </tbody>
+</table>
+
+At 24.99% APR (typical credit card rate), you pay nearly **$4,300 in interest** — over 40% of the original purchase price.
+
+### How Loan Term Affects Total Cost
+
+A longer term means lower monthly payments but significantly more interest. For a **$20,000 loan at 6.99% APR**:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Term</th>
+      <th>Monthly Payment</th>
+      <th>Total Interest</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>24 months</td><td>$897.28</td><td>$1,534.72</td></tr>
+    <tr><td>36 months</td><td>$617.27</td><td>$2,221.72</td></tr>
+    <tr><td>48 months</td><td>$478.67</td><td>$2,976.16</td></tr>
+    <tr><td>60 months</td><td>$396.02</td><td>$3,761.20</td></tr>
+  </tbody>
+</table>
+
+Extending from 24 to 60 months cuts the monthly payment in half but more than doubles the total interest paid.
+
+### Common Types of Installment Loans
+
+- **Auto loans** — Typical terms of 36–72 months at 4–8% APR for new cars; 6–12% for used cars
+- **Personal loans** — Unsecured loans from banks, credit unions, or online lenders, typically 6–36% APR
+- **Buy Now, Pay Later (BNPL)** — Affirm, Klarna, and Afterpay offer 0% interest on short terms (4–6 payments), but late fees apply
+- **Store financing** — Retailers often offer 0% APR promotional periods (12–24 months), but deferred interest can apply if the balance is not paid in full
+- **Medical payment plans** — Many providers offer 0% interest plans; third-party medical credit (CareCredit) charges 14–27% after promo periods
+
+### Tips for Smart Financing
+
+- **Compare APR, not just monthly payments** — A lower monthly payment with a longer term often costs more total.
+- **Read the fine print on 0% offers** — Deferred interest means if you miss the payoff deadline, you owe interest on the full original balance retroactively.
+- **Make extra payments** — Even an extra $25–$50/month can shave months off your loan and save significant interest.
+- **Check your credit score first** — The best rates go to borrowers with scores above 720. A score below 650 may mean rates 5–10 percentage points higher.
+- **Negotiate the price, not the payment** — Dealers and salespeople often focus on monthly payment to obscure the total cost. Always negotiate the purchase price first.
 
 <FAQ items={[
-  { q: "How is an installment payment calculated?", a: "Monthly payment = (Loan amount x monthly rate) / (1 - (1 + monthly rate)^(-number of months)). This is the standard amortization formula used by lenders." },
-  { q: "What is the difference between simple interest and amortized interest?", a: "Simple interest is calculated only on the principal. Amortized interest recalculates on the remaining balance each period, meaning early payments are mostly interest while later payments are mostly principal." },
-  { q: "How does the loan term affect my monthly payment?", a: "A longer loan term reduces monthly payments but increases total interest paid. A shorter term means higher payments but less interest overall." },
-  { q: "What is APR vs interest rate?", a: "The interest rate is the base cost of borrowing. APR (Annual Percentage Rate) includes the interest rate plus fees, giving a more complete picture of the total loan cost." },
-  { q: "What happens if I pay extra on my installment loan?", a: "Extra payments reduce your principal faster, which reduces total interest and can shorten the loan term. Most loans allow extra payments without penalty — check your loan agreement." },
+  { q: "How is an installment payment calculated?", a: "Monthly payment = (Loan amount × monthly rate) ÷ (1 − (1 + monthly rate)^(−number of months)). This is the standard amortization formula used by all lenders." },
+  { q: "What is the difference between simple interest and amortized interest?", a: "Simple interest is calculated only on the original principal. Amortized interest recalculates on the remaining balance each period, so early payments are mostly interest while later payments are mostly principal." },
+  { q: "How does the loan term affect my monthly payment?", a: "A longer term reduces monthly payments but increases total interest paid. A shorter term means higher payments but less interest overall — often saving thousands of dollars." },
+  { q: "What is APR vs. interest rate?", a: "The interest rate is the base cost of borrowing. APR (Annual Percentage Rate) includes the interest rate plus fees and origination charges, giving a more complete picture of total loan cost." },
+  { q: "What happens if I pay extra on my installment loan?", a: "Extra payments reduce your principal faster, which reduces total interest and shortens the loan term. Most loans allow extra payments without penalty — but check your agreement for prepayment penalties." },
 ]} />
+
+### Related Tools
+
+- [Loan Repayment Calculator](/apps/loan-repayment-calculator) — Detailed amortization schedules
+- [Car Loan Calculator](/apps/car-loan-calculator) — Calculate auto loan payments
+- [Compound Interest Calculator](/apps/compound-interest-calculator) — See how interest compounds over time
+- [Debt Payoff Calculator](/apps/debt-payoff-calculator) — Create a debt payoff plan
+- [Mortgage Calculator](/apps/mortgage-calculator) — Calculate home loan payments
+
+### Sources
+
+- [Consumer Financial Protection Bureau — Installment Loans](https://www.consumerfinance.gov/consumer-tools/auto-loans/)
+- [Federal Reserve — Consumer Credit Data](https://www.federalreserve.gov/releases/g19/current/)
+- [Investopedia — Amortization](https://www.investopedia.com/terms/a/amortization.asp)
+- [Federal Trade Commission — Shopping for a Loan](https://consumer.ftc.gov/articles/shopping-loan-or-credit-card)

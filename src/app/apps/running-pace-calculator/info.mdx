@@ -1,85 +1,113 @@
 import FAQ from "@/components/FAQ"
 
-## Speed vs. Pace
+## Running Pace Calculator – Find Your Speed, Pace, and Race Times
 
-**Speed** (km/h) tells how many kilometers you run per hour. **Pace** (min/km) tells how long it takes to run one kilometer. Both describe the same thing from different directions:
+Whether you are training for a 5K, half marathon, or full marathon, understanding your pace is key to setting goals and tracking improvement. This calculator converts between speed (mph or km/h) and pace (min/mile or min/km), and estimates finish times for popular race distances.
 
-- Speed = distance ÷ time
-- Pace = time ÷ distance
+### Speed vs. Pace
 
-Among runners, **pace (min/km)** is more commonly used as a metric because it describes performance more intuitively in training.
+**Speed** tells you how far you travel in a given time. **Pace** tells you how long it takes to cover a unit of distance. Both describe the same thing from opposite perspectives:
 
-## Pace References
+- **Speed** = Distance ÷ Time → e.g., 7.5 mph
+- **Pace** = Time ÷ Distance → e.g., 8:00 per mile
+
+Among runners, **pace (minutes per mile)** is the preferred metric because it directly tells you how fast you need to run each mile to hit a target finish time.
+
+### Pace Reference Table
 
 <table className="table table-sm my-4">
   <thead className="bg-base-200">
     <tr>
       <th>Level</th>
+      <th>Pace (min/mile)</th>
       <th>Pace (min/km)</th>
-      <th>Speed (km/h)</th>
+      <th>Speed (mph)</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>Brisk walk</td><td>9:00–10:00</td><td>6,0–6,7</td></tr>
-    <tr><td>Light jog</td><td>7:00–8:00</td><td>7,5–8,6</td></tr>
-    <tr><td>Basic endurance</td><td>5:30–6:30</td><td>9,2–10,9</td></tr>
-    <tr><td>Training runner</td><td>5:00–5:30</td><td>10,9–12,0</td></tr>
-    <tr><td>Competitive runner</td><td>4:00–5:00</td><td>12,0–15,0</td></tr>
-    <tr><td>Elite level</td><td>{'< 3:30'}</td><td>{'> 17,0'}</td></tr>
+    <tr><td>Brisk walk</td><td>15:00 – 17:00</td><td>9:20 – 10:30</td><td>3.5 – 4.0</td></tr>
+    <tr><td>Light jog</td><td>12:00 – 14:00</td><td>7:30 – 8:40</td><td>4.3 – 5.0</td></tr>
+    <tr><td>Recreational runner</td><td>9:30 – 11:30</td><td>5:55 – 7:10</td><td>5.2 – 6.3</td></tr>
+    <tr><td>Intermediate runner</td><td>8:00 – 9:30</td><td>5:00 – 5:55</td><td>6.3 – 7.5</td></tr>
+    <tr><td>Competitive runner</td><td>6:30 – 8:00</td><td>4:00 – 5:00</td><td>7.5 – 9.2</td></tr>
+    <tr><td>Elite / Sub-elite</td><td>{'< 5:30'}</td><td>{'< 3:25'}</td><td>{'> 10.9'}</td></tr>
   </tbody>
 </table>
 
-## Most Common Running Distances
+### Popular Race Distances and Goal Times
 
 <table className="table table-sm my-4">
   <thead className="bg-base-200">
     <tr>
+      <th>Race</th>
       <th>Distance</th>
-      <th>Kilometers</th>
-      <th>Beginner's goal</th>
+      <th>Beginner Goal</th>
+      <th>Intermediate Goal</th>
+      <th>Competitive Goal</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>5 km</td><td>5,0</td><td>30–40 min</td></tr>
-    <tr><td>10 km</td><td>10,0</td><td>60–75 min</td></tr>
-    <tr><td>Half marathon</td><td>21,1</td><td>2 h – 2 h 30 min</td></tr>
-    <tr><td>Marathon</td><td>42,2</td><td>4 h 30 min – 5 h 30 min</td></tr>
+    <tr><td>5K</td><td>3.1 miles</td><td>30 – 40 min</td><td>22 – 28 min</td><td>{'< 20 min'}</td></tr>
+    <tr><td>10K</td><td>6.2 miles</td><td>60 – 75 min</td><td>45 – 55 min</td><td>{'< 40 min'}</td></tr>
+    <tr><td>Half Marathon</td><td>13.1 miles</td><td>2:15 – 2:45</td><td>1:45 – 2:00</td><td>{'< 1:30'}</td></tr>
+    <tr><td>Marathon</td><td>26.2 miles</td><td>4:30 – 5:30</td><td>3:30 – 4:15</td><td>{'< 3:00'}</td></tr>
   </tbody>
 </table>
 
-The calculator shows estimated times for 5 km and 10 km distances at your current pace.
+### The Formulas
 
-## Tips for Improving Speed
+The calculator uses these straightforward formulas:
 
-1. **Interval training** — varying speed sections develop maximum oxygen uptake (VO₂max)
-2. **Long run** — weekly longer run improves endurance
-3. **Steady pace** — start moderately, don't sprint right at the beginning
-4. **Rest** — development happens during recovery, not during exercise
-5. **Muscle care** — regular stretching and strengthening exercises prevent injuries
+> **Speed (mph)** = Distance (miles) ÷ Time (hours)
 
-## Running Speed Calculation Formula
+> **Pace (min/mile)** = Time (minutes) ÷ Distance (miles)
 
-The calculator uses simple basic formulas:
+> **Estimated Finish Time** = Pace (min/mile) × Race Distance (miles)
 
-**Speed** = distance (km) ÷ time (h)
+To convert between miles and kilometers: 1 mile = 1.60934 km. To convert pace: min/mile × 0.62137 = min/km.
 
-**Pace** = time (min) ÷ distance (km)
+*Note: Estimated finish times assume an even pace throughout. On longer distances, expect positive splits (slowing down) due to fatigue — most recreational runners run the second half 5–10% slower.*
 
-**Estimated time** = pace × race distance (km)
+### Training Pace Zones
 
-Note: estimated times assume a steady pace throughout the distance. On longer distances, actual time is usually slightly longer due to fatigue.
+Most running coaches prescribe training based on **pace zones** tied to your goal race pace or current fitness:
 
-Try also the [basal metabolic rate calculator](/apps/bmr-calculator) or [daily calorie needs calculator](/apps/daily-calorie-needs-calculator) to find out your energy consumption!
+- **Zone 1 — Easy/Recovery (65–75% effort):** Conversational pace, ~1:30–2:00 min/mile slower than goal race pace. Most of your training miles should be here
+- **Zone 2 — Aerobic/Endurance (75–85%):** Comfortably moderate, slight effort to talk. Long runs and base building
+- **Zone 3 — Tempo (85–90%):** "Comfortably hard" — you can speak in short phrases. Improves lactate threshold
+- **Zone 4 — Threshold/Interval (90–95%):** Hard effort, brief phrases only. Interval training and race-specific workouts
+- **Zone 5 — VO₂max/Sprint (95–100%):** Maximum effort, short bursts. Improves top-end speed
 
-## Sources
+The widely recommended **80/20 rule** says 80% of your running should be in Zones 1–2 (easy) and only 20% in Zones 3–5 (hard).
 
-- USA Track & Field: [usatf.org](https://www.usatf.org)
-- Runner's World: [runnersworld.com](https://www.runnersworld.com)
+### Tips for Improving Your Pace
+
+1. **Interval training** — Alternating fast and recovery segments develops VO₂max and speed endurance
+2. **Weekly long run** — One run of 1.5–2× your typical distance builds aerobic capacity
+3. **Run slow to run fast** — Most training should be at an easy, conversational pace. Hard every day leads to burnout and injury
+4. **Strength training** — Squats, lunges, and core work improve running economy by 2–8%
+5. **Rest and recovery** — Fitness improves during rest, not during the workout itself. Take at least 1–2 full rest days per week
+6. **Consistent mileage** — Gradually increasing weekly mileage (no more than 10% per week) builds a strong foundation
 
 <FAQ items={[
-  { q: "How do I calculate my running pace?", a: "Divide your total time by the distance. For example, finishing a 5K (3.1 miles) in 30 minutes equals a pace of 30/3.1 = 9:41 per mile, or 30/5 = 6:00 per kilometer." },
-  { q: "What is a good running pace for beginners?", a: "A comfortable beginner pace is typically 10-14 minutes per mile (6:15-8:45 per kilometer). The most important thing is to run at a pace where you can hold a conversation." },
-  { q: "How do I convert minutes per kilometer to minutes per mile?", a: "Multiply minutes per kilometer by 1.60934. For example, a 5:00/km pace equals 5 x 1.60934 = 8:03 per mile." },
-  { q: "What pace do I need to run a sub-2-hour half marathon?", a: "A sub-2-hour half marathon requires a pace of under 9:09 per mile (5:41 per kilometer) for the 13.1 mile (21.1 km) distance." },
-  { q: "How does running pace relate to heart rate zones?", a: "Easy/recovery runs (Zone 1-2) are at conversational pace, about 11-14 min/mile for most runners. Threshold runs (Zone 4) are comfortably hard, roughly 8-10 min/mile. Use the heart rate calculator to find your personal zones." },
+  { q: "How do I calculate my running pace?", a: "Divide your total time by the distance covered. For example, finishing a 5K (3.1 miles) in 30 minutes equals a pace of 30 ÷ 3.1 = 9:41 per mile, or 30 ÷ 5 = 6:00 per kilometer." },
+  { q: "What is a good running pace for beginners?", a: "A comfortable beginner pace is typically 10-14 minutes per mile (6:15-8:45 per kilometer). The most important principle is running at a pace where you can hold a conversation — this builds aerobic fitness safely." },
+  { q: "How do I convert minutes per kilometer to minutes per mile?", a: "Multiply minutes per kilometer by 1.60934. For example, a 5:00/km pace equals 5 × 1.60934 ≈ 8:03 per mile. To go the other way, multiply min/mile by 0.62137." },
+  { q: "What pace do I need to run a sub-2-hour half marathon?", a: "A sub-2-hour half marathon (13.1 miles) requires a pace of under 9:09 per mile (5:41 per kilometer) sustained for the entire distance. This is an achievable goal for intermediate runners with consistent training." },
+  { q: "How does running pace relate to heart rate zones?", a: "Easy recovery runs (Zone 1-2) are at conversational pace, about 1:30-2:00 min/mile slower than race pace. Tempo runs (Zone 3-4) are comfortably hard. Use a heart rate monitor or the talk test to stay in the right zone." },
 ]} />
+
+### Related Tools
+
+- [Heart Rate Calculator](/apps/heart-rate-calculator) — Find your target heart rate zones
+- [BMR Calculator](/apps/bmr-calculator) — Calculate your basal metabolic rate
+- [Calorie Burn Calculator](/apps/calorie-burn-calculator) — Estimate calories burned while running
+- [Daily Calorie Needs Calculator](/apps/daily-calorie-needs-calculator) — Determine your total daily energy expenditure
+- [Speed Converter](/apps/speed-converter) — Convert between mph, km/h, and other units
+
+### Sources
+
+- [USA Track & Field (USATF)](https://www.usatf.org/)
+- [Runner's World — Pace Calculator](https://www.runnersworld.com/uk/training/a761681/rws-training-pace-calculator/)
+- [American Council on Exercise — Running Training](https://www.acefitness.org/)
+- [Journal of Strength and Conditioning Research](https://journals.lww.com/nsca-jscr/)

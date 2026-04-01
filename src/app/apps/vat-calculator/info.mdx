@@ -1,54 +1,120 @@
 import FAQ from "@/components/FAQ"
 
-## How Does the Sales Tax Calculator Work?
+## Sales Tax Calculator – Add or Remove Tax From Any Price
 
-The sales tax calculator works in both directions — adding tax to a pre-tax price, or removing tax from a total.
+Sales tax affects virtually every purchase Americans make, yet the rate changes depending on where you shop. This calculator works in both directions — add sales tax to a pre-tax price, or extract the tax from a total — so you always know exactly what you're paying.
 
-**Pre-tax → Total** (add sales tax):
+### The Formulas
 
-**Tax amount = pre-tax price × (tax rate / 100)**
+**Adding tax to a pre-tax price:**
 
-**Total = pre-tax price + tax amount**
+> **Tax Amount = Pre-Tax Price × (Tax Rate ÷ 100)**
+>
+> **Total = Pre-Tax Price + Tax Amount**
 
-**Total → Pre-tax** (remove sales tax):
+**Removing tax from a tax-inclusive total:**
 
-**Pre-tax price = total / (1 + tax rate / 100)**
+> **Pre-Tax Price = Total ÷ (1 + Tax Rate ÷ 100)**
+>
+> **Tax Amount = Total − Pre-Tax Price**
 
-**Tax amount = total − pre-tax price**
+### Worked Example
 
-## US Sales Tax Overview
+You're buying a laptop priced at **$999** in Texas (8.25% combined rate):
 
-Sales tax in the United States is set at the state and local level — there is no federal sales tax. Rates vary significantly by state:
+1. Tax: $999 × 0.0825 = **$82.42**
+2. Total: $999 + $82.42 = **$1,081.42**
+
+Going the other direction — a receipt shows **$1,081.42** total in Texas:
+
+1. Pre-tax: $1,081.42 ÷ 1.0825 = **$999.00**
+2. Tax paid: $1,081.42 − $999.00 = **$82.42**
+
+### US Sales Tax Rates by State
+
+Sales tax in the United States is set at the state and local level — there is no federal sales tax. Rates vary significantly:
 
 <table className="table table-sm my-4">
-<thead className="bg-base-200"><tr><th>State</th><th>State rate</th><th>Avg. combined rate</th></tr></thead>
-<tbody>
-<tr><td>California</td><td>7.25%</td><td>~8.7%</td></tr>
-<tr><td>Texas</td><td>6.25%</td><td>~8.2%</td></tr>
-<tr><td>New York</td><td>4.0%</td><td>~8.5%</td></tr>
-<tr><td>Florida</td><td>6.0%</td><td>~7.0%</td></tr>
-<tr><td>Oregon / Montana</td><td>0%</td><td>0%</td></tr>
-</tbody>
+  <thead className="bg-base-200">
+    <tr>
+      <th>State</th>
+      <th>State Rate</th>
+      <th>Avg. Local Rate</th>
+      <th>Avg. Combined</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>California</td><td>7.25%</td><td>1.57%</td><td>8.82%</td></tr>
+    <tr><td>Tennessee</td><td>7.00%</td><td>2.55%</td><td>9.55%</td></tr>
+    <tr><td>Texas</td><td>6.25%</td><td>1.94%</td><td>8.19%</td></tr>
+    <tr><td>New York</td><td>4.00%</td><td>4.52%</td><td>8.52%</td></tr>
+    <tr><td>Florida</td><td>6.00%</td><td>1.02%</td><td>7.02%</td></tr>
+    <tr><td>Washington</td><td>6.50%</td><td>2.67%</td><td>9.17%</td></tr>
+    <tr><td>Illinois</td><td>6.25%</td><td>2.56%</td><td>8.81%</td></tr>
+    <tr><td>Colorado</td><td>2.90%</td><td>4.87%</td><td>7.77%</td></tr>
+    <tr><td>Oregon</td><td>0%</td><td>0%</td><td>0%</td></tr>
+    <tr><td>Montana</td><td>0%</td><td>0%</td><td>0%</td></tr>
+  </tbody>
 </table>
 
-Five states have no state-level sales tax: **Alaska, Delaware, Montana, New Hampshire, and Oregon.**
+**Five states have no state sales tax:** Alaska, Delaware, Montana, New Hampshire, and Oregon. However, some Alaska localities still charge local sales tax.
 
-## Who Benefits from the Sales Tax Calculator?
+### Sales Tax vs. VAT — Key Differences
 
-- **Shoppers** — find out exactly how much you'll pay at checkout
-- **Business owners** — compute tax to add to invoices
-- **Travelers** — understand price differences between states
-- **Accountants** — verify calculations on receipts and invoices
+Most countries outside the US use a Value Added Tax (VAT) instead of sales tax. Here's how they differ:
 
-## See also
+| Feature | US Sales Tax | VAT (EU, UK, etc.) |
+|---|---|---|
+| **Collection point** | Final sale only | Every stage of production |
+| **Displayed price** | Usually pre-tax | Usually tax-inclusive |
+| **Federal vs. local** | State/local rates vary | Nationally uniform |
+| **Business recovery** | Sellers remit tax | Businesses reclaim input VAT |
+| **Typical rate** | 0 – 10.25% | 15 – 27% |
 
-- [Discount Calculator](/apps/discount-calculator) – Calculate sale prices and savings
-- [Tip Calculator](/apps/tip-calculator) – Calculate tip after tax
+### Common VAT Rates Worldwide
+
+| Country | Standard Rate | Reduced Rate |
+|---|---|---|
+| United Kingdom | 20% | 5% |
+| Germany | 19% | 7% |
+| France | 20% | 5.5% |
+| Japan (consumption tax) | 10% | 8% |
+| Canada (GST) | 5% | varies by province |
+| Australia (GST) | 10% | 0% (essentials) |
+
+### Tax-Exempt Items
+
+Many states exempt certain essential items from sales tax:
+
+- **Groceries** — Exempt in most states (not restaurants or prepared food)
+- **Prescription medications** — Exempt in all states
+- **Clothing** — Exempt in some states (PA, NJ, MN, NY under $110)
+- **School supplies** — Exempt during back-to-school tax holidays in many states
+- **Medical devices** — Often exempt
+
+### Tax Holidays
+
+Many states hold annual **sales tax holidays** — usually in August for back-to-school shopping. During these weekends, qualifying items (clothing, school supplies, computers) are exempt from sales tax. Check your state's department of revenue for dates and item limits.
 
 <FAQ items={[
-  { q: "How is VAT calculated?", a: "To add VAT to a price: multiply the net price by (1 + VAT rate/100). To remove VAT from a gross price: divide the gross price by (1 + VAT rate/100). For example, $100 + 20% VAT = $120." },
-  { q: "What is the difference between VAT and sales tax?", a: "VAT (Value Added Tax) is collected at each stage of production and distribution, with businesses reclaiming the tax they paid. Sales tax is collected only at the final point of sale by the retailer." },
-  { q: "Does the US have VAT?", a: "No — the US does not have a federal VAT. Instead, individual states levy sales tax at the point of purchase. VAT is standard in the European Union, UK, and most other countries." },
-  { q: "What are typical VAT rates in Europe?", a: "Standard VAT rates in the EU range from 17% (Luxembourg) to 27% (Hungary). The UK standard rate is 20%. Many countries apply reduced rates (5-10%) for essentials like food, medicine, and books." },
-  { q: "How do I calculate the pre-VAT price from a VAT-inclusive price?", a: "Divide the total price by (1 + VAT rate/100). For example, if a product costs $120 including 20% VAT: $120 / 1.20 = $100 pre-tax price." },
+  { q: "How is sales tax calculated?", a: "Multiply the pre-tax price by the tax rate (as a decimal). For example, $50 with 8% tax: $50 × 0.08 = $4.00 tax, so the total is $54.00. To reverse it, divide the total by (1 + rate): $54 ÷ 1.08 = $50." },
+  { q: "What is the difference between VAT and sales tax?", a: "VAT (Value Added Tax) is collected at each stage of production and distribution, with businesses reclaiming the tax they paid on inputs. Sales tax is collected only at the final point of sale by the retailer. The US uses sales tax; most other countries use VAT." },
+  { q: "Does the US have VAT?", a: "No — the US does not have a federal VAT or national sales tax. Instead, individual states and localities set their own sales tax rates. Combined state and local rates range from 0% to over 10% depending on location." },
+  { q: "What are typical VAT rates in Europe?", a: "Standard VAT rates in the EU range from 17% (Luxembourg) to 27% (Hungary). The UK standard rate is 20%. Most countries apply reduced rates of 5-10% for essentials like food, medicine, children's clothing, and books." },
+  { q: "How do I find my exact local sales tax rate?", a: "Your exact combined rate depends on your state, county, and city. Use your state's Department of Revenue website or enter your ZIP code at taxfoundation.org. Rates can change annually, so check before making large purchases." },
 ]} />
+
+### Related Tools
+
+- [Discount Calculator](/apps/discount-calculator) — Calculate sale prices and percent savings
+- [Tip Calculator](/apps/tip-calculator) — Calculate restaurant tips and split bills
+- [Percentage Calculator](/apps/percentage-calculator) — Work out any percentage calculation
+- [Tax Percentage Calculator](/apps/tax-percentage-calculator) — Find your effective income tax rate
+- [Currency Converter](/apps/currency-converter) — Convert prices between currencies
+
+### Sources
+
+- [Tax Foundation — State and Local Sales Tax Rates](https://taxfoundation.org/publications/state-and-local-sales-tax-rates/)
+- [Sales Tax Institute — State Rates](https://www.salestaxinstitute.com/resources/rates)
+- [Federation of Tax Administrators](https://www.taxadmin.org/state-tax-agencies)
+- [IRS — Sales Tax Deduction](https://www.irs.gov/taxtopics/tc503)

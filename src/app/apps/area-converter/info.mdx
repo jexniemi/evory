@@ -1,8 +1,26 @@
 import FAQ from "@/components/FAQ"
 
-## Area Converter – Convert square meters, hectares, acres and more
+## Area Converter – Convert Square Feet, Acres, Hectares and More
 
-The area converter converts area units instantly. Suitable for construction, property comparison, surveying and in connection with tourism.
+The area converter instantly translates between the most common area units used in real estate, construction, agriculture, and land surveying. Whether you are comparing home sizes listed in square feet, evaluating farmland in acres, or working with international measurements in hectares and square meters, this tool gives you accurate conversions in real time.
+
+### How Area Conversion Works
+
+Area conversion uses fixed ratios between units. All area units can be expressed relative to the square meter (m²), which serves as the base SI unit:
+
+> **Converted Area = Original Area × (Source Unit in m²) ÷ (Target Unit in m²)**
+
+For example, converting 2,500 square feet to square meters: 2,500 × 0.0929 = **232.3 m²**.
+
+### Worked Example
+
+You are looking at a 0.75-acre lot and want to know the size in square feet and square meters:
+
+- **Square feet:** 0.75 × 43,560 = **32,670 sq ft**
+- **Square meters:** 0.75 × 4,046.86 = **3,035 m²**
+- **Hectares:** 0.75 × 0.4047 = **0.304 ha**
+
+This is roughly the size of three-quarters of an American football field (including end zones).
 
 ### Area Unit Conversion Table
 
@@ -11,40 +29,81 @@ The area converter converts area units instantly. Suitable for construction, pro
     <tr className="bg-base-200">
       <th>Unit</th>
       <th>Abbreviation</th>
-      <th>Ratio to square meter</th>
+      <th>Equivalent in m²</th>
+      <th>Equivalent in ft²</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>Square meter</td><td>m²</td><td>1 m²</td></tr>
-    <tr><td>Square centimeter</td><td>cm²</td><td>0.0001 m²</td></tr>
-    <tr><td>Square kilometer</td><td>km²</td><td>1,000,000 m²</td></tr>
-    <tr><td>Square foot</td><td>ft²</td><td>0.0929 m²</td></tr>
-    <tr><td>Square yard</td><td>yd²</td><td>0.8361 m²</td></tr>
-    <tr><td>Hectare</td><td>ha</td><td>10,000 m²</td></tr>
-    <tr><td>Acre</td><td>ac</td><td>4,046.86 m²</td></tr>
+    <tr><td>Square inch</td><td>in²</td><td>0.000645</td><td>0.00694</td></tr>
+    <tr><td>Square foot</td><td>ft²</td><td>0.0929</td><td>1</td></tr>
+    <tr><td>Square yard</td><td>yd²</td><td>0.8361</td><td>9</td></tr>
+    <tr><td>Square meter</td><td>m²</td><td>1</td><td>10.764</td></tr>
+    <tr><td>Acre</td><td>ac</td><td>4,046.86</td><td>43,560</td></tr>
+    <tr><td>Hectare</td><td>ha</td><td>10,000</td><td>107,639</td></tr>
+    <tr><td>Square kilometer</td><td>km²</td><td>1,000,000</td><td>10,763,910</td></tr>
+    <tr><td>Square mile</td><td>mi²</td><td>2,589,988</td><td>27,878,400</td></tr>
   </tbody>
 </table>
 
-### Use Cases
+### Common Use Cases
 
-- **Real Estate** – Sizes of American homes are often stated in square feet (ft²). 1,000 ft² ≈ 93 m²
-- **Agriculture** – Field area is stated in hectares in many countries, in acres in the United States. 1 acre ≈ 0.4 ha
-- **Plot Size** – Housing fairs and real estate trade use m² or ha
+**Real estate:** Home sizes in the United States are listed in square feet. The median American home is about 2,300 sq ft (214 m²). When comparing properties internationally — for example, apartments in Europe listed in m² — quick conversion is essential.
 
-### Hectare and Acre
+**Agriculture and land:** Farmland in the U.S. is measured in acres. A typical small farm might be 50–100 acres. In most other countries, hectares are used. One section of land (used by the USDA and county assessors) equals 640 acres or about 259 hectares.
 
-Hectare (10,000 m²) is a common unit in agriculture and forestry. One acre is about 0.405 hectares — almost as large as an American football field.
+**Construction and landscaping:** Builders calculate material quantities based on area — flooring, paint, sod, and roofing are all priced per square foot or square yard. Converting between these units ensures accurate cost estimates.
 
-### See Also
+**Lot sizing and zoning:** City zoning codes specify minimum lot sizes in square feet or acres depending on the municipality. A typical suburban lot in the U.S. ranges from 0.1 to 0.5 acres (4,356–21,780 sq ft).
 
-- [Price Per Square Foot Calculator](/apps/price-per-square-foot-calculator) – Calculate apartment's price per square foot
-- [Length Converter](/apps/length-converter) – Convert length units
-- [Weight Converter](/apps/weight-converter) – Convert weight units
+### Quick Reference: Common Conversions
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>From</th>
+      <th>To</th>
+      <th>Multiply by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Square feet</td><td>Square meters</td><td>0.0929</td></tr>
+    <tr><td>Square meters</td><td>Square feet</td><td>10.764</td></tr>
+    <tr><td>Acres</td><td>Square feet</td><td>43,560</td></tr>
+    <tr><td>Acres</td><td>Hectares</td><td>0.4047</td></tr>
+    <tr><td>Hectares</td><td>Acres</td><td>2.471</td></tr>
+    <tr><td>Square miles</td><td>Acres</td><td>640</td></tr>
+    <tr><td>Square yards</td><td>Square feet</td><td>9</td></tr>
+  </tbody>
+</table>
+
+### Understanding Acres
+
+The acre is the most common land measurement unit in the United States. One acre equals 43,560 square feet — roughly the size of 75% of an American football field. Historical fun fact: an acre was originally defined as the amount of land a yoke of oxen could plow in one day.
+
+Common acre comparisons:
+- **1 acre** ≈ 16 tennis courts
+- **1 acre** ≈ 0.756 of a football field (including end zones)
+- **Manhattan** ≈ 14,600 acres
+- **Average U.S. farm** ≈ 445 acres (USDA 2022 data)
 
 <FAQ items={[
-  { q: "How many square feet are in an acre?", a: "One acre equals 43,560 square feet. This is a common conversion in US real estate and agriculture." },
-  { q: "How do I convert square feet to square meters?", a: "Multiply square feet by 0.0929. For example, 1,000 sq ft x 0.0929 = 92.9 m2." },
-  { q: "What is the difference between a hectare and an acre?", a: "A hectare equals 10,000 m2 (about 2.47 acres), while an acre equals 4,047 m2. Hectares are used in most countries; acres are standard in the US and UK." },
-  { q: "How many square meters are in a square kilometer?", a: "One square kilometer equals 1,000,000 square meters." },
-  { q: "How big is 1,000 square feet in square meters?", a: "1,000 square feet is approximately 92.9 square meters, a typical size for a one- or two-bedroom US apartment." },
+  { q: "How many square feet are in an acre?", a: "One acre equals 43,560 square feet. This is the standard conversion used in US real estate, agriculture, and land surveying." },
+  { q: "How do I convert square feet to square meters?", a: "Multiply square feet by 0.0929. For example, 2,000 sq ft × 0.0929 = 185.8 m². This conversion is useful when comparing US home sizes with international listings." },
+  { q: "What is the difference between a hectare and an acre?", a: "A hectare is 10,000 m² (about 2.47 acres), while an acre is 4,047 m² (about 0.405 hectares). The U.S. uses acres; most other countries use hectares." },
+  { q: "How big is a typical lot in the United States?", a: "A typical suburban lot ranges from about 0.1 to 0.5 acres (4,356 to 21,780 square feet). Urban lots can be much smaller, while rural lots are often 1 acre or more." },
+  { q: "What is a section of land?", a: "A section is a unit used by the USDA and county assessors equal to 1 square mile, or 640 acres (259 hectares). It dates back to the Public Land Survey System." },
 ]} />
+
+### Related Tools
+
+- [Square Footage Calculator](/apps/square-footage-calculator) — Calculate area from room dimensions
+- [Price Per Square Foot Calculator](/apps/price-per-square-foot-calculator) — Evaluate real estate value per sq ft
+- [Length Converter](/apps/length-converter) — Convert between feet, meters, miles, and more
+- [Weight Converter](/apps/weight-converter) — Convert pounds, kilograms, and other weight units
+- [Paint Calculator](/apps/paint-calculator) — Estimate paint needed based on wall area
+
+### Sources
+
+- [NIST — Handbook 44: Specifications and Tolerances](https://www.nist.gov/pml/owm/metric-si/si-units)
+- [USDA — Farms and Land in Farms (2022 Summary)](https://www.nass.usda.gov/Publications/Todays_Reports/reports/fnlo0223.pdf)
+- [Investopedia — Acre Definition](https://www.investopedia.com/terms/a/acre.asp)

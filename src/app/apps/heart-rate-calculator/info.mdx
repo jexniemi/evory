@@ -1,56 +1,121 @@
 import FAQ from "@/components/FAQ"
 
-## Heart Rate Calculator – Calculate heart rate zones for training
+## Heart Rate Calculator – Training Zone Calculator
 
-The heart rate calculator calculates 5 training zones using the Karvonen formula, which takes into account both maximum heart rate and resting heart rate. Training in the right heart rate zones enhances results and reduces the risk of overtraining.
+The heart rate calculator determines your five personalized training zones using the **Karvonen formula**, which factors in both maximum heart rate and resting heart rate. Training in the right heart rate zone maximizes results while minimizing injury risk and overtraining.
 
-### Karvonen Formula
+### The Karvonen Formula
 
-The Karvonen formula uses **heart rate reserve** (maximum heart rate − resting heart rate) for more accurate zone calculation:
+The Karvonen method calculates target heart rates using **Heart Rate Reserve (HRR)** — the difference between your maximum and resting heart rate:
 
-> **Training heart rate** = Resting heart rate + (Heart rate reserve × Intensity percentage)
+> **Target HR = Resting HR + (Heart Rate Reserve × Intensity %)**
 
-This provides a more individualized result than using only the percentage of maximum heart rate.
+> **Heart Rate Reserve = Max HR − Resting HR**
 
-### Maximum Heart Rate
+This formula provides more individualized zones than simply using a percentage of maximum heart rate because it accounts for your fitness level (reflected in your resting heart rate).
 
-The most common estimation formula is **220 − age**, but it is only an average. The actual maximum heart rate can deviate by 10–20 beats. The most accurate way to determine maximum heart rate is a test workout in strenuous conditions or a medical stress test.
+### Worked Example
 
-### 5 Heart Rate Zones
+A **35-year-old** with a **resting heart rate of 65 BPM**:
+
+- Estimated Max HR: 220 − 35 = **185 BPM**
+- Heart Rate Reserve: 185 − 65 = **120 BPM**
+- Zone 2 (60–70%): 65 + (120 × 0.60) to 65 + (120 × 0.70) = **137–149 BPM**
+- Zone 4 (80–90%): 65 + (120 × 0.80) to 65 + (120 × 0.90) = **161–173 BPM**
+
+### Maximum Heart Rate Estimation
+
+The most widely used formula is **220 − age**, but several alternatives exist for different populations:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Formula</th>
+      <th>Equation</th>
+      <th>Best For</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Fox (standard)</td><td>220 − age</td><td>General population</td></tr>
+    <tr><td>Tanaka (2001)</td><td>208 − (0.7 × age)</td><td>Adults, more accurate for older adults</td></tr>
+    <tr><td>Gulati (2010)</td><td>206 − (0.88 × age)</td><td>Women specifically</td></tr>
+    <tr><td>Gellish (2007)</td><td>207 − (0.7 × age)</td><td>Active adults</td></tr>
+  </tbody>
+</table>
+
+All formulas are estimates — actual max HR can vary by ±10–20 BPM between individuals of the same age. The most accurate way to determine your max HR is a graded exercise test supervised by a medical professional.
+
+### The Five Heart Rate Training Zones
 
 <table className="table table-sm my-4">
   <thead>
     <tr className="bg-base-200">
       <th>Zone</th>
       <th>Intensity</th>
-      <th>Benefit</th>
+      <th>Feel</th>
+      <th>Primary Benefit</th>
+      <th>Duration</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>Z1 – Recovery</td><td>50–60 %</td><td>Active recovery</td></tr>
-    <tr><td>Z2 – Basic endurance</td><td>60–70 %</td><td>Fat burning, aerobic base</td></tr>
-    <tr><td>Z3 – Aerobic power</td><td>70–80 %</td><td>Aerobic capacity</td></tr>
-    <tr><td>Z4 – Threshold</td><td>80–90 %</td><td>Lactate threshold, speed</td></tr>
-    <tr><td>Z5 – Maximum</td><td>90–100 %</td><td>VO2max, intervals</td></tr>
+    <tr><td>Z1 – Recovery</td><td>50–60%</td><td>Very easy</td><td>Active recovery, warm-up</td><td>30–60 min</td></tr>
+    <tr><td>Z2 – Aerobic Base</td><td>60–70%</td><td>Easy, conversational</td><td>Fat burning, endurance</td><td>60–180 min</td></tr>
+    <tr><td>Z3 – Aerobic Power</td><td>70–80%</td><td>Moderate effort</td><td>Aerobic capacity, stamina</td><td>30–60 min</td></tr>
+    <tr><td>Z4 – Threshold</td><td>80–90%</td><td>Hard, can speak a few words</td><td>Lactate threshold, speed</td><td>10–30 min</td></tr>
+    <tr><td>Z5 – Maximum</td><td>90–100%</td><td>All-out effort</td><td>VO₂max, anaerobic power</td><td>1–5 min intervals</td></tr>
   </tbody>
 </table>
 
-### Resting Heart Rate
+### Resting Heart Rate Reference
 
-The resting heart rate of a normal adult is 60–100 beats per minute. Well-conditioned athletes may have a resting heart rate of 40–50. Measure resting heart rate in the morning before getting up.
+Your resting heart rate is an important indicator of cardiovascular fitness:
 
-More information: [UKK Institute – Exercise Training](https://ukkinstituutti.fi/liikuntaharjoittelu)
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Resting HR (BPM)</th>
+      <th>Classification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Below 40</td><td>Elite athlete</td></tr>
+    <tr><td>40–50</td><td>Well-trained athlete</td></tr>
+    <tr><td>51–60</td><td>Very fit</td></tr>
+    <tr><td>61–70</td><td>Fit / above average</td></tr>
+    <tr><td>71–80</td><td>Average</td></tr>
+    <tr><td>81–100</td><td>Below average</td></tr>
+    <tr><td>Above 100</td><td>Consult a physician (tachycardia)</td></tr>
+  </tbody>
+</table>
 
-### See also
+**How to measure:** Take your pulse first thing in the morning before getting out of bed. Count beats for 60 seconds, or count for 30 seconds and multiply by 2. Average across 3–5 days for the most reliable result.
 
-- [Calorie Burn Calculator](/apps/calorie-burn-calculator) – Calculate activity calorie consumption
-- [Running Pace Calculator](/apps/running-pace-calculator) – Calculate running pace
-- [Macro Calculator](/apps/macro-calculator) – Calculate daily macronutrients
+### Training Tips by Zone
+
+- **80% of training in Zone 2** — The "80/20 rule" suggests 80% of your weekly training should be easy (Zone 1–2) and 20% hard (Zone 4–5). This approach builds a strong aerobic base while allowing adequate recovery.
+- **Zone 2 for weight loss** — While Zone 2 burns a higher percentage of fat, higher-intensity zones burn more total calories per minute. Both are effective for weight management.
+- **Zone 4 for race performance** — Threshold training (tempo runs, lactate intervals) teaches your body to sustain faster paces and delay fatigue.
+- **Zone 5 sparingly** — High-intensity intervals (HIIT) are powerful for VO₂max improvement but require 48+ hours of recovery. Limit to 1–2 sessions per week.
 
 <FAQ items={[
-  { q: "What is my maximum heart rate?", a: "The most common estimate is 220 minus your age. For a 30-year-old, estimated max heart rate is 190 BPM. The actual value can vary by 10-20 BPM between individuals." },
-  { q: "What heart rate zone burns the most fat?", a: "Zone 2 (60-70% of max heart rate) is called the fat-burning zone because a higher percentage of calories come from fat. However, higher-intensity zones burn more total calories per minute." },
-  { q: "What is the Karvonen formula?", a: "The Karvonen formula calculates target heart rate using heart rate reserve (max HR minus resting HR). Formula: Target HR = Resting HR + (HR Reserve x desired intensity%). This gives more personalized zones than percentage of max HR alone." },
-  { q: "What is a healthy resting heart rate?", a: "For adults, a normal resting heart rate is 60-100 BPM. Athletes typically have lower resting rates (40-60 BPM) due to a more efficient cardiovascular system." },
-  { q: "How should I measure my resting heart rate?", a: "Measure first thing in the morning before getting out of bed. Count beats for 60 seconds, or count for 30 seconds and double the result. Average over 3 days for the most accurate reading." },
+  { q: "What is my maximum heart rate?", a: "The most common estimate is 220 minus your age. For a 30-year-old, estimated max heart rate is 190 BPM. The actual value can vary by 10–20 BPM between individuals. A supervised exercise stress test provides the most accurate measurement." },
+  { q: "What heart rate zone burns the most fat?", a: "Zone 2 (60–70% of max HR) is called the 'fat-burning zone' because a higher percentage of calories come from fat. However, higher-intensity zones burn more total calories per minute, making both approaches effective for weight loss." },
+  { q: "What is the Karvonen formula?", a: "The Karvonen formula calculates target heart rate using Heart Rate Reserve (max HR minus resting HR). Formula: Target HR = Resting HR + (HR Reserve × desired intensity %). This gives more personalized zones than using percentage of max HR alone." },
+  { q: "What is a healthy resting heart rate?", a: "For adults, a normal resting heart rate is 60–100 BPM. Athletes typically have lower resting rates (40–60 BPM) due to a more efficient cardiovascular system. Consistently above 100 BPM at rest (tachycardia) warrants medical attention." },
+  { q: "How should I measure my resting heart rate?", a: "Measure first thing in the morning before getting out of bed. Count beats for 60 seconds, or count for 30 seconds and double the result. Average over 3–5 days for the most accurate reading." },
 ]} />
+
+### Related Tools
+
+- [Calorie Burn Calculator](/apps/calorie-burn-calculator) — Calculate calories burned during exercise
+- [Running Pace Calculator](/apps/running-pace-calculator) — Calculate pace, speed, and finish times
+- [BMI Calculator](/apps/bmi-calculator) — Check your Body Mass Index
+- [BMR Calculator](/apps/bmr-calculator) — Find your Basal Metabolic Rate
+- [Daily Calorie Needs Calculator](/apps/daily-calorie-needs-calculator) — Determine your daily calorie target
+
+### Sources
+
+- [American Heart Association — Target Heart Rates](https://www.heart.org/en/healthy-living/fitness/fitness-basics/target-heart-rates)
+- [CDC — Physical Activity Guidelines](https://www.cdc.gov/physicalactivity/basics/index.htm)
+- [Mayo Clinic — Heart Rate](https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/exercise-intensity/art-20046887)
+- [Tanaka et al. (2001) — Age-predicted maximal heart rate](https://pubmed.ncbi.nlm.nih.gov/11153730/)

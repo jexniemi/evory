@@ -1,25 +1,120 @@
 import FAQ from "@/components/FAQ"
 
-## How does the discount calculator work?
+## How Does the Discount Calculator Work?
 
-The discount calculator helps you find out how much money you save with a discount. Enter the original price and discount percentage into the calculator. The calculator calculates the discounted price using the formula:
+The discount calculator instantly shows you how much money you save on any purchase. Enter the original price and the discount percentage, and the tool calculates both the sale price and the dollar amount you save.
 
-**Discounted price = original price * (1 - discount percentage / 100)**
+### Discount Formulas
 
-Once the discounted price is calculated, the calculator also tells you the amount you save. This is calculated using the formula:
+> **Sale Price = Original Price × (1 − Discount % ÷ 100)**
 
-**Savings = original price * (discount percentage / 100)**
+> **Savings = Original Price × (Discount % ÷ 100)**
 
-This way, you get an accurate picture of how much the discount affects the price and how much money you save.
+To find the **original price** from a sale price:
 
-The discount calculator is a useful tool for anyone who wants to make smart purchases and save money. You can use it for everyday shopping as well as larger purchases. This helps you manage your finances better and make more informed decisions.
+> **Original Price = Sale Price ÷ (1 − Discount % ÷ 100)**
 
-Use the discount calculator and easily find out how much money you can save. This helps you plan your purchases more efficiently and take advantage of the best deals.
+To find the **discount percentage** between two prices:
+
+> **Discount % = ((Original − Sale) ÷ Original) × 100**
+
+### Worked Example
+
+A jacket is originally priced at **$120** and is on sale for **25% off**:
+
+- Savings = $120 × 0.25 = **$30**
+- Sale Price = $120 − $30 = **$90**
+
+If you also have a **10% coupon** on top of the sale price:
+
+- Additional savings = $90 × 0.10 = **$9**
+- Final price = $90 − $9 = **$81**
+- Total savings = $120 − $81 = **$39** (effective discount: 32.5%, not 35%)
+
+This demonstrates why **stacked discounts are not additive** — they compound sequentially.
+
+### Common Discount Quick-Reference Table
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Original Price</th>
+      <th>10% Off</th>
+      <th>20% Off</th>
+      <th>25% Off</th>
+      <th>30% Off</th>
+      <th>50% Off</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>$25</td><td>$22.50</td><td>$20.00</td><td>$18.75</td><td>$17.50</td><td>$12.50</td></tr>
+    <tr><td>$50</td><td>$45.00</td><td>$40.00</td><td>$37.50</td><td>$35.00</td><td>$25.00</td></tr>
+    <tr><td>$75</td><td>$67.50</td><td>$60.00</td><td>$56.25</td><td>$52.50</td><td>$37.50</td></tr>
+    <tr><td>$100</td><td>$90.00</td><td>$80.00</td><td>$75.00</td><td>$70.00</td><td>$50.00</td></tr>
+    <tr><td>$200</td><td>$180.00</td><td>$160.00</td><td>$150.00</td><td>$140.00</td><td>$100.00</td></tr>
+    <tr><td>$500</td><td>$450.00</td><td>$400.00</td><td>$375.00</td><td>$350.00</td><td>$250.00</td></tr>
+  </tbody>
+</table>
+
+### Major U.S. Sale Events
+
+Timing your purchases around major sales can save hundreds or even thousands of dollars per year. Here are the biggest discount events on the American shopping calendar:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Sale Event</th>
+      <th>When</th>
+      <th>Typical Discounts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Presidents' Day Sales</td><td>February</td><td>20–40% off furniture, mattresses</td></tr>
+    <tr><td>Memorial Day Sales</td><td>Late May</td><td>25–50% off appliances, outdoor gear</td></tr>
+    <tr><td>Amazon Prime Day</td><td>July</td><td>20–60% off electronics, household</td></tr>
+    <tr><td>Labor Day Sales</td><td>Early September</td><td>20–40% off seasonal items</td></tr>
+    <tr><td>Black Friday</td><td>Late November</td><td>30–70% off everything</td></tr>
+    <tr><td>Cyber Monday</td><td>Monday after Thanksgiving</td><td>25–50% off online deals</td></tr>
+    <tr><td>After-Christmas Sales</td><td>December 26–31</td><td>50–75% off holiday merchandise</td></tr>
+  </tbody>
+</table>
+
+### Smart Shopping Tips
+
+- **Compare unit prices** — A 20% discount on a larger size is not always better than a smaller size at full price. Use a [Unit Price Calculator](/apps/unit-price-calculator) to compare.
+- **Set price alerts** — Browser extensions like Honey or CamelCamelCamel track price history and notify you of drops.
+- **Watch for "fake" discounts** — Some retailers inflate original prices before a sale. The FTC requires that the "original price" reflect a genuine former selling price.
+- **Factor in sales tax** — A $100 item at 25% off costs $75 before tax. With 8% sales tax, your total is $81. Use a [Sales Tax Calculator](/apps/sales-tax-calculator) to check.
+- **Consider price matching** — Many major retailers (Target, Best Buy, Walmart) offer price-matching policies.
+
+### Markup vs. Discount
+
+It is important to understand that a **50% markup** followed by a **50% discount** does not bring you back to the original price:
+
+- Original cost: **$100**
+- After 50% markup: $100 × 1.50 = **$150**
+- After 50% discount: $150 × 0.50 = **$75**
+
+The final price is actually **25% below the original**, not equal. This asymmetry matters for both shoppers comparing deals and business owners setting prices.
 
 <FAQ items={[
-  { q: "How do I calculate a discount?", a: "Multiply the original price by the discount percentage divided by 100. For example, a 20% discount on $50 = $50 x 0.20 = $10 savings, giving a final price of $40." },
-  { q: "What is 30% off $80?", a: "30% of $80 = $24 savings. The discounted price is $80 - $24 = $56." },
-  { q: "How do I find the original price from a discounted price?", a: "Divide the sale price by (1 - discount/100). For example, if you paid $70 after a 30% discount: $70 / 0.70 = $100 original price." },
-  { q: "How do I calculate the discount percentage?", a: "Subtract the sale price from the original price, divide by the original price, then multiply by 100. Formula: (Original - Sale) / Original x 100." },
-  { q: "Can I stack multiple discounts?", a: "Stacked discounts are applied sequentially, not added together. A 20% discount followed by another 10% discount gives a combined discount of 28%, not 30%." },
+  { q: "How do I calculate a discount?", a: "Multiply the original price by the discount percentage divided by 100 to get the savings amount. Subtract that from the original price for the sale price. Example: 20% off $50 = $50 × 0.20 = $10 savings → $40 final price." },
+  { q: "What is 30% off $80?", a: "30% of $80 = $24 savings. The discounted price is $80 − $24 = $56." },
+  { q: "How do I find the original price from a discounted price?", a: "Divide the sale price by (1 − discount/100). For example, if you paid $70 after a 30% discount: $70 ÷ 0.70 = $100 original price." },
+  { q: "How do I calculate the discount percentage?", a: "Subtract the sale price from the original price, divide by the original price, then multiply by 100. Formula: ((Original − Sale) ÷ Original) × 100." },
+  { q: "Can I stack multiple discounts?", a: "Stacked discounts are applied sequentially, not added together. A 20% discount followed by a 10% discount gives a combined discount of 28%, not 30%. Each discount is applied to the already-reduced price." },
 ]} />
+
+### Related Tools
+
+- [Sales Tax Calculator](/apps/sales-tax-calculator) — Calculate sales tax on any purchase
+- [Percentage Calculator](/apps/percentage-calculator) — Solve any percentage problem
+- [Unit Price Calculator](/apps/unit-price-calculator) — Compare prices per unit across products
+- [VAT Calculator](/apps/vat-calculator) — Add or remove value-added tax from prices
+- [Tip Calculator](/apps/tip-calculator) — Calculate tips and split bills
+
+### Sources
+
+- [Federal Trade Commission — Advertising and Marketing Guides](https://www.ftc.gov/business-guidance/advertising-and-marketing)
+- [National Retail Federation — Consumer Spending Data](https://nrf.com/research-insights)
+- [Bureau of Labor Statistics — Consumer Price Index](https://www.bls.gov/cpi/)

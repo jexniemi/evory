@@ -1,40 +1,126 @@
 import FAQ from "@/components/FAQ"
 
-## Portion Calculator – Scale Recipe to the Right Serving Size
+## Portion Calculator – Scale Any Recipe to the Right Serving Size
 
-The portion calculator changes the number of servings in a recipe to your desired amount. Enter the original ingredients and serving size, select the desired serving size – the calculator scales all amounts automatically.
+Whether you are cooking for two or feeding a crowd of fifty, the portion calculator adjusts every ingredient in your recipe to the exact serving size you need. Enter the original ingredients and serving count, select your desired number of servings, and the calculator scales all amounts automatically — no mental math required.
 
-### When is a portion calculator useful?
+### The Scaling Formula
 
-- **Halving a recipe** – The cooking recipe is for 4, but you're cooking for only 2
-- **Increasing a recipe** – You want to make a cake for 20 people instead of the original 8
-- **Party cooking** – Scale the recipe for 50 people for parties
-- **Diet tracking** – Calculate exact gram amounts for a specific serving size
+> **Scaled Amount = Original Amount × (Desired Servings ÷ Original Servings)**
 
-### Scaling Factor
+This simple ratio works for virtually every ingredient. If a recipe serves 4 and you need 10 servings, the scaling factor is 10 ÷ 4 = **2.5**, and every ingredient is multiplied by 2.5.
 
-The scaling factor is calculated simply:
+### Worked Example
 
-> **Factor** = Desired serving size / Original serving size
+A cookie recipe makes **24 cookies** and calls for:
 
-For example, if the original recipe is for 4 and you want to make it for 10, the factor is 2.5 and all ingredients are multiplied by 2.5.
+- 2 cups all-purpose flour
+- 1 cup butter
+- ¾ cup sugar
+- 2 eggs
+- 1 tsp vanilla extract
 
-### Tips
+You want to make **60 cookies**. Scaling factor: 60 ÷ 24 = **2.5**
 
-- Note that **baking time does not always scale directly** with the amount – two cakes bake almost as fast as one
-- **For spices**, scaling usually works well, but check according to taste
-- **Baking powder and yeast** – In large quantities, the ratio may be slightly smaller than direct scaling
+| Ingredient | Original | Scaled (×2.5) |
+|---|---|---|
+| All-purpose flour | 2 cups | 5 cups |
+| Butter | 1 cup | 2.5 cups |
+| Sugar | ¾ cup | 1⅞ cups |
+| Eggs | 2 | 5 |
+| Vanilla extract | 1 tsp | 2.5 tsp |
 
-### See Also
+### Standard Serving Sizes in the US
 
-- [Discount Calculator](/apps/discount-calculator) – Calculate price changes
-- [Percentage Calculator](/apps/percentage-calculator) – Calculate percentages
-- [Macro Calculator](/apps/macro-calculator) – Calculate food macronutrients
+The USDA defines standard serving sizes for nutrition labeling. Knowing these helps you plan accurately:
+
+<table className="table table-sm my-4">
+  <thead>
+    <tr className="bg-base-200">
+      <th>Food Category</th>
+      <th>Standard Serving</th>
+      <th>Weight (approx.)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Cooked pasta/rice</td><td>1 cup</td><td>200 g (7 oz)</td></tr>
+    <tr><td>Meat/poultry</td><td>3 oz cooked</td><td>85 g</td></tr>
+    <tr><td>Fish</td><td>3 oz cooked</td><td>85 g</td></tr>
+    <tr><td>Vegetables (raw)</td><td>1 cup</td><td>~130 g</td></tr>
+    <tr><td>Vegetables (cooked)</td><td>½ cup</td><td>~90 g</td></tr>
+    <tr><td>Fruit</td><td>1 medium piece or 1 cup</td><td>~150 g</td></tr>
+    <tr><td>Cheese</td><td>1.5 oz</td><td>42 g</td></tr>
+    <tr><td>Bread</td><td>1 slice</td><td>~30 g</td></tr>
+    <tr><td>Cereal</td><td>1 cup</td><td>~30 g</td></tr>
+  </tbody>
+</table>
+
+### Planning Food for Parties and Events
+
+When cooking for large groups, use these per-person estimates as a starting point:
+
+<table className="table table-sm my-4">
+  <thead>
+    <tr className="bg-base-200">
+      <th>Category</th>
+      <th>Per Person</th>
+      <th>For 25 Guests</th>
+      <th>For 50 Guests</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Main protein</td><td>6–8 oz</td><td>10–12 lbs</td><td>20–25 lbs</td></tr>
+    <tr><td>Side dishes (total)</td><td>4–6 oz each</td><td>7–10 lbs</td><td>14–20 lbs</td></tr>
+    <tr><td>Salad</td><td>1 cup</td><td>4 lbs greens</td><td>8 lbs greens</td></tr>
+    <tr><td>Appetizers</td><td>5–6 pieces</td><td>125–150 pcs</td><td>250–300 pcs</td></tr>
+    <tr><td>Dessert</td><td>1 slice or 2–3 pieces</td><td>2 cakes / 75 pcs</td><td>4 cakes / 150 pcs</td></tr>
+    <tr><td>Beverages</td><td>2–3 drinks</td><td>50–75 drinks</td><td>100–150 drinks</td></tr>
+  </tbody>
+</table>
+
+### Scaling Tips and Common Mistakes
+
+- **Baking time does not scale linearly** — Two cakes bake in roughly the same time as one. Larger volumes may need slightly lower temperatures and longer times
+- **Seasoning and spices** — Start with 1.5× the original amount when doubling a recipe, then taste and adjust. Spices can become overpowering when scaled directly
+- **Baking powder and yeast** — For very large batches, reduce leavening by 10–20% per doubling. Excess baking powder creates a metallic taste
+- **Pan sizes matter** — Doubling a cake recipe requires a larger pan or two standard pans. Overcrowding reduces quality
+- **Salt to taste** — Never blindly scale salt. Add incrementally and taste as you go
+- **Eggs** — When scaling produces fractions (e.g., 3.5 eggs), beat the extra egg and measure half by volume
+
+### Unit Conversions for Cooking
+
+Quick reference for converting between US customary cooking measurements:
+
+| Measurement | Equivalent |
+|---|---|
+| 1 tablespoon | 3 teaspoons |
+| 1 cup | 16 tablespoons |
+| 1 cup | 8 fluid ounces |
+| 1 pint | 2 cups |
+| 1 quart | 4 cups |
+| 1 gallon | 16 cups |
+| 1 pound | 16 ounces |
+| 1 stick butter | ½ cup (8 tbsp) |
 
 <FAQ items={[
-  { q: "How do I scale a recipe for more people?", a: "Divide each ingredient by the original number of servings, then multiply by your desired number of servings. Our portion calculator does this automatically for any recipe." },
-  { q: "What is a standard serving size?", a: "Standard serving sizes vary by food type. For example: cooked pasta is 1 cup (200g), meat is 3-4 oz (85-115g), vegetables are 1 cup raw or 0.5 cup cooked, and grains are 0.5 cup cooked." },
-  { q: "How do I calculate food portions for a party?", a: "Plan approximately 0.5 lb (225g) of protein per person, 4-6 oz (115-170g) of side dishes, and 1-2 oz (28-56g) of appetizers. Scale up generously to avoid running short." },
-  { q: "How many grams is one portion of pasta?", a: "A standard dry pasta portion is about 75-85g per person, which yields roughly 180-200g cooked. For a main course, use 100g dry per person." },
-  { q: "What is the difference between a serving and a portion?", a: "A serving is a standardized unit used on nutrition labels. A portion is the actual amount you choose to eat, which may be larger or smaller than the official serving size." },
+  { q: "How do I scale a recipe for more people?", a: "Divide your desired number of servings by the recipe's original serving count to get the scaling factor. Multiply every ingredient by that factor. For example, scaling from 4 to 10 servings: 10 ÷ 4 = 2.5, so multiply all ingredients by 2.5." },
+  { q: "What is a standard serving size?", a: "Standard serving sizes are defined by the USDA for nutrition labeling. Common examples: cooked pasta is 1 cup (200g), meat is 3 oz (85g), vegetables are 1 cup raw or ½ cup cooked, and grains are ½ cup cooked." },
+  { q: "How do I calculate food portions for a party?", a: "Plan approximately 6-8 oz of protein per person, 4-6 oz of each side dish, 5-6 appetizer pieces, and 2-3 drinks. Add 10-15% extra for hearty eaters and to ensure you don't run short." },
+  { q: "How many grams is one portion of pasta?", a: "A standard dry pasta portion is about 75-85g (2.5-3 oz) per person, which yields roughly 180-200g (6-7 oz) cooked. For a main course or hungrier diners, use 100g (3.5 oz) dry per person." },
+  { q: "What is the difference between a serving and a portion?", a: "A serving is a standardized unit defined by the USDA for nutrition labeling (e.g., 1 cup of cereal). A portion is the actual amount you choose to eat, which may be larger or smaller than the official serving size." },
 ]} />
+
+### Related Tools
+
+- [Macro Calculator](/apps/macro-calculator) — Calculate daily protein, carbs, and fat needs
+- [Daily Calorie Needs Calculator](/apps/daily-calorie-needs-calculator) — Find your recommended daily calorie intake
+- [Percentage Calculator](/apps/percentage-calculator) — Calculate any percentage quickly
+- [Discount Calculator](/apps/discount-calculator) — Find sale prices after discounts
+- [Unit Price Calculator](/apps/unit-price-calculator) — Compare prices per unit at the grocery store
+
+### Sources
+
+- [USDA — Dietary Guidelines for Americans](https://www.dietaryguidelines.gov/)
+- [FDA — Serving Sizes on Nutrition Labels](https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label)
+- [King Arthur Baking — Scaling Recipes](https://www.kingarthurbaking.com/)
+- [USDA FoodData Central](https://fdc.nal.usda.gov/)

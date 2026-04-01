@@ -1,19 +1,126 @@
 import FAQ from "@/components/FAQ"
 
-## How are trip fuel costs calculated?
+## Fuel Cost Calculator
 
-Calculating trip fuel costs is easy and fast with our fuel cost calculator. Simply enter your trip distance in kilometers, your vehicle's average fuel consumption in liters per 100 kilometers, and the fuel price per liter in euros. The calculator immediately gives you an accurate estimate of your trip's fuel costs.
+The fuel cost calculator estimates how much you will spend on gasoline or diesel for any trip or time period. Enter the distance, your vehicle's fuel efficiency, and the current gas price to get an instant cost breakdown.
 
-The fuel cost calculator uses this information to first calculate the amount of fuel consumed during your trip. This is done by multiplying the trip distance by your vehicle's consumption, and the result is reported in liters. Then, the calculator calculates the total fuel costs by multiplying the consumed fuel amount by the fuel price.
+### How to Calculate Fuel Cost
 
-This tool is especially useful when planning long car trips or estimating the costs of your daily commutes. It helps you budget your trips accurately and save money. The calculator is a fast and easy way to get a clear picture of your trip's fuel costs.
+> **Fuel Needed (gallons) = Distance (miles) ÷ MPG**
 
-With our fuel cost calculator, you can make more informed decisions about traveling. You can compare the costs of different routes or consider whether public transport is a more economical option. Use our fuel cost calculator and find out how much you can save on your trip's fuel costs!
+> **Trip Cost = Fuel Needed × Price per Gallon**
+
+> **Cost per Mile = Price per Gallon ÷ MPG**
+
+### Worked Example
+
+You drive **60 miles round-trip** to work each day. Your car gets **28 MPG** and gas costs **$3.50/gallon**:
+
+- Daily fuel: 60 ÷ 28 = **2.14 gallons**
+- Daily cost: 2.14 × $3.50 = **$7.50**
+- Weekly cost (5 days): **$37.50**
+- Monthly cost (22 work days): **$165.00**
+- Annual commute cost: **$1,957**
+
+### U.S. Gas Price History and Averages
+
+Gas prices fluctuate based on crude oil prices, refining costs, taxes, and seasonal demand:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Year</th>
+      <th>Avg. Regular Gas ($/gal)</th>
+      <th>Notable Events</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>2020</td><td>$2.17</td><td>COVID-19 demand collapse</td></tr>
+    <tr><td>2021</td><td>$3.01</td><td>Post-pandemic recovery</td></tr>
+    <tr><td>2022</td><td>$3.97</td><td>Russia-Ukraine war, record highs</td></tr>
+    <tr><td>2023</td><td>$3.52</td><td>Prices eased from 2022 peak</td></tr>
+    <tr><td>2024</td><td>$3.40–$3.80</td><td>Moderate fluctuations</td></tr>
+  </tbody>
+</table>
+
+### State-by-State Gas Prices
+
+Gas prices vary significantly by state due to taxes, transportation costs, and local regulations:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>State</th>
+      <th>Avg. Price ($/gal)</th>
+      <th>State Gas Tax</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>California</td><td>$4.80+</td><td>68.1¢</td></tr>
+    <tr><td>Hawaii</td><td>$4.50+</td><td>16.0¢ + local</td></tr>
+    <tr><td>Washington</td><td>$4.20+</td><td>49.4¢</td></tr>
+    <tr><td>National Average</td><td>$3.50</td><td>18.4¢ (federal)</td></tr>
+    <tr><td>Texas</td><td>$2.90</td><td>20.0¢</td></tr>
+    <tr><td>Mississippi</td><td>$2.80</td><td>18.8¢</td></tr>
+  </tbody>
+</table>
+
+### Gasoline vs. Diesel vs. Electric
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Fuel Type</th>
+      <th>Typical Cost per Mile</th>
+      <th>Annual Cost (15k mi)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Regular gasoline (28 MPG)</td><td>12.5¢</td><td>$1,875</td></tr>
+    <tr><td>Diesel (35 MPG)</td><td>12.6¢</td><td>$1,886</td></tr>
+    <tr><td>Hybrid (50 MPG)</td><td>7.0¢</td><td>$1,050</td></tr>
+    <tr><td>Electric (home charging)</td><td>4.5¢</td><td>$672</td></tr>
+  </tbody>
+</table>
+
+### Tips for Saving on Fuel
+
+- **Use GasBuddy or Waze** — These apps show real-time local gas prices so you can find the cheapest station nearby.
+- **Fill up early in the week** — Gas prices tend to be lowest on Monday and Tuesday, and highest on Thursday and Friday.
+- **Use warehouse clubs** — Costco, Sam's Club, and BJ's typically sell gas 20–30 cents below market price.
+- **Pay with cash** — Some stations offer a 5–10 cent discount per gallon for cash vs. credit.
+- **Avoid premium if not required** — Most cars run perfectly on regular 87-octane gas. Check your owner's manual before paying extra for premium.
+- **Combine errands** — A warmed-up engine is more fuel-efficient. Short, separate trips each with a cold start waste gas.
+
+### Understanding MPG vs. L/100km
+
+The U.S. uses **miles per gallon (MPG)** — higher is better. Most of the world uses **liters per 100 kilometers (L/100km)** — lower is better. To convert:
+
+> **L/100km = 235.2 ÷ MPG**
+
+> **MPG = 235.2 ÷ L/100km**
+
+For example, 30 MPG = 7.84 L/100km.
 
 <FAQ items={[
-  { q: "How do I calculate fuel cost for a road trip?", a: "Divide the trip distance by your fuel efficiency (MPG or L/100km) to get fuel needed, then multiply by the price per gallon or liter. Our calculator does this automatically." },
-  { q: "What is the difference between MPG and L/100km?", a: "MPG (miles per gallon) is the US measure: higher is better. L/100km (liters per 100 kilometers) is the metric measure: lower is better. To convert: 235.2 divided by MPG equals L/100km." },
-  { q: "What is the average gas price in the US?", a: "US gas prices fluctuate with oil markets. The national average for regular unleaded gasoline was around $3.40-$3.80 per gallon in 2024." },
+  { q: "How do I calculate fuel cost for a road trip?", a: "Divide the trip distance by your fuel efficiency (MPG) to get gallons needed, then multiply by the price per gallon. Example: 500 miles ÷ 30 MPG × $3.50/gal = $58.33." },
+  { q: "What is the difference between MPG and L/100km?", a: "MPG (miles per gallon) is the U.S. measure — higher is better. L/100km (liters per 100 kilometers) is the metric measure — lower is better. To convert: 235.2 ÷ MPG = L/100km." },
+  { q: "What is the average gas price in the US?", a: "The national average for regular unleaded gasoline fluctuates between $3.00 and $4.00 per gallon (2024). Prices are highest in California ($4.80+) and lowest in southern states like Mississippi ($2.80)." },
   { q: "How much fuel does a car use on a 100-mile trip?", a: "A car getting 30 MPG uses about 3.3 gallons per 100 miles. At 25 MPG it uses 4 gallons, and at 20 MPG it uses 5 gallons." },
-  { q: "How can I improve my car's fuel efficiency?", a: "Maintain proper tire pressure, use cruise control on highways, avoid idling, keep up with tune-ups, and remove unnecessary weight. These tips can improve MPG by 5-15%." },
+  { q: "How can I improve my car's fuel efficiency?", a: "Maintain proper tire pressure, use cruise control on highways, avoid idling, keep up with tune-ups, and remove unnecessary weight from the trunk. These tips can improve MPG by 5–15%." },
 ]} />
+
+### Related Tools
+
+- [Driving Cost Calculator](/apps/driving-cost-calculator) — Calculate the full cost of any drive
+- [Gas Mileage Calculator](/apps/gas-mileage-calculator) — Track and calculate your actual MPG
+- [Electric Car Trip Cost Calculator](/apps/electric-car-trip-cost-calculator) — Compare EV costs to gas
+- [Car Loan Calculator](/apps/car-loan-calculator) — Estimate monthly car payments
+- [Savings Goal Calculator](/apps/savings-goal-calculator) — Plan savings from reduced fuel costs
+
+### Sources
+
+- [AAA — Gas Prices](https://gasprices.aaa.com/)
+- [U.S. Energy Information Administration — Gasoline Data](https://www.eia.gov/petroleum/gasdiesel/)
+- [EPA — Fuel Economy](https://fueleconomy.gov/)
+- [American Petroleum Institute — State Gas Taxes](https://www.api.org/oil-and-natural-gas/consumer-information/motor-fuel-taxes)

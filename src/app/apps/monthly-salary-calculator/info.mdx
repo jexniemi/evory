@@ -1,47 +1,130 @@
 import FAQ from "@/components/FAQ"
 
-## How to calculate monthly salary from hourly wage
+## Monthly Salary Calculator – Convert Hourly Wage to Monthly Income
 
-Monthly salary is calculated by multiplying hourly wage by monthly working hours:
+Knowing your monthly salary is essential for budgeting, applying for loans, and comparing job offers. Whether you earn an hourly wage, a weekly paycheck, or an annual salary, this calculator converts any pay rate into a clear monthly figure so you can plan your finances with confidence.
 
-**Monthly salary = Hourly wage × Weekly hours × 52 ÷ 12**
+### The Conversion Formula
 
-For example, with an hourly wage of $18/hr and 37.5 h weekly working hours, the monthly salary is approximately **$2,925/month**.
+> **Monthly Salary = Hourly Wage × Weekly Hours × 52 ÷ 12**
 
-### Most common weekly working hours
+The formula works because there are 52 work weeks in a year and 12 months. A standard full-time schedule in the United States is **40 hours per week**, which equals approximately **173.33 hours per month**.
+
+### Worked Example
+
+Suppose you earn **$22 per hour** and work a standard 40-hour week:
+
+1. Weekly gross pay: $22 × 40 = **$880**
+2. Annual gross pay: $880 × 52 = **$45,760**
+3. Monthly gross pay: $45,760 ÷ 12 = **$3,813.33**
+
+If you work overtime (e.g., 5 extra hours per week at 1.5× rate), add $22 × 1.5 × 5 × 52 ÷ 12 = **$715/month** of overtime pay.
+
+### Hourly Wage to Monthly Salary Conversion Table
 
 <table className="table table-sm my-4">
-<thead className="bg-base-200"><tr><th>Industry</th><th>Weekly working hours</th><th>Working hours/month</th></tr></thead>
-<tbody>
-<tr><td>Office work (general)</td><td>37.5 h</td><td>162.5</td></tr>
-<tr><td>Retail</td><td>37.5 h</td><td>162.5</td></tr>
-<tr><td>Industry</td><td>40 h</td><td>173.3</td></tr>
-<tr><td>Construction</td><td>40 h</td><td>173.3</td></tr>
-<tr><td>Healthcare</td><td>38.25 h</td><td>165.75</td></tr>
-</tbody>
+  <thead>
+    <tr className="bg-base-200">
+      <th>Hourly Wage</th>
+      <th>Weekly (40 h)</th>
+      <th>Monthly</th>
+      <th>Annual</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>$10.00</td><td>$400</td><td>$1,733</td><td>$20,800</td></tr>
+    <tr><td>$15.00</td><td>$600</td><td>$2,600</td><td>$31,200</td></tr>
+    <tr><td>$20.00</td><td>$800</td><td>$3,467</td><td>$41,600</td></tr>
+    <tr><td>$25.00</td><td>$1,000</td><td>$4,333</td><td>$52,000</td></tr>
+    <tr><td>$30.00</td><td>$1,200</td><td>$5,200</td><td>$62,400</td></tr>
+    <tr><td>$35.00</td><td>$1,400</td><td>$6,067</td><td>$72,800</td></tr>
+    <tr><td>$40.00</td><td>$1,600</td><td>$6,933</td><td>$83,200</td></tr>
+    <tr><td>$50.00</td><td>$2,000</td><td>$8,667</td><td>$104,000</td></tr>
+  </tbody>
 </table>
 
-Monthly working hours are obtained by the formula: weekly hours × 52 weeks ÷ 12 months.
+### Weekly Hours by Industry
 
-### When is converting hourly wage to monthly salary useful?
+Not all jobs follow a standard 40-hour week. Here are typical weekly schedules by industry in the United States:
 
-- **Job change** — hourly paid work changes to monthly paid, and you want to compare income level
-- **Loan application** — banks usually ask for monthly incomes, not hourly wage
-- **Budgeting** — monthly salary is an easier starting point for planning expenses
-- **Part-time work** — find out how much you earn per month with a smaller number of hours
+<table className="table table-sm my-4">
+  <thead>
+    <tr className="bg-base-200">
+      <th>Industry</th>
+      <th>Avg. Weekly Hours</th>
+      <th>Monthly Hours</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Office / Professional</td><td>40 h</td><td>173.3</td></tr>
+    <tr><td>Retail</td><td>31 h</td><td>134.3</td></tr>
+    <tr><td>Manufacturing</td><td>40.3 h</td><td>174.6</td></tr>
+    <tr><td>Construction</td><td>39.3 h</td><td>170.4</td></tr>
+    <tr><td>Healthcare</td><td>36.5 h</td><td>158.2</td></tr>
+    <tr><td>Leisure & Hospitality</td><td>25.5 h</td><td>110.5</td></tr>
+    <tr><td>Mining & Logging</td><td>43.8 h</td><td>189.8</td></tr>
+  </tbody>
+</table>
 
-### Gross or net?
+### When Is This Calculator Useful?
 
-The calculator works with both gross and net salary. Employment contracts and job advertisements usually state gross salary. If you want to know the take-home amount, use net salary.
+- **Switching from hourly to salaried** — Compare what a job offer really pays on a monthly basis
+- **Loan applications** — Banks and mortgage lenders ask for monthly income, not hourly rate
+- **Budgeting** — The 50/30/20 rule works best with a clear monthly number: 50% for needs, 30% for wants, 20% for savings
+- **Part-time work** — See how reduced hours impact your monthly take-home pay
+- **Freelance income** — Estimate monthly revenue based on billable hours
 
-**Sources:**
-- [U.S. Bureau of Labor Statistics – Hours at Work](https://www.bls.gov)
-- [SHRM – Working Hours and Pay](https://www.shrm.org)
+### Gross vs. Net Monthly Salary
+
+Your **gross monthly salary** is total compensation before deductions. Your **net monthly salary** (take-home pay) is what you actually receive after:
+
+- **Federal income tax** — 10% to 37% depending on income bracket
+- **Social Security** — 6.2% of wages up to $168,600 (2024)
+- **Medicare** — 1.45% of all wages (plus 0.9% surtax above $200,000)
+- **State income tax** — 0% (Texas, Florida, etc.) to 13.3% (California)
+- **Other deductions** — 401(k) contributions, health insurance premiums, union dues
+
+For a $4,000 gross monthly salary, typical net pay ranges from **$3,000 to $3,400** depending on your state and filing status.
+
+### Median Monthly Salaries by Occupation
+
+<table className="table table-sm my-4">
+  <thead>
+    <tr className="bg-base-200">
+      <th>Occupation</th>
+      <th>Median Monthly Salary</th>
+      <th>Median Annual Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Registered Nurse</td><td>$6,917</td><td>$83,000</td></tr>
+    <tr><td>Software Developer</td><td>$10,375</td><td>$124,500</td></tr>
+    <tr><td>Elementary Teacher</td><td>$5,167</td><td>$62,000</td></tr>
+    <tr><td>Accountant</td><td>$6,583</td><td>$79,000</td></tr>
+    <tr><td>Truck Driver</td><td>$4,375</td><td>$52,500</td></tr>
+    <tr><td>Retail Sales Worker</td><td>$2,583</td><td>$31,000</td></tr>
+  </tbody>
+</table>
 
 <FAQ items={[
-  { q: "How do I calculate my monthly salary from annual salary?", a: "Divide your annual gross salary by 12. For example, a $60,000 annual salary equals $5,000 per month gross." },
-  { q: "What is the difference between gross and net monthly salary?", a: "Gross salary is your pay before any deductions. Net salary (take-home pay) is what remains after federal and state income taxes, Social Security (6.2%), Medicare (1.45%), and other deductions." },
-  { q: "How do I calculate monthly pay from an hourly rate?", a: "Multiply your hourly rate by weekly hours, then multiply by 52 and divide by 12. For example, $20/hr x 40 hrs x 52 / 12 = $3,467/month." },
-  { q: "What is a typical monthly salary in the US?", a: "The US median personal income is approximately $4,200-$4,500 per month (around $50,000-$54,000 per year) as of 2024. This varies widely by industry, location, and experience." },
-  { q: "How much of my monthly salary should I save?", a: "A common guideline is the 50/30/20 rule: 50% for needs, 30% for wants, and 20% for savings and debt repayment. Financial experts recommend saving at least 15% of gross income for retirement." },
+  { q: "How do I calculate my monthly salary from annual salary?", a: "Divide your annual gross salary by 12. For example, a $60,000 annual salary equals $5,000 per month gross before taxes and deductions." },
+  { q: "What is the difference between gross and net monthly salary?", a: "Gross salary is your total pay before any deductions. Net salary (take-home pay) is what remains after federal and state income taxes, Social Security (6.2%), Medicare (1.45%), and other withholdings like 401(k) and insurance." },
+  { q: "How do I calculate monthly pay from an hourly rate?", a: "Multiply your hourly rate by weekly hours, then multiply by 52 and divide by 12. For example, $20/hr × 40 hours × 52 ÷ 12 = $3,467 per month gross." },
+  { q: "What is a typical monthly salary in the US?", a: "The U.S. median personal income is approximately $4,500 per month (around $54,000 per year) as of 2024, according to the Bureau of Labor Statistics. This varies widely by occupation, location, and experience." },
+  { q: "How much of my monthly salary should I save?", a: "The 50/30/20 rule recommends 50% for necessities, 30% for wants, and 20% for savings and debt repayment. Financial advisors also recommend contributing at least 10-15% of gross income to retirement accounts." },
 ]} />
+
+### Related Tools
+
+- [Hourly Salary Calculator](/apps/hourly-salary-calculator) — Convert monthly or annual salary to hourly rate
+- [Annual Salary Calculator](/apps/annual-salary-calculator) — Calculate your yearly earnings
+- [Net Salary Calculator](/apps/net-salary-calculator) — Estimate take-home pay after taxes
+- [Paycheck Calculator](/apps/paycheck-calculator) — Calculate your biweekly or weekly paycheck
+- [Overtime Calculator](/apps/overtime-calculator) — Figure out overtime pay at 1.5× rate
+
+### Sources
+
+- [U.S. Bureau of Labor Statistics — Average Hours and Earnings](https://www.bls.gov/ces/)
+- [IRS — Tax Withholding Estimator](https://www.irs.gov/individuals/tax-withholding-estimator)
+- [SHRM — Compensation & Benefits](https://www.shrm.org/topics-tools/topics/compensation-benefits)
+- [SSA — Social Security Tax Rates](https://www.ssa.gov/oact/cola/cbb.html)

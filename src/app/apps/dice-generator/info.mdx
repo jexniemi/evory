@@ -6,73 +6,91 @@ The dice generator is a convenient tool for virtual dice rolling. It is suitable
 
 ### Supported Dice Types
 
-The dice generator supports several different dice known from the world of role-playing games:
+The dice generator supports several different dice known from the world of tabletop gaming:
 
 <table className="table table-sm my-4">
-<thead className="bg-base-200"><tr><th>Dice</th><th>Sides</th><th>Use</th></tr></thead>
+<thead className="bg-base-200"><tr><th>Dice</th><th>Sides</th><th>Shape</th><th>Common Use</th></tr></thead>
 <tbody>
-<tr><td>d4</td><td>4</td><td>Tetrahedron, role-playing games</td></tr>
-<tr><td>d6</td><td>6</td><td>Standard die, board games</td></tr>
-<tr><td>d8</td><td>8</td><td>Octahedron, role-playing games</td></tr>
-<tr><td>d10</td><td>10</td><td>Percentile die, role-playing games</td></tr>
-<tr><td>d12</td><td>12</td><td>Dodecahedron, role-playing games</td></tr>
-<tr><td>d20</td><td>20</td><td>Icosahedron, D&D and other role-playing games</td></tr>
-<tr><td>d100</td><td>100</td><td>Percentage results</td></tr>
+<tr><td>d4</td><td>4</td><td>Tetrahedron</td><td>Small damage rolls in D&D</td></tr>
+<tr><td>d6</td><td>6</td><td>Cube</td><td>Board games, Yahtzee, GURPS</td></tr>
+<tr><td>d8</td><td>8</td><td>Octahedron</td><td>Weapon damage in RPGs</td></tr>
+<tr><td>d10</td><td>10</td><td>Pentagonal trapezohedron</td><td>Percentile rolls, World of Darkness</td></tr>
+<tr><td>d12</td><td>12</td><td>Dodecahedron</td><td>Heavy weapon damage in D&D</td></tr>
+<tr><td>d20</td><td>20</td><td>Icosahedron</td><td>D&D attack rolls, skill checks, saves</td></tr>
+<tr><td>d100</td><td>100</td><td>Two d10s combined</td><td>Percentage results, random tables</td></tr>
 </tbody>
 </table>
 
-### How are random numbers generated?
+### How Are Random Numbers Generated?
 
-The dice generator uses JavaScript's `Math.random()` function, which produces pseudorandom numbers. Each roll is independent, just like a real die roll. The result is evenly distributed among all possible values.
+The dice generator uses JavaScript's `Math.random()` function, which produces pseudorandom numbers. Each roll is independent, just like a real die roll. The result is evenly distributed among all possible values — meaning every face has an equal probability of appearing.
 
-### Probabilities in rolling two d6 dice
+For a single die with *n* sides, the probability of any specific result is:
 
-The probabilities of the sum of two six-sided dice:
+> **P(any face) = 1 ÷ n**
+
+A d6 has a 1/6 (16.67%) chance of landing on any number from 1 to 6. A d20 has a 1/20 (5%) chance for each number.
+
+### Probabilities When Rolling Two d6 Dice
+
+When rolling two six-sided dice and summing the results, not all totals are equally likely. The sum of 7 has the most possible combinations:
 
 <table className="table table-sm my-4">
 <thead className="bg-base-200"><tr><th>Sum</th><th>Combinations</th><th>Probability</th></tr></thead>
 <tbody>
-<tr><td>2</td><td>1</td><td>2.78 %</td></tr>
-<tr><td>3</td><td>2</td><td>5.56 %</td></tr>
-<tr><td>4</td><td>3</td><td>8.33 %</td></tr>
-<tr><td>5</td><td>4</td><td>11.11 %</td></tr>
-<tr><td>6</td><td>5</td><td>13.89 %</td></tr>
-<tr><td>7</td><td>6</td><td>16.67 %</td></tr>
-<tr><td>8</td><td>5</td><td>13.89 %</td></tr>
-<tr><td>9</td><td>4</td><td>11.11 %</td></tr>
-<tr><td>10</td><td>3</td><td>8.33 %</td></tr>
-<tr><td>11</td><td>2</td><td>5.56 %</td></tr>
-<tr><td>12</td><td>1</td><td>2.78 %</td></tr>
+<tr><td>2</td><td>1 (1+1)</td><td>2.78%</td></tr>
+<tr><td>3</td><td>2</td><td>5.56%</td></tr>
+<tr><td>4</td><td>3</td><td>8.33%</td></tr>
+<tr><td>5</td><td>4</td><td>11.11%</td></tr>
+<tr><td>6</td><td>5</td><td>13.89%</td></tr>
+<tr><td>7</td><td>6 (1+6, 2+5, 3+4, 4+3, 5+2, 6+1)</td><td>16.67%</td></tr>
+<tr><td>8</td><td>5</td><td>13.89%</td></tr>
+<tr><td>9</td><td>4</td><td>11.11%</td></tr>
+<tr><td>10</td><td>3</td><td>8.33%</td></tr>
+<tr><td>11</td><td>2</td><td>5.56%</td></tr>
+<tr><td>12</td><td>1 (6+6)</td><td>2.78%</td></tr>
 </tbody>
 </table>
 
-The sum of 7 is the most probable result (16.67 %).
+This distribution forms a **bell curve** — results near the middle (6, 7, 8) are far more common than the extremes (2, 12). Understanding this is key to games like Settlers of Catan, where resource-producing tiles placed on 6 and 8 are more valuable than those on 2 or 12.
 
 ### Use Cases
 
-**Board Games:** When real dice are lost or playing remotely, virtual dice replace physical dice.
+**Board Games:** When real dice are lost, playing remotely over video call, or when you need a neutral roller everyone trusts, virtual dice are the perfect solution. Games like Monopoly, Risk, Backgammon, and Yahtzee all use standard d6 dice.
 
-**Role-Playing Games (D&D, Pathfinder):** The d20 die is the core of role-playing games. The dice generator supports all necessary dice types for attack, skill, and saving throws.
+**Tabletop Role-Playing Games (D&D, Pathfinder, Call of Cthulhu):** The d20 is the core die in Dungeons & Dragons 5th Edition. The dice generator supports all dice types needed for attack rolls, damage rolls, ability checks, and saving throws. A standard D&D set includes d4, d6, d8, d10, d10 (percentile), d12, and d20.
 
-**Education:** Illustrating probability calculation – roll hundreds of times and observe the distribution of results.
+**Education and Probability:** Teachers use virtual dice to demonstrate probability, statistics, and expected value. Roll hundreds of times to observe the law of large numbers in action — the distribution converges toward the theoretical probabilities as sample size increases.
 
-**Decision Making:** When any option is equally good, let the dice decide!
+**Decision Making and Randomization:** When any option is equally valid, let the dice decide. A d6 can choose between six restaurants, a d20 can pick a random student to answer a question, and a d100 can generate random percentages.
 
 ### Features
 
-- 🎲 Selectable 1–10 dice at a time
-- 🎯 Supported dice types: d4, d6, d8, d10, d12, d20, d100
-- 📊 Roll history is saved automatically
-- ✨ Animated dice rolling adds atmosphere
-- 📱 Works on all devices
-
-**Sources:**
-- [Probability – Wikipedia](https://en.wikipedia.org/wiki/Probability)
+- 🎲 Roll 1–10 dice simultaneously
+- 🎯 All standard RPG dice types: d4, d6, d8, d10, d12, d20, d100
+- 📊 Roll history saved automatically
+- ✨ Animated dice rolling for realism
+- 📱 Works on all devices — phone, tablet, and desktop
 
 <FAQ items={[
-  { q: "How do I roll dice online?", a: "Use the virtual dice generator above: select the number and type of dice (d4, d6, d8, d10, d12, d20, d100) and click Roll. Each result is randomly generated." },
-  { q: "What is a d20 dice used for?", a: "The d20 (20-sided die) is the core die in Dungeons and Dragons and many other tabletop RPGs, used for attack rolls, ability checks, and saving throws." },
-  { q: "Are virtual dice rolls truly random?", a: "Virtual dice use pseudorandom number generators (like JavaScript Math.random()), which produce statistically uniform results — virtually equivalent to physical dice for gaming purposes." },
+  { q: "How do I roll dice online?", a: "Use the virtual dice generator above: select the number and type of dice (d4, d6, d8, d10, d12, d20, d100) and click Roll. Each result is randomly generated with equal probability for all faces." },
+  { q: "What is a d20 dice used for?", a: "The d20 (20-sided die) is the core die in Dungeons & Dragons and many other tabletop RPGs. It is used for attack rolls, ability checks, and saving throws. Rolling a natural 20 is a critical hit." },
+  { q: "Are virtual dice rolls truly random?", a: "Virtual dice use pseudorandom number generators (like JavaScript's Math.random()), which produce statistically uniform results — virtually equivalent to physical dice for gaming purposes. For cryptographic randomness, specialized APIs exist, but for games, PRNG is more than sufficient." },
   { q: "What is the most common result when rolling two d6 dice?", a: "The sum of 7 is the most common result (16.67% probability) when rolling two six-sided dice, because it has the most combinations: 1+6, 2+5, 3+4, 4+3, 5+2, 6+1." },
   { q: "What dice do you need for D&D?", a: "A standard D&D set includes seven dice: d4, d6, d8, two d10s (one for tens digit), d12, and d20. The virtual dice generator here supports all of these types." },
 ]} />
+
+### Related Tools
+
+- [Random Number Generator](/apps/random-number-generator) — Generate random numbers in any range
+- [Lottery Number Generator](/apps/lottery-number-generator) — Generate lottery picks
+- [Coin Flip](/apps/coin-flip) — Virtual coin toss for heads or tails
+- [Raffle Machine](/apps/raffle-machine) — Random name or item picker
+- [Rock Paper Scissors](/apps/rock-paper-scissors) — Play RPS against the computer
+
+### Sources
+
+- [Probability – Wikipedia](https://en.wikipedia.org/wiki/Probability)
+- [Wizards of the Coast — D&D Basic Rules](https://www.dndbeyond.com/sources/basic-rules)
+- [Khan Academy — Probability and Statistics](https://www.khanacademy.org/math/statistics-probability)
+- [Math is Fun — Dice Probabilities](https://www.mathsisfun.com/data/probability-dice.html)

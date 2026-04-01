@@ -1,19 +1,111 @@
 import FAQ from "@/components/FAQ"
 
-## How is the carbon footprint of flights calculated?
+## How Is the Carbon Footprint of a Flight Calculated?
 
-The flight carbon footprint calculator helps you find out the environmental impact of your flight. Enter the details of the departure and destination airports into the calculator. The calculator calculates the distance between these two airports using the Haversine formula, which takes into account the curvature of the Earth and gives an accurate distance in kilometers.
+The flight carbon footprint calculator estimates the CO₂ emissions produced by your air travel. Enter your departure and destination airports, and the tool calculates the great-circle distance using the **Haversine formula**, estimates fuel consumption, and converts it to carbon dioxide emissions.
 
-Then, the calculator estimates fuel consumption using an average value of about 2.5 liters of fuel per passenger kilometer. This estimate is based on the average fuel consumption of commercial aircraft. The calculator calculates the total fuel consumption during the flight and uses this value to calculate carbon dioxide emissions (CO2).
+### The Calculation Formula
 
-One liter of aviation fuel produces about 2.5 kilograms of carbon dioxide. The calculator multiplies the fuel consumption by the carbon dioxide production value, so you can find out the total emissions of your flight. With this information, you can understand the environmental impact of flying and make more informed decisions about your travel.
+The calculator uses these steps:
 
-Use the flight carbon footprint calculator and easily find out how much carbon dioxide emissions your trip produces. This helps you plan more responsible travel methods and reduce your environmental impact.
+> **Distance = Haversine formula (accounts for Earth's curvature)**
+
+> **Fuel Used = Distance × Average Fuel Burn per Passenger-km**
+
+> **CO₂ Emissions = Fuel Used × CO₂ per Liter of Jet Fuel (2.5 kg)**
+
+Commercial aircraft consume approximately **2.5 liters of jet fuel per passenger per 100 km** on average. Since one liter of aviation kerosene (Jet A-1) produces about **2.5 kg of CO₂**, the effective emission rate is roughly **6.25 kg CO₂ per 100 passenger-km**.
+
+### Worked Example
+
+A round-trip flight from **New York (JFK) to Los Angeles (LAX)** — approximately 2,475 miles (3,983 km) each way:
+
+- One-way fuel: 3,983 km × 0.025 L/km = **99.6 liters**
+- One-way CO₂: 99.6 × 2.5 kg = **249 kg CO₂**
+- Round-trip CO₂: 249 × 2 = **498 kg CO₂**
+
+For context, the average American produces about **16 tonnes of CO₂ per year** total. A single cross-country round trip accounts for roughly **3%** of your annual carbon footprint.
+
+### Flight Emissions by Distance
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Route Example</th>
+      <th>Distance (mi)</th>
+      <th>CO₂ per Passenger</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>NYC → Washington, D.C.</td><td>225</td><td>~60 kg</td></tr>
+    <tr><td>NYC → Chicago</td><td>740</td><td>~130 kg</td></tr>
+    <tr><td>NYC → Los Angeles</td><td>2,475</td><td>~250 kg</td></tr>
+    <tr><td>NYC → London</td><td>3,460</td><td>~350 kg</td></tr>
+    <tr><td>NYC → Tokyo</td><td>6,750</td><td>~680 kg</td></tr>
+    <tr><td>NYC → Sydney</td><td>9,930</td><td>~1,000 kg</td></tr>
+  </tbody>
+</table>
+
+### Flying vs. Other Transportation
+
+Per passenger-kilometer, flying produces significantly more CO₂ than most ground transport options:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Transport Mode</th>
+      <th>g CO₂ per Passenger-km</th>
+      <th>Relative to Flying</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Domestic flight</td><td>~255</td><td>1.0× (baseline)</td></tr>
+    <tr><td>Driving alone (gas car)</td><td>~170</td><td>0.67×</td></tr>
+    <tr><td>Driving with 3 passengers</td><td>~57</td><td>0.22×</td></tr>
+    <tr><td>Long-distance bus</td><td>~27</td><td>0.11×</td></tr>
+    <tr><td>Intercity train (Amtrak)</td><td>~41</td><td>0.16×</td></tr>
+    <tr><td>Electric train (high-speed)</td><td>~6</td><td>0.02×</td></tr>
+  </tbody>
+</table>
+
+### The Radiative Forcing Multiplier
+
+Aircraft emissions at high altitude have a **greater warming effect** than the same CO₂ emitted at ground level. This is due to:
+
+- **Contrails** — The white trails behind aircraft can form cirrus clouds that trap heat
+- **Nitrogen oxides (NOx)** — At altitude, NOx creates short-lived ozone (a greenhouse gas) and destroys methane
+- **Water vapor** — Released at altitude where it has a greenhouse effect
+
+Scientists estimate a **radiative forcing multiplier of 1.9–4.0×**, meaning the total climate impact of flying is roughly 2–4 times greater than CO₂ alone. Some carbon offset programs apply a 2× multiplier to account for this.
+
+### How to Reduce Your Flight Emissions
+
+- **Fly direct** — Takeoffs and landings are the most fuel-intensive phases. A layover can increase emissions by 20–30%.
+- **Choose economy class** — Business class has a 3× larger footprint per passenger; first class can be 4–5× higher.
+- **Fly newer aircraft** — Boeing 787 and Airbus A350 models are 20–25% more fuel-efficient than older planes.
+- **Opt for airlines with high load factors** — Fuller planes mean fewer emissions per passenger.
+- **Carbon offsets** — Certified programs like Gold Standard or Verra fund renewable energy and reforestation projects. Typical cost: $10–$30 per tonne of CO₂.
+- **Consider alternatives** — For trips under 500 miles, trains, buses, or carpooling produce a fraction of the emissions.
 
 <FAQ items={[
-  { q: "How much CO2 does a flight produce per passenger?", a: "A typical short-haul flight (~500 miles) produces roughly 100-150 kg CO2 per passenger. A transatlantic flight (New York to London) emits approximately 700-900 kg CO2 per person." },
-  { q: "Is flying the most polluting form of transport?", a: "Per kilometer, flying has a higher carbon footprint than most ground transport. A domestic flight emits roughly 255g CO2/km per passenger, compared to ~41g for rail travel." },
-  { q: "How is a flight's carbon footprint calculated?", a: "The calculator uses the Haversine formula for great-circle distance, estimates fuel burn at ~2.5 liters per passenger per 100 km, then converts to CO2 (1 liter of jet fuel ~ 2.5 kg CO2)." },
-  { q: "How can I offset my flight carbon emissions?", a: "You can offset through certified programs like Gold Standard or Verified Carbon Standard that fund renewable energy or forestry projects. The cost is typically $10-$30 per tonne of CO2." },
-  { q: "What is the radiative forcing effect of flights?", a: "Aircraft emissions at altitude have about 2-4 times the warming impact of ground-level CO2 because of contrails and high-altitude NOx effects." },
+  { q: "How much CO2 does a flight produce per passenger?", a: "A typical short-haul domestic flight (~500 miles) produces roughly 100–150 kg CO₂ per passenger. A transatlantic flight (New York to London) emits approximately 350 kg CO₂. A long-haul flight to Asia can exceed 700 kg." },
+  { q: "Is flying the most polluting form of transport?", a: "Per passenger-kilometer, flying has a higher carbon footprint than most ground transport. A domestic flight emits roughly 255g CO₂/km per passenger, compared to ~41g for rail and ~27g for long-distance bus." },
+  { q: "How is a flight's carbon footprint calculated?", a: "The calculator uses the Haversine formula for great-circle distance, estimates fuel burn at ~2.5 liters per passenger per 100 km, then converts to CO₂ (1 liter of jet fuel ≈ 2.5 kg CO₂)." },
+  { q: "How can I offset my flight carbon emissions?", a: "You can offset through certified programs like Gold Standard or Verra (formerly VCS) that fund renewable energy, forestry, or methane capture projects. The cost is typically $10–$30 per tonne of CO₂." },
+  { q: "What is the radiative forcing effect of flights?", a: "Aircraft emissions at altitude have about 2–4 times the warming impact of ground-level CO₂ because of contrails, high-altitude NOx, and water vapor effects. Some offset calculators apply a 2× multiplier to account for this." },
 ]} />
+
+### Related Tools
+
+- [Driving Cost Calculator](/apps/driving-cost-calculator) — Compare driving costs vs. flying
+- [Electric Car Trip Cost Calculator](/apps/electric-car-trip-cost-calculator) — Calculate EV trip costs
+- [Gas Mileage Calculator](/apps/gas-mileage-calculator) — Track your vehicle's fuel efficiency
+- [Fuel Cost Calculator](/apps/fuel-cost-calculator) — Estimate gasoline costs for trips
+- [BMI Calculator](/apps/bmi-calculator) — Check your health metrics
+
+### Sources
+
+- [EPA — Greenhouse Gas Emissions from Aviation](https://www.epa.gov/greenvehicles/fast-facts-transportation-greenhouse-gas-emissions)
+- [ICAO — Carbon Emissions Calculator](https://www.icao.int/environmental-protection/CarbonOffset/Pages/default.aspx)
+- [Our World in Data — CO₂ Emissions from Transport](https://ourworldindata.org/travel-carbon-footprint)
+- [European Environment Agency — Aviation Emissions](https://www.eea.europa.eu/en/topics/in-depth/transport-and-mobility)

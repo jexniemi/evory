@@ -2,52 +2,114 @@ import FAQ from "@/components/FAQ"
 
 ## Wind Chill Calculator – How Cold Does It Really Feel?
 
-The wind chill calculator computes the **apparent temperature** — how cold the air actually feels on exposed skin due to wind. Even when the thermometer shows a certain temperature, wind makes it feel significantly colder.
+When winter winds blow, the temperature on the thermometer only tells part of the story. Wind accelerates heat loss from your skin, making the air feel far colder than the actual temperature. This calculator computes the **wind chill index** — the "feels like" temperature — so you can dress appropriately and stay safe.
 
 ### The Wind Chill Formula
 
-The calculator uses the **Environment Canada / WMO formula** (2001), which is the international standard:
+The **NWS/Environment Canada wind chill formula** (adopted 2001) is the standard used in the United States and Canada:
 
-> **Tw = 13.12 + 0.6215×T − 11.37×V^0.16 + 0.3965×T×V^0.16**
+> **Wind Chill (°F) = 35.74 + 0.6215T − 35.75V^0.16 + 0.4275TV^0.16**
 
-Where T = air temperature (°C) and V = wind speed (km/h). The formula applies when T ≤ 10°C and wind speed > 4.8 km/h.
+Where T = air temperature in °F and V = wind speed in mph. The formula applies when the temperature is at or below 50 °F and the wind speed is above 3 mph.
 
-### Wind Chill Reference Table
+### Worked Example
+
+Temperature: **20 °F**, Wind: **15 mph**
+
+1. 35.74 + 0.6215(20) = 48.17
+2. 35.75(15^0.16) = 35.75 × 1.511 = 54.02
+3. 0.4275(20)(15^0.16) = 0.4275 × 20 × 1.511 = 12.92
+4. Wind chill = 48.17 − 54.02 + 12.92 = **6.9 °F**
+
+At 20 °F with a 15 mph wind, it feels like approximately **7 °F** on exposed skin.
+
+### Wind Chill Reference Chart
 
 <table className="table table-sm my-4">
   <thead>
     <tr className="bg-base-200">
-      <th>Temperature</th>
-      <th>Wind 10 km/h</th>
-      <th>Wind 20 km/h</th>
-      <th>Wind 40 km/h</th>
+      <th>Temp (°F)</th>
+      <th>Wind 5 mph</th>
+      <th>Wind 10 mph</th>
+      <th>Wind 15 mph</th>
+      <th>Wind 25 mph</th>
+      <th>Wind 35 mph</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>0 °C (32 °F)</td><td>-3 °C (27 °F)</td><td>-5 °C (23 °F)</td><td>-8 °C (18 °F)</td></tr>
-    <tr><td>-10 °C (14 °F)</td><td>-15 °C (5 °F)</td><td>-18 °C (0 °F)</td><td>-22 °C (-8 °F)</td></tr>
-    <tr><td>-20 °C (-4 °F)</td><td>-27 °C (-17 °F)</td><td>-31 °C (-24 °F)</td><td>-37 °C (-35 °F)</td></tr>
-    <tr><td>-30 °C (-22 °F)</td><td>-39 °C (-38 °F)</td><td>-44 °C (-47 °F)</td><td>-51 °C (-60 °F)</td></tr>
+    <tr><td>40 °F</td><td>36 °F</td><td>34 °F</td><td>32 °F</td><td>29 °F</td><td>28 °F</td></tr>
+    <tr><td>30 °F</td><td>25 °F</td><td>21 °F</td><td>19 °F</td><td>15 °F</td><td>13 °F</td></tr>
+    <tr><td>20 °F</td><td>13 °F</td><td>9 °F</td><td>7 °F</td><td>1 °F</td><td>−2 °F</td></tr>
+    <tr><td>10 °F</td><td>1 °F</td><td>−4 °F</td><td>−7 °F</td><td>−12 °F</td><td>−16 °F</td></tr>
+    <tr><td>0 °F</td><td>−11 °F</td><td>−16 °F</td><td>−19 °F</td><td>−26 °F</td><td>−30 °F</td></tr>
+    <tr><td>−10 °F</td><td>−22 °F</td><td>−28 °F</td><td>−32 °F</td><td>−39 °F</td><td>−44 °F</td></tr>
+    <tr><td>−20 °F</td><td>−34 °F</td><td>−41 °F</td><td>−45 °F</td><td>−52 °F</td><td>−58 °F</td></tr>
   </tbody>
 </table>
 
-### Frostbite Risk
+### Frostbite Risk Levels
 
-- **−10 °C → −27 °C wind chill** – Risk increases with prolonged exposure
-- **−28 °C → −39 °C** – Frostbite possible in 10–30 minutes
-- **−40 °C or below** – Frostbite risk in under 2 minutes
+Wind chill determines how quickly frostbite can develop on exposed skin:
 
-**Source:** [Environment Canada – Wind Chill](https://www.canada.ca/en/environment-climate-change/services/weather-general-tools-resources/wind-chill-cold-weather.html)
+| Wind Chill | Risk Level | Time to Frostbite |
+|---|---|---|
+| 0 °F to −10 °F | Low | Low risk with proper clothing |
+| −10 °F to −25 °F | Moderate | 30 minutes on exposed skin |
+| −25 °F to −45 °F | High | 10–30 minutes |
+| −45 °F to −60 °F | Very High | 5–10 minutes |
+| Below −60 °F | Extreme | Under 5 minutes |
 
-### See also
+The most vulnerable areas are fingers, toes, nose, and ears. Frostbite can cause permanent tissue damage, so covering all exposed skin is critical in extreme cold.
 
-- [Temperature Converter](/apps/temperature-converter) – Celsius, Fahrenheit, and Kelvin
-- [BMR Calculator](/apps/bmr-calculator) – Calculate your basal metabolic rate
+### How Wind Chill Works
+
+Wind doesn't actually lower the air temperature — it lowers your body's ability to retain heat. In calm conditions, your body warms a thin layer of air next to your skin. Wind strips that insulating layer away, forcing your body to work harder to stay warm. The faster the wind, the faster heat is pulled from your skin.
+
+Key facts:
+- Wind chill only applies to **people and animals**, not to objects like car engines or water pipes (they cool to ambient temperature regardless of wind, just faster)
+- The current NWS formula replaced the older Siple-Passel formula in 2001 because the original overestimated cold
+- Wind chill does **not** affect the temperature at which water freezes — pipes freeze at 32 °F regardless
+
+### Cold Weather Safety Tips
+
+- **Layer clothing** — Multiple thin layers trap air and insulate better than one thick layer
+- **Cover extremities** — Wear insulated gloves, thick socks, and a hat that covers your ears
+- **Protect your face** — Use a balaclava or ski mask when wind chill drops below −10 °F
+- **Stay dry** — Wet clothing loses insulating ability and accelerates heat loss
+- **Watch for hypothermia signs** — Shivering, confusion, slurred speech, and drowsiness are warning signs
+- **Check wind chill before outdoor activities** — Cancel plans when warnings are issued
+
+### NWS Wind Chill Advisories
+
+The National Weather Service issues alerts based on wind chill:
+
+| Alert | Criteria | Recommended Action |
+|---|---|---|
+| **Wind Chill Advisory** | −15 °F to −24 °F | Limit outdoor exposure |
+| **Wind Chill Warning** | −25 °F or lower | Stay indoors if possible |
+| **Extreme Cold Warning** | Life-threatening cold | Avoid all outdoor activity |
+
+*Specific thresholds vary by region — northern states have higher thresholds than southern states.*
 
 <FAQ items={[
-  { q: "What is wind chill?", a: "Wind chill is the perceived decrease in air temperature due to wind. Wind increases the rate of heat loss from exposed skin, making the temperature feel colder than the actual air temperature." },
-  { q: "How is wind chill calculated?", a: "The US/Canadian formula is: Wind Chill = 35.74 + 0.6215T - 35.75(V^0.16) + 0.4275T(V^0.16), where T is temperature in Fahrenheit and V is wind speed in mph." },
-  { q: "At what wind chill is frostbite dangerous?", a: "Frostbite can develop on exposed skin in as little as 30 minutes at a wind chill of -20 F (-29 C). At -40 F (-40 C), frostbite risk rises to 10 minutes or less." },
-  { q: "Does wind chill affect the freezing point of water?", a: "No — wind chill only describes how cold humans feel. It does not lower the actual air temperature. Water freezes at 32 F (0 C) regardless of wind chill." },
-  { q: "What is the highest recorded wind chill?", a: "Extreme wind chills have been recorded in Antarctica, reaching below -100 F (-73 C). In the US, the upper Midwest has experienced wind chills below -60 F (-51 C) during polar vortex events." },
+  { q: "What is wind chill?", a: "Wind chill is the perceived decrease in air temperature due to wind. Wind accelerates heat loss from exposed skin, making the temperature feel significantly colder than the actual reading on a thermometer. It only applies to people and animals, not to inanimate objects." },
+  { q: "How is wind chill calculated?", a: "The NWS/Canadian formula is: Wind Chill (°F) = 35.74 + 0.6215T − 35.75(V^0.16) + 0.4275T(V^0.16), where T is air temperature in °F and V is wind speed in mph. The formula applies when temperature is ≤50 °F and wind speed exceeds 3 mph." },
+  { q: "At what wind chill does frostbite become dangerous?", a: "Frostbite can develop on exposed skin in as little as 30 minutes at a wind chill of −10 °F. At −25 °F, frostbite risk is 10–30 minutes. At −45 °F or below, frostbite can occur in under 5 minutes." },
+  { q: "Does wind chill affect the freezing point of water?", a: "No — wind chill only describes how cold it feels to humans. It does not lower the actual air temperature. Water freezes at 32 °F (0 °C) regardless of wind chill. However, wind can cause objects to reach the ambient temperature faster." },
+  { q: "What is the lowest wind chill ever recorded in the US?", a: "The lowest wind chill in the contiguous US was approximately −70 °F, recorded in Minnesota and the Dakotas during polar vortex events. Mount Washington, NH regularly records extreme wind chills due to its combination of cold temperatures and 100+ mph winds." },
 ]} />
+
+### Related Tools
+
+- [Temperature Converter](/apps/temperature-converter) — Convert between Fahrenheit, Celsius, and Kelvin
+- [Speed Converter](/apps/speed-converter) — Convert wind speeds between mph, km/h, and knots
+- [BMR Calculator](/apps/bmr-calculator) — Calculate your basal metabolic rate
+- [Calorie Burn Calculator](/apps/calorie-burn-calculator) — See how winter activities burn calories
+- [Water Needs Calculator](/apps/water-needs-calculator) — Hydration needs change in cold weather too
+
+### Sources
+
+- [NWS — Wind Chill Chart](https://www.weather.gov/safety/cold-wind-chill-chart)
+- [Environment Canada — Wind Chill](https://www.canada.ca/en/environment-climate-change/services/weather-general-tools-resources/wind-chill-cold-weather.html)
+- [CDC — Cold Stress and Frostbite](https://www.cdc.gov/niosh/topics/coldstress/)
+- [NOAA — Wind Chill FAQ](https://www.weather.gov/safety/cold-faqs)

@@ -1,55 +1,135 @@
 import FAQ from "@/components/FAQ"
 
-## What is Compound Interest?
+## Compound Interest Calculator – See How Your Money Grows Over Time
 
-Compound interest means that the return on an investment is added to the principal, so the next year's return is calculated from a larger amount. Over time, growth accelerates exponentially — the longer the investment period, the greater the portion of the final balance is interest, not the original principal.
+Compound interest is often called the **eighth wonder of the world** — and for good reason. When your investment earns returns on its returns, growth accelerates exponentially. This calculator shows you exactly how much your money will grow over any time period at any interest rate.
 
-## Formula
+### The Compound Interest Formula
 
-**Final balance = Principal × (1 + r)ⁿ**
+> **A = P × (1 + r)ⁿ**
 
-where r = annual return percentage as a decimal and n = number of years.
+Where:
+- **A** = final balance
+- **P** = initial principal (starting amount)
+- **r** = annual interest rate as a decimal (e.g., 7% = 0.07)
+- **n** = number of years
 
-## Rule of 72
+For monthly compounding, the more precise formula is: **A = P × (1 + r/12)^(12×n)**
 
-Quick rule of thumb: divide the number 72 by the annual return percentage, and you get the approximate doubling time in years.
+### Worked Example
+
+You invest **$10,000** at a **7% annual return** (the approximate historical average of the S&P 500 after inflation):
 
 <table className="table table-sm my-4">
-  <thead className="bg-base-200">
-    <tr>
-      <th>Annual return</th>
-      <th>Doubling time</th>
+  <thead>
+    <tr className="bg-base-200">
+      <th>Years</th>
+      <th>Balance</th>
+      <th>Total Growth</th>
+      <th>Interest Earned</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>3 %</td><td>24 years</td></tr>
-    <tr><td>5 %</td><td>14.4 years</td></tr>
-    <tr><td>7 %</td><td>10.3 years</td></tr>
-    <tr><td>10 %</td><td>7.2 years</td></tr>
-    <tr><td>12 %</td><td>6 years</td></tr>
+    <tr><td>5</td><td>$14,026</td><td>+40%</td><td>$4,026</td></tr>
+    <tr><td>10</td><td>$19,672</td><td>+97%</td><td>$9,672</td></tr>
+    <tr><td>15</td><td>$27,590</td><td>+176%</td><td>$17,590</td></tr>
+    <tr><td>20</td><td>$38,697</td><td>+287%</td><td>$28,697</td></tr>
+    <tr><td>25</td><td>$54,274</td><td>+443%</td><td>$44,274</td></tr>
+    <tr><td>30</td><td>$76,123</td><td>+661%</td><td>$66,123</td></tr>
   </tbody>
 </table>
 
-## Example
+Notice how growth nearly doubles with each new decade — that is the exponential power of compounding. After 30 years, over **86% of your balance is pure interest**, not your original investment.
 
-$10,000 invested at 7 % annual return:
+### The Rule of 72
 
-- **After 10 years:** $19,672 (growth +97 %)
-- **After 20 years:** $38,697 (growth +287 %)
-- **After 30 years:** $76,123 (growth +661 %)
+A quick mental shortcut: divide **72** by your annual return rate to estimate how many years it takes for your money to double.
 
-Note how the return almost doubles with each new decade. This is the core of the compound interest phenomenon.
+<table className="table table-sm my-4">
+  <thead>
+    <tr className="bg-base-200">
+      <th>Annual Return</th>
+      <th>Doubling Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>2%</td><td>36 years</td></tr>
+    <tr><td>3%</td><td>24 years</td></tr>
+    <tr><td>5%</td><td>14.4 years</td></tr>
+    <tr><td>7%</td><td>10.3 years</td></tr>
+    <tr><td>10%</td><td>7.2 years</td></tr>
+    <tr><td>12%</td><td>6 years</td></tr>
+  </tbody>
+</table>
 
-## Other Calculators
+### Simple Interest vs. Compound Interest
 
-- [Investment Return Calculator](/apps/investment-return-calculator) — calculate the realized investment return percentage and annual return
-- [Compound Interest Calculator](/apps/compound-interest-calculator) — more versatile version with monthly additional investments
-- [Savings Goal Calculator](/apps/savings-goal-calculator) — calculate how much to save monthly
+| Feature | Simple Interest | Compound Interest |
+|---|---|---|
+| Returns calculated on | Original principal only | Principal + accumulated interest |
+| Growth pattern | Linear (steady) | Exponential (accelerating) |
+| $10,000 at 7% for 20 years | $24,000 | $38,697 |
+| Best for | Short-term, simple loans | Long-term investments and savings |
+
+The difference between simple and compound interest grows dramatically over time. After 20 years at 7%, compound interest earns **$14,697 more** than simple interest on the same $10,000 principal.
+
+### How Compounding Frequency Affects Returns
+
+The more frequently interest compounds, the more you earn:
+
+<table className="table table-sm my-4">
+  <thead>
+    <tr className="bg-base-200">
+      <th>Compounding</th>
+      <th>$10,000 at 5% for 10 years</th>
+      <th>Effective Annual Yield</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Annually</td><td>$16,289</td><td>5.000%</td></tr>
+    <tr><td>Quarterly</td><td>$16,386</td><td>5.094%</td></tr>
+    <tr><td>Monthly</td><td>$16,470</td><td>5.116%</td></tr>
+    <tr><td>Daily</td><td>$16,487</td><td>5.127%</td></tr>
+  </tbody>
+</table>
+
+The difference between annual and daily compounding on $10,000 over 10 years is about $198 — meaningful but not dramatic. Over 30 years, the gap widens significantly.
+
+### Why Starting Early Matters Most
+
+The most powerful variable in compound interest is **time**, not the amount you invest. Consider two scenarios:
+
+- **Investor A** starts at age 25, invests $200/month for 10 years (total: $24,000), then stops contributing. At 7%, by age 65 they have **$353,000**
+- **Investor B** starts at age 35, invests $200/month for 30 years (total: $72,000). At 7%, by age 65 they have **$227,000**
+
+Investor A invested **one-third** the amount but ended up with **56% more money** — purely because of 10 extra years of compounding.
+
+### APR vs. APY
+
+- **APR (Annual Percentage Rate)** — The stated nominal interest rate, not accounting for compounding frequency
+- **APY (Annual Percentage Yield)** — The actual effective rate after compounding. APY ≥ APR
+
+When comparing savings accounts or investments, always compare **APY** for an apples-to-apples comparison.
 
 <FAQ items={[
-  { q: "What is the difference between simple and compound interest?", a: "Simple interest is calculated only on the original principal. Compound interest is calculated on the principal plus accumulated interest, causing exponential growth over time." },
-  { q: "How often does compound interest compound?", a: "It can compound daily, monthly, quarterly, semi-annually, or annually. More frequent compounding results in slightly more interest earned. Daily compounding is standard for most savings accounts." },
-  { q: "What is the compound interest formula?", a: "A = P x (1 + r/n)^(n x t), where P is the principal, r is the annual interest rate (decimal), n is the number of times compounded per year, and t is time in years." },
-  { q: "How much does $10,000 grow at 7% compound interest for 10 years?", a: "Using the compound interest formula: $10,000 x (1.07)^10 = approximately $19,672. This nearly doubles without any additional contributions." },
-  { q: "What is APY vs APR?", a: "APR (Annual Percentage Rate) is the stated annual interest rate. APY (Annual Percentage Yield) reflects the actual return after compounding. The more frequently interest compounds, the higher the APY versus APR." },
+  { q: "What is the difference between simple and compound interest?", a: "Simple interest is calculated only on the original principal each period. Compound interest is calculated on the principal plus all previously accumulated interest, causing exponential growth. Over long periods, compound interest dramatically outperforms simple interest." },
+  { q: "How often does compound interest compound?", a: "It can compound daily, monthly, quarterly, semi-annually, or annually. More frequent compounding produces slightly more interest. Most savings accounts compound daily, while many bonds compound semi-annually." },
+  { q: "What is the compound interest formula?", a: "A = P × (1 + r/n)^(n×t), where P is the principal, r is the annual rate as a decimal, n is compounding periods per year, and t is time in years. For annual compounding, this simplifies to A = P × (1 + r)^t." },
+  { q: "How much does $10,000 grow at 7% compound interest for 10 years?", a: "Using annual compounding: $10,000 × (1.07)^10 = approximately $19,672 — nearly doubling without any additional contributions. With monthly compounding, it would be about $20,097." },
+  { q: "What is APY vs APR?", a: "APR (Annual Percentage Rate) is the stated nominal rate. APY (Annual Percentage Yield) is the effective rate after compounding is factored in. A 5% APR compounded monthly produces a 5.116% APY. Always compare APY when evaluating savings products." },
 ]} />
+
+### Related Tools
+
+- [Investment Return Calculator](/apps/investment-return-calculator) — Calculate ROI and annualized returns
+- [Compound Interest Calculator](/apps/compound-interest-calculator) — Advanced version with monthly contributions
+- [Savings Goal Calculator](/apps/savings-goal-calculator) — Plan how much to save monthly
+- [CD Calculator](/apps/cd-calculator) — Compare certificate of deposit earnings
+- [Retirement Calculator](/apps/retirement-calculator) — Project long-term retirement savings
+
+### Sources
+
+- [SEC — Compound Interest Calculator](https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator)
+- [Investopedia — Compound Interest](https://www.investopedia.com/terms/c/compoundinterest.asp)
+- [Khan Academy — Compound Interest](https://www.khanacademy.org/economics-finance-domain/core-finance/interest-tutorial)
+- [Federal Reserve — Interest Rate Data](https://www.federalreserve.gov/releases/h15/)

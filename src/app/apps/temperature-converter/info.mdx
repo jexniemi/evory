@@ -1,45 +1,63 @@
 import FAQ from "@/components/FAQ"
 
-## Temperature Scales
+## Temperature Converter – Fahrenheit, Celsius & Kelvin
 
-Temperature is measured using three main scales, each with its own purpose:
+Whether you're checking a weather forecast from another country, following a recipe written in Celsius, or studying thermodynamics, converting between temperature scales is a daily necessity. This tool instantly converts between Fahrenheit, Celsius, and Kelvin so you never have to do the math by hand.
+
+## Temperature Scales Explained
+
+Temperature is measured using three main scales, each designed for different purposes:
 
 <table className="table table-sm my-4">
   <thead className="bg-base-200">
     <tr>
       <th>Scale</th>
-      <th>Zero point</th>
-      <th>Usage</th>
+      <th>Zero Point</th>
+      <th>Primary Usage</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Celsius (°C)</td>
-      <td>Freezing point of water (0 °C)</td>
-      <td>Everyday use, weather, cooking — Europe and most of the world</td>
+      <td>Fahrenheit (°F)</td>
+      <td>Brine freezing point (~0 °F)</td>
+      <td>Everyday use in the United States — weather, cooking, HVAC</td>
     </tr>
     <tr>
-      <td>Fahrenheit (°F)</td>
-      <td>Freezing point of brine (~−18 °C)</td>
-      <td>Everyday use, weather — USA, Cayman Islands</td>
+      <td>Celsius (°C)</td>
+      <td>Freezing point of water (0 °C)</td>
+      <td>Everyday use worldwide — weather, science, medicine outside the US</td>
     </tr>
     <tr>
       <td>Kelvin (K)</td>
       <td>Absolute zero (−273.15 °C)</td>
-      <td>Science, physics, chemistry</td>
+      <td>Science, physics, chemistry, engineering</td>
     </tr>
   </tbody>
 </table>
 
+The United States is one of only a few countries that still uses Fahrenheit for daily life. Most of the world — and all scientific research — uses Celsius or Kelvin.
+
 ## Conversion Formulas
 
-**Celsius → Fahrenheit:** °F = (°C × 9/5) + 32
+> **Fahrenheit → Celsius:** °C = (°F − 32) × 5/9
 
-**Fahrenheit → Celsius:** °C = (°F − 32) × 5/9
+> **Celsius → Fahrenheit:** °F = (°C × 9/5) + 32
 
-**Celsius → Kelvin:** K = °C + 273.15
+> **Celsius → Kelvin:** K = °C + 273.15
 
-**Kelvin → Celsius:** °C = K − 273.15
+> **Fahrenheit → Kelvin:** K = (°F − 32) × 5/9 + 273.15
+
+### Worked Example
+
+Convert **72 °F** (a typical US room temperature) to Celsius:
+
+1. Subtract 32: 72 − 32 = 40
+2. Multiply by 5/9: 40 × 5/9 = **22.2 °C**
+
+Convert **180 °C** (a common European oven setting) to Fahrenheit:
+
+1. Multiply by 9/5: 180 × 9/5 = 324
+2. Add 32: 324 + 32 = **356 °F**
 
 ## Key Reference Temperatures
 
@@ -47,39 +65,67 @@ Temperature is measured using three main scales, each with its own purpose:
   <thead className="bg-base-200">
     <tr>
       <th>Situation</th>
-      <th>Celsius</th>
-      <th>Fahrenheit</th>
-      <th>Kelvin</th>
+      <th>°F</th>
+      <th>°C</th>
+      <th>K</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>Absolute zero</td><td>−273.15 °C</td><td>−459.67 °F</td><td>0 K</td></tr>
-    <tr><td>Freezing point of water</td><td>0 °C</td><td>32 °F</td><td>273.15 K</td></tr>
-    <tr><td>Body temperature</td><td>37 °C</td><td>98.6 °F</td><td>310.15 K</td></tr>
-    <tr><td>Boiling point of water</td><td>100 °C</td><td>212 °F</td><td>373.15 K</td></tr>
-    <tr><td>Oven temperature (baking)</td><td>200 °C</td><td>392 °F</td><td>473.15 K</td></tr>
+    <tr><td>Absolute zero</td><td>−459.67</td><td>−273.15</td><td>0</td></tr>
+    <tr><td>Water freezes</td><td>32</td><td>0</td><td>273.15</td></tr>
+    <tr><td>Room temperature</td><td>72</td><td>22.2</td><td>295.4</td></tr>
+    <tr><td>Body temperature</td><td>98.6</td><td>37</td><td>310.15</td></tr>
+    <tr><td>Water boils</td><td>212</td><td>100</td><td>373.15</td></tr>
+    <tr><td>Oven — low</td><td>325</td><td>163</td><td>436</td></tr>
+    <tr><td>Oven — medium</td><td>375</td><td>190</td><td>464</td></tr>
+    <tr><td>Oven — high</td><td>450</td><td>232</td><td>505</td></tr>
   </tbody>
 </table>
 
-## Where Do Celsius and Fahrenheit Meet?
+## Cooking Temperature Conversions
 
-Celsius and Fahrenheit are equal at exactly **−40°** (the same value on both scales).
+Recipes from European, British, or Australian sources use Celsius, while American recipes use Fahrenheit. Here's a quick cooking reference:
 
-A handy rule of thumb for Fahrenheit → Celsius estimation: subtract 30 and divide by 2. Example: 70 °F → (70−30)/2 = 20 °C (exact: 21.1 °C). Good enough for everyday use!
+| Cooking Task | °F | °C |
+|---|---|---|
+| Slow roast / dehydrate | 200 – 250 | 95 – 120 |
+| Baking bread | 350 – 425 | 175 – 220 |
+| Roasting chicken | 375 – 425 | 190 – 220 |
+| Pizza | 450 – 500 | 230 – 260 |
+| Broiling / grilling | 500+ | 260+ |
+| Internal temp — medium-rare steak | 130 – 135 | 54 – 57 |
+| Internal temp — chicken (safe) | 165 | 74 |
+
+The USDA recommends using a food thermometer to ensure meats reach safe internal temperatures.
+
+## Quick Mental Math Tricks
+
+- **°F → °C shortcut:** Subtract 30, divide by 2. Example: 86 °F → (86 − 30) / 2 = 28 °C (actual: 30 °C). Close enough for weather estimates.
+- **°C → °F shortcut:** Double the Celsius, add 30. Example: 25 °C → (25 × 2) + 30 = 80 °F (actual: 77 °F).
+- **The crossover:** Celsius and Fahrenheit are equal at exactly **−40°** — the same reading on both scales.
 
 ## Why Does Kelvin Have No Degree Symbol?
 
-Kelvin is not a "scale" in the same sense as Celsius or Fahrenheit — it is the SI base unit of temperature. That's why you write "300 K", not "300 °K". Kelvin starts at absolute zero, the coldest temperature physically possible.
-
-## Sources
-
-- BIPM (Bureau International des Poids et Mesures): [SI Unit System](https://www.bipm.org/en/measurement-units)
-- NIST: [Temperature Conversion](https://www.nist.gov)
+Kelvin is not a "scale" in the traditional sense — it is the SI base unit of temperature. That's why scientists write "300 K," not "300 °K." Kelvin starts at absolute zero, the theoretical lowest temperature where all molecular motion ceases. It is essential in physics, chemistry, and engineering calculations like the ideal gas law (PV = nRT).
 
 <FAQ items={[
-  { q: "How do I convert Fahrenheit to Celsius?", a: "Subtract 32 from the Fahrenheit temperature, then multiply by 5/9. Formula: C = (F - 32) x 5/9. For example, 98.6 F = (98.6 - 32) x 5/9 = 37 C." },
-  { q: "How do I convert Celsius to Fahrenheit?", a: "Multiply the Celsius temperature by 9/5, then add 32. Formula: F = (C x 9/5) + 32. For example, 100 C = (100 x 9/5) + 32 = 212 F." },
-  { q: "What is absolute zero in Fahrenheit and Celsius?", a: "Absolute zero is the coldest possible temperature: -273.15 C (-459.67 F) or 0 Kelvin. At this temperature, all molecular motion stops." },
-  { q: "What is normal human body temperature?", a: "Normal human body temperature is 37 C (98.6 F). A fever is generally defined as a temperature above 38 C (100.4 F)." },
-  { q: "What is the difference between Celsius, Fahrenheit, and Kelvin?", a: "Celsius (metric) uses water freezing at 0 C and boiling at 100 C. Fahrenheit (imperial) uses 32 F and 212 F for the same points. Kelvin is the scientific absolute temperature scale starting at 0 K (absolute zero)." },
+  { q: "How do I convert Fahrenheit to Celsius?", a: "Subtract 32 from the Fahrenheit temperature, then multiply by 5/9. Formula: °C = (°F − 32) × 5/9. For example, 98.6 °F = (98.6 − 32) × 5/9 = 37 °C." },
+  { q: "How do I convert Celsius to Fahrenheit?", a: "Multiply the Celsius temperature by 9/5, then add 32. Formula: °F = (°C × 9/5) + 32. For example, 100 °C = (100 × 9/5) + 32 = 212 °F." },
+  { q: "What is absolute zero in Fahrenheit and Celsius?", a: "Absolute zero is the coldest possible temperature: −273.15 °C (−459.67 °F) or 0 Kelvin. At this temperature, all molecular motion theoretically stops. It has never been fully reached in a laboratory." },
+  { q: "What is normal human body temperature?", a: "Normal human body temperature averages 98.6 °F (37 °C), though recent studies suggest the modern average is closer to 97.9 °F (36.6 °C). A fever is generally defined as 100.4 °F (38 °C) or above." },
+  { q: "What is the difference between Celsius, Fahrenheit, and Kelvin?", a: "Fahrenheit (used in the US) sets water's freezing point at 32 °F and boiling at 212 °F. Celsius (metric, used worldwide) uses 0 °C and 100 °C. Kelvin is the scientific absolute scale starting at 0 K (absolute zero), with the same degree size as Celsius." },
 ]} />
+
+### Related Tools
+
+- [Speed Converter](/apps/speed-converter) — Convert between mph, km/h, knots, and m/s
+- [Length Converter](/apps/length-converter) — Convert inches, feet, meters, and more
+- [Weight Converter](/apps/weight-converter) — Convert pounds, kilograms, ounces, and grams
+- [Area Converter](/apps/area-converter) — Convert square feet, acres, hectares, and more
+- [Wind Chill Calculator](/apps/wind-chill-calculator) — Calculate how cold it really feels
+
+### Sources
+
+- [NIST — Temperature Conversion](https://www.nist.gov/pml/owm/metric-si/si-units-temperature)
+- [BIPM — SI Unit System](https://www.bipm.org/en/measurement-units)
+- [USDA — Safe Minimum Internal Temperatures](https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-minimum-internal-temperature-chart)

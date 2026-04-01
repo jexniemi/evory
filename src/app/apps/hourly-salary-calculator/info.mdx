@@ -1,49 +1,132 @@
 import FAQ from "@/components/FAQ"
 
-## How to calculate your hourly wage
+## How to Calculate Your Hourly Wage
 
-Hourly wage is calculated by dividing the monthly salary by the monthly working hours:
+Converting between hourly, monthly, and annual salary is essential for comparing job offers, negotiating pay, and understanding your true earning rate. The hourly salary calculator does this conversion instantly.
 
-**Hourly wage = Monthly salary ÷ (Weekly hours × 52 ÷ 12)**
+### Conversion Formulas
 
-For example, with a gross monthly salary of $4,000 and 40 h weekly working hours, the hourly wage is approximately **$23.08/h**.
+> **Hourly Wage = Annual Salary ÷ (Weekly Hours × 52)**
 
-### Most common weekly working hours
+> **Hourly Wage = Monthly Salary ÷ (Weekly Hours × 52 ÷ 12)**
 
-Weekly working hours vary by industry and collective agreement. Here are the most common:
+> **Annual Salary = Hourly Wage × Weekly Hours × 52**
+
+### Worked Example
+
+You earn a **gross monthly salary of $4,500** and work **40 hours per week**:
+
+- Monthly working hours: 40 × 52 ÷ 12 = **173.33 hours/month**
+- Hourly wage: $4,500 ÷ 173.33 = **$25.96/hour**
+- Annual salary: $25.96 × 40 × 52 = **$54,000/year**
+
+### Hourly Wage to Annual Salary Conversion Table
 
 <table className="table table-sm my-4">
-<thead className="bg-base-200"><tr><th>Industry</th><th>Weekly working hours</th><th>Working hours/month</th></tr></thead>
-<tbody>
-<tr><td>Office work (general)</td><td>37.5 h</td><td>162.5</td></tr>
-<tr><td>Retail</td><td>37.5 h</td><td>162.5</td></tr>
-<tr><td>Industry</td><td>40 h</td><td>173.3</td></tr>
-<tr><td>Construction</td><td>40 h</td><td>173.3</td></tr>
-<tr><td>Healthcare</td><td>38.25 h</td><td>165.75</td></tr>
-</tbody>
+  <thead className="bg-base-200">
+    <tr>
+      <th>Hourly Wage</th>
+      <th>Weekly (40h)</th>
+      <th>Monthly</th>
+      <th>Annual</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>$10.00</td><td>$400</td><td>$1,733</td><td>$20,800</td></tr>
+    <tr><td>$15.00</td><td>$600</td><td>$2,600</td><td>$31,200</td></tr>
+    <tr><td>$20.00</td><td>$800</td><td>$3,467</td><td>$41,600</td></tr>
+    <tr><td>$25.00</td><td>$1,000</td><td>$4,333</td><td>$52,000</td></tr>
+    <tr><td>$30.00</td><td>$1,200</td><td>$5,200</td><td>$62,400</td></tr>
+    <tr><td>$40.00</td><td>$1,600</td><td>$6,933</td><td>$83,200</td></tr>
+    <tr><td>$50.00</td><td>$2,000</td><td>$8,667</td><td>$104,000</td></tr>
+    <tr><td>$75.00</td><td>$3,000</td><td>$13,000</td><td>$156,000</td></tr>
+  </tbody>
 </table>
 
-Monthly working hours are obtained by the formula: weekly hours × 52 weeks ÷ 12 months.
+### Standard Working Hours by Industry
 
-### Gross or net?
+Working hours vary by sector, employer, and sometimes by state. Here are common standards in the U.S.:
 
-The calculator works with both gross and net salary. Gross salary is the salary before taxes and side costs. Net salary is the take-home amount. When comparing salaries, e.g. in job search, always use gross salary — that's the figure stated in job advertisements and employment contracts.
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Industry</th>
+      <th>Typical Weekly Hours</th>
+      <th>Monthly Hours</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Office / white-collar</td><td>40 h</td><td>173.3</td></tr>
+    <tr><td>Retail / hospitality</td><td>30–40 h</td><td>130–173</td></tr>
+    <tr><td>Manufacturing</td><td>40 h</td><td>173.3</td></tr>
+    <tr><td>Construction</td><td>40–50 h</td><td>173–217</td></tr>
+    <tr><td>Healthcare (nursing)</td><td>36–40 h</td><td>156–173</td></tr>
+    <tr><td>Tech / software</td><td>40 h</td><td>173.3</td></tr>
+    <tr><td>Part-time (any)</td><td>20–30 h</td><td>87–130</td></tr>
+  </tbody>
+</table>
 
-### When is knowing your hourly wage useful?
+### Minimum Wage in the United States
 
-- **In salary negotiations** — easier to compare different offers when you know the real hourly rate
-- **Checking overtime compensation** — overtime pay is calculated based on hourly wage (50% or 100% increase)
-- **Freelancer pricing** — if you switch from salaried work to entrepreneurship, your hourly wage gives a basis for pricing (remember to add side costs on top)
-- **Comparing part-time work** — is 20 h/week part-time really more profitable than full-time?
+The federal minimum wage has been **$7.25/hour** since July 2009. However, many states and cities set higher minimums:
 
-**Sources:**
-- [OSHA – working hours](https://www.osha.gov/workers/working-hours)
-- [BLS – salary statistics](https://www.bls.gov/oes/)
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>State</th>
+      <th>Minimum Wage (2024)</th>
+      <th>Annual (40h/wk)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Federal</td><td>$7.25</td><td>$15,080</td></tr>
+    <tr><td>California</td><td>$16.00</td><td>$33,280</td></tr>
+    <tr><td>New York</td><td>$16.00</td><td>$33,280</td></tr>
+    <tr><td>Washington</td><td>$16.28</td><td>$33,862</td></tr>
+    <tr><td>Florida</td><td>$13.00</td><td>$27,040</td></tr>
+    <tr><td>Texas</td><td>$7.25</td><td>$15,080</td></tr>
+  </tbody>
+</table>
+
+### Gross vs. Net Hourly Wage
+
+**Gross salary** is your pay before taxes and deductions. **Net salary** is what you actually take home after:
+
+- Federal income tax (10–37% depending on bracket)
+- State income tax (0–13.3% depending on state)
+- Social Security tax (6.2% up to $168,600 in 2024)
+- Medicare tax (1.45%, plus 0.9% surcharge above $200,000)
+- Health insurance premiums (if employer-sponsored)
+- 401(k) or retirement contributions
+
+When comparing job offers, always compare **gross** rates — that is the figure stated in job postings. Use a [Net Salary Calculator](/apps/net-salary-calculator) to estimate your take-home pay.
+
+### When Is Knowing Your Hourly Rate Useful?
+
+- **Salary negotiations** — Easier to compare different offers when you know the real hourly rate
+- **Overtime pay** — Federal law (FLSA) requires 1.5× regular rate for hours over 40 per week
+- **Freelance pricing** — Your employed hourly rate is a baseline; freelancers should add 25–40% for self-employment taxes, insurance, and unpaid time off
+- **Part-time comparison** — Is a 20 h/week job at $30/hr better than full-time at $22/hr?
 
 <FAQ items={[
-  { q: "How do I convert hourly wage to annual salary?", a: "Multiply your hourly rate by weekly hours, then by 52. For example, $25/hr x 40 hrs/week x 52 weeks = $52,000/year." },
-  { q: "How many hours are in a work year?", a: "A standard full-time work year is 2,080 hours (40 hours/week x 52 weeks). Accounting for 10 holidays and 2 weeks vacation, the effective total is closer to 1,960 hours." },
-  { q: "What is the federal minimum wage in the US?", a: "The federal minimum wage is $7.25 per hour as of 2024. Many states and cities have higher minimum wages; for example, California and New York are at $16.00/hour." },
-  { q: "How do I calculate overtime pay?", a: "Under federal law, overtime is 1.5 times your regular rate for hours over 40 per week. Some states require overtime after 8 hours per day. Formula: Overtime pay = (Regular rate x 1.5) x overtime hours." },
-  { q: "Is a $20 per hour wage a good salary?", a: "At $20/hour and 40 hours/week, annual gross pay is approximately $41,600. Whether this is comfortable depends heavily on your location and cost of living." },
+  { q: "How do I convert hourly wage to annual salary?", a: "Multiply your hourly rate by weekly hours, then by 52. For example, $25/hr × 40 hrs/week × 52 weeks = $52,000/year." },
+  { q: "How many hours are in a work year?", a: "A standard full-time work year is 2,080 hours (40 hours/week × 52 weeks). Accounting for 10 federal holidays and 2 weeks of vacation, the effective total is closer to 1,920 hours." },
+  { q: "What is the federal minimum wage in the US?", a: "The federal minimum wage is $7.25 per hour as of 2024. Many states and cities have higher minimum wages — California, New York, and Washington all exceed $16.00/hour." },
+  { q: "How do I calculate overtime pay?", a: "Under the FLSA, overtime is 1.5× your regular rate for hours over 40 per week. Some states require overtime after 8 hours per day. Formula: Overtime pay = (regular rate × 1.5) × overtime hours." },
+  { q: "Is $20 per hour a good salary?", a: "At $20/hour working 40 hours/week, annual gross pay is $41,600. Whether this is comfortable depends on your location — it is well above minimum wage but below the national median of ~$59,000." },
 ]} />
+
+### Related Tools
+
+- [Annual Salary Calculator](/apps/annual-salary-calculator) — Convert hourly pay to annual salary
+- [Monthly Salary Calculator](/apps/monthly-salary-calculator) — See your monthly earnings from hourly rate
+- [Net Salary Calculator](/apps/net-salary-calculator) — Estimate your take-home pay after taxes
+- [Overtime Calculator](/apps/overtime-calculator) — Calculate overtime pay and earnings
+- [Work Hours Calculator](/apps/work-hours-calculator) — Track daily and weekly work hours
+
+### Sources
+
+- [Bureau of Labor Statistics — Occupational Employment Statistics](https://www.bls.gov/oes/)
+- [U.S. Department of Labor — Minimum Wage by State](https://www.dol.gov/agencies/whd/minimum-wage/state)
+- [FLSA — Overtime Pay Requirements](https://www.dol.gov/agencies/whd/overtime)
+- [IRS — Tax Brackets and Rates](https://www.irs.gov/newsroom/irs-provides-tax-inflation-adjustments-for-tax-year-2024)

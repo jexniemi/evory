@@ -1,79 +1,126 @@
 import FAQ from "@/components/FAQ"
 
-## Daily Calorie Needs
+## Daily Calorie Needs Calculator
 
-Daily calorie needs (TDEE, Total Daily Energy Expenditure) is the total energy your body consumes in a day. It consists of basal metabolic rate (BMR), physical activity, and the thermic effect of food.
+Your daily calorie needs — also called Total Daily Energy Expenditure (TDEE) — represent the total energy your body burns in a day. It combines your basal metabolic rate (BMR), physical activity, and the thermic effect of food. Knowing your TDEE is the foundation for any nutrition plan, whether your goal is weight loss, muscle gain, or maintenance.
 
-The calculator uses the **Mifflin-St Jeor formula**, which is considered the most accurate modern BMR formula. Your selected activity factor is applied to the result.
+This calculator uses the **Mifflin-St Jeor formula**, which research has shown to be the most accurate modern BMR prediction equation for the general population.
 
-## Mifflin-St Jeor Formula
+### Mifflin-St Jeor Formula
 
 **For men:**
-BMR = (10 × weight kg) + (6.25 × height cm) − (5 × age) + 5
+
+> BMR = (10 × weight in kg) + (6.25 × height in cm) − (5 × age in years) + 5
 
 **For women:**
-BMR = (10 × weight kg) + (6.25 × height cm) − (5 × age) − 161
 
-## Activity Levels
+> BMR = (10 × weight in kg) + (6.25 × height in cm) − (5 × age in years) − 161
+
+Your TDEE is then calculated by multiplying your BMR by an activity factor:
+
+> **TDEE = BMR × Activity Factor**
+
+### Worked Example
+
+A 30-year-old man, 5'10" (178 cm), 180 lbs (82 kg), who exercises 3–5 days per week:
+
+- **BMR:** (10 × 82) + (6.25 × 178) − (5 × 30) + 5 = 820 + 1,112.5 − 150 + 5 = **1,787 kcal**
+- **TDEE (moderate activity, 1.55):** 1,787 × 1.55 = **2,770 kcal/day**
+- **For weight loss (−500 kcal):** 2,770 − 500 = **2,270 kcal/day**
+- **For muscle gain (+300 kcal):** 2,770 + 300 = **3,070 kcal/day**
+
+### Activity Level Reference Table
 
 <table className="table table-sm my-4">
   <thead className="bg-base-200">
     <tr>
-      <th>Level</th>
+      <th>Activity Level</th>
       <th>Factor</th>
-      <th>Example</th>
+      <th>Description</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Sedentary</td>
-      <td>1.2</td>
-      <td>Office work, no exercise</td>
-    </tr>
-    <tr>
-      <td>Light exercise</td>
-      <td>1.375</td>
-      <td>Walking or light exercise 1–3 days/week</td>
-    </tr>
-    <tr>
-      <td>Moderate exercise</td>
-      <td>1.55</td>
-      <td>Jogging or gym 3–5 days/week</td>
-    </tr>
-    <tr>
-      <td>Heavy exercise</td>
-      <td>1.725</td>
-      <td>Intensive training 6–7 days/week</td>
-    </tr>
-    <tr>
-      <td>Very heavy</td>
-      <td>1.9</td>
-      <td>Physical work + training or twice daily</td>
-    </tr>
+    <tr><td>Sedentary</td><td>1.2</td><td>Desk job, no exercise</td></tr>
+    <tr><td>Lightly active</td><td>1.375</td><td>Walking or light exercise 1–3 days/week</td></tr>
+    <tr><td>Moderately active</td><td>1.55</td><td>Gym, jogging, or sports 3–5 days/week</td></tr>
+    <tr><td>Very active</td><td>1.725</td><td>Hard training 6–7 days/week</td></tr>
+    <tr><td>Extremely active</td><td>1.9</td><td>Physical labor job + daily training</td></tr>
   </tbody>
 </table>
 
-## Weight Loss and Muscle Gain
+### Calorie Goals by Objective
 
-Safe weight loss is about **0.5–1 kg per week**, which corresponds to about 500 kcal daily deficit. The calculator shows this automatically.
+Your calorie target depends on whether you want to lose fat, gain muscle, or maintain your current weight:
 
-For muscle gain, a surplus of about 300–500 kcal per day is recommended, combined with strength training.
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Goal</th>
+      <th>Daily Adjustment</th>
+      <th>Expected Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Aggressive fat loss</td><td>−750 to −1,000 kcal</td><td>1.5–2 lbs/week</td></tr>
+    <tr><td>Moderate fat loss</td><td>−500 kcal</td><td>~1 lb/week</td></tr>
+    <tr><td>Slow fat loss</td><td>−250 kcal</td><td>~0.5 lb/week</td></tr>
+    <tr><td>Maintenance</td><td>0</td><td>No change</td></tr>
+    <tr><td>Lean bulk</td><td>+250 to +300 kcal</td><td>~0.5 lb/week gain</td></tr>
+    <tr><td>Bulk</td><td>+500 kcal</td><td>~1 lb/week gain</td></tr>
+  </tbody>
+</table>
 
-**Important:** Diets below 1,200 kcal (women) or 1,500 kcal (men) are not recommended without guidance from a healthcare professional.
+### Average Calorie Needs by Age and Sex
 
-## Difference from BMR Calculator
+These are general USDA guidelines for moderately active adults:
 
-The [Basal Metabolic Rate Calculator](/apps/bmr-calculator) shows resting metabolism using the Harris-Benedict formula and gives an overview of different activity levels. This calculator uses the Mifflin-St Jeor formula and provides an accurate result for your selected activity level plus goal-based calorie recommendations.
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Age Group</th>
+      <th>Men (kcal/day)</th>
+      <th>Women (kcal/day)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>19–25</td><td>2,800</td><td>2,200</td></tr>
+    <tr><td>26–35</td><td>2,600</td><td>2,000</td></tr>
+    <tr><td>36–50</td><td>2,400</td><td>2,000</td></tr>
+    <tr><td>51–65</td><td>2,200</td><td>1,800</td></tr>
+    <tr><td>66+</td><td>2,000</td><td>1,600</td></tr>
+  </tbody>
+</table>
 
-## Sources
+### Weight Loss Safety Guidelines
 
-- Mifflin, M.D. et al. (1990). *A new predictive equation for resting energy expenditure in healthy individuals.* The American Journal of Clinical Nutrition.
-- Frankenfield, D. et al. (2005). *Comparison of predictive equations for resting metabolic rate.* Journal of the American Dietetic Association.
+- A deficit of **500 kcal/day** produces roughly 1 pound of fat loss per week (3,500 kcal ≈ 1 lb of fat).
+- Women should not eat below **1,200 kcal/day** and men below **1,500 kcal/day** without medical supervision.
+- Very low-calorie diets (below 800 kcal) require physician oversight and are only appropriate for specific medical situations.
+- Rapid weight loss can cause muscle loss, nutritional deficiencies, and metabolic adaptation ("metabolic slowdown").
+
+### How This Differs from the BMR Calculator
+
+The [BMR Calculator](/apps/bmr-calculator) shows your resting metabolism using the Harris-Benedict formula and displays results across multiple activity levels. This calculator uses the more modern Mifflin-St Jeor formula and provides a single personalized TDEE based on your selected activity level, plus goal-specific calorie targets for weight loss or gain.
 
 <FAQ items={[
-  { q: "How many calories do I need per day?", a: "The average adult needs roughly 1,600-3,000 kcal/day depending on age, sex, weight, height, and activity level. Use the Mifflin-St Jeor formula with your activity multiplier for a personalized estimate." },
-  { q: "What is TDEE?", a: "TDEE stands for Total Daily Energy Expenditure: the total calories your body burns in a day including rest, physical activity, and digestion." },
-  { q: "What is the difference between BMR and TDEE?", a: "BMR (Basal Metabolic Rate) is calories burned at complete rest. TDEE multiplies BMR by an activity factor to account for daily movement and exercise." },
-  { q: "How many calories should I eat to lose 1 pound per week?", a: "A deficit of about 500 calories per day leads to roughly 1 pound (0.45 kg) of weight loss per week. Reducing below 1,200 kcal/day (women) or 1,500 kcal/day (men) is not recommended without medical guidance." },
-  { q: "Is the Mifflin-St Jeor formula accurate?", a: "Studies show the Mifflin-St Jeor formula is the most accurate BMR prediction for most people, with an average error of about 10%. Actual needs may vary based on body composition and health conditions." },
+  { q: "How many calories do I need per day?", a: "The average moderately active adult needs roughly 2,000–2,800 kcal/day depending on age, sex, weight, height, and activity level. Use the Mifflin-St Jeor formula with your activity multiplier for a personalized estimate." },
+  { q: "What is TDEE?", a: "TDEE stands for Total Daily Energy Expenditure — the total calories your body burns in a day including basal metabolism, physical activity, and the thermic effect of food (digesting meals)." },
+  { q: "What is the difference between BMR and TDEE?", a: "BMR (Basal Metabolic Rate) is the calories you burn at complete rest — just to keep organs functioning. TDEE multiplies BMR by an activity factor to include daily movement and exercise." },
+  { q: "How many calories should I eat to lose 1 pound per week?", a: "Create a deficit of about 500 calories per day below your TDEE. For example, if your TDEE is 2,500 kcal, eat 2,000 kcal/day. Never go below 1,200 (women) or 1,500 (men) without medical guidance." },
+  { q: "Is the Mifflin-St Jeor formula accurate?", a: "Research shows it is the most accurate BMR prediction equation for most healthy adults, with an average error of about 10%. Individual variation depends on body composition, hormones, and genetics." },
 ]} />
+
+### Related Tools
+
+- [BMR Calculator](/apps/bmr-calculator) — Calculate your basal metabolic rate
+- [Calorie Burn Calculator](/apps/calorie-burn-calculator) — Estimate calories burned during exercise
+- [Macro Calculator](/apps/macro-calculator) — Get your ideal protein, carb, and fat breakdown
+- [BMI Calculator](/apps/bmi-calculator) — Check your body mass index
+- [Protein Intake Calculator](/apps/protein-intake-calculator) — Find your daily protein target
+
+### Sources
+
+- Mifflin, M.D. et al. (1990). *A new predictive equation for resting energy expenditure.* The American Journal of Clinical Nutrition, 51(2), 241–247.
+- [USDA — Dietary Guidelines for Americans 2020–2025](https://www.dietaryguidelines.gov/)
+- [Mayo Clinic — Calorie Calculator](https://www.mayoclinic.org/healthy-lifestyle/weight-loss/in-depth/calories/art-20048065)
+- [NIH — Estimating Calorie Needs](https://www.nih.gov/news-events/nih-research-matters/calorie-restriction-and-fasting-diets-what-do-we-know)

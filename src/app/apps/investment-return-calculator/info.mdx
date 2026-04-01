@@ -1,55 +1,130 @@
 import FAQ from "@/components/FAQ"
 
-## What is ROI?
+## Investment Return Calculator – ROI & CAGR
 
-ROI (Return on Investment) or return on invested capital tells how much the investment has yielded relative to the original capital. It is one of the most used key figures for comparing the profitability of investments and business.
+Return on Investment (ROI) tells you how much your investment has gained or lost relative to the original capital. It is one of the most widely used metrics for evaluating and comparing the profitability of investments, real estate, and business ventures.
 
-## Formulas
+### Formulas
 
-**Total return:**
-ROI = (End value − Initial investment) / Initial investment × 100 %
+**Total Return (ROI):**
 
-**Annualized annual return (CAGR):**
-CAGR = (End value / Initial investment)^(1/years) − 1
+> **ROI = (End Value − Initial Investment) ÷ Initial Investment × 100%**
 
-CAGR is useful for comparing investments of different lengths, as it converts the total return to an annual return percentage.
+**Compound Annual Growth Rate (CAGR):**
 
-## Examples of returns
+> **CAGR = (End Value ÷ Initial Investment)^(1/years) − 1**
+
+CAGR converts total return into an equivalent annual rate, making it possible to compare investments held for different time periods.
+
+### Worked Example
+
+You invested **$10,000 in an S&P 500 index fund** that grew to **$16,500 over 5 years**:
+
+- ROI: ($16,500 − $10,000) ÷ $10,000 × 100 = **65%**
+- CAGR: ($16,500 ÷ $10,000)^(1/5) − 1 = **10.5%/year**
+
+### Return Comparison Table
 
 <table className="table table-sm my-4">
   <thead className="bg-base-200">
     <tr>
       <th>Investment</th>
-      <th>Time</th>
+      <th>Period</th>
       <th>ROI</th>
       <th>CAGR</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>$10,000 → $15,000</td><td>5 y</td><td>50 %</td><td>8,4 %/y</td></tr>
-    <tr><td>$10,000 → $20,000</td><td>10 y</td><td>100 %</td><td>7,2 %/y</td></tr>
-    <tr><td>$10,000 → $12,000</td><td>2 y</td><td>20 %</td><td>9,5 %/y</td></tr>
-    <tr><td>$50,000 → $45,000</td><td>3 y</td><td>−10 %</td><td>−3,4 %/y</td></tr>
+    <tr><td>$10,000 → $15,000</td><td>5 years</td><td>50%</td><td>8.4%/yr</td></tr>
+    <tr><td>$10,000 → $20,000</td><td>10 years</td><td>100%</td><td>7.2%/yr</td></tr>
+    <tr><td>$10,000 → $12,000</td><td>2 years</td><td>20%</td><td>9.5%/yr</td></tr>
+    <tr><td>$50,000 → $45,000</td><td>3 years</td><td>−10%</td><td>−3.4%/yr</td></tr>
+    <tr><td>$10,000 → $40,000</td><td>15 years</td><td>300%</td><td>9.7%/yr</td></tr>
   </tbody>
 </table>
 
-## When to use ROI and when CAGR?
+### Historical Average Returns by Asset Class
 
-- **ROI** is suitable for assessing the total return of a single investment
-- **CAGR** is suitable for comparing investments of different lengths, as it takes into account the effect of time
+Understanding typical returns helps set realistic expectations:
 
-For example, 100% return in 10 years sounds good, but CAGR is only 7.2%/y. On the other hand, 20% return in 2 years corresponds to 9.5% annual return.
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Asset Class</th>
+      <th>Avg. Annual Return</th>
+      <th>Risk Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>S&P 500 (U.S. large-cap stocks)</td><td>~10%</td><td>High</td></tr>
+    <tr><td>Total U.S. Stock Market</td><td>~10%</td><td>High</td></tr>
+    <tr><td>International stocks (MSCI EAFE)</td><td>~7–8%</td><td>High</td></tr>
+    <tr><td>U.S. corporate bonds</td><td>~5–6%</td><td>Medium</td></tr>
+    <tr><td>U.S. Treasury bonds</td><td>~3–5%</td><td>Low</td></tr>
+    <tr><td>Real estate (REITs)</td><td>~8–10%</td><td>Medium-High</td></tr>
+    <tr><td>High-yield savings / CDs</td><td>~4–5%</td><td>Very Low</td></tr>
+    <tr><td>Inflation (CPI)</td><td>~3%</td><td>—</td></tr>
+  </tbody>
+</table>
 
-## Other calculators
+<small>Returns shown are long-term historical averages before inflation. Past performance does not guarantee future results.</small>
 
-- [Compound Interest Calculator](/apps/simple-compound-interest-calculator) — calculate investment growth into the future
-- [Compound Interest Calculator (with additional investments)](/apps/compound-interest-calculator) — takes into account monthly additional investments
-- [Loan Repayment Calculator](/apps/loan-repayment-calculator) — calculate loan monthly payment and interest costs
+### The Rule of 72
+
+The Rule of 72 provides a quick estimate of how long it takes your money to double:
+
+> **Years to Double = 72 ÷ Annual Return Rate**
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Annual Return</th>
+      <th>Doubles In</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>4%</td><td>18 years</td></tr>
+    <tr><td>6%</td><td>12 years</td></tr>
+    <tr><td>8%</td><td>9 years</td></tr>
+    <tr><td>10%</td><td>7.2 years</td></tr>
+    <tr><td>12%</td><td>6 years</td></tr>
+  </tbody>
+</table>
+
+### When to Use ROI vs. CAGR
+
+- **ROI** is best for evaluating the total return of a single, completed investment
+- **CAGR** is essential when comparing investments held for different lengths of time
+
+For example, a 100% return over 10 years sounds impressive, but CAGR reveals it is only 7.2%/year. Meanwhile, 20% return over 2 years corresponds to 9.5% annual return — actually the better performer on an annualized basis.
+
+### Real Return vs. Nominal Return
+
+Nominal returns are the raw percentage gain. **Real returns** subtract inflation, showing your actual purchasing power growth:
+
+> **Real Return ≈ Nominal Return − Inflation Rate**
+
+If your investment earned 10% but inflation was 3%, your real return is approximately 7%. Always consider real returns when evaluating long-term investment performance.
 
 <FAQ items={[
-  { q: "How is investment return calculated?", a: "Return on Investment (ROI) = (Final Value - Initial Value) / Initial Value x 100. For example, investing $1,000 that grows to $1,200 gives a 20% return." },
-  { q: "What is a good annual return on investment?", a: "The S&P 500 has historically averaged about 10% annual return before inflation (roughly 7% after inflation). Returns vary widely by asset class and time period." },
-  { q: "What is the difference between simple return and annualized return?", a: "Simple return measures total gain over the entire period. Annualized return (CAGR) converts total return into an equivalent yearly rate, making different time periods comparable." },
-  { q: "How does compounding affect investment returns?", a: "Compounding means earning returns on both your original investment and prior gains. Over long periods this dramatically accelerates growth — often called the eighth wonder of the world." },
-  { q: "What is the Rule of 72?", a: "The Rule of 72 estimates how long it takes to double your investment: divide 72 by the annual return rate. At 8% annual return, your money doubles in about 9 years (72 / 8 = 9)." },
+  { q: "How is investment return calculated?", a: "ROI = (Final Value − Initial Value) ÷ Initial Value × 100. For example, investing $1,000 that grows to $1,200 gives a 20% return." },
+  { q: "What is a good annual return on investment?", a: "The S&P 500 has historically averaged about 10% annual return before inflation (~7% after). Returns above this benchmark are considered excellent. Safe investments like bonds return 3–5%." },
+  { q: "What is the difference between simple return and annualized return?", a: "Simple return measures total gain over the entire holding period. Annualized return (CAGR) converts total return into an equivalent yearly rate, allowing fair comparison across different time horizons." },
+  { q: "How does compounding affect investment returns?", a: "Compounding means earning returns on both your original investment and prior gains. Over long periods this dramatically accelerates growth — $10,000 at 10% becomes $67,275 in 20 years without adding any money." },
+  { q: "What is the Rule of 72?", a: "The Rule of 72 estimates how long it takes to double your investment: divide 72 by the annual return rate. At 8% annual return, your money doubles in about 9 years (72 ÷ 8 = 9)." },
 ]} />
+
+### Related Tools
+
+- [Compound Interest Calculator](/apps/compound-interest-calculator) — Calculate investment growth with contributions
+- [Simple Compound Interest Calculator](/apps/simple-compound-interest-calculator) — Basic compound interest calculation
+- [401k Calculator](/apps/401k-calculator) — Plan your retirement savings
+- [Retirement Calculator](/apps/retirement-calculator) — Estimate retirement readiness
+- [Savings Goal Calculator](/apps/savings-goal-calculator) — Calculate savings needed to reach a target
+
+### Sources
+
+- [SEC — Investor.gov: Compound Interest Calculator](https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator)
+- [Investopedia — Return on Investment (ROI)](https://www.investopedia.com/terms/r/returnoninvestment.asp)
+- [S&P Dow Jones Indices — S&P 500 Historical Returns](https://www.spglobal.com/spdji/en/)
+- [Federal Reserve Bank of St. Louis — FRED Economic Data](https://fred.stlouisfed.org/)

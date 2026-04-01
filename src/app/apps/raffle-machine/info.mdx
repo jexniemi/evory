@@ -1,39 +1,102 @@
 import FAQ from "@/components/FAQ"
 
-## Raffle Machine – Draw a Winner from a List
+## Raffle Machine – Draw a Random Winner from Any List
 
-The raffle machine is a free tool for randomly drawing a winner or item from a list. Suitable for contests, social media raffles, teaching, team divisions, and anything else where a fair random selection is needed.
+The raffle machine is a free, fair tool for randomly selecting a winner from a list of names, entries, or items. Whether you are running a social media giveaway, picking a classroom volunteer, splitting teams, or drawing door prizes at a company event, this tool ensures every participant has an equal chance.
 
-### Use Cases
+### How to Use the Raffle Machine
 
-- **Social media raffles** – Draw a winner from comment lists or followers
-- **Teaching** – Draw a student to answer a question or divide into groups
-- **Team division** – Draw players fairly into teams
-- **Meeting topics** – Draw agenda topic or speaking order
-- **Restaurant** – Draw what to eat today
+1. **Enter names** — Paste or type your list of participants (one per line)
+2. **Click Draw** — The machine randomly selects one winner
+3. **Draw again** — Enable "Remove winner" to automatically exclude past winners and draw multiple prizes in succession
 
-### How Does the Draw Work?
+You can paste lists directly from Excel, Google Sheets, or any text document. Each line becomes one entry in the draw.
 
-The raffle machine uses the browser's `Math.random()` function, which produces a uniformly distributed random number. Each participant is equally likely to be the winner, and previous draws do not affect subsequent ones.
+### How Does the Random Selection Work?
 
-When one winner is drawn and you remove them from the list, the next draw selects randomly from the remaining ones – perfect for distributing multiple prize spots.
+The raffle machine uses the browser's built-in `Math.random()` function to generate a uniformly distributed random number. This means:
 
-### Tips for Drawing
+- **Every participant has an exactly equal probability** of being selected
+- **Previous draws do not influence** future draws (independent events)
+- **The probability of any one person winning** is 1 ÷ total entries
 
-- Copy the list directly from Excel or word processing into the input field
-- Activate the "Remove winner" function to draw multiple winners in succession
-- Save the draw result as a screenshot for documentation
+For example, in a raffle with 200 entries, each person has a **0.5% chance** (1 in 200) of winning.
 
-### See Also
+### Common Raffle Use Cases
 
-- [Random Number Generator](/apps/random-number-generator) – Generate random numbers
-- [Lottery Number Generator](/apps/lottery-number-generator) – Generate Lotto numbers
-- [Dice Generator](/apps/dice-generator) – Roll virtual dice
+<table className="table table-sm my-4">
+  <thead>
+    <tr className="bg-base-200">
+      <th>Use Case</th>
+      <th>How to Set Up</th>
+      <th>Tip</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Instagram/TikTok giveaway</td><td>Export commenters, paste one name per line</td><td>Remove duplicates for fairness</td></tr>
+    <tr><td>Classroom volunteer</td><td>Enter student names</td><td>Use "Remove winner" to give everyone a turn</td></tr>
+    <tr><td>Team draft / pickup games</td><td>Enter player names, draw alternating teams</td><td>Draw for Team 1, remaining go to Team 2</td></tr>
+    <tr><td>Door prize drawing</td><td>Enter ticket numbers or attendee names</td><td>Screenshot results for documentation</td></tr>
+    <tr><td>Meeting speaking order</td><td>Enter participant names</td><td>Draw all at once for a randomized agenda</td></tr>
+    <tr><td>Secret Santa assignment</td><td>Enter names, draw in pairs</td><td>Ensure no one draws themselves</td></tr>
+    <tr><td>Restaurant choice</td><td>Enter restaurant names</td><td>Let the machine decide when the group can't agree</td></tr>
+  </tbody>
+</table>
+
+### How to Run a Fair Giveaway
+
+Running a transparent and legally compliant giveaway in the United States requires attention to a few details:
+
+1. **Publish official rules** before the contest begins — include eligibility, entry method, prize description, and drawing date
+2. **No purchase necessary** — U.S. law generally requires sweepstakes to be free to enter. If a purchase is required, it may be classified as an illegal lottery
+3. **Use a verifiable random method** — Tools like this raffle machine, random.org, or a physical drawing ensure fairness
+4. **Announce the winner publicly** or notify them directly within the stated timeframe
+5. **Prizes over $600** require the winner to report the value as taxable income (IRS Form 1099-MISC)
+6. **State-specific laws** — Some states (New York, Florida, Rhode Island) require registration for sweepstakes above certain prize values
+
+### Probability of Winning
+
+The probability of winning a single-entry raffle is straightforward:
+
+> **P(win) = 1 ÷ N** where N is the total number of entries
+
+| Entries | Probability | Percentage |
+|---|---|---|
+| 10 | 1 in 10 | 10% |
+| 50 | 1 in 50 | 2% |
+| 100 | 1 in 100 | 1% |
+| 500 | 1 in 500 | 0.2% |
+| 1,000 | 1 in 1,000 | 0.1% |
+
+If multiple tickets per person are allowed, multiply their individual probability by the number of tickets they hold.
+
+### Tips for Better Raffles
+
+- **Remove duplicates** before drawing to keep it fair — unless multiple entries per person are allowed
+- **Screenshot or screen-record** the drawing for transparency
+- **Use "Remove winner" mode** when drawing multiple prizes in order (1st, 2nd, 3rd place)
+- **Set a clear deadline** for entries so no one enters after the drawing has started
+- **Consider a live draw** on social media for maximum engagement and trust
 
 <FAQ items={[
-  { q: "How does a raffle work?", a: "Participants enter by submitting their name or ticket number. At the draw, one or more winners are selected at random. Each ticket has an equal probability of being chosen." },
-  { q: "How do I make a raffle fair?", a: "Ensure every participant has an equal chance by using a verified random selection method, like our raffle machine. Announce the rules in advance and draw in front of participants when possible." },
-  { q: "Can I use this raffle machine for large groups?", a: "Yes — paste names or entries (one per line) into the raffle machine and it will randomly select winners. It works for any size group from 2 to thousands of entries." },
-  { q: "What is the probability of winning a raffle?", a: "Your probability equals 1 divided by the total number of entries. In a raffle with 100 participants, each person has a 1% chance. Buying more tickets proportionally improves your odds." },
-  { q: "Is a digital raffle as random as drawing from a hat?", a: "Yes, modern software random number generators are cryptographically secure and statistically uniform — equivalent to or better than physical drawing methods." },
+  { q: "How does a raffle work?", a: "Participants enter by submitting their name, ticket number, or comment. At the scheduled draw time, one or more winners are selected at random using a tool like this raffle machine. Each valid entry has an equal probability of being chosen." },
+  { q: "How do I make a raffle fair?", a: "Use a verified random selection method (like this machine or random.org), announce rules before entries open, remove duplicate entries if applicable, and draw in front of participants or record the process. Publish the winner publicly." },
+  { q: "Can I use this raffle machine for large groups?", a: "Yes — paste names or entries (one per line) and the machine will randomly select winners. It works for any group size from 2 to thousands of entries with no practical upper limit." },
+  { q: "What is the probability of winning a raffle?", a: "Your probability equals 1 divided by the total number of entries. In a raffle with 100 participants each holding one ticket, each person has a 1% chance. Buying more tickets proportionally improves your odds." },
+  { q: "Is a digital raffle as random as drawing from a hat?", a: "Yes — modern software random number generators produce statistically uniform results that are equivalent to or better than physical drawing methods. The key advantage is that digital draws can be recorded and verified." },
 ]} />
+
+### Related Tools
+
+- [Random Number Generator](/apps/random-number-generator) — Generate random numbers from any range
+- [Lottery Number Generator](/apps/lottery-number-generator) — Generate lottery number combinations
+- [Dice Generator](/apps/dice-generator) — Roll virtual dice for games
+- [Coin Flip](/apps/coin-flip) — Virtual coin toss for quick decisions
+- [Name Generator](/apps/name-generator) — Generate random names
+
+### Sources
+
+- [FTC — Prize Promotions and Sweepstakes](https://www.ftc.gov/news-events/topics/consumer-protection)
+- [IRS — Gambling and Lottery Winnings (Form W-2G)](https://www.irs.gov/taxtopics/tc419)
+- [SBA — Running Contests and Sweepstakes](https://www.sba.gov/)
+- [Random.org — Randomness and Integrity](https://www.random.org/)

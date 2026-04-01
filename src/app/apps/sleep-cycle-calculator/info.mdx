@@ -2,52 +2,120 @@ import FAQ from "@/components/FAQ"
 
 ## Sleep Cycle Calculator – Wake Up Refreshed at the Right Time
 
-The sleep cycle calculator helps you find the optimal bedtime or wake-up time based on human natural sleep cycles. Proper timing can make the difference between heavy waking and a fresh and energetic morning.
+Waking up groggy even after 8 hours of sleep? The problem may not be *how much* you sleep, but *when* you wake up. The sleep cycle calculator finds the optimal bedtime or wake-up time aligned with your body's natural 90-minute sleep cycles, so you wake at the lightest phase of sleep and start the day feeling alert.
 
 ### What Are Sleep Cycles?
 
-Human sleep consists of repeating cycles, each lasting about **90 minutes**. During one cycle, sleep varies from light sleep to deep sleep and REM sleep (rapid eye movement). An optimal night's sleep includes 4–6 such cycles.
+Human sleep is not a uniform state — it repeats in **cycles of approximately 90 minutes**, each progressing through distinct stages:
 
-Waking up during deep sleep causes so-called **sleep inertia** – that heavy feeling when you wake up completely exhausted even though you've slept long. Waking up during light sleep phase (at the end of the cycle) is much more pleasant.
+<table className="table table-sm my-4">
+  <thead>
+    <tr className="bg-base-200">
+      <th>Stage</th>
+      <th>Type</th>
+      <th>Duration</th>
+      <th>What Happens</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>N1</td><td>Light sleep</td><td>5 – 10 min</td><td>Transition from wakefulness, easy to wake up</td></tr>
+    <tr><td>N2</td><td>Light sleep</td><td>20 – 25 min</td><td>Heart rate slows, body temperature drops, sleep spindles</td></tr>
+    <tr><td>N3</td><td>Deep sleep (SWS)</td><td>20 – 40 min</td><td>Physical recovery, growth hormone release, immune repair</td></tr>
+    <tr><td>REM</td><td>REM sleep</td><td>10 – 60 min</td><td>Dreaming, memory consolidation, emotional processing</td></tr>
+  </tbody>
+</table>
 
-### Recommended Sleep Amounts
+An optimal night includes **4 to 6 complete cycles**. Deep sleep (N3) dominates early cycles, while REM sleep periods grow longer in later cycles — which is why the last 1–2 hours of sleep are especially dream-rich.
+
+### Why Timing Matters More Than Duration
+
+Waking up during **deep sleep (N3)** causes **sleep inertia** — that heavy, disoriented feeling where you can barely function despite sleeping 8+ hours. Waking during **light sleep (N1/N2)** at the natural end of a cycle makes you feel alert and refreshed, even with slightly less total sleep.
+
+This is why someone who sleeps 7.5 hours (5 cycles) can feel *better* than someone who sleeps 8 hours but wakes mid-cycle.
+
+### Recommended Sleep Durations
 
 <table className="table table-sm my-4">
   <thead>
     <tr className="bg-base-200">
       <th>Cycles</th>
-      <th>Sleep duration</th>
-      <th>Assessment</th>
+      <th>Sleep Duration</th>
+      <th>Suitability</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>4 cycles</td><td>6 hours</td><td>Poor – survives if necessary</td></tr>
-    <tr><td>5 cycles</td><td>7.5 hours</td><td>Good – suitable for most</td></tr>
-    <tr><td>6 cycles</td><td>9 hours</td><td>Optimal – for recovery</td></tr>
+    <tr><td>4 cycles</td><td>6 hours</td><td>Minimum — survivable short-term, not sustainable</td></tr>
+    <tr><td>5 cycles</td><td>7.5 hours</td><td>Good — suits most adults</td></tr>
+    <tr><td>6 cycles</td><td>9 hours</td><td>Optimal — ideal for recovery, athletes, teens</td></tr>
+  </tbody>
+</table>
+
+### Sleep Recommendations by Age
+
+<table className="table table-sm my-4">
+  <thead>
+    <tr className="bg-base-200">
+      <th>Age Group</th>
+      <th>Recommended Sleep</th>
+      <th>Approximate Cycles</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Newborn (0–3 months)</td><td>14 – 17 hours</td><td>N/A (polyphasic)</td></tr>
+    <tr><td>Infant (4–11 months)</td><td>12 – 15 hours</td><td>N/A</td></tr>
+    <tr><td>Toddler (1–2 years)</td><td>11 – 14 hours</td><td>N/A</td></tr>
+    <tr><td>Preschool (3–5 years)</td><td>10 – 13 hours</td><td>7 – 9</td></tr>
+    <tr><td>School age (6–13)</td><td>9 – 11 hours</td><td>6 – 7</td></tr>
+    <tr><td>Teen (14–17)</td><td>8 – 10 hours</td><td>5 – 7</td></tr>
+    <tr><td>Adult (18–64)</td><td>7 – 9 hours</td><td>5 – 6</td></tr>
+    <tr><td>Older adult (65+)</td><td>7 – 8 hours</td><td>5</td></tr>
   </tbody>
 </table>
 
 ### Sleep Onset Latency
 
-The calculator takes into account the average **15-minute sleep onset latency** – the time from bed to actual falling asleep. This corresponds to international research data, which you can explore for example on the [Sleep Foundation website](https://www.sleepfoundation.org/how-sleep-works/sleep-cycle).
+The calculator accounts for the average **15-minute sleep onset latency** — the time from lying down to actually falling asleep. Research from the National Sleep Foundation shows this is normal for healthy adults. If you consistently fall asleep in under 5 minutes, you may be sleep-deprived.
 
 ### Tips for Better Sleep
 
-- Try to sleep and wake up at the same time every day
-- Avoid blue light (phones, computers) 1–2 hours before bedtime
-- Keep the bedroom cool (approx. 18–20 °C)
-- Coffee's effect lasts 5–6 hours – avoid coffee in the late afternoon
+- **Consistent schedule** — Go to bed and wake up at the same time every day, including weekends. This regulates your circadian rhythm
+- **Limit blue light** — Screens (phones, tablets, computers) emit blue light that suppresses melatonin. Stop screen use 1–2 hours before bed, or use blue-light filters
+- **Cool bedroom** — The ideal sleeping temperature is **65–68°F (18–20°C)**. Your body needs to cool down to initiate sleep
+- **Avoid caffeine after 2 PM** — Caffeine has a half-life of 5–6 hours. A 3 PM coffee still has half its caffeine active at 9 PM
+- **No alcohol before bed** — While alcohol helps you fall asleep, it disrupts REM sleep and causes fragmented sleep in the second half of the night
+- **Exercise early** — Regular exercise improves sleep quality, but intense workouts within 2–3 hours of bedtime can be stimulating
+- **Dark room** — Use blackout curtains or a sleep mask. Even small amounts of light can disrupt melatonin production
 
-### See Also
+### The Cost of Sleep Deprivation
 
-- [Calorie Needs Calculator](/apps/daily-calorie-needs-calculator) – Calculate your daily energy needs
-- [Basal Metabolic Rate Calculator](/apps/bmr-calculator) – BMR calculator
-- [BMI Calculator](/apps/bmi-calculator) – Calculate your body mass index
+Chronic sleep deprivation (consistently under 7 hours) is linked to serious health consequences:
+
+- **36% increased risk** of cardiovascular disease
+- **48% higher risk** of developing type 2 diabetes
+- **50% greater chance** of obesity
+- Impaired memory, concentration, and decision-making
+- Weakened immune system — sleep-deprived people are **3× more likely** to catch a cold
+- Drowsy driving causes an estimated **100,000 crashes** per year in the U.S.
 
 <FAQ items={[
-  { q: "How long is one sleep cycle?", a: "One complete sleep cycle lasts approximately 90 minutes. It progresses through light sleep, deep sleep (NREM), and REM sleep. Most adults complete 4-6 cycles per night." },
-  { q: "Why should I wake up at the end of a sleep cycle?", a: "Waking up between cycles (rather than during deep sleep) makes you feel more refreshed and alert. Interrupting deep sleep causes sleep inertia — that groggy, disoriented feeling." },
-  { q: "How many hours of sleep do adults need?", a: "Most adults need 7-9 hours of sleep per night. Consistently getting less than 7 hours is associated with increased risk of obesity, heart disease, and cognitive decline." },
-  { q: "What is REM sleep?", a: "REM (Rapid Eye Movement) sleep is the dream-rich phase of the sleep cycle. It is critical for memory consolidation, emotional processing, and creativity. REM periods get longer in later sleep cycles." },
-  { q: "What time should I go to bed to wake up refreshed at 7am?", a: "To wake at 7:00 AM after 5 complete cycles (7.5 hours), go to bed at 11:30 PM. For 6 cycles (9 hours), go to bed at 10:00 PM. Our sleep cycle calculator provides exact bedtimes." },
+  { q: "How long is one sleep cycle?", a: "One complete sleep cycle lasts approximately 90 minutes. It progresses through light sleep (N1, N2), deep sleep (N3/slow-wave sleep), and REM sleep. Most adults complete 4-6 full cycles per night." },
+  { q: "Why should I wake up at the end of a sleep cycle?", a: "Waking between cycles means you are in the lightest sleep stage, so you feel alert and refreshed. Waking during deep sleep (N3) causes sleep inertia — that groggy, disoriented feeling that can last 15-60 minutes." },
+  { q: "How many hours of sleep do adults need?", a: "The CDC and National Sleep Foundation recommend 7-9 hours for adults aged 18-64. Consistently getting fewer than 7 hours increases the risk of obesity, heart disease, diabetes, and cognitive decline." },
+  { q: "What is REM sleep and why is it important?", a: "REM (Rapid Eye Movement) sleep is the dream-rich phase that is critical for memory consolidation, emotional processing, creativity, and learning. REM periods grow longer in later cycles, making the final hours of sleep especially important." },
+  { q: "What time should I go to bed to wake up refreshed at 7 AM?", a: "For 5 complete cycles (7.5 hours of sleep + 15 min to fall asleep), go to bed at 11:15 PM. For 6 cycles (9 hours + 15 min), go to bed at 9:45 PM. Our calculator provides exact bedtimes for any wake-up time." },
 ]} />
+
+### Related Tools
+
+- [Sleep Needs Calculator](/apps/sleep-needs-calculator) — Determine how much sleep you need based on age and activity
+- [BMR Calculator](/apps/bmr-calculator) — Calculate your basal metabolic rate
+- [Daily Calorie Needs Calculator](/apps/daily-calorie-needs-calculator) — Find your total daily energy expenditure
+- [Age Calculator](/apps/age-calculator) — Calculate your exact age
+- [Heart Rate Calculator](/apps/heart-rate-calculator) — Find your target heart rate zones
+
+### Sources
+
+- [National Sleep Foundation — Sleep Cycles](https://www.thensf.org/how-sleep-works/sleep-cycle)
+- [CDC — How Much Sleep Do I Need?](https://www.cdc.gov/sleep/about/how-much-sleep.html)
+- [Harvard Medical School — Sleep and Health](https://healthysleep.med.harvard.edu/)
+- [Mayo Clinic — Sleep Tips](https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/sleep/art-20048379)

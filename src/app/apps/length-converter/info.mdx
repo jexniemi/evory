@@ -1,55 +1,118 @@
 import FAQ from "@/components/FAQ"
 
-## Length Converter – Convert length units easily
+## Length Converter – Convert Length Units Instantly
 
-The length converter converts different length units immediately. Enter value and select unit – get results in centimeters, meters, feet, inches, kilometers and miles right away.
+The length converter converts between metric and imperial length units in real time. Enter a value and select a unit to see results in centimeters, meters, feet, inches, kilometers, and miles instantly.
 
-### Length unit conversion table
+### Length Unit Conversion Table
 
 <table className="table table-sm my-4">
   <thead>
     <tr className="bg-base-200">
       <th>Unit</th>
       <th>Abbreviation</th>
-      <th>Ratio to meter</th>
+      <th>Equivalent in Meters</th>
+      <th>System</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>Centimeter</td><td>cm</td><td>0.01 m</td></tr>
-    <tr><td>Meter</td><td>m</td><td>1 m</td></tr>
-    <tr><td>Foot</td><td>ft</td><td>0.3048 m</td></tr>
-    <tr><td>Inch</td><td>in</td><td>0.0254 m</td></tr>
-    <tr><td>Kilometer</td><td>km</td><td>1 000 m</td></tr>
-    <tr><td>Mile</td><td>mi</td><td>1 609.34 m</td></tr>
+    <tr><td>Millimeter</td><td>mm</td><td>0.001 m</td><td>Metric</td></tr>
+    <tr><td>Centimeter</td><td>cm</td><td>0.01 m</td><td>Metric</td></tr>
+    <tr><td>Meter</td><td>m</td><td>1 m</td><td>Metric</td></tr>
+    <tr><td>Kilometer</td><td>km</td><td>1,000 m</td><td>Metric</td></tr>
+    <tr><td>Inch</td><td>in</td><td>0.0254 m</td><td>Imperial</td></tr>
+    <tr><td>Foot</td><td>ft</td><td>0.3048 m</td><td>Imperial</td></tr>
+    <tr><td>Yard</td><td>yd</td><td>0.9144 m</td><td>Imperial</td></tr>
+    <tr><td>Mile</td><td>mi</td><td>1,609.34 m</td><td>Imperial</td></tr>
   </tbody>
 </table>
 
-### Common conversions
+### Most Common Conversions
 
-- **1 foot = 30.48 cm** – Feet are common especially in the United States and Britain
-- **1 inch = 2.54 cm** – Used for TV screen sizes
-- **1 mile = 1.609 km** – Distance unit used in the United States
-- **1 km = 0.621 miles** – Mnemonic: multiply by 0.6
+These are the conversions Americans search for most frequently:
 
-### Uses
+**Inches ↔ Centimeters:**
+> **1 inch = 2.54 cm** (exact definition)
 
-- **Travel** – Convert American miles to kilometers or feet to meters
-- **TVs and screens** – 65 inch TV is about 165 cm wide
-- **Height** – 6 feet (6 ft) is about 182.9 cm
-- **Construction** – Convert inch dimensions to metric system
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr><th>Inches</th><th>Centimeters</th><th>Common Use</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1 in</td><td>2.54 cm</td><td>Small measurements</td></tr>
+    <tr><td>12 in (1 ft)</td><td>30.48 cm</td><td>Rulers</td></tr>
+    <tr><td>55 in</td><td>139.7 cm</td><td>55" TV diagonal</td></tr>
+    <tr><td>65 in</td><td>165.1 cm</td><td>65" TV diagonal</td></tr>
+    <tr><td>75 in</td><td>190.5 cm</td><td>75" TV diagonal</td></tr>
+  </tbody>
+</table>
 
-More information about SI system: [BIPM – International System of Units](https://www.bipm.org/en/measurement-units)
+**Feet ↔ Meters (Height Conversion):**
+> **1 foot = 0.3048 meters = 30.48 cm**
 
-### See also
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr><th>Height (ft/in)</th><th>Centimeters</th><th>Meters</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>5'0"</td><td>152.4 cm</td><td>1.524 m</td></tr>
+    <tr><td>5'4"</td><td>162.6 cm</td><td>1.626 m</td></tr>
+    <tr><td>5'7"</td><td>170.2 cm</td><td>1.702 m</td></tr>
+    <tr><td>5'10"</td><td>177.8 cm</td><td>1.778 m</td></tr>
+    <tr><td>6'0"</td><td>182.9 cm</td><td>1.829 m</td></tr>
+    <tr><td>6'2"</td><td>188.0 cm</td><td>1.880 m</td></tr>
+    <tr><td>6'5"</td><td>195.6 cm</td><td>1.956 m</td></tr>
+  </tbody>
+</table>
 
-- [Weight Converter](/apps/weight-converter) – Convert kg, lbs, stones and more
-- [Temperature Converter](/apps/temperature-converter) – Celsius, Fahrenheit and Kelvin
-- [Percentage Calculator](/apps/percentage-calculator) – Calculate percentages and changes
+**Miles ↔ Kilometers:**
+> **1 mile = 1.60934 km** · **1 km = 0.62137 miles**
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr><th>Miles</th><th>Kilometers</th><th>Context</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1 mi</td><td>1.61 km</td><td>Basic conversion</td></tr>
+    <tr><td>5 mi</td><td>8.05 km</td><td>5K race ≈ 3.1 mi</td></tr>
+    <tr><td>10 mi</td><td>16.09 km</td><td>10K race ≈ 6.2 mi</td></tr>
+    <tr><td>26.2 mi</td><td>42.2 km</td><td>Marathon</td></tr>
+    <tr><td>100 mi</td><td>160.9 km</td><td>Road trip distance</td></tr>
+  </tbody>
+</table>
+
+### Why the U.S. Uses Imperial Units
+
+The United States is one of only three countries (along with Myanmar and Liberia) that has not officially adopted the metric system as its primary measurement system. While the metric system was legalized for trade in 1866, widespread adoption never occurred due to the massive cost of switching infrastructure, road signs, product labels, and consumer habits. Congress passed the **Metric Conversion Act of 1975**, but it was voluntary and had limited impact.
+
+In practice, many American industries already use metric: science, medicine, pharmaceuticals, the military, and automotive manufacturing. The National Institute of Standards and Technology (NIST) actually defines U.S. customary units in terms of metric equivalents — the inch is officially defined as exactly 25.4 millimeters.
+
+### Quick Conversion Tips
+
+- **Miles to km:** Multiply by 1.6 (or use the Fibonacci sequence — each number is approximately the km equivalent of the previous number in miles: 5 mi ≈ 8 km, 8 mi ≈ 13 km)
+- **Feet to meters:** Divide by 3.28, or multiply by 0.3
+- **Inches to cm:** Multiply by 2.54 (exact)
+- **Cm to inches:** Divide by 2.54, or multiply by 0.394
 
 <FAQ items={[
-  { q: "How many feet are in a meter?", a: "One meter equals approximately 3.28084 feet. Conversely, one foot equals 0.3048 meters." },
-  { q: "How do I convert inches to centimeters?", a: "Multiply inches by 2.54 to get centimeters. For example, 12 inches x 2.54 = 30.48 cm." },
-  { q: "How many miles are in a kilometer?", a: "One kilometer equals 0.621371 miles. One mile equals 1.60934 kilometers." },
-  { q: "What is the difference between imperial and metric length units?", a: "The metric system uses meters, centimeters, and kilometers. The imperial system uses inches, feet, yards, and miles. The US is one of the few countries still primarily using imperial units." },
-  { q: "How tall is 6 feet in centimeters?", a: "6 feet equals 182.88 centimeters (6 x 12 inches x 2.54 cm/inch = 182.88 cm)." },
+  { q: "How many feet are in a meter?", a: "One meter equals approximately 3.28084 feet. Conversely, one foot equals 0.3048 meters (exact definition)." },
+  { q: "How do I convert inches to centimeters?", a: "Multiply inches by 2.54 to get centimeters. For example, 12 inches × 2.54 = 30.48 cm. This conversion factor is exact by definition." },
+  { q: "How many miles are in a kilometer?", a: "One kilometer equals 0.621371 miles. One mile equals 1.60934 kilometers. A quick approximation: multiply km by 0.6 to get miles." },
+  { q: "What is the difference between imperial and metric length units?", a: "The metric system uses meters, centimeters, and kilometers (based on powers of 10). The imperial system uses inches, feet, yards, and miles. The U.S. is one of three countries still primarily using imperial units." },
+  { q: "How tall is 6 feet in centimeters?", a: "6 feet equals 182.88 centimeters (6 × 12 inches = 72 inches × 2.54 cm/inch = 182.88 cm)." },
 ]} />
+
+### Related Tools
+
+- [Weight Converter](/apps/weight-converter) — Convert pounds, kilograms, stones, and more
+- [Temperature Converter](/apps/temperature-converter) — Convert between Fahrenheit, Celsius, and Kelvin
+- [Area Converter](/apps/area-converter) — Convert square feet, acres, hectares, and more
+- [Speed Converter](/apps/speed-converter) — Convert MPH, km/h, knots, and more
+- [Square Footage Calculator](/apps/square-footage-calculator) — Calculate area in square feet
+
+### Sources
+
+- [NIST — The United States and the Metric System](https://www.nist.gov/pml/owm/metric-si/si-units)
+- [BIPM — International System of Units (SI)](https://www.bipm.org/en/measurement-units)
+- [U.S. Metric Association](https://usma.org/)
+- [Britannica — Imperial Units](https://www.britannica.com/science/Imperial-unit)

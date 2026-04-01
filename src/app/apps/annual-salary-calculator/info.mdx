@@ -2,46 +2,137 @@ import FAQ from "@/components/FAQ"
 
 ## How to Calculate Annual Salary
 
-Annual Salary from Monthly Salary:
+Understanding your annual salary is essential for budgeting, tax planning, and comparing job offers. Whether you earn a fixed monthly paycheck or an hourly wage, converting your income to a yearly figure gives you a clearer picture of your total earnings.
 
-**Annual Salary = Monthly Salary × 12 + Holiday Pay + Bonuses**
+### Annual Salary Formulas
 
-Annual Salary from Hourly Wage:
+**From monthly salary:**
 
-**Annual Salary = Hourly Wage × Weekly Hours × 52 ÷ 12 × (12 + Holiday Pay Months)**
+> **Annual Salary = Monthly Salary × 12 + Holiday Pay + Bonuses**
 
-For example, with a monthly salary of $3,200 including holiday pay, the annual salary is approximately **$40,000**.
+**From hourly wage:**
 
-### Vacation Pay
+> **Annual Salary = Hourly Rate × Hours per Week × 52**
 
-Vacation pay is typically a percentage of monthly salary, often around 50%. It is usually paid in connection with summer vacation. Vacation pay may be statutory or based on employment agreements. If your agreement does not include vacation pay, select "No" in the calculator.
+**From biweekly paycheck:**
+
+> **Annual Salary = Biweekly Pay × 26**
+
+### Worked Example
+
+Suppose you earn $4,200 per month before taxes. You also receive a year-end bonus of $3,000.
+
+- **Base annual pay:** $4,200 × 12 = **$50,400**
+- **Plus bonus:** $50,400 + $3,000 = **$53,400**
+- **Estimated monthly take-home (after ~22% effective tax):** ≈ $3,471
+
+If you earn $25/hour and work 40 hours per week:
+
+- **Annual salary:** $25 × 40 × 52 = **$52,000**
+
+### Pay Period Conversion Table
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Pay Period</th>
+      <th>Periods per Year</th>
+      <th>Formula</th>
+      <th>Example ($52,000/yr)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Weekly</td><td>52</td><td>Annual ÷ 52</td><td>$1,000</td></tr>
+    <tr><td>Biweekly</td><td>26</td><td>Annual ÷ 26</td><td>$2,000</td></tr>
+    <tr><td>Semi-monthly</td><td>24</td><td>Annual ÷ 24</td><td>$2,167</td></tr>
+    <tr><td>Monthly</td><td>12</td><td>Annual ÷ 12</td><td>$4,333</td></tr>
+    <tr><td>Quarterly</td><td>4</td><td>Annual ÷ 4</td><td>$13,000</td></tr>
+  </tbody>
+</table>
 
 ### What Does Annual Salary Include?
 
-Annual salary usually means gross salary for the whole year. It may include:
+Annual salary typically refers to gross income — the total amount before taxes and deductions. It usually includes:
 
-- 12 months' basic salary
-- Holiday pay (usually 0.5 months)
-- Performance bonuses and bonuses
-- Benefits in kind (phone, car, housing benefits) are included in taxation
+- **Base salary** — 12 months of regular pay
+- **Guaranteed bonuses** — year-end, signing, or performance bonuses
+- **Commissions** — if part of a predictable compensation structure
+- **Overtime pay** — if regularly scheduled (not usually included otherwise)
 
-Overtime compensations are not usually included in annual salary because they vary monthly.
+Items generally **not** included in base annual salary:
 
-### When is Knowing Annual Salary Useful?
+- Employer-paid health insurance premiums
+- 401(k) employer match contributions
+- Stock options or RSUs (until vested)
+- One-time relocation stipends
 
-- **Taxation** — the income limit of the tax card is based on estimated annual income
-- **Loan Application** — banks assess creditworthiness based on annual income
-- **Salary Comparison** — salaries in different countries are often compared on an annual basis
-- **Job Search** — some job postings state salary on an annual basis
+### Annual Salary vs. Total Compensation
 
-**Sources:**
-- [IRS — Tax Information](https://www.irs.gov/individuals)
-- [OSHA — Annual Leave](https://www.osha.gov/workers/leave)
+Many employers advertise "total compensation" which can be significantly higher than base salary. A job offering $75,000 salary might have total compensation of $95,000+ when you add benefits:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Component</th>
+      <th>Example Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Base salary</td><td>$75,000</td></tr>
+    <tr><td>401(k) match (4%)</td><td>$3,000</td></tr>
+    <tr><td>Health insurance (employer share)</td><td>$8,500</td></tr>
+    <tr><td>PTO value (15 days)</td><td>$4,327</td></tr>
+    <tr><td>Annual bonus (5%)</td><td>$3,750</td></tr>
+    <tr><td><strong>Total compensation</strong></td><td><strong>$94,577</strong></td></tr>
+  </tbody>
+</table>
+
+### When Is Knowing Annual Salary Useful?
+
+- **Tax planning** — The IRS uses your annual income to determine your federal tax bracket. Knowing where you fall helps you plan withholdings and estimated payments.
+- **Loan applications** — Mortgage lenders, auto lenders, and credit card companies evaluate your annual gross income to determine creditworthiness and debt-to-income ratios.
+- **Comparing job offers** — Different pay structures (hourly vs. salary, biweekly vs. monthly) are easiest to compare on an annual basis.
+- **Retirement planning** — Financial advisors recommend saving 10–15% of your annual salary for retirement. Knowing your exact number makes contribution planning straightforward.
+- **Budgeting** — The 50/30/20 rule (needs/wants/savings) works from your annual after-tax income.
+
+### Median Annual Salaries in the U.S. (2024)
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Occupation</th>
+      <th>Median Annual Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>All workers (median)</td><td>$59,384</td></tr>
+    <tr><td>Software developer</td><td>$130,160</td></tr>
+    <tr><td>Registered nurse</td><td>$86,070</td></tr>
+    <tr><td>Elementary school teacher</td><td>$63,670</td></tr>
+    <tr><td>Retail salesperson</td><td>$33,680</td></tr>
+    <tr><td>Truck driver (heavy)</td><td>$54,320</td></tr>
+  </tbody>
+</table>
 
 <FAQ items={[
-  { q: "How do I calculate my annual salary?", a: "Multiply your monthly salary by 12, then add any holiday pay and bonuses. For example, a $4,000/month salary with a half-month holiday bonus equals $49,000/year." },
-  { q: "Is annual salary the same as gross salary?", a: "Yes — annual salary typically refers to gross (pre-tax) income for the year, including base pay, holiday pay, and bonuses, before any deductions." },
-  { q: "How do I convert an hourly wage to annual salary?", a: "Multiply your hourly rate by the number of hours you work per week, then by 52 weeks per year. For example, $20/hr x 40 hrs x 52 = $41,600/year." },
-  { q: "Why does annual salary matter for taxes?", a: "The IRS uses your estimated annual income to determine your tax bracket and withholding. A higher annual income may push you into a higher marginal tax rate." },
-  { q: "What is the difference between annual salary and total compensation?", a: "Total compensation includes salary plus benefits such as health insurance, retirement contributions, bonuses, and paid time off." },
+  { q: "How do I calculate my annual salary from an hourly wage?", a: "Multiply your hourly rate by the number of hours you work per week, then multiply by 52 weeks. For example, $25/hr × 40 hours × 52 weeks = $52,000 per year." },
+  { q: "Is annual salary before or after taxes?", a: "Annual salary almost always refers to gross (pre-tax) income. Your take-home pay after federal, state, and FICA taxes will be lower — typically 20–35% less depending on your tax bracket and state." },
+  { q: "What is the difference between annual salary and total compensation?", a: "Annual salary is your base pay. Total compensation adds benefits like health insurance, retirement contributions, bonuses, stock options, and PTO value. Total comp can be 20–40% higher than base salary." },
+  { q: "How many work hours are in a year?", a: "A standard full-time worker logs 2,080 hours per year (40 hours × 52 weeks). After subtracting average PTO of 10–15 days, actual working hours are roughly 1,960–2,000." },
+  { q: "Does annual salary include overtime?", a: "Generally no. Annual salary refers to regular compensation. Overtime is variable and calculated separately. Salaried employees classified as exempt under the FLSA typically do not receive overtime pay." },
 ]} />
+
+### Related Tools
+
+- [Hourly Salary Calculator](/apps/hourly-salary-calculator) — Convert annual salary to hourly rate
+- [Monthly Salary Calculator](/apps/monthly-salary-calculator) — See your monthly breakdown
+- [Paycheck Calculator](/apps/paycheck-calculator) — Estimate take-home pay after taxes and deductions
+- [Net Salary Calculator](/apps/net-salary-calculator) — Calculate salary after all deductions
+- [Overtime Calculator](/apps/overtime-calculator) — Figure out overtime earnings
+
+### Sources
+
+- [Bureau of Labor Statistics — Occupational Employment and Wages](https://www.bls.gov/oes/)
+- [IRS — Understanding Your Tax Bracket](https://www.irs.gov/newsroom/irs-provides-tax-inflation-adjustments-for-tax-year-2024)
+- [U.S. Department of Labor — Fair Labor Standards Act](https://www.dol.gov/agencies/whd/flsa)
+- [Investopedia — Annual Salary vs. Total Compensation](https://www.investopedia.com/articles/personal-finance/120415/how-figure-out-your-total-compensation-package.asp)

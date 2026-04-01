@@ -1,57 +1,124 @@
 import FAQ from "@/components/FAQ"
 
-## Rental Yield Calculator – Profitability of Property Investment
+## Rental Yield Calculator – Analyze Investment Property Profitability
 
-The rental yield calculator helps assess the profitability of an investment property by calculating gross and net rental yield, monthly cash flow, and payback period.
+The rental yield calculator helps real estate investors assess the profitability of a rental property by computing gross and net rental yield, monthly cash flow, and estimated payback period. Understanding yield is essential for comparing properties and making informed investment decisions.
 
 ### Gross Rental Yield vs. Net Rental Yield
 
-**Gross rental yield** is calculated without costs:
+**Gross rental yield** is the simplest measure — it ignores expenses:
 
-> **Gross rental yield** = (Annual rent / Property price) × 100 %
+> **Gross Rental Yield = (Annual Rent ÷ Property Price) × 100%**
 
-**Net rental yield** takes into account costs such as maintenance fees, insurance, and repairs:
+**Net rental yield** gives a more accurate picture by subtracting annual operating costs:
 
-> **Net rental yield** = ((Annual rent – Annual costs) / Property price) × 100 %
+> **Net Rental Yield = ((Annual Rent − Annual Expenses) ÷ Property Price) × 100%**
 
-### Good Rental Yield
+### Worked Example
+
+You purchase a rental property for **$250,000**. Monthly rent is **$1,800** and annual expenses total **$6,200**.
+
+1. Annual rent: $1,800 × 12 = **$21,600**
+2. Gross yield: $21,600 ÷ $250,000 × 100 = **8.64%**
+3. Net annual income: $21,600 − $6,200 = **$15,400**
+4. Net yield: $15,400 ÷ $250,000 × 100 = **6.16%**
+5. Monthly cash flow: $15,400 ÷ 12 = **$1,283**
+
+### What Is a Good Rental Yield?
 
 <table className="table table-sm my-4">
   <thead>
     <tr className="bg-base-200">
-      <th>Net rental yield</th>
+      <th>Net Rental Yield</th>
       <th>Assessment</th>
+      <th>Typical Markets</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>Less than 3 %</td><td>Poor – profitability questionable</td></tr>
-    <tr><td>3–5 %</td><td>Reasonable – typical in large cities</td></tr>
-    <tr><td>5–7 %</td><td>Good – desirable level</td></tr>
-    <tr><td>Over 7 %</td><td>Excellent – more typical in smaller locations</td></tr>
+    <tr><td>Below 3%</td><td>Poor — profitability questionable</td><td>Premium coastal cities (SF, NYC, LA)</td></tr>
+    <tr><td>3% – 5%</td><td>Fair — typical in high-demand urban areas</td><td>Denver, Seattle, Austin, Boston</td></tr>
+    <tr><td>5% – 7%</td><td>Good — strong cash flow territory</td><td>Indianapolis, Memphis, Cleveland</td></tr>
+    <tr><td>7% – 10%</td><td>Excellent — high-cash-flow markets</td><td>Rust Belt cities, small college towns</td></tr>
+    <tr><td>Above 10%</td><td>Exceptional — verify for hidden risks</td><td>Distressed properties, D-class neighborhoods</td></tr>
   </tbody>
 </table>
 
-### Typical Costs
+*Higher yields often come with higher risk — tenant turnover, vacancy, and property depreciation can erode returns in less desirable locations.*
 
-Annual costs for an investment property usually include:
-- **HOA / maintenance fees** – typically $100–$500/month for condos; $0 for single-family rentals
-- **Landlord insurance** – about $800–$2,000/year
-- **Vacant months** – statistically about 1–2 months per year
-- **Renovations and maintenance** – rule of thumb 1–2 % of property value per year
+### Cap Rate vs. Rental Yield
 
-### Taxation of Property Investment
+Cap rate (capitalization rate) and rental yield are closely related but not identical:
 
-Rental income is taxed as ordinary income in the US, with rates varying by tax bracket. Costs such as maintenance, repairs, and mortgage interest are deductible. More information: [IRS – Rental Income](https://www.irs.gov/taxtopics/tc7)
+| Metric | Formula | Use |
+|---|---|---|
+| Gross rental yield | Annual rent ÷ purchase price | Quick comparison shopping |
+| Net rental yield | (Annual rent − expenses) ÷ purchase price | Realistic return estimate |
+| Cap rate | NOI ÷ current market value | Appraising value at current prices |
+| Cash-on-cash return | Annual cash flow ÷ total cash invested | Measures return on your actual down payment |
 
-### See Also
+### Typical Annual Expenses for Rental Properties
 
-- [Compound Interest Calculator](/apps/compound-interest-calculator) – Calculate long-term investment growth
-- [Installment Calculator](/apps/installment-calculator) – Calculate mortgage costs
+<table className="table table-sm my-4">
+  <thead>
+    <tr className="bg-base-200">
+      <th>Expense</th>
+      <th>Typical Range</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Property taxes</td><td>0.5% – 2.5% of value</td><td>Varies widely by state (NJ ~2.5%, HI ~0.3%)</td></tr>
+    <tr><td>Landlord insurance</td><td>$800 – $2,500/year</td><td>Higher for flood/earthquake zones</td></tr>
+    <tr><td>Maintenance & repairs</td><td>1% – 2% of value/year</td><td>Budget 1% for newer, 2% for older properties</td></tr>
+    <tr><td>Property management</td><td>8% – 12% of rent</td><td>Skip if self-managing</td></tr>
+    <tr><td>HOA fees (condos)</td><td>$200 – $600/month</td><td>May include some utilities and insurance</td></tr>
+    <tr><td>Vacancy</td><td>5% – 10% of annual rent</td><td>Equivalent to 0.5 – 1.2 vacant months/year</td></tr>
+    <tr><td>Capital expenditures</td><td>5% – 10% of rent</td><td>Reserve for roof, HVAC, appliance replacement</td></tr>
+  </tbody>
+</table>
+
+### The 1% Rule and the 50% Rule
+
+Real estate investors often use two quick screening rules:
+
+- **The 1% Rule** — Monthly rent should be at least 1% of the purchase price. A $200,000 property should rent for at least $2,000/month to be worth investigating
+- **The 50% Rule** — Expect approximately 50% of gross rent to go toward operating expenses (excluding mortgage payments). If you collect $2,000/month, budget ~$1,000 for expenses and $1,000 for debt service + profit
+
+These rules are rough filters, not guarantees — always run full numbers.
+
+### Tax Considerations for Rental Income
+
+Rental income is taxed as **ordinary income** in the United States, but landlords can deduct many expenses:
+
+- Mortgage interest
+- Property taxes
+- Insurance premiums
+- Repairs and maintenance
+- Property management fees
+- Depreciation (residential properties depreciated over 27.5 years)
+- Travel expenses for property management
+
+**Depreciation** is especially valuable — it is a non-cash deduction that can offset rental income and reduce your tax bill significantly.
 
 <FAQ items={[
-  { q: "What is rental yield?", a: "Rental yield is the annual rental income as a percentage of the property's purchase price or current value. It measures how well a property generates income relative to its cost." },
-  { q: "What is a good rental yield?", a: "A gross rental yield of 5-8% is generally considered good in most US and UK markets. Net yield (after expenses) is typically 2-4% lower. High-yield markets may exceed 10%, but often carry more risk." },
-  { q: "What is the difference between gross and net rental yield?", a: "Gross yield = annual rent / property value x 100. Net yield subtracts annual expenses (maintenance, insurance, management fees, vacancy) from rental income before dividing by property value." },
-  { q: "How do I calculate my rental property's return on investment?", a: "ROI = (Annual rental income - Annual expenses) / Total investment x 100. Total investment includes down payment, closing costs, and any renovation expenses." },
-  { q: "What expenses reduce rental yield?", a: "Key expenses include property taxes, landlord insurance, maintenance and repairs (budget 1-2% of property value per year), property management fees (8-12% of rent), vacancy periods, and mortgage interest." },
+  { q: "What is rental yield?", a: "Rental yield is the annual rental income expressed as a percentage of the property's purchase price or current market value. It measures how effectively a property generates income relative to its cost. Net yield subtracts annual expenses for a more accurate picture." },
+  { q: "What is a good rental yield?", a: "A net rental yield of 5-7% is generally considered good in most U.S. markets. Premium urban areas may yield only 3-4%, while smaller cities and Midwest markets often exceed 7-8%. Always factor in risk alongside yield." },
+  { q: "What is the difference between gross and net rental yield?", a: "Gross yield = annual rent ÷ property price × 100. Net yield subtracts annual expenses (property taxes, insurance, maintenance, management fees, vacancy) from rental income before dividing by property price. Net yield is always lower and more realistic." },
+  { q: "How do I calculate my rental property's return on investment?", a: "Cash-on-cash ROI = (Annual cash flow after all expenses and mortgage) ÷ Total cash invested × 100. Total cash invested includes down payment, closing costs, and any renovation expenses." },
+  { q: "What expenses reduce rental yield?", a: "Key expenses include property taxes (0.5-2.5% of value), landlord insurance ($800-$2,500/year), maintenance (1-2% of value), property management (8-12% of rent), vacancy loss (5-10% of rent), and capital expenditure reserves." },
 ]} />
+
+### Related Tools
+
+- [Mortgage Calculator](/apps/mortgage-calculator) — Calculate monthly mortgage payments
+- [Compound Interest Calculator](/apps/compound-interest-calculator) — Model long-term investment growth
+- [Investment Return Calculator](/apps/investment-return-calculator) — Calculate ROI on any investment
+- [Down Payment Calculator](/apps/down-payment-calculator) — Estimate your required down payment
+- [Home Affordability Calculator](/apps/home-affordability-calculator) — Find how much house you can afford
+
+### Sources
+
+- [IRS — Rental Income and Expenses](https://www.irs.gov/taxtopics/tc414)
+- [BiggerPockets — Rental Property Analysis](https://www.biggerpockets.com/)
+- [National Association of Realtors — Investment Resources](https://www.nar.realtor/research-and-statistics)
+- [Investopedia — Capitalization Rate](https://www.investopedia.com/terms/c/capitalizationrate.asp)

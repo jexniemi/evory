@@ -1,25 +1,35 @@
 import FAQ from "@/components/FAQ"
 
-## How is fuel cost calculated?
+## How Is Driving Cost Calculated?
 
-In the US, fuel efficiency is measured in **miles per gallon (MPG)**. The trip cost is obtained by dividing the distance by your MPG to find gallons used, then multiplying by the gas price.
+In the U.S., fuel efficiency is measured in **miles per gallon (MPG)**. The driving cost calculator estimates your trip's fuel expense by dividing the distance by your vehicle's MPG and multiplying by the current gas price.
 
-**Formulas:**
+### Formulas
 
-Fuel (gallons) = Distance (miles) ÷ MPG
+> **Fuel (gallons) = Distance (miles) ÷ MPG**
 
-Cost = Fuel (gallons) × Gas price ($/gal)
+> **Trip Cost = Fuel (gallons) × Gas Price ($/gal)**
 
-Cost per mile = Gas price ($/gal) ÷ MPG
+> **Cost per Mile = Gas Price ($/gal) ÷ MPG**
 
-## Typical fuel efficiency values
+### Worked Example
+
+You are driving from Los Angeles to Las Vegas — about **270 miles**. Your car gets **28 MPG** and gas costs **$4.50/gal** (California average):
+
+- Fuel needed: 270 ÷ 28 = **9.64 gallons**
+- Trip cost: 9.64 × $4.50 = **$43.39**
+- Cost per mile: $4.50 ÷ 28 = **16.1 ¢/mile**
+
+With two passengers splitting costs, each person pays about **$14.46** — far cheaper than a flight or bus ticket.
+
+### Typical Fuel Efficiency Values
 
 <table className="table table-sm my-4">
   <thead className="bg-base-200">
     <tr>
-      <th>Car type</th>
+      <th>Vehicle Type</th>
       <th>Fuel Efficiency (MPG)</th>
-      <th>Cost per mile ($3.50/gal)</th>
+      <th>Cost per Mile ($3.50/gal)</th>
     </tr>
   </thead>
   <tbody>
@@ -31,33 +41,73 @@ Cost per mile = Gas price ($/gal) ÷ MPG
   </tbody>
 </table>
 
-## Comparison of annual costs
+### Comparison of Annual Fuel Costs
 
-Fuel efficiency has a significant impact on annual costs. For example, someone driving **15,000 miles/year** at $3.50/gal:
+Fuel efficiency has a significant impact on annual costs. For someone driving **15,000 miles/year** at $3.50/gal:
 
-- **40 MPG** → ~$1,313/year
-- **28 MPG** → ~$1,875/year
-- **20 MPG** → ~$2,625/year
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>MPG</th>
+      <th>Annual Gallons</th>
+      <th>Annual Fuel Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>40 MPG</td><td>375</td><td>$1,313</td></tr>
+    <tr><td>28 MPG</td><td>536</td><td>$1,875</td></tr>
+    <tr><td>20 MPG</td><td>750</td><td>$2,625</td></tr>
+    <tr><td>15 MPG</td><td>1,000</td><td>$3,500</td></tr>
+  </tbody>
+</table>
 
-The difference between a fuel-efficient car and a large SUV can be over **$1,300 per year** in fuel costs alone.
+The difference between a fuel-efficient car and a large SUV can exceed **$1,300 per year** in fuel costs alone.
 
-## Tips for reducing fuel economy losses
+### IRS Standard Mileage Rate
 
-- **Smooth driving** — aggressive acceleration and hard braking can reduce fuel economy by up to 30%
-- **Tire pressure** — underinflated tires can cost 1–2 MPG
-- **Anticipatory driving** — look far ahead and coast to decelerate rather than braking hard
-- **Air conditioning** — using A/C can reduce fuel economy by 5–25% in city driving
-- **Cold weather** — cold starts and winter driving can reduce MPG by 10–20%
+The IRS standard mileage rate for 2024 is **67 cents per mile** for business use. This rate covers not just fuel but also depreciation, insurance, maintenance, and tires. For personal trip cost estimation, using the fuel-only calculation above gives a more accurate picture of out-of-pocket expenses.
 
-## Other calculators
+### Tips for Reducing Driving Costs
 
-- [Fuel Cost Calculator](/apps/fuel-cost-calculator) — calculate fuel costs per fill-up or monthly
-- [Electric Car Trip Cost Calculator](/apps/electric-car-trip-cost-calculator) — compare EV electricity costs to gasoline
+- **Smooth driving** — Aggressive acceleration and hard braking can reduce fuel economy by up to 33% on highways and 5% in the city (EPA).
+- **Tire pressure** — Underinflated tires can cost 1–2 MPG. Check tire pressure monthly.
+- **Anticipatory driving** — Look far ahead and coast to decelerate rather than braking hard.
+- **Air conditioning** — Using A/C can reduce fuel economy by 5–25% in city driving. At highway speeds, A/C is more efficient than open windows.
+- **Cold weather** — Cold starts and winter driving can reduce MPG by 10–20%.
+- **Speed** — Each 5 MPH above 50 MPH is like paying an extra $0.20–$0.30 per gallon for gas.
+- **Remove excess weight** — An extra 100 lbs in the trunk reduces MPG by about 1%.
+- **Use cruise control** — Maintaining a steady speed on highways improves fuel economy by 7–14%.
+
+### Total Cost of Ownership
+
+Fuel is just one part of driving costs. The AAA estimates the total cost of owning and operating a new vehicle at **$12,182 per year** (2023), which includes:
+
+- Fuel: ~$2,000/year
+- Insurance: ~$1,800/year
+- Maintenance & repairs: ~$1,400/year
+- License, registration, taxes: ~$800/year
+- Depreciation: ~$5,000/year
+- Financing: ~$1,000/year
 
 <FAQ items={[
-  { q: "How much does it cost to drive per mile?", a: "The IRS standard mileage rate for 2024 is 67 cents per mile, covering fuel, depreciation, and maintenance. For fuel only, it depends on your MPG and local gas prices." },
-  { q: "How do I calculate fuel cost for a road trip?", a: "Divide the trip distance by your MPG to get gallons needed, then multiply by gas price per gallon. Example: 300 miles / 30 MPG x $3.50/gal = $35." },
-  { q: "What is the average fuel efficiency for a US car?", a: "The average new US car gets about 28 MPG. SUVs and trucks average around 18-22 MPG, while fuel-efficient hybrids like the Toyota Prius can exceed 50 MPG." },
-  { q: "How can I improve my car's MPG?", a: "Drive smoothly without rapid acceleration or braking, maintain proper tire pressure, use cruise control on highways, reduce A/C use, and remove unnecessary cargo weight. These steps can improve fuel economy by 10-30%." },
-  { q: "Is it cheaper to drive or fly for a road trip?", a: "For trips under 500 miles with 2 or more passengers, driving is usually cheaper. For solo travelers or longer distances, flying may be more cost-effective when accounting for all driving costs." },
+  { q: "How much does it cost to drive per mile?", a: "The IRS standard mileage rate for 2024 is 67 cents per mile, covering all vehicle costs. For fuel only, divide your gas price by your MPG. At $3.50/gal and 28 MPG, that's about 12.5 cents per mile." },
+  { q: "How do I calculate fuel cost for a road trip?", a: "Divide the trip distance by your MPG to get gallons needed, then multiply by gas price per gallon. Example: 300 miles ÷ 30 MPG × $3.50/gal = $35." },
+  { q: "What is the average fuel efficiency for a U.S. car?", a: "The average new U.S. car gets about 28 MPG. SUVs and trucks average around 18–22 MPG, while fuel-efficient hybrids like the Toyota Prius can exceed 50 MPG." },
+  { q: "How can I improve my car's MPG?", a: "Drive smoothly without rapid acceleration, maintain proper tire pressure, use cruise control on highways, reduce A/C use, and remove unnecessary cargo. These steps can improve fuel economy by 10–30%." },
+  { q: "Is it cheaper to drive or fly for a road trip?", a: "For trips under 500 miles with 2+ passengers, driving is usually cheaper. For solo travelers or longer distances, flying may be more cost-effective when accounting for fuel, tolls, meals, and lodging." },
 ]} />
+
+### Related Tools
+
+- [Fuel Cost Calculator](/apps/fuel-cost-calculator) — Calculate fuel costs per fill-up or monthly
+- [Electric Car Trip Cost Calculator](/apps/electric-car-trip-cost-calculator) — Compare EV electricity costs to gasoline
+- [Gas Mileage Calculator](/apps/gas-mileage-calculator) — Track and calculate your actual MPG
+- [Flight Carbon Footprint Calculator](/apps/flight-carbon-footprint-calculator) — Compare driving vs. flying
+- [Car Loan Calculator](/apps/car-loan-calculator) — Estimate monthly payments on a vehicle
+
+### Sources
+
+- [U.S. Environmental Protection Agency — Fuel Economy Tips](https://www.fueleconomy.gov/feg/driveHabits.jsp)
+- [AAA — Your Driving Costs (2023)](https://newsroom.aaa.com/2023/08/your-driving-costs/)
+- [IRS — Standard Mileage Rates](https://www.irs.gov/tax-professionals/standard-mileage-rates)
+- [U.S. Energy Information Administration — Gasoline Prices](https://www.eia.gov/petroleum/gasdiesel/)

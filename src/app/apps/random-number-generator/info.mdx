@@ -1,25 +1,16 @@
 import FAQ from "@/components/FAQ"
 
-## Random Number Generator – Generate random numbers from your desired range
+## Random Number Generator – Pick Random Numbers from Any Range
 
-The Random Number Generator produces completely random integers from your desired number range. You can choose how many numbers to generate and whether you want them unique.
+The random number generator creates truly random integers within any range you specify. Set a minimum value, a maximum value, and how many numbers to generate — with the option to ensure all results are unique. It is perfect for drawings, games, decision-making, and sampling.
 
-### What is the random number generator used for?
+### How Random Number Generation Works
 
-- **Draws and competitions** – Draw a winner from a numbered group of participants
-- **Gaming** – Random numbers for games and simulations
-- **Team division** – Draw players into teams neutrally
-- **Study testing** – Draw random tasks or questions
-- **Statistical sampling** – Select a random sample from a larger set
-- **Decision making** – When it's hard to choose between options
+The generator uses the browser's built-in `Math.random()` function to produce **pseudorandom numbers**. This function generates values with a uniform distribution, meaning every integer in your specified range has an exactly equal probability of being selected.
 
-### How does randomness work?
+For generating unique (non-repeating) numbers, the tool uses the **Fisher-Yates shuffle algorithm**, which guarantees an unbiased, evenly distributed selection from the available pool.
 
-The generator uses the browser's built-in `Math.random()` function, which produces pseudorandom numbers. This is sufficient for most practical purposes, but not for cryptographic security.
-
-For generating unique numbers, the **Fisher-Yates shuffle algorithm** is used, which ensures an even distribution for all possible combinations.
-
-### Examples
+### Common Use Cases
 
 <table className="table table-sm my-4">
   <thead>
@@ -28,26 +19,83 @@ For generating unique numbers, the **Fisher-Yates shuffle algorithm** is used, w
       <th>Min</th>
       <th>Max</th>
       <th>Count</th>
+      <th>Unique?</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>One random number</td><td>1</td><td>100</td><td>1</td></tr>
-    <tr><td>Dice roll</td><td>1</td><td>6</td><td>1</td></tr>
-    <tr><td>Coin (0=heads, 1=tails)</td><td>0</td><td>1</td><td>1</td></tr>
-    <tr><td>5 unique numbers from 30</td><td>1</td><td>30</td><td>5</td></tr>
-    <tr><td>Team division (10 players, 2 teams)</td><td>1</td><td>10</td><td>5</td></tr>
+    <tr><td>Pick a random number 1–100</td><td>1</td><td>100</td><td>1</td><td>N/A</td></tr>
+    <tr><td>Simulate a dice roll</td><td>1</td><td>6</td><td>1</td><td>No</td></tr>
+    <tr><td>Coin flip (0=heads, 1=tails)</td><td>0</td><td>1</td><td>1</td><td>No</td></tr>
+    <tr><td>Lottery pick (5 from 69)</td><td>1</td><td>69</td><td>5</td><td>Yes</td></tr>
+    <tr><td>Draft 5 players from 10</td><td>1</td><td>10</td><td>5</td><td>Yes</td></tr>
+    <tr><td>Random PIN code</td><td>0</td><td>9</td><td>4</td><td>No</td></tr>
+    <tr><td>Random sample from class of 30</td><td>1</td><td>30</td><td>5</td><td>Yes</td></tr>
   </tbody>
 </table>
 
-### See also
+### True Random vs. Pseudorandom Numbers
 
-- [Lottery Number Generator](/apps/lottery-number-generator) – Generate lottery numbers
-- [Dice Generator](/apps/dice-generator) – Roll virtual dice
+There is an important distinction in computer science between the two types of randomness:
+
+| | Pseudorandom (PRNG) | True Random (TRNG) |
+|---|---|---|
+| **Source** | Deterministic algorithm with a seed value | Physical phenomena (radioactive decay, atmospheric noise) |
+| **Speed** | Extremely fast | Slower, depends on hardware |
+| **Reproducible?** | Yes, if the seed is known | No |
+| **Use cases** | Games, simulations, sampling, everyday tools | Cryptography, security keys, scientific experiments |
+| **This tool** | ✅ Uses PRNG (`Math.random()`) | — |
+
+For everyday purposes like raffles, games, and sampling, pseudorandom generators are **statistically indistinguishable from true randomness** and more than sufficient.
+
+### Understanding Probability
+
+When generating a single number from a range, the probability of getting any specific number is:
+
+> **P = 1 ÷ (Max − Min + 1)**
+
+For example, generating a number between 1 and 20 gives each number a **5% probability** (1/20). The more numbers in your range, the lower the chance of any specific outcome.
+
+### The Gambler's Fallacy
+
+A common misconception: if a number hasn't appeared recently, it is "due" to come up. This is the **gambler's fallacy**. Each random number generation is an **independent event** — previous results have absolutely no influence on future outcomes. Rolling a 6 ten times in a row does not make rolling a non-6 any more likely on the next roll.
+
+### Randomness in Everyday Life
+
+Random number generators are used far more widely than most people realize:
+
+- **Video games** — Loot drops, critical hit calculations, procedural map generation
+- **Statistics** — Random sampling for surveys and clinical trials
+- **Education** — Selecting students for presentations, randomizing quiz questions
+- **Sports** — Draft lotteries (NBA, NFL), coin tosses for kickoff
+- **Security** — Generating one-time passwords, session tokens, CAPTCHA challenges
+- **Science** — Monte Carlo simulations, randomized controlled trials
+
+### Tips for Using the Generator
+
+1. **Unique mode** — Turn on uniqueness when you need non-repeating numbers (e.g., lottery picks, team drafts)
+2. **Large ranges** — The generator handles ranges up to millions with no performance issue
+3. **Multiple numbers** — Generate batches of numbers for efficiency rather than one at a time
+4. **Decision-making** — Assign options to numbers and let the generator decide when you cannot choose
 
 <FAQ items={[
-  { q: "How do I generate a random number between 1 and 100?", a: "Use the random number generator above: set the minimum to 1, the maximum to 100, and click Generate. Each result is uniformly distributed across the range." },
-  { q: "Are computer-generated random numbers truly random?", a: "Most computer RNGs are pseudorandom: they use algorithms seeded by unpredictable values (time, hardware noise) to produce sequences that are statistically indistinguishable from true randomness for most purposes." },
-  { q: "What is the difference between a random number and a pseudo-random number?", a: "True random numbers come from physical processes (radioactive decay, atmospheric noise). Pseudo-random numbers are generated by deterministic algorithms that approximate randomness. For everyday use, pseudorandom is sufficient." },
-  { q: "How is a random number generator used in games?", a: "Games use RNGs for dice rolls, loot drops, spawn locations, card shuffles, and procedural generation. A fair RNG ensures each outcome has the correct probability." },
-  { q: "Can I use this tool for a lottery draw?", a: "Yes — set your range to match the lottery format and generate numbers. However, every number combination has equal odds regardless of whether you use a random generator or pick manually." },
+  { q: "How do I generate a random number between 1 and 100?", a: "Use the random number generator above: set the minimum to 1, the maximum to 100, count to 1, and click Generate. The result is uniformly distributed — every number from 1 to 100 has a 1% chance." },
+  { q: "Are computer-generated random numbers truly random?", a: "Most computer RNGs are pseudorandom — they use algorithms seeded by unpredictable values (system time, hardware noise) to produce sequences that are statistically indistinguishable from true randomness for everyday use. Only cryptographic applications require hardware-based true randomness." },
+  { q: "What is the difference between a random number and a pseudo-random number?", a: "True random numbers come from physical processes like radioactive decay or atmospheric noise. Pseudo-random numbers are generated by deterministic algorithms that approximate randomness. For games, drawings, and everyday tools, pseudorandom is sufficient and much faster." },
+  { q: "How is a random number generator used in games?", a: "Games use RNGs for dice rolls, card shuffles, loot drops, spawn locations, critical hit chance, and procedural world generation. A fair RNG ensures each outcome has the mathematically correct probability." },
+  { q: "Can I use this tool for a lottery draw?", a: "Yes — set your range to match the lottery format (e.g., 1–69 for Powerball white balls) and generate the required number of unique numbers. However, every number combination has equal odds regardless of how you pick them." },
 ]} />
+
+### Related Tools
+
+- [Lottery Number Generator](/apps/lottery-number-generator) — Generate lottery number combinations
+- [Dice Generator](/apps/dice-generator) — Roll virtual dice for board games and RPGs
+- [Coin Flip](/apps/coin-flip) — Virtual coin toss
+- [Raffle Machine](/apps/raffle-machine) — Draw winners from a list of names
+- [Password Generator](/apps/password-generator) — Generate secure random passwords
+
+### Sources
+
+- [Random.org — Introduction to Randomness](https://www.random.org/randomness/)
+- [Khan Academy — Probability and Statistics](https://www.khanacademy.org/math/statistics-probability)
+- [NIST — Random Number Generation](https://www.nist.gov/topics/cybersecurity)
+- [MDN Web Docs — Math.random()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)

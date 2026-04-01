@@ -1,58 +1,116 @@
 import FAQ from "@/components/FAQ"
 
-## How is tax percentage calculated?
+## Tax Percentage Calculator – Find Your Effective Tax Rate
 
-Tax percentage or effective tax rate tells what portion of your **gross income** goes to taxes. The calculator calculates it with the formula:
+Your effective tax rate — the actual percentage of income that goes to taxes — is often much lower than your marginal tax bracket. This calculator determines your real tax burden by dividing total taxes paid by your gross income, giving you a clear picture of what you actually keep.
 
-**Tax percentage = paid taxes ÷ gross salary × 100**
+### The Formula
 
-Gross salary is the sum of net salary and paid taxes. The calculator also shows annual gross income and total taxes.
+> **Effective Tax Rate = (Total Taxes Paid ÷ Gross Income) × 100**
 
-## US taxation parts
+For example, if your gross salary is $5,000/month and $1,200 is withheld for all taxes, your effective rate is $1,200 ÷ $5,000 × 100 = **24%**.
 
-In the US, several different taxes and contributions are withheld from salary:
+### Components of US Payroll Taxes
+
+Several taxes and contributions are withheld from every American paycheck:
 
 <table className="table table-sm my-4">
   <thead className="bg-base-200">
     <tr>
-      <th>Part</th>
-      <th>Nature</th>
-      <th>Typical level</th>
+      <th>Tax</th>
+      <th>Type</th>
+      <th>Rate</th>
+      <th>2024 Details</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>Federal income tax</td><td>Progressive</td><td>0–37%</td></tr>
-    <tr><td>State income tax</td><td>Progressive or flat</td><td>0–13.3%</td></tr>
-    <tr><td>Social Security tax</td><td>Flat</td><td>6.2%</td></tr>
-    <tr><td>Medicare tax</td><td>Flat</td><td>1.45%</td></tr>
+    <tr><td>Federal income tax</td><td>Progressive</td><td>10% – 37%</td><td>Based on taxable income and filing status</td></tr>
+    <tr><td>State income tax</td><td>Varies</td><td>0% – 13.3%</td><td>9 states have no income tax</td></tr>
+    <tr><td>Social Security (OASDI)</td><td>Flat</td><td>6.2%</td><td>On wages up to $168,600</td></tr>
+    <tr><td>Medicare</td><td>Flat</td><td>1.45%</td><td>On all wages; +0.9% above $200K</td></tr>
+    <tr><td>Local income tax</td><td>Varies</td><td>0% – 3.9%</td><td>Select cities/counties (NYC, Philadelphia)</td></tr>
   </tbody>
 </table>
 
-## Effective vs. marginal tax percentage
+### Effective vs. Marginal Tax Rate
 
-- **Effective tax percentage** tells the real tax burden relative to gross income — this is what the calculator shows
-- **Marginal tax percentage** tells how much tax you pay on *additional dollar* — can be over 40% including side costs
+Understanding the difference between these two rates is critical for financial planning:
 
-In practice, the effective total tax rate (all withholdings included) for an average American is typically **20–35%**.
+| Concept | Definition | Example ($80K Income, Single) |
+|---|---|---|
+| **Marginal rate** | Tax rate on the *last* dollar earned | 22% (the bracket for $47,151–$100,525) |
+| **Effective rate** | Total tax paid ÷ total income | ~14% (because lower brackets are taxed at 10% and 12%) |
 
-## Tips for taxation
+Because the US uses a **progressive tax system**, you never pay your marginal rate on all your income. Only income above each bracket threshold is taxed at that bracket's rate.
 
-- Check your **W-2** annually [on IRS website](https://www.irs.gov/individuals) — too high withholding ties up money unnecessarily
-- Remember to claim **deductions**, **credits** and other adjustments on your tax return
-- If income changes significantly mid-year, update your W-4
+### Worked Example
 
-Try also [monthly salary calculator](/apps/monthly-salary-calculator), [hourly salary calculator](/apps/hourly-salary-calculator) or [annual salary calculator](/apps/annual-salary-calculator)!
+A single filer earning **$80,000** gross (2024):
 
-## Sources
+1. Standard deduction: $14,600 → Taxable income: $65,400
+2. Federal tax calculation:
+   - First $11,600 at 10% = $1,160
+   - Next $35,550 at 12% = $4,266
+   - Remaining $18,250 at 22% = $4,015
+   - **Total federal tax: $9,441**
+3. Social Security: $80,000 × 6.2% = $4,960
+4. Medicare: $80,000 × 1.45% = $1,160
+5. **Total tax burden: $15,561**
+6. **Effective tax rate: $15,561 ÷ $80,000 = 19.5%**
 
-- IRS: [irs.gov](https://www.irs.gov)
-- SSA: [Social Security Taxes](https://www.ssa.gov/)
-- Medicare: [medicare.gov](https://www.medicare.gov/)
+Even though this person is "in the 22% bracket," their actual effective rate is only 19.5% including all FICA taxes.
+
+### Effective Tax Rates by Income Level
+
+<table className="table table-sm my-4">
+  <thead>
+    <tr className="bg-base-200">
+      <th>Gross Income</th>
+      <th>Federal Tax (approx.)</th>
+      <th>FICA</th>
+      <th>Total Effective Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>$30,000</td><td>{'~'}$1,700</td><td>$2,295</td><td>{'~'}13.3%</td></tr>
+    <tr><td>$50,000</td><td>{'~'}$3,900</td><td>$3,825</td><td>{'~'}15.5%</td></tr>
+    <tr><td>$75,000</td><td>{'~'}$7,400</td><td>$5,738</td><td>{'~'}17.5%</td></tr>
+    <tr><td>$100,000</td><td>{'~'}$12,400</td><td>$7,650</td><td>{'~'}20.1%</td></tr>
+    <tr><td>$150,000</td><td>{'~'}$24,600</td><td>$11,475</td><td>{'~'}24.1%</td></tr>
+    <tr><td>$250,000</td><td>{'~'}$50,400</td><td>$15,107</td><td>{'~'}26.2%</td></tr>
+  </tbody>
+</table>
+
+*Rates assume single filer, standard deduction, no state tax. State income tax adds 0–13.3% depending on location.*
+
+### Tips to Optimize Your Tax Rate
+
+- **Maximize pre-tax deductions** — 401(k), HSA, and FSA contributions lower your taxable income directly
+- **Review your W-4 annually** — Adjust withholding after life changes (marriage, children, new job) to avoid overpaying
+- **Claim all eligible credits** — Child Tax Credit ($2,000 per child), Earned Income Tax Credit, education credits, and energy credits directly reduce taxes owed
+- **Consider itemizing** — If your mortgage interest, state taxes, and charitable donations exceed $14,600 (2024 standard deduction), itemizing saves more
+- **Tax-loss harvesting** — Selling losing investments to offset capital gains can reduce your effective rate on investment income
+- **Contribute to a Roth IRA** — While contributions are after-tax, qualified withdrawals in retirement are completely tax-free
 
 <FAQ items={[
-  { q: "How do I calculate the tax percentage?", a: "Divide the tax amount by the pre-tax amount, then multiply by 100. Formula: Tax % = (Tax amount / Pre-tax amount) x 100." },
-  { q: "What is the US sales tax rate?", a: "There is no federal sales tax in the US. State sales taxes range from 0% (in Oregon, Montana, New Hampshire, Delaware, and Alaska) to about 7.25% (California). Local taxes can push the combined rate above 10%." },
-  { q: "What is the effective tax rate vs marginal tax rate?", a: "Your marginal tax rate is the rate on your last dollar of income (the highest bracket you reach). Your effective tax rate is total taxes paid divided by total taxable income — usually significantly lower than your marginal rate." },
-  { q: "How much federal income tax will I owe?", a: "Federal income tax is progressive. For 2024 (single filers): 10% on income up to $11,600, 12% up to $47,150, 22% up to $100,525, 24% up to $191,950, 32% up to $243,725, 35% up to $609,350, and 37% above that." },
-  { q: "What is a W-2 form?", a: "A W-2 is an IRS form your employer sends each January showing your total wages and taxes withheld during the prior year. You use it to file your annual income tax return." },
+  { q: "How do I calculate the tax percentage?", a: "Divide the total tax amount by your gross (pre-tax) income, then multiply by 100. Formula: Tax % = (Tax paid ÷ Gross income) × 100. This gives you your effective tax rate — the real share of income going to taxes." },
+  { q: "What is the US sales tax rate?", a: "There is no federal sales tax. State sales tax ranges from 0% (Oregon, Montana, New Hampshire, Delaware, Alaska) to 7.25% (California). Local taxes can push combined rates above 10% in some cities." },
+  { q: "What is the effective tax rate vs marginal tax rate?", a: "Your marginal rate is the rate on your last dollar of income (highest bracket). Your effective rate is total taxes paid divided by total income — usually significantly lower because lower portions of income are taxed at lower rates." },
+  { q: "How much federal income tax will I owe?", a: "For 2024 single filers: 10% on income up to $11,600, 12% up to $47,150, 22% up to $100,525, 24% up to $191,950, 32% up to $243,725, 35% up to $609,350, and 37% above that. Apply the standard deduction ($14,600) first." },
+  { q: "What is a W-2 form?", a: "A W-2 is an IRS form your employer sends each January showing your total wages, tips, and taxes withheld during the prior year. You use it to file your annual federal and state income tax returns." },
 ]} />
+
+### Related Tools
+
+- [Net Salary Calculator](/apps/net-salary-calculator) — Calculate take-home pay after all deductions
+- [Monthly Salary Calculator](/apps/monthly-salary-calculator) — Convert hourly wage to monthly income
+- [Hourly Salary Calculator](/apps/hourly-salary-calculator) — Convert salary to hourly rate
+- [Annual Salary Calculator](/apps/annual-salary-calculator) — Calculate yearly earnings
+- [Tax Bracket Calculator](/apps/tax-bracket-calculator) — See which federal brackets apply to you
+
+### Sources
+
+- [IRS — Tax Brackets and Rates](https://www.irs.gov/newsroom/irs-provides-tax-inflation-adjustments-for-tax-year-2024)
+- [SSA — Contribution and Benefit Base](https://www.ssa.gov/oact/cola/cbb.html)
+- [Tax Foundation — Federal Tax Rates](https://taxfoundation.org/publications/federal-tax-rates-and-tax-brackets/)
+- [IRS — About Form W-2](https://www.irs.gov/forms-pubs/about-form-w-2)

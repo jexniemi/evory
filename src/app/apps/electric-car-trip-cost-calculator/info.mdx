@@ -1,19 +1,111 @@
 import FAQ from "@/components/FAQ"
 
-## How are trip electricity costs calculated?
+## Electric Car Trip Cost Calculator
 
-Calculating trip electricity costs is easy and fast with our electric car trip cost calculator. Simply enter your trip distance in kilometers, your vehicle's average energy consumption in kWh per 100 kilometers, and the electricity price per kWh in euros. The calculator immediately gives you an accurate estimate of your trip's electricity costs.
+Planning a road trip in an electric vehicle? This calculator estimates your total electricity cost based on distance, your EV's energy consumption, and the electricity price. Compare costs with a gasoline vehicle to see how much you save.
 
-The electric car trip cost calculator uses this information to first calculate the amount of electricity consumed during your trip. This is done by multiplying the trip distance by your vehicle's consumption, and the result is reported in kWh. Then, the calculator calculates the total electricity costs by multiplying the consumed electricity amount by the electricity price.
+### How EV Trip Cost Is Calculated
 
-This tool is especially useful when planning long car trips with an electric car or estimating the costs of your daily commutes. It helps you budget your trips accurately and save money. The calculator is a fast and easy way to get a clear picture of your trip's electricity costs.
+> **Electricity Used (kWh) = Distance (miles) × Consumption (kWh/mile)**
 
-With our electric car trip cost calculator, you can make more informed decisions about traveling. You can compare the costs of different routes or consider whether charging electricity at home or at public charging points is more economical. Use our calculator and find out how much you can save on your trip's electricity costs!
+> **Trip Cost = Electricity Used (kWh) × Electricity Price ($/kWh)**
+
+For EVs that list efficiency in kWh per 100 miles, divide by 100 to get kWh/mile. For example, 30 kWh/100 mi = 0.30 kWh/mile.
+
+### Worked Example
+
+You are driving a **Tesla Model 3** from New York to Washington, D.C. — approximately **225 miles**:
+
+- Consumption: 25 kWh/100 mi = **0.25 kWh/mile**
+- Electricity used: 225 × 0.25 = **56.25 kWh**
+- At home charging rate ($0.16/kWh): 56.25 × $0.16 = **$9.00**
+- At DC fast charger ($0.35/kWh): 56.25 × $0.35 = **$19.69**
+- Same trip in a 30 MPG gas car at $3.50/gal: 225 ÷ 30 × $3.50 = **$26.25**
+
+Even using expensive fast chargers, the EV costs **25% less** than gasoline. With home charging, savings exceed **65%**.
+
+### Popular EV Efficiency Ratings
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Vehicle</th>
+      <th>kWh/100 mi</th>
+      <th>Range (miles)</th>
+      <th>Cost per Mile*</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Tesla Model 3 LR</td><td>25</td><td>358</td><td>4.0¢</td></tr>
+    <tr><td>Tesla Model Y</td><td>28</td><td>310</td><td>4.5¢</td></tr>
+    <tr><td>Chevrolet Bolt EV</td><td>28</td><td>259</td><td>4.5¢</td></tr>
+    <tr><td>Hyundai Ioniq 6</td><td>24</td><td>361</td><td>3.8¢</td></tr>
+    <tr><td>Ford Mustang Mach-E</td><td>33</td><td>312</td><td>5.3¢</td></tr>
+    <tr><td>Rivian R1T</td><td>48</td><td>328</td><td>7.7¢</td></tr>
+    <tr><td>BMW iX xDrive50</td><td>31</td><td>324</td><td>5.0¢</td></tr>
+    <tr><td>Nissan Leaf Plus</td><td>30</td><td>215</td><td>4.8¢</td></tr>
+  </tbody>
+</table>
+
+<small>*Based on $0.16/kWh national average home electricity rate.</small>
+
+### EV vs. Gasoline Cost Comparison
+
+Annual costs for a driver covering **15,000 miles/year**:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Vehicle Type</th>
+      <th>Efficiency</th>
+      <th>Annual Fuel/Energy</th>
+      <th>Cost per Mile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>EV (home charging)</td><td>28 kWh/100 mi @ $0.16/kWh</td><td>$672</td><td>4.5¢</td></tr>
+    <tr><td>EV (public fast charging)</td><td>28 kWh/100 mi @ $0.35/kWh</td><td>$1,470</td><td>9.8¢</td></tr>
+    <tr><td>Hybrid</td><td>50 MPG @ $3.50/gal</td><td>$1,050</td><td>7.0¢</td></tr>
+    <tr><td>Gas sedan</td><td>30 MPG @ $3.50/gal</td><td>$1,750</td><td>11.7¢</td></tr>
+    <tr><td>Gas SUV/truck</td><td>20 MPG @ $3.50/gal</td><td>$2,625</td><td>17.5¢</td></tr>
+  </tbody>
+</table>
+
+### Charging Options and Costs
+
+Understanding the three charging levels helps you plan trips and budget:
+
+- **Level 1 (120V wall outlet)** — 3–5 miles of range per hour; free at home but very slow. Best for overnight top-ups.
+- **Level 2 (240V, home or public)** — 25–30 miles of range per hour; $0.10–$0.20/kWh at home. Most practical daily charger.
+- **DC Fast Charging (Level 3)** — 150–250+ miles of range per hour; $0.25–$0.45/kWh at public stations. Essential for long road trips.
+
+### Tips for Reducing EV Trip Costs
+
+- **Charge at home overnight** — Home electricity is almost always cheaper than public chargers, especially during off-peak hours.
+- **Use free chargers** — Many hotels, malls, and workplaces offer free Level 2 charging.
+- **Pre-condition the cabin** — Heat or cool the car while still plugged in so you do not drain the battery on the road.
+- **Drive at moderate speeds** — EV efficiency drops significantly above 70 MPH. Driving at 65 instead of 80 can increase range by 15–20%.
+- **Plan routes with chargers** — Apps like PlugShare, ChargePoint, and A Better Route Planner optimize stops.
 
 <FAQ items={[
-  { q: "How much does it cost to charge an electric car?", a: "On average, it costs $10-$15 to fully charge an EV at home (at ~$0.13/kWh). Public fast chargers cost $0.20-$0.40/kWh. A full charge typically provides 200-350 miles of range." },
-  { q: "How many kWh does an electric car use per 100 miles?", a: "Most EVs use 25-35 kWh per 100 miles. Efficient models like the Tesla Model 3 use about 25 kWh/100 miles." },
-  { q: "Is it cheaper to drive an EV than a gas car?", a: "Yes, typically. The average cost of electricity per mile is about 3-4 cents, compared to 10-15 cents per mile for gasoline vehicles. Annual fuel savings can be $1,000-$2,000." },
-  { q: "How far can an electric car travel on one charge?", a: "Modern EVs typically range from 200-400 miles per charge. Long-range versions of popular models like Tesla Model Y or Chevy Bolt can exceed 300 miles." },
-  { q: "How do I calculate the cost of an EV road trip?", a: "Multiply the trip distance by your EV's kWh/mile consumption, then multiply by the electricity rate. Example: 200 miles x 0.30 kWh/mile x $0.25/kWh = $15." },
+  { q: "How much does it cost to charge an electric car?", a: "On average, it costs $10–$15 to fully charge an EV at home (at ~$0.16/kWh). Public fast chargers cost $0.25–$0.45/kWh. A full charge typically provides 200–350 miles of range." },
+  { q: "How many kWh does an electric car use per 100 miles?", a: "Most EVs use 24–35 kWh per 100 miles. Efficient models like the Hyundai Ioniq 6 use about 24 kWh/100 mi, while larger trucks like the Rivian R1T use closer to 48 kWh/100 mi." },
+  { q: "Is it cheaper to drive an EV than a gas car?", a: "Yes. The average cost of electricity per mile is about 4–5 cents with home charging, compared to 10–18 cents per mile for gasoline vehicles. Annual fuel savings can be $1,000–$2,000." },
+  { q: "How far can an electric car travel on one charge?", a: "Modern EVs typically range from 200–400 miles per charge. Long-range models like the Tesla Model 3 and Hyundai Ioniq 6 can exceed 350 miles." },
+  { q: "How do I calculate the cost of an EV road trip?", a: "Multiply the trip distance by your EV's kWh/mile consumption, then multiply by the electricity rate. Example: 200 miles × 0.28 kWh/mile × $0.16/kWh = $8.96 with home charging." },
 ]} />
+
+### Related Tools
+
+- [Driving Cost Calculator](/apps/driving-cost-calculator) — Calculate gasoline trip costs for comparison
+- [Fuel Cost Calculator](/apps/fuel-cost-calculator) — Estimate gas costs per fill-up or monthly
+- [Gas Mileage Calculator](/apps/gas-mileage-calculator) — Track your vehicle's MPG over time
+- [Electricity Bill Calculator](/apps/electricity-bill-calculator) — Estimate your home electricity costs
+- [Flight Carbon Footprint Calculator](/apps/flight-carbon-footprint-calculator) — Compare driving vs. flying emissions
+
+### Sources
+
+- [U.S. Department of Energy — Alternative Fuels Data Center](https://afdc.energy.gov/)
+- [EPA — Fuel Economy Guide](https://fueleconomy.gov/)
+- [U.S. Energy Information Administration — Electricity Prices](https://www.eia.gov/electricity/)
+- [Consumer Reports — EV Ownership Costs](https://www.consumerreports.org/cars/hybrids-evs/)
