@@ -472,11 +472,6 @@ const applications = {
         shortDescription: "Calculate your academic GPA easily.",
       },
       {
-        route: "name-day-search",
-        displayName: "Name Day Search",
-        shortDescription: "Search for name day by name or date.",
-      },
-      {
         route: "flight-carbon-footprint-calculator",
         displayName: "Flight Carbon Footprint Calculator",
         shortDescription: "Calculate the carbon emissions of your flight.",

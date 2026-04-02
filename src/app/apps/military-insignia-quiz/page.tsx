@@ -1,4 +1,4 @@
-import data from "@/data/usArmyRanks";
+import data from "./quiz-data";
 import QuizEngine from "@/components/common/QuizEngine";
 import Page from "@/components/Page";
 import { Metadata } from "next";

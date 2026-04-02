@@ -1,4 +1,4 @@
-import countries from "@/data/countries/data/fi";
+import countries from "./quiz-data";
 import Page from "@/components/Page";
 import QuizEngine from "@/components/common/QuizEngine";
 import { Metadata } from "next";
@@ -13,6 +13,7 @@ export default function FlagQuiz() {
         idKey="alpha2"
         loseScore={10}
         winScore={20}
+        imgPath="/quiz/flags/128x128/"
       />
     </Page>
   );
