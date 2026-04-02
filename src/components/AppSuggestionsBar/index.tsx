@@ -7,7 +7,6 @@ import { App } from "@/types/types";
 import MiddleColumn from "@/components/common/MiddleColumn";
 import Link from "next/link";
 
-
 export default function AppSuggestionBar() {
   const path = usePathname();
   const [appSuggestions, setAppSuggestions] = useState<App[]>([]);
@@ -34,9 +33,7 @@ export default function AppSuggestionBar() {
               href={`/apps/${application.route}`}
               className="group relative flex flex-col items-center text-center rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-200 hover:shadow-lg hover:-translate-y-1 hover:border-main"
             >
-              <span className="text-4xl mb-3">
-                {application.emoji ?? "🔧"}
-              </span>
+              <span className="text-4xl mb-3">{application.emoji ?? "🔧"}</span>
               <h3 className="text-base font-bold text-gray-900 group-hover:text-main transition-colors">
                 {application.displayName}
               </h3>
