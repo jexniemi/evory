@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { apps } from "../../applications";
+import { apps, CategoryName } from "../../applications";
 import MiddleColumn from "../common/MiddleColumn";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -41,7 +41,7 @@ export default function Header() {
                   name={name}
                   path={category.path}
                   selected={category.path === path}
-                  decoration={getCategoryTheme(name).decoration}
+                  decoration={getCategoryTheme(name as CategoryName).decoration}
                 />
                 {category.path === path && (
                   <div className="h-5 w-5 absolute mb-5 background-red-500"></div>

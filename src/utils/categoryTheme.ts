@@ -1,4 +1,4 @@
-import { apps } from "@/applications";
+import { apps, CategoryName } from "@/applications";
 
 export interface CategoryTheme {
   icon: string;
@@ -10,7 +10,7 @@ export interface CategoryTheme {
   text: string; // text-{color}-600
 }
 
-export const categoryThemes: Record<string, CategoryTheme> = {
+export const categoryThemes: Record<CategoryName, CategoryTheme> = {
   "Salary & Taxes": {
     icon: "💼",
     accent: "border-l-amber-400",
@@ -86,7 +86,7 @@ const defaultTheme: CategoryTheme = {
   text: "text-gray-600",
 };
 
-export function getCategoryTheme(categoryName: string): CategoryTheme {
+export function getCategoryTheme(categoryName: CategoryName): CategoryTheme {
   const baseTheme = categoryThemes[categoryName] ?? defaultTheme;
   const categoryFromApps = apps[categoryName];
   if (categoryFromApps?.icon) {
@@ -102,7 +102,7 @@ export function getCategoryTheme(categoryName: string): CategoryTheme {
 export function getThemeByRoute(route: string): CategoryTheme {
   for (const [categoryName, category] of Object.entries(apps)) {
     if (category.apps.some((app) => route.includes(app.route))) {
-      return getCategoryTheme(categoryName);
+      return getCategoryTheme(categoryName as CategoryName);
     }
   }
   return defaultTheme;
@@ -114,7 +114,7 @@ export function getThemeBySlug(
 ): { name: string; theme: CategoryTheme } | undefined {
   for (const [name, category] of Object.entries(apps)) {
     if (category.path === `/${slug}`) {
-      return { name, theme: getCategoryTheme(name) };
+      return { name, theme: getCategoryTheme(name as CategoryName) };
     }
   }
   return undefined;

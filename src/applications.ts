@@ -909,6 +909,8 @@ const applications = {
 
 export const apps: ApplicationsJSON = applications;
 
+export type CategoryName = keyof typeof applications;
+
 export const getApplicationsAsList = () => {
   let result: App[] = [];
   Object.values(apps).forEach(
@@ -949,7 +951,7 @@ export const getRandomAppsOfTheDay = (numOfReturnedApps: number) => {
 };
 
 export const getCategoryNameByRoute = (route: string) => {
-  let result: { categoryName: string; categoryPath: string } | undefined;
+  let result: { categoryName: CategoryName; categoryPath: string } | undefined;
   try {
     const routeArray = route.split("/");
     const lastElement = routeArray[routeArray.length - 1];
@@ -957,7 +959,7 @@ export const getCategoryNameByRoute = (route: string) => {
       apps[category].apps.forEach((app) => {
         if (app.route === lastElement) {
           result = {
-            categoryName: category,
+            categoryName: category as CategoryName,
             categoryPath: apps[category].path,
           };
         }

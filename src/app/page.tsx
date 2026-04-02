@@ -1,4 +1,4 @@
-import { apps } from "@/applications";
+import { apps, CategoryName } from "@/applications";
 import { Metadata } from "next";
 import Link from "next/link";
 import { getCategoryTheme, appIcons } from "@/utils/categoryTheme";
@@ -105,7 +105,7 @@ export default function Home() {
       {/* All Categories */}
       <div className="w-full">
         {Object.keys(apps).map((category, index) => {
-          const meta = getCategoryTheme(category);
+          const meta = getCategoryTheme(category as CategoryName);
           const categoryApps = apps[category].apps;
           const featured = categoryApps[0];
           const rest = categoryApps.slice(1);

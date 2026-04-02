@@ -1,7 +1,7 @@
 import texts from "./texts";
 import Image from "next/image";
 import Link from "next/link";
-import { apps } from "../../applications";
+import { apps, CategoryName } from "../../applications";
 import MiddleColumn from "@/components/common/MiddleColumn";
 import { getCategoryTheme } from "@/utils/categoryTheme";
 
@@ -27,7 +27,7 @@ export default function Footer() {
         {/* Category link grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-y-10 gap-x-8">
           {categories.map((category) => {
-            const theme = getCategoryTheme(category);
+            const theme = getCategoryTheme(category as CategoryName);
             return (
               <nav
                 key={category}
