@@ -53,6 +53,16 @@ export default function QuizEngine({
   const livesLeft = loseScore - negativeScore;
   const progressPercent = Math.round((score / winScore) * 100);
   const xpPercent = Math.round((xp / xpToNext) * 100);
+  const promptText = textAnswerKey
+    ? String(correctAnswer[textAnswerKey] ?? "")
+    : "";
+
+  const getPromptTextSize = (text: string) => {
+    if (text.length <= 16) return "text-5xl sm:text-6xl";
+    if (text.length <= 32) return "text-4xl sm:text-5xl";
+    if (text.length <= 64) return "text-3xl sm:text-4xl";
+    return "text-2xl sm:text-3xl";
+  };
 
   const getLevelLabel = (currentLevel: number) => {
     if (currentLevel >= 16) return "Legend";
@@ -64,7 +74,7 @@ export default function QuizEngine({
 
   const getButtonClasses = (answerOption: Option) => {
     const base =
-      "text-sm font-semibold w-full py-4 px-3 rounded-xl border-2 transition-all duration-200 cursor-pointer select-none";
+      "text-sm font-semibold w-full min-h-[58px] py-2.5 px-3 rounded-xl border-2 transition-all duration-200 cursor-pointer select-none leading-tight";
     if (revealAnswer) {
       if (correctAnswer[idKey] === answerOption[idKey]) {
         return `${base} bg-emerald-500 border-emerald-600 text-white scale-105`;
@@ -95,17 +105,17 @@ export default function QuizEngine({
   }
 
   return (
-    <div className="flex flex-col items-center w-full max-w-lg mx-auto gap-5">
+    <div className="flex flex-col items-center w-full max-w-lg mx-auto gap-4">
       {/* HUD */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 w-full">
-        <div className="rounded-xl border border-violet-200 bg-violet-50 px-3 py-2">
+        <div className="rounded-xl border border-violet-200 bg-violet-50 px-2.5 py-1.5">
           <p className="text-[11px] uppercase tracking-wide text-violet-700 font-semibold">
             Level
           </p>
           <p className="text-lg font-extrabold text-violet-900">{level}</p>
           <p className="text-[11px] text-violet-700">{getLevelLabel(level)}</p>
         </div>
-        <div className="rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-2">
+        <div className="rounded-xl border border-emerald-200 bg-emerald-50 px-2.5 py-1.5">
           <p className="text-[11px] uppercase tracking-wide text-emerald-700 font-semibold">
             Points
           </p>
@@ -113,7 +123,7 @@ export default function QuizEngine({
             {totalPoints}
           </p>
         </div>
-        <div className="rounded-xl border border-amber-200 bg-amber-50 px-3 py-2">
+        <div className="rounded-xl border border-amber-200 bg-amber-50 px-2.5 py-1.5">
           <p className="text-[11px] uppercase tracking-wide text-amber-700 font-semibold">
             Combo
           </p>
@@ -121,7 +131,7 @@ export default function QuizEngine({
             x{Math.max(1, streak)}
           </p>
         </div>
-        <div className="rounded-xl border border-sky-200 bg-sky-50 px-3 py-2">
+        <div className="rounded-xl border border-sky-200 bg-sky-50 px-2.5 py-1.5">
           <p className="text-[11px] uppercase tracking-wide text-sky-700 font-semibold">
             Goal
           </p>
@@ -201,7 +211,11 @@ export default function QuizEngine({
       </div>
 
       {/* Question image/text */}
-      <div className="relative flex items-center justify-center w-full h-[160px]">
+      <div
+        className={`relative flex items-center justify-center w-full ${
+          textAnswerKey ? "min-h-[220px] sm:min-h-[250px]" : "h-[160px]"
+        }`}
+      >
         {correctAnswer[idKey] !== "" && (
           <motion.div
             key={correctAnswer[idKey]}
@@ -211,8 +225,10 @@ export default function QuizEngine({
             transition={{ duration: 0.3 }}
           >
             {textAnswerKey ? (
-              <div className="text-6xl sm:text-7xl font-bold text-center">
-                {correctAnswer[textAnswerKey]}
+              <div
+                className={`${getPromptTextSize(promptText)} font-extrabold text-center leading-[1.05] px-3 max-w-full break-words`}
+              >
+                {promptText}
               </div>
             ) : (
               <Image
