@@ -3,6 +3,8 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function TrumpTermCountdown() {
   return (
@@ -16,7 +18,6 @@ export default function TrumpTermCountdown() {
 }
 
 const pageProps = {
-  route: "trump-term-countdown",
   title: "Trump Term Countdown",
   seoTitle:
     "Trump Term Countdown – Days Until End of Trump's Second Term | ewory.com",
@@ -25,6 +26,7 @@ const pageProps = {
   instructions:
     "This countdown shows the exact time remaining until January 20, 2029, when Donald Trump's second presidential term is constitutionally scheduled to end.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

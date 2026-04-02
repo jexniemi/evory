@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import BreakEvenCalculator from "./breakEvenCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function BreakEvenCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function BreakEvenCalculatorPage() {
 }
 
 const pageProps = {
-  route: "break-even-calculator",
   seoTitle:
     "Break-Even Calculator – Find Your Business Break-Even Point | ewory.com",
   title: "Break-Even Calculator",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Enter your fixed monthly costs, price per unit or sale, and variable cost per unit. The calculator shows how many units you need to sell to cover all costs.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import CarLoanCalculator from "./carLoanCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function CarLoanCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function CarLoanCalculatorPage() {
 }
 
 const pageProps = {
-  route: "car-loan-calculator",
   seoTitle: "Car Loan Calculator – Monthly Auto Payment Estimator | ewory.com",
   title: "Car Loan Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter the vehicle price, your down payment, the interest rate, and your preferred loan term. The calculator shows your monthly payment and total loan cost.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

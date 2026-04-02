@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import TimeZoneConverter from "./timeZoneConverter";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function TimeZoneConverterPage() {
   return (
@@ -13,7 +15,6 @@ export default function TimeZoneConverterPage() {
 }
 
 const pageProps = {
-  route: "time-zone-converter",
   seoTitle:
     "Time Zone Converter – Free Online Time Conversion Tool | ewory.com",
   title: "Time Zone Converter",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Enter the hour (0–23) and minute, select the source and destination time zones, and the converter instantly shows the equivalent time.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

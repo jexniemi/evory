@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import PaintCalculator from "./paintCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function PaintCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function PaintCalculatorPage() {
 }
 
 const pageProps = {
-  route: "paint-calculator",
   seoTitle: "Paint Calculator – Free Online Wall Paint Estimator | ewory.com",
   title: "Paint Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter your room length, width, and height in feet, along with the number of doors and windows. The calculator subtracts door and window areas and estimates how many gallons of paint you need for two coats.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

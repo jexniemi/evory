@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import Pintaalamunnin from "./pintaalamunnin";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function PintaalamuunninPage() {
   return (
@@ -13,7 +15,6 @@ export default function PintaalamuunninPage() {
 }
 
 const pageProps = {
-  route: "area-converter",
   title: "Area Converter",
   seoTitle: "Area Converter – Convert m², ft², hectare, acre and more",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Select the source unit, enter the area and get all conversions instantly.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

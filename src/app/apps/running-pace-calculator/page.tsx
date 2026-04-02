@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import RunningSpeedCalculator from "./runningSpeedCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function RunningSpeedCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function RunningSpeedCalculatorPage() {
 }
 
 const pageProps = {
-  route: "running-pace-calculator",
   title: "Running Pace Calculator",
   seoTitle:
     "Running Pace Calculator – Calculate Running Speed, Pace, and Estimated Times",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Enter the time spent running in minutes and the distance run in kilometers. Get speed, pace, and estimated times for common race distances.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

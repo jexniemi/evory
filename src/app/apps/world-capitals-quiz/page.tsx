@@ -4,6 +4,7 @@ import quizData from "./quiz-data";
 import { Metadata } from "next";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
 
 export default function WorldCapitalsQuizPage() {
   return (
@@ -21,7 +22,7 @@ export default function WorldCapitalsQuizPage() {
 }
 
 const pageProps = {
-  route: "world-capitals-quiz",
+  route: getAppRoute(import.meta.url),
   title: "World Capitals Quiz",
   seoTitle: "World Capitals Quiz – Guess Countries by Their Capital Cities",
   description:

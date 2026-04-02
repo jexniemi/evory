@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import CountdownTimer from "./countdownTimer";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function CountdownTimerPage() {
   return (
@@ -13,7 +15,6 @@ export default function CountdownTimerPage() {
 }
 
 const pageProps = {
-  route: "countdown-timer",
   seoTitle: "Countdown Timer – Free Online Timer with Alarm | ewory.com",
   title: "Countdown Timer",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter hours, minutes, and seconds, then click 'Start'. Use the pause and reset buttons to control the timer. A visual alert appears when the countdown reaches zero.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

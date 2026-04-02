@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import Lotonumerogeneraattori from "./lotonumerogeneraattori";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function LotonumerogeneraattoriPage() {
   return (
@@ -13,7 +15,6 @@ export default function LotonumerogeneraattoriPage() {
 }
 
 const pageProps = {
-  route: "lottery-number-generator",
   title: "Lottery Number Generator",
   seoTitle: "Lottery Number Generator – Draw Lotto numbers for free",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Press the button and the generator draws seven Lotto numbers for you. Results are saved to history.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

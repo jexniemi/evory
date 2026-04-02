@@ -3,6 +3,8 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function SummerVacationCountdown() {
   return (
@@ -17,7 +19,6 @@ export default function SummerVacationCountdown() {
 }
 
 const pageProps = {
-  route: "vacation-days-calculator",
   title: "Summer Vacation Countdown",
   seoTitle:
     "Summer Vacation Countdown – Easily Count Days, Hours and Minutes Until Vacation",
@@ -25,6 +26,7 @@ const pageProps = {
     "Track your wait until summer vacation in real time using our handy countdown calculator. We show you the days, hours and minutes ticking down toward your well-earned time off. Start counting now and get ready for a relaxing summer vacation!",
   instructions: `Welcome to the summer vacation countdown! This handy calculator shows in real time how many days, hours and minutes remain until your well-earned summer vacation. School summer vacations begin in most of the country on June 1, 2026, but you can also select your own vacation start date. Choose your desired date and start counting!`,
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

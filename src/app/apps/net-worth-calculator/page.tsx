@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import NetWorthCalculator from "./netWorthCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function NetWorthCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function NetWorthCalculatorPage() {
 }
 
 const pageProps = {
-  route: "net-worth-calculator",
   seoTitle: "Net Worth Calculator – Track Your Financial Health | ewory.com",
   title: "Net Worth Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter all your assets (savings, investments, real estate, vehicles) and liabilities (credit cards, loans, mortgage). The calculator shows your net worth and debt-to-asset ratio.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

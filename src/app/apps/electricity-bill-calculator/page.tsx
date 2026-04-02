@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import ElectricityCalculator from "./electricityCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function ElectricityPage() {
   return (
@@ -13,7 +15,6 @@ export default function ElectricityPage() {
 }
 
 const pageProps = {
-  route: "electricity-bill-calculator",
   seoTitle: "Electricity Bill Calculator - Calculate Electricity Consumption",
   title: "Electricity Bill Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter electricity consumption in kWh and electricity price in $/kWh. The calculator shows the electricity bill amount.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

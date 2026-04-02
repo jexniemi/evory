@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import Makrolaskuri from "./makrolaskuri";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function MakrolaskuriPage() {
   return (
@@ -13,7 +15,6 @@ export default function MakrolaskuriPage() {
 }
 
 const pageProps = {
-  route: "macro-calculator",
   title: "Macro Calculator",
   seoTitle: "Macro Calculator – Calculate daily calories and macros",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter your weight, select your goal and activity level. You get a calculation of daily calories and macronutrients.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

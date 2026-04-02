@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import CalorieCalculator from "./calorieCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function CaloriePage() {
   return (
@@ -13,7 +15,6 @@ export default function CaloriePage() {
 }
 
 const pageProps = {
-  route: "daily-calorie-needs-calculator",
   seoTitle: "Daily Calorie Needs Calculator – Calculate Your Calorie Needs",
   title: "Daily Calorie Needs Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter your information and select your activity level. The calculator will show your daily calorie needs as well as recommended calorie amounts for weight loss and muscle gain.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

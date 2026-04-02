@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import FreelanceRateCalculator from "./freelanceRateCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function FreelanceRateCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function FreelanceRateCalculatorPage() {
 }
 
 const pageProps = {
-  route: "freelance-rate-calculator",
   seoTitle:
     "Freelance Rate Calculator – Find Your Minimum Hourly Rate | ewory.com",
   title: "Freelance Rate Calculator",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Enter your desired annual income, billable hours per week, weeks you plan to work, and monthly business expenses. The calculator factors in self-employment tax to show your minimum viable rate.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

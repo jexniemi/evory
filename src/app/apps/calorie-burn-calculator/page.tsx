@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import Kalorienpolttolaskuri from "./kalorienpolttolaskuri";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function KalorienpolttolaskuriPage() {
   return (
@@ -13,7 +15,6 @@ export default function KalorienpolttolaskuriPage() {
 }
 
 const pageProps = {
-  route: "calorie-burn-calculator",
   title: "Calorie Burn Calculator",
   seoTitle: "Calorie Burn Calculator – Calculate exercise calorie expenditure",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter your weight, select the activity and exercise duration in minutes.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import ProteinIntakeCalculator from "./proteinIntakeCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function ProteinIntakeCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function ProteinIntakeCalculatorPage() {
 }
 
 const pageProps = {
-  route: "protein-intake-calculator",
   seoTitle:
     "Protein Intake Calculator – Daily Protein Needs Estimator | ewory.com",
   title: "Protein Intake Calculator",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Enter your body weight in pounds and select your activity level. The calculator estimates your daily protein needs, protein per meal for 3 or 4 meals, and total calories from protein.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

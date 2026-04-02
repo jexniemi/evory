@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import Annoslaskuri from "./annoslaskuri";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function AnnoslaskuriPage() {
   return (
@@ -13,7 +15,6 @@ export default function AnnoslaskuriPage() {
 }
 
 const pageProps = {
-  route: "portion-calculator",
   title: "Portion Calculator",
   seoTitle: "Portion Calculator – Scale Recipe to the Right Serving Size",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter the original serving size, desired serving size, and ingredients. Scaled amounts are calculated automatically.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

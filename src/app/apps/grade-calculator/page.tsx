@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import GradeCalculator from "./gradeCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function GradeCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function GradeCalculatorPage() {
 }
 
 const pageProps = {
-  route: "grade-calculator",
   seoTitle: "Grade Calculator – What Do I Need on My Final Exam? | ewory.com",
   title: "Grade Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter your current course grade (%), the weight of the final exam (%), and your desired overall grade (%). The calculator shows the score you need on the final.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import JsonFormatter from "./jsonFormatter";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function JsonFormatterPage() {
   return (
@@ -13,7 +15,6 @@ export default function JsonFormatterPage() {
 }
 
 const pageProps = {
-  route: "json-formatter",
   seoTitle:
     "JSON Formatter – Free Online JSON Beautifier & Validator | ewory.com",
   title: "JSON Formatter",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Paste your JSON into the input box, choose your indentation preference, and click 'Format / Beautify' to pretty-print or 'Minify' to compress. Invalid JSON will show a clear error message.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

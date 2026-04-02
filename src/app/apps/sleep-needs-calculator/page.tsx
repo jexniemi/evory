@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import SleepCalculator from "./sleepCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function SleepPage() {
   return (
@@ -13,7 +15,6 @@ export default function SleepPage() {
 }
 
 const pageProps = {
-  route: "sleep-needs-calculator",
   seoTitle: "Sleep Needs Calculator – How Much Sleep Do You Need",
   title: "Sleep Needs Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter your daily exercise in minutes and workout intensity. The calculator shows the recommended amount of sleep.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

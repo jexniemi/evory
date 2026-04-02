@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import SavingsGoalCalculator from "./savingsGoalCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function SavingsGoalCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function SavingsGoalCalculatorPage() {
 }
 
 const pageProps = {
-  route: "savings-goal-calculator",
   seoTitle: "Savings Goal Calculator - How Long Will Saving Take?",
   title: "Savings Goal Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter the savings goal in euros, monthly savings amount, and estimated annual return. The calculator tells you how long it takes to reach the goal.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

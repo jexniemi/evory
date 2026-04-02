@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import BabyNameGenerator from "./babyNameGenerator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function BabyNameGeneratorPage() {
   return (
@@ -13,7 +15,6 @@ export default function BabyNameGeneratorPage() {
 }
 
 const pageProps = {
-  route: "baby-name-generator",
   seoTitle:
     "Baby Name Generator – Free Online Name Ideas by Gender | ewory.com",
   title: "Baby Name Generator",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Select a gender and an optional starting letter, then click 'Generate Names' to see five suggestions. Click 'Generate More' for new ideas.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

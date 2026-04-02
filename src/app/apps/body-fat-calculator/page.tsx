@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import BodyFatCalculator from "./bodyFatCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function BodyFatCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function BodyFatCalculatorPage() {
 }
 
 const pageProps = {
-  route: "body-fat-calculator",
   seoTitle:
     "Body Fat Calculator – US Navy Formula Body Fat Estimator | ewory.com",
   title: "Body Fat Calculator",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Select your gender, then enter your weight in pounds, waist circumference, neck circumference, and height in inches. The calculator uses the US Navy body fat formula to estimate your body fat percentage and composition.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

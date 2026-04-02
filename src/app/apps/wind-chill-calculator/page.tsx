@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import Tuuliviimalaskuri from "./tuuliviimalaskuri";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function TuuliviimalaskuriPage() {
   return (
@@ -13,7 +15,6 @@ export default function TuuliviimalaskuriPage() {
 }
 
 const pageProps = {
-  route: "wind-chill-calculator",
   title: "Wind Chill Calculator",
   seoTitle: "Wind Chill Calculator – Calculate Apparent Temperature in Wind",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter temperature and wind speed. The calculator uses the international Environment Canada formula.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

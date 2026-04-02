@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import Calculator from "./discountCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function DiscountCalculator() {
   return (
@@ -13,7 +15,6 @@ export default function DiscountCalculator() {
 }
 
 const pageProps = {
-  route: "discount-calculator",
   seoTitle:
     "Discount Calculator - Calculate Discounted Price and Savings Easily",
   title: "Discount Calculator",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Use the discount calculator to find out the discounted price and savings of your product or service. Enter the original price and discount percentage, and the calculator will give you an accurate estimate of how much the discount affects the price and how much money you save. This way, you can make better purchasing decisions and manage your budget more efficiently.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

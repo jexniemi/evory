@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import RockPaperScissors from "./rockPaperScissors";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function RockPaperScissorsPage() {
   return (
@@ -13,7 +15,6 @@ export default function RockPaperScissorsPage() {
 }
 
 const pageProps = {
-  route: "rock-paper-scissors",
   seoTitle: "Rock Paper Scissors – Free Online Game vs Computer | ewory.com",
   title: "Rock Paper Scissors",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Click Rock, Paper, or Scissors to play against the computer. The computer picks randomly. Your score is tracked automatically. Click 'Reset Score' to start over.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

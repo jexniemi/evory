@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import Valuuttamuunnin from "./valuuttamuunnin";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function ValuuttamuunninPage() {
   return (
@@ -13,7 +15,6 @@ export default function ValuuttamuunninPage() {
 }
 
 const pageProps = {
-  route: "currency-converter",
   title: "Currency Converter",
   seoTitle:
     "Currency Converter – Convert currencies EUR, USD, GBP and over 20 more",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Enter the amount, select source and target currency. The result is calculated with indicative rates.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

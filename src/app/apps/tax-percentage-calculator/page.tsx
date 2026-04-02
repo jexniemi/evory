@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import TaxRateCalculator from "./taxRateCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function TaxRatePage() {
   return (
@@ -13,7 +15,6 @@ export default function TaxRatePage() {
 }
 
 const pageProps = {
-  route: "tax-percentage-calculator",
   seoTitle: "Tax Rate Calculator – Calculate Your Effective Tax Rate",
   title: "Tax Rate Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter your monthly net salary and taxes paid. The calculator shows gross salary, tax rate, and annual figures.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

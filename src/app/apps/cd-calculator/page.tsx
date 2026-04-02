@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import CdCalculator from "./cdCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function CdCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function CdCalculatorPage() {
 }
 
 const pageProps = {
-  route: "cd-calculator",
   seoTitle:
     "CD Calculator – Certificate of Deposit Interest Calculator | ewory.com",
   title: "CD Calculator",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Enter your deposit amount, annual APY, and term length in months. The calculator shows total interest earned, maturity value, and average monthly earnings.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

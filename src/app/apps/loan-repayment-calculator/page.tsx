@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import LoanCalculator from "./loanCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function LoanPage() {
   return (
@@ -13,7 +15,6 @@ export default function LoanPage() {
 }
 
 const pageProps = {
-  route: "loan-repayment-calculator",
   seoTitle:
     "Loan Repayment Calculator – Calculate monthly payment and interest",
   title: "Loan Repayment Calculator",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Enter loan amount, annual interest rate and loan term in years. The calculator shows monthly payment, interest costs, total payment and payback ratio.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

@@ -3,6 +3,8 @@ import BMRCalculator from "./bmrCalculator";
 import { Metadata } from "next";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function BMRCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function BMRCalculatorPage() {
 }
 
 const pageProps = {
-  route: "bmr-calculator",
   seoTitle:
     "Basal Metabolic Rate Calculator (BMR) – Calculate Resting Calories",
   title: "Basal Metabolic Rate Calculator",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Enter your details below. The calculator calculates your basal metabolic rate using the Harris-Benedict formula and shows daily calorie needs at three different activity levels.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import DueDateCalculator from "./dueDateCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function DueDateCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function DueDateCalculatorPage() {
 }
 
 const pageProps = {
-  route: "due-date-calculator",
   seoTitle:
     "Due Date Calculator – Free Pregnancy Due Date Estimator | ewory.com",
   title: "Due Date Calculator",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Enter the first day of your last menstrual period (LMP). The calculator estimates your due date, current pregnancy week, days remaining, and trimester.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

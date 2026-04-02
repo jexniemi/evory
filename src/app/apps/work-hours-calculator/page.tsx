@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import Tyotuntilaskuri from "./tyotuntilaskuri";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function TyotuntilaskuriPage() {
   return (
@@ -13,7 +15,6 @@ export default function TyotuntilaskuriPage() {
 }
 
 const pageProps = {
-  route: "work-hours-calculator",
   title: "Work Hours Calculator",
   seoTitle: "Work Hours Calculator – Track Hours Worked and Earnings",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter your start time, end time, and break duration. Add an hourly rate to calculate earnings.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

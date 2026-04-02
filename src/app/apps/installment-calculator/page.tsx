@@ -3,6 +3,8 @@ import InstallmentCalculator from "./installmentCalculator";
 import { Metadata } from "next";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function InstallmentCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function InstallmentCalculatorPage() {
 }
 
 const pageProps = {
-  route: "installment-calculator",
   seoTitle:
     "Installment Calculator - Calculate Monthly Payments and Interest Costs Easily",
   title: "Installment Calculator",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Use the installment calculator to find out your loan or installment monthly payments, total price and interest costs. Enter the total amount of the loan or product, annual interest rate and payment period, and the calculator will give you an accurate estimate of this information. This way you can make better financial decisions and manage your budget more efficiently. This calculator is indicative, check the terms offered by the seller or financing company before taking out an installment.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

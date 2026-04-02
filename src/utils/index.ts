@@ -17,3 +17,7 @@ export const isMobile = () => {
 export const getAppIconPath = (appRoute: string) => {
   return "/icons/" + appRoute + ".png"
 }
+
+export function getAppRoute(metaUrl: string): string {
+  return new URL(metaUrl).pathname.split('/').slice(-2)[0];
+}

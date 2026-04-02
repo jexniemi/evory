@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import NetSalaryCalculator from "./netSalaryCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function NetSalaryCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function NetSalaryCalculatorPage() {
 }
 
 const pageProps = {
-  route: "net-salary-calculator",
   seoTitle: "Net Salary Calculator - Calculate Net Salary from Gross Salary",
   title: "Net Salary Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter gross salary, tax percentage and statutory side costs. The calculator shows your net salary, i.e. the take-home amount per month.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

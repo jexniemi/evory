@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import DownPaymentCalculator from "./downPaymentCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function DownPaymentCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function DownPaymentCalculatorPage() {
 }
 
 const pageProps = {
-  route: "down-payment-calculator",
   seoTitle: "Down Payment Calculator – Home Savings Planner | ewory.com",
   title: "Down Payment Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter the home price, your target down payment percentage, current savings, and monthly savings. The calculator shows your down payment target and timeline.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

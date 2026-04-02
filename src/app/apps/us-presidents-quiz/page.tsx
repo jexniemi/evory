@@ -4,6 +4,8 @@ import quizData from "./quiz-data";
 import { Metadata } from "next";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function USPresidentsQuizPage() {
   return (
@@ -21,7 +23,6 @@ export default function USPresidentsQuizPage() {
 }
 
 const pageProps = {
-  route: "us-presidents-quiz",
   title: "U.S. Presidents Quiz",
   seoTitle: "U.S. Presidents Quiz – Test Your American History Knowledge",
   description:
@@ -29,6 +30,7 @@ const pageProps = {
   instructions:
     "Read the clue and choose the correct U.S. President. Keep your streak for higher points and level progression.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

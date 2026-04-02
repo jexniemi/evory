@@ -4,6 +4,8 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function ArmyQuiz() {
   return (
@@ -20,7 +22,6 @@ export default function ArmyQuiz() {
 }
 
 const pageProps = {
-  route: "military-insignia-quiz",
   title: "U.S. Army Rank Insignia Quiz",
   seoTitle: "U.S. Army Rank Insignia Quiz – Identify Real Army Rank Badges",
   description:
@@ -28,6 +29,7 @@ const pageProps = {
   instructions:
     "Identify the U.S. Army rank based on the insignia. You have 3 lives — guess 10 correctly to win!",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

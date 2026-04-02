@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import Unisyklilaskuri from "./unisyklilaskuri";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function UnisyklilaskuriPage() {
   return (
@@ -13,7 +15,6 @@ export default function UnisyklilaskuriPage() {
 }
 
 const pageProps = {
-  route: "sleep-cycle-calculator",
   title: "Sleep Cycle Calculator",
   seoTitle: "Sleep Cycle Calculator – When to Wake Up or Go to Sleep?",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Choose if you want to calculate bedtime or wake-up time, enter the time, and see optimal options.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

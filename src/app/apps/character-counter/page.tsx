@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import CharacterCounter from "./characterCounter";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function CharacterCounterPage() {
   return (
@@ -13,7 +15,6 @@ export default function CharacterCounterPage() {
 }
 
 const pageProps = {
-  route: "character-counter",
   seoTitle:
     "Character Counter – Free Online Character & Word Count Tool | ewory.com",
   title: "Character Counter",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Type or paste your text into the box above. The tool instantly counts characters, words, sentences, paragraphs, and estimates reading and speaking time.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

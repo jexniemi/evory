@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import TaxBracketCalculator from "./taxBracketCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function TaxBracketCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function TaxBracketCalculatorPage() {
 }
 
 const pageProps = {
-  route: "tax-bracket-calculator",
   seoTitle:
     "Tax Bracket Calculator – 2024 Federal Income Tax Estimator | ewory.com",
   title: "Tax Bracket Calculator",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Enter your annual income and filing status. The calculator applies 2024 federal tax brackets and the standard deduction to estimate your tax liability.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

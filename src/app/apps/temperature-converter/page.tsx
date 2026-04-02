@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import Lampotilamuunnin from "./lampotilamuunnin";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function LampotilamuunninPage() {
   return (
@@ -13,7 +15,6 @@ export default function LampotilamuunninPage() {
 }
 
 const pageProps = {
-  route: "temperature-converter",
   title: "Temperature Converter",
   seoTitle: "Temperature Converter – Convert Celsius, Fahrenheit and Kelvin",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Select the temperature unit, enter the value and instantly get the result in all three units.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

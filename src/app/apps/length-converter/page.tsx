@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import Pituusmuunnin from "./pituusmuunnin";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function PituusmuunninPage() {
   return (
@@ -13,7 +15,6 @@ export default function PituusmuunninPage() {
 }
 
 const pageProps = {
-  route: "length-converter",
   title: "Length Converter",
   seoTitle: "Length Converter – Convert cm, m, feet, inches, km and miles",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Select source unit, enter value and see all conversions immediately.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

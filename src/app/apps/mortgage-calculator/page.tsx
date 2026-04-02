@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import MortgageCalculator from "./mortgageCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function MortgageCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function MortgageCalculatorPage() {
 }
 
 const pageProps = {
-  route: "mortgage-calculator",
   seoTitle: "Mortgage Calculator – Free Monthly Payment Estimator | ewory.com",
   title: "Mortgage Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter the home price, down payment percentage, interest rate, and loan term. The calculator shows your monthly payment, total interest, and total cost.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

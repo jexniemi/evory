@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import CompoundCalculator from "./compoundCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function CompoundPage() {
   return (
@@ -13,7 +15,6 @@ export default function CompoundPage() {
 }
 
 const pageProps = {
-  route: "simple-compound-interest-calculator",
   seoTitle: "Compound Interest Calculator – Calculate Investment Growth",
   title: "Simple Compound Interest Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter initial capital, annual return percentage, and investment time in years. The calculator shows final balance, accumulated interest, total growth, and capital doubling time.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

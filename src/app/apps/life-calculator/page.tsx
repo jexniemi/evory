@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import ElamapaivaLaskuri from "./elamapaivaLaskuri";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function ElamapaivaLaskuriPage() {
   return (
@@ -13,7 +15,6 @@ export default function ElamapaivaLaskuriPage() {
 }
 
 const pageProps = {
-  route: "life-calculator",
   title: "Life Calculator",
   seoTitle: "Life Calculator – How many days have you lived?",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter your birthday and see your life statistics: days, hours, heartbeats and much more.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

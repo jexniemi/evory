@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import DebtPayoffCalculator from "./debtPayoffCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function DebtPayoffCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function DebtPayoffCalculatorPage() {
 }
 
 const pageProps = {
-  route: "debt-payoff-calculator",
   seoTitle: "Debt Payoff Calculator – Free Debt Repayment Planner | ewory.com",
   title: "Debt Payoff Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter your total debt balance, annual interest rate, and monthly payment amount. The calculator shows how many months until payoff and the total interest you will pay.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

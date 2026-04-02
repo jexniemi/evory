@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import CoinFlip from "./coinFlip";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function CoinFlipPage() {
   return (
@@ -13,7 +15,6 @@ export default function CoinFlipPage() {
 }
 
 const pageProps = {
-  route: "coin-flip",
   seoTitle: "Coin Flip – Free Online Coin Toss Simulator | ewory.com",
   title: "Coin Flip",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Click the 'Flip Coin' button to toss a virtual coin. The result is completely random. View your flip history and running statistics below.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

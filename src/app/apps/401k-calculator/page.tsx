@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import RetirementContributionCalculator from "./retirementContributionCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function RetirementCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function RetirementCalculatorPage() {
 }
 
 const pageProps = {
-  route: "401k-calculator",
   seoTitle: "401(k) Calculator – Free Retirement Savings Estimator | ewory.com",
   title: "401(k) Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter your age, salary, contribution rate, employer match, and expected return. The calculator projects your 401(k) balance at retirement.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

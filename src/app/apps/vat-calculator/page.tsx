@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import AlvCalculator from "./alvCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function AlvCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function AlvCalculatorPage() {
 }
 
 const pageProps = {
-  route: "vat-calculator",
   seoTitle: "Sales Tax Calculator – Calculate Tax Amount Easily",
   title: "Sales Tax Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter a price and select the appropriate tax rate. The calculator shows the tax amount for both adding tax (pre-tax → total) and removing tax (total → pre-tax).",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

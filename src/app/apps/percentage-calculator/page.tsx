@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import Prosenttilaskuri from "./prosenttilaskuri";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function ProsenttilaskuriPage() {
   return (
@@ -13,7 +15,6 @@ export default function ProsenttilaskuriPage() {
 }
 
 const pageProps = {
-  route: "percentage-calculator",
   title: "Percentage Calculator",
   seoTitle:
     "Percentage Calculator – Calculate percentage, share and change easily",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Select the operation below: calculate percentage value, share percentage or change percentage. Enter numbers and the result updates immediately.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

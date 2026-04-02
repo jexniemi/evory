@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import RothIRACalculator from "./rothIRACalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function RothIRACalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function RothIRACalculatorPage() {
 }
 
 const pageProps = {
-  route: "roth-ira-calculator",
   seoTitle:
     "Roth IRA Calculator – Tax-Free Retirement Growth Estimator | ewory.com",
   title: "Roth IRA Calculator",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Enter your current age, planned retirement age, annual contribution amount, and expected return rate. The calculator shows your projected balance and how much of it is tax-free growth.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

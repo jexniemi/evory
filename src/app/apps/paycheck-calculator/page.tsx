@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import PaycheckCalculator from "./paycheckCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function PaycheckCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function PaycheckCalculatorPage() {
 }
 
 const pageProps = {
-  route: "paycheck-calculator",
   seoTitle: "Paycheck Calculator – Free Take-Home Pay Estimator | ewory.com",
   title: "Paycheck Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter your annual salary, federal and state tax rates, and 401(k) contribution percentage. The calculator shows your biweekly and monthly take-home pay.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

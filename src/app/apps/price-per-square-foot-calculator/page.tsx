@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import PricePerSqmCalculator from "./pricePerSqmCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function PricePerSqmPage() {
   return (
@@ -13,7 +15,6 @@ export default function PricePerSqmPage() {
 }
 
 const pageProps = {
-  route: "price-per-square-foot-calculator",
   seoTitle:
     "Price Per Square Foot Calculator - Calculate Apartment Price Per Square Foot",
   title: "Price Per Square Foot Calculator",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Enter the apartment's sale price, area in square meters, and possible housing company loan share. The calculator calculates the debt-free price per square foot.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

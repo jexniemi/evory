@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import PaivamaaraLaskuri from "./paivamaaraLaskuri";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function PaivamaaraLaskuriPage() {
   return (
@@ -13,7 +15,6 @@ export default function PaivamaaraLaskuriPage() {
 }
 
 const pageProps = {
-  route: "date-calculator",
   title: "Date Calculator",
   seoTitle:
     "Date Calculator – Calculate the difference in days, weeks, and months",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Select two dates to see the difference between them. You can also add or subtract days from any date.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

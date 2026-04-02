@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import UnitPriceCalculator from "./unitPriceCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function UnitPriceCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function UnitPriceCalculatorPage() {
 }
 
 const pageProps = {
-  route: "unit-price-calculator",
   seoTitle:
     "Unit Price Calculator – Compare Product Prices Per Unit | ewory.com",
   title: "Unit Price Calculator",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Enter the price and quantity for two products. The calculator compares unit prices and shows which product is the better deal and how much you save per unit.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

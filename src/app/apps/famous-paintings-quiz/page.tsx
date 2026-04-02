@@ -4,6 +4,8 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function FamousPaintingsQuizPage() {
   return (
@@ -21,7 +23,6 @@ export default function FamousPaintingsQuizPage() {
 }
 
 const pageProps = {
-  route: "famous-paintings-quiz",
   title: "Famous Paintings Quiz",
   seoTitle: "Famous Paintings Quiz – Name the Artist | ewory.com",
   description:
@@ -29,6 +30,7 @@ const pageProps = {
   instructions:
     "Look at the painting and choose the correct artist. Get 10 right to win!",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

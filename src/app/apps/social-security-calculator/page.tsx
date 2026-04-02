@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import SocialSecurityCalculator from "./socialSecurityCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function SocialSecurityCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function SocialSecurityCalculatorPage() {
 }
 
 const pageProps = {
-  route: "social-security-calculator",
   seoTitle: "Social Security Calculator – Estimate Your Benefits | ewory.com",
   title: "Social Security Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter your expected monthly benefit at full retirement age (from your SSA statement), your current age, and your planned claiming age. The calculator shows your adjusted benefit.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

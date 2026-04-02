@@ -4,6 +4,8 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function CarLogosQuizPage() {
   return (
@@ -21,7 +23,6 @@ export default function CarLogosQuizPage() {
 }
 
 const pageProps = {
-  route: "car-logos-quiz",
   title: "Car Logos Quiz",
   seoTitle: "Car Logos Quiz – Identify Car Brand Logos | ewory.com",
   description:
@@ -29,6 +30,7 @@ const pageProps = {
   instructions:
     "Look at the car logo and choose the correct brand name. Get 12 right before 3 wrong to win!",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

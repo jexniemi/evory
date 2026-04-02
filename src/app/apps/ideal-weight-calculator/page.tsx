@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import IdealWeightCalculator from "./idealWeightCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function IdealWeightCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function IdealWeightCalculatorPage() {
 }
 
 const pageProps = {
-  route: "ideal-weight-calculator",
   seoTitle:
     "Ideal Weight Calculator – Free Online Tool by Height & Gender | ewory.com",
   title: "Ideal Weight Calculator",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Enter your height in inches and select your gender. The calculator shows ideal weight estimates from three medical formulas plus the healthy BMI weight range.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

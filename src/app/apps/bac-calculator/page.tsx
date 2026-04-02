@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import Promillelaskuri from "./promillelaskuri";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function PromillelaskuriPage() {
   return (
@@ -13,7 +15,6 @@ export default function PromillelaskuriPage() {
 }
 
 const pageProps = {
-  route: "bac-calculator",
   title: "BAC Calculator",
   seoTitle:
     "BAC Calculator – Estimate Blood Alcohol Content with Widmark Formula",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Enter your details and get an instant estimate of your BAC. The result is only indicative — do not drive if you have consumed alcohol.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import MovingCostCalculator from "./movingCostCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function MovingCostCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function MovingCostCalculatorPage() {
 }
 
 const pageProps = {
-  route: "moving-cost-calculator",
   seoTitle: "Moving Cost Calculator – Free Online Moving Estimator | ewory.com",
   title: "Moving Cost Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter the moving distance in miles, the number of rooms in your home, and select your packing service level. The calculator estimates base moving costs, distance charges, and gives you a grand total.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

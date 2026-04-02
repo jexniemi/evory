@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import Sydansykelaskuri from "./sydansykelaskuri";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function SydansykelaskuriPage() {
   return (
@@ -13,7 +15,6 @@ export default function SydansykelaskuriPage() {
 }
 
 const pageProps = {
-  route: "heart-rate-calculator",
   title: "Heart Rate Calculator",
   seoTitle:
     "Heart Rate Calculator – Calculate heart rate zones based on age and resting heart rate",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Enter your age and resting heart rate. You can also enter your measured maximum heart rate for more accurate results.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

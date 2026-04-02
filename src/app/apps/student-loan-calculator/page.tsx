@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import StudentLoanCalculator from "./studentLoanCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function StudentLoanCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function StudentLoanCalculatorPage() {
 }
 
 const pageProps = {
-  route: "student-loan-calculator",
   seoTitle:
     "Student Loan Calculator – Monthly Payment & Interest Estimator | ewory.com",
   title: "Student Loan Calculator",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Enter your student loan balance, interest rate, and repayment term to see your monthly payment and total interest paid.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

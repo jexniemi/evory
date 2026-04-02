@@ -4,6 +4,8 @@ import Page from "@/components/Page";
 import { Metadata } from "next";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function PlanetsQuizPage() {
   return (
@@ -21,7 +23,6 @@ export default function PlanetsQuizPage() {
 }
 
 const pageProps = {
-  route: "planets-quiz",
   title: "Planets & Space Quiz",
   seoTitle: "Planets & Space Quiz – Identify Solar System Bodies | ewory.com",
   description:
@@ -29,6 +30,7 @@ const pageProps = {
   instructions:
     "Look at the space image and choose the correct planet or celestial body. Get 10 right to win!",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

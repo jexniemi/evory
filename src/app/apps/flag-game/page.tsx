@@ -4,6 +4,8 @@ import QuizEngine from "@/components/common/QuizEngine";
 import { Metadata } from "next";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function FlagQuiz() {
   return (
@@ -20,7 +22,6 @@ export default function FlagQuiz() {
 }
 
 const pageProps = {
-  route: "flag-game",
   title: "Flag Game",
   seoTitle: "Flag Game – Identify the Flags of the World's Countries",
   description:
@@ -28,6 +29,7 @@ const pageProps = {
   instructions:
     "Identify the country based on the flag. You have 10 lives — guess 20 correctly to win. How long a streak can you get?",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

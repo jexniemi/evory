@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import WaterIntakeCalculator from "./waterIntakeCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function WaterIntakeCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function WaterIntakeCalculatorPage() {
 }
 
 const pageProps = {
-  route: "water-needs-calculator",
   seoTitle: "Water Needs Calculator - Calculate Your Daily Water Intake",
   title: "Water Needs Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter your weight and select your activity level. The calculator estimates how much water you should drink daily.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

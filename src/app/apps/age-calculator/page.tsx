@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import AgeCalculator from "./ageCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function AgeCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function AgeCalculatorPage() {
 }
 
 const pageProps = {
-  route: "age-calculator",
   seoTitle: "Age Calculator - Calculate Your Age Accurately from Birthdate",
   title: "Age Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Select your birthdate, month, and year. The calculator will show your exact age in years, months, and days.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

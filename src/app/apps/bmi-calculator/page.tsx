@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import BmiCalculator from "./bmiCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function BmiCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function BmiCalculatorPage() {
 }
 
 const pageProps = {
-  route: "bmi-calculator",
   seoTitle: "BMI Calculator – Calculate your body mass index and normal weight range",
   title: "BMI Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter your height in centimeters and weight in kilograms. The calculator will show the BMI value, classification, and the lower and upper limits of normal weight.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

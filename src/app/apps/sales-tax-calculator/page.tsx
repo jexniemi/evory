@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import SalesTaxCalculator from "./salesTaxCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function SalesTaxCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function SalesTaxCalculatorPage() {
 }
 
 const pageProps = {
-  route: "sales-tax-calculator",
   seoTitle: "Sales Tax Calculator – Free Online Tax Estimator | ewory.com",
   title: "Sales Tax Calculator",
   description:
@@ -21,6 +22,7 @@ const pageProps = {
   instructions:
     "Enter the item price and your local sales tax rate. The calculator shows the tax amount, total price with tax, and the reverse pre-tax price.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);

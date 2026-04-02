@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import SquareFootageCalculator from "./squareFootageCalculator";
 import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
+
 
 export default function SquareFootageCalculatorPage() {
   return (
@@ -13,7 +15,6 @@ export default function SquareFootageCalculatorPage() {
 }
 
 const pageProps = {
-  route: "square-footage-calculator",
   seoTitle:
     "Square Footage Calculator – Free Online Area Calculator | ewory.com",
   title: "Square Footage Calculator",
@@ -22,6 +23,7 @@ const pageProps = {
   instructions:
     "Enter the length and width in feet plus an optional price per square foot. The calculator shows total area in square feet and square meters, and an estimated property value.",
   Info,
+  route: getAppRoute(import.meta.url),
 };
 
 export const metadata: Metadata = generateAppMetadata(pageProps);
