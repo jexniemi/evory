@@ -1495,4 +1495,11 @@ const countries = [
   },
 ];
 
-export default countries;
+const regionNames = new Intl.DisplayNames(["en"], { type: "region" });
+
+const countriesInEnglish = countries.map((country) => ({
+  ...country,
+  name: regionNames.of(country.alpha2.toUpperCase()) || country.name,
+}));
+
+export default countriesInEnglish;

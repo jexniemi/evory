@@ -42,10 +42,25 @@ export default function QuizEngine({
     streak,
     bestStreak,
     disableButtons,
+    level,
+    xp,
+    xpToNext,
+    totalPoints,
+    lastPointsDelta,
+    lastAnswerCorrect,
   } = state;
 
   const livesLeft = loseScore - negativeScore;
   const progressPercent = Math.round((score / winScore) * 100);
+  const xpPercent = Math.round((xp / xpToNext) * 100);
+
+  const getLevelLabel = (currentLevel: number) => {
+    if (currentLevel >= 16) return "Legend";
+    if (currentLevel >= 12) return "Master";
+    if (currentLevel >= 8) return "Pro";
+    if (currentLevel >= 4) return "Rising";
+    return "Rookie";
+  };
 
   const getButtonClasses = (answerOption: Option) => {
     const base =
@@ -72,6 +87,8 @@ export default function QuizEngine({
         score={score}
         winCondition={winScore}
         bestStreak={bestStreak}
+        level={level}
+        totalPoints={totalPoints}
         reset={reset}
       />
     );
@@ -79,7 +96,42 @@ export default function QuizEngine({
 
   return (
     <div className="flex flex-col items-center w-full max-w-lg mx-auto gap-5">
-      {/* Top bar: lives + streak */}
+      {/* HUD */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 w-full">
+        <div className="rounded-xl border border-violet-200 bg-violet-50 px-3 py-2">
+          <p className="text-[11px] uppercase tracking-wide text-violet-700 font-semibold">
+            Level
+          </p>
+          <p className="text-lg font-extrabold text-violet-900">{level}</p>
+          <p className="text-[11px] text-violet-700">{getLevelLabel(level)}</p>
+        </div>
+        <div className="rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-2">
+          <p className="text-[11px] uppercase tracking-wide text-emerald-700 font-semibold">
+            Points
+          </p>
+          <p className="text-lg font-extrabold text-emerald-900">
+            {totalPoints}
+          </p>
+        </div>
+        <div className="rounded-xl border border-amber-200 bg-amber-50 px-3 py-2">
+          <p className="text-[11px] uppercase tracking-wide text-amber-700 font-semibold">
+            Combo
+          </p>
+          <p className="text-lg font-extrabold text-amber-900">
+            x{Math.max(1, streak)}
+          </p>
+        </div>
+        <div className="rounded-xl border border-sky-200 bg-sky-50 px-3 py-2">
+          <p className="text-[11px] uppercase tracking-wide text-sky-700 font-semibold">
+            Goal
+          </p>
+          <p className="text-lg font-extrabold text-sky-900">
+            {score}/{winScore}
+          </p>
+        </div>
+      </div>
+
+      {/* Top bar: lives + streak feedback */}
       <div className="flex items-center justify-between w-full">
         <div
           className="flex gap-0.5 text-xl"
@@ -94,32 +146,58 @@ export default function QuizEngine({
             </span>
           ))}
         </div>
+
         <AnimatePresence mode="wait">
           {streak >= 2 && (
             <motion.div
               key={streak}
-              initial={{ scale: 0.5, opacity: 0 }}
+              initial={{ scale: 0.6, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.5, opacity: 0 }}
+              exit={{ scale: 0.6, opacity: 0 }}
               className="flex items-center gap-1 bg-orange-100 text-orange-700 font-bold rounded-full px-3 py-1 text-sm"
             >
               🔥 {streak} in a row!
             </motion.div>
           )}
         </AnimatePresence>
+
         <div className="text-sm font-semibold text-gray-500">
-          {score} / {winScore}
+          Best: {bestStreak}
         </div>
       </div>
 
-      {/* Progress bar */}
-      <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
-        <motion.div
-          className="h-full bg-emerald-500 rounded-full"
-          initial={{ width: 0 }}
-          animate={{ width: `${progressPercent}%` }}
-          transition={{ type: "spring", stiffness: 100, damping: 15 }}
-        />
+      {/* Goal progress */}
+      <div className="w-full">
+        <div className="flex justify-between text-xs font-semibold text-gray-500 mb-1">
+          <span>Round progress</span>
+          <span>{progressPercent}%</span>
+        </div>
+        <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+          <motion.div
+            className="h-full bg-emerald-500 rounded-full"
+            initial={{ width: 0 }}
+            animate={{ width: `${progressPercent}%` }}
+            transition={{ type: "spring", stiffness: 100, damping: 15 }}
+          />
+        </div>
+      </div>
+
+      {/* XP progress */}
+      <div className="w-full">
+        <div className="flex justify-between text-xs font-semibold text-violet-600 mb-1">
+          <span>XP to Level {level + 1}</span>
+          <span>
+            {xp}/{xpToNext}
+          </span>
+        </div>
+        <div className="w-full bg-violet-100 rounded-full h-2.5 overflow-hidden">
+          <motion.div
+            className="h-full bg-violet-500 rounded-full"
+            initial={{ width: 0 }}
+            animate={{ width: `${xpPercent}%` }}
+            transition={{ type: "spring", stiffness: 120, damping: 18 }}
+          />
+        </div>
       </div>
 
       {/* Question image/text */}
@@ -142,11 +220,30 @@ export default function QuizEngine({
                 width={148}
                 height={148}
                 alt="answer"
-                className="object-contain drop-shadow-lg max-h-[148px] w-auto"
+                className={`object-contain drop-shadow-lg max-h-[148px] w-auto ${streak >= 3 ? "animate-pulse" : ""}`}
               />
             )}
           </motion.div>
         )}
+
+        <AnimatePresence>
+          {lastAnswerCorrect !== null && lastPointsDelta !== 0 && (
+            <motion.div
+              key={`${correctAnswer[idKey]}-${lastPointsDelta}`}
+              initial={{ y: 10, opacity: 0, scale: 0.9 }}
+              animate={{ y: -8, opacity: 1, scale: 1 }}
+              exit={{ y: -20, opacity: 0 }}
+              className={`absolute top-1 right-2 text-sm font-extrabold px-2 py-1 rounded-full ${
+                lastAnswerCorrect
+                  ? "bg-emerald-100 text-emerald-700"
+                  : "bg-red-100 text-red-700"
+              }`}
+            >
+              {lastPointsDelta > 0 ? `+${lastPointsDelta}` : lastPointsDelta}{" "}
+              pts
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       {/* Answer buttons - 2x2 grid */}

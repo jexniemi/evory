@@ -13,6 +13,12 @@ interface State {
   disableButtons: boolean;
   streak: number;
   bestStreak: number;
+  level: number;
+  xp: number;
+  xpToNext: number;
+  totalPoints: number;
+  lastPointsDelta: number;
+  lastAnswerCorrect: boolean | null;
 }
 
 const initialState: State = {
@@ -25,7 +31,15 @@ const initialState: State = {
   disableButtons: false,
   streak: 0,
   bestStreak: 0,
+  level: 1,
+  xp: 0,
+  xpToNext: 300,
+  totalPoints: 0,
+  lastPointsDelta: 0,
+  lastAnswerCorrect: null,
 };
+
+const getXpToNext = (level: number) => 300 + (level - 1) * 120;
 
 function reducer(
   state: typeof initialState,
@@ -38,22 +52,44 @@ function reducer(
       return { ...state, ...payload };
     case "correct_answer": {
       const newStreak = state.streak + 1;
+      const pointsGained = 100 + Math.min(newStreak * 20, 140);
+      let nextLevel = state.level;
+      let nextXp = state.xp + Math.round(pointsGained * 0.6);
+      let nextXpToNext = state.xpToNext;
+
+      while (nextXp >= nextXpToNext) {
+        nextXp -= nextXpToNext;
+        nextLevel += 1;
+        nextXpToNext = getXpToNext(nextLevel);
+      }
+
       return {
         ...state,
         revealAnswer: true,
         score: state.score + 1,
         streak: newStreak,
         bestStreak: Math.max(state.bestStreak, newStreak),
+        level: nextLevel,
+        xp: nextXp,
+        xpToNext: nextXpToNext,
+        totalPoints: state.totalPoints + pointsGained,
+        lastPointsDelta: pointsGained,
+        lastAnswerCorrect: true,
       };
     }
-    case "false_answer":
+    case "false_answer": {
+      const pointsLost = Math.min(60, state.totalPoints);
       return {
         ...state,
         revealAnswer: true,
         negativeScore: state.negativeScore + 1,
         chosenAnswer: payload,
         streak: 0,
+        totalPoints: Math.max(0, state.totalPoints - pointsLost),
+        lastPointsDelta: -pointsLost,
+        lastAnswerCorrect: false,
       };
+    }
     case "reset":
       return { ...initialState, correctAnswer: state.correctAnswer };
     default:
@@ -128,6 +164,8 @@ export default function UseGame({
           revealAnswer: false,
           chosenAnswer: "",
           disableButtons: false,
+          lastPointsDelta: 0,
+          lastAnswerCorrect: null,
           ...buildNewRound(),
         });
       }, 1200);

@@ -8,6 +8,8 @@ interface Props {
   reset: () => void;
   winCondition: number;
   bestStreak: number;
+  level: number;
+  totalPoints: number;
 }
 
 export default function GameEndModal({
@@ -16,6 +18,8 @@ export default function GameEndModal({
   reset,
   winCondition,
   bestStreak,
+  level,
+  totalPoints,
 }: Props) {
   const win = gameStatus === GameStatus.Win;
 
@@ -42,6 +46,11 @@ export default function GameEndModal({
         <p className="text-gray-600">
           Your score: <span className="font-bold text-gray-900">{score}</span> /{" "}
           {winCondition}
+        </p>
+        <p className="text-gray-600 mt-1">
+          Level: <span className="font-bold text-violet-700">{level}</span> ·
+          Points:{" "}
+          <span className="font-bold text-emerald-700">{totalPoints}</span>
         </p>
         {bestStreak >= 2 && (
           <p className="text-orange-600 font-semibold mt-1">
