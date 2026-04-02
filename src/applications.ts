@@ -573,36 +573,6 @@ const applications = {
           "Find out the number of days in months, browse calendars, and check leap years.",
       },
       {
-        route: "flag-game",
-        displayName: "Flag Game",
-        shortDescription:
-          "In the flag game, guess country names using flags. Test your knowledge!",
-      },
-      {
-        route: "military-insignia-quiz",
-        displayName: "Military Insignia Quiz",
-        shortDescription:
-          "Do you know military insignia? Show your knowledge in this quiz.",
-      },
-      {
-        route: "us-state-capitals-quiz",
-        displayName: "U.S. State Capitals Quiz",
-        shortDescription:
-          "Guess the capital city of each U.S. state in a fast 4-option quiz.",
-      },
-      {
-        route: "world-capitals-quiz",
-        displayName: "World Capitals Quiz",
-        shortDescription:
-          "Match capital cities to countries and improve your global geography skills.",
-      },
-      {
-        route: "us-presidents-quiz",
-        displayName: "U.S. Presidents Quiz",
-        shortDescription:
-          "Test your U.S. history knowledge with president clues and multiple-choice answers.",
-      },
-      {
         route: "dice-generator",
         displayName: "Dice Generator",
         shortDescription:
@@ -654,6 +624,43 @@ const applications = {
         displayName: "Baby Name Generator",
         shortDescription:
           "Generate popular American baby names by gender and starting letter.",
+      },
+    ],
+  },
+  Quizzes: {
+    backgroundColor: "",
+    color: "",
+    path: "/quizzes",
+    apps: [
+      {
+        route: "flag-game",
+        displayName: "Flag Game",
+        shortDescription:
+          "In the flag game, guess country names using flags. Test your knowledge!",
+      },
+      {
+        route: "military-insignia-quiz",
+        displayName: "Military Insignia Quiz",
+        shortDescription:
+          "Identify U.S. Army rank insignia in a visual multiple-choice challenge.",
+      },
+      {
+        route: "us-state-capitals-quiz",
+        displayName: "U.S. State Capitals Quiz",
+        shortDescription:
+          "Guess the capital city of each U.S. state in a fast 4-option quiz.",
+      },
+      {
+        route: "world-capitals-quiz",
+        displayName: "World Capitals Quiz",
+        shortDescription:
+          "Match capital cities to countries and improve your global geography skills.",
+      },
+      {
+        route: "us-presidents-quiz",
+        displayName: "U.S. Presidents Quiz",
+        shortDescription:
+          "Test your U.S. history knowledge with president clues and multiple-choice answers.",
       },
     ],
   },

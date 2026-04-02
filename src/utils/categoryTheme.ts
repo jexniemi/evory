@@ -65,6 +65,15 @@ export const categoryThemes: Record<string, CategoryTheme> = {
     badge: "bg-violet-100 text-violet-700",
     text: "text-violet-600",
   },
+  Quizzes: {
+    icon: "🧠",
+    accent: "border-l-indigo-400",
+    bg: "bg-indigo-50",
+    hoverBorder: "hover:border-indigo-400",
+    decoration: "decoration-indigo-400",
+    badge: "bg-indigo-100 text-indigo-700",
+    text: "text-indigo-600",
+  },
 };
 
 const defaultTheme: CategoryTheme = {
