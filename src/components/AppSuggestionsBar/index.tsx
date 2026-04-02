@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { getRandomApps } from "../../applications";
 import { Application } from "@/types/types";
@@ -54,9 +54,13 @@ const appIcons: Record<string, string> = {
 
 export default function AppSuggestionBar() {
   const path = usePathname();
-  const appSuggestions = useMemo(() => getRandomApps(path, 3), [path]);
+  const [appSuggestions, setAppSuggestions] = useState<Application[]>([]);
 
-  if (path === "/") {
+  useEffect(() => {
+    setAppSuggestions(getRandomApps(path, 3));
+  }, [path]);
+
+  if (path === "/" || appSuggestions.length === 0) {
     return null;
   }
 
