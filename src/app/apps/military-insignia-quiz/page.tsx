@@ -1,4 +1,4 @@
-import data from "@/data/sotilasmerkit";
+import data from "@/data/usArmyRanks";
 import QuizEngine from "@/components/common/QuizEngine";
 import Page from "@/components/Page";
 import { Metadata } from "next";
@@ -8,19 +8,25 @@ import { generateAppMetadata } from "@/utils/seo";
 export default function ArmyQuiz() {
   return (
     <Page {...pageProps}>
-      <QuizEngine quizOptions={data} idKey="name" imgPath="/sotilasmerkit/" />
+      <QuizEngine
+        quizOptions={data}
+        idKey="slug"
+        displayNameKey="name"
+        imgPath="/quiz/us-army-ranks/"
+        imgType=".svg"
+      />
     </Page>
   );
 }
 
 const pageProps = {
   route: "military-insignia-quiz",
-  title: "Army Military Ranks Quiz",
-  seoTitle: "Military Ranks Quiz – Identify Finnish Army insignia",
+  title: "U.S. Army Rank Insignia Quiz",
+  seoTitle: "U.S. Army Rank Insignia Quiz – Identify Real Army Rank Badges",
   description:
-    "Do you know the Finnish Army military ranks? In the quiz, you see an insignia image and choose the correct military rank from four options. Includes all 21 ranks from private to general.",
+    "Test your knowledge of U.S. Army rank insignia. Identify real official rank badges across enlisted, warrant officer, and officer ranks.",
   instructions:
-    "Identify the military rank based on the insignia. You have 3 lives — guess 10 correctly to win!",
+    "Identify the U.S. Army rank based on the insignia. You have 3 lives — guess 10 correctly to win!",
   Info,
 };
 
