@@ -12,12 +12,12 @@ export const isMobile = () => {
   }
 
   return width < 1000;
-}
+};
 
 export const getAppIconPath = (appRoute: string) => {
-  return "/icons/" + appRoute + ".png"
-}
+  return "/icons/" + appRoute + ".png";
+};
 
 export function getAppRoute(metaUrl: string): string {
-  return new URL(metaUrl).pathname.split('/').slice(-2)[0];
+  return new URL(metaUrl).pathname.split("/").slice(-2)[0];
 }

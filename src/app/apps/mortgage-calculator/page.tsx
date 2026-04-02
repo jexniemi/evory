@@ -5,7 +5,6 @@ import Info from "./info.mdx";
 import { generateAppMetadata } from "@/utils/seo";
 import { getAppRoute } from "@/utils";
 
-
 export default function MortgageCalculatorPage() {
   return (
     <App {...pageProps}>
