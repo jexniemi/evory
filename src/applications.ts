@@ -662,6 +662,24 @@ const applications = {
         shortDescription:
           "Test your U.S. history knowledge with president clues and multiple-choice answers.",
       },
+      {
+        route: "car-logos-quiz",
+        displayName: "Car Logos Quiz",
+        shortDescription:
+          "Identify 16 famous car brand logos in this visual automotive quiz.",
+      },
+      {
+        route: "planets-quiz",
+        displayName: "Planets & Space Quiz",
+        shortDescription:
+          "Identify planets and solar system bodies from real NASA photographs.",
+      },
+      {
+        route: "famous-paintings-quiz",
+        displayName: "Famous Paintings Quiz",
+        shortDescription:
+          "Look at a masterpiece and name the artist in this art history quiz.",
+      },
     ],
   },
 } satisfies ApplicationsJSON;

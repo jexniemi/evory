@@ -1,3 +1,7 @@
+# Rules
+
+- Tables in info.mdx should always be written with html tags
+
 # SEO Rules
 
 1. **Every page needs 600–900+ words of unique content** in its info.mdx. Thin pages don't rank.
