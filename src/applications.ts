@@ -585,6 +585,24 @@ const applications = {
           "Do you know military insignia? Show your knowledge in this quiz.",
       },
       {
+        route: "us-state-capitals-quiz",
+        displayName: "U.S. State Capitals Quiz",
+        shortDescription:
+          "Guess the capital city of each U.S. state in a fast 4-option quiz.",
+      },
+      {
+        route: "world-capitals-quiz",
+        displayName: "World Capitals Quiz",
+        shortDescription:
+          "Match capital cities to countries and improve your global geography skills.",
+      },
+      {
+        route: "us-presidents-quiz",
+        displayName: "U.S. Presidents Quiz",
+        shortDescription:
+          "Test your U.S. history knowledge with president clues and multiple-choice answers.",
+      },
+      {
         route: "dice-generator",
         displayName: "Dice Generator",
         shortDescription:
