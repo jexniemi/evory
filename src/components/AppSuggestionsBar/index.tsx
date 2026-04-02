@@ -3,58 +3,14 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { getRandomApps } from "../../applications";
-import { Application } from "@/types/types";
+import { App } from "@/types/types";
 import MiddleColumn from "@/components/common/MiddleColumn";
 import Link from "next/link";
 
-const appIcons: Record<string, string> = {
-  kuukausipalkkalaskuri: "💵",
-  tuntipalkkalaskuri: "⏱️",
-  vuosipalkkalaskuri: "📅",
-  opintolainahyvityslaskuri: "🎓",
-  "korkoa-korolle-laskuri": "📈",
-  "sahkoauton-matkakululaskuri": "🔋",
-  bensakululaskuri: "⛽",
-  alennuslaskuri: "🏷️",
-  osamaksulaskuri: "💳",
-  tippilaskuri: "🍽️",
-  "alv-laskuri": "🧾",
-  "lainan-lyhennyslaskuri": "🏦",
-  "veroprosentti-laskuri": "📊",
-  "sijoitustuoton-laskuri": "💹",
-  "yksinkertainen-korkoa-korolle-laskuri": "🔄",
-  perusaineenvaihduntalaskuri: "🔥",
-  kalorintarvelaskuri: "🥗",
-  "lentojen-hiilijalanjalkilaskuri": "✈️",
-  juoksuvauhtilaskuri: "🏃",
-  "bmi-laskuri": "⚖️",
-  "unen-tarve-laskuri": "😴",
-  "paivittainen-kalorintarve-laskuri": "🍎",
-  "opintojen-keskiarvolaskuri": "📚",
-  "qr-generaattori": "📱",
-  nimipaivahakukone: "🗓️",
-  sanalaskuri: "✍️",
-  ajokustannuslaskuri: "🚗",
-  "sahkolaskun-laskuri": "💡",
-  "nimikone/koirat": "🐕",
-  "nimikone/kissat": "🐈",
-  kesalomalaskuri: "☀️",
-  joululaskuri: "🎄",
-  kuukausikone: "📆",
-  lippupeli: "🏁",
-  sotilasmerkit: "⭐",
-  "vyotaisyrja-laskuri": "📏",
-  nettopalkkalaskuri: "💰",
-  "saastotavoite-laskuri": "🎯",
-  "neliohinta-laskuri": "🏘️",
-  "vesitarve-laskuri": "💧",
-  "ika-laskuri": "🎂",
-  noppageneraattori: "🎲",
-};
 
 export default function AppSuggestionBar() {
   const path = usePathname();
-  const [appSuggestions, setAppSuggestions] = useState<Application[]>([]);
+  const [appSuggestions, setAppSuggestions] = useState<App[]>([]);
 
   useEffect(() => {
     setAppSuggestions(getRandomApps(path, 3));
@@ -79,7 +35,7 @@ export default function AppSuggestionBar() {
               className="group relative flex flex-col items-center text-center rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-200 hover:shadow-lg hover:-translate-y-1 hover:border-main"
             >
               <span className="text-4xl mb-3">
-                {appIcons[application.route] ?? "🔧"}
+                {application.emoji ?? "🔧"}
               </span>
               <h3 className="text-base font-bold text-gray-900 group-hover:text-main transition-colors">
                 {application.displayName}
