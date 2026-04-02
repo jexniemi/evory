@@ -1,0 +1,107 @@
+import FAQ from "@/components/FAQ"
+
+## How the Tip Splitter Works
+
+Splitting a restaurant bill is a common source of mental arithmetic at the dinner table. This tip splitter calculates the total tip, adds it to the bill, and divides the result equally among however many people are in your group. Enter the pre-tax bill amount, choose a tip percentage, and set the number of diners to see instantly what everyone owes.
+
+### Tip Calculation Formulas
+
+> **Tip Amount = Bill × (Tip% ÷ 100)**
+>
+> **Total Bill = Bill + Tip Amount**
+>
+> **Per Person = Total Bill ÷ Number of People**
+>
+> **Tip Per Person = Tip Amount ÷ Number of People**
+
+### Worked Example
+
+Dinner for 5 people, bill is **$120**, tip is **20%**:
+
+- Tip Amount: $120 × 0.20 = **$24**
+- Total Bill: $120 + $24 = **$144**
+- Per Person: $144 ÷ 5 = **$28.80**
+- Tip Per Person: $24 ÷ 5 = **$4.80**
+
+Each person pays $28.80, which includes $24 of food/drink and $4.80 tip.
+
+## How Much Should You Tip?
+
+Tipping customs vary by country and service type. In the United States, tipping is customary and forms a significant portion of service workers' income. Here are standard US tipping guidelines:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Service Type</th>
+      <th>Typical Tip</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Full-service restaurant</td><td>15–20%</td><td>20% is now considered standard</td></tr>
+    <tr><td>Excellent service</td><td>20–25%</td><td>For truly exceptional experiences</td></tr>
+    <tr><td>Bar/drinks only</td><td>$1–$2 per drink or 15–20%</td><td>More for complex cocktails</td></tr>
+    <tr><td>Food delivery</td><td>10–15% (minimum $3–$5)</td><td>More in bad weather or long distances</td></tr>
+    <tr><td>Takeout order</td><td>Optional, 5–10%</td><td>Appreciated but not required</td></tr>
+    <tr><td>Hotel housekeeping</td><td>$3–$5 per night</td><td>Leave daily, not just at checkout</td></tr>
+    <tr><td>Hair salon</td><td>15–20%</td><td>Tip each person who served you</td></tr>
+    <tr><td>Taxi / rideshare</td><td>15–20%</td><td>Minimum $1–$2</td></tr>
+  </tbody>
+</table>
+
+## Tipping on Tax vs. Pre-Tax Amount
+
+There is an ongoing debate about whether to tip on the pre-tax or post-tax total. Both practices are acceptable:
+
+- **Tip on pre-tax amount:** Mathematically correct, saves a small amount
+- **Tip on post-tax total:** Simpler, more common, slightly more generous
+
+On a $100 pre-tax bill with 10% tax, the difference is only $1.50 on a 15% tip — a negligible amount that is not worth worrying about. Choose whichever is simpler.
+
+## The Mental Math Shortcut for Tipping
+
+When you do not have a calculator, use these quick mental math techniques:
+
+- **20% tip:** Move the decimal one place left (10%), then double it
+  - $87 bill → 10% = $8.70 → 20% = $17.40
+- **15% tip:** Find 10%, then add half of 10%
+  - $87 bill → 10% = $8.70 → 5% = $4.35 → 15% = $13.05
+- **18% tip:** Find 20% then subtract 10% of the tip
+  - $87 bill → 20% = $17.40 → 18% ≈ $17.40 − $1.74 = $15.66
+
+## Tipping Etiquette for Groups
+
+When dining in a large group, restaurants often add an automatic gratuity (usually 18–20%) for parties of 6 or more. Always check your bill before adding an additional tip — double-tipping is an easy mistake when the auto-gratuity is printed in small text. If service was exceptional despite the auto-gratuity, an additional cash tip is always appreciated.
+
+## International Tipping Customs
+
+Tipping norms vary dramatically around the world. While 15–20% is expected in the US, other countries have very different customs:
+
+- **Japan:** Tipping is considered rude and may be refused
+- **France, Italy, Germany:** Rounding up or leaving 5–10% is common; 20% is unusual
+- **Australia, New Zealand:** Tips are appreciated but not expected (servers earn a living wage)
+- **Mexico:** 10–15% is customary
+- **UK:** 10–12.5% in restaurants; service charges are often added automatically
+
+<FAQ items={[
+  { q: "Should I tip on the total bill including tax?", a: "You can tip on either the pre-tax or post-tax amount. Most people tip on the total bill for simplicity. On a typical restaurant bill, the difference between the two methods is only a few dollars." },
+  { q: "How do I split a bill when people ordered different amounts?", a: "This calculator splits the bill evenly. For unequal splits, note each person's individual subtotal, calculate tip proportionally (or divide equally), and pay accordingly. Several apps like Splitwise can handle complex unequal splits." },
+  { q: "Do I tip if service was bad?", a: "In the US, tipping is customary regardless of service quality, since servers rely on tips for income. For genuinely poor service, 10% is a signal that something was wrong. Speak to a manager if the experience was truly unacceptable." },
+  { q: "Is 15% still an acceptable tip?", a: "15% was the standard for decades but is increasingly considered below average in the United States. Most hospitality workers now consider 18–20% the baseline, with 20%+ for good service. 15% may be interpreted as dissatisfaction." },
+  { q: "Should I tip on alcohol?", a: "Yes. Tip on the full bill including alcohol. Cocktails and wine require skill and time to prepare and serve. Some diners tip at least $1–$2 per drink for simple bar service, which often exceeds the percentage method." },
+]} />
+
+## Related Tools
+
+- [Tip Calculator](/apps/tip-calculator) — Quick tip calculation for a single person
+- [Discount Calculator](/apps/discount-calculator) — Calculate discounted prices
+- [Sales Tax Calculator](/apps/sales-tax-calculator) — Add sales tax to any purchase
+- [Percentage Calculator](/apps/percentage-calculator) — General percentage calculations
+- [Budget Calculator](/apps/budget-calculator) — Track dining expenses in your monthly budget
+
+## Sources
+
+- U.S. Bureau of Labor Statistics: [Food Service Workers](https://www.bls.gov/ooh/food-preparation-and-serving/)
+- Consumer Reports: [Tipping Guide](https://www.consumerreports.org/)
+- Emily Post Institute: [Tipping Etiquette](https://emilypost.com/advice/tipping-guidelines)
+- National Restaurant Association: [Restaurant Industry Facts](https://restaurant.org/)

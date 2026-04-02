@@ -1,0 +1,104 @@
+import FAQ from "@/components/FAQ"
+
+## How the Mortgage Refinance Calculator Works
+
+Refinancing your mortgage means replacing your current loan with a new one — typically to get a lower interest rate, reduce your monthly payment, or change your loan term. This calculator shows you the three most important numbers: monthly savings, break-even point, and net savings after five years. If you plan to stay in your home longer than the break-even period, refinancing is likely financially beneficial.
+
+### Refinance Formulas
+
+> **Monthly Savings = Current Payment − New Payment**
+>
+> **Break-Even Months = Closing Costs ÷ Monthly Savings**
+>
+> **5-Year Net Savings = (Monthly Savings × 60) − Closing Costs**
+
+### Worked Example
+
+- Current monthly payment: **$2,100**
+- New monthly payment after refinancing: **$1,780**
+- Closing costs: **$5,400**
+
+Results:
+- Monthly Savings: $2,100 − $1,780 = **$320/month**
+- Break-Even: $5,400 ÷ $320 = **16.9 months (~17 months)**
+- 5-Year Net Savings: ($320 × 60) − $5,400 = **$13,800**
+
+If you plan to stay in your home for at least 17 months, this refinance saves you money. After 5 years, you are ahead by nearly $14,000.
+
+## When Does Refinancing Make Sense?
+
+The classic guideline is to refinance if you can reduce your interest rate by at least 1%. However, the real question is whether the monthly savings justify the closing costs within your planned time horizon in the home.
+
+### Typical Refinance Closing Costs
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Cost Item</th>
+      <th>Typical Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Origination fees</td><td>0.5–1% of loan amount</td></tr>
+    <tr><td>Appraisal fee</td><td>$300–$600</td></tr>
+    <tr><td>Title insurance</td><td>$700–$2,000</td></tr>
+    <tr><td>Recording fees</td><td>$25–$250</td></tr>
+    <tr><td>Credit check</td><td>$25–$50</td></tr>
+    <tr><td>Total (typical)</td><td>$2,000–$6,000</td></tr>
+  </tbody>
+</table>
+
+Some lenders offer "no-closing-cost" refinancing, which rolls costs into the loan balance or compensates with a slightly higher rate. This can be smart if you plan to sell or refinance again within a few years.
+
+### Rate-and-Term vs. Cash-Out Refinance
+
+**Rate-and-term refinancing** changes your interest rate and/or loan term without extracting equity. This is the most common type, used to lower monthly payments or shorten the payoff timeline.
+
+**Cash-out refinancing** replaces your mortgage with a larger loan and gives you the difference as cash. Homeowners use this to fund home improvements, consolidate debt, or cover major expenses. Cash-out refinances typically come with slightly higher rates and reset your amortization clock.
+
+### How Interest Rates Affect the Decision
+
+Even a 0.5% rate reduction can mean significant savings over the life of a 30-year loan. On a $300,000 balance:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Rate Change</th>
+      <th>Monthly Savings</th>
+      <th>10-Year Savings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>From 7.0% to 6.5%</td><td>approx. $102/month</td><td>approx. $12,240</td></tr>
+    <tr><td>From 7.0% to 6.0%</td><td>approx. $204/month</td><td>approx. $24,480</td></tr>
+    <tr><td>From 7.0% to 5.5%</td><td>approx. $308/month</td><td>approx. $36,960</td></tr>
+    <tr><td>From 7.0% to 5.0%</td><td>approx. $412/month</td><td>approx. $49,440</td></tr>
+  </tbody>
+</table>
+
+### Shortening the Loan Term
+
+Refinancing from a 30-year to a 15-year mortgage dramatically reduces total interest paid — sometimes by $100,000 or more — though it raises the monthly payment. Many homeowners choose a 20-year refinance as a middle ground, balancing payment affordability with faster equity building.
+
+<FAQ items={[
+  { q: "How much does it cost to refinance a mortgage?", a: "Closing costs typically run 2–5% of the loan amount, or roughly $4,000–$10,000 on a $200,000 balance. Some no-closing-cost options exist but usually come with a higher rate." },
+  { q: "What is a good break-even period?", a: "A break-even of 24 months or less is generally considered excellent. If you plan to stay in your home at least that long, refinancing makes strong financial sense." },
+  { q: "Should I refinance to a 15-year or 30-year loan?", a: "A 15-year loan saves far more in interest but has higher monthly payments. Refinancing to a 30-year loan at a lower rate reduces payments but may not save as much interest if the term resets. Compare the total interest paid in each scenario." },
+  { q: "Does refinancing hurt my credit score?", a: "Yes, temporarily. A refinance triggers a hard credit inquiry (which drops your score 5–10 points) and creates a new account (which reduces average account age). Most borrowers see their score fully recover within 6–12 months." },
+  { q: "When is refinancing a bad idea?", a: "If you plan to move within the break-even period, the closing costs will not be recouped. Also, if you are near the end of your loan term, most of your payments are already going to principal — refinancing resets the amortization and increases early interest payments." },
+]} />
+
+## Related Tools
+
+- [Mortgage Calculator](/apps/mortgage-calculator) — Calculate monthly payment for a new mortgage
+- [Loan Repayment Calculator](/apps/loan-repayment-calculator) — Understand amortization and total interest
+- [Break-Even Calculator](/apps/break-even-calculator) — General break-even analysis
+- [Down Payment Calculator](/apps/down-payment-calculator) — Plan your home purchase down payment
+- [Compound Interest Calculator](/apps/compound-interest-calculator) — See how freed-up cash can grow if invested
+
+## Sources
+
+- Consumer Financial Protection Bureau: [Should I Refinance?](https://www.consumerfinance.gov/ask-cfpb/how-do-i-decide-if-i-should-refinance-my-home-mortgage-en-180/)
+- Freddie Mac: [Refinancing a Mortgage](https://myhome.freddiemac.com/owning/refinancing.html)
+- Investopedia: [Mortgage Refinance](https://www.investopedia.com/mortgage/refinance/)
+- HUD: [Home Equity and Refinancing](https://www.hud.gov/topics/avoiding_foreclosure/refinancingyourhome)

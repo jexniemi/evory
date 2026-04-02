@@ -1,0 +1,114 @@
+import FAQ from "@/components/FAQ"
+
+## How the Wallpaper Calculator Works
+
+Estimating wallpaper correctly prevents costly shortages and wasteful overbuying. This calculator uses your room dimensions — length, width, ceiling height, and the number of doors and windows — to calculate the net wall area, then adds 10% for pattern matching waste, and divides by the coverage of a standard roll to give you the final roll count.
+
+### Wallpaper Calculation Formulas
+
+> **Perimeter = 2 × (Length + Width)**
+>
+> **Total Wall Area = Perimeter × Ceiling Height**
+>
+> **Net Area = Total Wall Area − (Doors × 21 ft²) − (Windows × 15 ft²)**
+>
+> **Rolls Needed = (Net Area × 1.10) ÷ 57**
+
+This calculation uses a standard door area of 21 sq ft (3 ft × 7 ft) and a standard window area of 15 sq ft (3 ft × 5 ft). A standard US double roll covers approximately 57 square feet after trimming.
+
+### Worked Example
+
+Room: 15 ft × 12 ft, 9 ft ceiling, 1 door, 2 windows
+
+- Perimeter: 2 × (15 + 12) = **54 linear feet**
+- Total Wall Area: 54 × 9 = **486 sq ft**
+- Deductions: 1 door (21) + 2 windows (30) = **51 sq ft**
+- Net Area: 486 − 51 = **435 sq ft**
+- With 10% waste: 435 × 1.10 = **478.5 sq ft**
+- Rolls: 478.5 ÷ 57 = **8.4 → 9 rolls**
+
+Always round up to whole rolls and add at least one extra roll for future repairs and touch-ups.
+
+## Understanding Wallpaper Roll Sizes
+
+Wallpaper rolls come in different sizes depending on manufacturer and country of origin. In the United States, wallpaper is typically sold in double rolls. In Europe, single rolls are common. Always check the roll coverage on the label before purchasing.
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Roll Type</th>
+      <th>Width</th>
+      <th>Length</th>
+      <th>Coverage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>US Single Roll</td><td>20.5–27 inches</td><td>varies</td><td>28–35 sq ft</td></tr>
+    <tr><td>US Double Roll</td><td>20.5–27 inches</td><td>varies</td><td>57–72 sq ft</td></tr>
+    <tr><td>European Roll</td><td>20–21 inches</td><td>16.5–33 feet</td><td>27–57 sq ft</td></tr>
+    <tr><td>Bolt (commercial)</td><td>27–54 inches</td><td>30 yards</td><td>270+ sq ft</td></tr>
+  </tbody>
+</table>
+
+## Pattern Repeat and Extra Waste
+
+If your wallpaper has a repeating pattern, you will need extra material to align the pattern at seams. Pattern repeats are labeled on the roll. A large pattern repeat of 18–24 inches can add 15–25% to your material needs:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Pattern Repeat</th>
+      <th>Extra Waste</th>
+      <th>Adjustment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>No repeat (solid, texture)</td><td>0–5%</td><td>Use our standard 10% estimate</td></tr>
+    <tr><td>Small repeat (under 6 inches)</td><td>5–10%</td><td>Add 1 extra roll</td></tr>
+    <tr><td>Medium repeat (6–18 inches)</td><td>10–15%</td><td>Add 1–2 extra rolls</td></tr>
+    <tr><td>Large repeat (over 18 inches)</td><td>15–25%</td><td>Add 2–3 extra rolls</td></tr>
+    <tr><td>Drop match pattern</td><td>25–30%</td><td>Consult manufacturer guidance</td></tr>
+  </tbody>
+</table>
+
+## Types of Wallpaper
+
+Modern wallpaper comes in many materials, each with different installation requirements:
+
+- **Vinyl-coated:** Durable, washable, the most common residential choice
+- **Peel-and-stick:** Easy to apply and remove, ideal for renters
+- **Grasscloth:** Natural fiber, textured look, not washable
+- **Fabric-backed vinyl:** Commercial-grade, extremely durable
+- **Traditional paper:** Classic look, requires wheat paste, harder to work with
+- **Non-woven (fleece):** Easy to hang and remove, good for beginners
+
+## Professional Installation Tips
+
+- Always prepare walls properly: fill holes, sand, prime with wallpaper primer
+- Use a level and chalk line to start with a plumb vertical line
+- Pre-cut strips and allow paste to soak in according to product instructions
+- Work seams carefully — butt joints are less visible than overlapping
+- Use a seam roller to ensure edges lie flat and secure
+
+<FAQ items={[
+  { q: "How many rolls of wallpaper do I need for a 10x12 room?", a: "A 10 ft × 12 ft room with 8-foot ceilings, 1 door, and 2 windows requires approximately 7 standard double rolls of wallpaper. Add one extra roll for waste and pattern matching." },
+  { q: "Should I buy extra wallpaper?", a: "Yes, always buy 1–2 extra rolls from the same dye lot. Dye lots can vary between print runs, so rolls from different batches may not match perfectly. Extra rolls are essential for future repairs." },
+  { q: "What is a dye lot and why does it matter?", a: "Wallpaper is printed in batches called dye lots. Rolls from different dye lots may have slight color differences that are invisible on the roll but visible on the wall. Always buy all needed rolls from the same dye lot." },
+  { q: "Can I wallpaper over existing wallpaper?", a: "Technically yes, but it is not recommended. Old wallpaper may have bubbles or loose sections that create problems. For best results, remove old wallpaper, repair the wall, prime, and then install new wallpaper." },
+  { q: "How long does wallpaper installation take?", a: "An average room takes 4–8 hours for a DIY installer and 2–4 hours for a professional. Complex patterns, difficult wall conditions, or rooms with many obstacles increase installation time significantly." },
+]} />
+
+## Related Tools
+
+- [Paint Calculator](/apps/paint-calculator) — Estimate paint needed for the same room
+- [Square Footage Calculator](/apps/square-footage-calculator) — Calculate floor or wall area
+- [Concrete Calculator](/apps/concrete-calculator) — Estimate concrete for home projects
+- [Fence Calculator](/apps/fence-calculator) — Calculate fencing materials for outdoor areas
+- [Area Converter](/apps/area-converter) — Convert between square feet, meters, and other units
+
+## Sources
+
+- Wallcoverings Association: [Installation Guide](https://www.wallcoverings.org/)
+- This Old House: [How to Hang Wallpaper](https://www.thisoldhouse.com/walls/21017413/how-to-hang-wallpaper)
+- HGTV: [Wallpaper Calculator](https://www.hgtv.com/design/rooms/living-and-dining-rooms/how-to-estimate-wallpaper)
+- Fine Homebuilding: [Wallpaper Tips](https://www.finehomebuilding.com/)

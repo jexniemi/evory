@@ -1,0 +1,113 @@
+import FAQ from "@/components/FAQ"
+
+## How the Concrete Calculator Works
+
+This concrete calculator estimates how much concrete you need for a rectangular slab, footing, or pour. Enter the length, width, and thickness of your project and get the volume in both cubic feet and cubic yards, plus the number of 60-pound and 80-pound bags of premix concrete required. Adding 10% extra is always recommended to account for spillage, uneven ground, and waste.
+
+### Concrete Volume Formulas
+
+> **Volume (cubic feet) = Length × Width × (Thickness ÷ 12)**
+>
+> **Volume (cubic yards) = Volume (cubic feet) ÷ 27**
+>
+> **60-lb bags = Volume (ft³) ÷ 0.45**
+>
+> **80-lb bags = Volume (ft³) ÷ 0.60**
+
+One 60-pound bag of Quikrete or Sakrete yields approximately 0.45 cubic feet of mixed concrete. One 80-pound bag yields approximately 0.60 cubic feet.
+
+### Worked Example
+
+You need to pour a 12 ft × 14 ft patio at 4 inches thick:
+
+- Thickness in feet: 4 ÷ 12 = **0.333 ft**
+- Volume: 12 × 14 × 0.333 = **55.9 cubic feet**
+- Cubic yards: 55.9 ÷ 27 = **2.07 cubic yards**
+- 60-lb bags: 55.9 ÷ 0.45 = **124 bags** (round up)
+- 80-lb bags: 55.9 ÷ 0.60 = **94 bags** (round up)
+
+For a project of this size, ordering ready-mix concrete by the cubic yard from a concrete truck is usually more cost-effective and practical than hand-mixing bags.
+
+## Common Concrete Thickness Guidelines
+
+The right thickness depends on the application and expected load:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Application</th>
+      <th>Recommended Thickness</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Sidewalk / walkway</td><td>4 inches</td><td>Residential foot traffic</td></tr>
+    <tr><td>Patio slab</td><td>4 inches</td><td>Standard residential use</td></tr>
+    <tr><td>Driveway (passenger cars)</td><td>4 inches</td><td>Minimum for vehicles</td></tr>
+    <tr><td>Driveway (heavy trucks)</td><td>6 inches</td><td>Pickup trucks, RVs</td></tr>
+    <tr><td>Garage floor</td><td>4–6 inches</td><td>Add rebar for heavy vehicles</td></tr>
+    <tr><td>Foundation footing</td><td>8–12 inches</td><td>Structural — consult engineer</td></tr>
+    <tr><td>Post hole fill</td><td>Varies by post</td><td>Use tube form or quick-set</td></tr>
+  </tbody>
+</table>
+
+## Bags vs. Ready-Mix Concrete
+
+For small projects (under 1 cubic yard), premixed concrete bags are convenient and cost-effective. For larger projects, ordering ready-mix concrete from a batch plant is more economical and practical. The crossover point is typically around 1 cubic yard (27 cubic feet):
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Project Size</th>
+      <th>Best Option</th>
+      <th>Reason</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Less than 0.5 cu yd</td><td>Bag concrete</td><td>Convenient, no minimum order</td></tr>
+    <tr><td>0.5–1.5 cu yd</td><td>Bag concrete or mini-mix</td><td>Depends on mixer access</td></tr>
+    <tr><td>Over 1.5 cu yd</td><td>Ready-mix truck</td><td>Faster, cheaper per yard, less labor</td></tr>
+  </tbody>
+</table>
+
+## Concrete Strength and Mix Ratios
+
+Not all concrete is the same. The strength is measured in PSI (pounds per square inch) after 28 days of curing:
+
+- **2,500 PSI:** Suitable for sidewalks and patios
+- **3,000 PSI:** Standard residential driveways and slabs
+- **3,500 PSI:** Structural elements, commercial floors
+- **4,000+ PSI:** Heavy-duty structural applications
+
+Standard bagged concrete mixes use a water-to-cement ratio that produces around 3,000–4,000 PSI when properly mixed. High-strength mixes are also available. Always follow package directions for water ratio — too much water dramatically weakens the finished concrete.
+
+## Tips for a Successful Pour
+
+- Always place concrete on a well-compacted gravel base (minimum 4 inches) to prevent settling and cracking
+- Use control joints every 8–12 feet to direct where cracking occurs
+- Keep the concrete moist during curing for the first week to maximize strength
+- Add fiber reinforcement (fiberglass or polypropylene) or rebar for improved tensile strength
+- In cold weather, protect the pour from freezing for at least 24–48 hours
+
+<FAQ items={[
+  { q: "How many bags of concrete do I need for a 10x10 slab?", a: "A 10 ft × 10 ft slab at 4 inches thick requires 33.3 cubic feet of concrete. That's approximately 74 bags of 80-lb concrete or 111 bags of 40-lb bags. Adding 10% for waste brings it to about 82 bags (80-lb) or 122 bags (40-lb)." },
+  { q: "Should I add 10% extra when ordering concrete?", a: "Yes, always add at least 10% to your calculated volume to account for spillage, uneven subgrade, and overage. Running short of concrete mid-pour creates a cold joint that significantly weakens the slab." },
+  { q: "How long does concrete take to cure?", a: "Concrete reaches about 70% of its design strength in 7 days and full strength (28-day strength) in 28 days. You can walk on most slabs after 24–48 hours, but you should wait 7 days before placing heavy loads and 28 days before parking vehicles." },
+  { q: "What is the difference between concrete and cement?", a: "Cement is an ingredient in concrete. Concrete is a mixture of cement, sand (fine aggregate), gravel (coarse aggregate), and water. Cement alone is not strong enough for most construction applications." },
+  { q: "Do I need rebar in my concrete slab?", a: "Rebar (reinforcing steel) is recommended for driveways, slabs subject to heavy loads, and any structural application. For decorative patios and walkways with light use, fiber reinforcement may be sufficient. Check local building codes." },
+]} />
+
+## Related Tools
+
+- [Square Footage Calculator](/apps/square-footage-calculator) — Calculate area of any rectangular space
+- [Paint Calculator](/apps/paint-calculator) — Estimate paint needed for walls and ceilings
+- [Price Per Square Foot Calculator](/apps/price-per-square-foot-calculator) — Compare project costs by area
+- [Wallpaper Calculator](/apps/wallpaper-calculator) — Estimate wallpaper rolls for a room
+- [Fence Calculator](/apps/fence-calculator) — Calculate fencing materials for any yard
+
+## Sources
+
+- Portland Cement Association: [Concrete Basics](https://www.cement.org/cement-concrete/paving/concrete-homes/concrete-design-construction/concrete-basics)
+- Quikrete: [Product Coverage Charts](https://www.quikrete.com/)
+- American Concrete Institute: [ACI Concrete Standards](https://www.concrete.org/)
+- This Old House: [Concrete Pouring Guide](https://www.thisoldhouse.com/)

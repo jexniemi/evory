@@ -1,0 +1,109 @@
+import FAQ from "@/components/FAQ"
+
+## How the Lease vs Buy Calculator Works
+
+Deciding whether to lease or buy a car is one of the most common financial decisions people face. This calculator compares the total cost of each option over the same time period. Enter your monthly lease payment, lease term, estimated monthly loan payment, the vehicle price, and the expected resale value at the end of the period. The calculator shows total lease cost, net buy cost after resale, and which option comes out ahead.
+
+### Formulas
+
+> **Total Lease Cost = Monthly Lease Payment × Lease Term (months)**
+>
+> **Total Amount Paid to Buy = Monthly Loan Payment × Term (months)**
+>
+> **Net Buy Cost = Total Amount Paid − Estimated Resale Value**
+>
+> **Savings = |Total Lease Cost − Net Buy Cost|**
+
+### Worked Example
+
+- Monthly lease: $380, 36-month term
+- Monthly loan payment: $510, 36 months
+- Vehicle price: $28,000
+- Estimated resale value after 3 years: $17,000
+
+Results:
+- Total Lease Cost: $380 × 36 = **$13,680**
+- Total Loan Paid: $510 × 36 = **$18,360**
+- Net Buy Cost: $18,360 − $17,000 = **$1,360**
+- Buying saves: $13,680 − $1,360 = **$12,320** over 3 years
+
+In this example, buying is dramatically cheaper because the car retains significant resale value. The lease appears cheaper monthly but leaves you with nothing at the end.
+
+## Leasing vs Buying: Key Differences
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Factor</th>
+      <th>Lease</th>
+      <th>Buy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Monthly payment</td><td>Usually lower</td><td>Usually higher</td></tr>
+    <tr><td>Ownership</td><td>No — return at end</td><td>Yes — keep or sell</td></tr>
+    <tr><td>Mileage limits</td><td>Typically 10–15k/year</td><td>Unlimited</td></tr>
+    <tr><td>Modifications</td><td>Not allowed</td><td>Fully allowed</td></tr>
+    <tr><td>Long-term cost</td><td>Higher (ongoing payments)</td><td>Lower (loan ends, asset remains)</td></tr>
+    <tr><td>Latest model access</td><td>Easy — new car every 2–3 years</td><td>Requires selling/trading</td></tr>
+    <tr><td>Maintenance costs</td><td>Usually under warranty</td><td>Costs increase with age</td></tr>
+    <tr><td>Depreciation risk</td><td>Borne by dealer</td><td>Borne by you</td></tr>
+  </tbody>
+</table>
+
+## Who Should Lease?
+
+Leasing makes the most sense for people who:
+- Want to drive a new car every 2–3 years
+- Drive fewer than 12,000–15,000 miles per year
+- Prioritize lower monthly payments over long-term ownership
+- Want to always drive a vehicle under full manufacturer warranty
+- Are business owners who can deduct lease payments as a business expense
+
+## Who Should Buy?
+
+Buying typically makes more financial sense for people who:
+- Drive high mileage (over 15,000 miles/year)
+- Plan to keep the car for 5–10 years
+- Want to build equity and eliminate a car payment eventually
+- Make modifications or tow/haul heavy loads
+- Want the lowest lifetime transportation cost
+
+## The Hidden Costs of Leasing
+
+Lease agreements contain several costs that the monthly payment doesn't reveal:
+
+- **Acquisition fee:** $500–$1,000 paid upfront
+- **Disposition fee:** $300–$500 charged when you return the car
+- **Excess mileage charges:** $0.15–$0.30 per mile over the limit
+- **Wear-and-tear charges:** Charged for anything beyond "normal" wear
+- **Early termination penalties:** Expensive if you need to exit the lease early
+
+When you include all these costs, leasing is almost always more expensive per mile of transportation than buying and holding a car long-term.
+
+## The True Cost of Car Ownership
+
+When buying, the biggest hidden cost is depreciation. New cars lose roughly 15–25% of their value in the first year and 50% by year 5. This is why buying a 2–3 year old used car is often the most cost-effective strategy — you let someone else absorb the steepest depreciation while still getting a reliable, relatively new vehicle.
+
+<FAQ items={[
+  { q: "Is leasing or buying a car better?", a: "Buying is almost always cheaper over the long term because you build equity and eventually own the car outright. Leasing offers lower monthly payments and the convenience of a new car every few years, but you pay indefinitely and never own an asset." },
+  { q: "Can I buy out a lease at the end?", a: "Yes, most leases include a purchase option at a pre-set residual value. This can be a good deal if the car has depreciated less than expected — meaning its market value is higher than the buyout price." },
+  { q: "What happens if I exceed the mileage limit on a lease?", a: "You are charged a per-mile overage fee, typically $0.15–$0.30 per mile. On a 10,000-mile-per-year lease, exceeding by 5,000 miles over 3 years could add $2,250 in fees at $0.15/mile." },
+  { q: "Is leasing a car a waste of money?", a: "Not necessarily. For business owners who can deduct lease expenses, or for people who frequently upgrade vehicles, leasing can be financially rational. However, for the average consumer, long-term buying and holding a car typically costs less." },
+  { q: "What is a good residual value on a lease?", a: "A residual value above 55–60% of the original MSRP after 36 months is considered good and usually results in lower monthly payments. Brands like Honda, Toyota, and Subaru typically retain value better than domestic brands." },
+]} />
+
+## Related Tools
+
+- [Car Loan Calculator](/apps/car-loan-calculator) — Calculate monthly car loan payments
+- [Gas Mileage Calculator](/apps/gas-mileage-calculator) — Estimate annual fuel costs
+- [Budget Calculator](/apps/budget-calculator) — Plan your monthly transportation budget
+- [Driving Cost Calculator](/apps/driving-cost-calculator) — Calculate total driving costs per mile
+- [Mortgage Refinance Calculator](/apps/mortgage-refinance-calculator) — Compare refinancing options
+
+## Sources
+
+- Consumer Financial Protection Bureau: [Auto Loans and Leases](https://www.consumerfinance.gov/consumer-tools/auto-loans/)
+- Edmunds: [Lease vs Buy Comparison](https://www.edmunds.com/car-leasing/should-i-lease-or-buy-a-car.html)
+- Federal Trade Commission: [Buying a Car](https://consumer.ftc.gov/articles/buying-owning-car)
+- Investopedia: [Car Lease vs Buy](https://www.investopedia.com/articles/personal-finance/012716/car-lease-vs-buy-how-math-works.asp)

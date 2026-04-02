@@ -1,0 +1,126 @@
+import FAQ from "@/components/FAQ"
+
+## How the Caffeine Calculator Works
+
+This calculator estimates your total daily caffeine intake from the four most common sources: espresso shots, drip coffee, energy drinks, and black tea. Enter how many of each you consume daily and the calculator shows your total caffeine in milligrams, your percentage of the FDA-recommended safe daily limit of 400 mg for healthy adults, and how much caffeine margin you have remaining.
+
+### Caffeine Reference Values Used
+
+> **Espresso shot (1 oz):** approx. 63 mg
+>
+> **Drip coffee (8 oz cup):** approx. 96 mg
+>
+> **Energy drink (12 oz can):** approx. 80 mg
+>
+> **Black tea (8 oz cup):** approx. 47 mg
+
+Note: Caffeine content varies significantly between brands, brewing methods, and serving sizes. These are representative averages.
+
+### Worked Example
+
+A typical morning routine:
+- 2 espresso shots in a double espresso: 2 × 63 = **126 mg**
+- 1 cup of drip coffee in the afternoon: **96 mg**
+- 1 cup of black tea: **47 mg**
+
+Total: 126 + 96 + 47 = **269 mg** (67% of the 400 mg safe limit)
+
+## Caffeine Content in Popular Beverages
+
+Caffeine content varies enormously between products. Here is a comprehensive reference:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Beverage</th>
+      <th>Serving Size</th>
+      <th>Caffeine (mg)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Espresso</td><td>1 oz shot</td><td>63</td></tr>
+    <tr><td>Drip coffee</td><td>8 oz</td><td>95–165</td></tr>
+    <tr><td>Cold brew coffee</td><td>8 oz</td><td>150–200</td></tr>
+    <tr><td>Starbucks Pike Place</td><td>16 oz (Grande)</td><td>310</td></tr>
+    <tr><td>Starbucks Dark Roast</td><td>16 oz (Grande)</td><td>195</td></tr>
+    <tr><td>Red Bull</td><td>8.4 oz</td><td>80</td></tr>
+    <tr><td>Monster Energy</td><td>16 oz</td><td>160</td></tr>
+    <tr><td>5-Hour Energy</td><td>2 oz</td><td>200</td></tr>
+    <tr><td>Black tea</td><td>8 oz</td><td>47</td></tr>
+    <tr><td>Green tea</td><td>8 oz</td><td>29</td></tr>
+    <tr><td>Diet Coke</td><td>12 oz</td><td>46</td></tr>
+    <tr><td>Regular Coke</td><td>12 oz</td><td>34</td></tr>
+    <tr><td>Dark chocolate (1 oz)</td><td>28 g</td><td>12–24</td></tr>
+    <tr><td>Decaf coffee</td><td>8 oz</td><td>2–12</td></tr>
+  </tbody>
+</table>
+
+## The Safe Daily Caffeine Limit
+
+The U.S. Food and Drug Administration (FDA) states that **400 mg of caffeine per day** is generally safe for healthy adults. This is roughly equivalent to 4 cups of drip coffee. The European Food Safety Authority (EFSA) reaches the same conclusion.
+
+However, individual sensitivity to caffeine varies widely based on:
+- **Genetics:** Variations in the CYP1A2 gene determine how quickly your liver metabolizes caffeine
+- **Body weight:** Caffeine's effects are more pronounced in smaller individuals
+- **Medications:** Many drugs interact with caffeine metabolism
+- **Tolerance:** Regular consumers develop tolerance to caffeine's stimulant effects
+
+### Lower Limits for Specific Groups
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Group</th>
+      <th>Recommended Limit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Healthy adults</td><td>Up to 400 mg/day</td></tr>
+    <tr><td>Pregnant women</td><td>Up to 200 mg/day (NHS/ACOG recommendation)</td></tr>
+    <tr><td>Breastfeeding women</td><td>Up to 200–300 mg/day</td></tr>
+    <tr><td>Adolescents (13–18)</td><td>Up to 100 mg/day</td></tr>
+    <tr><td>Children under 12</td><td>Not recommended</td></tr>
+    <tr><td>People with anxiety/heart conditions</td><td>Consult a doctor</td></tr>
+  </tbody>
+</table>
+
+## Signs of Too Much Caffeine
+
+Consuming more than your personal tolerance allows can cause:
+
+- Jitteriness, anxiety, or nervousness
+- Increased heart rate (tachycardia) or palpitations
+- Headache and dizziness
+- Insomnia and disrupted sleep
+- Frequent urination
+- Gastrointestinal upset
+- In severe cases: rapid breathing, confusion, or muscle tremors
+
+Caffeine overdose from food and beverages is rare but possible with concentrated caffeine powders or supplements. The FDA has warned that a single teaspoon of pure caffeine powder contains approximately 3,200 mg — potentially fatal.
+
+## Caffeine and Sleep
+
+Caffeine has a half-life of 5–6 hours, meaning half the caffeine from your afternoon coffee is still in your system at bedtime. For quality sleep, most sleep experts recommend avoiding caffeine in the 6 hours before bed. People who metabolize caffeine slowly (slow CYP1A2 metabolizers) may need to cut off caffeine even earlier — 8–10 hours before sleep.
+
+<FAQ items={[
+  { q: "How much caffeine is too much?", a: "The FDA considers 400 mg/day safe for healthy adults. Single doses above 1,200 mg can cause toxic effects. Most caffeine sensitivity symptoms occur at 400–600 mg in people who are not regular consumers." },
+  { q: "Does dark roast coffee have more caffeine than light roast?", a: "Counterintuitively, lighter roasts have slightly more caffeine than dark roasts when measured by weight. However, dark roast beans are less dense, so a scoop of dark roast may have similar or slightly less caffeine than a scoop of light roast. The differences are minor." },
+  { q: "Is caffeine addictive?", a: "Caffeine is a mildly habit-forming stimulant. Regular consumers develop tolerance (needing more for the same effect) and may experience withdrawal symptoms (headache, fatigue, irritability) when they stop. These symptoms typically peak at 1–2 days and resolve within a week." },
+  { q: "Can caffeine affect blood pressure?", a: "Yes, caffeine causes a temporary, modest increase in blood pressure. This effect is more pronounced in infrequent consumers and people with hypertension. Regular coffee drinkers tend to develop tolerance to the blood pressure effect." },
+  { q: "How do I reduce my caffeine intake without withdrawal?", a: "Reduce intake gradually over 1–2 weeks rather than stopping abruptly. Cut your daily intake by 10–25% each week. Substituting lower-caffeine drinks (green tea, half-caff coffee) and staying well-hydrated helps minimize withdrawal symptoms." },
+]} />
+
+## Related Tools
+
+- [Sleep Cycle Calculator](/apps/sleep-cycle-calculator) — Calculate optimal bedtimes for quality sleep
+- [Sleep Needs Calculator](/apps/sleep-needs-calculator) — Find your recommended sleep hours
+- [Water Needs Calculator](/apps/water-needs-calculator) — Stay hydrated alongside your coffee habit
+- [BMR Calculator](/apps/bmr-calculator) — Understand your baseline metabolism
+- [Calorie Deficit Calculator](/apps/calorie-deficit-calculator) — Track calories alongside caffeine
+
+## Sources
+
+- U.S. Food and Drug Administration: [Caffeine and Safety](https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much)
+- European Food Safety Authority: [Scientific Opinion on Caffeine](https://www.efsa.europa.eu/en/efsajournal/pub/4102)
+- National Institutes of Health: [Caffeine](https://www.ncbi.nlm.nih.gov/books/NBK519490/)
+- American College of Obstetricians and Gynecologists: [Caffeine During Pregnancy](https://www.acog.org/)

@@ -1,0 +1,98 @@
+import FAQ from "@/components/FAQ"
+
+## How the Stock Profit Calculator Works
+
+This stock profit calculator helps you quickly determine your gain or loss from a stock trade. Enter the price you paid per share, how many shares you bought, and the price at which you sold. The calculator returns your total profit or loss in dollars, your return on investment (ROI) as a percentage, the total amount you invested, and the total amount you received.
+
+### Stock Profit Formulas
+
+> **Total Invested = Buy Price × Number of Shares**
+>
+> **Total Received = Sell Price × Number of Shares**
+>
+> **Profit / Loss = Total Received − Total Invested**
+>
+> **ROI (%) = (Profit ÷ Total Invested) × 100**
+
+### Worked Example
+
+You bought 200 shares of a company at **$45 per share** and sold them at **$68 per share**:
+
+- Total Invested: 200 × $45 = **$9,000**
+- Total Received: 200 × $68 = **$13,600**
+- Profit: $13,600 − $9,000 = **$4,600**
+- ROI: ($4,600 ÷ $9,000) × 100 = **51.1%**
+
+This simple profit calculation does not include brokerage commissions, fees, or taxes. For a realistic net profit, subtract trading commissions from Total Received.
+
+## Understanding Stock Returns
+
+### What Is a Good Stock Return?
+
+The S&P 500 index has historically returned approximately 10% per year before inflation and about 7% after inflation. Individual stocks vary enormously. A strong single-year return for a growth stock might be 30–50%, while a conservative dividend stock might return 5–10% annually with dividends reinvested.
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>ROI Range</th>
+      <th>Assessment</th>
+      <th>Context</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Below 0%</td><td>Loss</td><td>Sold for less than purchase price</td></tr>
+    <tr><td>0–5%</td><td>Modest gain</td><td>Barely outpaces inflation</td></tr>
+    <tr><td>5–15%</td><td>Solid return</td><td>Matches or beats the index</td></tr>
+    <tr><td>15–30%</td><td>Strong return</td><td>Outperforms most benchmarks</td></tr>
+    <tr><td>30–100%</td><td>Excellent return</td><td>Significant outperformance</td></tr>
+    <tr><td>Over 100%</td><td>Exceptional / high risk</td><td>Often volatile stocks or options</td></tr>
+  </tbody>
+</table>
+
+### The Impact of Brokerage Fees
+
+Traditional brokerages charged commissions of $5–$10 per trade. Most modern platforms (Robinhood, Fidelity, Schwab, TD Ameritrade) now offer commission-free trading on US stocks. However, some spread-based costs, SEC fees, and options contract fees may still apply. For large trades these are minimal; for frequent small trades they can erode returns.
+
+### Short-Term vs. Long-Term Capital Gains Tax
+
+Profit from stock sales is subject to capital gains tax in the United States:
+
+- **Short-term capital gains** (held less than 1 year): Taxed as ordinary income at your marginal rate (10%–37%)
+- **Long-term capital gains** (held 1+ year): Taxed at 0%, 15%, or 20% depending on income
+
+Holding a stock for at least one year before selling can dramatically reduce your tax bill. On a $10,000 profit, the difference between a 37% short-term rate and a 15% long-term rate is $2,200 in taxes saved.
+
+### Dollar-Cost Averaging
+
+Buying stocks at a single price exposes you to timing risk. Dollar-cost averaging (DCA) means investing a fixed dollar amount at regular intervals regardless of price. Over time, this averages out your cost basis and reduces the impact of volatility. Use this calculator with your average purchase price (total cost ÷ total shares) to find your blended profit.
+
+### Common Mistakes in Stock Trading
+
+- **Panic selling** during downturns locks in losses that would have recovered
+- **Overconcentration** in a single stock or sector increases risk unnecessarily
+- **Ignoring taxes** when calculating returns — what matters is after-tax profit
+- **Chasing past performance** — last year's winner is often not next year's winner
+- **Trading too frequently** — transaction costs and taxes erode returns
+
+<FAQ items={[
+  { q: "Does this calculator account for dividends?", a: "No, this calculator covers capital gains (price appreciation) only. To include dividend income in your total return, add the total dividends received to the profit figure." },
+  { q: "How do I calculate my average buy price if I bought at multiple prices?", a: "Add up all the money you spent on the stock, then divide by the total number of shares owned. For example, 50 shares at $40 plus 50 shares at $60 = $5,000 total cost ÷ 100 shares = $50 average cost per share." },
+  { q: "What is unrealized vs. realized gain?", a: "An unrealized gain is profit on a stock you still own — the price has risen but you haven't sold. A realized gain is profit from a stock you have sold. Only realized gains are subject to capital gains tax." },
+  { q: "How do I calculate ROI including dividends?", a: "Add total dividends received to the price appreciation profit, then divide by the total invested. This gives your total return including income." },
+  { q: "What is the wash-sale rule?", a: "The IRS wash-sale rule prevents you from claiming a tax loss if you buy the same or substantially identical stock within 30 days before or after selling it at a loss. The disallowed loss is added to the cost basis of the replacement shares." },
+]} />
+
+## Related Tools
+
+- [Investment Return Calculator](/apps/investment-return-calculator) — Calculate ROI on any investment
+- [Compound Interest Calculator](/apps/compound-interest-calculator) — See how reinvested gains grow over time
+- [Dividend Calculator](/apps/dividend-calculator) — Estimate annual dividend income from holdings
+- [Tax Bracket Calculator](/apps/tax-bracket-calculator) — See your capital gains tax rate
+- [Retirement Calculator](/apps/retirement-calculator) — Project long-term investment growth
+
+## Sources
+
+- U.S. Securities and Exchange Commission: [Investor.gov – Compound Interest](https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator)
+- IRS: [Topic No. 409 Capital Gains and Losses](https://www.irs.gov/taxtopics/tc409)
+- Investopedia: [Capital Gains Tax](https://www.investopedia.com/terms/c/capital_gains_tax.asp)
+- S&P Global: [S&P 500 Historical Returns](https://www.spglobal.com/)

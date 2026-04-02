@@ -1,0 +1,70 @@
+import FAQ from "@/components/FAQ"
+
+## What Is a Wheel Spinner?
+
+A **wheel spinner** is a virtual spinning wheel that randomly selects from a list of options you provide. Also called a "decision wheel" or "random picker wheel," it uses a visually engaging spinning animation to make random choices — turning any decision into a fun, unbiased event.
+
+Our wheel spinner uses a **cryptographically seeded pseudo-random number generator** to determine both the spin speed and final stopping position, ensuring completely random and unbiased results every time.
+
+## Popular Uses for a Spinning Wheel
+
+### Everyday Decisions
+- **"Where should we eat?"** — Add restaurant names and let the wheel decide
+- **"What movie tonight?"** — List your watchlist options and spin
+- **"Who goes first?"** — Add names for a fair random order picker
+
+### Education and Classroom
+- **Calling on students:** Teachers add student names for fair random selection
+- **Vocabulary review:** Add vocabulary words for random quizzing
+- **Team assignment:** Randomly assign students to groups
+- **Topic selection:** Choose essay or presentation topics randomly
+
+### Games and Entertainment
+- **Party games:** Truth or Dare prompts, party game punishments or rewards
+- **Game night:** Decide which board game to play
+- **Fantasy sports drafts:** Add player names for randomized picks
+
+### Work and Business
+- **Sprint planning:** Randomly assign tasks in a team
+- **Meeting icebreakers:** Spin for random team-building prompts
+- **Prize giveaways:** Fair, transparent random winner selection
+- **Raffle draws:** Visual, engaging way to pick raffle winners
+
+## How the Random Selection Works
+
+The wheel spinner works in three steps:
+
+1. **Rendering:** The options are drawn as equal pie slices on an HTML5 Canvas element
+2. **Spinning:** A random total rotation is calculated (5–10 full revolutions plus a random extra angle)
+3. **Stopping:** The wheel decelerates using a cubic ease-out curve, creating a realistic physics-like deceleration. The pointer at the top indicates the winner
+
+The winning segment is determined by the wheel's final angle modulo the total arc of all segments. Because the stopping position is randomized before spinning begins, each option has exactly **1 / n probability** of being selected (where n is the number of options).
+
+## Tips for Getting the Best Results
+
+- **Keep options short:** Labels are truncated if too long — aim for under 15 characters
+- **Balanced options:** Each segment is equal size, so all options have the same probability
+- **Save your list:** Bookmark the page after adding your options — the list persists until you refresh
+- **More options = more fun:** Add up to 20 options for complex decisions
+- **Multiple rounds:** For tournament-style decisions, spin multiple times and remove selected items
+
+<FAQ items={[
+  { q: "Is the wheel truly random?", a: "Yes. The stopping position is determined by a random number generated when you click Spin — before the animation starts. The spinning animation is purely visual. Each option has exactly equal probability of being chosen (1/n where n is the number of options)." },
+  { q: "Can I save my wheel options?", a: "Your options are stored in the page state while the tab is open. If you need to save your wheel configuration, bookmark the page and use the browser's session. A future update may add shareable wheels with URL parameters." },
+  { q: "Can I add the same option multiple times to increase its probability?", a: "Yes. Adding an option multiple times gives it proportionally higher probability. For example, adding 'Team A' twice and 'Team B' once gives Team A a 2/3 (67%) chance and Team B a 1/3 (33%) chance." },
+  { q: "What is the maximum number of options?", a: "You can add up to 20 options. With more than about 12 options, labels become very small and may be truncated. For large numbers of options, consider using our Raffle Machine tool instead, which is better suited for large lists of names." },
+  { q: "Can I use this as a classroom tool?", a: "Absolutely. The wheel spinner is popular in classrooms for randomly calling on students, assigning tasks, or picking topics. For the smoothest classroom experience, add all student names before class and leave the tab open throughout the lesson." },
+]} />
+
+## Related Tools
+
+- [Raffle Machine](/apps/raffle-machine) — Pick random winners from a list of names
+- [Dice Generator](/apps/dice-generator) — Roll virtual dice with any number of sides
+- [Lottery Number Generator](/apps/lottery-number-generator) — Generate random lottery numbers
+- [Random Color Generator](/apps/random-color-generator) — Generate random colors for design projects
+- [Name Generator](/apps/name-generator) — Generate random names
+
+## Sources
+
+- Fisher, R.A. & Yates, F. (1938). *Statistical Tables for Biological, Agricultural and Medical Research.* Standard randomization reference
+- MDN Web Docs: [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) — used for wheel rendering

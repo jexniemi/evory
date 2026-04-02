@@ -1,0 +1,122 @@
+import FAQ from "@/components/FAQ"
+
+## How Roman Numerals Work
+
+Roman numerals are a numeral system originating from ancient Rome that remained the dominant writing system for numbers in Europe until the 14th century. They use combinations of seven Latin letters to represent values:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Symbol</th>
+      <th>Value</th>
+      <th>Origin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>I</td><td>1</td><td>One finger</td></tr>
+    <tr><td>V</td><td>5</td><td>Open hand (V shape of fingers)</td></tr>
+    <tr><td>X</td><td>10</td><td>Two V shapes crossed</td></tr>
+    <tr><td>L</td><td>50</td><td>Half of C (100)</td></tr>
+    <tr><td>C</td><td>100</td><td>Latin "centum" (hundred)</td></tr>
+    <tr><td>D</td><td>500</td><td>Half of M shape</td></tr>
+    <tr><td>M</td><td>1000</td><td>Latin "mille" (thousand)</td></tr>
+  </tbody>
+</table>
+
+## The Subtractive Rule
+
+Roman numerals are written from largest to smallest, left to right. When a smaller numeral appears **before** a larger one, it is subtracted rather than added. There are exactly six subtractive combinations:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Combination</th>
+      <th>Value</th>
+      <th>Instead of</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>IV</td><td>4</td><td>IIII</td></tr>
+    <tr><td>IX</td><td>9</td><td>VIIII</td></tr>
+    <tr><td>XL</td><td>40</td><td>XXXX</td></tr>
+    <tr><td>XC</td><td>90</td><td>LXXXX</td></tr>
+    <tr><td>CD</td><td>400</td><td>CCCC</td></tr>
+    <tr><td>CM</td><td>900</td><td>DCCCC</td></tr>
+  </tbody>
+</table>
+
+## Common Roman Numerals Reference
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Number</th>
+      <th>Roman Numeral</th>
+      <th>Number</th>
+      <th>Roman Numeral</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>I</td><td>20</td><td>XX</td></tr>
+    <tr><td>2</td><td>II</td><td>30</td><td>XXX</td></tr>
+    <tr><td>3</td><td>III</td><td>40</td><td>XL</td></tr>
+    <tr><td>4</td><td>IV</td><td>50</td><td>L</td></tr>
+    <tr><td>5</td><td>V</td><td>100</td><td>C</td></tr>
+    <tr><td>6</td><td>VI</td><td>500</td><td>D</td></tr>
+    <tr><td>7</td><td>VII</td><td>1000</td><td>M</td></tr>
+    <tr><td>8</td><td>VIII</td><td>1999</td><td>MCMXCIX</td></tr>
+    <tr><td>9</td><td>IX</td><td>2000</td><td>MM</td></tr>
+    <tr><td>10</td><td>X</td><td>2024</td><td>MMXXIV</td></tr>
+  </tbody>
+</table>
+
+## Where Roman Numerals Are Still Used Today
+
+Despite being replaced by Hindu-Arabic numerals for most purposes, Roman numerals persist in many contexts:
+
+- **Clock faces:** Many analog clocks use Roman numerals, typically with IIII instead of IV
+- **Monarchs and popes:** Elizabeth II, Henry VIII, Pope Francis I, etc.
+- **Super Bowl numbering:** Super Bowl LVIII (58), etc.
+- **Movie sequels and series:** Star Wars Episode IV, Rocky II, etc.
+- **Outlines and lists:** Legal documents, academic papers, book chapters
+- **Years on buildings and film credits:** MCMXCIX for 1999 on cornerstones
+- **Copyright dates:** Movies and TV shows often display copyright years in Roman numerals
+
+## The Algorithm Explained
+
+### Number to Roman Numeral
+
+The conversion uses a greedy algorithm: repeatedly subtract the largest possible value, appending the corresponding numeral:
+
+> For 2024: Subtract 1000 (M) → 1024. Subtract 1000 (M) → 24. Subtract 10 (X) → 14. Subtract 10 (X) → 4. Subtract 4 (IV) → 0.
+>
+> Result: **MMXXIV**
+
+### Roman Numeral to Number
+
+The conversion scans left to right: if the current symbol's value is less than the next symbol's value, subtract it; otherwise add it.
+
+> For XIV: X = 10 (next is I < V, so add 10). I = 1 (next is V = 5 > I, so subtract 1). V = 5 (no next, add 5).
+> 10 − 1 + 5 = **14**
+
+<FAQ items={[
+  { q: "Why does 4 appear as IV and not IIII on Roman clocks?", a: "Historically, IIII (four ones) was acceptable and common in ancient Rome. Many clock makers prefer IIII because it provides visual balance with VIII on the opposite side of the clock face. Both are technically correct." },
+  { q: "What is the largest number that can be written in standard Roman numerals?", a: "The largest standard Roman numeral is MMMCMXCIX = 3,999. To represent larger numbers, an overline (vinculum) can be placed over a symbol to multiply it by 1,000, but this is rarely used in modern contexts." },
+  { q: "Is there a Roman numeral for zero?", a: "No. Roman numerals have no symbol for zero, which was a significant mathematical limitation. The concept of zero was introduced to Europe from India via Arab mathematicians in the Middle Ages, eventually replacing Roman numerals for arithmetic." },
+  { q: "Why do Super Bowls use Roman numerals?", a: "The NFL began using Roman numerals for Super Bowls starting with Super Bowl V in 1971 to distinguish the game from any regular season games that year. The tradition has continued ever since, making Super Bowl number identification a popular test of Roman numeral knowledge." },
+  { q: "What year is MCMXCIX?", a: "MCMXCIX = M (1000) + CM (900) + XC (90) + IX (9) = 1999. This is often considered one of the most complex Roman numerals for a year, as it requires four subtractive combinations in sequence." },
+]} />
+
+## Related Tools
+
+- [Base Converter](/apps/base-converter) — Convert between binary, decimal, octal, and hexadecimal
+- [Percentage Calculator](/apps/percentage-calculator) — Quick percentage calculations
+- [Age Calculator](/apps/age-calculator) — Calculate exact age or time between dates
+- [Date Calculator](/apps/date-calculator) — Add or subtract days from any date
+- [Text Case Converter](/apps/text-case-converter) — Convert text between different cases
+
+## Sources
+
+- Turner, G. (2020). *The History of Roman Numerals.* University of Cambridge
+- Encyclopedia Britannica: [Roman Numerals](https://www.britannica.com/topic/Roman-numeral)
+- National Institute of Standards and Technology: [Numeral Systems](https://www.nist.gov)

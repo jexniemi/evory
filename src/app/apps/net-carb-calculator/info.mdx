@@ -1,0 +1,106 @@
+import FAQ from "@/components/FAQ"
+
+## What Are Net Carbs?
+
+**Net carbs** (also called digestible carbs or impact carbs) represent the carbohydrates that actually affect your blood sugar and insulin levels. They are used primarily in ketogenic and low-carb diets to track carbohydrate intake more accurately than simply counting total carbohydrates.
+
+### The Net Carbs Formula
+
+> **Net Carbs = Total Carbohydrates − Dietary Fiber − Countable Sugar Alcohols**
+
+The subtractions happen because:
+- **Dietary fiber** passes through the digestive tract largely unabsorbed, has minimal impact on blood glucose, and does not break ketosis
+- **Certain sugar alcohols** are partially or fully unabsorbed and have a much lower glycemic impact than regular sugars
+
+## Sugar Alcohols: Not All Equal
+
+Sugar alcohols vary significantly in their glycemic impact, which is why they require different treatment when calculating net carbs:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Sugar Alcohol</th>
+      <th>Glycemic Index</th>
+      <th>Count for Net Carbs</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Erythritol</td><td>0</td><td>0% (fully subtract)</td><td>Passes through virtually unabsorbed</td></tr>
+    <tr><td>Xylitol</td><td>13</td><td>approx. 20%</td><td>Low GI but some absorption</td></tr>
+    <tr><td>Sorbitol</td><td>9</td><td>approx. 50%</td><td>Partially absorbed; can cause GI issues</td></tr>
+    <tr><td>Maltitol</td><td>36</td><td>approx. 50%</td><td>Notable blood sugar impact; common in "sugar free" candy</td></tr>
+    <tr><td>Lactitol</td><td>6</td><td>approx. 40%</td><td>Moderate absorption</td></tr>
+    <tr><td>Isomalt</td><td>9</td><td>approx. 50%</td><td>Partially absorbed</td></tr>
+    <tr><td>Mannitol</td><td>0</td><td>approx. 0–10%</td><td>Very poorly absorbed</td></tr>
+  </tbody>
+</table>
+
+**Beware of maltitol:** Many "keto-friendly" or "sugar-free" products use maltitol, which has a glycemic index of 36 (compared to glucose at 100). It will spike blood sugar and potentially kick you out of ketosis if consumed in large amounts. Always check the sugar alcohol type on the label.
+
+## Worked Example
+
+A "keto" protein bar has these nutrition facts:
+- Total carbohydrates: 22 g
+- Dietary fiber: 8 g
+- Sugar alcohols: 10 g (from erythritol)
+
+> Net Carbs = 22 − 8 − 10 × 1.0 = **4 g net carbs**
+
+However, if the same bar used maltitol instead of erythritol:
+> Net Carbs = 22 − 8 − 10 × 0.5 = **9 g net carbs**
+
+That's more than double — a significant difference for strict keto followers.
+
+## Keto Daily Net Carb Limits
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Diet Type</th>
+      <th>Daily Net Carb Limit</th>
+      <th>Goal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Standard ketogenic diet (SKD)</td><td>20–50 g</td><td>Achieve and maintain ketosis</td></tr>
+    <tr><td>Targeted ketogenic diet (TKD)</td><td>20–50 g + 25 g peri-workout</td><td>Fuel workouts without losing ketosis</td></tr>
+    <tr><td>Cyclical ketogenic diet (CKD)</td><td>20–50 g most days</td><td>Carb refeeds 1–2 days/week</td></tr>
+    <tr><td>Low-carb (non-keto)</td><td>50–100 g</td><td>Blood sugar control without ketosis</td></tr>
+    <tr><td>Moderate low-carb</td><td>100–150 g</td><td>General health and weight management</td></tr>
+  </tbody>
+</table>
+
+## Where to Find Net Carbs on Labels
+
+In the United States, the FDA requires that fiber and sugar alcohols be listed separately on the Nutrition Facts panel. To calculate net carbs:
+
+1. Find "Total Carbohydrate" (main line)
+2. Find "Dietary Fiber" (sub-item) — subtract all of it
+3. Find "Sugar Alcohols" (sub-item) — subtract based on the type (see table above)
+4. If the label says "erythritol," subtract all; if it says "maltitol," subtract only half
+
+In the EU, fiber is often already excluded from the "carbohydrate" figure on labels, so you may not need to subtract it again.
+
+<FAQ items={[
+  { q: "Are net carbs the same as digestible carbs?", a: "Yes, they are the same concept. 'Net carbs,' 'digestible carbs,' and 'impact carbs' all refer to the carbohydrates that raise blood sugar and require insulin response. The term 'net carbs' is most common in keto communities." },
+  { q: "Does the FDA regulate 'net carbs' claims on packaging?", a: "No. The term 'net carbs' is not defined or regulated by the FDA. Food manufacturers can label their products however they want, which has led to products marketed as very low net carb when they actually contain significant amounts of maltitol or other high-GI sugar alcohols." },
+  { q: "Can fiber kick you out of ketosis?", a: "Standard dietary fiber does not kick you out of ketosis. However, soluble fiber is partially fermented by gut bacteria into short-chain fatty acids, which do provide a small number of calories (about 2 kcal/g vs 4 kcal/g for regular carbs) but do not raise blood glucose significantly." },
+  { q: "Is counting net carbs enough for keto, or should I count total carbs?", a: "Most people do well with net carbs. However, highly sensitive individuals or those with certain health conditions may find that even high-fiber foods affect their blood sugar. In those cases, some practitioners recommend counting total carbs. Start with net carbs and adjust based on your ketone levels." },
+  { q: "Do net carbs matter if I am not on keto?", a: "Net carbs are useful for anyone managing blood sugar, including people with type 2 diabetes or insulin resistance. Even on a standard diet, understanding the difference between fiber-rich carbs (which have a lower glycemic impact) and refined carbs helps make better food choices." },
+]} />
+
+## Related Tools
+
+- [Macro Calculator](/apps/macro-calculator) — Plan your macros for keto and low-carb diets
+- [Calorie Deficit Calculator](/apps/calorie-deficit-calculator) — Calculate your daily calorie target
+- [Daily Calorie Needs Calculator](/apps/daily-calorie-needs-calculator) — Find your TDEE
+- [BMI Calculator](/apps/bmi-calculator) — Track weight alongside your low-carb journey
+- [Alcohol Calorie Calculator](/apps/alcohol-calorie-calculator) — Count alcohol macros in your keto plan
+
+## Sources
+
+- Westman, E.C. et al. (2007). *Low-carbohydrate nutrition and metabolism.* American Journal of Clinical Nutrition
+- Grotz, V.L. et al. (2003). *Lack of effect of sucralose on glucose homeostasis in subjects with type 2 diabetes.* Journal of the American Dietetic Association
+- Atkins Nutritionals: Net Carb Concept — original popularization of net carb counting
+- European Food Safety Authority: [Dietary Reference Values for Carbohydrates](https://www.efsa.europa.eu/en/efsajournal/pub/1462)

@@ -93,6 +93,22 @@ const applications = {
 
         emoji: "💼",
       },
+      {
+        route: "raise-calculator",
+        displayName: "Raise Calculator",
+        shortDescription:
+          "Calculate the dollar and percentage increase from a salary raise.",
+
+        emoji: "💸",
+      },
+      {
+        route: "salary-comparison-calculator",
+        displayName: "Salary Comparison Calculator",
+        shortDescription:
+          "Compare two job offers side by side by hourly, monthly, and annual rate.",
+
+        emoji: "⚖️",
+      },
     ],
   },
   "Savings & Investments": {
@@ -259,6 +275,46 @@ const applications = {
           "Find out how much house you can afford using the 28/36 rule.",
 
         emoji: "🔑",
+      },
+      {
+        route: "budget-calculator",
+        displayName: "Budget Calculator",
+        shortDescription:
+          "Build a monthly budget, track income and expenses, and see your surplus or deficit.",
+
+        emoji: "💰",
+      },
+      {
+        route: "stock-profit-calculator",
+        displayName: "Stock Profit Calculator",
+        shortDescription:
+          "Calculate profit or loss from a stock trade including broker fees.",
+
+        emoji: "📊",
+      },
+      {
+        route: "dividend-calculator",
+        displayName: "Dividend Calculator",
+        shortDescription:
+          "Calculate annual dividend income and yield from shares and dividend per share.",
+
+        emoji: "💵",
+      },
+      {
+        route: "mortgage-refinance-calculator",
+        displayName: "Mortgage Refinance Calculator",
+        shortDescription:
+          "Estimate monthly savings and break-even point when refinancing your mortgage.",
+
+        emoji: "🏠",
+      },
+      {
+        route: "lease-vs-buy-calculator",
+        displayName: "Lease vs. Buy Calculator",
+        shortDescription:
+          "Compare total 5-year cost of leasing vs. buying a car.",
+
+        emoji: "🚘",
       },
     ],
   },
@@ -439,6 +495,54 @@ const applications = {
 
         emoji: "⚖️",
       },
+      {
+        route: "concrete-calculator",
+        displayName: "Concrete Calculator",
+        shortDescription:
+          "Calculate concrete volume in cubic yards and bags needed for slabs and footings.",
+
+        emoji: "🧱",
+      },
+      {
+        route: "wallpaper-calculator",
+        displayName: "Wallpaper Calculator",
+        shortDescription:
+          "Calculate how many wallpaper rolls you need based on room dimensions.",
+
+        emoji: "🖼️",
+      },
+      {
+        route: "fence-calculator",
+        displayName: "Fence Calculator",
+        shortDescription:
+          "Calculate fence materials including posts, rails, and pickets for any yard.",
+
+        emoji: "🪵",
+      },
+      {
+        route: "swimming-pool-volume-calculator",
+        displayName: "Swimming Pool Volume Calculator",
+        shortDescription:
+          "Calculate pool water volume in gallons and liters for rectangular or circular pools.",
+
+        emoji: "🏊",
+      },
+      {
+        route: "tip-splitter",
+        displayName: "Tip Splitter",
+        shortDescription:
+          "Split a restaurant bill with tip among any number of people.",
+
+        emoji: "🍽️",
+      },
+      {
+        route: "coffee-caffeine-calculator",
+        displayName: "Coffee Caffeine Calculator",
+        shortDescription:
+          "Calculate total caffeine intake from coffee, espresso, tea, and energy drinks.",
+
+        emoji: "☕",
+      },
     ],
   },
   "Health & Fitness": {
@@ -589,6 +693,62 @@ const applications = {
 
         emoji: "🫀",
       },
+      {
+        route: "one-rep-max-calculator",
+        displayName: "One Rep Max Calculator",
+        shortDescription:
+          "Estimate your 1RM for any lift using the Epley and Brzycki formulas.",
+
+        emoji: "🏋️",
+      },
+      {
+        route: "waist-to-hip-ratio-calculator",
+        displayName: "Waist-to-Hip Ratio Calculator",
+        shortDescription:
+          "Calculate your waist-to-hip ratio and health risk category per WHO guidelines.",
+
+        emoji: "📏",
+      },
+      {
+        route: "ovulation-calculator",
+        displayName: "Ovulation Calculator",
+        shortDescription:
+          "Find your fertile window and estimated ovulation day based on cycle length.",
+
+        emoji: "🌸",
+      },
+      {
+        route: "calorie-deficit-calculator",
+        displayName: "Calorie Deficit Calculator",
+        shortDescription:
+          "Calculate the daily calorie deficit needed to reach your weight-loss goal.",
+
+        emoji: "🔥",
+      },
+      {
+        route: "steps-to-calories-calculator",
+        displayName: "Steps to Calories Calculator",
+        shortDescription:
+          "Convert daily step count to calories burned using the MET method.",
+
+        emoji: "👣",
+      },
+      {
+        route: "alcohol-calorie-calculator",
+        displayName: "Alcohol Calorie Calculator",
+        shortDescription:
+          "Calculate calories in beer, wine, spirits, and cocktails per serving.",
+
+        emoji: "🍺",
+      },
+      {
+        route: "net-carb-calculator",
+        displayName: "Net Carb Calculator",
+        shortDescription:
+          "Calculate net carbs by subtracting fiber and sugar alcohols for keto diets.",
+
+        emoji: "🥑",
+      },
     ],
   },
   Tools: {
@@ -704,6 +864,38 @@ const applications = {
           "Set a countdown timer with hours, minutes, and seconds and get alerted when time is up.",
 
         emoji: "⏳",
+      },
+      {
+        route: "roman-numeral-converter",
+        displayName: "Roman Numeral Converter",
+        shortDescription:
+          "Convert between Arabic and Roman numerals instantly in both directions.",
+
+        emoji: "🏛️",
+      },
+      {
+        route: "text-case-converter",
+        displayName: "Text Case Converter",
+        shortDescription:
+          "Convert text between UPPER, lower, Title, camelCase, snake_case, and more.",
+
+        emoji: "🔡",
+      },
+      {
+        route: "base-converter",
+        displayName: "Base Converter",
+        shortDescription:
+          "Convert numbers between binary, octal, decimal, and hexadecimal instantly.",
+
+        emoji: "🔢",
+      },
+      {
+        route: "speed-distance-time-calculator",
+        displayName: "Speed Distance Time Calculator",
+        shortDescription:
+          "Calculate speed, distance, or time given the other two values.",
+
+        emoji: "⚡",
       },
     ],
   },
@@ -831,6 +1023,38 @@ const applications = {
 
         emoji: "🍼",
       },
+      {
+        route: "wheel-spinner",
+        displayName: "Wheel Spinner",
+        shortDescription:
+          "Spin a customizable wheel to randomly pick a winner or make a decision.",
+
+        emoji: "🎡",
+      },
+      {
+        route: "new-year-countdown",
+        displayName: "New Year Countdown",
+        shortDescription:
+          "Live countdown to New Year with days, hours, minutes, and seconds.",
+
+        emoji: "🎆",
+      },
+      {
+        route: "zodiac-sign-calculator",
+        displayName: "Zodiac Sign Calculator",
+        shortDescription:
+          "Find your Western zodiac sign, element, ruling planet, and personality traits.",
+
+        emoji: "♈",
+      },
+      {
+        route: "random-color-generator",
+        displayName: "Random Color Generator",
+        shortDescription:
+          "Generate random colors in HEX, RGB, and HSL with one-click copy and palette builder.",
+
+        emoji: "🎨",
+      },
     ],
   },
   Quizzes: {
@@ -902,6 +1126,22 @@ const applications = {
           "Look at a masterpiece and name the artist in this art history quiz.",
 
         emoji: "🎨",
+      },
+      {
+        route: "periodic-table-quiz",
+        displayName: "Periodic Table Quiz",
+        shortDescription:
+          "Test your chemistry knowledge by guessing element symbols, names, and atomic numbers.",
+
+        emoji: "⚗️",
+      },
+      {
+        route: "math-speed-quiz",
+        displayName: "Math Speed Quiz",
+        shortDescription:
+          "Race the clock with 10 arithmetic questions — choose difficulty and operations.",
+
+        emoji: "🧮",
       },
     ],
   },

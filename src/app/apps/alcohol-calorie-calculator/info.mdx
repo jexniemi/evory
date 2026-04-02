@@ -1,0 +1,95 @@
+import FAQ from "@/components/FAQ"
+
+## How the Alcohol Calorie Calculator Works
+
+Alcoholic drinks contribute calories from two sources: **the alcohol itself** and **the sugars, carbohydrates, and mixers** in the beverage.
+
+### Calories from Pure Alcohol
+
+Ethanol (pure alcohol) contains **7 kilocalories per gram** — more than carbohydrates (4 kcal/g) or protein (4 kcal/g), but less than fat (9 kcal/g).
+
+> **Alcohol calories = Volume (ml) × ABV% × 0.789 (density of ethanol) × 7**
+
+### Standard Drink Definition
+
+A "standard drink" contains 14 grams of pure alcohol (U.S. definition):
+
+- **Beer:** 12 oz (355 ml) at 5% ABV = 14 g alcohol
+- **Wine:** 5 oz (148 ml) at 12% ABV = 14 g alcohol
+- **Spirits:** 1.5 oz (44 ml) at 40% ABV = 14 g alcohol
+
+## Calorie Reference Guide
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Drink</th>
+      <th>Serving Size</th>
+      <th>Calories (approx.)</th>
+      <th>Alcohol (g)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Regular beer (5%)</td><td>355 ml (12 oz)</td><td>150 kcal</td><td>14 g</td></tr>
+    <tr><td>Light beer (4%)</td><td>355 ml (12 oz)</td><td>100 kcal</td><td>11 g</td></tr>
+    <tr><td>IPA / craft beer (7%)</td><td>355 ml (12 oz)</td><td>200–220 kcal</td><td>20 g</td></tr>
+    <tr><td>White wine (12%)</td><td>148 ml (5 oz)</td><td>120 kcal</td><td>14 g</td></tr>
+    <tr><td>Red wine (13.5%)</td><td>148 ml (5 oz)</td><td>125 kcal</td><td>16 g</td></tr>
+    <tr><td>Champagne/sparkling</td><td>148 ml (5 oz)</td><td>96 kcal</td><td>14 g</td></tr>
+    <tr><td>Vodka / gin / rum (40%)</td><td>44 ml (1.5 oz)</td><td>97 kcal</td><td>14 g</td></tr>
+    <tr><td>Whisky (40%)</td><td>44 ml (1.5 oz)</td><td>105 kcal</td><td>14 g</td></tr>
+    <tr><td>Margarita</td><td>200 ml</td><td>270 kcal</td><td>18 g</td></tr>
+    <tr><td>Piña colada</td><td>200 ml</td><td>490 kcal</td><td>14 g</td></tr>
+    <tr><td>Long Island Iced Tea</td><td>300 ml</td><td>543 kcal</td><td>40 g</td></tr>
+    <tr><td>Bloody Mary</td><td>300 ml</td><td>185 kcal</td><td>18 g</td></tr>
+    <tr><td>Hard seltzer (5%)</td><td>355 ml (12 oz)</td><td>100 kcal</td><td>14 g</td></tr>
+  </tbody>
+</table>
+
+## Why Alcohol Calories Are "Empty"
+
+Alcohol calories are often called "empty calories" because they provide virtually no nutrients — no vitamins, minerals, protein, or fiber. Beyond just the calorie count, alcohol also:
+
+- **Slows fat metabolism:** The liver prioritizes metabolizing alcohol over burning fat, temporarily halting fat oxidation
+- **Stimulates appetite:** Alcohol reduces inhibitions around food choices and increases appetite, particularly for high-calorie, salty, or fatty foods
+- **Disrupts sleep quality:** Even moderate drinking reduces REM sleep, which is linked to worse recovery, higher cortisol, and increased appetite the next day
+- **Lowers testosterone:** Even moderate alcohol consumption temporarily reduces testosterone levels, which can impair muscle protein synthesis
+
+## Alcohol and Weight Loss
+
+Alcohol does not automatically cause weight gain, but it makes weight management harder:
+
+1. **Caloric surplus:** A night out with 4–5 drinks can easily add 600–900 kcal on top of normal eating
+2. **Poor food choices:** Late-night snacking is common after drinking
+3. **Next-day effects:** Hangover-related fatigue and cravings often lead to higher calorie intake the next day
+4. **Reduced exercise:** Hangovers typically reduce workout frequency and performance
+
+**Lower-calorie strategies:**
+- Choose spirits with zero-calorie mixers (soda water, diet tonic) instead of juice or regular soda
+- Opt for light beer over regular or craft beer
+- Drink wine instead of cocktails (lower sugar)
+- Alternate alcoholic drinks with water
+- Avoid creamy, blended, or sugary cocktails
+
+<FAQ items={[
+  { q: "Which alcoholic drink is lowest in calories?", a: "Pure spirits (vodka, gin, rum, tequila, whisky) have the fewest calories at around 65–97 kcal per 1.5 oz shot. Mixed with zero-calorie drinks, spirits are the lowest-calorie option. Dry white wine and hard seltzers are also relatively low in calories." },
+  { q: "Does the body store alcohol as fat?", a: "Not directly. The body cannot store ethanol and prioritizes metabolizing it immediately. However, while metabolizing alcohol, fat oxidation is suppressed. Any dietary fat consumed alongside alcohol is more likely to be stored since the body is busy processing the alcohol." },
+  { q: "Does alcohol affect ketosis?", a: "Yes. Alcohol halts ketosis while the liver processes it. Alcohol itself has no carbs (in pure spirits) but it pauses fat burning. Some keto-friendly options include dry wine and spirits with zero-carb mixers, though frequent drinking can significantly slow ketogenic fat loss." },
+  { q: "How long does it take to burn off alcohol calories?", a: "The body metabolizes ethanol at about 7–10 g per hour regardless of diet or exercise. You cannot 'burn off' alcohol faster by exercising during drinking — you can only burn the additional food calories. A night with 4 standard drinks adds about 580–600 kcal of alcohol, requiring roughly 60 minutes of vigorous exercise to offset." },
+  { q: "Are there 'healthy' alcoholic drinks?", a: "No alcoholic drink is truly healthy — the ethanol itself carries health risks at any dose. However, dry red wine contains antioxidants (resveratrol, polyphenols) that have been associated with cardiovascular benefits in observational studies, though causation is debated. If drinking, moderation (1 drink/day for women, 2 for men per U.S. guidelines) minimizes harm." },
+]} />
+
+## Related Tools
+
+- [Calorie Deficit Calculator](/apps/calorie-deficit-calculator) — Adjust your calorie budget to account for drinking
+- [Daily Calorie Needs Calculator](/apps/daily-calorie-needs-calculator) — Find your maintenance calorie target
+- [BMI Calculator](/apps/bmi-calculator) — Track your weight and health status
+- [BAC Calculator](/apps/bac-calculator) — Calculate your blood alcohol concentration
+- [Macro Calculator](/apps/macro-calculator) — Plan macros around alcohol consumption
+
+## Sources
+
+- U.S. Department of Agriculture: [Dietary Guidelines for Americans — Alcohol](https://www.dietaryguidelines.gov/resources/2020-2025-dietary-guidelines-online-materials)
+- National Institute on Alcohol Abuse and Alcoholism: [What Is a Standard Drink?](https://www.niaaa.nih.gov/alcohol-health/overview-alcohol-consumption/what-standard-drink)
+- Shelmet, J.J. et al. (1988). *Ethanol causes acute inhibition of carbohydrate, fat, and protein oxidation.* Journal of Clinical Investigation
+- World Health Organization: [Alcohol](https://www.who.int/news-room/fact-sheets/detail/alcohol)

@@ -1,0 +1,108 @@
+import FAQ from "@/components/FAQ"
+
+## How the Steps to Calories Calculator Works
+
+This calculator estimates the calories burned from walking a given number of steps using the MET (Metabolic Equivalent of Task) method — the standard approach used in exercise science research.
+
+### The Formula
+
+> **Calories = MET × Body Weight (kg) × Time (hours)**
+>
+> **Distance (km) = Steps × 0.000762**
+>
+> **Time (hours) = Distance (km) ÷ Walking Speed (km/h)**
+
+The average stride length of 76.2 cm (0.762 m) is used, representing an adult of average height. Taller people tend to have longer strides and will cover more ground per step.
+
+### Worked Example
+
+- 10,000 steps at brisk walking pace (MET 3.5), body weight 70 kg
+- Distance: 10,000 × 0.000762 = **7.62 km**
+- Walking speed approx. 4.8 km/h
+- Time: 7.62 ÷ 4.8 = **1.59 hours**
+- Calories: 3.5 × 70 × 1.59 = **389 kcal**
+
+## MET Values for Different Walking Paces
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Walking Style</th>
+      <th>MET Value</th>
+      <th>Speed (km/h)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Very slow stroll</td><td>2.0</td><td>Under 3.2</td></tr>
+    <tr><td>Easy/casual walk</td><td>2.5–3.0</td><td>3.2–4.0</td></tr>
+    <tr><td>Moderate walk</td><td>3.5</td><td>4.0–5.0</td></tr>
+    <tr><td>Brisk walk</td><td>4.0–4.5</td><td>5.0–6.0</td></tr>
+    <tr><td>Power walk</td><td>5.0</td><td>6.0–7.0</td></tr>
+    <tr><td>Race walking</td><td>6.5–8.0</td><td>7.0–9.0</td></tr>
+  </tbody>
+</table>
+
+## Calories Burned at 10,000 Steps by Body Weight
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Body Weight</th>
+      <th>Slow Walk</th>
+      <th>Brisk Walk</th>
+      <th>Power Walk</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>50 kg</td><td>approx. 195 kcal</td><td>approx. 275 kcal</td><td>approx. 350 kcal</td></tr>
+    <tr><td>60 kg</td><td>approx. 235 kcal</td><td>approx. 330 kcal</td><td>approx. 420 kcal</td></tr>
+    <tr><td>70 kg</td><td>approx. 275 kcal</td><td>approx. 385 kcal</td><td>approx. 490 kcal</td></tr>
+    <tr><td>80 kg</td><td>approx. 315 kcal</td><td>approx. 440 kcal</td><td>approx. 560 kcal</td></tr>
+    <tr><td>90 kg</td><td>approx. 355 kcal</td><td>approx. 495 kcal</td><td>approx. 630 kcal</td></tr>
+    <tr><td>100 kg</td><td>approx. 395 kcal</td><td>approx. 550 kcal</td><td>approx. 700 kcal</td></tr>
+  </tbody>
+</table>
+
+## Why 10,000 Steps?
+
+The widely cited goal of **10,000 steps per day** originated from a Japanese pedometer marketing campaign in the 1960s (万歩計, "manpo-kei" — the 10,000-step meter). However, research has since validated its benefits:
+
+- A 2019 study in JAMA Internal Medicine found that women averaging 7,500 steps/day had **significantly lower mortality rates** than those averaging 2,700 steps/day
+- Benefits plateau around 7,500–10,000 steps for most health outcomes
+- Even 4,000–6,000 steps per day provides significant benefit over sedentary behavior
+
+A 2021 meta-analysis in the Lancet Public Health found that each additional 1,000 steps per day was associated with a **6% lower risk of all-cause mortality**.
+
+## Benefits of Regular Walking
+
+Walking is one of the most accessible forms of physical activity with well-documented health benefits:
+
+- **Cardiovascular health:** Reduces blood pressure, LDL cholesterol, and heart disease risk
+- **Weight management:** Combined with a calorie deficit, walking accelerates fat loss
+- **Mental health:** Walking reduces symptoms of depression and anxiety; even 10-minute walks improve mood
+- **Blood sugar control:** Post-meal walks significantly reduce blood glucose spikes
+- **Bone density:** Weight-bearing exercise like walking helps maintain bone mineral density
+- **Longevity:** Multiple large-scale studies show strong dose-response relationships between step count and lifespan
+
+<FAQ items={[
+  { q: "How many calories does 10,000 steps burn?", a: "For an average adult weighing 70 kg walking at a moderate pace, 10,000 steps burns approximately 300–400 calories. The exact amount depends on your body weight (heavier people burn more), walking pace, terrain (hills burn more), and individual metabolism." },
+  { q: "Does walking speed affect calories burned?", a: "Yes significantly. Walking at 6 km/h burns roughly 40–50% more calories per step than walking at 3.5 km/h, because the MET value increases from about 2.5 to 5.0. Brisk walking is one of the most efficient calorie-burning forms of walking." },
+  { q: "How accurate is the step-to-calorie conversion?", a: "This calculator provides estimates with typical accuracy of plus or minus 10–20%. Actual calorie burn varies based on individual fitness level, body composition, terrain, weather conditions, and gait efficiency. Fitness trackers using heart rate data provide somewhat better individual accuracy." },
+  { q: "Does walking on an incline burn more calories?", a: "Yes. Walking uphill at a 5% incline increases calorie burn by approximately 30–50% compared to flat ground walking at the same speed. The MET value for hill walking ranges from 5.0 to 8.0 depending on slope and pace." },
+  { q: "How do I increase my daily step count?", a: "Practical ways to add steps: take stairs instead of elevators, park farther away, walk during phone calls, take 10-minute walking breaks, walk to nearby errands, use a standing desk with short walks every hour, and aim for a 20-minute evening walk after dinner." },
+]} />
+
+## Related Tools
+
+- [Calorie Burn Calculator](/apps/calorie-burn-calculator) — Calculate calories burned for many activities
+- [Calorie Deficit Calculator](/apps/calorie-deficit-calculator) — Plan your daily calorie target for weight loss
+- [BMR Calculator](/apps/bmr-calculator) — Find your resting metabolic rate
+- [Daily Calorie Needs Calculator](/apps/daily-calorie-needs-calculator) — Calculate your full TDEE
+- [BMI Calculator](/apps/bmi-calculator) — Track your weight status alongside your steps goal
+
+## Sources
+
+- Saint-Maurice, P.F. et al. (2019). *Association of Daily Step Count and Step Intensity With Mortality Among US Adults.* JAMA
+- Paluch, A.E. et al. (2021). *Steps per Day and All-Cause Mortality in Adults.* The Lancet Public Health
+- Ainsworth, B.E. et al. (2011). *2011 Compendium of Physical Activities.* Medicine and Science in Sports and Exercise
+- U.S. Department of Health and Human Services: [Physical Activity Guidelines for Americans](https://health.gov/paguidelines)

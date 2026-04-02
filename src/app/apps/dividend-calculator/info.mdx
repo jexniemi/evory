@@ -1,0 +1,93 @@
+import FAQ from "@/components/FAQ"
+
+## How the Dividend Calculator Works
+
+This dividend calculator estimates the income you can expect from a dividend-paying investment. Enter the amount you have invested, the annual dividend yield, and how many years you plan to hold the investment. The calculator shows your expected annual dividend income, monthly income, and total dividends collected over the full period.
+
+### Dividend Income Formulas
+
+> **Annual Dividend Income = Investment Amount × (Yield% ÷ 100)**
+>
+> **Monthly Dividend Income = Annual Dividend ÷ 12**
+>
+> **Total Dividends = Annual Dividend × Years**
+
+### Worked Example
+
+You invest **$25,000** in a stock with a **3.8% annual dividend yield** and hold it for **15 years**:
+
+- Annual Dividend: $25,000 × 3.8% = **$950/year**
+- Monthly Dividend: $950 ÷ 12 = **$79.17/month**
+- Total Dividends: $950 × 15 = **$14,250 over 15 years**
+
+Note that this calculation assumes a fixed yield on the original investment. In practice, dividend reinvestment (DRIP) and share price changes affect the actual return significantly.
+
+## Understanding Dividends
+
+### What Is a Dividend?
+
+A dividend is a cash payment made by a company to its shareholders, typically from its profits. Dividends represent a return on your equity investment in the form of income rather than price appreciation. Not all stocks pay dividends — growth-oriented technology companies typically reinvest profits instead of distributing them.
+
+### Dividend Yield
+
+The dividend yield is the annual dividend per share divided by the current share price, expressed as a percentage. A stock trading at $50 per share that pays $2.00 in annual dividends has a dividend yield of 4%.
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Dividend Yield</th>
+      <th>Assessment</th>
+      <th>Typical Sector</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>0%</td><td>No dividend</td><td>Growth tech, early-stage companies</td></tr>
+    <tr><td>1–2%</td><td>Low yield</td><td>Large-cap growth stocks</td></tr>
+    <tr><td>2–4%</td><td>Moderate yield</td><td>Blue-chip companies, consumer staples</td></tr>
+    <tr><td>4–6%</td><td>High yield</td><td>REITs, utilities, telecom</td></tr>
+    <tr><td>Above 6%</td><td>Very high / check sustainability</td><td>MLPs, high-yield bond funds</td></tr>
+  </tbody>
+</table>
+
+An unusually high yield (above 7–8%) can be a warning sign — it may indicate the stock price has fallen sharply due to problems, making the yield temporarily high before a dividend cut.
+
+### Dividend Growth Investing
+
+Many investors focus not just on current yield but on dividend growth — companies that consistently raise their dividends each year. The "Dividend Aristocrats" are S&P 500 companies that have increased their dividend for at least 25 consecutive years. Companies like Coca-Cola, Johnson & Johnson, and Procter & Gamble have track records of 40–60+ consecutive annual increases.
+
+A stock starting with a 2% yield but growing its dividend by 7% annually will have a much higher yield on cost after 10–20 years than a static 4% yielder.
+
+### Dividend Reinvestment Plans (DRIP)
+
+A DRIP automatically reinvests dividends to purchase additional shares. Over time, this creates a compounding effect: more shares generate more dividends, which buy even more shares. The difference between reinvesting and spending dividends can be enormous over long periods — reinvesting can turn a modest dividend income into significant wealth accumulation.
+
+### Qualified vs. Ordinary Dividends
+
+In the United States, dividends are taxed in two ways:
+- **Qualified dividends** are taxed at favorable long-term capital gains rates (0%, 15%, or 20%)
+- **Ordinary dividends** are taxed as regular income at your marginal rate
+
+Most dividends from domestic stocks held for more than 60 days before the ex-dividend date are qualified. Foreign stocks and REITs often pay ordinary dividends. Holding dividend stocks in tax-advantaged accounts (IRA, 401k) eliminates dividend tax entirely.
+
+<FAQ items={[
+  { q: "What is a good dividend yield?", a: "A yield of 2–4% is considered solid and sustainable for most dividend stocks. Yields above 5% can be attractive but require careful analysis to ensure the dividend is sustainable and the company is financially healthy." },
+  { q: "How often are dividends paid?", a: "Most US companies pay dividends quarterly. Some pay monthly (common with REITs and income funds), semi-annually, or annually. Monthly dividend payers are popular with retirees who need regular income." },
+  { q: "What is the ex-dividend date?", a: "The ex-dividend date is the cutoff date to be eligible for the next dividend payment. You must own shares before the ex-dividend date to receive the dividend. Buying on or after the ex-dividend date means you will miss that payment." },
+  { q: "Can dividend income replace a salary?", a: "Yes, with a large enough portfolio. To generate $50,000/year in dividends at a 4% yield, you would need $1,250,000 invested. This is the foundation of dividend investing for retirement income." },
+  { q: "How does this calculator differ from a compound interest calculator?", a: "This calculator shows simple dividend income without reinvestment. A compound interest calculator shows how reinvesting dividends (DRIP) creates exponential growth over time. For the full picture, use the Compound Interest Calculator alongside this tool." },
+]} />
+
+## Related Tools
+
+- [Investment Return Calculator](/apps/investment-return-calculator) — Calculate total ROI on any investment
+- [Compound Interest Calculator](/apps/compound-interest-calculator) — Model dividend reinvestment and compound growth
+- [Stock Profit Calculator](/apps/stock-profit-calculator) — Calculate profit from stock trades
+- [Retirement Calculator](/apps/retirement-calculator) — Project retirement portfolio size and income
+- [Savings Goal Calculator](/apps/savings-goal-calculator) — Plan how long to reach a target portfolio value
+
+## Sources
+
+- Investopedia: [Dividend Yield](https://www.investopedia.com/terms/d/dividendyield.asp)
+- S&P Global: [Dividend Aristocrats Index](https://www.spglobal.com/)
+- IRS: [Qualified Dividends](https://www.irs.gov/taxtopics/tc404)
+- SEC: [Dividends and Taxes](https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks)

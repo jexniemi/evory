@@ -1,0 +1,109 @@
+import FAQ from "@/components/FAQ"
+
+## What Is Text Case?
+
+**Text case** refers to how the letters in a text are capitalized. Different programming languages, writing styles, documentation formats, and style guides have specific conventions about which case to use. Converting between them quickly can save significant time for developers, writers, and content creators.
+
+## Supported Case Formats
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Case Type</th>
+      <th>Example</th>
+      <th>Common Uses</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>UPPERCASE</td><td>HELLO WORLD</td><td>Acronyms, headings, emphasis</td></tr>
+    <tr><td>lowercase</td><td>hello world</td><td>CSS class names, URLs, general text</td></tr>
+    <tr><td>Title Case</td><td>Hello World</td><td>Article titles, book titles, headings</td></tr>
+    <tr><td>Sentence case</td><td>Hello world</td><td>Normal prose, UI labels</td></tr>
+    <tr><td>camelCase</td><td>helloWorld</td><td>JavaScript/TypeScript variables, Java</td></tr>
+    <tr><td>PascalCase</td><td>HelloWorld</td><td>Class names in most languages, React components</td></tr>
+    <tr><td>snake_case</td><td>hello_world</td><td>Python variables, database column names, file names</td></tr>
+    <tr><td>kebab-case</td><td>hello-world</td><td>CSS classes, HTML attributes, URLs, npm packages</td></tr>
+    <tr><td>SCREAMING_SNAKE_CASE</td><td>HELLO_WORLD</td><td>Constants in most programming languages</td></tr>
+  </tbody>
+</table>
+
+## Programming Language Conventions
+
+Each major programming language has its own case conventions:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Language</th>
+      <th>Variables</th>
+      <th>Functions</th>
+      <th>Classes</th>
+      <th>Constants</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>JavaScript / TypeScript</td><td>camelCase</td><td>camelCase</td><td>PascalCase</td><td>SCREAMING_SNAKE</td></tr>
+    <tr><td>Python</td><td>snake_case</td><td>snake_case</td><td>PascalCase</td><td>SCREAMING_SNAKE</td></tr>
+    <tr><td>Java / Kotlin</td><td>camelCase</td><td>camelCase</td><td>PascalCase</td><td>SCREAMING_SNAKE</td></tr>
+    <tr><td>Go</td><td>camelCase</td><td>camelCase / PascalCase</td><td>PascalCase</td><td>SCREAMING_SNAKE</td></tr>
+    <tr><td>Ruby</td><td>snake_case</td><td>snake_case</td><td>PascalCase</td><td>SCREAMING_SNAKE</td></tr>
+    <tr><td>Rust</td><td>snake_case</td><td>snake_case</td><td>PascalCase</td><td>SCREAMING_SNAKE</td></tr>
+    <tr><td>PHP</td><td>camelCase</td><td>camelCase</td><td>PascalCase</td><td>SCREAMING_SNAKE</td></tr>
+    <tr><td>CSS / HTML</td><td>kebab-case</td><td>kebab-case</td><td>—</td><td>—</td></tr>
+  </tbody>
+</table>
+
+## Title Case Rules
+
+Title case in English has nuanced rules that go beyond simply capitalizing every word. Style guides differ on which words to capitalize:
+
+**Always capitalize:**
+- The first and last word of the title
+- Nouns, verbs, adjectives, adverbs, pronouns
+- Words of four or more letters
+
+**Usually do not capitalize (unless first or last word):**
+- Articles: a, an, the
+- Short prepositions: at, by, for, in, of, on, to, up
+- Coordinating conjunctions: and, but, for, nor, or, so, yet
+
+This converter uses a simplified rule that capitalizes the first letter of every word, which is sufficient for most use cases.
+
+## Use Cases for Case Conversion
+
+**For developers:**
+- Renaming variables when switching between languages
+- Converting database column names to JavaScript property names
+- Generating code from data structures
+
+**For content creators:**
+- Formatting blog post and article titles
+- Preparing headings for SEO-optimized content
+- Fixing improperly cased imported text
+
+**For data processing:**
+- Normalizing user input for database storage
+- Standardizing CSV column headers
+- Cleaning scraped web data
+
+<FAQ items={[
+  { q: "What is the difference between camelCase and PascalCase?", a: "camelCase starts with a lowercase letter (helloWorld) while PascalCase starts with an uppercase letter (HelloWorld). Both have the first letter of each subsequent word capitalized. camelCase is common for variables and functions, while PascalCase is standard for class names." },
+  { q: "What is SCREAMING_SNAKE_CASE used for?", a: "SCREAMING_SNAKE_CASE (all capitals with underscores) is the universal convention for constants and environment variables in most programming languages. Examples: MAX_RETRY_COUNT, DATABASE_URL, API_KEY." },
+  { q: "Why does Python use snake_case instead of camelCase?", a: "Python's PEP 8 style guide explicitly recommends snake_case for variable and function names. The Python community considers snake_case more readable because the underscores provide clear visual separation between words, while camelCase relies on case differences that can be harder to see in long names." },
+  { q: "What is kebab-case?", a: "Kebab-case uses hyphens as separators (hello-world), resembling items on a kebab skewer. It is the standard for CSS class names, HTML attributes, URL slugs, and npm package names. It cannot be used for programming variables because the hyphen is interpreted as a minus operator." },
+  { q: "How do I handle special characters and numbers in case conversion?", a: "This converter treats numbers and most special characters as word separators. Spaces, underscores, and hyphens are used as delimiters when splitting words. Numbers are preserved in their original position within each word." },
+]} />
+
+## Related Tools
+
+- [Roman Numeral Converter](/apps/roman-numeral-converter) — Convert between Arabic and Roman numerals
+- [Base Converter](/apps/base-converter) — Convert between binary, decimal, hex, and octal
+- [QR Generator](/apps/qr-generator) — Generate QR codes from any text
+- [Percentage Calculator](/apps/percentage-calculator) — Quick percentage calculations
+- [Date Calculator](/apps/date-calculator) — Calculate durations and add days to dates
+
+## Sources
+
+- Python PEP 8: [Style Guide for Python Code](https://peps.python.org/pep-0008/)
+- Google JavaScript Style Guide: [Naming Conventions](https://google.github.io/styleguide/jsguide.html)
+- Mozilla Developer Network: [CSS Naming Conventions](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)

@@ -1,0 +1,111 @@
+import FAQ from "@/components/FAQ"
+
+## How the Swimming Pool Volume Calculator Works
+
+Knowing your pool's volume is essential for proper chemical treatment, pump sizing, and water change planning. This calculator computes the volume of a rectangular pool from its length, width, and average depth, returning the result in US gallons, liters, and cubic feet. For irregularly shaped pools, divide them into rectangular sections and add the volumes together.
+
+### Pool Volume Formula
+
+> **Volume (ft³) = Length × Width × Average Depth**
+>
+> **Volume (gallons) = Volume (ft³) × 7.48052**
+>
+> **Volume (liters) = Volume (gallons) × 3.78541**
+
+For pools with a sloped floor (shallow end to deep end), average depth = (shallow depth + deep depth) ÷ 2.
+
+### Worked Example
+
+A rectangular pool is 32 ft long, 16 ft wide, with a shallow end of 3.5 ft and deep end of 8 ft:
+
+- Average Depth: (3.5 + 8) ÷ 2 = **5.75 feet**
+- Volume (ft³): 32 × 16 × 5.75 = **2,944 cubic feet**
+- Volume (gallons): 2,944 × 7.48 = **22,017 gallons**
+- Volume (liters): 22,017 × 3.785 = **83,334 liters**
+
+## Why Pool Volume Matters
+
+### Chemical Dosing
+
+Every pool chemical — chlorine, pH adjusters, algaecide, clarifier — has a dosage expressed per 10,000 or 100,000 gallons. An incorrect volume estimate leads to underdosing (unsafe water, algae growth) or overdosing (chemical burns, equipment damage). Getting your volume right is the single most important step in pool water care.
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Pool Size (Gallons)</th>
+      <th>Common Use</th>
+      <th>Weekly Chlorine (approximate)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>5,000–10,000</td><td>Small above-ground pools</td><td>1–2 lbs of granular chlorine</td></tr>
+    <tr><td>10,000–20,000</td><td>Average in-ground pool</td><td>2–4 lbs</td></tr>
+    <tr><td>20,000–30,000</td><td>Large in-ground pool</td><td>4–6 lbs</td></tr>
+    <tr><td>Over 30,000</td><td>Commercial or resort pool</td><td>6+ lbs</td></tr>
+  </tbody>
+</table>
+
+### Pump and Filter Sizing
+
+A pool pump should turn over the entire water volume in 6–8 hours. To size a pump, divide your pool volume by the desired turnover time. For a 20,000-gallon pool with an 8-hour turnover:
+
+- Required flow rate: 20,000 ÷ 8 = **2,500 gallons per hour (GPH)**
+- Or approximately **41.7 GPM (gallons per minute)**
+
+Undersized pumps cannot maintain adequate circulation, leading to algae growth and poor chemical distribution. Oversized pumps waste energy and may damage filters.
+
+### Heating Costs
+
+Pool heating cost is directly proportional to volume. Every 1°F of temperature increase requires 8.33 BTUs per gallon of water. Heating a 15,000-gallon pool by 10°F requires approximately 1.25 million BTUs. Gas heaters rated at 400,000 BTU/hr would heat the pool by 10°F in about 3 hours plus heat losses.
+
+### Common Pool Shapes and Volume Adjustments
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Pool Shape</th>
+      <th>Formula</th>
+      <th>Multiplier</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Rectangle</td><td>L × W × D</td><td>1.0</td></tr>
+    <tr><td>Oval</td><td>L × W × D × 0.785</td><td>0.785</td></tr>
+    <tr><td>Round</td><td>Radius² × 3.14 × D</td><td>Pi</td></tr>
+    <tr><td>Kidney</td><td>(L1 + L2) × 0.45 × W × D</td><td>0.45</td></tr>
+    <tr><td>L-shaped</td><td>Sum of two rectangles</td><td>—</td></tr>
+  </tbody>
+</table>
+
+## Pool Water Chemistry Targets
+
+Maintaining proper water chemistry extends pool life and keeps swimmers safe. Always test water weekly:
+
+- **Free chlorine:** 1–3 ppm
+- **pH:** 7.4–7.6
+- **Total alkalinity:** 80–120 ppm
+- **Calcium hardness:** 200–400 ppm
+- **Cyanuric acid (stabilizer):** 30–50 ppm for outdoor pools
+
+<FAQ items={[
+  { q: "How many gallons is a typical backyard pool?", a: "An average residential in-ground pool holds 15,000–25,000 gallons. Above-ground pools typically hold 3,000–10,000 gallons. Olympic competition pools hold approximately 660,000 gallons." },
+  { q: "How do I calculate pool volume for an irregular shape?", a: "For L-shaped or freeform pools, divide the pool into rectangular sections. Calculate the volume of each section separately, then add them together for the total." },
+  { q: "How often should I change pool water?", a: "Residential pools typically need a partial water change (draining 1/3 of the volume) every 3–5 years due to total dissolved solids (TDS) buildup. Complete drains are needed every 5–7 years for resurfacing and major maintenance." },
+  { q: "How do I calculate the average depth of my pool?", a: "If your pool has a gradual slope, average depth = (shallow end depth + deep end depth) ÷ 2. For pools with a flat bottom that drops sharply, calculate each flat section separately." },
+  { q: "What is pool turnover rate?", a: "Turnover rate is the time it takes to circulate the entire pool volume through the filter once. The recommended residential rate is 6–8 hours. Running 2 complete turnovers per day is ideal for maintaining water quality." },
+]} />
+
+## Related Tools
+
+- [Concrete Calculator](/apps/concrete-calculator) — Estimate concrete for pool decking
+- [Area Converter](/apps/area-converter) — Convert pool area measurements
+- [Length Converter](/apps/length-converter) — Convert between feet and meters for pool dimensions
+- [Square Footage Calculator](/apps/square-footage-calculator) — Calculate pool deck surface area
+- [Temperature Converter](/apps/temperature-converter) — Convert water temperature between Celsius and Fahrenheit
+
+## Sources
+
+- Centers for Disease Control and Prevention: [Healthy Swimming](https://www.cdc.gov/healthyswimming/)
+- Pool & Hot Tub Alliance: [Water Chemistry Guidelines](https://www.phta.org/)
+- Pentair: [Pool Volume Guide](https://www.pentair.com/)
+- U.S. Department of Energy: [Pool Heating Energy Efficiency](https://www.energy.gov/energysaver/swimming-pool-systems)

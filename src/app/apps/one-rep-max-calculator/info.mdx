@@ -1,0 +1,106 @@
+import FAQ from "@/components/FAQ"
+
+## What Is a One-Rep Max (1RM)?
+
+Your **one-rep max (1RM)** is the maximum amount of weight you can lift for a single repetition of a given exercise with proper form. It is the gold standard for measuring absolute strength and serves as the basis for designing progressive resistance training programs.
+
+Rather than exhausting yourself with a true max attempt, this calculator estimates your 1RM from a sub-maximal performance (e.g., 8 reps at 80 kg) using two of the most validated prediction formulas in exercise science.
+
+## The Formulas Used
+
+### Epley Formula (1985)
+
+> **1RM = Weight × (1 + Reps ÷ 30)**
+
+Most widely cited formula in sports science literature. Slightly overestimates for higher rep ranges (above 10 reps).
+
+### Brzycki Formula (1993)
+
+> **1RM = Weight × 36 ÷ (37 − Reps)**
+
+Very accurate for low rep ranges (1–10 reps). Can become inaccurate above 10 reps.
+
+This calculator displays the **average of both formulas** for a balanced estimate.
+
+### Worked Example
+
+You squat 120 kg for 5 reps:
+- Epley: 120 × (1 + 5/30) = 120 × 1.167 = **140 kg**
+- Brzycki: 120 × 36 / (37 − 5) = 120 × 36/32 = **135 kg**
+- **Average estimate: 137.5 kg**
+
+## Training Intensity Zones
+
+Once you know your 1RM, use it to set weights for different training goals:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Goal</th>
+      <th>% of 1RM</th>
+      <th>Rep Range</th>
+      <th>Rest Period</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Maximum strength</td><td>90–100%</td><td>1–3</td><td>3–5 min</td></tr>
+    <tr><td>Strength / power</td><td>80–90%</td><td>3–5</td><td>2–4 min</td></tr>
+    <tr><td>Hypertrophy (muscle size)</td><td>67–80%</td><td>6–12</td><td>60–90 sec</td></tr>
+    <tr><td>Muscular endurance</td><td>50–67%</td><td>13–20+</td><td>30–60 sec</td></tr>
+    <tr><td>Active recovery</td><td>30–50%</td><td>15–25+</td><td>Minimal</td></tr>
+  </tbody>
+</table>
+
+## Strength Standards by Exercise
+
+These standards help you gauge your relative strength. Numbers are 1RM as a multiple of bodyweight:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Exercise</th>
+      <th>Beginner</th>
+      <th>Intermediate</th>
+      <th>Advanced</th>
+      <th>Elite</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Squat (male)</td><td>0.75× BW</td><td>1.5× BW</td><td>2.0× BW</td><td>2.5× BW</td></tr>
+    <tr><td>Deadlift (male)</td><td>1.0× BW</td><td>1.75× BW</td><td>2.5× BW</td><td>3.0× BW</td></tr>
+    <tr><td>Bench press (male)</td><td>0.5× BW</td><td>1.0× BW</td><td>1.5× BW</td><td>2.0× BW</td></tr>
+    <tr><td>Squat (female)</td><td>0.5× BW</td><td>1.0× BW</td><td>1.5× BW</td><td>2.0× BW</td></tr>
+    <tr><td>Deadlift (female)</td><td>0.75× BW</td><td>1.25× BW</td><td>1.75× BW</td><td>2.5× BW</td></tr>
+    <tr><td>Bench press (female)</td><td>0.25× BW</td><td>0.65× BW</td><td>1.0× BW</td><td>1.5× BW</td></tr>
+  </tbody>
+</table>
+
+## Tips for Accuracy
+
+- **Use 3–5 reps for best results.** The lower the rep count, the more accurate the estimate. At 10+ reps, prediction error increases.
+- **Test with proper form.** A sloppy 5-rep set gives a misleading 1RM estimate.
+- **Avoid testing to failure regularly.** Sub-maximal testing (stopping 1–2 reps before failure) is safer and still provides accurate estimates.
+- **Reassess every 4–8 weeks.** As you progress, update your 1RM to keep training loads appropriate.
+
+<FAQ items={[
+  { q: "Which formula is most accurate for the bench press?", a: "The Brzycki formula tends to be more accurate for low rep ranges (1–5 reps) on compound lifts like the bench press. The Epley formula works better for higher reps. Using the average of both gives reliable results across most situations." },
+  { q: "Should I actually attempt a true 1RM?", a: "True 1RM testing is best done only occasionally, under supervision, with a spotter, using a thoroughly warmed-up body. Most lifters benefit more from sub-maximal testing (3–5 rep sets) since it minimizes injury risk while still providing accurate estimates." },
+  { q: "How often should I recalculate my 1RM?", a: "Recalculate every 4–8 weeks as part of a program deload or transition. Beginners improve quickly and may need to update every 4 weeks; advanced lifters may reassess every 8–12 weeks." },
+  { q: "Why does my estimated 1RM feel different from my actual max?", a: "Prediction formulas are population averages. Individual differences in muscle fiber composition, neural efficiency, and technique mean your personal 1RM may be 5–10% higher or lower than the estimate. Treat it as a planning tool, not an exact measurement." },
+  { q: "Can I use this for exercises other than the big three?", a: "Yes, the formulas apply to any barbell or machine exercise. They are less reliable for bodyweight movements or exercises with unstable loads." },
+]} />
+
+## Related Tools
+
+- [BMI Calculator](/apps/bmi-calculator) — Assess your body mass index alongside your strength
+- [BMR Calculator](/apps/bmr-calculator) — Find your basal metabolic rate for nutrition planning
+- [Calorie Deficit Calculator](/apps/calorie-deficit-calculator) — Combine strength training with calorie management
+- [Macro Calculator](/apps/macro-calculator) — Plan protein intake to support muscle growth
+- [Heart Rate Calculator](/apps/heart-rate-calculator) — Define cardio training zones with your max heart rate
+
+## Sources
+
+- Epley, B. (1985). *Poundage Chart.* Boyd Epley Workout
+- Brzycki, M. (1993). *Strength Testing — Predicting a One-Rep Max from Reps-to-Fatigue.* Journal of Physical Education, Recreation and Dance
+- National Strength and Conditioning Association: [NSCA.com](https://www.nsca.com)
+- American College of Sports Medicine: [ACSM.org](https://www.acsm.org)

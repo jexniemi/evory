@@ -1,0 +1,111 @@
+import FAQ from "@/components/FAQ"
+
+## What Is a Calorie Deficit?
+
+A **calorie deficit** occurs when you consume fewer calories than your body burns over a given period. Your body makes up the energy shortfall by drawing on stored fat (and, to a lesser extent, muscle and glycogen), resulting in weight loss.
+
+> **Daily Deficit = TDEE − Daily Calorie Intake**
+
+Where **TDEE (Total Daily Energy Expenditure)** is the total number of calories your body burns per day, including activity.
+
+## The 7,700 kcal Rule
+
+One kilogram of body fat stores approximately **7,700 kilocalories** of energy. This means:
+
+> **Weekly fat loss (kg) = (Daily Deficit × 7) ÷ 7,700**
+
+Or inverted to find the required deficit for a target loss rate:
+
+> **Required Daily Deficit = Target Weekly Loss (kg) × 7,700 ÷ 7**
+
+### Worked Example
+
+- TDEE: 2,400 kcal/day
+- Target: 0.5 kg/week loss
+- Required daily deficit: (0.5 × 7,700) ÷ 7 = **550 kcal/day**
+- Daily calorie target: 2,400 − 550 = **1,850 kcal/day**
+
+## Recommended Deficit Rates
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Weekly Loss Target</th>
+      <th>Daily Deficit</th>
+      <th>Suitable For</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>0.25 kg/week</td><td>approx. 275 kcal/day</td><td>Maintenance/mild cut, athletes, near goal weight</td></tr>
+    <tr><td>0.5 kg/week</td><td>approx. 550 kcal/day</td><td>Standard fat loss — recommended for most people</td></tr>
+    <tr><td>0.75 kg/week</td><td>approx. 825 kcal/day</td><td>Faster cut — requires careful nutrition management</td></tr>
+    <tr><td>1.0 kg/week</td><td>approx. 1,100 kcal/day</td><td>Aggressive — only if TDEE is high enough to stay above 1,200 kcal</td></tr>
+  </tbody>
+</table>
+
+## Safe Calorie Floor
+
+**Do not go below 1,200 kcal/day for women or 1,500 kcal/day for men** without medical supervision. Very low calorie intakes can cause:
+
+- Muscle loss (your body catabolizes lean mass for energy)
+- Nutrient deficiencies
+- Hormonal disruption
+- Metabolic adaptation (the body downregulates TDEE in response to severe restriction)
+- Gallstone formation
+- Fatigue and cognitive impairment
+
+If your target deficit puts you below these floors, slow your pace — it's safer and produces better long-term results.
+
+## How to Find Your TDEE
+
+Your TDEE is your BMR (Basal Metabolic Rate) multiplied by an activity multiplier:
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Activity Level</th>
+      <th>Multiplier</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Sedentary</td><td>1.2</td><td>Desk job, little or no exercise</td></tr>
+    <tr><td>Lightly active</td><td>1.375</td><td>Light exercise 1–3 days/week</td></tr>
+    <tr><td>Moderately active</td><td>1.55</td><td>Moderate exercise 3–5 days/week</td></tr>
+    <tr><td>Very active</td><td>1.725</td><td>Hard exercise 6–7 days/week</td></tr>
+    <tr><td>Extra active</td><td>1.9</td><td>Physical job + hard training</td></tr>
+  </tbody>
+</table>
+
+## Maximizing Fat Loss While Preserving Muscle
+
+A calorie deficit alone does not guarantee you lose primarily fat. To protect muscle mass:
+
+1. **Eat adequate protein:** 1.6–2.2 g of protein per kg of body weight per day
+2. **Resistance train:** Strength training signals the body to preserve muscle tissue
+3. **Avoid very large deficits:** Deficits above 1,000 kcal/day accelerate muscle catabolism
+4. **Sleep 7–9 hours:** Sleep deprivation increases cortisol, promoting muscle breakdown
+5. **Diet breaks:** Periodic maintenance eating phases reset leptin levels and reduce metabolic adaptation
+
+<FAQ items={[
+  { q: "How do I calculate my TDEE?", a: "Use our BMR Calculator to find your basal metabolic rate, then multiply by your activity level (1.2 for sedentary, 1.375 for light activity, 1.55 for moderate, 1.725 for very active). This gives your TDEE — the total calories you burn per day." },
+  { q: "Is a 500 kcal/day deficit safe?", a: "Yes, for most adults a 500 kcal/day deficit is safe, sustainable, and produces approximately 0.5 kg of fat loss per week. This is the most commonly recommended rate. It avoids the metabolic adaptation and muscle loss associated with larger deficits." },
+  { q: "Why am I not losing weight in a deficit?", a: "The most common reasons are: underestimating calorie intake (portion sizes are often larger than assumed), overestimating exercise calorie burn, water retention masking fat loss on the scale, or metabolic adaptation reducing TDEE over time. Track food precisely for 2 weeks and reassess." },
+  { q: "Will I lose muscle in a calorie deficit?", a: "Some muscle loss is possible in any deficit, but it is minimized by eating high protein (at least 1.6 g per kg of body weight), resistance training, and avoiding deficits larger than 700–800 kcal/day. Studies show that trained individuals lose very little muscle with moderate deficits." },
+  { q: "How long should I be in a calorie deficit?", a: "Most practitioners recommend deficit phases of 8–16 weeks followed by a maintenance period of 4–8 weeks (a 'diet break'). Extended deficits (over 6 months without breaks) increase the risk of metabolic adaptation, hormonal issues, and muscle loss." },
+]} />
+
+## Related Tools
+
+- [BMR Calculator](/apps/bmr-calculator) — Find your basal metabolic rate
+- [Daily Calorie Needs Calculator](/apps/daily-calorie-needs-calculator) — Calculate your full TDEE
+- [Macro Calculator](/apps/macro-calculator) — Plan protein, carbs and fat for your cut
+- [BMI Calculator](/apps/bmi-calculator) — Assess your current weight status
+- [One Rep Max Calculator](/apps/one-rep-max-calculator) — Set strength training loads while in a deficit
+
+## Sources
+
+- Hall, K.D. et al. (2012). *Quantification of the effect of energy imbalance on bodyweight.* The Lancet
+- American College of Sports Medicine: [ACSM.org](https://www.acsm.org)
+- National Institutes of Health: [Very Low Calorie Diets](https://www.niddk.nih.gov/health-information/weight-management/very-low-calorie-diets)
+- Helms, E.R. et al. (2014). *Evidence-based recommendations for natural bodybuilding contest preparation.* Journal of the International Society of Sports Nutrition

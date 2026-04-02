@@ -1,0 +1,98 @@
+import FAQ from "@/components/FAQ"
+
+## How the Ovulation Calculator Works
+
+This tool estimates your **ovulation day** and **fertile window** based on two inputs: how many days ago your last period started, and your average menstrual cycle length. It uses the standard physiological model accepted by reproductive medicine:
+
+> **Ovulation Day = Cycle Length − 14**
+
+The luteal phase (from ovulation to the next period) is consistently about 14 days in most women, regardless of total cycle length. This makes it possible to predict ovulation by counting backward from the expected next period.
+
+### Fertile Window
+
+The fertile window spans roughly 6 days: the **five days before ovulation** plus **ovulation day itself**. This window exists because sperm can survive in the female reproductive tract for up to 5 days, while an egg can only be fertilized for 12–24 hours after release.
+
+> **Fertile Window = Day (cycle length − 19) through Day (cycle length − 13)**
+
+### Worked Example
+
+- Cycle length: 30 days
+- Ovulation day: 30 − 14 = **Day 16**
+- Fertile window: **Days 11–17** of the cycle
+- If today is day 8 of your cycle: ovulation is 8 days away
+
+## Cycle Length Reference
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Cycle Length</th>
+      <th>Ovulation Day</th>
+      <th>Fertile Window</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>21 days</td><td>Day 7</td><td>Days 2–8</td></tr>
+    <tr><td>24 days</td><td>Day 10</td><td>Days 5–11</td></tr>
+    <tr><td>26 days</td><td>Day 12</td><td>Days 7–13</td></tr>
+    <tr><td>28 days</td><td>Day 14</td><td>Days 9–15</td></tr>
+    <tr><td>30 days</td><td>Day 16</td><td>Days 11–17</td></tr>
+    <tr><td>32 days</td><td>Day 18</td><td>Days 13–19</td></tr>
+    <tr><td>35 days</td><td>Day 21</td><td>Days 16–22</td></tr>
+  </tbody>
+</table>
+
+## Signs of Ovulation
+
+Many women can identify ovulation through physical signs:
+
+- **Cervical mucus change:** Discharge becomes clear, slippery, and stretchy (like raw egg white) — this is the most fertile mucus
+- **Basal body temperature (BBT) rise:** Temperature rises by 0.2–0.5°C after ovulation and stays elevated until the next period
+- **Mittelschmerz:** Mild one-sided pelvic pain or cramping around ovulation
+- **Breast tenderness:** Some women experience breast sensitivity around ovulation
+- **Libido increase:** Many women naturally experience increased sex drive around the fertile window
+- **LH surge:** Detectable with ovulation prediction kits (OPKs) 24–36 hours before ovulation
+
+## Cycle Variations and Irregular Cycles
+
+The textbook 28-day cycle is actually less common than popular belief suggests. Research shows:
+
+- Normal cycles range from **21 to 35 days**
+- Cycle length varies from month to month, often by 2–7 days
+- Stress, illness, weight changes, and travel can shift ovulation timing significantly
+- Women approaching menopause often have more variable cycles
+
+This calculator works best for women with **regular cycles**. If your cycle varies by more than 7 days from month to month, consider tracking basal body temperature (BBT) or using ovulation predictor kits for more accurate results.
+
+## Understanding the Calculator's Limitations
+
+This tool provides estimates based on statistical averages. It should **not** be used as the sole method for contraception or fertility treatment planning. Factors that affect its accuracy include:
+
+- Stress-induced ovulation delays
+- Polycystic ovary syndrome (PCOS), which causes irregular ovulation
+- Thyroid disorders affecting cycle regularity
+- Recent hormonal contraceptive use
+- Breastfeeding (suppresses ovulation)
+
+<FAQ items={[
+  { q: "Can I get pregnant outside the fertile window?", a: "The probability is very low but not zero. Sperm can survive up to 5 days in the reproductive tract, and while eggs only live 12–24 hours, cycle variability means ovulation occasionally occurs earlier or later than predicted. For reliable contraception, do not rely solely on calendar-based methods." },
+  { q: "How accurate is this ovulation calculator?", a: "For women with regular cycles, calendar-based methods predict ovulation within 1–2 days for most cycles. However, cycle-to-cycle variation means the actual fertile window can shift. BBT tracking or ovulation predictor kits provide more precise, real-time data." },
+  { q: "What is the best day to conceive?", a: "The day with the highest conception probability is the day before ovulation and ovulation day itself. However, having intercourse every 1–2 days throughout the fertile window (days 5 before through 1 day after ovulation) maximizes chances." },
+  { q: "My cycle is irregular — can I still use this calculator?", a: "This calculator is less reliable for irregular cycles. If your periods vary by more than 7 days, track several cycles to find your shortest and longest. You can estimate a broader fertile window using your shortest cycle minus 18 days to longest cycle minus 11 days. Ovulation kits are more helpful in this case." },
+  { q: "When should I see a doctor about fertility?", a: "Consult a doctor if you are under 35 and have been trying to conceive for 12 months without success, or if you are over 35 and have tried for 6 months. Also see a doctor if you have very irregular cycles, painful periods, or a history of pelvic inflammatory disease." },
+]} />
+
+## Related Tools
+
+- [Pregnancy Calculator](/apps/pregnancy-calculator) — Calculate your due date from conception or LMP
+- [BMI Calculator](/apps/bmi-calculator) — Maintain a healthy weight for fertility
+- [Daily Calorie Needs Calculator](/apps/daily-calorie-needs-calculator) — Nutritional support for conception
+- [Age Calculator](/apps/age-calculator) — Calculate your exact age for medical purposes
+- [Heart Rate Calculator](/apps/heart-rate-calculator) — Monitor fitness during preconception
+
+## Sources
+
+- World Health Organization: [Family Planning / Contraception](https://www.who.int/news-room/fact-sheets/detail/family-planning-contraception)
+- American College of Obstetricians and Gynecologists: [ACOG.org](https://www.acog.org)
+- Wilcox, A.J. et al. (2000). *The timing of the "fertile window" in the menstrual cycle.* BMJ
+- National Health Service (UK): [How can I tell when I'm ovulating?](https://www.nhs.uk/pregnancy/trying-for-a-baby/how-to-get-pregnant/)

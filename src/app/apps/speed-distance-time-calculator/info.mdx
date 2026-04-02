@@ -1,0 +1,121 @@
+import FAQ from "@/components/FAQ"
+
+## The Speed-Distance-Time Relationship
+
+Speed, distance, and time are three fundamental physical quantities that are always mathematically related. Knowing any two allows you to calculate the third:
+
+> **Speed = Distance ÷ Time**
+>
+> **Distance = Speed × Time**
+>
+> **Time = Distance ÷ Speed**
+
+This is often taught using the "DST triangle" or "magic triangle" where you cover the quantity you want to find and the remaining two show the operation needed.
+
+## Worked Examples
+
+### Example 1: Finding Speed
+
+A car travels 240 km in 3 hours. What is its average speed?
+
+> Speed = 240 km ÷ 3 hours = **80 km/h**
+
+### Example 2: Finding Distance
+
+A train travels at 120 km/h for 2.5 hours. How far does it travel?
+
+> Distance = 120 km/h × 2.5 hours = **300 km**
+
+### Example 3: Finding Time
+
+A cyclist rides 45 km at an average speed of 18 km/h. How long does the journey take?
+
+> Time = 45 km ÷ 18 km/h = 2.5 hours = **2 hours 30 minutes**
+
+## Speed Unit Conversions
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>From</th>
+      <th>To km/h</th>
+      <th>To mph</th>
+      <th>To m/s</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1 km/h</td><td>1</td><td>0.6214</td><td>0.2778</td></tr>
+    <tr><td>1 mph</td><td>1.6093</td><td>1</td><td>0.4470</td></tr>
+    <tr><td>1 m/s</td><td>3.6</td><td>2.2369</td><td>1</td></tr>
+    <tr><td>1 knot</td><td>1.852</td><td>1.1508</td><td>0.5144</td></tr>
+  </tbody>
+</table>
+
+## Common Speed Reference Points
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Speed</th>
+      <th>km/h</th>
+      <th>mph</th>
+      <th>Context</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Walking pace</td><td>5</td><td>3.1</td><td>Average adult on flat ground</td></tr>
+    <tr><td>Jogging</td><td>8–10</td><td>5–6.2</td><td>Easy running pace</td></tr>
+    <tr><td>Cycling (casual)</td><td>15–20</td><td>9–12</td><td>Recreational cycling</td></tr>
+    <tr><td>Cycling (fast)</td><td>30–40</td><td>19–25</td><td>Road cycling / commute</td></tr>
+    <tr><td>City driving</td><td>30–50</td><td>19–31</td><td>Urban speed limits</td></tr>
+    <tr><td>Highway driving</td><td>100–130</td><td>62–81</td><td>Motorway limits</td></tr>
+    <tr><td>Speed of sound</td><td>1,235</td><td>767</td><td>At sea level, 20°C</td></tr>
+    <tr><td>Speed of light</td><td>1.08 billion</td><td>671 million</td><td>In vacuum</td></tr>
+  </tbody>
+</table>
+
+## Pace vs. Speed
+
+In running and cycling, **pace** is the inverse of speed — it measures how long it takes to cover a unit distance (e.g., minutes per kilometre):
+
+> **Pace (min/km) = 60 ÷ Speed (km/h)**
+
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Speed (km/h)</th>
+      <th>Pace (min/km)</th>
+      <th>5 km time</th>
+      <th>10 km time</th>
+      <th>Marathon time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>6 km/h</td><td>10:00 min/km</td><td>50:00</td><td>1:40:00</td><td>7:02:00</td></tr>
+    <tr><td>8 km/h</td><td>7:30 min/km</td><td>37:30</td><td>1:15:00</td><td>5:16:00</td></tr>
+    <tr><td>10 km/h</td><td>6:00 min/km</td><td>30:00</td><td>1:00:00</td><td>4:13:00</td></tr>
+    <tr><td>12 km/h</td><td>5:00 min/km</td><td>25:00</td><td>50:00</td><td>3:31:00</td></tr>
+    <tr><td>15 km/h</td><td>4:00 min/km</td><td>20:00</td><td>40:00</td><td>2:49:00</td></tr>
+  </tbody>
+</table>
+
+<FAQ items={[
+  { q: "How do I calculate average speed for a round trip?", a: "Average speed for a round trip is NOT the simple average of the two one-way speeds. The correct formula is: Average Speed = 2 × Speed1 × Speed2 ÷ (Speed1 + Speed2). For example, driving 60 km/h to a destination and 100 km/h back gives an average speed of 2 × 60 × 100 ÷ (60 + 100) = 75 km/h, not 80 km/h." },
+  { q: "What is the difference between speed and velocity?", a: "Speed is a scalar quantity — it only has magnitude (how fast). Velocity is a vector — it has both magnitude and direction. Average speed is total distance divided by total time; average velocity is total displacement (net change in position) divided by total time. For a round trip that returns to the start, average velocity is zero even if average speed is 100 km/h." },
+  { q: "How do I convert km/h to m/s?", a: "Divide by 3.6. So 90 km/h = 90 ÷ 3.6 = 25 m/s. Conversely, multiply m/s by 3.6 to get km/h. This works because there are 1000 meters in a km and 3600 seconds in an hour: 1 km/h = 1000 m ÷ 3600 s = 1/3.6 m/s." },
+  { q: "Why does time use decimals instead of minutes?", a: "This calculator uses decimal hours (e.g., 1.5 hours = 1 hour 30 minutes) to keep the math simple. In the formula, time must be in the same unit as the rate. If speed is km/h, time must be in hours. The result panel converts decimal hours to hours and minutes for readability." },
+  { q: "How do I calculate fuel consumption from speed and distance?", a: "Fuel consumption depends on speed, vehicle type, terrain, and driving style. As a rough guide, most petrol cars are most efficient at 80–90 km/h. Use our Fuel Cost Calculator or Driving Cost Calculator to estimate fuel costs for your journey." },
+]} />
+
+## Related Tools
+
+- [Fuel Cost Calculator](/apps/fuel-cost-calculator) — Calculate fuel cost for a trip
+- [Driving Cost Calculator](/apps/driving-cost-calculator) — Full driving cost including fuel and time
+- [Calorie Burn Calculator](/apps/calorie-burn-calculator) — Calories burned running or cycling at different paces
+- [Steps to Calories Calculator](/apps/steps-to-calories-calculator) — Convert steps to distance and calories
+- [Length Converter](/apps/length-converter) — Convert distances between km, miles, meters, and more
+
+## Sources
+
+- International Bureau of Weights and Measures (BIPM): [SI Units](https://www.bipm.org/en/measurement-units)
+- National Physical Laboratory (UK): [Speed of Sound and Light](https://www.npl.co.uk/resources/q-a/speed-of-light-sound)
