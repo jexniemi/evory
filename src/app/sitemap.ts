@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { apps } from "@/applications";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://ewory.com";
+  const baseUrl = "https://www.ewory.com";
   const now = new Date().toISOString();
 
   // Home page

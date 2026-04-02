@@ -24,8 +24,8 @@ export default function Page({
   Info,
 }: PageProps) {
   const pageUrl = route
-    ? `https://ewory.com/apps/${route}`
-    : "https://ewory.com";
+    ? `https://www.ewory.com/apps/${route}`
+    : "https://www.ewory.com";
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -43,7 +43,7 @@ export default function Page({
     author: {
       "@type": "Organization",
       name: "Ewory.com",
-      url: "https://ewory.com",
+      url: "https://www.ewory.com",
     },
   };
 
@@ -59,7 +59,7 @@ export default function Page({
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://ewory.com",
+      item: "https://www.ewory.com",
     },
   ];
 
@@ -68,7 +68,7 @@ export default function Page({
       "@type": "ListItem",
       position: 2,
       name: category.categoryName,
-      item: `https://ewory.com${category.categoryPath}`,
+      item: `https://www.ewory.com${category.categoryPath}`,
     });
   }
 

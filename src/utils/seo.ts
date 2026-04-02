@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-const BASE_URL = "https://ewory.com";
+const BASE_URL = "https://www.ewory.com";
 
 interface AppMetaInput {
   seoTitle?: string;

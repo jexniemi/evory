@@ -71,7 +71,7 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-4">
             <Link
-              href="https://ewory.com/"
+              href="https://www.ewory.com/"
               className="hover:text-gray-300 transition-colors"
             >
               In English: Ewory.com

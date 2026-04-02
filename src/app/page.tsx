@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Free online calculators and tools: mortgage, salary, BMI, tip, compound interest, tax, unit converters and more. No login, no ads — works instantly in your browser.",
   alternates: {
-    canonical: "https://ewory.com",
+    canonical: "https://www.ewory.com",
   },
 };
 
@@ -37,14 +37,14 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Ewory.com",
-    url: "https://ewory.com",
+    url: "https://www.ewory.com",
     description:
       "Free online calculators and tools for finance, health, and everyday life.",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://ewory.com/?q={search_term_string}",
+        urlTemplate: "https://www.ewory.com/?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },

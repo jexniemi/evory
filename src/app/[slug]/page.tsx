@@ -26,12 +26,12 @@ export async function generateMetadata({
     title,
     description,
     alternates: {
-      canonical: `https://ewory.com${category.path}`,
+      canonical: `https://www.ewory.com${category.path}`,
     },
     openGraph: {
       title,
       description,
-      url: `https://ewory.com${category.path}`,
+      url: `https://www.ewory.com${category.path}`,
     },
   };
 }

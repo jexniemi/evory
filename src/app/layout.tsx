@@ -10,7 +10,7 @@ import { Metadata } from "next";
 const gaTrackingId = "G-ZHP8R21E7S";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ewory.com"),
+  metadataBase: new URL("https://www.ewory.com"),
   title: {
     default: "Ewory.com — Free Online Calculators & Web Tools",
     template: "%s | Ewory.com",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Ewory.com — Free Online Calculators & Web Tools",
     description:
       "60+ free online calculators for finance, health, math, and everyday life. No login, no ads.",
-    url: "https://ewory.com",
+    url: "https://www.ewory.com",
     images: [
       {
         url: "/banner.png",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     images: ["/banner.png"],
   },
   alternates: {
-    canonical: "https://ewory.com",
+    canonical: "https://www.ewory.com",
   },
   robots: {
     index: true,
