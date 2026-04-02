@@ -24,6 +24,7 @@ export interface App {
   route: string;
   displayName: string;
   shortDescription: string;
+  emoji: string;
 }
 
 export interface Category {
@@ -31,4 +32,5 @@ export interface Category {
   color: string;
   path: string;
   apps: App[];
+  icon: string;
 }

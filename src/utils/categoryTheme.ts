@@ -87,7 +87,15 @@ const defaultTheme: CategoryTheme = {
 };
 
 export function getCategoryTheme(categoryName: string): CategoryTheme {
-  return categoryThemes[categoryName] ?? defaultTheme;
+  const baseTheme = categoryThemes[categoryName] ?? defaultTheme;
+  const categoryFromApps = apps[categoryName];
+  if (categoryFromApps?.icon) {
+    return {
+      ...baseTheme,
+      icon: categoryFromApps.icon,
+    };
+  }
+  return baseTheme;
 }
 
 /** Look up the category theme for a given app route */
@@ -112,123 +120,11 @@ export function getThemeBySlug(
   return undefined;
 }
 
-export const appIcons: Record<string, string> = {
-  // Salary & Taxes
-  "monthly-salary-calculator": "💵",
-  "hourly-salary-calculator": "⏱️",
-  "annual-salary-calculator": "📅",
-  "tax-percentage-calculator": "📊",
-  "vat-calculator": "🧾",
-  "net-salary-calculator": "💰",
-  "work-hours-calculator": "⏰",
-  "paycheck-calculator": "🏧",
-  "overtime-calculator": "🕐",
-  "tax-bracket-calculator": "🗂️",
-  "freelance-rate-calculator": "💼",
-  // Savings & Investments
-  "compound-interest-calculator": "📈",
-  "simple-compound-interest-calculator": "🔄",
-  "investment-return-calculator": "💹",
-  "loan-repayment-calculator": "🏦",
-  "installment-calculator": "💳",
-  "savings-goal-calculator": "🎯",
-  "401k-calculator": "🪙",
-  "social-security-calculator": "🏛️",
-  "mortgage-calculator": "🏠",
-  "down-payment-calculator": "🏡",
-  "rental-yield-calculator": "🏘️",
-  "debt-payoff-calculator": "🔓",
-  "retirement-calculator": "🌅",
-  "cd-calculator": "📜",
-  "student-loan-calculator": "🎓",
-  "roth-ira-calculator": "🏦",
-  "net-worth-calculator": "💎",
-  "inflation-calculator": "📉",
-  "emergency-fund-calculator": "🛡️",
-  "home-affordability-calculator": "🔑",
-  // Daily Life & Home
-  "percentage-calculator": "🔢",
-  "discount-calculator": "🏷️",
-  "tip-calculator": "🍽️",
-  "sales-tax-calculator": "🛒",
-  "electricity-bill-calculator": "💡",
-  "fuel-cost-calculator": "⛽",
-  "electric-car-trip-cost-calculator": "🔋",
-  "driving-cost-calculator": "🚗",
-  "price-per-square-foot-calculator": "📐",
-  "length-converter": "📏",
-  "weight-converter": "🏋️",
-  "currency-converter": "💱",
-  "speed-converter": "🚀",
-  "area-converter": "🗺️",
-  "portion-calculator": "🍳",
-  "gas-mileage-calculator": "🚘",
-  "unit-price-calculator": "🏪",
-  "paint-calculator": "🎨",
-  "moving-cost-calculator": "📦",
-  "square-footage-calculator": "🏗️",
-  "car-loan-calculator": "🚗",
-  "break-even-calculator": "⚖️",
-  // Health & Fitness
-  "bac-calculator": "🍺",
-  "bmi-calculator": "⚖️",
-  "bmr-calculator": "🔥",
-  "daily-calorie-needs-calculator": "🍎",
-  "sleep-needs-calculator": "😴",
-  "running-pace-calculator": "🏃",
-  "water-needs-calculator": "💧",
-  "macro-calculator": "🥗",
-  "sleep-cycle-calculator": "😪",
-  "pregnancy-calculator": "🤰",
-  "heart-rate-calculator": "❤️",
-  "calorie-burn-calculator": "🏅",
-  "wind-chill-calculator": "🌬️",
-  "body-fat-calculator": "💪",
-  "protein-intake-calculator": "🥩",
-  "ideal-weight-calculator": "🏆",
-  "due-date-calculator": "👶",
-  "blood-pressure-checker": "🫀",
-  // Tools
-  "temperature-converter": "🌡️",
-  "qr-generator": "📱",
-  "word-counter": "✍️",
-  "gpa-calculator": "📚",
-  "name-day-search": "🗓️",
-  "flight-carbon-footprint-calculator": "✈️",
-  "age-calculator": "🎂",
-  "date-calculator": "📆",
-  "random-number-generator": "🎲",
-  "time-zone-converter": "🌍",
-  "grade-calculator": "📋",
-  "password-generator": "🔐",
-  "character-counter": "🔤",
-  "json-formatter": "💻",
-  "countdown-timer": "⏳",
-  // Entertainment
-  "name-generator/dogs": "🐕",
-  "name-generator/cats": "🐈",
-  "name-generator": "🐾",
-  "vacation-days-calculator": "☀️",
-  "days-until-christmas": "🎄",
-  "trump-term-countdown": "🇺🇸",
-  "calendar-tool": "📆",
-  "flag-game": "🏁",
-  "military-insignia-quiz": "⭐",
-  "us-state-capitals-quiz": "🗺️",
-  "world-capitals-quiz": "🌐",
-  "us-presidents-quiz": "🏛️",
-  "car-logos-quiz": "🚗",
-  "planets-quiz": "🪐",
-  "famous-paintings-quiz": "🎨",
-  "dice-generator": "🎲",
-  horoscope: "♈",
-  "lottery-number-generator": "🎰",
-  "raffle-machine": "🎡",
-  "life-calculator": "⌛",
-  "coin-flip": "🪙",
-  "rock-paper-scissors": "✂️",
-  "love-calculator": "❤️",
-  "baby-name-generator": "🍼",
-  // Legacy / misc
-  "student-loan-credit-calculator": "🎓",
-};
+export const appIcons: Record<string, string> = {};
+Object.values(apps).forEach((category) => {
+  category.apps.forEach((app) => {
+    if (app.emoji) {
+      appIcons[app.route] = app.emoji;
+    }
+  });
+});
