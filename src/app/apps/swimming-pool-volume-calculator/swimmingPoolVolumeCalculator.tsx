@@ -15,12 +15,24 @@ const calculate = (values: number[]) => {
   const gallons = cubicFeet * 7.48052;
   const liters = gallons * 3.78541;
   return [
-    { result: gallons, label: "Volume (US Gallons)", suffix: " gal", decimals: 0 },
+    {
+      result: gallons,
+      label: "Volume (US Gallons)",
+      suffix: " gal",
+      decimals: 0,
+    },
     { result: liters, label: "Volume (Liters)", suffix: " L", decimals: 0 },
-    { result: cubicFeet, label: "Volume (Cubic Feet)", suffix: " ft³", decimals: 1 },
+    {
+      result: cubicFeet,
+      label: "Volume (Cubic Feet)",
+      suffix: " ft³",
+      decimals: 1,
+    },
   ];
 };
 
 export default function SwimmingPoolVolumeCalculator() {
-  return <SimpleCalculator inputs={inputs} calculate={calculate} suffix=" gal" />;
+  return (
+    <SimpleCalculator inputs={inputs} calculate={calculate} suffix=" gal" />
+  );
 }

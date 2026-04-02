@@ -15,7 +15,8 @@ export default function AlcoholCalorieCalculatorPage() {
 
 const pageProps = {
   title: "Alcohol Calorie Calculator",
-  seoTitle: "Alcohol Calorie Calculator – Calories in Beer, Wine & Spirits | ewory.com",
+  seoTitle:
+    "Alcohol Calorie Calculator – Calories in Beer, Wine & Spirits | ewory.com",
   description:
     "Calculate the calories in your alcoholic drinks. Find out how many calories are in beer, wine, shots and cocktails and how it affects your diet.",
   instructions:

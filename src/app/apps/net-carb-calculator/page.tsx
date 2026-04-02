@@ -15,7 +15,8 @@ export default function NetCarbCalculatorPage() {
 
 const pageProps = {
   title: "Net Carb Calculator",
-  seoTitle: "Net Carb Calculator – Keto Net Carbs from Total Carbs & Fiber | ewory.com",
+  seoTitle:
+    "Net Carb Calculator – Keto Net Carbs from Total Carbs & Fiber | ewory.com",
   description:
     "Calculate net carbs instantly for keto and low-carb diets. Subtract fiber and sugar alcohols from total carbs. Includes erythritol, xylitol, and maltitol.",
   instructions:

@@ -15,7 +15,8 @@ export default function FenceCalculatorPage() {
 
 const pageProps = {
   title: "Fence Calculator",
-  seoTitle: "Fence Calculator – How Many Posts and Panels Do I Need? | ewory.com",
+  seoTitle:
+    "Fence Calculator – How Many Posts and Panels Do I Need? | ewory.com",
   description:
     "Calculate how many fence posts, panels, and bags of concrete you need for your fencing project. Free online fence material estimator.",
   instructions:

@@ -23,7 +23,12 @@ const calculate = (values: number[]) => {
     { result: tip, label: "Total Tip", suffix: " $", decimals: 2 },
     { result: total, label: "Total Bill", suffix: " $", decimals: 2 },
     { result: perPerson, label: "Per Person", suffix: " $", decimals: 2 },
-    { result: tipPerPerson, label: "Tip Per Person", suffix: " $", decimals: 2 },
+    {
+      result: tipPerPerson,
+      label: "Tip Per Person",
+      suffix: " $",
+      decimals: 2,
+    },
   ];
 };
 

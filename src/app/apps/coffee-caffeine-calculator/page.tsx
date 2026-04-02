@@ -15,7 +15,8 @@ export default function CoffeeCaffeineCalculatorPage() {
 
 const pageProps = {
   title: "Coffee Caffeine Calculator",
-  seoTitle: "Caffeine Calculator – How Much Caffeine Am I Consuming? | ewory.com",
+  seoTitle:
+    "Caffeine Calculator – How Much Caffeine Am I Consuming? | ewory.com",
   description:
     "Calculate total daily caffeine intake from espresso, coffee, energy drinks, and tea. See how close you are to the safe daily limit of 400 mg.",
   instructions:

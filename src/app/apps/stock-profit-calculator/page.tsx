@@ -15,7 +15,8 @@ export default function StockProfitCalculatorPage() {
 
 const pageProps = {
   title: "Stock Profit Calculator",
-  seoTitle: "Stock Profit Calculator – Calculate Stock Gain, Loss & ROI | ewory.com",
+  seoTitle:
+    "Stock Profit Calculator – Calculate Stock Gain, Loss & ROI | ewory.com",
   description:
     "Calculate stock profit or loss from buy price, number of shares, and sell price. See total invested, total received, and ROI percentage.",
   instructions:

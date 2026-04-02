@@ -22,9 +22,24 @@ const calculate = (values: number[]) => {
   const difference = leaseTotalCost - buyNetCost;
 
   return [
-    { result: leaseTotalCost, label: "Total Lease Cost", suffix: " $", decimals: 0 },
-    { result: buyNetCost, label: "Net Buy Cost (after resale)", suffix: " $", decimals: 0 },
-    { result: Math.abs(difference), label: difference > 0 ? "Buying saves you" : "Leasing saves you", suffix: " $", decimals: 0 },
+    {
+      result: leaseTotalCost,
+      label: "Total Lease Cost",
+      suffix: " $",
+      decimals: 0,
+    },
+    {
+      result: buyNetCost,
+      label: "Net Buy Cost (after resale)",
+      suffix: " $",
+      decimals: 0,
+    },
+    {
+      result: Math.abs(difference),
+      label: difference > 0 ? "Buying saves you" : "Leasing saves you",
+      suffix: " $",
+      decimals: 0,
+    },
   ];
 };
 

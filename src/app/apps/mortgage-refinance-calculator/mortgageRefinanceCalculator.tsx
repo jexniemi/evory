@@ -12,12 +12,28 @@ const calculate = (values: number[]) => {
   const newPayment = values[1];
   const closingCosts = values[2];
   const monthlySavings = currentPayment - newPayment;
-  const breakEvenMonths = monthlySavings > 0 ? closingCosts / monthlySavings : 0;
+  const breakEvenMonths =
+    monthlySavings > 0 ? closingCosts / monthlySavings : 0;
   const fiveYearSavings = monthlySavings * 60 - closingCosts;
   return [
-    { result: monthlySavings, label: "Monthly Savings", suffix: " $", decimals: 2 },
-    { result: breakEvenMonths, label: "Break-Even (months)", suffix: " months", decimals: 1 },
-    { result: fiveYearSavings, label: "Net Savings After 5 Years", suffix: " $", decimals: 0 },
+    {
+      result: monthlySavings,
+      label: "Monthly Savings",
+      suffix: " $",
+      decimals: 2,
+    },
+    {
+      result: breakEvenMonths,
+      label: "Break-Even (months)",
+      suffix: " months",
+      decimals: 1,
+    },
+    {
+      result: fiveYearSavings,
+      label: "Net Savings After 5 Years",
+      suffix: " $",
+      decimals: 0,
+    },
   ];
 };
 

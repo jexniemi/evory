@@ -15,7 +15,8 @@ export default function TextCaseConverterPage() {
 
 const pageProps = {
   title: "Text Case Converter",
-  seoTitle: "Text Case Converter – UPPERCASE, camelCase, snake_case & More | ewory.com",
+  seoTitle:
+    "Text Case Converter – UPPERCASE, camelCase, snake_case & More | ewory.com",
   description:
     "Convert text between uppercase, lowercase, title case, camelCase, PascalCase, snake_case, kebab-case and more. Free online text case converter.",
   instructions:

@@ -26,11 +26,23 @@ const calculate = (values: number[]) => {
 
   return [
     { result: netArea, label: "Net Wall Area", suffix: " ft²", decimals: 0 },
-    { result: netAreaWithWaste, label: "Area with 10% Waste", suffix: " ft²", decimals: 0 },
-    { result: Math.ceil(rollsNeeded), label: "Rolls of Wallpaper Needed", suffix: " rolls", decimals: 0 },
+    {
+      result: netAreaWithWaste,
+      label: "Area with 10% Waste",
+      suffix: " ft²",
+      decimals: 0,
+    },
+    {
+      result: Math.ceil(rollsNeeded),
+      label: "Rolls of Wallpaper Needed",
+      suffix: " rolls",
+      decimals: 0,
+    },
   ];
 };
 
 export default function WallpaperCalculator() {
-  return <SimpleCalculator inputs={inputs} calculate={calculate} suffix=" rolls" />;
+  return (
+    <SimpleCalculator inputs={inputs} calculate={calculate} suffix=" rolls" />
+  );
 }

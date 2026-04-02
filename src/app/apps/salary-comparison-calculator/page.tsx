@@ -15,7 +15,8 @@ export default function SalaryComparisonCalculatorPage() {
 
 const pageProps = {
   title: "Salary Comparison Calculator",
-  seoTitle: "Salary Comparison Calculator – Compare Two Salaries Side by Side | ewory.com",
+  seoTitle:
+    "Salary Comparison Calculator – Compare Two Salaries Side by Side | ewory.com",
   description:
     "Compare two salaries instantly. See annual, monthly, and weekly dollar difference and which offer is higher by what percentage.",
   instructions:

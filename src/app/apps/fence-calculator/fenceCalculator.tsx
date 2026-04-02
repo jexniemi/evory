@@ -17,12 +17,29 @@ const calculate = (values: number[]) => {
   const concreteBags = posts * 1; // ~1 bag per post for standard 4x4
 
   return [
-    { result: posts, label: "Fence Posts Needed", suffix: " posts", decimals: 0 },
-    { result: panels, label: "Fence Panels Needed", suffix: " panels", decimals: 0 },
-    { result: concreteBags, label: "Concrete Bags (1 per post)", suffix: " bags", decimals: 0 },
+    {
+      result: posts,
+      label: "Fence Posts Needed",
+      suffix: " posts",
+      decimals: 0,
+    },
+    {
+      result: panels,
+      label: "Fence Panels Needed",
+      suffix: " panels",
+      decimals: 0,
+    },
+    {
+      result: concreteBags,
+      label: "Concrete Bags (1 per post)",
+      suffix: " bags",
+      decimals: 0,
+    },
   ];
 };
 
 export default function FenceCalculator() {
-  return <SimpleCalculator inputs={inputs} calculate={calculate} suffix=" posts" />;
+  return (
+    <SimpleCalculator inputs={inputs} calculate={calculate} suffix=" posts" />
+  );
 }

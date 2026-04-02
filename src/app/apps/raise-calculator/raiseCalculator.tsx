@@ -13,9 +13,24 @@ const calculate = (values: number[]) => {
   const annualIncrease = newSalary - current;
   const monthlyIncrease = annualIncrease / 12;
   return [
-    { result: newSalary, label: "New Annual Salary", suffix: " $", decimals: 0 },
-    { result: annualIncrease, label: "Annual Increase", suffix: " $", decimals: 0 },
-    { result: monthlyIncrease, label: "Monthly Increase", suffix: " $", decimals: 2 },
+    {
+      result: newSalary,
+      label: "New Annual Salary",
+      suffix: " $",
+      decimals: 0,
+    },
+    {
+      result: annualIncrease,
+      label: "Annual Increase",
+      suffix: " $",
+      decimals: 0,
+    },
+    {
+      result: monthlyIncrease,
+      label: "Monthly Increase",
+      suffix: " $",
+      decimals: 2,
+    },
   ];
 };
 

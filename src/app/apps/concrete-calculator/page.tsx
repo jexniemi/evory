@@ -15,7 +15,8 @@ export default function ConcreteCalculatorPage() {
 
 const pageProps = {
   title: "Concrete Calculator",
-  seoTitle: "Concrete Calculator – How Many Bags of Concrete Do I Need? | ewory.com",
+  seoTitle:
+    "Concrete Calculator – How Many Bags of Concrete Do I Need? | ewory.com",
   description:
     "Calculate how many 60-lb or 80-lb bags of concrete you need for any slab, footing, or project. Instant results in cubic feet and cubic yards.",
   instructions:

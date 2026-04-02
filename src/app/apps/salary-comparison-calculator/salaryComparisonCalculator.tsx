@@ -15,9 +15,24 @@ const calculate = (values: number[]) => {
   const weeklyDiff = diff / 52;
   return [
     { result: diff, label: "Annual Difference", suffix: " $", decimals: 0 },
-    { result: pctHigher, label: "Salary B is higher by", suffix: " %", decimals: 2 },
-    { result: monthlyDiff, label: "Monthly Difference", suffix: " $", decimals: 2 },
-    { result: weeklyDiff, label: "Weekly Difference", suffix: " $", decimals: 2 },
+    {
+      result: pctHigher,
+      label: "Salary B is higher by",
+      suffix: " %",
+      decimals: 2,
+    },
+    {
+      result: monthlyDiff,
+      label: "Monthly Difference",
+      suffix: " $",
+      decimals: 2,
+    },
+    {
+      result: weeklyDiff,
+      label: "Weekly Difference",
+      suffix: " $",
+      decimals: 2,
+    },
   ];
 };
 

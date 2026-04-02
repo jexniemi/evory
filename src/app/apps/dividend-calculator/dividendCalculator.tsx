@@ -15,9 +15,24 @@ const calculate = (values: number[]) => {
   const monthlyDividend = annualDividend / 12;
   const totalDividends = annualDividend * years;
   return [
-    { result: annualDividend, label: "Annual Dividend Income", suffix: " $", decimals: 2 },
-    { result: monthlyDividend, label: "Monthly Dividend Income", suffix: " $", decimals: 2 },
-    { result: totalDividends, label: `Total Dividends (${years} yrs)`, suffix: " $", decimals: 2 },
+    {
+      result: annualDividend,
+      label: "Annual Dividend Income",
+      suffix: " $",
+      decimals: 2,
+    },
+    {
+      result: monthlyDividend,
+      label: "Monthly Dividend Income",
+      suffix: " $",
+      decimals: 2,
+    },
+    {
+      result: totalDividends,
+      label: `Total Dividends (${years} yrs)`,
+      suffix: " $",
+      decimals: 2,
+    },
   ];
 };
 

@@ -1,37 +1,41 @@
-"use client"
+"use client";
 
-import { useState } from "react"
+import { useState } from "react";
 
-type Mode = "speed" | "distance" | "time"
+type Mode = "speed" | "distance" | "time";
 
 const MODES: { mode: Mode; label: string; desc: string }[] = [
   { mode: "speed", label: "Calculate Speed", desc: "I know distance and time" },
-  { mode: "distance", label: "Calculate Distance", desc: "I know speed and time" },
+  {
+    mode: "distance",
+    label: "Calculate Distance",
+    desc: "I know speed and time",
+  },
   { mode: "time", label: "Calculate Time", desc: "I know speed and distance" },
-]
+];
 
 function formatTime(hours: number): string {
-  if (!isFinite(hours) || hours <= 0) return "—"
-  const h = Math.floor(hours)
-  const m = Math.round((hours - h) * 60)
-  if (h === 0) return `${m} min`
-  if (m === 0) return `${h} hr`
-  return `${h} hr ${m} min`
+  if (!isFinite(hours) || hours <= 0) return "—";
+  const h = Math.floor(hours);
+  const m = Math.round((hours - h) * 60);
+  if (h === 0) return `${m} min`;
+  if (m === 0) return `${h} hr`;
+  return `${h} hr ${m} min`;
 }
 
 export default function SpeedDistanceTimeCalculator() {
-  const [mode, setMode] = useState<Mode>("speed")
-  const [distance, setDistance] = useState(100)
-  const [time, setTime] = useState(1)
-  const [speed, setSpeed] = useState(100)
+  const [mode, setMode] = useState<Mode>("speed");
+  const [distance, setDistance] = useState(100);
+  const [time, setTime] = useState(1);
+  const [speed, setSpeed] = useState(100);
 
-  const calcSpeed = mode === "speed" ? distance / time : speed
-  const calcDistance = mode === "distance" ? speed * time : distance
-  const calcTime = mode === "time" ? distance / speed : time
+  const calcSpeed = mode === "speed" ? distance / time : speed;
+  const calcDistance = mode === "distance" ? speed * time : distance;
+  const calcTime = mode === "time" ? distance / speed : time;
 
-  const resultSpeed = calcSpeed
-  const resultDistance = calcDistance
-  const resultTime = calcTime
+  const resultSpeed = calcSpeed;
+  const resultDistance = calcDistance;
+  const resultTime = calcTime;
 
   return (
     <div className="max-w-lg mx-auto space-y-5 p-4">
@@ -103,9 +107,18 @@ export default function SpeedDistanceTimeCalculator() {
               label="Speed"
               color="amber"
               values={[
-                { value: `${Math.round(resultSpeed * 10) / 10} km/h`, note: "kilometres per hour" },
-                { value: `${Math.round(resultSpeed * 0.6214 * 10) / 10} mph`, note: "miles per hour" },
-                { value: `${Math.round(resultSpeed / 3.6 * 10) / 10} m/s`, note: "metres per second" },
+                {
+                  value: `${Math.round(resultSpeed * 10) / 10} km/h`,
+                  note: "kilometres per hour",
+                },
+                {
+                  value: `${Math.round(resultSpeed * 0.6214 * 10) / 10} mph`,
+                  note: "miles per hour",
+                },
+                {
+                  value: `${Math.round((resultSpeed / 3.6) * 10) / 10} m/s`,
+                  note: "metres per second",
+                },
               ]}
             />
             <ResultCard
@@ -123,8 +136,14 @@ export default function SpeedDistanceTimeCalculator() {
             label="Distance"
             color="amber"
             values={[
-              { value: `${Math.round(resultDistance * 10) / 10} km`, note: "kilometres" },
-              { value: `${Math.round(resultDistance * 0.6214 * 10) / 10} miles`, note: "miles" },
+              {
+                value: `${Math.round(resultDistance * 10) / 10} km`,
+                note: "kilometres",
+              },
+              {
+                value: `${Math.round(resultDistance * 0.6214 * 10) / 10} miles`,
+                note: "miles",
+              },
               { value: formatTime(resultTime), note: "at given speed" },
             ]}
           />
@@ -135,14 +154,20 @@ export default function SpeedDistanceTimeCalculator() {
             color="amber"
             values={[
               { value: formatTime(resultTime), note: "hours and minutes" },
-              { value: `${Math.round(resultTime * 60)} min total`, note: "total minutes" },
-              { value: `${Math.round(resultTime * 10) / 10} hours`, note: "decimal hours" },
+              {
+                value: `${Math.round(resultTime * 60)} min total`,
+                note: "total minutes",
+              },
+              {
+                value: `${Math.round(resultTime * 10) / 10} hours`,
+                note: "decimal hours",
+              },
             ]}
           />
         )}
       </div>
     </div>
-  )
+  );
 }
 
 function ResultCard({
@@ -150,19 +175,21 @@ function ResultCard({
   color,
   values,
 }: {
-  label: string
-  color: "amber" | "sky"
-  values: { value: string; note: string }[]
+  label: string;
+  color: "amber" | "sky";
+  values: { value: string; note: string }[];
 }) {
   const colorClasses =
     color === "amber"
       ? "bg-amber-50 border-amber-200 border-l-amber-400 text-amber-700 text-amber-900"
-      : "bg-sky-50 border-sky-200 border-l-sky-400 text-sky-700 text-sky-900"
+      : "bg-sky-50 border-sky-200 border-l-sky-400 text-sky-700 text-sky-900";
 
-  const [bg, border, accent, labelColor, valueColor] = colorClasses.split(" ")
+  const [bg, border, accent, labelColor, valueColor] = colorClasses.split(" ");
 
   return (
-    <div className={`p-4 rounded-lg ${bg} border ${border} border-l-4 ${accent}`}>
+    <div
+      className={`p-4 rounded-lg ${bg} border ${border} border-l-4 ${accent}`}
+    >
       <p className={`text-xs font-medium ${labelColor} mb-2`}>{label}</p>
       <div className="space-y-1">
         {values.map(({ value, note }, i) => (
@@ -173,5 +200,5 @@ function ResultCard({
         ))}
       </div>
     </div>
-  )
+  );
 }

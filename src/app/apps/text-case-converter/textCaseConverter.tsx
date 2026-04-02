@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useState } from "react"
+import { useState } from "react";
 
 const cases = [
   "UPPERCASE",
@@ -12,54 +12,60 @@ const cases = [
   "snake_case",
   "kebab-case",
   "SCREAMING_SNAKE_CASE",
-] as const
+] as const;
 
-type CaseType = typeof cases[number]
+type CaseType = (typeof cases)[number];
 
 function convertCase(text: string, target: CaseType): string {
-  if (!text) return ""
-  const words = text.trim().split(/[\s_\-]+/)
+  if (!text) return "";
+  const words = text.trim().split(/[\s_\-]+/);
 
   switch (target) {
     case "UPPERCASE":
-      return text.toUpperCase()
+      return text.toUpperCase();
     case "lowercase":
-      return text.toLowerCase()
+      return text.toLowerCase();
     case "Title Case":
-      return words.map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(" ")
+      return words
+        .map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+        .join(" ");
     case "Sentence case": {
-      const lower = text.toLowerCase()
-      return lower.charAt(0).toUpperCase() + lower.slice(1)
+      const lower = text.toLowerCase();
+      return lower.charAt(0).toUpperCase() + lower.slice(1);
     }
     case "camelCase":
       return words
         .map((w, i) =>
-          i === 0 ? w.toLowerCase() : w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
+          i === 0
+            ? w.toLowerCase()
+            : w.charAt(0).toUpperCase() + w.slice(1).toLowerCase(),
         )
-        .join("")
+        .join("");
     case "PascalCase":
-      return words.map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join("")
+      return words
+        .map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+        .join("");
     case "snake_case":
-      return words.map((w) => w.toLowerCase()).join("_")
+      return words.map((w) => w.toLowerCase()).join("_");
     case "kebab-case":
-      return words.map((w) => w.toLowerCase()).join("-")
+      return words.map((w) => w.toLowerCase()).join("-");
     case "SCREAMING_SNAKE_CASE":
-      return words.map((w) => w.toUpperCase()).join("_")
+      return words.map((w) => w.toUpperCase()).join("_");
     default:
-      return text
+      return text;
   }
 }
 
 export default function TextCaseConverter() {
-  const [input, setInput] = useState("Hello World Example Text")
-  const [copied, setCopied] = useState<string | null>(null)
+  const [input, setInput] = useState("Hello World Example Text");
+  const [copied, setCopied] = useState<string | null>(null);
 
   const handleCopy = (text: string, label: string) => {
     navigator.clipboard.writeText(text).then(() => {
-      setCopied(label)
-      setTimeout(() => setCopied(null), 1500)
-    })
-  }
+      setCopied(label);
+      setTimeout(() => setCopied(null), 1500);
+    });
+  };
 
   return (
     <div className="max-w-xl mx-auto space-y-4 p-4">
@@ -77,14 +83,16 @@ export default function TextCaseConverter() {
       </div>
       <div className="grid gap-2">
         {cases.map((c) => {
-          const converted = convertCase(input, c)
+          const converted = convertCase(input, c);
           return (
             <div
               key={c}
               className="flex items-center justify-between gap-3 p-3 rounded-lg bg-base-200 border border-base-300"
             >
               <div className="flex-1 min-w-0">
-                <p className="text-xs text-base-content/50 font-mono mb-0.5">{c}</p>
+                <p className="text-xs text-base-content/50 font-mono mb-0.5">
+                  {c}
+                </p>
                 <p className="font-mono text-sm truncate">{converted || "—"}</p>
               </div>
               <button
@@ -95,9 +103,9 @@ export default function TextCaseConverter() {
                 {copied === c ? "✓" : "Copy"}
               </button>
             </div>
-          )
+          );
         })}
       </div>
     </div>
-  )
+  );
 }

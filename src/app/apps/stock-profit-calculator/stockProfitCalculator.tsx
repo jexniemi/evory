@@ -16,10 +16,30 @@ const calculate = (values: number[]) => {
   const profit = totalReceived - totalInvested;
   const roi = totalInvested !== 0 ? (profit / totalInvested) * 100 : 0;
   return [
-    { result: profit, label: profit >= 0 ? "Profit" : "Loss", suffix: " $", decimals: 2 },
-    { result: roi, label: "Return on Investment (ROI)", suffix: " %", decimals: 2 },
-    { result: totalInvested, label: "Total Invested", suffix: " $", decimals: 2 },
-    { result: totalReceived, label: "Total Received", suffix: " $", decimals: 2 },
+    {
+      result: profit,
+      label: profit >= 0 ? "Profit" : "Loss",
+      suffix: " $",
+      decimals: 2,
+    },
+    {
+      result: roi,
+      label: "Return on Investment (ROI)",
+      suffix: " %",
+      decimals: 2,
+    },
+    {
+      result: totalInvested,
+      label: "Total Invested",
+      suffix: " $",
+      decimals: 2,
+    },
+    {
+      result: totalReceived,
+      label: "Total Received",
+      suffix: " $",
+      decimals: 2,
+    },
   ];
 };
 

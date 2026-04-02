@@ -15,7 +15,8 @@ export default function MortgageRefinanceCalculatorPage() {
 
 const pageProps = {
   title: "Mortgage Refinance Calculator",
-  seoTitle: "Mortgage Refinance Calculator – Should I Refinance? Break-Even Point | ewory.com",
+  seoTitle:
+    "Mortgage Refinance Calculator – Should I Refinance? Break-Even Point | ewory.com",
   description:
     "Calculate monthly savings, break-even point, and 5-year net savings from refinancing your mortgage. Find out if refinancing makes sense for you.",
   instructions:

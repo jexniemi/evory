@@ -15,7 +15,8 @@ export default function SpeedDistanceTimeCalculatorPage() {
 
 const pageProps = {
   title: "Speed Distance Time Calculator",
-  seoTitle: "Speed Distance Time Calculator – Solve for Any Variable | ewory.com",
+  seoTitle:
+    "Speed Distance Time Calculator – Solve for Any Variable | ewory.com",
   description:
     "Calculate speed, distance, or time using the speed-distance-time triangle. Free online physics calculator for travel, running, cycling, and more.",
   instructions:

@@ -15,7 +15,8 @@ export default function StepsToCaloriesCalculatorPage() {
 
 const pageProps = {
   title: "Steps to Calories Calculator",
-  seoTitle: "Steps to Calories Calculator – How Many Calories Do Steps Burn? | ewory.com",
+  seoTitle:
+    "Steps to Calories Calculator – How Many Calories Do Steps Burn? | ewory.com",
   description:
     "Convert steps to calories burned. Enter your step count, weight, and pace to estimate calories burned walking and your distance covered.",
   instructions:

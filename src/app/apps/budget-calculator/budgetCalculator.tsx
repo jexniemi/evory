@@ -15,7 +15,12 @@ const calculate = (values: number[]) => {
   return [
     { result: savings, label: "Monthly Savings", suffix: " $", decimals: 0 },
     { result: savingsRate, label: "Savings Rate", suffix: " %", decimals: 1 },
-    { result: annualSavings, label: "Annual Savings", suffix: " $", decimals: 0 },
+    {
+      result: annualSavings,
+      label: "Annual Savings",
+      suffix: " $",
+      decimals: 0,
+    },
   ];
 };
 

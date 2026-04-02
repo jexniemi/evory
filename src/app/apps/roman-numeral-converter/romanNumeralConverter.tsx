@@ -1,57 +1,75 @@
-"use client"
+"use client";
 
-import { useState } from "react"
+import { useState } from "react";
 
 const TO_ROMAN: [number, string][] = [
-  [1000, "M"], [900, "CM"], [500, "D"], [400, "CD"],
-  [100, "C"], [90, "XC"], [50, "L"], [40, "XL"],
-  [10, "X"], [9, "IX"], [5, "V"], [4, "IV"], [1, "I"],
-]
+  [1000, "M"],
+  [900, "CM"],
+  [500, "D"],
+  [400, "CD"],
+  [100, "C"],
+  [90, "XC"],
+  [50, "L"],
+  [40, "XL"],
+  [10, "X"],
+  [9, "IX"],
+  [5, "V"],
+  [4, "IV"],
+  [1, "I"],
+];
 
 function toRoman(num: number): string {
-  if (num < 1 || num > 3999) return "Number must be between 1 and 3999"
-  let result = ""
+  if (num < 1 || num > 3999) return "Number must be between 1 and 3999";
+  let result = "";
   for (const [value, numeral] of TO_ROMAN) {
     while (num >= value) {
-      result += numeral
-      num -= value
+      result += numeral;
+      num -= value;
     }
   }
-  return result
+  return result;
 }
 
 function fromRoman(str: string): number | null {
   const ROMAN_VALUES: Record<string, number> = {
-    I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000,
-  }
-  const upper = str.toUpperCase().trim()
-  if (!upper || !/^[IVXLCDM]+$/.test(upper)) return null
-  let result = 0
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+  };
+  const upper = str.toUpperCase().trim();
+  if (!upper || !/^[IVXLCDM]+$/.test(upper)) return null;
+  let result = 0;
   for (let i = 0; i < upper.length; i++) {
-    const curr = ROMAN_VALUES[upper[i]]
-    const next = ROMAN_VALUES[upper[i + 1]]
+    const curr = ROMAN_VALUES[upper[i]];
+    const next = ROMAN_VALUES[upper[i + 1]];
     if (next && curr < next) {
-      result -= curr
+      result -= curr;
     } else {
-      result += curr
+      result += curr;
     }
   }
-  return result
+  return result;
 }
 
 export default function RomanNumeralConverter() {
-  const [decimal, setDecimal] = useState(2024)
-  const [romanInput, setRomanInput] = useState("")
+  const [decimal, setDecimal] = useState(2024);
+  const [romanInput, setRomanInput] = useState("");
 
-  const romanResult = toRoman(decimal)
-  const decimalResult = fromRoman(romanInput)
+  const romanResult = toRoman(decimal);
+  const decimalResult = fromRoman(romanInput);
 
   return (
     <div className="max-w-lg mx-auto space-y-6 p-4">
       {/* Decimal to Roman */}
       <div className="card bg-base-100 border border-base-300 shadow-sm">
         <div className="card-body">
-          <h2 className="card-title text-base font-semibold">Number → Roman Numeral</h2>
+          <h2 className="card-title text-base font-semibold">
+            Number → Roman Numeral
+          </h2>
           <label className="label">
             <span className="label-text">Enter a number (1–3999)</span>
           </label>
@@ -65,7 +83,9 @@ export default function RomanNumeralConverter() {
           />
           <div className="mt-3 p-4 bg-amber-50 border border-amber-200 border-l-4 border-l-amber-400 rounded-lg">
             <p className="text-sm text-amber-700 font-medium">Roman Numeral</p>
-            <p className="text-3xl font-bold text-amber-900 tracking-widest mt-1">{romanResult}</p>
+            <p className="text-3xl font-bold text-amber-900 tracking-widest mt-1">
+              {romanResult}
+            </p>
           </div>
         </div>
       </div>
@@ -73,9 +93,13 @@ export default function RomanNumeralConverter() {
       {/* Roman to Decimal */}
       <div className="card bg-base-100 border border-base-300 shadow-sm">
         <div className="card-body">
-          <h2 className="card-title text-base font-semibold">Roman Numeral → Number</h2>
+          <h2 className="card-title text-base font-semibold">
+            Roman Numeral → Number
+          </h2>
           <label className="label">
-            <span className="label-text">Enter Roman numerals (e.g. XIV, MMXXIV)</span>
+            <span className="label-text">
+              Enter Roman numerals (e.g. XIV, MMXXIV)
+            </span>
           </label>
           <input
             type="text"
@@ -97,5 +121,5 @@ export default function RomanNumeralConverter() {
         </div>
       </div>
     </div>
-  )
+  );
 }

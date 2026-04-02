@@ -15,7 +15,8 @@ export default function BudgetCalculatorPage() {
 
 const pageProps = {
   title: "Budget Calculator",
-  seoTitle: "Budget Calculator – Monthly Budget Planner & Savings Rate | ewory.com",
+  seoTitle:
+    "Budget Calculator – Monthly Budget Planner & Savings Rate | ewory.com",
   description:
     "Calculate your monthly savings, savings rate, and projected annual savings from your income and expenses. Free online budget calculator.",
   instructions:

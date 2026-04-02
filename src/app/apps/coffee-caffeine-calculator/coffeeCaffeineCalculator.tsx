@@ -9,20 +9,37 @@ const inputs = [
 ];
 
 const calculate = (values: number[]) => {
-  const espresso = values[0] * 63;    // ~63 mg per shot
-  const dripCoffee = values[1] * 96;  // ~96 mg per 8 oz cup
+  const espresso = values[0] * 63; // ~63 mg per shot
+  const dripCoffee = values[1] * 96; // ~96 mg per 8 oz cup
   const energyDrink = values[2] * 80; // ~80 mg per 12 oz can (varies widely)
-  const blackTea = values[3] * 47;    // ~47 mg per 8 oz cup
+  const blackTea = values[3] * 47; // ~47 mg per 8 oz cup
   const total = espresso + dripCoffee + energyDrink + blackTea;
   const safeLimit = 400; // FDA recommended max for healthy adults
   const pctOfLimit = (total / safeLimit) * 100;
   return [
-    { result: total, label: "Total Caffeine Intake", suffix: " mg", decimals: 0 },
-    { result: pctOfLimit, label: "% of Daily Safe Limit (400 mg)", suffix: " %", decimals: 1 },
-    { result: Math.max(0, safeLimit - total), label: "Remaining Safe Margin", suffix: " mg", decimals: 0 },
+    {
+      result: total,
+      label: "Total Caffeine Intake",
+      suffix: " mg",
+      decimals: 0,
+    },
+    {
+      result: pctOfLimit,
+      label: "% of Daily Safe Limit (400 mg)",
+      suffix: " %",
+      decimals: 1,
+    },
+    {
+      result: Math.max(0, safeLimit - total),
+      label: "Remaining Safe Margin",
+      suffix: " mg",
+      decimals: 0,
+    },
   ];
 };
 
 export default function CoffeeCaffeineCalculator() {
-  return <SimpleCalculator inputs={inputs} calculate={calculate} suffix=" mg" />;
+  return (
+    <SimpleCalculator inputs={inputs} calculate={calculate} suffix=" mg" />
+  );
 }

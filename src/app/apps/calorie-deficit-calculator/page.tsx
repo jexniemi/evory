@@ -15,7 +15,8 @@ export default function CalorieDeficitCalculatorPage() {
 
 const pageProps = {
   title: "Calorie Deficit Calculator",
-  seoTitle: "Calorie Deficit Calculator – Daily Calorie Target for Fat Loss | ewory.com",
+  seoTitle:
+    "Calorie Deficit Calculator – Daily Calorie Target for Fat Loss | ewory.com",
   description:
     "Calculate your daily calorie deficit to lose weight at your chosen pace. Enter your TDEE and target weekly weight loss to get your calorie target.",
   instructions:
