@@ -1,6 +1,8 @@
 # Rules
 
-- Tables in info.mdx should always be written with html tags
+- Tables in info.mdx should always be written with html tags. They need to work in mobile, so make sure they have "overflow-x-auto" wrappers.
+
+- Everything needs to work in mobile
 
 # SEO Rules
 
