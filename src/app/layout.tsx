@@ -7,7 +7,7 @@ import AppSuggestionBar from "@/components/AppSuggestionsBar";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Metadata } from "next";
 
-const gaTrackingId = "G-ZHP8R21E7S";
+const gaTrackingId = "G-9PPYT95BLE";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.ewory.com"),
