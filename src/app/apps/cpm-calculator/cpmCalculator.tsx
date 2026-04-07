@@ -17,10 +17,30 @@ export default function CpmCalculator() {
     const costPerView = cost / impressions;
 
     return [
-      { result: cpm, label: "CPM (Cost per 1,000 impressions):", suffix: "$", decimals: 2 },
-      { result: costPerView * 100, label: "Cost per 100 impressions:", suffix: "$", decimals: 4 },
-      { result: cost / (impressions / 1000000), label: "Cost per million impressions:", suffix: "$", decimals: 2 },
-      { result: costPerView, label: "Cost per single impression:", suffix: "$", decimals: 6 },
+      {
+        result: cpm,
+        label: "CPM (Cost per 1,000 impressions):",
+        suffix: "$",
+        decimals: 2,
+      },
+      {
+        result: costPerView * 100,
+        label: "Cost per 100 impressions:",
+        suffix: "$",
+        decimals: 4,
+      },
+      {
+        result: cost / (impressions / 1000000),
+        label: "Cost per million impressions:",
+        suffix: "$",
+        decimals: 2,
+      },
+      {
+        result: costPerView,
+        label: "Cost per single impression:",
+        suffix: "$",
+        decimals: 6,
+      },
     ];
   };
 

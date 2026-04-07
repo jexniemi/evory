@@ -14,11 +14,16 @@ export default function CatAgeCalculator() {
   const humanAge = calculateHumanAge();
 
   const getLifeStage = () => {
-    if (catAge < 0.5) return { stage: "Kitten", emoji: "🐱", color: "text-blue-600" };
-    if (catAge < 2) return { stage: "Junior", emoji: "😺", color: "text-cyan-600" };
-    if (catAge < 6) return { stage: "Prime", emoji: "😸", color: "text-green-600" };
-    if (catAge < 10) return { stage: "Mature", emoji: "🐈", color: "text-amber-600" };
-    if (catAge < 15) return { stage: "Senior", emoji: "🐈‍⬛", color: "text-orange-600" };
+    if (catAge < 0.5)
+      return { stage: "Kitten", emoji: "🐱", color: "text-blue-600" };
+    if (catAge < 2)
+      return { stage: "Junior", emoji: "😺", color: "text-cyan-600" };
+    if (catAge < 6)
+      return { stage: "Prime", emoji: "😸", color: "text-green-600" };
+    if (catAge < 10)
+      return { stage: "Mature", emoji: "🐈", color: "text-amber-600" };
+    if (catAge < 15)
+      return { stage: "Senior", emoji: "🐈‍⬛", color: "text-orange-600" };
     return { stage: "Geriatric", emoji: "😿", color: "text-red-600" };
   };
 
@@ -27,7 +32,11 @@ export default function CatAgeCalculator() {
   return (
     <div className="space-y-6">
       <div className="form-control">
-        <label className="label"><span className="label-text font-semibold">Cat&apos;s Age (years)</span></label>
+        <label className="label">
+          <span className="label-text font-semibold">
+            Cat&apos;s Age (years)
+          </span>
+        </label>
         <input
           type="number"
           className="input input-bordered"
@@ -51,14 +60,18 @@ export default function CatAgeCalculator() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="bg-amber-50 border border-amber-200 border-l-4 border-l-amber-400 rounded-xl p-4 text-center">
           <div className="text-4xl font-bold text-amber-700">{humanAge}</div>
-          <div className="text-sm text-amber-600 font-medium mt-1">Human Years</div>
+          <div className="text-sm text-amber-600 font-medium mt-1">
+            Human Years
+          </div>
         </div>
         <div className="bg-sky-50 border border-sky-200 border-l-4 border-l-sky-400 rounded-xl p-4 text-center">
           <div className="text-4xl font-bold text-sky-700">{catAge}</div>
           <div className="text-sm text-sky-600 font-medium mt-1">Cat Years</div>
         </div>
         <div className="bg-violet-50 border border-violet-200 border-l-4 border-l-violet-400 rounded-xl p-4 text-center">
-          <div className={`text-3xl font-bold ${lifeStage.color}`}>{lifeStage.emoji}</div>
+          <div className={`text-3xl font-bold ${lifeStage.color}`}>
+            {lifeStage.emoji}
+          </div>
           <div className="text-sm font-medium mt-1">{lifeStage.stage}</div>
         </div>
       </div>

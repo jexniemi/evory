@@ -18,8 +18,7 @@ export default function HexColorPicker() {
 
   const rgbToHex = useCallback((r: number, g: number, b: number) => {
     return (
-      "#" +
-      [r, g, b].map((x) => x.toString(16).padStart(2, "0")).join("")
+      "#" + [r, g, b].map((x) => x.toString(16).padStart(2, "0")).join("")
     ).toUpperCase();
   }, []);
 
@@ -42,20 +41,34 @@ export default function HexColorPicker() {
   };
 
   const hslFromRgb = (r: number, g: number, b: number) => {
-    const rr = r / 255, gg = g / 255, bb = b / 255;
-    const max = Math.max(rr, gg, bb), min = Math.min(rr, gg, bb);
+    const rr = r / 255,
+      gg = g / 255,
+      bb = b / 255;
+    const max = Math.max(rr, gg, bb),
+      min = Math.min(rr, gg, bb);
     const l = (max + min) / 2;
-    let h = 0, s = 0;
+    let h = 0,
+      s = 0;
     if (max !== min) {
       const d = max - min;
       s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
       switch (max) {
-        case rr: h = ((gg - bb) / d + (gg < bb ? 6 : 0)) / 6; break;
-        case gg: h = ((bb - rr) / d + 2) / 6; break;
-        case bb: h = ((rr - gg) / d + 4) / 6; break;
+        case rr:
+          h = ((gg - bb) / d + (gg < bb ? 6 : 0)) / 6;
+          break;
+        case gg:
+          h = ((bb - rr) / d + 2) / 6;
+          break;
+        case bb:
+          h = ((rr - gg) / d + 4) / 6;
+          break;
       }
     }
-    return { h: Math.round(h * 360), s: Math.round(s * 100), l: Math.round(l * 100) };
+    return {
+      h: Math.round(h * 360),
+      s: Math.round(s * 100),
+      l: Math.round(l * 100),
+    };
   };
 
   const hsl = hslFromRgb(r, g, b);
@@ -76,7 +89,9 @@ export default function HexColorPicker() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="form-control">
-          <label className="label"><span className="label-text font-semibold">HEX</span></label>
+          <label className="label">
+            <span className="label-text font-semibold">HEX</span>
+          </label>
           <input
             type="text"
             className="input input-bordered font-mono text-lg"
@@ -86,7 +101,9 @@ export default function HexColorPicker() {
           />
         </div>
         <div className="form-control">
-          <label className="label"><span className="label-text font-semibold">Color Picker</span></label>
+          <label className="label">
+            <span className="label-text font-semibold">Color Picker</span>
+          </label>
           <input
             type="color"
             className="w-full h-12 rounded-lg cursor-pointer border border-base-300"
@@ -97,29 +114,35 @@ export default function HexColorPicker() {
       </div>
 
       <div className="grid grid-cols-3 gap-4">
-        {([["R", r, "r"], ["G", g, "g"], ["B", b, "b"]] as const).map(
-          ([label, value, channel]) => (
-            <div key={label} className="form-control">
-              <label className="label"><span className="label-text font-semibold">{label}</span></label>
-              <input
-                type="number"
-                className="input input-bordered text-center"
-                min={0}
-                max={255}
-                value={value}
-                onChange={(e) => handleRgbChange(channel, Number(e.target.value))}
-              />
-              <input
-                type="range"
-                min={0}
-                max={255}
-                value={value}
-                onChange={(e) => handleRgbChange(channel, Number(e.target.value))}
-                className="range range-xs mt-2"
-              />
-            </div>
-          )
-        )}
+        {(
+          [
+            ["R", r, "r"],
+            ["G", g, "g"],
+            ["B", b, "b"],
+          ] as const
+        ).map(([label, value, channel]) => (
+          <div key={label} className="form-control">
+            <label className="label">
+              <span className="label-text font-semibold">{label}</span>
+            </label>
+            <input
+              type="number"
+              className="input input-bordered text-center"
+              min={0}
+              max={255}
+              value={value}
+              onChange={(e) => handleRgbChange(channel, Number(e.target.value))}
+            />
+            <input
+              type="range"
+              min={0}
+              max={255}
+              value={value}
+              onChange={(e) => handleRgbChange(channel, Number(e.target.value))}
+              className="range range-xs mt-2"
+            />
+          </div>
+        ))}
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">

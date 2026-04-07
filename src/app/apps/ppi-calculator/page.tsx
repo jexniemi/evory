@@ -9,7 +9,7 @@ const route = getAppRoute(import.meta.url);
 export const metadata: Metadata = generateAppMetadata(
   "PPI Calculator – Pixels Per Inch & Screen Density | ewory.com",
   "Calculate pixels per inch (PPI), dot pitch, and screen density for any display. Enter resolution and screen size to get results.",
-  route
+  route,
 );
 
 export default function PpiCalculatorPage() {

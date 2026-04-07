@@ -14,7 +14,8 @@ export default function TireSizeCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle: "Tire Size Calculator – Compare Tire Sizes & Speedometer Error | ewory.com",
+  seoTitle:
+    "Tire Size Calculator – Compare Tire Sizes & Speedometer Error | ewory.com",
   title: "Tire Size Calculator",
   description:
     "Compare tire sizes side by side. See diameter, circumference, sidewall height, and speedometer difference when changing tire sizes.",

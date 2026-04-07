@@ -24,7 +24,12 @@ export default function AspectRatioCalculator() {
     const megapixels = (w * h) / 1000000;
 
     return [
-      { result: ratioW, label: `Aspect Ratio: ${ratioW}:${ratioH}`, suffix: "", decimals: 0 },
+      {
+        result: ratioW,
+        label: `Aspect Ratio: ${ratioW}:${ratioH}`,
+        suffix: "",
+        decimals: 0,
+      },
       { result: decimal, label: "Decimal Ratio:", suffix: ":1", decimals: 4 },
       { result: megapixels, label: "Megapixels:", suffix: " MP", decimals: 2 },
       { result: w * h, label: "Total Pixels:", suffix: " px", decimals: 0 },

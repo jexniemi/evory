@@ -41,12 +41,25 @@ export default function GradePercentageCalculator() {
     else if (percentage >= 63) gpa = 1.0;
     else if (percentage >= 60) gpa = 0.7;
 
-    const pointsToNextGrade = total > 0 ? Math.ceil(total * ((Math.ceil(percentage / 10) * 10) / 100)) - earned : 0;
+    const pointsToNextGrade =
+      total > 0
+        ? Math.ceil(total * ((Math.ceil(percentage / 10) * 10) / 100)) - earned
+        : 0;
 
     return [
       { result: percentage, label: "Percentage:", suffix: "%", decimals: 2 },
-      { result: gpa, label: `Letter Grade: ${grade} — GPA:`, suffix: "", decimals: 1 },
-      { result: Math.max(0, pointsToNextGrade), label: "Points to next grade boundary:", suffix: " pts", decimals: 0 },
+      {
+        result: gpa,
+        label: `Letter Grade: ${grade} — GPA:`,
+        suffix: "",
+        decimals: 1,
+      },
+      {
+        result: Math.max(0, pointsToNextGrade),
+        label: "Points to next grade boundary:",
+        suffix: " pts",
+        decimals: 0,
+      },
     ];
   };
 

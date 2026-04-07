@@ -10,12 +10,22 @@ export default function ScientificNotationConverter() {
       if (mode === "toSci") {
         const num = parseFloat(input);
         if (isNaN(num)) return null;
-        if (num === 0) return { scientific: "0 × 10⁰", eNotation: "0e+0", decimal: "0", exponent: 0, coefficient: 0 };
+        if (num === 0)
+          return {
+            scientific: "0 × 10⁰",
+            eNotation: "0e+0",
+            decimal: "0",
+            exponent: 0,
+            coefficient: 0,
+          };
 
         const exp = Math.floor(Math.log10(Math.abs(num)));
         const coeff = num / Math.pow(10, exp);
 
-        const superscript = exp.toString().replace(/-/g, "⁻").replace(/\d/g, (d) => "⁰¹²³⁴⁵⁶⁷⁸⁹"[parseInt(d)]);
+        const superscript = exp
+          .toString()
+          .replace(/-/g, "⁻")
+          .replace(/\d/g, (d) => "⁰¹²³⁴⁵⁶⁷⁸⁹"[parseInt(d)]);
 
         return {
           scientific: `${coeff.toFixed(6).replace(/\.?0+$/, "")} × 10${superscript}`,
@@ -44,7 +54,10 @@ export default function ScientificNotationConverter() {
 
         const exp = num === 0 ? 0 : Math.floor(Math.log10(Math.abs(num)));
         const coeff = num === 0 ? 0 : num / Math.pow(10, exp);
-        const superscript = exp.toString().replace(/-/g, "⁻").replace(/\d/g, (d) => "⁰¹²³⁴⁵⁶⁷⁸⁹"[parseInt(d)]);
+        const superscript = exp
+          .toString()
+          .replace(/-/g, "⁻")
+          .replace(/\d/g, (d) => "⁰¹²³⁴⁵⁶⁷⁸⁹"[parseInt(d)]);
 
         return {
           scientific: `${coeff.toFixed(6).replace(/\.?0+$/, "")} × 10${superscript}`,
@@ -62,15 +75,27 @@ export default function ScientificNotationConverter() {
   return (
     <div className="flex flex-col gap-4 w-full max-w-md mx-auto">
       <div className="form-control">
-        <label className="label"><span className="label-text">Mode</span></label>
-        <select className="select select-bordered w-full" value={mode} onChange={(e) => setMode(e.target.value as "toSci" | "fromSci")}>
+        <label className="label">
+          <span className="label-text">Mode</span>
+        </label>
+        <select
+          className="select select-bordered w-full"
+          value={mode}
+          onChange={(e) => setMode(e.target.value as "toSci" | "fromSci")}
+        >
           <option value="toSci">Number → Scientific Notation</option>
           <option value="fromSci">Scientific Notation → Number</option>
         </select>
       </div>
 
       <div className="form-control">
-        <label className="label"><span className="label-text">{mode === "toSci" ? "Enter a number" : "Enter scientific notation (e.g. 3.5e8)"}</span></label>
+        <label className="label">
+          <span className="label-text">
+            {mode === "toSci"
+              ? "Enter a number"
+              : "Enter scientific notation (e.g. 3.5e8)"}
+          </span>
+        </label>
         <input
           type="text"
           className="input input-bordered w-full font-mono"
@@ -85,24 +110,34 @@ export default function ScientificNotationConverter() {
           <div className="grid grid-cols-1 gap-3">
             <div className="stat bg-base-100 rounded-lg p-3">
               <div className="stat-title text-xs">Scientific Notation</div>
-              <div className="stat-value text-lg font-mono">{result.scientific}</div>
+              <div className="stat-value text-lg font-mono">
+                {result.scientific}
+              </div>
             </div>
             <div className="stat bg-base-100 rounded-lg p-3">
               <div className="stat-title text-xs">E-Notation</div>
-              <div className="stat-value text-lg font-mono">{result.eNotation}</div>
+              <div className="stat-value text-lg font-mono">
+                {result.eNotation}
+              </div>
             </div>
             <div className="stat bg-base-100 rounded-lg p-3">
               <div className="stat-title text-xs">Decimal</div>
-              <div className="stat-value text-lg font-mono break-all">{result.decimal}</div>
+              <div className="stat-value text-lg font-mono break-all">
+                {result.decimal}
+              </div>
             </div>
             <div className="grid grid-cols-2 gap-3">
               <div className="stat bg-base-100 rounded-lg p-3">
                 <div className="stat-title text-xs">Coefficient</div>
-                <div className="stat-value text-lg font-mono">{result.coefficient}</div>
+                <div className="stat-value text-lg font-mono">
+                  {result.coefficient}
+                </div>
               </div>
               <div className="stat bg-base-100 rounded-lg p-3">
                 <div className="stat-title text-xs">Exponent</div>
-                <div className="stat-value text-lg font-mono">{result.exponent}</div>
+                <div className="stat-value text-lg font-mono">
+                  {result.exponent}
+                </div>
               </div>
             </div>
           </div>
@@ -111,7 +146,10 @@ export default function ScientificNotationConverter() {
 
       {!result && input && (
         <div className="alert alert-warning text-sm">
-          <span>Could not parse the input. Try a number like 299792458 or scientific notation like 2.998e8.</span>
+          <span>
+            Could not parse the input. Try a number like 299792458 or scientific
+            notation like 2.998e8.
+          </span>
         </div>
       )}
     </div>

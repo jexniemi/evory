@@ -9,7 +9,7 @@ const route = getAppRoute(import.meta.url);
 export const metadata: Metadata = generateAppMetadata(
   "Reading Time Calculator – Free Online Estimate | ewory.com",
   "Estimate how long it takes to read or speak any text. Paste your content and get reading time, word count, and text statistics.",
-  route
+  route,
 );
 
 export default function ReadingTimeCalculatorPage() {

@@ -9,7 +9,7 @@ const route = getAppRoute(import.meta.url);
 export const metadata: Metadata = generateAppMetadata(
   "CSS Gradient Generator – Free Online Tool | ewory.com",
   "Create beautiful CSS gradients with a visual editor. Supports linear, radial, and conic gradients with unlimited color stops.",
-  route
+  route,
 );
 
 export default function CssGradientGeneratorPage() {

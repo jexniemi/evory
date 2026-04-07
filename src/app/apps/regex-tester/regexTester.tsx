@@ -2,9 +2,13 @@
 import { useState, useMemo } from "react";
 
 export default function RegexTester() {
-  const [pattern, setPattern] = useState("\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b");
+  const [pattern, setPattern] = useState(
+    "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b",
+  );
   const [flags, setFlags] = useState("gi");
-  const [testString, setTestString] = useState("Contact us at hello@example.com or support@company.org for help.");
+  const [testString, setTestString] = useState(
+    "Contact us at hello@example.com or support@company.org for help.",
+  );
 
   const result = useMemo(() => {
     if (!pattern) return { matches: [], error: null };
@@ -42,18 +46,27 @@ export default function RegexTester() {
   const highlightedText = useMemo(() => {
     if (!pattern || result.error || result.matches.length === 0) return null;
     try {
-      const regex = new RegExp(pattern, flags.includes("g") ? flags : flags + "g");
+      const regex = new RegExp(
+        pattern,
+        flags.includes("g") ? flags : flags + "g",
+      );
       const parts: { text: string; highlighted: boolean }[] = [];
       let lastIndex = 0;
       let m;
 
       while ((m = regex.exec(testString)) !== null) {
         if (m.index > lastIndex) {
-          parts.push({ text: testString.slice(lastIndex, m.index), highlighted: false });
+          parts.push({
+            text: testString.slice(lastIndex, m.index),
+            highlighted: false,
+          });
         }
         parts.push({ text: m[0], highlighted: true });
         lastIndex = m.index + m[0].length;
-        if (m[0].length === 0) { regex.lastIndex++; lastIndex++; }
+        if (m[0].length === 0) {
+          regex.lastIndex++;
+          lastIndex++;
+        }
       }
       if (lastIndex < testString.length) {
         parts.push({ text: testString.slice(lastIndex), highlighted: false });
@@ -78,7 +91,9 @@ export default function RegexTester() {
   return (
     <div className="flex flex-col gap-4 w-full max-w-2xl mx-auto">
       <div className="form-control">
-        <label className="label"><span className="label-text">Regular Expression</span></label>
+        <label className="label">
+          <span className="label-text">Regular Expression</span>
+        </label>
         <div className="flex items-center gap-1">
           <span className="text-lg opacity-50">/</span>
           <input
@@ -94,7 +109,10 @@ export default function RegexTester() {
 
       <div className="flex flex-wrap gap-2">
         {flagOptions.map((f) => (
-          <label key={f.value} className="cursor-pointer flex items-center gap-1">
+          <label
+            key={f.value}
+            className="cursor-pointer flex items-center gap-1"
+          >
             <input
               type="checkbox"
               className="checkbox checkbox-sm checkbox-primary"
@@ -107,7 +125,9 @@ export default function RegexTester() {
       </div>
 
       <div className="form-control">
-        <label className="label"><span className="label-text">Test String</span></label>
+        <label className="label">
+          <span className="label-text">Test String</span>
+        </label>
         <textarea
           className="textarea textarea-bordered w-full font-mono text-sm min-h-24"
           value={testString}
@@ -128,10 +148,15 @@ export default function RegexTester() {
           <div className="font-mono text-sm whitespace-pre-wrap break-all">
             {highlightedText.map((part, i) =>
               part.highlighted ? (
-                <mark key={i} className="bg-primary/30 text-primary-content rounded px-0.5">{part.text}</mark>
+                <mark
+                  key={i}
+                  className="bg-primary/30 text-primary-content rounded px-0.5"
+                >
+                  {part.text}
+                </mark>
               ) : (
                 <span key={i}>{part.text}</span>
-              )
+              ),
             )}
           </div>
         </div>
@@ -139,17 +164,33 @@ export default function RegexTester() {
 
       <div className="card bg-base-200 p-4">
         <h3 className="text-sm font-bold mb-2">
-          Matches: <span className="badge badge-primary badge-sm">{result.matches.length}</span>
+          Matches:{" "}
+          <span className="badge badge-primary badge-sm">
+            {result.matches.length}
+          </span>
         </h3>
         {result.matches.length === 0 && !result.error && (
           <p className="text-sm opacity-60">No matches found</p>
         )}
         {result.matches.map((m, i) => (
-          <div key={i} className="bg-base-100 rounded p-2 mb-2 text-sm font-mono">
-            <div><span className="opacity-50">Match {i + 1}:</span> <span className="text-primary font-bold">{m.match}</span></div>
+          <div
+            key={i}
+            className="bg-base-100 rounded p-2 mb-2 text-sm font-mono"
+          >
+            <div>
+              <span className="opacity-50">Match {i + 1}:</span>{" "}
+              <span className="text-primary font-bold">{m.match}</span>
+            </div>
             <div className="opacity-50">Index: {m.index}</div>
             {m.groups.length > 0 && (
-              <div className="opacity-50">Groups: {m.groups.map((g, j) => <span key={j} className="badge badge-sm badge-ghost mr-1">{g || "(empty)"}</span>)}</div>
+              <div className="opacity-50">
+                Groups:{" "}
+                {m.groups.map((g, j) => (
+                  <span key={j} className="badge badge-sm badge-ghost mr-1">
+                    {g || "(empty)"}
+                  </span>
+                ))}
+              </div>
             )}
           </div>
         ))}

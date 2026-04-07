@@ -11,7 +11,8 @@ export default function ReadingTimeCalculator() {
     const chars = text.length;
     const charsNoSpaces = text.replace(/\s/g, "").length;
     const sentences = (text.match(/[.!?]+/g) || []).length || 1;
-    const paragraphs = text.split(/\n\s*\n/).filter((p) => p.trim()).length || 1;
+    const paragraphs =
+      text.split(/\n\s*\n/).filter((p) => p.trim()).length || 1;
     const syllables = countSyllables(text);
     const avgWordLength = charsNoSpaces / words;
     const avgSentenceLength = words / sentences;
@@ -42,7 +43,9 @@ export default function ReadingTimeCalculator() {
       <div className="form-control">
         <label className="label">
           <span className="label-text font-bold">Paste or type your text</span>
-          <span className="label-text-alt">{stats ? `${stats.words} words` : "0 words"}</span>
+          <span className="label-text-alt">
+            {stats ? `${stats.words} words` : "0 words"}
+          </span>
         </label>
         <textarea
           className="textarea textarea-bordered w-full text-sm"
@@ -54,8 +57,14 @@ export default function ReadingTimeCalculator() {
       </div>
 
       <div className="form-control w-48">
-        <label className="label"><span className="label-text text-sm">Reading speed (WPM)</span></label>
-        <select className="select select-bordered select-sm" value={wpm} onChange={(e) => setWpm(Number(e.target.value))}>
+        <label className="label">
+          <span className="label-text text-sm">Reading speed (WPM)</span>
+        </label>
+        <select
+          className="select select-bordered select-sm"
+          value={wpm}
+          onChange={(e) => setWpm(Number(e.target.value))}
+        >
           <option value={150}>Slow (150 WPM)</option>
           <option value={200}>Below Average (200 WPM)</option>
           <option value={238}>Average (238 WPM)</option>
@@ -68,16 +77,36 @@ export default function ReadingTimeCalculator() {
       {stats && (
         <>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
-            <Stat label="Reading Time" value={stats.readMin > 0 ? `${stats.readMin}m ${stats.readRemSec}s` : `${stats.readRemSec}s`} />
-            <Stat label="Speaking Time" value={stats.speakMin > 0 ? `${stats.speakMin}m ${stats.speakRemSec}s` : `${stats.speakRemSec}s`} />
+            <Stat
+              label="Reading Time"
+              value={
+                stats.readMin > 0
+                  ? `${stats.readMin}m ${stats.readRemSec}s`
+                  : `${stats.readRemSec}s`
+              }
+            />
+            <Stat
+              label="Speaking Time"
+              value={
+                stats.speakMin > 0
+                  ? `${stats.speakMin}m ${stats.speakRemSec}s`
+                  : `${stats.speakRemSec}s`
+              }
+            />
             <Stat label="Words" value={String(stats.words)} />
             <Stat label="Characters" value={String(stats.chars)} />
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
             <Stat label="Sentences" value={String(stats.sentences)} />
             <Stat label="Paragraphs" value={String(stats.paragraphs)} />
-            <Stat label="Avg Word Length" value={`${stats.avgWordLength} chars`} />
-            <Stat label="Avg Sentence" value={`${stats.avgSentenceLength} words`} />
+            <Stat
+              label="Avg Word Length"
+              value={`${stats.avgWordLength} chars`}
+            />
+            <Stat
+              label="Avg Sentence"
+              value={`${stats.avgSentenceLength} words`}
+            />
           </div>
         </>
       )}

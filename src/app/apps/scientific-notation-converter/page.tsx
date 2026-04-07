@@ -14,7 +14,8 @@ export default function ScientificNotationConverterPage() {
 }
 
 const pageProps = {
-  seoTitle: "Scientific Notation Converter – Number to Scientific Notation | ewory.com",
+  seoTitle:
+    "Scientific Notation Converter – Number to Scientific Notation | ewory.com",
   title: "Scientific Notation Converter",
   description:
     "Convert numbers to and from scientific notation. See coefficient, exponent, E-notation, and decimal form instantly.",

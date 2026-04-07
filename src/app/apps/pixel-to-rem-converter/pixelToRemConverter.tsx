@@ -21,7 +21,12 @@ export default function PixelToRemConverter() {
       { result: rem, label: "REM:", suffix: " rem", decimals: 4 },
       { result: em, label: "EM:", suffix: " em", decimals: 4 },
       { result: pt, label: "Points:", suffix: " pt", decimals: 2 },
-      { result: vw, label: "VW (1920px viewport):", suffix: " vw", decimals: 4 },
+      {
+        result: vw,
+        label: "VW (1920px viewport):",
+        suffix: " vw",
+        decimals: 4,
+      },
     ];
   };
 

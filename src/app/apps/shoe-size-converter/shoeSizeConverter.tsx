@@ -49,17 +49,25 @@ export default function ShoeSizeConverter() {
   return (
     <div className="space-y-6">
       <div className="form-control">
-        <label className="label"><span className="label-text font-semibold">Gender</span></label>
+        <label className="label">
+          <span className="label-text font-semibold">Gender</span>
+        </label>
         <div className="flex gap-2">
           <button
             className={`btn flex-1 ${gender === "mens" ? "btn-primary" : "btn-outline"}`}
-            onClick={() => { setGender("mens"); setSelectedIdx(Math.min(selectedIdx, SIZES.mens.length - 1)); }}
+            onClick={() => {
+              setGender("mens");
+              setSelectedIdx(Math.min(selectedIdx, SIZES.mens.length - 1));
+            }}
           >
             Men&apos;s
           </button>
           <button
             className={`btn flex-1 ${gender === "womens" ? "btn-primary" : "btn-outline"}`}
-            onClick={() => { setGender("womens"); setSelectedIdx(Math.min(selectedIdx, SIZES.womens.length - 1)); }}
+            onClick={() => {
+              setGender("womens");
+              setSelectedIdx(Math.min(selectedIdx, SIZES.womens.length - 1));
+            }}
           >
             Women&apos;s
           </button>
@@ -67,14 +75,18 @@ export default function ShoeSizeConverter() {
       </div>
 
       <div className="form-control">
-        <label className="label"><span className="label-text font-semibold">US Size</span></label>
+        <label className="label">
+          <span className="label-text font-semibold">US Size</span>
+        </label>
         <select
           className="select select-bordered w-full"
           value={selectedIdx}
           onChange={(e) => setSelectedIdx(Number(e.target.value))}
         >
           {data.map((s, i) => (
-            <option key={i} value={i}>US {s.us}</option>
+            <option key={i} value={i}>
+              US {s.us}
+            </option>
           ))}
         </select>
       </div>
@@ -86,9 +98,16 @@ export default function ShoeSizeConverter() {
           { label: "EU", value: selected.eu, color: "violet" },
           { label: "CM", value: selected.cm, color: "teal" },
         ].map((item) => (
-          <div key={item.label} className={`bg-${item.color}-50 border border-${item.color}-200 border-l-4 border-l-${item.color}-400 rounded-xl p-4 text-center`}>
-            <div className={`text-3xl font-bold text-${item.color}-700`}>{item.value}</div>
-            <div className={`text-sm text-${item.color}-600 font-medium mt-1`}>{item.label}</div>
+          <div
+            key={item.label}
+            className={`bg-${item.color}-50 border border-${item.color}-200 border-l-4 border-l-${item.color}-400 rounded-xl p-4 text-center`}
+          >
+            <div className={`text-3xl font-bold text-${item.color}-700`}>
+              {item.value}
+            </div>
+            <div className={`text-sm text-${item.color}-600 font-medium mt-1`}>
+              {item.label}
+            </div>
           </div>
         ))}
       </div>
@@ -105,7 +124,12 @@ export default function ShoeSizeConverter() {
           </thead>
           <tbody>
             {data.map((s, i) => (
-              <tr key={i} className={i === selectedIdx ? "bg-primary/10 font-semibold" : ""}>
+              <tr
+                key={i}
+                className={
+                  i === selectedIdx ? "bg-primary/10 font-semibold" : ""
+                }
+              >
                 <td>{s.us}</td>
                 <td>{s.uk}</td>
                 <td>{s.eu}</td>

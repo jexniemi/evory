@@ -55,41 +55,87 @@ export default function SnowDayPredictor() {
   };
 
   const getVerdict = (pct: number) => {
-    if (pct >= 80) return { text: "Very Likely — Snow Day!", color: "text-success" };
-    if (pct >= 60) return { text: "Good Chance — Keep Hoping!", color: "text-info" };
-    if (pct >= 40) return { text: "Possible — Could Go Either Way", color: "text-warning" };
-    if (pct >= 20) return { text: "Unlikely — Better Do Homework", color: "text-orange-500" };
+    if (pct >= 80)
+      return { text: "Very Likely — Snow Day!", color: "text-success" };
+    if (pct >= 60)
+      return { text: "Good Chance — Keep Hoping!", color: "text-info" };
+    if (pct >= 40)
+      return { text: "Possible — Could Go Either Way", color: "text-warning" };
+    if (pct >= 20)
+      return {
+        text: "Unlikely — Better Do Homework",
+        color: "text-orange-500",
+      };
     return { text: "Very Unlikely — School Is On", color: "text-error" };
   };
 
   return (
     <div className="flex flex-col gap-4 w-full max-w-md mx-auto">
       <div className="form-control">
-        <label className="label"><span className="label-text">Expected Snowfall (inches)</span></label>
-        <input type="number" className="input input-bordered w-full" min={0} max={48} value={snowfall} onChange={(e) => setSnowfall(Number(e.target.value))} />
+        <label className="label">
+          <span className="label-text">Expected Snowfall (inches)</span>
+        </label>
+        <input
+          type="number"
+          className="input input-bordered w-full"
+          min={0}
+          max={48}
+          value={snowfall}
+          onChange={(e) => setSnowfall(Number(e.target.value))}
+        />
       </div>
 
       <div className="form-control">
-        <label className="label"><span className="label-text">Temperature (°F)</span></label>
-        <input type="number" className="input input-bordered w-full" min={-40} max={50} value={temp} onChange={(e) => setTemp(Number(e.target.value))} />
+        <label className="label">
+          <span className="label-text">Temperature (°F)</span>
+        </label>
+        <input
+          type="number"
+          className="input input-bordered w-full"
+          min={-40}
+          max={50}
+          value={temp}
+          onChange={(e) => setTemp(Number(e.target.value))}
+        />
       </div>
 
       <div className="form-control">
-        <label className="label"><span className="label-text">Wind Speed (mph)</span></label>
-        <input type="number" className="input input-bordered w-full" min={0} max={80} value={windSpeed} onChange={(e) => setWindSpeed(Number(e.target.value))} />
+        <label className="label">
+          <span className="label-text">Wind Speed (mph)</span>
+        </label>
+        <input
+          type="number"
+          className="input input-bordered w-full"
+          min={0}
+          max={80}
+          value={windSpeed}
+          onChange={(e) => setWindSpeed(Number(e.target.value))}
+        />
       </div>
 
       <div className="form-control">
-        <label className="label"><span className="label-text">School Type</span></label>
-        <select className="select select-bordered w-full" value={schoolType} onChange={(e) => setSchoolType(e.target.value)}>
+        <label className="label">
+          <span className="label-text">School Type</span>
+        </label>
+        <select
+          className="select select-bordered w-full"
+          value={schoolType}
+          onChange={(e) => setSchoolType(e.target.value)}
+        >
           <option value="public">Public School</option>
           <option value="private">Private School</option>
         </select>
       </div>
 
       <div className="form-control">
-        <label className="label"><span className="label-text">Region</span></label>
-        <select className="select select-bordered w-full" value={region} onChange={(e) => setRegion(e.target.value)}>
+        <label className="label">
+          <span className="label-text">Region</span>
+        </label>
+        <select
+          className="select select-bordered w-full"
+          value={region}
+          onChange={(e) => setRegion(e.target.value)}
+        >
           <option value="northeast">Northeast</option>
           <option value="midwest">Midwest</option>
           <option value="south">South</option>
@@ -100,15 +146,23 @@ export default function SnowDayPredictor() {
       </div>
 
       <div className="form-control">
-        <label className="label"><span className="label-text">When is the Snow Expected?</span></label>
-        <select className="select select-bordered w-full" value={timeOfSnow} onChange={(e) => setTimeOfSnow(e.target.value)}>
+        <label className="label">
+          <span className="label-text">When is the Snow Expected?</span>
+        </label>
+        <select
+          className="select select-bordered w-full"
+          value={timeOfSnow}
+          onChange={(e) => setTimeOfSnow(e.target.value)}
+        >
           <option value="overnight">Overnight (before 5 AM)</option>
           <option value="earlymorning">Early Morning (5–8 AM)</option>
           <option value="afternoon">Afternoon / Evening</option>
         </select>
       </div>
 
-      <button className="btn btn-primary w-full" onClick={predict}>Predict Snow Day</button>
+      <button className="btn btn-primary w-full" onClick={predict}>
+        Predict Snow Day
+      </button>
 
       {result !== null && (
         <div className="card bg-base-200 p-6 text-center mt-2">
@@ -117,7 +171,11 @@ export default function SnowDayPredictor() {
             {getVerdict(result).text}
           </div>
           <div className="mt-4">
-            <progress className="progress progress-primary w-full" value={result} max={100} />
+            <progress
+              className="progress progress-primary w-full"
+              value={result}
+              max={100}
+            />
           </div>
         </div>
       )}

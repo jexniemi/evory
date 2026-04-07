@@ -14,7 +14,8 @@ export default function EmiCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle: "EMI Calculator – Free Equated Monthly Installment Calculator | ewory.com",
+  seoTitle:
+    "EMI Calculator – Free Equated Monthly Installment Calculator | ewory.com",
   title: "EMI Calculator",
   description:
     "Calculate your Equated Monthly Installment (EMI) for any loan. See monthly payment, total interest, and total amount payable instantly.",

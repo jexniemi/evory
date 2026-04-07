@@ -18,21 +18,42 @@ export default function EmiCalculator() {
       const emi = principal / months;
       return [
         { result: emi, label: "Monthly EMI:", suffix: "$", decimals: 2 },
-        { result: emi * months, label: "Total Payment:", suffix: "$", decimals: 2 },
+        {
+          result: emi * months,
+          label: "Total Payment:",
+          suffix: "$",
+          decimals: 2,
+        },
         { result: 0, label: "Total Interest:", suffix: "$", decimals: 2 },
       ];
     }
 
     const r = annualRate / 100 / 12;
-    const emi = (principal * r * Math.pow(1 + r, months)) / (Math.pow(1 + r, months) - 1);
+    const emi =
+      (principal * r * Math.pow(1 + r, months)) / (Math.pow(1 + r, months) - 1);
     const totalPayment = emi * months;
     const totalInterest = totalPayment - principal;
 
     return [
       { result: emi, label: "Monthly EMI:", suffix: "$", decimals: 2 },
-      { result: totalPayment, label: "Total Payment:", suffix: "$", decimals: 2 },
-      { result: totalInterest, label: "Total Interest:", suffix: "$", decimals: 2 },
-      { result: (totalInterest / principal) * 100, label: "Interest as % of Principal:", suffix: "%", decimals: 1 },
+      {
+        result: totalPayment,
+        label: "Total Payment:",
+        suffix: "$",
+        decimals: 2,
+      },
+      {
+        result: totalInterest,
+        label: "Total Interest:",
+        suffix: "$",
+        decimals: 2,
+      },
+      {
+        result: (totalInterest / principal) * 100,
+        label: "Interest as % of Principal:",
+        suffix: "%",
+        decimals: 1,
+      },
     ];
   };
 

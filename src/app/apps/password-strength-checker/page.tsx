@@ -14,7 +14,8 @@ export default function PasswordStrengthCheckerPage() {
 }
 
 const pageProps = {
-  seoTitle: "Password Strength Checker – Test Your Password Security | ewory.com",
+  seoTitle:
+    "Password Strength Checker – Test Your Password Security | ewory.com",
   title: "Password Strength Checker",
   description:
     "Check how strong your password is. See crack time estimates, entropy, and detailed security analysis. All processing happens in your browser.",

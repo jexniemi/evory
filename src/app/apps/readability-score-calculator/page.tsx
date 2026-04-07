@@ -14,7 +14,8 @@ export default function ReadabilityScoreCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle: "Readability Score Calculator – Flesch-Kincaid & Fog Index | ewory.com",
+  seoTitle:
+    "Readability Score Calculator – Flesch-Kincaid & Fog Index | ewory.com",
   title: "Readability Score Calculator",
   description:
     "Check your text's readability with Flesch Reading Ease, Flesch-Kincaid Grade, and Gunning Fog Index. Free online readability analyzer.",

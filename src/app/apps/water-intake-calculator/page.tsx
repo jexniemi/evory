@@ -14,7 +14,8 @@ export default function WaterIntakeCalculatorPage() {
 }
 
 const pageProps = {
-  seoTitle: "Water Intake Calculator – How Much Water Should I Drink? | ewory.com",
+  seoTitle:
+    "Water Intake Calculator – How Much Water Should I Drink? | ewory.com",
   title: "Water Intake Calculator",
   description:
     "Calculate how much water you should drink daily based on your weight and activity level. Results in ounces, liters, and cups.",

@@ -28,7 +28,9 @@ export default function TypingSpeedTest() {
   const [accuracy, setAccuracy] = useState(100);
   const [elapsed, setElapsed] = useState(0);
   const inputRef = useRef<HTMLTextAreaElement>(null);
-  const timerRef = useRef<ReturnType<typeof setInterval> | undefined>(undefined);
+  const timerRef = useRef<ReturnType<typeof setInterval> | undefined>(
+    undefined,
+  );
 
   const pickText = useCallback(() => {
     const idx = Math.floor(Math.random() * SENTENCES.length);
@@ -69,7 +71,8 @@ export default function TypingSpeedTest() {
     for (let i = 0; i < value.length; i++) {
       if (value[i] === text[i]) correct++;
     }
-    const acc = value.length > 0 ? Math.round((correct / value.length) * 100) : 100;
+    const acc =
+      value.length > 0 ? Math.round((correct / value.length) * 100) : 100;
     setAccuracy(acc);
 
     // Calculate WPM
@@ -95,7 +98,9 @@ export default function TypingSpeedTest() {
     <div className="space-y-6">
       {status === "idle" && (
         <div className="text-center py-8">
-          <p className="text-lg mb-6">Test your typing speed and accuracy. Click Start to begin!</p>
+          <p className="text-lg mb-6">
+            Test your typing speed and accuracy. Click Start to begin!
+          </p>
           <button className="btn btn-primary btn-lg" onClick={startTest}>
             Start Typing Test
           </button>
@@ -114,7 +119,9 @@ export default function TypingSpeedTest() {
               <div className="text-sm text-sky-600 font-medium">Accuracy</div>
             </div>
             <div className="bg-violet-50 border border-violet-200 rounded-xl p-4">
-              <div className="text-3xl font-bold text-violet-700">{elapsed.toFixed(1)}s</div>
+              <div className="text-3xl font-bold text-violet-700">
+                {elapsed.toFixed(1)}s
+              </div>
               <div className="text-sm text-violet-600 font-medium">Time</div>
             </div>
           </div>
@@ -146,8 +153,9 @@ export default function TypingSpeedTest() {
                 Test Complete!
               </div>
               <p className="text-base-content/70">
-                You typed at <strong>{wpm} WPM</strong> with <strong>{accuracy}%</strong> accuracy
-                in <strong>{elapsed.toFixed(1)} seconds</strong>.
+                You typed at <strong>{wpm} WPM</strong> with{" "}
+                <strong>{accuracy}%</strong> accuracy in{" "}
+                <strong>{elapsed.toFixed(1)} seconds</strong>.
               </p>
               <button className="btn btn-primary" onClick={startTest}>
                 Try Again

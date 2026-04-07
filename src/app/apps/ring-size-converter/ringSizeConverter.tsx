@@ -48,8 +48,14 @@ export default function RingSizeConverter() {
   return (
     <div className="flex flex-col gap-4 w-full max-w-md mx-auto">
       <div className="form-control">
-        <label className="label"><span className="label-text">Size System</span></label>
-        <select className="select select-bordered w-full" value={system} onChange={(e) => setSystem(e.target.value as System)}>
+        <label className="label">
+          <span className="label-text">Size System</span>
+        </label>
+        <select
+          className="select select-bordered w-full"
+          value={system}
+          onChange={(e) => setSystem(e.target.value as System)}
+        >
           <option value="us">US / Canada</option>
           <option value="uk">UK / Australia</option>
           <option value="eu">EU / International</option>
@@ -59,10 +65,18 @@ export default function RingSizeConverter() {
       </div>
 
       <div className="form-control">
-        <label className="label"><span className="label-text">Select Size</span></label>
-        <select className="select select-bordered w-full" value={selectedIndex} onChange={(e) => setSelectedIndex(Number(e.target.value))}>
+        <label className="label">
+          <span className="label-text">Select Size</span>
+        </label>
+        <select
+          className="select select-bordered w-full"
+          value={selectedIndex}
+          onChange={(e) => setSelectedIndex(Number(e.target.value))}
+        >
           {getOptions().map((o) => (
-            <option key={o.index} value={o.index}>{o.label}</option>
+            <option key={o.index} value={o.index}>
+              {o.label}
+            </option>
           ))}
         </select>
       </div>
@@ -106,7 +120,12 @@ export default function RingSizeConverter() {
           </thead>
           <tbody>
             {sizeChart.map((s, i) => (
-              <tr key={i} className={i === selectedIndex ? "bg-primary/10 font-bold" : ""} onClick={() => setSelectedIndex(i)} style={{ cursor: "pointer" }}>
+              <tr
+                key={i}
+                className={i === selectedIndex ? "bg-primary/10 font-bold" : ""}
+                onClick={() => setSelectedIndex(i)}
+                style={{ cursor: "pointer" }}
+              >
                 <td>{s.us}</td>
                 <td>{s.uk}</td>
                 <td>{s.eu}</td>

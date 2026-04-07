@@ -3,12 +3,21 @@ import { useState, useMemo } from "react";
 
 export default function ReadabilityScoreCalculator() {
   const [text, setText] = useState(
-    "The quick brown fox jumps over the lazy dog. This is a simple example sentence to test readability. Short sentences are easier to read than long complex ones."
+    "The quick brown fox jumps over the lazy dog. This is a simple example sentence to test readability. Short sentences are easier to read than long complex ones.",
   );
 
   const stats = useMemo(() => {
     if (!text.trim()) {
-      return { words: 0, sentences: 0, syllables: 0, chars: 0, fleschKincaid: 0, fleschEase: 0, gunningFog: 0, avgWordLen: 0 };
+      return {
+        words: 0,
+        sentences: 0,
+        syllables: 0,
+        chars: 0,
+        fleschKincaid: 0,
+        fleschEase: 0,
+        gunningFog: 0,
+        avgWordLen: 0,
+      };
     }
 
     const words = text.trim().split(/\s+/).filter(Boolean);
@@ -29,9 +38,16 @@ export default function ReadabilityScoreCalculator() {
     const syllables = words.reduce((sum, w) => sum + countSyllables(w), 0);
     const complexWords = words.filter((w) => countSyllables(w) >= 3).length;
 
-    const fleschEase = 206.835 - 1.015 * (wordCount / sentenceCount) - 84.6 * (syllables / wordCount);
-    const fleschKincaid = 0.39 * (wordCount / sentenceCount) + 11.8 * (syllables / wordCount) - 15.59;
-    const gunningFog = 0.4 * ((wordCount / sentenceCount) + 100 * (complexWords / wordCount));
+    const fleschEase =
+      206.835 -
+      1.015 * (wordCount / sentenceCount) -
+      84.6 * (syllables / wordCount);
+    const fleschKincaid =
+      0.39 * (wordCount / sentenceCount) +
+      11.8 * (syllables / wordCount) -
+      15.59;
+    const gunningFog =
+      0.4 * (wordCount / sentenceCount + 100 * (complexWords / wordCount));
     const avgWordLen = chars / Math.max(wordCount, 1);
 
     return {
@@ -47,13 +63,47 @@ export default function ReadabilityScoreCalculator() {
   }, [text]);
 
   const getEaseLabel = (score: number) => {
-    if (score >= 90) return { label: "Very Easy", color: "text-green-700", bg: "bg-green-50 border-green-200" };
-    if (score >= 80) return { label: "Easy", color: "text-green-600", bg: "bg-green-50 border-green-200" };
-    if (score >= 70) return { label: "Fairly Easy", color: "text-emerald-600", bg: "bg-emerald-50 border-emerald-200" };
-    if (score >= 60) return { label: "Standard", color: "text-sky-600", bg: "bg-sky-50 border-sky-200" };
-    if (score >= 50) return { label: "Fairly Difficult", color: "text-amber-600", bg: "bg-amber-50 border-amber-200" };
-    if (score >= 30) return { label: "Difficult", color: "text-orange-600", bg: "bg-orange-50 border-orange-200" };
-    return { label: "Very Difficult", color: "text-red-600", bg: "bg-red-50 border-red-200" };
+    if (score >= 90)
+      return {
+        label: "Very Easy",
+        color: "text-green-700",
+        bg: "bg-green-50 border-green-200",
+      };
+    if (score >= 80)
+      return {
+        label: "Easy",
+        color: "text-green-600",
+        bg: "bg-green-50 border-green-200",
+      };
+    if (score >= 70)
+      return {
+        label: "Fairly Easy",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50 border-emerald-200",
+      };
+    if (score >= 60)
+      return {
+        label: "Standard",
+        color: "text-sky-600",
+        bg: "bg-sky-50 border-sky-200",
+      };
+    if (score >= 50)
+      return {
+        label: "Fairly Difficult",
+        color: "text-amber-600",
+        bg: "bg-amber-50 border-amber-200",
+      };
+    if (score >= 30)
+      return {
+        label: "Difficult",
+        color: "text-orange-600",
+        bg: "bg-orange-50 border-orange-200",
+      };
+    return {
+      label: "Very Difficult",
+      color: "text-red-600",
+      bg: "bg-red-50 border-red-200",
+    };
   };
 
   const easeInfo = getEaseLabel(stats.fleschEase);
@@ -61,7 +111,9 @@ export default function ReadabilityScoreCalculator() {
   return (
     <div className="space-y-6">
       <div className="form-control">
-        <label className="label"><span className="label-text font-semibold">Paste your text</span></label>
+        <label className="label">
+          <span className="label-text font-semibold">Paste your text</span>
+        </label>
         <textarea
           className="textarea textarea-bordered min-h-40 text-base"
           value={text}
@@ -95,16 +147,28 @@ export default function ReadabilityScoreCalculator() {
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="bg-amber-50 border border-amber-200 border-l-4 border-l-amber-400 rounded-xl p-4 text-center">
-          <div className="text-2xl font-bold text-amber-700">{stats.fleschKincaid.toFixed(1)}</div>
-          <div className="text-sm text-amber-600 font-medium">Flesch-Kincaid Grade</div>
+          <div className="text-2xl font-bold text-amber-700">
+            {stats.fleschKincaid.toFixed(1)}
+          </div>
+          <div className="text-sm text-amber-600 font-medium">
+            Flesch-Kincaid Grade
+          </div>
         </div>
         <div className="bg-sky-50 border border-sky-200 border-l-4 border-l-sky-400 rounded-xl p-4 text-center">
-          <div className="text-2xl font-bold text-sky-700">{stats.gunningFog.toFixed(1)}</div>
-          <div className="text-sm text-sky-600 font-medium">Gunning Fog Index</div>
+          <div className="text-2xl font-bold text-sky-700">
+            {stats.gunningFog.toFixed(1)}
+          </div>
+          <div className="text-sm text-sky-600 font-medium">
+            Gunning Fog Index
+          </div>
         </div>
         <div className="bg-violet-50 border border-violet-200 border-l-4 border-l-violet-400 rounded-xl p-4 text-center">
-          <div className="text-2xl font-bold text-violet-700">{stats.avgWordLen.toFixed(1)}</div>
-          <div className="text-sm text-violet-600 font-medium">Avg Word Length</div>
+          <div className="text-2xl font-bold text-violet-700">
+            {stats.avgWordLen.toFixed(1)}
+          </div>
+          <div className="text-sm text-violet-600 font-medium">
+            Avg Word Length
+          </div>
         </div>
       </div>
     </div>

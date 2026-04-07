@@ -36,12 +36,16 @@ export default function HashGenerator() {
   };
 
   // Auto-generate on mount and input change
-  useState(() => { generate(); });
+  useState(() => {
+    generate();
+  });
 
   return (
     <div className="flex flex-col gap-4 w-full max-w-2xl mx-auto">
       <div className="form-control">
-        <label className="label"><span className="label-text">Input Text</span></label>
+        <label className="label">
+          <span className="label-text">Input Text</span>
+        </label>
         <textarea
           className="textarea textarea-bordered w-full font-mono text-sm min-h-24"
           value={input}
@@ -50,7 +54,9 @@ export default function HashGenerator() {
         />
       </div>
 
-      <button className="btn btn-primary w-full" onClick={generate}>Generate Hashes</button>
+      <button className="btn btn-primary w-full" onClick={generate}>
+        Generate Hashes
+      </button>
 
       {Object.keys(hashes).length > 0 && (
         <div className="flex flex-col gap-3 mt-2">
@@ -65,8 +71,12 @@ export default function HashGenerator() {
                   {copied === name ? "Copied!" : "Copy"}
                 </button>
               </div>
-              <div className="font-mono text-xs break-all opacity-80">{hash}</div>
-              <div className="text-xs opacity-50 mt-1">{hash.length * 4} bits ({hash.length} hex chars)</div>
+              <div className="font-mono text-xs break-all opacity-80">
+                {hash}
+              </div>
+              <div className="text-xs opacity-50 mt-1">
+                {hash.length * 4} bits ({hash.length} hex chars)
+              </div>
             </div>
           ))}
         </div>

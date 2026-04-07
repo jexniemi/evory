@@ -23,10 +23,20 @@ export default function WaterIntakeCalculator() {
     const glasses = Math.ceil(cups);
 
     return [
-      { result: totalOz, label: "Daily Water Intake:", suffix: " oz", decimals: 0 },
+      {
+        result: totalOz,
+        label: "Daily Water Intake:",
+        suffix: " oz",
+        decimals: 0,
+      },
       { result: liters, label: "In Liters:", suffix: " L", decimals: 1 },
       { result: cups, label: "In Cups (8 oz):", suffix: " cups", decimals: 1 },
-      { result: glasses, label: "Glasses Per Day:", suffix: " glasses", decimals: 0 },
+      {
+        result: glasses,
+        label: "Glasses Per Day:",
+        suffix: " glasses",
+        decimals: 0,
+      },
     ];
   };
 
