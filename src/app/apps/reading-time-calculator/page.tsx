@@ -1,16 +1,18 @@
 import { Metadata } from "next";
 import Page from "@/components/Page";
-import { generateAppMetadata, getAppRoute } from "@/utils/seo";
+import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
 import ReadingTimeCalculator from "./readingTimeCalculator";
 import Info from "./info.mdx";
 
 const route = getAppRoute(import.meta.url);
 
-export const metadata: Metadata = generateAppMetadata(
-  "Reading Time Calculator – Free Online Estimate | ewory.com",
-  "Estimate how long it takes to read or speak any text. Paste your content and get reading time, word count, and text statistics.",
+export const metadata: Metadata = generateAppMetadata({
+  seoTitle: "Reading Time Calculator – Free Online Estimate | ewory.com",
+  title: "Reading Time Calculator",
+  description: "Estimate how long it takes to read or speak any text. Paste your content and get reading time, word count, and text statistics.",
   route,
-);
+});
 
 export default function ReadingTimeCalculatorPage() {
   return (

@@ -1,16 +1,18 @@
 import { Metadata } from "next";
 import Page from "@/components/Page";
-import { generateAppMetadata, getAppRoute } from "@/utils/seo";
+import { generateAppMetadata } from "@/utils/seo";
+import { getAppRoute } from "@/utils";
 import BinaryTranslator from "./binaryTranslator";
 import Info from "./info.mdx";
 
 const route = getAppRoute(import.meta.url);
 
-export const metadata: Metadata = generateAppMetadata(
-  "Binary Translator – Free Online Text to Binary Converter | ewory.com",
-  "Convert text to binary, hexadecimal, octal, and decimal. Translate binary back to readable text instantly.",
+export const metadata: Metadata = generateAppMetadata({
+  seoTitle: "Binary Translator – Free Online Text to Binary Converter | ewory.com",
+  title: "Binary Translator",
+  description: "Convert text to binary, hexadecimal, octal, and decimal. Translate binary back to readable text instantly.",
   route,
-);
+});
 
 export default function BinaryTranslatorPage() {
   return (
