@@ -316,6 +316,22 @@ const applications = {
 
         emoji: "🚘",
       },
+      {
+        route: "debt-to-income-calculator",
+        displayName: "Debt-to-Income Calculator",
+        shortDescription:
+          "Calculate your DTI ratio to see if you qualify for a mortgage or loan.",
+
+        emoji: "📊",
+      },
+      {
+        route: "emi-calculator",
+        displayName: "EMI Calculator",
+        shortDescription:
+          "Calculate your Equated Monthly Installment for any loan amount and tenure.",
+
+        emoji: "🏦",
+      },
     ],
   },
   "Daily Life & Home": {
@@ -543,6 +559,44 @@ const applications = {
 
         emoji: "☕",
       },
+      {
+        route: "shoe-size-converter",
+        displayName: "Shoe Size Converter",
+        shortDescription:
+          "Convert shoe sizes between US, UK, EU, and centimeters instantly.",
+
+        emoji: "👟",
+      },
+      {
+        route: "cpm-calculator",
+        displayName: "CPM Calculator",
+        shortDescription:
+          "Calculate cost per thousand impressions for advertising campaigns.",
+
+        emoji: "📢",
+      },
+      {
+        route: "internet-speed-converter",
+        displayName: "Internet Speed Converter",
+        shortDescription:
+          "Convert between Mbps, MB/s, Gbps, Kbps and see download times.",
+
+        emoji: "📶",
+      },
+      {
+        route: "ring-size-converter",
+        displayName: "Ring Size Converter",
+        shortDescription:
+          "Convert ring sizes between US, UK, EU, and mm measurements.",
+        emoji: "💍",
+      },
+      {
+        route: "tire-size-calculator",
+        displayName: "Tire Size Calculator",
+        shortDescription:
+          "Compare tire sizes and see diameter, speedometer, and clearance differences.",
+        emoji: "🛞",
+      },
     ],
   },
   "Health & Fitness": {
@@ -749,6 +803,43 @@ const applications = {
 
         emoji: "🥑",
       },
+      {
+        route: "dog-age-calculator",
+        displayName: "Dog Age Calculator",
+        shortDescription:
+          "Convert your dog's age to human years based on breed size.",
+
+        emoji: "🐕",
+      },
+      {
+        route: "cat-age-calculator",
+        displayName: "Cat Age Calculator",
+        shortDescription:
+          "Convert your cat's age to human years using veterinary guidelines.",
+
+        emoji: "🐱",
+      },
+      {
+        route: "blood-type-calculator",
+        displayName: "Blood Type Calculator",
+        shortDescription:
+          "Predict possible blood types for a child based on parents' blood types.",
+        emoji: "🩸",
+      },
+      {
+        route: "pace-converter",
+        displayName: "Pace Converter",
+        shortDescription:
+          "Convert running pace between min/mile and min/km with race time estimates.",
+        emoji: "🏃",
+      },
+      {
+        route: "water-intake-calculator",
+        displayName: "Water Intake Calculator",
+        shortDescription:
+          "Calculate how much water you should drink daily based on weight and activity.",
+        emoji: "💧",
+      },
     ],
   },
   Tools: {
@@ -896,6 +987,122 @@ const applications = {
           "Calculate speed, distance, or time given the other two values.",
 
         emoji: "⚡",
+      },
+      {
+        route: "hex-color-picker",
+        displayName: "Hex Color Picker",
+        shortDescription:
+          "Pick any color and get HEX, RGB, and HSL values instantly.",
+
+        emoji: "🎨",
+      },
+      {
+        route: "aspect-ratio-calculator",
+        displayName: "Aspect Ratio Calculator",
+        shortDescription:
+          "Calculate the aspect ratio of any width and height for screens, images, and videos.",
+
+        emoji: "📐",
+      },
+      {
+        route: "pixel-to-rem-converter",
+        displayName: "PX to REM Converter",
+        shortDescription:
+          "Convert pixels to REM, EM, points, and viewport units for CSS.",
+
+        emoji: "🔤",
+      },
+      {
+        route: "readability-score-calculator",
+        displayName: "Readability Score Calculator",
+        shortDescription:
+          "Analyze text readability with Flesch-Kincaid and Gunning Fog formulas.",
+
+        emoji: "📖",
+      },
+      {
+        route: "grade-percentage-calculator",
+        displayName: "Grade Percentage Calculator",
+        shortDescription:
+          "Convert points to percentage, letter grade, and GPA equivalent.",
+        emoji: "📝",
+      },
+      {
+        route: "regex-tester",
+        displayName: "Regex Tester",
+        shortDescription:
+          "Test and debug regular expressions in real time with highlighted matches.",
+        emoji: "🔍",
+      },
+      {
+        route: "color-contrast-checker",
+        displayName: "Color Contrast Checker",
+        shortDescription:
+          "Check WCAG 2.1 AA/AAA color contrast compliance for text and backgrounds.",
+        emoji: "🎨",
+      },
+      {
+        route: "markdown-previewer",
+        displayName: "Markdown Previewer",
+        shortDescription:
+          "Write and preview Markdown in real time with live rendering.",
+        emoji: "📝",
+      },
+      {
+        route: "scientific-notation-converter",
+        displayName: "Scientific Notation Converter",
+        shortDescription:
+          "Convert numbers to and from scientific notation with E-notation.",
+        emoji: "🔬",
+      },
+      {
+        route: "hash-generator",
+        displayName: "Hash Generator",
+        shortDescription:
+          "Generate SHA-256, SHA-512, and SHA-1 hashes from text instantly.",
+        emoji: "🔐",
+      },
+      {
+        route: "time-duration-calculator",
+        displayName: "Time Duration Calculator",
+        shortDescription:
+          "Calculate hours and minutes between two times or add/subtract durations.",
+        emoji: "⏱️",
+      },
+      {
+        route: "password-strength-checker",
+        displayName: "Password Strength Checker",
+        shortDescription:
+          "Check your password strength, crack time, and entropy score.",
+        emoji: "🔑",
+      },
+      {
+        route: "binary-translator",
+        displayName: "Binary Translator",
+        shortDescription:
+          "Convert text to binary, hex, octal, and decimal — or binary back to text.",
+        emoji: "🔢",
+      },
+      {
+        route: "reading-time-calculator",
+        displayName: "Reading Time Calculator",
+        shortDescription:
+          "Estimate how long it takes to read or speak any text.",
+        emoji: "📖",
+      },
+      {
+        route: "css-gradient-generator",
+        displayName: "CSS Gradient Generator",
+        shortDescription:
+          "Create beautiful CSS gradients visually and copy the code.",
+        emoji: "🎨",
+      },
+      {
+        route: "ppi-calculator",
+        displayName: "PPI Calculator",
+        shortDescription:
+          "Calculate pixels per inch and screen density for any display.",
+        emoji: "🖥️",
       },
     ],
   },
@@ -1054,6 +1261,21 @@ const applications = {
           "Generate random colors in HEX, RGB, and HSL with one-click copy and palette builder.",
 
         emoji: "🎨",
+      },
+      {
+        route: "typing-speed-test",
+        displayName: "Typing Speed Test",
+        shortDescription:
+          "Test your typing speed and accuracy with a free online WPM test.",
+
+        emoji: "⌨️",
+      },
+      {
+        route: "snow-day-predictor",
+        displayName: "Snow Day Predictor",
+        shortDescription:
+          "Predict the chance of a snow day based on weather and location factors.",
+        emoji: "❄️",
       },
     ],
   },

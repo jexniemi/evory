@@ -1,0 +1,122 @@
+import FAQ from "@/components/FAQ"
+
+## Blood Type Calculator — Predict Your Baby's Blood Type
+
+Blood type is determined by genetics — the combination of ABO genes and Rh factors inherited from both parents. This calculator shows all possible blood types a child could have based on the parents' blood types and Rh status. It's useful for expectant parents, biology students, and anyone curious about blood type inheritance.
+
+## How Blood Type Inheritance Works
+
+Blood type is controlled by the ABO gene system. Each parent contributes one of two alleles:
+
+- **Type A** carries either AA or AO alleles
+- **Type B** carries either BB or BO alleles
+- **Type AB** carries one A and one B allele
+- **Type O** carries two O alleles (OO)
+
+A and B are codominant (both expressed together), while O is recessive (only expressed when no A or B is present).
+
+> **Each parent donates one allele. The child receives one allele from each parent.**
+
+## Blood Type Inheritance Chart
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Parent 1</th>
+      <th>Parent 2</th>
+      <th>Possible Child Types</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>A</td><td>A</td><td>A, O</td></tr>
+    <tr><td>A</td><td>B</td><td>A, B, AB, O</td></tr>
+    <tr><td>A</td><td>AB</td><td>A, B, AB</td></tr>
+    <tr><td>A</td><td>O</td><td>A, O</td></tr>
+    <tr><td>B</td><td>B</td><td>B, O</td></tr>
+    <tr><td>B</td><td>AB</td><td>A, B, AB</td></tr>
+    <tr><td>B</td><td>O</td><td>B, O</td></tr>
+    <tr><td>AB</td><td>AB</td><td>A, B, AB</td></tr>
+    <tr><td>AB</td><td>O</td><td>A, B</td></tr>
+    <tr><td>O</td><td>O</td><td>O</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Rh Factor Inheritance
+
+The Rh factor (positive or negative) is determined separately by the RHD gene:
+
+- **Rh positive (+)** is dominant — a person can be ++ or +−
+- **Rh negative (−)** is recessive — a person must be −−
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Parent 1</th>
+      <th>Parent 2</th>
+      <th>Possible Child Rh</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>+ (could be ++ or +−)</td><td>+ (could be ++ or +−)</td><td>+, −</td></tr>
+    <tr><td>+ (could be ++ or +−)</td><td>−</td><td>+, −</td></tr>
+    <tr><td>−</td><td>−</td><td>− only</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Blood Type Frequency in the US Population
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Blood Type</th>
+      <th>Frequency</th>
+      <th>Can Donate To</th>
+      <th>Can Receive From</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>O+</td><td>37.4%</td><td>O+, A+, B+, AB+</td><td>O+, O−</td></tr>
+    <tr><td>O−</td><td>6.6%</td><td>All types (universal)</td><td>O−</td></tr>
+    <tr><td>A+</td><td>35.7%</td><td>A+, AB+</td><td>A+, A−, O+, O−</td></tr>
+    <tr><td>A−</td><td>6.3%</td><td>A+, A−, AB+, AB−</td><td>A−, O−</td></tr>
+    <tr><td>B+</td><td>8.5%</td><td>B+, AB+</td><td>B+, B−, O+, O−</td></tr>
+    <tr><td>B−</td><td>1.5%</td><td>B+, B−, AB+, AB−</td><td>B−, O−</td></tr>
+    <tr><td>AB+</td><td>3.4%</td><td>AB+</td><td>All types (universal)</td></tr>
+    <tr><td>AB−</td><td>0.6%</td><td>AB+, AB−</td><td>A−, B−, AB−, O−</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Why Knowing Your Blood Type Matters
+
+- **Medical emergencies**: Receiving the wrong blood type in a transfusion can be fatal. Knowing your type speeds up emergency care.
+- **Pregnancy**: Rh-negative mothers carrying Rh-positive babies may develop antibodies (Rh incompatibility). This is managed with RhoGAM injections.
+- **Blood donation**: O− is the universal donor type and always in high demand. AB+ is the universal recipient.
+- **Health research**: Some studies suggest blood type may influence susceptibility to certain diseases, including cardiovascular disease and some infections.
+
+<FAQ items={[
+  { q: "What blood type will my baby have?", a: "It depends on both parents' blood types. For example, if one parent is A and the other is B, the child could be A, B, AB, or O. Use the calculator above to see all possibilities based on your specific combination." },
+  { q: "Can two type O parents have a non-O child?", a: "No. If both parents are type O (genotype OO), they can only pass O alleles to their children. All children will be type O." },
+  { q: "What is the rarest blood type?", a: "AB negative (AB−) is the rarest blood type, found in only about 0.6% of the U.S. population. The rarest Rh-null type ('golden blood') is found in fewer than 50 people worldwide." },
+  { q: "Can a child have a different blood type than both parents?", a: "Yes. For example, if both parents are type A (genotype AO), they can have a child with type O (genotype OO) — even though neither parent is type O themselves." },
+  { q: "What is Rh incompatibility?", a: "Rh incompatibility occurs when an Rh-negative mother carries an Rh-positive baby. The mother's immune system may produce antibodies against the baby's blood cells. This is prevented with RhoGAM injections during pregnancy." }
+]} />
+
+## Related Tools
+
+- [Blood Pressure Checker](/apps/blood-pressure-checker) — Check blood pressure readings
+- [BMI Calculator](/apps/bmi-calculator) — Calculate body mass index
+- [Pregnancy Calculator](/apps/pregnancy-calculator) — Track pregnancy milestones
+- [Due Date Calculator](/apps/due-date-calculator) — Estimate delivery date
+- [Age Calculator](/apps/age-calculator) — Calculate exact age
+
+## Sources
+
+- [American Red Cross — Blood Types](https://www.redcrossblood.org/donate-blood/blood-types.html)
+- [Stanford Blood Center — Blood Type Genetics](https://stanfordbloodcenter.org/)
+- [NIH — Genetics of Blood Type](https://medlineplus.gov/genetics/understanding/traits/bloodtype/)

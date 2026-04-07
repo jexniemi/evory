@@ -1,0 +1,95 @@
+import FAQ from "@/components/FAQ";
+
+## How the Binary Translator Works
+
+The **binary translator** converts text into its binary representation and vice versa. Every character you type on a keyboard has a corresponding numeric value defined by encoding standards like ASCII and UTF-8. This tool encodes each character into its 8-bit binary equivalent, and also shows the hexadecimal, octal, and decimal representations simultaneously.
+
+When converting **text to binary**, each character is mapped to its Unicode code point, then expressed as a sequence of 8-bit binary digits (0s and 1s). For example, the letter "A" has an ASCII value of 65, which is `01000001` in binary.
+
+When converting **binary to text**, the tool reads groups of 8 binary digits, interprets each group as a byte value, and maps it back to the corresponding character.
+
+> **Formula:** Character → ASCII/UTF-8 code point → Binary (base 2), Hex (base 16), Octal (base 8), Decimal (base 10)
+
+## Worked Example
+
+Let's convert the word **"Hi"** to binary:
+
+1. **H** → ASCII code 72 → Binary: `01001000` → Hex: `48` → Octal: `110` → Decimal: `72`
+2. **i** → ASCII code 105 → Binary: `01101001` → Hex: `69` → Octal: `151` → Decimal: `105`
+
+Result: `01001000 01101001`
+
+To reverse the process, split the binary string into 8-bit chunks, convert each to decimal, and look up the character.
+
+## ASCII Reference Table
+
+<div className="overflow-x-auto">
+  <table className="table table-zebra table-sm">
+    <thead>
+      <tr>
+        <th>Char</th>
+        <th>Dec</th>
+        <th>Binary</th>
+        <th>Hex</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>A</td><td>65</td><td>01000001</td><td>41</td></tr>
+      <tr><td>B</td><td>66</td><td>01000010</td><td>42</td></tr>
+      <tr><td>C</td><td>67</td><td>01000011</td><td>43</td></tr>
+      <tr><td>a</td><td>97</td><td>01100001</td><td>61</td></tr>
+      <tr><td>b</td><td>98</td><td>01100010</td><td>62</td></tr>
+      <tr><td>0</td><td>48</td><td>00110000</td><td>30</td></tr>
+      <tr><td>1</td><td>49</td><td>00110001</td><td>31</td></tr>
+      <tr><td>Space</td><td>32</td><td>00100000</td><td>20</td></tr>
+      <tr><td>!</td><td>33</td><td>00100001</td><td>21</td></tr>
+      <tr><td>@</td><td>64</td><td>01000000</td><td>40</td></tr>
+    </tbody>
+  </table>
+</div>
+
+## Understanding Number Bases
+
+Computers operate in binary (base 2) because transistors have two states — on and off. However, programmers commonly use other bases for convenience:
+
+- **Binary (Base 2):** Uses digits 0 and 1. Each digit is called a "bit." Eight bits make one byte.
+- **Hexadecimal (Base 16):** Uses 0–9 and A–F. Compact way to represent binary — each hex digit equals exactly 4 bits.
+- **Octal (Base 8):** Uses digits 0–7. Historically popular in Unix file permissions (e.g., `chmod 755`).
+- **Decimal (Base 10):** The standard number system humans use daily.
+
+## Common Uses for Binary Translation
+
+- **Programming and debugging**: Inspect how text is stored at the byte level.
+- **Networking**: Analyze packet data, IP addresses, and subnet masks in binary.
+- **Education**: Learn about character encodings, ASCII, and how computers represent text.
+- **Cryptography**: Understand bitwise operations used in encryption algorithms.
+- **Data encoding**: Work with base64, URL encoding, and other formats that stem from binary data.
+
+## Tips for Using the Binary Translator
+
+- Separate binary digits with spaces for readability — the tool handles both spaced and unspaced input.
+- Binary input must be in multiples of 8 bits to produce valid characters.
+- This tool uses UTF-8 encoding, which is backward-compatible with ASCII for standard English characters.
+- Use the hex output for a more compact representation — each pair of hex digits represents one byte.
+
+<FAQ items={[
+  { q: "What is binary code?", a: "Binary code is a system that uses only two digits — 0 and 1 — to represent data. Every piece of text, image, or program on your computer is ultimately stored as a sequence of binary digits (bits). Each group of 8 bits forms a byte, which can represent values from 0 to 255." },
+  { q: "How do I convert text to binary by hand?", a: "Look up each character's ASCII code (e.g., 'A' = 65), then convert that number to base 2 by repeatedly dividing by 2 and recording the remainders. Pad the result to 8 digits. For 'A': 65 in binary is 01000001." },
+  { q: "What is the difference between ASCII and UTF-8?", a: "ASCII defines 128 characters (0–127) using 7 bits. UTF-8 is a superset that encodes over 1 million characters using 1–4 bytes. For standard English letters and symbols, ASCII and UTF-8 produce the same binary output." },
+  { q: "Why is hexadecimal used instead of binary?", a: "Hexadecimal is more compact — one hex digit represents exactly 4 binary digits. This makes it much easier to read and write long binary sequences. For example, the binary byte 11111111 is simply 'FF' in hex." },
+  { q: "Can this tool translate emojis and special characters?", a: "Yes, the tool uses UTF-8 encoding which supports emojis and characters from all languages. Multi-byte characters (like emojis) will produce more than 8 binary digits since they require 2–4 bytes in UTF-8." }
+]} />
+
+## Related Tools
+
+- [Base Converter](/apps/base-converter) — Convert numbers between binary, octal, decimal, and hexadecimal.
+- [Character Counter](/apps/character-counter) — Count characters, words, and bytes in your text.
+- [Hash Generator](/apps/hash-generator) — Generate SHA and other hash values from text input.
+- [Text Case Converter](/apps/text-case-converter) — Transform text between uppercase, lowercase, and more.
+- [Password Generator](/apps/password-generator) — Create strong random passwords with custom settings.
+
+## Sources
+
+- [ASCII Table – ASCII-Code.com](https://www.ascii-code.com/)
+- [UTF-8 Encoding – W3C](https://www.w3.org/International/articles/definitions-characters/)
+- [Binary Number System – Khan Academy](https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:digital-information/xcae6f4a7ff015e7d:binary-numbers/a/bits-and-binary)

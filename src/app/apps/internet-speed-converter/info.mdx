@@ -1,0 +1,100 @@
+import FAQ from "@/components/FAQ"
+
+## Internet Speed Converter — Mbps, MB/s, Gbps Explained
+
+Internet speed is confusing because ISPs advertise in megabits per second (Mbps) while downloads show megabytes per second (MB/s). These are not the same — there are 8 bits in a byte, so 100 Mbps is only 12.5 MB/s. This converter helps you translate between all common internet speed units and see real-world download times.
+
+## Mbps vs MB/s — The Key Difference
+
+> **1 byte = 8 bits**  
+> **Mbps ÷ 8 = MB/s**
+
+**Example:** Your ISP advertises 200 Mbps:
+- Actual download speed: 200 ÷ 8 = **25 MB/s**
+- Time to download a 4 GB movie: 4,000 MB ÷ 25 = **160 seconds** (about 2.7 minutes)
+
+## Internet Speed Units Reference
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Unit</th>
+      <th>Full Name</th>
+      <th>Equal To</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>bps</td><td>bits per second</td><td>Base unit</td></tr>
+    <tr><td>Kbps</td><td>kilobits per second</td><td>1,000 bps</td></tr>
+    <tr><td>Mbps</td><td>megabits per second</td><td>1,000 Kbps</td></tr>
+    <tr><td>Gbps</td><td>gigabits per second</td><td>1,000 Mbps</td></tr>
+    <tr><td>KB/s</td><td>kilobytes per second</td><td>8 Kbps</td></tr>
+    <tr><td>MB/s</td><td>megabytes per second</td><td>8 Mbps</td></tr>
+    <tr><td>GB/s</td><td>gigabytes per second</td><td>8 Gbps</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Download Time Estimates by Speed
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>File Size</th>
+      <th>25 Mbps</th>
+      <th>100 Mbps</th>
+      <th>500 Mbps</th>
+      <th>1 Gbps</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1 GB (movie)</td><td>5 min 20s</td><td>1 min 20s</td><td>16s</td><td>8s</td></tr>
+    <tr><td>5 GB (game)</td><td>27 min</td><td>6 min 40s</td><td>1 min 20s</td><td>40s</td></tr>
+    <tr><td>25 GB (large game)</td><td>2 hr 13 min</td><td>33 min</td><td>6 min 40s</td><td>3 min 20s</td></tr>
+    <tr><td>50 GB (AAA game)</td><td>4 hr 27 min</td><td>1 hr 7 min</td><td>13 min</td><td>6 min 40s</td></tr>
+    <tr><td>100 GB (game + updates)</td><td>8 hr 53 min</td><td>2 hr 13 min</td><td>27 min</td><td>13 min</td></tr>
+  </tbody>
+</table>
+</div>
+
+## What Speed Do You Need?
+
+- **1–5 Mbps**: Basic email and web browsing
+- **5–25 Mbps**: SD video streaming, video calls
+- **25–100 Mbps**: HD streaming, gaming, small household
+- **100–300 Mbps**: 4K streaming, multiple users, remote work
+- **300+ Mbps**: Large households, heavy downloading, streaming on many devices
+- **1+ Gbps**: Power users, content creators, home servers
+
+## Why Your Actual Speed Is Lower Than Advertised
+
+ISPs advertise "up to" speeds which represent the theoretical maximum. Actual speeds are usually 50–80% of the advertised rate due to:
+
+- **Network congestion**: More users on the same node slows everyone down, especially during peak hours (7–11 PM).
+- **Wi-Fi overhead**: Wi-Fi is slower than wired Ethernet due to signal interference, distance from router, and protocol overhead.
+- **Hardware limits**: Older routers, outdated network cards, or long Ethernet cables reduce throughput.
+- **Throttling**: Some ISPs throttle specific traffic types (streaming, torrenting) during congestion.
+
+<FAQ items={[
+  { q: "What is the difference between Mbps and MB/s?", a: "Mbps (megabits per second) measures data in bits, while MB/s (megabytes per second) measures in bytes. Since 1 byte = 8 bits, you divide Mbps by 8 to get MB/s. So 100 Mbps = 12.5 MB/s." },
+  { q: "Is 100 Mbps fast?", a: "Yes, 100 Mbps is fast enough for most households. It can handle 4K streaming on multiple devices, video conferencing, gaming, and general browsing simultaneously. A 1 GB file downloads in about 80 seconds." },
+  { q: "How fast is 1 Gbps?", a: "1 Gbps (1,000 Mbps) is very fast. It can download a 1 GB file in about 8 seconds. It's ideal for large households with many devices, professional content creators, and gamers who download large games frequently." },
+  { q: "Why is my download speed slower than my internet speed?", a: "Download speeds shown in browsers are in MB/s (megabytes), while your ISP advertises in Mbps (megabits). Divide your Mbps by 8 to get the expected MB/s. Additionally, server speed, network congestion, and Wi-Fi overhead reduce actual speeds." },
+  { q: "How much internet speed do I need for streaming?", a: "Netflix recommends 5 Mbps for HD and 25 Mbps for 4K Ultra HD per stream. For a household with multiple simultaneous streams plus other devices, 100-200 Mbps provides a comfortable buffer." }
+]} />
+
+## Related Tools
+
+- [Speed Converter](/apps/speed-converter) — Convert between speed units
+- [Electricity Bill Calculator](/apps/electricity-bill-calculator) — Estimate energy costs
+- [Unit Price Calculator](/apps/unit-price-calculator) — Compare prices per unit
+- [Length Converter](/apps/length-converter) — Convert measurement units
+- [Percentage Calculator](/apps/percentage-calculator) — Calculate percentages
+
+## Sources
+
+- [FCC — Broadband Speed Guide](https://www.fcc.gov/consumers/guides/broadband-speed-guide)
+- [Netflix — Internet Speed Recommendations](https://help.netflix.com/en/node/306)
+- [Ookla / Speedtest — Global Speed Index](https://www.speedtest.net/global-index)

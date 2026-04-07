@@ -1,0 +1,106 @@
+import FAQ from "@/components/FAQ"
+
+## EMI Calculator — Calculate Your Monthly Loan Payment
+
+EMI (Equated Monthly Installment) is the fixed amount you pay every month to repay a loan. Each EMI payment covers both the interest and a portion of the principal, so your loan balance decreases with every payment until it reaches zero at the end of the term.
+
+This free EMI calculator works for any type of loan — home loans, car loans, personal loans, student loans, or business loans. Enter the loan amount, interest rate, and tenure to instantly see your monthly payment and total cost.
+
+## EMI Formula
+
+The EMI is calculated using the standard reducing-balance formula:
+
+> **EMI = P × r × (1 + r)ⁿ ÷ [(1 + r)ⁿ − 1]**
+
+Where:
+- **P** = Principal loan amount
+- **r** = Monthly interest rate (annual rate ÷ 12 ÷ 100)
+- **n** = Number of monthly installments
+
+**Example:** A $20,000 loan at 8% annual interest for 48 months:
+- r = 8 ÷ 12 ÷ 100 = 0.00667
+- EMI = 20,000 × 0.00667 × (1.00667)⁴⁸ ÷ [(1.00667)⁴⁸ − 1]
+- EMI = **$488.26/month**
+- Total payment = $488.26 × 48 = **$23,436**
+- Total interest = $23,436 − $20,000 = **$3,436**
+
+## EMI Comparison by Loan Term
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Loan Amount</th>
+      <th>Rate</th>
+      <th>Term</th>
+      <th>Monthly EMI</th>
+      <th>Total Interest</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>$10,000</td><td>6%</td><td>24 mo</td><td>$443</td><td>$629</td></tr>
+    <tr><td>$10,000</td><td>6%</td><td>48 mo</td><td>$235</td><td>$1,268</td></tr>
+    <tr><td>$25,000</td><td>7%</td><td>36 mo</td><td>$772</td><td>$2,791</td></tr>
+    <tr><td>$25,000</td><td>7%</td><td>60 mo</td><td>$495</td><td>$4,700</td></tr>
+    <tr><td>$50,000</td><td>8%</td><td>60 mo</td><td>$1,014</td><td>$10,833</td></tr>
+    <tr><td>$200,000</td><td>6.5%</td><td>360 mo</td><td>$1,264</td><td>$255,089</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Factors That Affect Your EMI
+
+- **Loan amount**: Higher principal means higher EMI. Consider borrowing only what you need.
+- **Interest rate**: Even a 0.5% difference in rate significantly impacts total cost over long terms.
+- **Loan tenure**: Longer tenure reduces monthly EMI but increases total interest paid substantially.
+- **Prepayments**: Making extra payments toward principal reduces the remaining balance and total interest.
+
+## EMI vs Flat Rate vs Reducing Balance
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Method</th>
+      <th>How Interest Is Calculated</th>
+      <th>Total Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Reducing Balance (EMI)</td><td>Interest on remaining principal only</td><td>Lower — you pay less interest over time</td></tr>
+    <tr><td>Flat Rate</td><td>Interest on original principal for entire term</td><td>Higher — effective rate is roughly double</td></tr>
+  </tbody>
+</table>
+</div>
+
+Most banks and financial institutions use the reducing-balance method (standard EMI). Be cautious of lenders advertising low "flat rate" interest — the effective rate is nearly twice the stated rate.
+
+## Tips to Reduce Your EMI Burden
+
+- **Make a larger down payment**: Reduces the principal and therefore the EMI.
+- **Choose the right tenure**: Balance between affordable monthly payments and total interest cost.
+- **Negotiate the rate**: Compare offers from multiple lenders. Even 0.25% lower can save thousands.
+- **Prepay when possible**: Most loans allow extra payments that directly reduce principal.
+- **Maintain good credit**: A higher credit score qualifies you for lower interest rates.
+
+<FAQ items={[
+  { q: "What is EMI?", a: "EMI stands for Equated Monthly Installment. It is the fixed monthly payment you make to repay a loan over a specific period. Each EMI includes both interest and principal repayment, with the interest portion decreasing over time as the principal reduces." },
+  { q: "How is EMI different from a regular loan payment?", a: "EMI is a specific type of loan payment where the amount stays the same every month (equated). This makes budgeting easier. The internal split between interest and principal changes each month — early payments are mostly interest, while later payments are mostly principal." },
+  { q: "Can I reduce my EMI after taking a loan?", a: "Yes, you can reduce EMI by making partial prepayments (which reduce the principal), refinancing at a lower interest rate, or requesting a tenure extension from your lender (though this increases total interest)." },
+  { q: "What happens if I miss an EMI payment?", a: "Missing an EMI typically results in a late fee (1-2% of the EMI), negative impact on your credit score, and potential compounding of interest on the missed amount. Repeated defaults can lead to loan recall and legal action." },
+  { q: "Should I choose a longer or shorter loan tenure?", a: "Shorter tenure means higher monthly EMI but significantly less total interest. Longer tenure means lower EMI but more total cost. Choose a tenure where the EMI is comfortably within 30-40% of your monthly income." }
+]} />
+
+## Related Tools
+
+- [Loan Repayment Calculator](/apps/loan-repayment-calculator) — Plan your loan repayment schedule
+- [Mortgage Calculator](/apps/mortgage-calculator) — Calculate home loan payments
+- [Car Loan Calculator](/apps/car-loan-calculator) — Estimate auto loan payments
+- [Compound Interest Calculator](/apps/compound-interest-calculator) — See how interest compounds
+- [Debt Payoff Calculator](/apps/debt-payoff-calculator) — Plan debt elimination strategy
+
+## Sources
+
+- [Consumer Financial Protection Bureau — Understanding Loan Costs](https://www.consumerfinance.gov/)
+- [Federal Reserve — Consumer Credit Information](https://www.federalreserve.gov/releases/g19/)
+- [Investopedia — EMI Explained](https://www.investopedia.com/terms/e/equated_monthly_installment.asp)

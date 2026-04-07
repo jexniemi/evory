@@ -1,0 +1,103 @@
+import FAQ from "@/components/FAQ"
+
+## Markdown Previewer – Live Markdown Editor Online
+
+Markdown is the go-to writing format for developers, technical writers, and content creators. This free online Markdown previewer lets you write Markdown on the left and instantly see the rendered output on the right — no installation or software needed. It supports headings, bold, italic, code blocks, lists, links, blockquotes, and more.
+
+## What Is Markdown?
+
+Markdown is a lightweight markup language created by John Gruber in 2004. It lets you write formatted text using plain-text syntax. Originally designed to convert to HTML, Markdown is now used everywhere — from GitHub README files and documentation to forums, blogs, and chat applications.
+
+> **Markdown's philosophy:** Easy to read, easy to write. The raw text should be as readable as the formatted output.
+
+## Markdown Syntax Reference
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Element</th>
+      <th>Markdown Syntax</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Heading 1</td><td><code># Heading</code></td><td>Large heading</td></tr>
+    <tr><td>Heading 2</td><td><code>## Heading</code></td><td>Medium heading</td></tr>
+    <tr><td>Heading 3</td><td><code>### Heading</code></td><td>Small heading</td></tr>
+    <tr><td>Bold</td><td><code>**bold text**</code></td><td><strong>bold text</strong></td></tr>
+    <tr><td>Italic</td><td><code>*italic text*</code></td><td><em>italic text</em></td></tr>
+    <tr><td>Strikethrough</td><td><code>~~strikethrough~~</code></td><td><del>strikethrough</del></td></tr>
+    <tr><td>Inline code</td><td><code>`code`</code></td><td><code>code</code></td></tr>
+    <tr><td>Link</td><td><code>[text](url)</code></td><td><a href="#">text</a></td></tr>
+    <tr><td>Image</td><td><code>![alt](url)</code></td><td>(image)</td></tr>
+    <tr><td>Blockquote</td><td><code>&gt; quote</code></td><td>Indented quote</td></tr>
+    <tr><td>Unordered list</td><td><code>- item</code></td><td>Bulleted list</td></tr>
+    <tr><td>Ordered list</td><td><code>1. item</code></td><td>Numbered list</td></tr>
+    <tr><td>Horizontal rule</td><td><code>---</code></td><td>Line separator</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Where Markdown Is Used
+
+Markdown has become the standard writing format across the tech industry and beyond:
+
+- **GitHub**: README files, issues, pull requests, and comments use Markdown
+- **Stack Overflow**: All questions and answers are written in Markdown
+- **Reddit**: Post and comment formatting uses a Markdown variant
+- **Discord & Slack**: Chat formatting uses Markdown syntax
+- **Documentation**: Tools like MkDocs, Docusaurus, and GitBook use Markdown
+- **Blogging**: Static site generators (Hugo, Jekyll, Gatsby) use Markdown for content
+- **Note-taking**: Apps like Obsidian, Notion, and Bear support Markdown
+
+## Markdown Flavors
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Flavor</th>
+      <th>Used By</th>
+      <th>Extra Features</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>CommonMark</td><td>Standard spec</td><td>Baseline standard</td></tr>
+    <tr><td>GFM (GitHub Flavored)</td><td>GitHub</td><td>Tables, task lists, autolinks</td></tr>
+    <tr><td>MDX</td><td>React projects</td><td>JSX components in Markdown</td></tr>
+    <tr><td>MultiMarkdown</td><td>Academic writing</td><td>Footnotes, citations, math</td></tr>
+    <tr><td>R Markdown</td><td>Data science</td><td>Code execution, charts</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Tips for Writing Better Markdown
+
+- **Use blank lines between elements** — paragraphs, headings, and lists need blank lines to render correctly
+- **Indent code blocks** — use triple backticks with the language name for syntax highlighting
+- **Keep lines short** — while Markdown wraps text automatically, shorter lines are easier to edit
+- **Preview before publishing** — use this tool to catch formatting errors before committing or posting
+- **Learn keyboard shortcuts** — in most editors, Ctrl+B bolds and Ctrl+I italicizes selected text
+
+<FAQ items={[
+  { q: "What is Markdown?", a: "Markdown is a lightweight markup language that uses plain-text formatting syntax. It was created by John Gruber in 2004 to make writing for the web simple and readable. It converts easily to HTML and is used on GitHub, Stack Overflow, Reddit, and many other platforms." },
+  { q: "Is Markdown the same as HTML?", a: "No, but Markdown converts to HTML. Markdown is much simpler — instead of writing <strong>bold</strong>, you write **bold**. Most Markdown processors also allow inline HTML for more complex formatting." },
+  { q: "What file extension does Markdown use?", a: "Markdown files use the .md or .markdown extension. Some variants use .mdx (MDX with React components) or .Rmd (R Markdown)." },
+  { q: "Can I use Markdown in emails?", a: "Most email clients don't natively support Markdown, but you can write in Markdown and convert it to HTML or rich text before sending. Some email apps and browser extensions support this workflow." },
+  { q: "How do I create a table in Markdown?", a: "Use pipes (|) and hyphens (-) to create tables. For example: | Header | Header | followed by | --- | --- | and then | cell | cell |. This syntax is part of GitHub Flavored Markdown (GFM)." }
+]} />
+
+## Related Tools
+
+- [Character Counter](/apps/character-counter) — Count characters, words, and sentences
+- [Readability Score Calculator](/apps/readability-score-calculator) — Analyze text readability
+- [Regex Tester](/apps/regex-tester) — Test regular expressions
+- [Hex Color Picker](/apps/hex-color-picker) — Pick colors for your content
+- [Color Contrast Checker](/apps/color-contrast-checker) — Check text contrast
+
+## Sources
+
+- [Daring Fireball – Markdown by John Gruber](https://daringfireball.net/projects/markdown/)
+- [CommonMark Specification](https://spec.commonmark.org/)
+- [GitHub – Mastering Markdown](https://guides.github.com/features/mastering-markdown/)

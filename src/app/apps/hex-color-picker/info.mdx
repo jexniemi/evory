@@ -1,0 +1,106 @@
+import FAQ from "@/components/FAQ"
+
+## Hex Color Picker — Find and Convert Color Codes Instantly
+
+A HEX color code is a six-character string used in web design, graphic design, and digital art to specify exact colors. Each pair of characters represents the Red, Green, and Blue (RGB) channels in hexadecimal notation, giving you access to over 16.7 million unique colors.
+
+This free color picker tool lets you visually select a color or type a HEX value and instantly see the corresponding RGB and HSL values — ready to copy and paste into CSS, design software, or any project.
+
+## How HEX Color Codes Work
+
+A HEX color code follows the format `#RRGGBB`, where each pair is a hexadecimal value from `00` to `FF` (0–255 in decimal):
+
+> **#RRGGBB** → Red (00–FF), Green (00–FF), Blue (00–FF)
+
+**Example:** `#3B82F6` breaks down as:
+- **R** = 3B = 59
+- **G** = 82 = 130
+- **B** = F6 = 246
+
+This produces a vivid blue — the same blue used in many modern UI frameworks.
+
+## Common Color Codes Reference
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Color</th>
+      <th>HEX</th>
+      <th>RGB</th>
+      <th>HSL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Black</td><td>#000000</td><td>rgb(0, 0, 0)</td><td>hsl(0, 0%, 0%)</td></tr>
+    <tr><td>White</td><td>#FFFFFF</td><td>rgb(255, 255, 255)</td><td>hsl(0, 0%, 100%)</td></tr>
+    <tr><td>Red</td><td>#FF0000</td><td>rgb(255, 0, 0)</td><td>hsl(0, 100%, 50%)</td></tr>
+    <tr><td>Green</td><td>#00FF00</td><td>rgb(0, 255, 0)</td><td>hsl(120, 100%, 50%)</td></tr>
+    <tr><td>Blue</td><td>#0000FF</td><td>rgb(0, 0, 255)</td><td>hsl(240, 100%, 50%)</td></tr>
+    <tr><td>Yellow</td><td>#FFFF00</td><td>rgb(255, 255, 0)</td><td>hsl(60, 100%, 50%)</td></tr>
+    <tr><td>Cyan</td><td>#00FFFF</td><td>rgb(0, 255, 255)</td><td>hsl(180, 100%, 50%)</td></tr>
+    <tr><td>Magenta</td><td>#FF00FF</td><td>rgb(255, 0, 255)</td><td>hsl(300, 100%, 50%)</td></tr>
+    <tr><td>Orange</td><td>#FFA500</td><td>rgb(255, 165, 0)</td><td>hsl(39, 100%, 50%)</td></tr>
+    <tr><td>Purple</td><td>#800080</td><td>rgb(128, 0, 128)</td><td>hsl(300, 100%, 25%)</td></tr>
+  </tbody>
+</table>
+</div>
+
+## HEX vs RGB vs HSL — When to Use Each
+
+- **HEX** is the most compact format, widely used in CSS and HTML. It's easy to copy-paste and is the standard in most design tools.
+- **RGB** is intuitive for mixing colors by channel intensity. It maps directly to how screens produce color.
+- **HSL** (Hue, Saturation, Lightness) is the most human-readable format — great for adjusting color brightness or creating color palettes.
+
+## Tailwind CSS Color Reference
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Tailwind Name</th>
+      <th>Shade 500 HEX</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>red</td><td>#EF4444</td><td>Errors, destructive actions</td></tr>
+    <tr><td>blue</td><td>#3B82F6</td><td>Primary buttons, links</td></tr>
+    <tr><td>green</td><td>#22C55E</td><td>Success states, confirmations</td></tr>
+    <tr><td>yellow</td><td>#EAB308</td><td>Warnings, highlights</td></tr>
+    <tr><td>purple</td><td>#A855F7</td><td>Accents, creative elements</td></tr>
+    <tr><td>gray</td><td>#6B7280</td><td>Neutral text, borders</td></tr>
+    <tr><td>indigo</td><td>#6366F1</td><td>Headers, dark UI themes</td></tr>
+    <tr><td>pink</td><td>#EC4899</td><td>Playful UIs, marketing</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Tips for Choosing Colors
+
+- **Contrast matters**: Ensure text has at least a 4.5:1 contrast ratio against its background for accessibility (WCAG 2.1 AA standard).
+- **Use a palette**: Pick 2–3 main colors and derive shades from them rather than using random colors.
+- **Test on multiple screens**: Colors look different on various monitors and in dark/light mode.
+- **Consider color blindness**: About 8% of men and 0.5% of women have some form of color vision deficiency. Avoid relying on red-green distinctions alone.
+
+<FAQ items={[
+  { q: "What is a HEX color code?", a: "A HEX color code is a 6-digit hexadecimal string (e.g. #FF5733) that represents a specific color by defining its Red, Green, and Blue channel values. It's the most common format for specifying colors in web design and CSS." },
+  { q: "How do I convert HEX to RGB?", a: "Split the 6-digit HEX code into three pairs (RR, GG, BB) and convert each pair from hexadecimal to decimal. For example, #3B82F6 → R=59, G=130, B=246." },
+  { q: "What is the difference between HEX and RGB?", a: "They represent the same color information in different formats. HEX uses base-16 notation (#RRGGBB), while RGB uses base-10 values from 0–255 for each channel. HEX is more compact; RGB is more readable." },
+  { q: "What is HSL color format?", a: "HSL stands for Hue (0–360°), Saturation (0–100%), and Lightness (0–100%). It's a more intuitive way to describe colors because you can easily adjust brightness or saturation without changing the base hue." },
+  { q: "How many colors can HEX codes represent?", a: "HEX codes can represent 16,777,216 (256³) unique colors — 256 values for each of the three RGB channels." }
+]} />
+
+## Related Tools
+
+- [Random Color Generator](/apps/random-color-generator) — Generate random colors with HEX and RGB values
+- [QR Code Generator](/apps/qr-generator) — Create QR codes with custom colors
+- [Text Case Converter](/apps/text-case-converter) — Convert text formats for code
+- [Base Converter](/apps/base-converter) — Convert between number bases
+- [Character Counter](/apps/character-counter) — Count characters in color code strings
+
+## Sources
+
+- [W3C CSS Color Module Level 4](https://www.w3.org/TR/css-color-4/)
+- [MDN Web Docs — CSS color values](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
+- [WebAIM Contrast Checker — WCAG Guidelines](https://webaim.org/resources/contrastchecker/)

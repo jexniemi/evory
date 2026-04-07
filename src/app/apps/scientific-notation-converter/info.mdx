@@ -1,0 +1,104 @@
+import FAQ from "@/components/FAQ"
+
+## Scientific Notation Converter – Convert Large and Small Numbers
+
+Scientific notation is the standard way to express very large or very small numbers in science, engineering, and mathematics. This converter instantly translates between standard decimal numbers and scientific notation, showing the coefficient, exponent, and E-notation.
+
+## What Is Scientific Notation?
+
+Scientific notation expresses numbers as a coefficient multiplied by a power of 10:
+
+> **a × 10ⁿ**, where 1 ≤ |a| < 10 and n is an integer
+
+For example:
+- 299,792,458 = 2.99792458 × 10⁸
+- 0.0000001 = 1 × 10⁻⁷
+- 6,022,000,000,000,000,000,000,000 = 6.022 × 10²³
+
+The coefficient (a) is a number between 1 and 10, and the exponent (n) tells you how many places to move the decimal point.
+
+## How to Convert to Scientific Notation
+
+1. **Move the decimal point** until you have a number between 1 and 10
+2. **Count the moves** — that's your exponent
+3. **Moving left** = positive exponent (large numbers)
+4. **Moving right** = negative exponent (small numbers)
+
+**Example**: 186,000 → move decimal 5 places left → 1.86 × 10⁵
+
+## E-Notation
+
+E-notation is how computers and calculators display scientific notation:
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Scientific Notation</th>
+      <th>E-Notation</th>
+      <th>Decimal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>3.0 × 10⁸</td><td>3.0e+8</td><td>300,000,000</td></tr>
+    <tr><td>6.022 × 10²³</td><td>6.022e+23</td><td>602,200,000,000,000,000,000,000</td></tr>
+    <tr><td>1.6 × 10⁻¹⁹</td><td>1.6e-19</td><td>0.00000000000000000016</td></tr>
+    <tr><td>9.8 × 10⁰</td><td>9.8e+0</td><td>9.8</td></tr>
+    <tr><td>5.5 × 10⁻³</td><td>5.5e-3</td><td>0.0055</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Famous Scientific Constants
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Constant</th>
+      <th>Value</th>
+      <th>Scientific Notation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Speed of light</td><td>299,792,458 m/s</td><td>2.998 × 10⁸</td></tr>
+    <tr><td>Avogadro's number</td><td>602,214,076,000,000,000,000,000</td><td>6.022 × 10²³</td></tr>
+    <tr><td>Planck's constant</td><td>0.000000000000000000000000000000000663</td><td>6.63 × 10⁻³⁴</td></tr>
+    <tr><td>Electron charge</td><td>0.00000000000000000016</td><td>1.6 × 10⁻¹⁹</td></tr>
+    <tr><td>Boltzmann constant</td><td>0.0000000000000000000000138</td><td>1.38 × 10⁻²³</td></tr>
+    <tr><td>Earth's mass</td><td>5,972,000,000,000,000,000,000,000 kg</td><td>5.972 × 10²⁴</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Rules for Arithmetic in Scientific Notation
+
+- **Multiplication**: Multiply coefficients and add exponents. (2 × 10³) × (3 × 10⁴) = 6 × 10⁷
+- **Division**: Divide coefficients and subtract exponents. (6 × 10⁸) ÷ (2 × 10³) = 3 × 10⁵
+- **Addition/Subtraction**: Convert to the same exponent first, then add/subtract coefficients
+
+## Significant Figures
+
+Scientific notation makes it easy to express numbers with the correct number of significant figures. The coefficient contains only the significant digits, removing ambiguity about trailing zeros. For example, 1,500 could mean 2, 3, or 4 significant figures. But 1.5 × 10³ clearly indicates 2 significant figures.
+
+<FAQ items={[
+  { q: "What is scientific notation?", a: "Scientific notation is a way of writing numbers as a coefficient between 1 and 10 multiplied by a power of 10. It makes very large and very small numbers easier to read, compare, and calculate with." },
+  { q: "How do I convert a number to scientific notation?", a: "Move the decimal point until you have a number between 1 and 10. Count how many places you moved — that's your exponent. If you moved left, the exponent is positive. If you moved right, it's negative." },
+  { q: "What does E-notation mean?", a: "E-notation is how computers display scientific notation. '3.5e+8' means 3.5 × 10⁸ (350,000,000). The 'e' stands for 'exponent of 10', and the number after it is the power." },
+  { q: "What is the difference between scientific and engineering notation?", a: "Engineering notation is similar but restricts the exponent to multiples of 3 (matching metric prefixes like kilo, mega, giga). For example: 47,000 = 47 × 10³ in engineering notation vs. 4.7 × 10⁴ in scientific notation." },
+  { q: "Why is scientific notation important?", a: "It simplifies working with extremely large or small numbers in science and engineering. Calculations are faster, significant figures are clearer, and numbers are easier to compare at a glance." }
+]} />
+
+## Related Tools
+
+- [Base Converter](/apps/base-converter) — Convert between binary, octal, decimal, and hex
+- [Percentage Calculator](/apps/percentage-calculator) — Calculate percentages
+- [Grade Percentage Calculator](/apps/grade-percentage-calculator) — Convert points to grades
+- [Pixel to REM Converter](/apps/pixel-to-rem-converter) — Convert CSS units
+- [Aspect Ratio Calculator](/apps/aspect-ratio-calculator) — Calculate aspect ratios
+
+## Sources
+
+- [Khan Academy – Scientific Notation](https://www.khanacademy.org/math/pre-algebra/pre-algebra-exponents-radicals/pre-algebra-scientific-notation/a/scientific-notation-review)
+- [NIST – The International System of Units](https://www.nist.gov/pml/owm/metric-si/si-units)
+- [Purdue University – Significant Figures](https://www.chem.purdue.edu/)

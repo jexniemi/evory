@@ -1,0 +1,100 @@
+import FAQ from "@/components/FAQ"
+
+## Dog Age Calculator — Convert Dog Years to Human Years
+
+The old rule of "1 dog year = 7 human years" is a myth. Dogs age at very different rates depending on their size and breed. Small dogs tend to live longer and age more slowly after puppyhood, while giant breeds age faster and have shorter lifespans. This calculator uses size-adjusted multipliers based on veterinary research from the American Kennel Club and the American Veterinary Medical Association.
+
+## How Dog-to-Human Age Conversion Works
+
+Dogs don't age linearly compared to humans. The first year of a dog's life is roughly equivalent to 15 human years, the second year adds about 9 more, and each year after that varies by size:
+
+> **Year 1** ≈ 15 human years  
+> **Year 2** ≈ 9 additional human years  
+> **Year 3+** ≈ 4–8 human years per dog year (depending on size)
+
+**Example:** A 5-year-old medium-sized dog:
+- Year 1: 15 human years
+- Year 2: +9.5 = 24.5
+- Year 3: +5 = 29.5
+- Year 4: +5 = 34.5
+- Year 5: +5 = **39.5 human years**
+
+## Dog Age Chart by Size
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Dog Age</th>
+      <th>Small (under 20 lb)</th>
+      <th>Medium (20–50 lb)</th>
+      <th>Large (50–100 lb)</th>
+      <th>Giant (over 100 lb)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>15</td><td>15</td><td>15</td><td>12</td></tr>
+    <tr><td>2</td><td>24</td><td>24</td><td>24</td><td>22</td></tr>
+    <tr><td>3</td><td>28</td><td>29</td><td>30</td><td>31</td></tr>
+    <tr><td>5</td><td>36</td><td>39</td><td>42</td><td>46</td></tr>
+    <tr><td>7</td><td>44</td><td>48</td><td>53</td><td>60</td></tr>
+    <tr><td>10</td><td>56</td><td>62</td><td>69</td><td>81</td></tr>
+    <tr><td>13</td><td>68</td><td>76</td><td>87</td><td>104</td></tr>
+    <tr><td>15</td><td>76</td><td>86</td><td>100</td><td>120</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Dog Life Stages
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Stage</th>
+      <th>Age Range</th>
+      <th>Characteristics</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Puppy</td><td>0–6 months</td><td>Rapid growth, socialization period, vaccinations</td></tr>
+    <tr><td>Junior</td><td>6–12 months</td><td>Continued growth, training foundation, teething ends</td></tr>
+    <tr><td>Young Adult</td><td>1–3 years</td><td>Peak energy, maturity reached, muscle development</td></tr>
+    <tr><td>Adult</td><td>3–6 years</td><td>Prime health, established personality, stable weight</td></tr>
+    <tr><td>Mature</td><td>6–10 years</td><td>Slowing metabolism, gray muzzle may appear</td></tr>
+    <tr><td>Senior</td><td>10+ years</td><td>Reduced activity, more frequent vet visits needed</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Why Do Smaller Dogs Live Longer?
+
+Scientists believe smaller dogs live longer because large-breed dogs age at an accelerated rate, possibly due to higher levels of growth hormone (IGF-1). A Great Dane may live 7–10 years, while a Chihuahua often reaches 15–20 years. Large dogs also have faster cell division, which may increase the risk of age-related diseases.
+
+## Caring for Your Dog at Every Age
+
+- **Puppies (0–1 year):** Focus on vaccinations, socialization, and basic obedience training. Feed puppy-specific food for proper growth.
+- **Adults (1–6 years):** Maintain regular exercise, dental care, and annual vet checkups. Switch to adult food around 12 months.
+- **Seniors (7+ years):** Schedule biannual vet visits, watch for arthritis and weight gain, consider joint supplements, and adjust exercise intensity.
+
+<FAQ items={[
+  { q: "Is 1 dog year really 7 human years?", a: "No, the 7:1 ratio is a myth. Dogs age much faster in their first two years (about 15 and 9.5 human years respectively), then the rate varies by size. Small dogs age about 4 human years per dog year after age 2, while giant breeds age 7–8 human years per dog year." },
+  { q: "How old is a 10-year-old dog in human years?", a: "It depends on size. A small 10-year-old dog is roughly 56 in human years, a medium dog is about 62, a large dog around 69, and a giant breed roughly 81 human years old." },
+  { q: "What is considered a senior dog?", a: "Most veterinarians consider dogs senior at 7 years of age, but this varies by size. Small breeds may not show senior signs until 10–12 years, while giant breeds can be considered senior at 5–6 years." },
+  { q: "Do mixed breed dogs live longer than purebreds?", a: "On average, mixed breed dogs tend to live 1–2 years longer than purebred dogs of similar size, likely due to greater genetic diversity reducing the risk of inherited health conditions." },
+  { q: "How can I help my dog live longer?", a: "Maintain a healthy weight, provide regular exercise, feed high-quality food, keep up with dental care, schedule annual vet checkups, and keep vaccinations current. Spayed/neutered dogs also tend to live 1–3 years longer." }
+]} />
+
+## Related Tools
+
+- [Age Calculator](/apps/age-calculator) — Calculate human age in years, months, and days
+- [BMI Calculator](/apps/bmi-calculator) — Check body mass index for health assessment
+- [Life Calculator](/apps/life-calculator) — See fascinating statistics about your life
+- [Calorie Burn Calculator](/apps/calorie-burn-calculator) — Calculate calories burned during activities
+- [Water Needs Calculator](/apps/water-needs-calculator) — Find your daily hydration needs
+
+## Sources
+
+- [American Kennel Club — How to Calculate Dog Years to Human Years](https://www.akc.org/expert-advice/health/how-to-calculate-dog-years-to-human-years/)
+- [American Veterinary Medical Association — Senior Pets](https://www.avma.org/resources-tools/pet-owners/petcare/senior-pets)
+- [University of California San Diego — Epigenetic Clock Study (2020)](https://pubmed.ncbi.nlm.nih.gov/31320750/)

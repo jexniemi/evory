@@ -1,0 +1,103 @@
+import FAQ from "@/components/FAQ"
+
+## Pace Converter – Running Pace Calculator
+
+Whether you're training for a 5K or a marathon, understanding your pace is essential. This pace converter instantly translates between minutes per mile and minutes per kilometer, shows your speed in mph and km/h, and estimates your finish times for popular race distances.
+
+## How Running Pace Works
+
+Running pace is expressed as the time it takes to cover one unit of distance — either one mile or one kilometer. A pace of **8:30 per mile** means you run one mile in 8 minutes and 30 seconds.
+
+> **1 mile = 1.60934 kilometers**
+>
+> To convert min/mile to min/km, divide by 1.60934.
+> To convert min/km to min/mile, multiply by 1.60934.
+
+For example, 8:30/mile = 5:17/km, and the equivalent speed is about 7.1 mph or 11.3 km/h.
+
+## Common Running Paces
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Pace (min/mile)</th>
+      <th>Pace (min/km)</th>
+      <th>Speed (mph)</th>
+      <th>Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>12:00</td><td>7:27</td><td>5.0</td><td>Walking / Light Jog</td></tr>
+    <tr><td>10:00</td><td>6:13</td><td>6.0</td><td>Beginner Runner</td></tr>
+    <tr><td>9:00</td><td>5:35</td><td>6.7</td><td>Recreational</td></tr>
+    <tr><td>8:00</td><td>4:58</td><td>7.5</td><td>Intermediate</td></tr>
+    <tr><td>7:00</td><td>4:21</td><td>8.6</td><td>Advanced</td></tr>
+    <tr><td>6:00</td><td>3:44</td><td>10.0</td><td>Competitive</td></tr>
+    <tr><td>5:00</td><td>3:06</td><td>12.0</td><td>Elite</td></tr>
+    <tr><td>4:35</td><td>2:51</td><td>13.1</td><td>World-class Marathon</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Race Distance Reference
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Race</th>
+      <th>Distance (km)</th>
+      <th>Distance (miles)</th>
+      <th>8:30/mi Finish</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>5K</td><td>5.0</td><td>3.1</td><td>26:23</td></tr>
+    <tr><td>10K</td><td>10.0</td><td>6.2</td><td>52:47</td></tr>
+    <tr><td>Half Marathon</td><td>21.1</td><td>13.1</td><td>1:51:23</td></tr>
+    <tr><td>Marathon</td><td>42.2</td><td>26.2</td><td>3:42:46</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Training Pace Zones
+
+Understanding pace zones helps runners train at the right intensity:
+
+- **Easy / Recovery**: 1–2 minutes slower than race pace. Used for 80% of training volume.
+- **Tempo / Threshold**: About 25–30 seconds slower than 5K pace per mile. Sustainable for 20–40 minutes.
+- **Interval**: Near or faster than 5K pace. Short bursts with recovery between sets.
+- **Sprint**: Maximum effort for 100–400 meters.
+
+Most running coaches recommend the **80/20 rule**: 80% of your weekly mileage at easy pace and 20% at harder efforts.
+
+## Tips for Improving Your Pace
+
+- **Consistency over intensity**: Running regularly at easy pace builds aerobic fitness more effectively than occasional hard runs
+- **Add one speed session per week**: Tempo runs or intervals gradually improve your lactate threshold
+- **Don't neglect rest days**: Recovery is when your body adapts and gets stronger
+- **Increase mileage gradually**: Follow the 10% rule — don't increase weekly mileage by more than 10% per week
+- **Race-day pacing**: Start slightly slower than goal pace and negative-split (run the second half faster)
+
+<FAQ items={[
+  { q: "How do I convert minutes per mile to minutes per km?", a: "Divide your pace in minutes per mile by 1.60934. For example, 8:00/mile ÷ 1.60934 = 4:58/km. Or use the converter above to get instant results." },
+  { q: "What is a good running pace for beginners?", a: "A good beginner pace is 10:00–12:00 per mile (6:13–7:27 per km). The most important thing is consistency and being able to hold a conversation while running." },
+  { q: "How fast is a 4-hour marathon pace?", a: "A 4-hour marathon requires a pace of about 9:09 per mile or 5:41 per km, which is approximately 6.55 mph." },
+  { q: "What is the world record marathon pace?", a: "Kelvin Kiptum's world record marathon (2:00:35) was run at approximately 4:34 per mile or 2:51 per km — an average speed of 13.1 mph (21.1 km/h)." },
+  { q: "Should I train by pace or heart rate?", a: "Both have value. Pace is straightforward and easy to measure on flat terrain. Heart rate accounts for hills, heat, and fatigue. Many runners use a combination of both for optimal training." }
+]} />
+
+## Related Tools
+
+- [Calorie Burn Calculator](/apps/calorie-burn-calculator) — Estimate calories burned running
+- [BMI Calculator](/apps/bmi-calculator) — Calculate body mass index
+- [Speed Distance Time Calculator](/apps/speed-distance-time-calculator) — General speed calculations
+- [Countdown Timer](/apps/countdown-timer) — Time your runs
+- [Age Calculator](/apps/age-calculator) — Calculate your exact age
+
+## Sources
+
+- [American College of Sports Medicine – Running Guidelines](https://www.acsm.org/)
+- [Road Runners Club of America – Pace Charts](https://www.rrca.org/)
+- [World Athletics – Marathon Records](https://worldathletics.org/)

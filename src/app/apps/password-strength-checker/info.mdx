@@ -1,0 +1,103 @@
+import FAQ from "@/components/FAQ"
+
+## Password Strength Checker – How Secure Is Your Password?
+
+Weak passwords are the leading cause of data breaches. This password strength checker analyzes your password in real time — entirely in your browser with no data sent to any server — and shows its strength rating, estimated brute-force crack time, entropy, and specific weaknesses. Use it to ensure your passwords meet modern security standards.
+
+## How Password Strength Is Measured
+
+Password strength depends on two main factors: **length** and **complexity** (the size of the character set used). Together, these determine the number of possible combinations an attacker would need to try.
+
+> **Password Entropy (bits) = Length × log₂(Charset Size)**
+>
+> Higher entropy = harder to crack. Aim for 60+ bits of entropy.
+
+For example, an 8-character password using only lowercase letters has 26⁸ ≈ 209 billion combinations. But an 8-character password using uppercase, lowercase, digits, and symbols has 95⁸ ≈ 6.6 quadrillion combinations — 31,000× harder to crack.
+
+## Character Set Sizes
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Character Type</th>
+      <th>Set Size</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Lowercase only</td><td>26</td><td>abcdefg</td></tr>
+    <tr><td>+ Uppercase</td><td>52</td><td>AbCdEfG</td></tr>
+    <tr><td>+ Digits</td><td>62</td><td>AbC123</td></tr>
+    <tr><td>+ Symbols</td><td>95</td><td>AbC!@#1</td></tr>
+  </tbody>
+</table>
+</div>
+
+## How Long Does It Take to Crack a Password?
+
+Assuming 10 billion guesses per second (modern GPU cluster):
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Password</th>
+      <th>Entropy</th>
+      <th>Crack Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>6 chars, lowercase</td><td>28 bits</td><td>Instantly</td></tr>
+    <tr><td>8 chars, lowercase</td><td>38 bits</td><td>21 seconds</td></tr>
+    <tr><td>8 chars, mixed case + digits</td><td>48 bits</td><td>7 hours</td></tr>
+    <tr><td>8 chars, all types</td><td>52 bits</td><td>7 days</td></tr>
+    <tr><td>12 chars, lowercase</td><td>56 bits</td><td>300 years</td></tr>
+    <tr><td>12 chars, all types</td><td>79 bits</td><td>19 billion years</td></tr>
+    <tr><td>16 chars, all types</td><td>105 bits</td><td>10²² years</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Best Practices for Strong Passwords
+
+- **Use 12+ characters minimum**: Length is the single most important factor. Every extra character exponentially increases crack time.
+- **Mix all character types**: Use uppercase, lowercase, numbers, and symbols.
+- **Avoid dictionary words**: "Password123!" is terrible despite meeting complexity requirements.
+- **Don't reuse passwords**: If one account is breached, all accounts using the same password are compromised.
+- **Use a password manager**: Tools like Bitwarden, 1Password, and KeePass generate and store unique, strong passwords for every account.
+- **Enable two-factor authentication (2FA)**: Even the strongest password can be phished — 2FA adds a second layer.
+
+## Common Password Mistakes
+
+- Using personal information (names, birthdays, pet names)
+- Simple substitutions (p@ssw0rd, h3llo) — crackers use these in their dictionaries
+- Sequential patterns (123456, abcdef, qwerty)
+- Repeating characters (aaaaaa, 111111)
+- Appending a single number or symbol to a weak password (password1, hello!)
+
+## The Passphrase Alternative
+
+A passphrase — a sequence of random words — can be both strong and memorable. Four random words like "correct horse battery staple" provide about 44 bits of entropy from dictionary words alone, but with mixed case and separators, it jumps to 80+ bits.
+
+<FAQ items={[
+  { q: "Is this tool safe to use with my real password?", a: "Yes. All analysis happens entirely in your browser using JavaScript. No data is transmitted to any server. You can verify this by disconnecting from the internet and using the tool — it works offline." },
+  { q: "How long should my password be?", a: "At least 12 characters, but 16+ is recommended. Length is the most important factor in password security. A 16-character password with mixed character types would take billions of years to crack by brute force." },
+  { q: "What is password entropy?", a: "Entropy measures the unpredictability of a password in bits. It's calculated as Length × log₂(Charset Size). Higher entropy means more possible combinations and a harder-to-crack password. Aim for 60+ bits minimum." },
+  { q: "Should I change my passwords regularly?", a: "Current NIST guidelines (2024) no longer recommend periodic password changes unless there's evidence of compromise. Frequent changes lead to weaker passwords as users make minimal changes. Instead, use strong unique passwords with a password manager." },
+  { q: "What makes a password truly secure?", a: "Length (12+ characters), complexity (all character types), uniqueness (different for every account), unpredictability (no dictionary words or patterns), and storage security (password manager, not written on a sticky note). Adding 2FA makes it even more secure." }
+]} />
+
+## Related Tools
+
+- [Password Generator](/apps/password-generator) — Generate strong random passwords
+- [Hash Generator](/apps/hash-generator) — Generate SHA-256 and SHA-512 hashes
+- [Character Counter](/apps/character-counter) — Count characters and words
+- [Regex Tester](/apps/regex-tester) — Test regular expressions
+- [Base Converter](/apps/base-converter) — Convert between number bases
+
+## Sources
+
+- [NIST SP 800-63B – Digital Identity Guidelines](https://pages.nist.gov/800-63-3/sp800-63b.html)
+- [OWASP – Password Strength Testing](https://owasp.org/www-community/controls/Password_Strength_Controls)
+- [Have I Been Pwned – Compromised Passwords](https://haveibeenpwned.com/Passwords)

@@ -1,0 +1,110 @@
+import FAQ from "@/components/FAQ"
+
+## Tire Size Calculator – Compare and Convert Tire Sizes
+
+Changing your tire size? This tire size calculator lets you compare two tire sizes side by side, showing the difference in diameter, circumference, sidewall height, and speedometer accuracy. It helps you find compatible replacement tires and understand how size changes affect your vehicle's performance.
+
+## How to Read Tire Size Numbers
+
+A tire size like **225/45R17** contains three key measurements:
+
+- **225** — Section width in millimeters (tread width)
+- **45** — Aspect ratio (sidewall height as a percentage of width)
+- **R17** — Rim diameter in inches (R = radial construction)
+
+> **Overall Diameter = (2 × Sidewall Height) + Rim Diameter**
+>
+> Sidewall Height = Width × (Aspect Ratio ÷ 100)
+
+For a 225/45R17 tire:
+- Sidewall = 225 × 0.45 = 101.25 mm (3.98 inches)
+- Diameter = (2 × 101.25) + (17 × 25.4) = 634.3 mm (24.97 inches)
+
+## Common Tire Sizes and Dimensions
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Tire Size</th>
+      <th>Diameter (in)</th>
+      <th>Circumference (in)</th>
+      <th>Revs/Mile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>205/55R16</td><td>24.9</td><td>78.1</td><td>814</td></tr>
+    <tr><td>215/60R16</td><td>26.2</td><td>82.1</td><td>773</td></tr>
+    <tr><td>225/45R17</td><td>25.0</td><td>78.5</td><td>808</td></tr>
+    <tr><td>225/50R17</td><td>25.9</td><td>81.3</td><td>780</td></tr>
+    <tr><td>235/40R18</td><td>25.4</td><td>79.7</td><td>796</td></tr>
+    <tr><td>245/45R18</td><td>26.7</td><td>83.8</td><td>757</td></tr>
+    <tr><td>265/70R17</td><td>31.6</td><td>99.3</td><td>639</td></tr>
+    <tr><td>275/60R20</td><td>33.0</td><td>103.6</td><td>612</td></tr>
+  </tbody>
+</table>
+</div>
+
+## How Tire Size Affects Your Vehicle
+
+Changing tire size impacts several aspects of vehicle performance:
+
+- **Speedometer accuracy**: Larger tires cause the speedometer to read slower than actual speed; smaller tires cause it to read faster
+- **Ground clearance**: Larger diameter tires increase ground clearance; smaller ones decrease it
+- **Ride quality**: Taller sidewalls (higher aspect ratio) provide a softer ride; lower profile tires are stiffer
+- **Fuel economy**: Larger, heavier tires generally decrease fuel efficiency slightly
+- **Acceleration**: Larger tires effectively change the final drive ratio, which can reduce acceleration
+- **Handling**: Lower profile tires offer more responsive steering but transmit more road imperfections
+
+## The 3% Rule
+
+Most automotive experts and tire manufacturers recommend keeping tire diameter within **3% of the original**. Going beyond this threshold can:
+
+- Make the speedometer inaccurate enough to affect safety and legal compliance
+- Cause rubbing against fenders or suspension components
+- Trigger ABS, traction control, or stability control errors
+- Void vehicle warranty in some cases
+
+## Plus-Sizing Explained
+
+Plus-sizing means increasing rim diameter while decreasing sidewall height to maintain the same overall tire diameter. This is a popular modification for improved handling and aesthetics:
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Option</th>
+      <th>Rim Change</th>
+      <th>Example: From 205/55R16</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Plus Zero</td><td>Same rim</td><td>205/55R16 (stock)</td></tr>
+    <tr><td>Plus One</td><td>+1 inch rim</td><td>215/45R17</td></tr>
+    <tr><td>Plus Two</td><td>+2 inch rim</td><td>225/40R18</td></tr>
+    <tr><td>Plus Three</td><td>+3 inch rim</td><td>235/35R19</td></tr>
+  </tbody>
+</table>
+</div>
+
+<FAQ items={[
+  { q: "How do I read a tire size number?", a: "A tire marked 225/45R17 has a 225mm tread width, a sidewall that's 45% of the width (101mm), and fits a 17-inch rim. The R means radial construction, which is standard for passenger vehicles." },
+  { q: "Does changing tire size affect my speedometer?", a: "Yes. Larger tires cause the speedometer to read lower than your actual speed because each revolution covers more ground. Smaller tires cause the opposite. A 3% diameter change results in roughly a 3% speedometer error." },
+  { q: "What is the 3% rule for tire sizes?", a: "The 3% rule means you should keep your new tire's overall diameter within 3% of the original. This minimizes speedometer error, avoids clearance issues, and prevents triggering electronic safety system warnings." },
+  { q: "What does the aspect ratio mean on a tire?", a: "The aspect ratio is the second number in a tire size (e.g., 45 in 225/45R17). It represents the sidewall height as a percentage of the tire's width. A lower number means a shorter sidewall (sportier), while a higher number means a taller sidewall (better ride comfort)." },
+  { q: "Can I put a different size tire on my car?", a: "Yes, but stay within 3% of the original diameter and ensure the tire fits within the wheel well without rubbing. Check your vehicle manual for recommended alternative sizes. Consult a tire professional for non-standard changes." }
+]} />
+
+## Related Tools
+
+- [Driving Cost Calculator](/apps/driving-cost-calculator) — Calculate fuel costs for trips
+- [Car Loan Calculator](/apps/car-loan-calculator) — Calculate monthly car payments
+- [Speed Distance Time Calculator](/apps/speed-distance-time-calculator) — Calculate speed and distance
+- [Area Converter](/apps/area-converter) — Convert between measurement units
+- [Fuel Efficiency Calculator](/apps/fuel-efficiency-calculator) — Track miles per gallon
+
+## Sources
+
+- [Tire Rack – Tire Size Guide](https://www.tirerack.com/)
+- [Tire and Rim Association – Standards](https://www.us-tra.org/)
+- [NHTSA – Tire Safety](https://www.nhtsa.gov/equipment/tires)

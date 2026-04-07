@@ -1,0 +1,89 @@
+import FAQ from "@/components/FAQ"
+
+## Hash Generator – SHA-256, SHA-512 & SHA-1 Online Tool
+
+A hash function takes any input and produces a fixed-length string of characters — the hash or digest. This tool generates SHA-1, SHA-256, SHA-384, and SHA-512 hashes entirely in your browser using the Web Crypto API. No data is sent to any server, making it safe for sensitive content.
+
+## What Is a Hash Function?
+
+A cryptographic hash function is a one-way mathematical algorithm that converts data of any size into a fixed-length output. Key properties include:
+
+- **Deterministic**: The same input always produces the same hash
+- **One-way**: You cannot reverse-engineer the original input from the hash
+- **Collision-resistant**: It's extremely unlikely that two different inputs produce the same hash
+- **Avalanche effect**: A tiny change in input produces a completely different hash
+
+> **Hashing is NOT encryption.** Encrypted data can be decrypted with a key. Hashed data cannot be reversed — it's a one-way process.
+
+## Hash Algorithm Comparison
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Algorithm</th>
+      <th>Output Size</th>
+      <th>Hex Length</th>
+      <th>Security Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>SHA-1</td><td>160 bits</td><td>40 chars</td><td>Deprecated (collisions found)</td></tr>
+    <tr><td>SHA-256</td><td>256 bits</td><td>64 chars</td><td>Secure (widely used)</td></tr>
+    <tr><td>SHA-384</td><td>384 bits</td><td>96 chars</td><td>Secure</td></tr>
+    <tr><td>SHA-512</td><td>512 bits</td><td>128 chars</td><td>Secure</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Common Uses of Hashing
+
+- **Password storage**: Databases store hashed passwords, not plaintext. When you log in, your password is hashed and compared to the stored hash.
+- **File integrity**: Download sites provide SHA-256 checksums so you can verify a file wasn't corrupted or tampered with.
+- **Digital signatures**: Hashes are used in SSL/TLS certificates and code signing to verify authenticity.
+- **Blockchain**: Bitcoin and other cryptocurrencies use SHA-256 hashing extensively for proof of work and transaction verification.
+- **Git version control**: Git uses SHA-1 (migrating to SHA-256) to identify commits, trees, and blobs.
+- **Data deduplication**: Cloud storage services hash files to detect and eliminate duplicates.
+
+## SHA-256 in Detail
+
+SHA-256 (Secure Hash Algorithm 256-bit) is part of the SHA-2 family designed by the NSA. It's the most widely used cryptographic hash today:
+
+- Used in Bitcoin mining and blockchain technology
+- Required for SSL/TLS certificates since 2017
+- Standard for file integrity verification
+- Every input produces a unique 64-character hexadecimal string
+
+**Example**: The SHA-256 hash of "Hello, World!" is `dffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f`
+
+## When NOT to Use SHA for Passwords
+
+While SHA-256 is cryptographically secure, it's too fast for password hashing. Attackers can compute billions of SHA-256 hashes per second. For password storage, use purpose-built algorithms like:
+
+- **bcrypt** — includes salt and configurable work factor
+- **Argon2** — winner of the Password Hashing Competition, memory-hard
+- **scrypt** — memory-hard and CPU-intensive
+
+These algorithms are intentionally slow, making brute-force attacks impractical.
+
+<FAQ items={[
+  { q: "What is a SHA-256 hash?", a: "SHA-256 is a cryptographic hash function that takes any input and produces a fixed 256-bit (64 character hex) output. It's widely used for file integrity verification, digital signatures, blockchain, and security applications." },
+  { q: "Is my data safe when using this tool?", a: "Yes. All hashing is performed entirely in your browser using the Web Crypto API. No data is transmitted to any server. You can verify this by using the tool offline." },
+  { q: "Can a hash be reversed to find the original text?", a: "No. Cryptographic hash functions are designed to be one-way. You cannot mathematically reverse a hash. The only way to 'crack' a hash is by trying every possible input (brute force) or using precomputed tables (rainbow tables)." },
+  { q: "What is the difference between hashing and encryption?", a: "Hashing is one-way — you can't get the original data back. Encryption is two-way — with the right key, you can decrypt the data. Hashing is used for verification; encryption is used for confidentiality." },
+  { q: "Why is SHA-1 considered insecure?", a: "Researchers demonstrated a practical SHA-1 collision in 2017 (the SHAttered attack), proving that two different files can produce the same SHA-1 hash. For this reason, SHA-1 should not be used for security purposes. Use SHA-256 or SHA-512 instead." }
+]} />
+
+## Related Tools
+
+- [Regex Tester](/apps/regex-tester) — Test regular expressions
+- [Base Converter](/apps/base-converter) — Convert between hex, binary, and decimal
+- [Character Counter](/apps/character-counter) — Count characters and words
+- [Password Generator](/apps/password-generator) — Generate secure passwords
+- [Color Contrast Checker](/apps/color-contrast-checker) — Check color accessibility
+
+## Sources
+
+- [NIST – Secure Hash Standard (SHS)](https://csrc.nist.gov/publications/detail/fips/180/4/final)
+- [MDN Web Docs – SubtleCrypto.digest()](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest)
+- [OWASP – Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)

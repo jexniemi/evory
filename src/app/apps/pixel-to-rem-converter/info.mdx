@@ -1,0 +1,108 @@
+import FAQ from "@/components/FAQ"
+
+## PX to REM Converter — Convert CSS Units Instantly
+
+Working with CSS units can be confusing, especially when switching between pixels and relative units like REM and EM. This converter instantly translates pixel values to REM, EM, points, and viewport width (VW) units, helping frontend developers write responsive, accessible CSS.
+
+Modern web development best practices recommend using REM units for font sizes and spacing because they respect user browser settings and scale properly across devices.
+
+## How PX to REM Conversion Works
+
+The conversion is based on the root font size of the document. By default, browsers set the root font size to 16px:
+
+> **REM = Pixel Value ÷ Base Font Size**
+
+**Example:** Convert 24px to REM with a 16px base:
+- 24 ÷ 16 = **1.5rem**
+
+If the base font size is changed to 10px (a common practice):
+- 24 ÷ 10 = **2.4rem**
+
+## Common PX to REM Conversions
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Pixels</th>
+      <th>REM (base 16px)</th>
+      <th>Common Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>10px</td><td>0.625rem</td><td>Small captions, fine print</td></tr>
+    <tr><td>12px</td><td>0.75rem</td><td>Small text, labels</td></tr>
+    <tr><td>14px</td><td>0.875rem</td><td>Secondary text, metadata</td></tr>
+    <tr><td>16px</td><td>1rem</td><td>Body text (default)</td></tr>
+    <tr><td>18px</td><td>1.125rem</td><td>Large body text</td></tr>
+    <tr><td>20px</td><td>1.25rem</td><td>H4 headings</td></tr>
+    <tr><td>24px</td><td>1.5rem</td><td>H3 headings</td></tr>
+    <tr><td>32px</td><td>2rem</td><td>H2 headings</td></tr>
+    <tr><td>48px</td><td>3rem</td><td>H1 headings</td></tr>
+    <tr><td>64px</td><td>4rem</td><td>Hero text, display</td></tr>
+  </tbody>
+</table>
+</div>
+
+## CSS Unit Comparison
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Unit</th>
+      <th>Type</th>
+      <th>Relative To</th>
+      <th>Best For</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>px</td><td>Absolute</td><td>Screen pixel</td><td>Borders, shadows, small fixed elements</td></tr>
+    <tr><td>rem</td><td>Relative</td><td>Root font size</td><td>Font sizes, spacing, layout</td></tr>
+    <tr><td>em</td><td>Relative</td><td>Parent font size</td><td>Component-scoped sizing</td></tr>
+    <tr><td>%</td><td>Relative</td><td>Parent element</td><td>Widths, responsive layouts</td></tr>
+    <tr><td>vw</td><td>Relative</td><td>Viewport width</td><td>Full-width elements, fluid typography</td></tr>
+    <tr><td>vh</td><td>Relative</td><td>Viewport height</td><td>Full-height sections, modals</td></tr>
+    <tr><td>pt</td><td>Absolute</td><td>1/72 inch</td><td>Print stylesheets</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Why Use REM Instead of PX?
+
+- **Accessibility**: Users who change their browser's default font size will see your text scale properly with REM. PX values ignore this setting.
+- **Consistency**: REM is always relative to the root element, avoiding the compounding effect of EM units in nested elements.
+- **Responsive design**: REM scales uniformly across your entire layout. Change the root font size at a breakpoint and everything adjusts.
+- **Developer experience**: Once you memorize common conversions (e.g., 0.5rem = 8px, 1rem = 16px), REM becomes second nature.
+
+## The 62.5% Trick
+
+Many developers set `html { font-size: 62.5%; }` to make the base font size 10px instead of 16px. This simplifies mental math:
+- 1rem = 10px
+- 1.4rem = 14px
+- 1.6rem = 16px
+- 2.4rem = 24px
+
+However, this approach requires setting explicit font sizes on all elements since 10px is too small for default text.
+
+<FAQ items={[
+  { q: "What is the difference between PX and REM?", a: "PX (pixels) is an absolute unit that stays the same size regardless of user settings. REM is a relative unit based on the root element's font size (usually 16px). REM is preferred for accessibility because it respects user font size preferences." },
+  { q: "What is the default base font size in browsers?", a: "All major browsers default to 16px, meaning 1rem = 16px unless the root font size has been changed via CSS or the user has adjusted their browser settings." },
+  { q: "Should I use REM or EM for font sizes?", a: "Use REM for font sizes. REM is always relative to the root element, so it's predictable. EM compounds in nested elements (e.g., 1.2em inside 1.2em inside 1.2em becomes increasingly larger), making it harder to maintain." },
+  { q: "When should I still use pixels?", a: "Use pixels for things that should stay the same size regardless of font settings: borders (1px borders), box-shadows, very specific image dimensions, and media query breakpoints." },
+  { q: "How do I convert REM back to PX?", a: "Multiply the REM value by the base font size. With a 16px base: 1.5rem × 16 = 24px. With a 10px base (62.5% trick): 1.5rem × 10 = 15px." }
+]} />
+
+## Related Tools
+
+- [Hex Color Picker](/apps/hex-color-picker) — Pick colors for CSS
+- [Character Counter](/apps/character-counter) — Count characters in code
+- [Base Converter](/apps/base-converter) — Convert between number bases
+- [Aspect Ratio Calculator](/apps/aspect-ratio-calculator) — Calculate display ratios
+- [Text Case Converter](/apps/text-case-converter) — Convert text cases for CSS
+
+## Sources
+
+- [MDN Web Docs — CSS values and units](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [W3C — CSS Values and Units Module](https://www.w3.org/TR/css-values-4/)
+- [WebAIM — Accessible Font Sizing](https://webaim.org/techniques/fonts/)

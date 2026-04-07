@@ -1,0 +1,105 @@
+import FAQ from "@/components/FAQ";
+
+## How the PPI Calculator Works
+
+The **PPI calculator** determines the pixel density of any screen by calculating the number of pixels per inch (PPI). Pixel density indicates how sharp and detailed a display appears — higher PPI means smaller, more tightly packed pixels, resulting in smoother text and sharper images.
+
+The calculation uses the screen's resolution (width × height in pixels) and its diagonal size in inches to compute PPI, dot pitch, total megapixels, and the physical display dimensions.
+
+> **Formula:** PPI = √(Width² + Height²) ÷ Diagonal Size (inches)
+
+## Worked Example
+
+For a **27-inch monitor** with a **2560 × 1440** resolution:
+
+1. Calculate diagonal pixels: √(2560² + 1440²) = √(6,553,600 + 2,073,600) = √8,627,200 ≈ **2,938 pixels**
+2. Divide by diagonal size: 2,938 ÷ 27 = **108.8 PPI**
+3. Dot pitch: 25.4 ÷ 108.8 = **0.233 mm** (distance between pixel centers)
+
+This monitor has standard density — comfortable for desktop use at arm's length but not retina-grade.
+
+## Common Display PPI Values
+
+<div className="overflow-x-auto">
+  <table className="table table-zebra table-sm">
+    <thead>
+      <tr>
+        <th>Device</th>
+        <th>Resolution</th>
+        <th>Size</th>
+        <th>PPI</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>iPhone 15 Pro</td><td>2556 × 1179</td><td>6.1"</td><td>~460</td></tr>
+      <tr><td>Samsung S24 Ultra</td><td>3120 × 1440</td><td>6.8"</td><td>~505</td></tr>
+      <tr><td>iPad Pro 12.9"</td><td>2732 × 2048</td><td>12.9"</td><td>~264</td></tr>
+      <tr><td>MacBook Pro 14"</td><td>3024 × 1964</td><td>14.2"</td><td>~254</td></tr>
+      <tr><td>1080p Monitor 24"</td><td>1920 × 1080</td><td>24"</td><td>~92</td></tr>
+      <tr><td>1440p Monitor 27"</td><td>2560 × 1440</td><td>27"</td><td>~109</td></tr>
+      <tr><td>4K Monitor 27"</td><td>3840 × 2160</td><td>27"</td><td>~163</td></tr>
+      <tr><td>4K Monitor 32"</td><td>3840 × 2160</td><td>32"</td><td>~138</td></tr>
+    </tbody>
+  </table>
+</div>
+
+## PPI Density Classification
+
+<div className="overflow-x-auto">
+  <table className="table table-zebra table-sm">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>PPI Range</th>
+        <th>Typical Use</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Low density</td><td>&lt; 100</td><td>Large desktop monitors, TVs</td></tr>
+      <tr><td>Standard density</td><td>100–199</td><td>Desktop monitors at arm's length</td></tr>
+      <tr><td>High density</td><td>200–299</td><td>Laptops, tablets (HiDPI/Retina)</td></tr>
+      <tr><td>Retina-grade</td><td>300+</td><td>Smartphones held at reading distance</td></tr>
+    </tbody>
+  </table>
+</div>
+
+## Understanding Dot Pitch
+
+**Dot pitch** is the distance (in millimeters) between the centers of two adjacent pixels. It is the inverse relationship of PPI: a higher PPI means a smaller dot pitch. Dot pitch is calculated as 25.4 mm ÷ PPI, since there are 25.4 millimeters in one inch.
+
+A smaller dot pitch means the individual pixels are harder to distinguish with the naked eye, resulting in a smoother, sharper visual experience. Most modern smartphones have dot pitches below 0.1 mm, while desktop monitors typically range from 0.15–0.28 mm.
+
+## What Is "Retina" Display?
+
+Apple coined the term "Retina display" to describe screens where individual pixels are indistinguishable at a typical viewing distance. The threshold depends on how far you hold the device from your eyes. For smartphones (held at about 10–12 inches), this threshold is roughly 300 PPI. For laptops (18–20 inches), about 220 PPI is sufficient. For desktop monitors (24+ inches), around 200 PPI is considered retina-grade.
+
+This is why a 27-inch 4K monitor at ~163 PPI can still look sharp — you are sitting farther away from it compared to a phone.
+
+## Tips for Choosing the Right Display
+
+- For **photo and video editing**, prioritize high PPI (at least 150+) for accurate detail rendering.
+- For **gaming**, refresh rate and response time often matter more than extreme PPI.
+- For **programming and text work**, higher PPI makes a significant difference in text clarity — 120+ PPI is recommended.
+- The **ideal PPI** depends on viewing distance: sit farther away and you need fewer pixels per inch for the image to appear sharp.
+
+<FAQ items={[
+  { q: "What is PPI (pixels per inch)?", a: "PPI stands for pixels per inch and measures the pixel density of a display. It tells you how many pixels are packed into each linear inch of the screen. Higher PPI means sharper, more detailed images and text. PPI is calculated using the screen's resolution and diagonal size." },
+  { q: "What is a good PPI for a monitor?", a: "For desktop monitors viewed at arm's length (24–28 inches away), 100–110 PPI is comfortable. For creative professionals, 130+ PPI is preferable. For laptops held closer, 200+ PPI is ideal. The 'best' PPI depends on your viewing distance and use case." },
+  { q: "What is the difference between PPI and DPI?", a: "PPI (pixels per inch) refers to screen display density — how many pixels exist per inch on the screen. DPI (dots per inch) refers to print resolution — how many ink dots a printer places per inch. They measure different things, though the terms are often incorrectly used interchangeably." },
+  { q: "Does higher PPI mean better image quality?", a: "Higher PPI generally means sharper images and smoother text at a given viewing distance. However, beyond a certain point (when pixels become smaller than your eye can resolve at your viewing distance), additional PPI provides no visible benefit. This is the concept behind Apple's 'Retina' display designation." },
+  { q: "Why do phones have higher PPI than monitors?", a: "Phones are held much closer to your eyes (10–12 inches) compared to monitors (24+ inches). At closer distances, your eyes can distinguish smaller details, so phones need higher pixel density (300–500+ PPI) to appear sharp, while monitors can look sharp at 100–150 PPI due to greater viewing distance." }
+]} />
+
+## Related Tools
+
+- [Aspect Ratio Calculator](/apps/aspect-ratio-calculator) — Calculate and convert display aspect ratios.
+- [Pixel to REM Converter](/apps/pixel-to-rem-converter) — Convert between CSS pixels and REM units.
+- [Percentage Calculator](/apps/percentage-calculator) — Calculate percentages, increases, and differences.
+- [Area Converter](/apps/area-converter) — Convert between square inches, centimeters, and other area units.
+- [Speed Distance Time Calculator](/apps/speed-distance-time-calculator) — Calculate any variable given the other two.
+
+## Sources
+
+- [Pixel Density – Wikipedia](https://en.wikipedia.org/wiki/Pixel_density)
+- [Retina Display Standards – Apple Developer](https://developer.apple.com/design/human-interface-guidelines/displays)
+- [Display Resolution Comparison – DisplaySpecifications.com](https://www.displayspecifications.com/)

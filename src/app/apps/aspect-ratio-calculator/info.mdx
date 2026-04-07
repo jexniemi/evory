@@ -1,0 +1,94 @@
+import FAQ from "@/components/FAQ"
+
+## Aspect Ratio Calculator — Find the Ratio of Any Resolution
+
+An aspect ratio describes the proportional relationship between the width and height of an image, video, or screen. It is written as **width:height** — for example, 16:9 means for every 16 units of width, there are 9 units of height. Understanding aspect ratios is essential for video editing, photography, web design, and display selection.
+
+## How to Calculate Aspect Ratio
+
+The aspect ratio is found by dividing both the width and height by their **greatest common divisor (GCD)**:
+
+> **Aspect Ratio = Width ÷ GCD : Height ÷ GCD**
+
+**Example:** A 1920×1080 display:
+- GCD of 1920 and 1080 = 120
+- 1920 ÷ 120 = 16, 1080 ÷ 120 = 9
+- Aspect Ratio = **16:9**
+
+## Common Aspect Ratios and Their Uses
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Ratio</th>
+      <th>Decimal</th>
+      <th>Common Resolutions</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>16:9</td><td>1.778</td><td>1920×1080, 2560×1440, 3840×2160</td><td>HDTV, YouTube, monitors</td></tr>
+    <tr><td>16:10</td><td>1.600</td><td>1920×1200, 2560×1600</td><td>Laptops, productivity monitors</td></tr>
+    <tr><td>4:3</td><td>1.333</td><td>1024×768, 1600×1200</td><td>Classic TV, iPad, presentations</td></tr>
+    <tr><td>21:9</td><td>2.333</td><td>2560×1080, 3440×1440</td><td>Ultrawide monitors, cinema</td></tr>
+    <tr><td>1:1</td><td>1.000</td><td>1080×1080</td><td>Instagram posts, profile pictures</td></tr>
+    <tr><td>9:16</td><td>0.563</td><td>1080×1920</td><td>TikTok, Instagram Stories, Reels</td></tr>
+    <tr><td>3:2</td><td>1.500</td><td>2160×1440, 6000×4000</td><td>DSLR photos, Surface devices</td></tr>
+    <tr><td>2.39:1</td><td>2.390</td><td>varies</td><td>Anamorphic cinema (widescreen films)</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Social Media Image Sizes
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Platform</th>
+      <th>Content Type</th>
+      <th>Recommended Size</th>
+      <th>Aspect Ratio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>YouTube</td><td>Thumbnail</td><td>1280×720</td><td>16:9</td></tr>
+    <tr><td>Instagram</td><td>Post</td><td>1080×1080</td><td>1:1</td></tr>
+    <tr><td>Instagram</td><td>Story/Reel</td><td>1080×1920</td><td>9:16</td></tr>
+    <tr><td>Facebook</td><td>Cover photo</td><td>820×312</td><td>~2.63:1</td></tr>
+    <tr><td>Twitter/X</td><td>Post image</td><td>1200×675</td><td>16:9</td></tr>
+    <tr><td>LinkedIn</td><td>Banner</td><td>1584×396</td><td>4:1</td></tr>
+    <tr><td>TikTok</td><td>Video</td><td>1080×1920</td><td>9:16</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Why Aspect Ratio Matters
+
+- **Cropping and distortion**: Using the wrong ratio stretches or squashes images. A 4:3 photo forced into a 16:9 frame will either crop important content or add black bars.
+- **Responsive design**: Web developers need to maintain ratios across screen sizes. CSS `aspect-ratio` property makes this easier.
+- **Video production**: Shooting in the wrong ratio means post-production headaches. Most modern content targets 16:9 or 9:16.
+- **Print and photography**: DSLR sensors typically shoot at 3:2 while smartphone cameras often use 4:3 or 16:9.
+
+<FAQ items={[
+  { q: "What is the most common aspect ratio?", a: "16:9 is the most common aspect ratio for screens and video content. It's used by virtually all modern TVs, monitors, YouTube, and streaming services." },
+  { q: "What aspect ratio is 1920x1080?", a: "1920×1080 (Full HD or 1080p) has an aspect ratio of 16:9. This is the standard for high-definition video and the most common monitor resolution." },
+  { q: "What aspect ratio should I use for Instagram?", a: "Instagram supports 1:1 (square posts), 4:5 (portrait posts — recommended for feed), and 9:16 (Stories and Reels). For maximum visibility in the feed, use 1080×1350 (4:5)." },
+  { q: "How do I maintain aspect ratio when resizing?", a: "To maintain the aspect ratio when resizing, change only the width or height and calculate the other dimension proportionally. If the original is 1920×1080 (16:9) and you set width to 1280, the height should be 1280 ÷ (16÷9) = 720." },
+  { q: "What is the difference between 16:9 and 16:10?", a: "16:10 is slightly taller than 16:9, giving about 11% more vertical space. 16:10 is common on laptops and productivity monitors, while 16:9 dominates TVs and gaming monitors." }
+]} />
+
+## Related Tools
+
+- [Square Footage Calculator](/apps/square-footage-calculator) — Calculate area from dimensions
+- [Length Converter](/apps/length-converter) — Convert between measurement units
+- [Percentage Calculator](/apps/percentage-calculator) — Calculate percentages and ratios
+- [QR Code Generator](/apps/qr-generator) — Create QR codes for URLs and text
+- [Hex Color Picker](/apps/hex-color-picker) — Pick colors for design projects
+
+## Sources
+
+- [W3C CSS aspect-ratio specification](https://www.w3.org/TR/css-sizing-4/#aspect-ratio)
+- [Wikipedia — Display aspect ratio](https://en.wikipedia.org/wiki/Display_aspect_ratio)
+- [Adobe — Video aspect ratios explained](https://www.adobe.com/creativecloud/video/discover/aspect-ratio.html)

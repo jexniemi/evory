@@ -1,0 +1,106 @@
+import FAQ from "@/components/FAQ"
+
+## Time Duration Calculator – Find Hours and Minutes Between Times
+
+Need to know how long something takes? This time duration calculator finds the difference between two times, or adds and subtracts hours and minutes from any starting time. It shows results in hours and minutes, total minutes, and decimal hours — perfect for timesheets, scheduling, and payroll calculations.
+
+## How to Calculate Time Duration
+
+To find the duration between two times:
+
+> **Duration = End Time − Start Time**
+>
+> If the result is negative, add 24 hours (the end time is the next day).
+
+**Example**: From 9:00 AM to 5:30 PM = 8 hours 30 minutes = 8.5 decimal hours = 510 total minutes.
+
+## Time Format Conversions
+
+When working with time, you often need to convert between different formats:
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Hours:Minutes</th>
+      <th>Decimal Hours</th>
+      <th>Total Minutes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>0:15</td><td>0.25</td><td>15</td></tr>
+    <tr><td>0:30</td><td>0.50</td><td>30</td></tr>
+    <tr><td>0:45</td><td>0.75</td><td>45</td></tr>
+    <tr><td>1:00</td><td>1.00</td><td>60</td></tr>
+    <tr><td>1:30</td><td>1.50</td><td>90</td></tr>
+    <tr><td>2:15</td><td>2.25</td><td>135</td></tr>
+    <tr><td>4:00</td><td>4.00</td><td>240</td></tr>
+    <tr><td>7:45</td><td>7.75</td><td>465</td></tr>
+    <tr><td>8:00</td><td>8.00</td><td>480</td></tr>
+    <tr><td>8:30</td><td>8.50</td><td>510</td></tr>
+  </tbody>
+</table>
+</div>
+
+> **To convert minutes to decimal hours:** Divide by 60. Example: 45 minutes ÷ 60 = 0.75 decimal hours.
+
+## Common Work Hours Calculations
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Schedule</th>
+      <th>Start – End</th>
+      <th>Hours/Day</th>
+      <th>Hours/Week</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Standard 9-5</td><td>9:00 – 17:00</td><td>8.0</td><td>40.0</td></tr>
+    <tr><td>With lunch break</td><td>8:30 – 17:00 (30min lunch)</td><td>8.0</td><td>40.0</td></tr>
+    <tr><td>Part-time</td><td>9:00 – 13:00</td><td>4.0</td><td>20.0</td></tr>
+    <tr><td>12-hour shift</td><td>7:00 – 19:00</td><td>12.0</td><td>36–48</td></tr>
+    <tr><td>Night shift</td><td>23:00 – 7:00</td><td>8.0</td><td>40.0</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Practical Uses
+
+- **Timesheets**: Calculate daily and weekly work hours for payroll
+- **Scheduling**: Determine meeting durations and break times
+- **Travel planning**: Figure out arrival times when adding flight/drive duration
+- **Cooking**: Add prep time and cooking time together
+- **Project management**: Track time spent on tasks
+- **Overtime**: Calculate hours beyond the standard work day
+
+## Tips for Time Tracking
+
+- **Round to the nearest quarter hour** if your employer uses 15-minute increments (common for payroll)
+- **Subtract breaks**: Remember to deduct lunch and other break times from total hours
+- **Use 24-hour format** to avoid AM/PM confusion in calculations
+- **Track consistently**: Enter time as you work rather than trying to remember later
+- **Decimal hours for payroll**: Many payroll systems use decimal hours (7.75 instead of 7:45)
+
+<FAQ items={[
+  { q: "How do I calculate hours between two times?", a: "Subtract the start time from the end time. For example, from 9:00 to 17:30 is 8 hours 30 minutes. If the end time is smaller than the start (e.g., overnight shift), add 24 hours to the end time first." },
+  { q: "What are decimal hours?", a: "Decimal hours express minutes as a fraction of an hour. 30 minutes = 0.5 hours, 15 minutes = 0.25 hours, 45 minutes = 0.75 hours. To convert, divide the minutes by 60. This format is commonly used for payroll." },
+  { q: "How do I calculate overnight shifts?", a: "If the end time is earlier than the start time (e.g., 11 PM to 7 AM), the calculator automatically adds 24 hours. The result is 8 hours — the shift crosses midnight." },
+  { q: "How many work hours are in a year?", a: "A standard full-time year is 2,080 hours (40 hours/week × 52 weeks). After accounting for holidays and vacation, the actual number is typically 1,800–1,950 hours." },
+  { q: "How do I add time durations together?", a: "Add the hours together and the minutes together. If the minutes exceed 60, subtract 60 from the minutes and add 1 to the hours. For example: 2:45 + 3:30 = 5:75 = 6:15." }
+]} />
+
+## Related Tools
+
+- [Date Calculator](/apps/date-calculator) — Calculate days between dates
+- [Countdown Timer](/apps/countdown-timer) — Set a countdown timer
+- [Age Calculator](/apps/age-calculator) — Calculate exact age
+- [Annual Salary Calculator](/apps/annual-salary-calculator) — Convert salary to hourly rate
+- [Overtime Calculator](/apps/overtime-calculator) — Calculate overtime pay
+
+## Sources
+
+- [U.S. Department of Labor – Hours Worked](https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-worked)
+- [Bureau of Labor Statistics – Work Hours Data](https://www.bls.gov/cps/cpsaat19.htm)
+- [FLSA – Fair Labor Standards Act](https://www.dol.gov/agencies/whd/flsa)

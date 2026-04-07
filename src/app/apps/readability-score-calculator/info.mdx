@@ -1,0 +1,110 @@
+import FAQ from "@/components/FAQ"
+
+## Readability Score Calculator — Check How Easy Your Text Is to Read
+
+Readability scores measure how easy or difficult a piece of text is to understand. They are used by writers, teachers, marketers, UX designers, and healthcare professionals to ensure content matches the reading level of their intended audience. This calculator analyzes your text using three industry-standard formulas: Flesch Reading Ease, Flesch-Kincaid Grade Level, and the Gunning Fog Index.
+
+## How Readability Scores Work
+
+All readability formulas use combinations of word length, sentence length, and syllable count to estimate difficulty. Shorter words and shorter sentences produce easier-to-read text.
+
+### Flesch Reading Ease
+
+> **Score = 206.835 − 1.015 × (words/sentences) − 84.6 × (syllables/words)**
+
+Higher scores mean easier text. A score of 60–70 is considered standard for most audiences.
+
+### Flesch-Kincaid Grade Level
+
+> **Grade = 0.39 × (words/sentences) + 11.8 × (syllables/words) − 15.59**
+
+This converts readability into a U.S. school grade level. A score of 8.0 means an 8th grader can understand the text.
+
+### Gunning Fog Index
+
+> **Fog = 0.4 × [(words/sentences) + 100 × (complex words/words)]**
+
+Complex words are defined as words with 3 or more syllables. The result approximates the years of formal education needed to understand the text on first reading.
+
+## Flesch Reading Ease Scale
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Score</th>
+      <th>Difficulty</th>
+      <th>Audience</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>90–100</td><td>Very Easy</td><td>5th graders, children's books</td></tr>
+    <tr><td>80–89</td><td>Easy</td><td>6th graders, conversational English</td></tr>
+    <tr><td>70–79</td><td>Fairly Easy</td><td>7th graders, consumer content</td></tr>
+    <tr><td>60–69</td><td>Standard</td><td>8th–9th graders, news articles</td></tr>
+    <tr><td>50–59</td><td>Fairly Difficult</td><td>High school, business writing</td></tr>
+    <tr><td>30–49</td><td>Difficult</td><td>College level, technical content</td></tr>
+    <tr><td>0–29</td><td>Very Difficult</td><td>Graduate level, legal/academic text</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Readability Scores of Famous Texts
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Text</th>
+      <th>Flesch Score</th>
+      <th>Grade Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Harry Potter (J.K. Rowling)</td><td>~80</td><td>5–6</td></tr>
+    <tr><td>New York Times articles</td><td>~55</td><td>10–11</td></tr>
+    <tr><td>Ernest Hemingway novels</td><td>~75</td><td>4–6</td></tr>
+    <tr><td>Insurance policies</td><td>~30</td><td>14+</td></tr>
+    <tr><td>IRS Tax Forms</td><td>~20</td><td>16+</td></tr>
+    <tr><td>Dr. Seuss books</td><td>~95</td><td>1–2</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Tips for Improving Readability
+
+- **Use shorter sentences**: Aim for 15–20 words per sentence on average.
+- **Choose simpler words**: Use "use" instead of "utilize," "help" instead of "facilitate."
+- **Break up long paragraphs**: 3–4 sentences per paragraph is ideal for online content.
+- **Use active voice**: "The team completed the project" is clearer than "The project was completed by the team."
+- **Add subheadings**: Help readers scan and find information quickly.
+- **Avoid jargon**: Unless writing for specialists, use everyday language.
+
+## Why Readability Matters
+
+- **SEO**: Google recommends content that's clear and easy to understand. Readable content earns longer time-on-page and lower bounce rates.
+- **Accessibility**: The average American reads at a 7th–8th grade level. Content above that level excludes a significant portion of your audience.
+- **Healthcare**: The AMA recommends patient materials be written at a 6th grade level or below.
+- **Legal compliance**: Plain language laws in many countries require government documents to be understandable by the general public.
+
+<FAQ items={[
+  { q: "What is a good readability score?", a: "For general audiences, aim for a Flesch Reading Ease score of 60–70 (standard) or a Flesch-Kincaid Grade Level of 7–8. For web content, 60+ is recommended. For academic writing, 30–50 is typical." },
+  { q: "What is the Flesch-Kincaid Grade Level?", a: "The Flesch-Kincaid Grade Level formula converts readability into a U.S. school grade number. A score of 8.0 means an average 8th grader can understand the text. Most newspapers target grade 8–10." },
+  { q: "How accurate are readability formulas?", a: "Readability formulas are useful approximations but have limitations. They measure surface features (word length, sentence length) but can't assess conceptual complexity, topic familiarity, or visual layout. Use them as guidelines, not absolute measures." },
+  { q: "What readability level should I target for web content?", a: "Most web content should target a Flesch Reading Ease of 60+ (8th grade level or below). Studies show that even highly educated readers prefer simpler text online because they scan rather than read word-by-word." },
+  { q: "Does readability affect SEO?", a: "While Google doesn't use readability scores directly as a ranking factor, readable content tends to earn better user engagement signals (lower bounce rate, longer dwell time) which can indirectly improve rankings. Google's own guidelines recommend clear, understandable content." }
+]} />
+
+## Related Tools
+
+- [Word Counter](/apps/word-counter) — Count words, characters, and paragraphs
+- [Character Counter](/apps/character-counter) — Detailed character analysis
+- [Text Case Converter](/apps/text-case-converter) — Convert between text cases
+- [GPA Calculator](/apps/gpa-calculator) — Calculate grade point average
+- [Typing Speed Test](/apps/typing-speed-test) — Test your typing speed
+
+## Sources
+
+- [Flesch, R. — How to Write Plain English (1979)](https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests)
+- [National Institutes of Health — Health Literacy](https://www.nih.gov/institutes-nih/nih-office-director/office-communications-public-liaison/clear-communication)
+- [U.S. Government Plain Language Guidelines](https://www.plainlanguage.gov/)

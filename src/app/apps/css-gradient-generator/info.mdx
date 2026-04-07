@@ -1,0 +1,110 @@
+import FAQ from "@/components/FAQ";
+
+## How the CSS Gradient Generator Works
+
+The **CSS gradient generator** lets you visually create gradients and instantly get the CSS code to use in your web projects. Choose between linear, radial, and conic gradient types, add multiple color stops, adjust angles, and preview the result in real time.
+
+CSS gradients are rendered natively by the browser using the `background` property, so they produce smooth, resolution-independent backgrounds without requiring image files. This results in faster page loads and crisp rendering on all screen sizes, including retina displays.
+
+> **Syntax:** `background: linear-gradient(angle, color1 position1, color2 position2, ...);`
+
+## Worked Example
+
+To create a diagonal gradient going from purple to blue:
+
+1. Set gradient type to **Linear**
+2. Set angle to **135°**
+3. Color stop 1: **#667eea** at **0%**
+4. Color stop 2: **#764ba2** at **100%**
+
+The generated CSS:
+
+```css
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+```
+
+This creates a smooth diagonal transition from purple-blue to deep purple.
+
+## CSS Gradient Types
+
+<div className="overflow-x-auto">
+  <table className="table table-zebra table-sm">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Syntax</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Linear</td><td>linear-gradient(angle, ...)</td><td>Colors transition along a straight line at a given angle</td></tr>
+      <tr><td>Radial</td><td>radial-gradient(shape, ...)</td><td>Colors radiate outward from a center point</td></tr>
+      <tr><td>Conic</td><td>conic-gradient(from angle, ...)</td><td>Colors rotate around a center point like a pie chart</td></tr>
+      <tr><td>Repeating Linear</td><td>repeating-linear-gradient(...)</td><td>Linear gradient that repeats in a pattern</td></tr>
+      <tr><td>Repeating Radial</td><td>repeating-radial-gradient(...)</td><td>Radial gradient that repeats in a pattern</td></tr>
+    </tbody>
+  </table>
+</div>
+
+## Common Gradient Angles
+
+<div className="overflow-x-auto">
+  <table className="table table-zebra table-sm">
+    <thead>
+      <tr>
+        <th>Angle</th>
+        <th>Direction</th>
+        <th>Equivalent Keyword</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>0°</td><td>Bottom to top</td><td>to top</td></tr>
+      <tr><td>45°</td><td>Bottom-left to top-right</td><td>to top right</td></tr>
+      <tr><td>90°</td><td>Left to right</td><td>to right</td></tr>
+      <tr><td>135°</td><td>Top-left to bottom-right</td><td>to bottom right</td></tr>
+      <tr><td>180°</td><td>Top to bottom</td><td>to bottom</td></tr>
+      <tr><td>270°</td><td>Right to left</td><td>to left</td></tr>
+    </tbody>
+  </table>
+</div>
+
+## Tips for Great Gradients
+
+- **Use analogous colors** (colors next to each other on the color wheel) for smooth, natural transitions.
+- **Avoid complementary colors** directly (e.g., red to green) as they create a muddy middle.
+- **Add a middle color stop** to control where the transition happens and prevent dull midpoints.
+- **Use subtle gradients** for professional designs — try shifting hue by just 15–30° between stops.
+- **Conic gradients** are perfect for creating pie charts, color wheels, and circular progress indicators.
+- **Gradients can layer** — use multiple gradients separated by commas for complex effects.
+
+## Browser Support
+
+CSS gradients are supported by all modern browsers including Chrome, Firefox, Safari, Edge, and Opera. The `linear-gradient` and `radial-gradient` properties have had full support since around 2013. The `conic-gradient` property was added more recently but is now supported in all major browsers since 2020.
+
+No vendor prefixes are needed for modern browsers, though you may encounter older code using `-webkit-linear-gradient` for backward compatibility.
+
+## Performance Benefits
+
+Compared to background images, CSS gradients offer several advantages for web performance. They are rendered by the GPU, so they are very fast. They scale perfectly to any resolution without becoming pixelated. They add zero HTTP requests since no image file needs to be downloaded. And the CSS code for a gradient is typically under 100 bytes, making it far smaller than even a highly optimized image file.
+
+<FAQ items={[
+  { q: "What is a CSS gradient?", a: "A CSS gradient is a smooth transition between two or more colors rendered by the browser using CSS. It is applied via the 'background' or 'background-image' property. Gradients can be linear (along a line), radial (from a center point), or conic (rotating around a point). They are resolution-independent and don't require image files." },
+  { q: "How do I make a gradient go from left to right?", a: "Use linear-gradient with an angle of 90 degrees: background: linear-gradient(90deg, #color1, #color2); You can also use the keyword syntax: background: linear-gradient(to right, #color1, #color2);" },
+  { q: "Can I use more than two colors in a gradient?", a: "Yes, you can use as many color stops as you want. Simply add more colors with their position percentages. For example: background: linear-gradient(90deg, red 0%, yellow 50%, blue 100%); The browser will smoothly blend between each pair of adjacent colors." },
+  { q: "What is the difference between linear and radial gradients?", a: "A linear gradient transitions colors along a straight line at a specified angle. A radial gradient transitions colors outward from a center point in a circular or elliptical shape. Linear gradients are most common for backgrounds, while radial gradients are often used for spotlight or glowing effects." },
+  { q: "Are CSS gradients good for website performance?", a: "Yes, CSS gradients are excellent for performance. They are rendered by the browser's GPU, add zero HTTP requests (unlike image files), scale perfectly to any screen size, and typically require less than 100 bytes of CSS code. They are always preferable to background images when a gradient effect is desired." }
+]} />
+
+## Related Tools
+
+- [Hex Color Picker](/apps/hex-color-picker) — Pick colors and convert between HEX, RGB, and HSL formats.
+- [Color Contrast Checker](/apps/color-contrast-checker) — Check WCAG contrast ratios for accessibility compliance.
+- [Random Color Generator](/apps/random-color-generator) — Generate random color palettes for design inspiration.
+- [Pixel to REM Converter](/apps/pixel-to-rem-converter) — Convert CSS pixel values to REMs and vice versa.
+- [Markdown Previewer](/apps/markdown-previewer) — Preview and edit Markdown content in real time.
+
+## Sources
+
+- [CSS Gradients – MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient)
+- [Using CSS Gradients – W3Schools](https://www.w3schools.com/css/css3_gradients.asp)
+- [Can I Use: CSS Gradients – Browser Compatibility](https://caniuse.com/css-gradients)

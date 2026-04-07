@@ -1,0 +1,114 @@
+import FAQ from "@/components/FAQ"
+
+## Regex Tester – Test Regular Expressions Online
+
+Regular expressions (regex) are powerful patterns used for searching, validating, and extracting text. This free regex tester lets you write and debug regex patterns in real time — matching is highlighted instantly as you type. It supports JavaScript regex syntax with global, case-insensitive, multiline, and dotall flags.
+
+## What Are Regular Expressions?
+
+A regular expression is a sequence of characters that defines a search pattern. They are used in programming, text editors, command-line tools, and databases to find, replace, or validate strings. Common use cases include:
+
+- Validating email addresses, phone numbers, and URLs
+- Extracting data from logs and structured text
+- Search-and-replace operations in code editors
+- Input validation in web forms
+- Web scraping and data parsing
+
+> **Regex is supported in nearly every programming language** including JavaScript, Python, Java, C#, PHP, Ruby, Go, and Rust.
+
+## Common Regex Patterns
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Pattern</th>
+      <th>Description</th>
+      <th>Example Match</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>.</code></td><td>Any character except newline</td><td>a, 1, @</td></tr>
+    <tr><td><code>\d</code></td><td>Any digit (0-9)</td><td>5, 0, 9</td></tr>
+    <tr><td><code>\w</code></td><td>Word character (a-z, A-Z, 0-9, _)</td><td>a, Z, 3, _</td></tr>
+    <tr><td><code>\s</code></td><td>Whitespace (space, tab, newline)</td><td>(space), \t</td></tr>
+    <tr><td><code>[abc]</code></td><td>Character class: a, b, or c</td><td>a, b, c</td></tr>
+    <tr><td><code>[^abc]</code></td><td>Not a, b, or c</td><td>d, 1, @</td></tr>
+    <tr><td><code>a|b</code></td><td>a or b</td><td>a, b</td></tr>
+    <tr><td><code>^</code></td><td>Start of string/line</td><td>(position)</td></tr>
+    <tr><td><code>$</code></td><td>End of string/line</td><td>(position)</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Quantifiers
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Quantifier</th>
+      <th>Meaning</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>{'*'}</code></td><td>0 or more</td><td><code>a{'*'}</code> matches "", "a", "aaa"</td></tr>
+    <tr><td><code>+</code></td><td>1 or more</td><td><code>a+</code> matches "a", "aaa"</td></tr>
+    <tr><td><code>?</code></td><td>0 or 1 (optional)</td><td><code>a?</code> matches "", "a"</td></tr>
+    <tr><td><code>{'{n}'}</code></td><td>Exactly n</td><td><code>a{'{3}'}</code> matches "aaa"</td></tr>
+    <tr><td><code>{'{n,m}'}</code></td><td>Between n and m</td><td><code>a{'{2,4}'}</code> matches "aa", "aaa", "aaaa"</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Regex Flags Explained
+
+- **g (global)**: Find all matches, not just the first one
+- **i (case-insensitive)**: Match uppercase and lowercase letters interchangeably
+- **m (multiline)**: `^` and `$` match the start/end of each line, not just the entire string
+- **s (dotall)**: Makes the `.` metacharacter match newline characters as well
+
+## Useful Regex Examples
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Use Case</th>
+      <th>Pattern</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Email address</td><td><code>[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{'{2,}'}</code></td></tr>
+    <tr><td>URL</td><td><code>https?://[^\s]+</code></td></tr>
+    <tr><td>Phone number (US)</td><td><code>\(?\d{'{3}'}\)?[-.\s]?\d{'{3}'}[-.\s]?\d{'{4}'}</code></td></tr>
+    <tr><td>IP address</td><td><code>\d{'{1,3}'}\.\d{'{1,3}'}\.\d{'{1,3}'}\.\d{'{1,3}'}</code></td></tr>
+    <tr><td>HTML tags</td><td><code>&lt;[^&gt;]+&gt;</code></td></tr>
+    <tr><td>Hex color code</td><td><code>#[0-9A-Fa-f]{'{3,8}'}</code></td></tr>
+    <tr><td>Date (YYYY-MM-DD)</td><td><code>\d{'{4}'}-\d{'{2}'}-\d{'{2}'}</code></td></tr>
+  </tbody>
+</table>
+</div>
+
+<FAQ items={[
+  { q: "What is a regular expression?", a: "A regular expression (regex) is a pattern that describes a set of strings. It's used for searching, matching, and manipulating text in programming languages, text editors, and command-line tools." },
+  { q: "What regex flavor does this tester use?", a: "This tester uses JavaScript's built-in RegExp engine, which supports standard regex syntax including character classes, quantifiers, groups, lookaheads, and lookbehinds in modern browsers." },
+  { q: "What does the global (g) flag do?", a: "The global flag finds all matches in the text instead of stopping after the first match. Without it, only the first occurrence is returned." },
+  { q: "How do I match a literal dot or special character?", a: "Escape special characters with a backslash. For example, \\. matches a literal dot, \\( matches a literal parenthesis, and \\\\ matches a literal backslash." },
+  { q: "What are capturing groups?", a: "Capturing groups use parentheses ( ) to extract specific parts of a match. For example, (\\d{4})-(\\d{2})-(\\d{2}) captures the year, month, and day separately from a date string." }
+]} />
+
+## Related Tools
+
+- [Character Counter](/apps/character-counter) — Count characters, words, and sentences
+- [Readability Score Calculator](/apps/readability-score-calculator) — Analyze text readability
+- [Hex Color Picker](/apps/hex-color-picker) — Pick and convert colors
+- [Base Converter](/apps/base-converter) — Convert between number bases
+- [Hash Generator](/apps/hash-generator) — Generate SHA and MD5 hashes
+
+## Sources
+
+- [MDN Web Docs – Regular Expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+- [Regular-Expressions.info – Tutorials and Reference](https://www.regular-expressions.info/)
+- [ECMA-262 – RegExp Specification](https://tc39.es/ecma262/#sec-regexp-regular-expression-objects)

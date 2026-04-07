@@ -1,0 +1,94 @@
+import FAQ from "@/components/FAQ"
+
+## Snow Day Predictor – Will School Be Cancelled Tomorrow?
+
+Every winter, millions of students wonder the same question: "Will we have a snow day tomorrow?" This snow day predictor uses key weather factors — snowfall amount, temperature, wind speed, timing, and location — to estimate the probability of a school cancellation. While no predictor is 100% accurate, this tool weighs the same factors that school administrators consider when making their decision.
+
+## How Snow Day Decisions Are Made
+
+School closures depend on several interconnected factors. Superintendents and transportation directors typically begin monitoring conditions late in the evening and make the call by 5–6 AM. Their primary concerns are:
+
+- **Road safety**: Can buses navigate safely? Are main roads and school zones plowed?
+- **Snowfall accumulation**: Is there enough snow on the ground to make travel dangerous?
+- **Temperature and wind chill**: Are conditions too cold for students waiting at bus stops?
+- **Timing**: Overnight snow is harder because plows may not finish in time for morning buses.
+
+> **Most school districts cancel when 4+ inches of snow falls overnight and temperatures drop below 20°F with significant wind.**
+
+## Factors That Increase Snow Day Chances
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Factor</th>
+      <th>Low Impact</th>
+      <th>Medium Impact</th>
+      <th>High Impact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Snowfall</td><td>1–2 inches</td><td>3–5 inches</td><td>6+ inches</td></tr>
+    <tr><td>Temperature</td><td>28–32°F</td><td>15–27°F</td><td>Below 15°F</td></tr>
+    <tr><td>Wind Speed</td><td>5–15 mph</td><td>16–30 mph</td><td>30+ mph</td></tr>
+    <tr><td>Timing</td><td>Afternoon/evening</td><td>Early morning</td><td>Overnight</td></tr>
+    <tr><td>Region</td><td>Northeast / Midwest</td><td>Mid-Atlantic</td><td>South / Pacific</td></tr>
+  </tbody>
+</table>
+</div>
+
+## Why Region Matters
+
+Northern states like Minnesota, Wisconsin, and upstate New York have extensive snow-removal infrastructure. Schools there rarely close for anything under 6 inches. Meanwhile, southern states like Georgia, Tennessee, and Texas may close for as little as 1–2 inches because they lack the plows, salt, and experienced winter drivers. This regional factor is one of the most significant predictors.
+
+## Snow Day Tips for Students
+
+- **Check early**: Most school districts announce closures between 5–6 AM on local news and social media.
+- **Sign up for alerts**: Many districts use automated call and text systems.
+- **Have a plan**: Even if school is open, delayed openings (2-hour delays) are common.
+- **Don't rely solely on forecasts**: Weather predictions can change. A predicted 6 inches may end up as 2.
+- **E-learning days**: Many districts now use virtual learning days instead of traditional snow days, especially after the COVID-19 pandemic.
+
+## Average Snow Days Per Year by Region
+
+<div className="overflow-x-auto">
+<table className="table table-sm my-4">
+  <thead className="bg-base-200">
+    <tr>
+      <th>Region</th>
+      <th>Avg Snow Days/Year</th>
+      <th>Typical Threshold</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Northeast</td><td>3–5</td><td>6+ inches</td></tr>
+    <tr><td>Midwest</td><td>3–4</td><td>5+ inches</td></tr>
+    <tr><td>Mid-Atlantic</td><td>2–4</td><td>3–4 inches</td></tr>
+    <tr><td>Mountain West</td><td>2–3</td><td>6+ inches</td></tr>
+    <tr><td>South</td><td>1–2</td><td>1–2 inches</td></tr>
+    <tr><td>Pacific / West Coast</td><td>0–1</td><td>Any accumulation</td></tr>
+  </tbody>
+</table>
+</div>
+
+<FAQ items={[
+  { q: "How accurate is this snow day predictor?", a: "This tool provides an estimate based on the same factors that school administrators consider. It's not connected to live weather data — it relies on the information you enter. Use it as a fun guide, not a guarantee." },
+  { q: "How many inches of snow does it take to cancel school?", a: "It varies significantly by region. In the South, 1–2 inches can cause closures. In the Midwest and Northeast, it often takes 5–8+ inches. Temperature, wind, and timing also play major roles." },
+  { q: "Do private schools cancel more often than public schools?", a: "Generally yes. Private schools often have wider bus routes covering larger areas, and they have more flexibility in their scheduling decisions. They tend to err on the side of caution." },
+  { q: "Are snow days being replaced by e-learning days?", a: "Many school districts nationwide have adopted virtual/e-learning days as an alternative to traditional snow days. This trend accelerated after COVID-19. Check with your district for their specific policy." },
+  { q: "Who decides if school is cancelled for snow?", a: "The school district superintendent typically makes the final call, often in consultation with transportation directors, road crews, and local emergency management. The decision is usually made between 4–6 AM." }
+]} />
+
+## Related Tools
+
+- [Countdown Timer](/apps/countdown-timer) — Set a countdown for the next school day
+- [Days Until Christmas](/apps/days-until-christmas) — Check the countdown to the holidays
+- [Date Calculator](/apps/date-calculator) — Calculate dates and durations
+- [Sunrise Sunset Calculator](/apps/sunrise-sunset-calculator) — Check daylight hours
+- [Wind Chill Calculator](/apps/wind-chill-calculator) — Calculate wind chill temperature
+
+## Sources
+
+- [NOAA – National Weather Service Winter Safety](https://www.weather.gov/safety/winter)
+- [National Center for Education Statistics – School Operations](https://nces.ed.gov/)
+- [American Meteorological Society – Weather Impacts on Schools](https://www.ametsoc.org/)
